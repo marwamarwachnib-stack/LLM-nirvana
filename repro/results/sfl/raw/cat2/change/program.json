@@ -1,0 +1,216 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 2,
+   "line": 2,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 4,
+   "line": 4,
+   "mutant_id": "m02",
+   "operator": "AOR",
+   "original": "[1e9] * (target + 1)",
+   "replacement": "([1000000000.0] / (target + 1))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 6,
+   "line": 6,
+   "mutant_id": "m04",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m05",
+   "operator": "UOD",
+   "original": "-1",
+   "replacement": "(1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 11,
+   "line": 11,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "coin <= change",
+   "replacement": "(coin < change)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 12,
+   "line": 12,
+   "mutant_id": "m07",
+   "operator": "AOR",
+   "original": "min_coins_required[change - coin] + 1",
+   "replacement": "(min_coins_required[change - coin] - 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 17,
+   "line": 17,
+   "mutant_id": "m08",
+   "operator": "ROR",
+   "original": "min_coins_required[target] == 1e9",
+   "replacement": "(min_coins_required[target] != 1000000000.0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 23,
+   "line": 23,
+   "mutant_id": "m10",
+   "operator": "AOR",
+   "original": "last_coin_value-last_coin[last_coin_value]",
+   "replacement": "(last_coin_value + last_coin[last_coin_value])"
+  }
+ ],
+ "n_candidates": 28,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 12,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 12,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 12,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "test_sha256": "100dd2048a8a68fba90490f906794cf2136dc2c94bb4242cd6f6bd514d2507af",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 6,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 6,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 6,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "test_sha256": "fa634216750c87e56afb0f3db327ea2b36c32ff0d496004b21859f70317e9157",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "change",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}
