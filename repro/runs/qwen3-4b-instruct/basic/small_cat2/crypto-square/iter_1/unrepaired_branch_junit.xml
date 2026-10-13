@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="11" skipped="0" tests="18" time="0.127" timestamp="2026-10-13T22:26:55.407727" hostname="vm"><testcase classname="test_generated" name="test_empty_input" time="0.001" /><testcase classname="test_generated" name="test_single_character" time="0.001" /><testcase classname="test_generated" name="test_all_punctuation_and_whitespace" time="0.001"><failure message="AssertionError: assert 'hol3 ewd  lo1  lr2 ' == 'hello123'&#10;  - hello123&#10;  + hol3 ewd  lo1  lr2">def test_all_punctuation_and_whitespace():
+&gt;       assert cipher_text("Hello, World! 123") == "hello123"
+E       AssertionError: assert 'hol3 ewd  lo1  lr2 ' == 'hello123'
+E         - hello123
+E         + hol3 ewd  lo1  lr2
+
+test_generated.py:41: AssertionError</failure></testcase><testcase classname="test_generated" name="test_mixed_case" time="0.001"><failure message="AssertionError: assert 'hol ewd lo  lr ' == 'hello world'&#10;  - hello world&#10;  + hol ewd lo  lr">def test_mixed_case():
+&gt;       assert cipher_text("HeLlO WOrLd") == "hello world"
+E       AssertionError: assert 'hol ewd lo  lr ' == 'hello world'
+E         - hello world
+E         + hol ewd lo  lr
+
+test_generated.py:45: AssertionError</failure></testcase><testcase classname="test_generated" name="test_special_characters" time="0.001"><failure message="AssertionError: assert 'tt3 e1  s2 ' == 'test123'&#10;  - test123&#10;  + tt3 e1  s2">def test_special_characters():
+&gt;       assert cipher_text("Test@#$123!@#") == "test123"
+E       AssertionError: assert 'tt3 e1  s2 ' == 'test123'
+E         - test123
+E         + tt3 e1  s2
+
+test_generated.py:49: AssertionError</failure></testcase><testcase classname="test_generated" name="test_perfect_square_length" time="0.001"><failure message="AssertionError: assert 'adg beh cf ' == 'aebc dfg'&#10;  - aebc dfg&#10;  + adg beh cf">def test_perfect_square_length():
+&gt;       assert cipher_text("abcdefgh") == "aebc dfg"  # 8 chars → 3x3 square? Wait, 8 → sqrt(8)=2.8 → ceil=3 → 3x3=9 → 9 chars → 8 chars → 3x3 → rows: [abc, def, g] → columns: [a,d,g], [b,e], [c,f] → "adg be c" → wait, let's compute properly.
+E       AssertionError: assert 'adg beh cf ' == 'aebc dfg'
+E         - aebc dfg
+E         + adg beh cf
+
+test_generated.py:53: AssertionError</failure></testcase><testcase classname="test_generated" name="test_non_perfect_square" time="0.001"><failure message="AssertionError: assert 'aei bfj cg  dh ' == 'aei bfj cg dh'&#10;  - aei bfj cg dh&#10;  + aei bfj cg  dh &#10;  ?            +  +">def test_non_perfect_square():
+        # Example: 10 chars → sqrt(10)=3.16 → ceil=4 → square_size=4
+        # chunks: ["abcd", "efgh", "ij"] → 3 rows
+        # columns: 4 columns
+        # col0: a,e,i → "aei"
+        # col1: b,f,j → "bfj"
+        # col2: c,g → "cg"
+        # col3: d,h → "dh"
+        # So output: "aei bfj cg dh"
+        expected = "aei bfj cg dh"
+&gt;       assert cipher_text("abcdefghij") == expected
+E       AssertionError: assert 'aei bfj cg  dh ' == 'aei bfj cg dh'
+E         - aei bfj cg dh
+E         + aei bfj cg  dh 
+E         ?            +  +
+
+test_generated.py:107: AssertionError</failure></testcase><testcase classname="test_generated" name="test_long_input" time="0.000" /><testcase classname="test_generated" name="test_input_with_only_digits" time="0.001"><failure message="AssertionError: assert '159 260 37  48 ' == '1234567890'&#10;  - 1234567890&#10;  + 159 260 37  48">def test_input_with_only_digits():
+&gt;       assert cipher_text("1234567890") == "1234567890"
+E       AssertionError: assert '159 260 37  48 ' == '1234567890'
+E         - 1234567890
+E         + 159 260 37  48
+
+test_generated.py:121: AssertionError</failure></testcase><testcase classname="test_generated" name="test_input_with_only_uppercase" time="0.001"><failure message="AssertionError: assert 'hl eo l ' == 'hello'&#10;  - hello&#10;  + hl eo l">def test_input_with_only_uppercase():
+&gt;       assert cipher_text("HELLO") == "hello"
+E       AssertionError: assert 'hl eo l ' == 'hello'
+E         - hello
+E         + hl eo l
+
+test_generated.py:125: AssertionError</failure></testcase><testcase classname="test_generated" name="test_input_with_only_lowercase" time="0.001"><failure message="AssertionError: assert 'hl eo l ' == 'hello'&#10;  - hello&#10;  + hl eo l">def test_input_with_only_lowercase():
+&gt;       assert cipher_text("hello") == "hello"
+E       AssertionError: assert 'hl eo l ' == 'hello'
+E         - hello
+E         + hl eo l
+
+test_generated.py:129: AssertionError</failure></testcase><testcase classname="test_generated" name="test_input_with_no_alphanumeric" time="0.000" /><testcase classname="test_generated" name="test_input_with_whitespace_only" time="0.000" /><testcase classname="test_generated" name="test_input_with_mixed_and_non_alphanumeric" time="0.001"><failure message="AssertionError: assert 'tt3 e1  s2 ' == 'test123'&#10;  - test123&#10;  + tt3 e1  s2">def test_input_with_mixed_and_non_alphanumeric():
+&gt;       assert cipher_text("Test123!@#") == "test123"
+E       AssertionError: assert 'tt3 e1  s2 ' == 'test123'
+E         - test123
+E         + tt3 e1  s2
+
+test_generated.py:141: AssertionError</failure></testcase><testcase classname="test_generated" name="test_input_with_empty_string_after_cleanse" time="0.000" /><testcase classname="test_generated" name="test_input_with_punctuation_and_digits" time="0.001"><failure message="AssertionError: assert 'hl0 eo2 l24' == 'hello2024'&#10;  - hello2024&#10;  + hl0 eo2 l24">def test_input_with_punctuation_and_digits():
+&gt;       assert cipher_text("Hello, 2024!") == "hello2024"
+E       AssertionError: assert 'hl0 eo2 l24' == 'hello2024'
+E         - hello2024
+E         + hl0 eo2 l24
+
+test_generated.py:149: AssertionError</failure></testcase><testcase classname="test_generated" name="test_square_size_calculation" time="0.001"><failure message="AssertionError: assert 'a b' == 'ab'&#10;  - ab&#10;  + a b&#10;  ?  +">def test_square_size_calculation():
+        # len=1 → ceil(sqrt(1))=1 → square_size=1
+        assert cipher_text("a") == "a"
+        # len=2 → sqrt(2)=1.41 → ceil=2 → square_size=2
+&gt;       assert cipher_text("ab") == "ab"
+E       AssertionError: assert 'a b' == 'ab'
+E         - ab
+E         + a b
+E         ?  +
+
+test_generated.py:156: AssertionError</failure></testcase><testcase classname="test_generated" name="test_with_very_long_input" time="0.001" /></testsuite></testsuites>

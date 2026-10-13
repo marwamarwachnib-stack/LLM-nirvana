@@ -1,0 +1,138 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 0,
+    "redefinitions_removed": [],
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T22:15:09.393681+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/bob/example.py",
+  "sample": "bob",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 8,
+        "executed_lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          14,
+          17,
+          18,
+          21,
+          22,
+          25,
+          26
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 8,
+        "num_statements": 17,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'Whoa, chill out!' == 'Whatever.'\n  - Whatever.\n  + Whoa, chill out!",
+            "name": "test_generated::test_response",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_shouting_non_alpha",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_strip_applied",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 41,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          14,
+          17,
+          18,
+          21,
+          22,
+          25,
+          26
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 17,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'Whoa, chill out!' == 'Whatever.'\n  - Whatever.\n  + Whoa, chill out!",
+            "name": "test_generated::test_response",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_shouting_non_alpha",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_strip_applied",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 3,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 1,
+      "failure_classes": {
+        "assertion": 1,
+        "runtime": 0,
+        "try_except": 0
+      },
+      "passed": 2,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

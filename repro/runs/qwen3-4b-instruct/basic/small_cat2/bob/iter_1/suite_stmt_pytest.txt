@@ -1,0 +1,77 @@
+$ coverage run  -m pytest test_generated.py
+returncode=1 timeout=False
+--- stdout ---
+F..                                                                      [100%]
+=================================== FAILURES ===================================
+________________________________ test_response _________________________________
+
+    def test_response():
+        # Test silence (empty or whitespace-only)
+        assert response("") == "Fine. Be that way!"
+        assert response("   ") == "Fine. Be that way!"
+        assert response(" \t\n ") == "Fine. Be that way!"
+    
+        # Test shouting (all uppercase)
+        assert response("HELLO") == "Whoa, chill out!"
+        assert response("WORLD!") == "Whoa, chill out!"
+        assert response("UPPERCASE") == "Whoa, chill out!"
+    
+        # Test question (ends with '?')
+        assert response("hello?") == "Sure."
+        assert response("what's up?") == "Sure."
+        assert response("how are you?") == "Sure."
+    
+        # Test shouting with question
+        assert response("HELLO?") == "Calm down, I know what I'm doing!"
+        assert response("WORLD??") == "Calm down, I know what I'm doing!"
+        assert response("YES?") == "Calm down, I know what I'm doing!"
+    
+        # Test normal statement (not shouting, not question)
+        assert response("hello") == "Whatever."
+        assert response("hi there") == "Whatever."
+        assert response("fine") == "Whatever."
+    
+        # Test mixed case (not shouting, not question)
+        assert response("Hello") == "Whatever."
+        assert response("HeLlO") == "Whatever."  # Not all uppercase → not shouting
+        assert response("hElLo") == "Whatever."
+    
+        # Test with punctuation (no question mark, not shouting)
+        assert response("hello.") == "Whatever."
+        assert response("hi!") == "Whatever."
+        assert response("how are you?") == "Sure."  # This one has a question mark
+    
+        # Test with multiple spaces
+        assert response("  hello  ") == "Whatever."
+        assert response("  HELLO?  ") == "Calm down, I know what I'm doing!"
+    
+        # Test with exclamation mark (only, not shouting)
+        assert response("hello!") == "Whatever."
+    
+        # Test with multiple question marks
+        assert response("yes??") == "Sure."
+        assert response("no???") == "Sure."
+    
+        # Test with only question mark (not shouting)
+        assert response("?") == "Sure."
+    
+        # Test with empty string after strip
+        assert response("   ?   ") == "Sure."
+    
+        # Test shouting with multiple exclamation marks
+        assert response("WORLD!!!") == "Whoa, chill out!"
+    
+        # Test shouting with non-alphabetic characters (still shouting if all uppercase)
+        assert response("123ABC") == "Whoa, chill out!"  # All uppercase
+>       assert response("ABC123") == "Whatever."        # Not all uppercase
+E       AssertionError: assert 'Whoa, chill out!' == 'Whatever.'
+E         - Whatever.
+E         + Whoa, chill out!
+
+test_generated.py:62: AssertionError
+- generated xml file: /opt/repro/work/phase_c/qwen3-4b-instruct/basic/small_cat2/bob/iter_1/suite/suite_stmt_junit.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_response - AssertionError: assert 'Whoa, chill...
+1 failed, 2 passed in 0.07s
+
+--- stderr ---

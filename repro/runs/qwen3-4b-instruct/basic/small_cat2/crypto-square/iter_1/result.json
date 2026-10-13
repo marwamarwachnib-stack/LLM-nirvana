@@ -1,0 +1,310 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 0,
+    "redefinitions_removed": [
+      "cipher_text",
+      "_cleanse",
+      "_chunks_of"
+    ],
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T22:26:55.773014+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/crypto-square/example.py",
+  "sample": "crypto-square",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 6,
+        "executed_lines": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          13,
+          16,
+          20,
+          21,
+          22,
+          23
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 6,
+        "num_statements": 13,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_empty_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_character",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hol3 ewd  lo1  lr2 ' == 'hello123'\n  - hello123\n  + hol3 ewd  lo1  lr2",
+            "name": "test_generated::test_all_punctuation_and_whitespace",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hol ewd lo  lr ' == 'hello world'\n  - hello world\n  + hol ewd lo  lr",
+            "name": "test_generated::test_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'tt3 e1  s2 ' == 'test123'\n  - test123\n  + tt3 e1  s2",
+            "name": "test_generated::test_special_characters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'adg beh cf ' == 'aebc dfg'\n  - aebc dfg\n  + adg beh cf",
+            "name": "test_generated::test_perfect_square_length",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'aei bfj cg  dh ' == 'aei bfj cg dh'\n  - aei bfj cg dh\n  + aei bfj cg  dh \n  ?            +  +",
+            "name": "test_generated::test_non_perfect_square",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_long_input",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '159 260 37  48 ' == '1234567890'\n  - 1234567890\n  + 159 260 37  48",
+            "name": "test_generated::test_input_with_only_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl eo l ' == 'hello'\n  - hello\n  + hl eo l",
+            "name": "test_generated::test_input_with_only_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl eo l ' == 'hello'\n  - hello\n  + hl eo l",
+            "name": "test_generated::test_input_with_only_lowercase",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_no_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_input_with_whitespace_only",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'tt3 e1  s2 ' == 'test123'\n  - test123\n  + tt3 e1  s2",
+            "name": "test_generated::test_input_with_mixed_and_non_alphanumeric",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_empty_string_after_cleanse",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl0 eo2 l24' == 'hello2024'\n  - hello2024\n  + hl0 eo2 l24",
+            "name": "test_generated::test_input_with_punctuation_and_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'a b' == 'ab'\n  - ab\n  + a b\n  ?  +",
+            "name": "test_generated::test_square_size_calculation",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_with_very_long_input",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 22,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          13,
+          16,
+          20,
+          21,
+          22,
+          23
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 13,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_empty_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_character",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hol3 ewd  lo1  lr2 ' == 'hello123'\n  - hello123\n  + hol3 ewd  lo1  lr2",
+            "name": "test_generated::test_all_punctuation_and_whitespace",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hol ewd lo  lr ' == 'hello world'\n  - hello world\n  + hol ewd lo  lr",
+            "name": "test_generated::test_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'tt3 e1  s2 ' == 'test123'\n  - test123\n  + tt3 e1  s2",
+            "name": "test_generated::test_special_characters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'adg beh cf ' == 'aebc dfg'\n  - aebc dfg\n  + adg beh cf",
+            "name": "test_generated::test_perfect_square_length",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'aei bfj cg  dh ' == 'aei bfj cg dh'\n  - aei bfj cg dh\n  + aei bfj cg  dh \n  ?            +  +",
+            "name": "test_generated::test_non_perfect_square",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_long_input",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '159 260 37  48 ' == '1234567890'\n  - 1234567890\n  + 159 260 37  48",
+            "name": "test_generated::test_input_with_only_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl eo l ' == 'hello'\n  - hello\n  + hl eo l",
+            "name": "test_generated::test_input_with_only_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl eo l ' == 'hello'\n  - hello\n  + hl eo l",
+            "name": "test_generated::test_input_with_only_lowercase",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_no_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_input_with_whitespace_only",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'tt3 e1  s2 ' == 'test123'\n  - test123\n  + tt3 e1  s2",
+            "name": "test_generated::test_input_with_mixed_and_non_alphanumeric",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_empty_string_after_cleanse",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hl0 eo2 l24' == 'hello2024'\n  - hello2024\n  + hl0 eo2 l24",
+            "name": "test_generated::test_input_with_punctuation_and_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'a b' == 'ab'\n  - ab\n  + a b\n  ?  +",
+            "name": "test_generated::test_square_size_calculation",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_with_very_long_input",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 18,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 11,
+      "failure_classes": {
+        "assertion": 11,
+        "runtime": 0,
+        "try_except": 0
+      },
+      "passed": 7,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  },
+  "unrepaired": {
+    "branch_cov": 26.31578947368421,
+    "collected": 18,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 11,
+    "failure_classes": {
+      "assertion": 11,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 7,
+    "skipped": 0,
+    "stmt_cov": 38.46153846153846,
+    "xfailed": 0
+  }
+}

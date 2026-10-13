@@ -1,0 +1,258 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 0,
+    "redefinitions_removed": [],
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T22:32:42.298785+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/diamond/example.py",
+  "sample": "diamond",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 2,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 2,
+        "num_statements": 13,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_rows_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']\n  Left contains one more item: ' A '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_b",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['  A  ', ' B... B ', '  A  '] == ['  A  ', ' B B ', 'C C C']\n  At index 2 diff: 'C   C' != 'C C C'\n  Left contains 2 more items, first extra item: ' B B '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_c",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 51 == 26\n +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])",
+            "name": "test_generated::test_rows_z",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']\n  Left contains one more item: ' A '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input_type",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input_type_2",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 65 == 33\n +  where 65 = len(['                                A                                ', '                               B B             ...      E       E                            ', '                           F         F                           ', ...])",
+            "name": "test_generated::test_rows_with_non_ascii",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_edge_case_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 51 == 26\n +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])",
+            "name": "test_generated::test_rows_edge_case_z",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 3 == 2\n +  where 3 = len([' A ', 'B B', ' A '])\n +    where [' A ', 'B B', ' A '] = rows('B')",
+            "name": "test_generated::test_rows_length",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'C   C' == 'C C C'\n  - C C C\n  + C   C",
+            "name": "test_generated::test_rows_symmetry",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_empty",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = <built-in method count of str object at 0x7f6b5e214b70>(' ')\n +    where <built-in method count of str object at 0x7f6b5e214b70> = 'B B'.count",
+            "name": "test_generated::test_rows_with_space",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 23,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 13,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_rows_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']\n  Left contains one more item: ' A '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_b",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['  A  ', ' B... B ', '  A  '] == ['  A  ', ' B B ', 'C C C']\n  At index 2 diff: 'C   C' != 'C C C'\n  Left contains 2 more items, first extra item: ' B B '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_c",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 51 == 26\n +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])",
+            "name": "test_generated::test_rows_z",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']\n  Left contains one more item: ' A '\n  Use -v to get more diff",
+            "name": "test_generated::test_rows_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input_type",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_rows_invalid_input_type_2",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 65 == 33\n +  where 65 = len(['                                A                                ', '                               B B             ...      E       E                            ', '                           F         F                           ', ...])",
+            "name": "test_generated::test_rows_with_non_ascii",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_edge_case_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 51 == 26\n +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])",
+            "name": "test_generated::test_rows_edge_case_z",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 3 == 2\n +  where 3 = len([' A ', 'B B', ' A '])\n +    where [' A ', 'B B', ' A '] = rows('B')",
+            "name": "test_generated::test_rows_length",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'C   C' == 'C C C'\n  - C C C\n  + C   C",
+            "name": "test_generated::test_rows_symmetry",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rows_empty",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = <built-in method count of str object at 0x7f9a2e8c42b0>(' ')\n +    where <built-in method count of str object at 0x7f9a2e8c42b0> = 'B B'.count",
+            "name": "test_generated::test_rows_with_space",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 15,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 9,
+      "failure_classes": {
+        "assertion": 9,
+        "runtime": 0,
+        "try_except": 0
+      },
+      "passed": 6,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

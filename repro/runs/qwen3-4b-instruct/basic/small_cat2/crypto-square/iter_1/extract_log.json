@@ -1,0 +1,12 @@
+{
+  "empty": false,
+  "fenced_blocks_used": 1,
+  "imports_redirected": [],
+  "lines_dropped_to_parse": 0,
+  "redefinitions_removed": [
+    "cipher_text",
+    "_cleanse",
+    "_chunks_of"
+  ],
+  "star_import_added": true
+}

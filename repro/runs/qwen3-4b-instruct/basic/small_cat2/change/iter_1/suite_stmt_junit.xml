@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="22" time="0.100" timestamp="2026-10-13T22:21:03.772885" hostname="vm"><testcase classname="test_generated" name="test_target_zero" time="0.001" /><testcase classname="test_generated" name="test_target_one" time="0.001" /><testcase classname="test_generated" name="test_target_two" time="0.000" /><testcase classname="test_generated" name="test_target_three" time="0.000" /><testcase classname="test_generated" name="test_no_solution" time="0.001" /><testcase classname="test_generated" name="test_negative_target" time="0.001" /><testcase classname="test_generated" name="test_empty_coins_list" time="0.000" /><testcase classname="test_generated" name="test_single_coin" time="0.000" /><testcase classname="test_generated" name="test_greedy_vs_optimal" time="0.000" /><testcase classname="test_generated" name="test_target_equal_to_coin" time="0.000" /><testcase classname="test_generated" name="test_target_larger_than_all_coins" time="0.001"><failure message="assert 5 == 10&#10; +  where 5 = len([2, 2, 2, 2, 2])">def test_target_larger_than_all_coins():
+        """Large target with small coins: should work"""
+        result = find_fewest_coins([1, 2], 10)
+&gt;       assert len(result) == 10
+E       assert 5 == 10
+E        +  where 5 = len([2, 2, 2, 2, 2])
+
+test_generated.py:75: AssertionError</failure></testcase><testcase classname="test_generated" name="test_coin_set_with_1" time="0.001" /><testcase classname="test_generated" name="test_duplicate_coins_in_input" time="0.000" /><testcase classname="test_generated" name="test_target_larger_with_optimal_combination" time="0.000" /><testcase classname="test_generated" name="test_target_with_no_coin_available" time="0.000" /><testcase classname="test_generated" name="test_target_with_only_even_coins" time="0.000" /><testcase classname="test_generated" name="test_target_with_all_coins_larger_than_target" time="0.000" /><testcase classname="test_generated" name="test_single_coin_large_target" time="0.000" /><testcase classname="test_generated" name="test_coins_with_zero" time="0.000"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_coins_with_zero():
+        """Zero coin is not allowed, and should not be used"""
+        # Note: zero coin would be invalid in real world, but just in case
+        # But our function doesn't include zero — so it's safe
+&gt;       with pytest.raises(ValueError, match="can't make target with given coins"):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:130: Failed</failure></testcase><testcase classname="test_generated" name="test_unsorted_coins" time="0.000" /><testcase classname="test_generated" name="test_empty_target" time="0.000" /><testcase classname="test_generated" name="test_reconstruction_valid" time="0.000" /></testsuite></testsuites>

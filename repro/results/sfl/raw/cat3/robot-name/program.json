@@ -1,0 +1,214 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 10,
+   "line": 12,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 10,
+   "line": 12,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "2",
+   "replacement": "3"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 17,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 17,
+   "mutant_id": "m04",
+   "operator": "CRP",
+   "original": "10",
+   "replacement": "11"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 18,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 18,
+   "mutant_id": "m06",
+   "operator": "CRP",
+   "original": "3",
+   "replacement": "4"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m07",
+   "operator": "UOD",
+   "original": "not self._name",
+   "replacement": "(self._name)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 25,
+   "line": 25,
+   "mutant_id": "m08",
+   "operator": "CRP",
+   "original": "True",
+   "replacement": "False"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 26,
+   "line": 26,
+   "mutant_id": "m09",
+   "operator": "AOR",
+   "original": "self.prefix() + self.suffix()",
+   "replacement": "(self.prefix() - self.suffix())"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 27,
+   "line": 27,
+   "mutant_id": "m10",
+   "operator": "ROR",
+   "original": "self._name not in self._past_names",
+   "replacement": "(self._name in self._past_names)"
+  }
+ ],
+ "n_candidates": 10,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 4,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 4,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 4,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    15,
+    16,
+    21,
+    22,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    33,
+    34,
+    36,
+    38,
+    39
+   ],
+   "test_sha256": "c9d7b8ad737fe2d13d3053fe8859ac7d8a4493689b26e788ca99374438b91f9a",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 5,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    15,
+    16,
+    21,
+    22,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    33,
+    34,
+    36,
+    38,
+    39
+   ],
+   "test_sha256": "d8d813d0d6eb32c4fe04e8a7f4b56a4468993d77cac1670aa988d7305423017e",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "robot-name",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

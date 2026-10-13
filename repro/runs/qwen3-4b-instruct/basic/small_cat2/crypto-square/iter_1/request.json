@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "from math import ceil, sqrt\nfrom itertools import zip_longest\n\n\ndef cipher_text(plain_text):\n    plain_text = _cleanse(plain_text)\n    square_size = int(ceil(sqrt(len(plain_text))))\n    square = _chunks_of(plain_text, square_size)\n    return ' '.join([''.join(column)\n                     for column in zip_longest(*square, fillvalue=' ')])\n\n\ndef _cleanse(text):\n    \"\"\"Lowercase a string and remove punctuation and whitespace\n    \"\"\"\n    return ''.join([character for character in text\n                    if character.isalnum()]).lower()\n\n\ndef _chunks_of(text, num):\n    if len(text) <= num:\n        return [text]\n    return [text[:num]] + _chunks_of(text[num:], num)\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

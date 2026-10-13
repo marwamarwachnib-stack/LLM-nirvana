@@ -1,0 +1,32 @@
+$ coverage run  -m pytest test_generated.py
+returncode=1 timeout=False
+--- stdout ---
+..........F.......F...                                                   [100%]
+=================================== FAILURES ===================================
+______________________ test_target_larger_than_all_coins _______________________
+
+    def test_target_larger_than_all_coins():
+        """Large target with small coins: should work"""
+        result = find_fewest_coins([1, 2], 10)
+>       assert len(result) == 10
+E       assert 5 == 10
+E        +  where 5 = len([2, 2, 2, 2, 2])
+
+test_generated.py:100: AssertionError
+_____________________________ test_coins_with_zero _____________________________
+
+    def test_coins_with_zero():
+        """Zero coin is not allowed, and should not be used"""
+        # Note: zero coin would be invalid in real world, but just in case
+        # But our function doesn't include zero — so it's safe
+>       with pytest.raises(ValueError, match="can't make target with given coins"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+test_generated.py:155: Failed
+- generated xml file: /opt/repro/work/phase_c/qwen3-4b-instruct/basic/small_cat2/change/iter_1/unrepaired/unrepaired_stmt_junit.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_target_larger_than_all_coins - assert 5 == 10
+FAILED test_generated.py::test_coins_with_zero - Failed: DID NOT RAISE <class...
+2 failed, 20 passed in 0.10s
+
+--- stderr ---

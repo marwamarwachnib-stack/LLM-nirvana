@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="15" time="0.134" timestamp="2026-10-13T22:32:41.158645" hostname="vm"><testcase classname="test_generated" name="test_rows_a" time="0.001" /><testcase classname="test_generated" name="test_rows_b" time="0.001"><failure message="AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']&#10;  Left contains one more item: ' A '&#10;  Use -v to get more diff">def test_rows_b():
+        """Test with 'B' - two rows"""
+        result = rows('B')
+        expected = [
+            ' A ',
+            'B B'
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']
+E         Left contains one more item: ' A '
+E         Use -v to get more diff
+
+test_generated.py:19: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_c" time="0.001"><failure message="AssertionError: assert ['  A  ', ' B... B ', '  A  '] == ['  A  ', ' B B ', 'C C C']&#10;  At index 2 diff: 'C   C' != 'C C C'&#10;  Left contains 2 more items, first extra item: ' B B '&#10;  Use -v to get more diff">def test_rows_c():
+        """Test with 'C' - three rows"""
+        result = rows('C')
+        expected = [
+            '  A  ',
+            ' B B ',
+            'C C C'
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['  A  ', ' B... B ', '  A  '] == ['  A  ', ' B B ', 'C C C']
+E         At index 2 diff: 'C   C' != 'C C C'
+E         Left contains 2 more items, first extra item: ' B B '
+E         Use -v to get more diff
+
+test_generated.py:29: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_z" time="0.001"><failure message="AssertionError: assert 51 == 26&#10; +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])">def test_rows_z():
+        """Test with 'Z' - largest case"""
+        result = rows('Z')
+        # Should have 26 rows, symmetric diamond
+&gt;       assert len(result) == 26
+E       AssertionError: assert 51 == 26
+E        +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])
+
+test_generated.py:35: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_uppercase" time="0.001"><failure message="AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']&#10;  Left contains one more item: ' A '&#10;  Use -v to get more diff">def test_rows_uppercase():
+        """Test with uppercase letters"""
+        assert rows('A') == ['A']
+&gt;       assert rows('B') == [' A ', 'B B']
+E       AssertionError: assert [' A ', 'B B', ' A '] == [' A ', 'B B']
+E         Left contains one more item: ' A '
+E         Use -v to get more diff
+
+test_generated.py:51: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_invalid_input" time="0.001" /><testcase classname="test_generated" name="test_rows_invalid_input_type" time="0.001" /><testcase classname="test_generated" name="test_rows_invalid_input_type_2" time="0.001" /><testcase classname="test_generated" name="test_rows_with_non_ascii" time="0.001"><failure message="AssertionError: assert 65 == 33&#10; +  where 65 = len(['                                A                                ', '                               B B             ...      E       E                            ', '                           F         F                           ', ...])">def test_rows_with_non_ascii():
+        """Test with non-ASCII letters (like 'a')"""
+        # The function may not handle lowercase well
+        # But the code uses ord(letter) - 64 → which works for 'a' as 97 - 64 = 33
+        # But the logic assumes ASCII 'A'=65
+        # So lowercase will produce incorrect behavior
+        result = rows('a')
+&gt;       assert len(result) == 33  # lines = 97 - 64 = 33
+E       AssertionError: assert 65 == 33
+E        +  where 65 = len(['                                A                                ', '                               B B             ...      E       E                            ', '                           F         F                           ', ...])
+
+test_generated.py:78: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_edge_case_a" time="0.001" /><testcase classname="test_generated" name="test_rows_edge_case_z" time="0.001"><failure message="AssertionError: assert 51 == 26&#10; +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])">def test_rows_edge_case_z():
+        """Test with maximal input: 'Z'"""
+        result = rows('Z')
+&gt;       assert len(result) == 26
+E       AssertionError: assert 51 == 26
+E        +  where 51 = len(['                         A                         ', '                        B B                        ', '      ...  ', '                     E       E                     ', '                    F         F                    ', ...])
+
+test_generated.py:88: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_length" time="0.001"><failure message="AssertionError: assert 3 == 2&#10; +  where 3 = len([' A ', 'B B', ' A '])&#10; +    where [' A ', 'B B', ' A '] = rows('B')">def test_rows_length():
+        """Verify that number of rows is correct"""
+        for letter in ['A', 'B', 'C', 'Z']:
+            lines = ord(letter) - 64
+&gt;           assert len(rows(letter)) == lines
+E           AssertionError: assert 3 == 2
+E            +  where 3 = len([' A ', 'B B', ' A '])
+E            +    where [' A ', 'B B', ' A '] = rows('B')
+
+test_generated.py:94: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_symmetry" time="0.001"><failure message="AssertionError: assert 'C   C' == 'C C C'&#10;  - C C C&#10;  + C   C">def test_rows_symmetry():
+        """Check that the diamond is symmetric"""
+        result = rows('C')
+        assert result[0] == '  A  '
+        assert result[1] == ' B B '
+&gt;       assert result[2] == 'C C C'
+E       AssertionError: assert 'C   C' == 'C C C'
+E         - C C C
+E         + C   C
+
+test_generated.py:101: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rows_empty" time="0.001" /><testcase classname="test_generated" name="test_rows_with_space" time="0.001"><failure message="AssertionError: assert 1 == 2&#10; +  where 1 = &lt;built-in method count of str object at 0x7f9a2e8c42b0&gt;(' ')&#10; +    where &lt;built-in method count of str object at 0x7f9a2e8c42b0&gt; = 'B B'.count">def test_rows_with_space():
+        """Test that spaces are properly generated"""
+        result = rows('B')
+        assert result[0].count(' ') == 2
+&gt;       assert result[1].count(' ') == 2
+E       AssertionError: assert 1 == 2
+E        +  where 1 = &lt;built-in method count of str object at 0x7f9a2e8c42b0&gt;(' ')
+E        +    where &lt;built-in method count of str object at 0x7f9a2e8c42b0&gt; = 'B B'.count
+
+test_generated.py:117: AssertionError</failure></testcase></testsuite></testsuites>

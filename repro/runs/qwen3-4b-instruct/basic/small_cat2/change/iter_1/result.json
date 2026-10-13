@@ -1,0 +1,326 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 4,
+    "redefinitions_removed": [
+      "find_fewest_coins"
+    ],
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T22:21:06.024754+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/change/example.py",
+  "sample": "change",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 14,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 14,
+        "num_statements": 24,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_target_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_two",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_three",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_no_solution",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_negative_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_empty_coins_list",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_coin",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_greedy_vs_optimal",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_equal_to_coin",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 5 == 10\n +  where 5 = len([2, 2, 2, 2, 2])",
+            "name": "test_generated::test_target_larger_than_all_coins",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_coin_set_with_1",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_duplicate_coins_in_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_larger_with_optimal_combination",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_no_coin_available",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_only_even_coins",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_all_coins_larger_than_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_coin_large_target",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_coins_with_zero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_unsorted_coins",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_empty_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_reconstruction_valid",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 36,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 24,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_target_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_two",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_three",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_no_solution",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_negative_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_empty_coins_list",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_coin",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_greedy_vs_optimal",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_equal_to_coin",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 5 == 10\n +  where 5 = len([2, 2, 2, 2, 2])",
+            "name": "test_generated::test_target_larger_than_all_coins",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_coin_set_with_1",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_duplicate_coins_in_input",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_larger_with_optimal_combination",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_no_coin_available",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_only_even_coins",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_target_with_all_coins_larger_than_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_coin_large_target",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_coins_with_zero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_unsorted_coins",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_empty_target",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_reconstruction_valid",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 22,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 2,
+      "failure_classes": {
+        "assertion": 1,
+        "runtime": 0,
+        "try_except": 1
+      },
+      "passed": 20,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  },
+  "unrepaired": {
+    "branch_cov": 2.6315789473684212,
+    "collected": 22,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 2,
+    "failure_classes": {
+      "assertion": 1,
+      "runtime": 0,
+      "try_except": 1
+    },
+    "passed": 20,
+    "skipped": 0,
+    "stmt_cov": 4.166666666666667,
+    "xfailed": 0
+  }
+}

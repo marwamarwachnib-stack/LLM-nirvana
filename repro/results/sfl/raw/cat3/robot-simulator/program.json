@@ -1,0 +1,244 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m01",
+   "operator": "AOR",
+   "original": "(self.direction + 1) % 4",
+   "replacement": "((self.direction + 1) // 4)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m02",
+   "operator": "AOR",
+   "original": "self.direction + 1",
+   "replacement": "(self.direction - 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m04",
+   "operator": "CRP",
+   "original": "4",
+   "replacement": "5"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 24,
+   "line": 24,
+   "mutant_id": "m05",
+   "operator": "ROR",
+   "original": "self.direction == NORTH",
+   "replacement": "(self.direction != NORTH)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 26,
+   "line": 26,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "self.direction == SOUTH",
+   "replacement": "(self.direction != SOUTH)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 27,
+   "line": 27,
+   "mutant_id": "m07",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m08",
+   "operator": "ROR",
+   "original": "self.direction == EAST",
+   "replacement": "(self.direction != EAST)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 29,
+   "line": 29,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 31,
+   "line": 31,
+   "mutant_id": "m10",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  }
+ ],
+ "n_candidates": 16,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 18,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 18,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 18,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    36,
+    37,
+    39,
+    40,
+    43,
+    44,
+    45,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53
+   ],
+   "test_sha256": "3f018ff05c06499abdc252a9d596479086f43fc0cdd66c0b09adf1343d303ffd",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 11,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 11,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 11,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    36,
+    37,
+    39,
+    40,
+    43,
+    44,
+    45,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53
+   ],
+   "test_sha256": "52f2c42ee3e8ef027c8526c0749f29a67c2424ebcbe9dafb1c5ef4fd8b9e7662",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "robot-simulator",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

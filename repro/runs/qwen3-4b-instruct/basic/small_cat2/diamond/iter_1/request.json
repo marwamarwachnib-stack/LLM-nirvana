@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "def rows(letter):\n    lines = ord(letter) - 64\n    columns = lines * 2 - 1\n    half = make_half(lines, columns)\n    return half + half[-2::-1]\n\n\ndef make_half(lines, columns):\n    diamond_half = []\n    for number in range(lines):\n        row = [' '] * columns\n        row[lines - 1 - number] = chr(number + 65)\n        row[lines - 1 + number] = chr(number + 65)\n        diamond_half.append(''.join(row))\n    return diamond_half\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}
