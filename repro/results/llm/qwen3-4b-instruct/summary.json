@@ -58,18 +58,18 @@
   "rq1_small": {
     "cat2": {
       "branch_tests": {
-        "n_pairs": 1
+        "n_pairs": 2
       },
       "execution": {
-        "redefinition_repairs": 0,
+        "redefinition_repairs": 2,
         "suites_all_tests_pass": 0,
-        "suites_collected_ok": 1,
+        "suites_collected_ok": 2,
         "truncated_replies": 1
       },
-      "llm_branch": 12.5,
-      "llm_stmt": 20.0,
-      "llm_stmt_unrepaired": 20.0,
-      "n": 1,
+      "llm_branch": 100.0,
+      "llm_stmt": 100.0,
+      "llm_stmt_unrepaired": 18.33,
+      "n": 2,
       "paper_chatgpt_stmt_branch": [
         93.26,
         91.68
@@ -85,18 +85,18 @@
       "pynguin_branch": 100.0,
       "pynguin_stmt": 100.0,
       "rq3_correctness": {
-        "assertion_pct": 82.61,
-        "failing_tests": 23,
-        "pct_incorrect_mean_per_suite": 62.16,
-        "pct_incorrect_pooled": 62.16,
-        "runtime_pct": 4.35,
-        "suites": 1,
-        "suites_compiling": 1,
-        "tests": 37,
-        "try_except_pct": 13.04
+        "assertion_pct": 78.79,
+        "failing_tests": 33,
+        "pct_incorrect_mean_per_suite": 50.31,
+        "pct_incorrect_pooled": 52.38,
+        "runtime_pct": 6.06,
+        "suites": 2,
+        "suites_compiling": 2,
+        "tests": 63,
+        "try_except_pct": 15.15
       },
       "stmt_tests": {
-        "n_pairs": 1
+        "n_pairs": 2
       }
     }
   },

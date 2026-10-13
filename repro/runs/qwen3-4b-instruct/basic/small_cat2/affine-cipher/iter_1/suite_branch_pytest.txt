@@ -11,7 +11,7 @@ E       AssertionError: assert 'f' == 'd'
 E         - d
 E         + f
 
-test_generated.py:59: AssertionError
+test_generated.py:27: AssertionError
 _________________________ test_encode_multiple_letters _________________________
 
     def test_encode_multiple_letters():
@@ -20,7 +20,7 @@ E       AssertionError: assert 'fil' == 'dfe'
 E         - dfe
 E         + fil
 
-test_generated.py:63: AssertionError
+test_generated.py:31: AssertionError
 ____________________ test_encode_with_non_alphabetic_chars _____________________
 
     def test_encode_with_non_alphabetic_chars():
@@ -29,7 +29,7 @@ E       AssertionError: assert 'f1i2l' == 'd6f8h'
 E         - d6f8h
 E         + f1i2l
 
-test_generated.py:67: AssertionError
+test_generated.py:35: AssertionError
 __________________________ test_encode_with_uppercase __________________________
 
     def test_encode_with_uppercase():
@@ -38,7 +38,7 @@ E       AssertionError: assert 'f' == 'D'
 E         - D
 E         + f
 
-test_generated.py:71: AssertionError
+test_generated.py:39: AssertionError
 _________________________ test_encode_with_mixed_case __________________________
 
     def test_encode_with_mixed_case():
@@ -47,7 +47,7 @@ E       AssertionError: assert 'fil' == 'DfE'
 E         - DfE
 E         + fil
 
-test_generated.py:75: AssertionError
+test_generated.py:43: AssertionError
 _________________________ test_encode_with_block_size __________________________
 
     def test_encode_with_block_size():
@@ -55,10 +55,10 @@ _________________________ test_encode_with_block_size __________________________
 >       assert len(result.split()) == 2  # 5 chars → 2 blocks
 E       AssertionError: assert 1 == 2
 E        +  where 1 = len(['armmv'])
-E        +    where ['armmv'] = <built-in method split of str object at 0x7f0a647f0070>()
-E        +      where <built-in method split of str object at 0x7f0a647f0070> = 'armmv'.split
+E        +    where ['armmv'] = <built-in method split of str object at 0x7f5ae9fa82b0>()
+E        +      where <built-in method split of str object at 0x7f5ae9fa82b0> = 'armmv'.split
 
-test_generated.py:84: AssertionError
+test_generated.py:52: AssertionError
 __________________________ test_decode_single_letter ___________________________
 
     def test_decode_single_letter():
@@ -67,7 +67,7 @@ E       AssertionError: assert 'i' == 'a'
 E         - a
 E         + i
 
-test_generated.py:89: AssertionError
+test_generated.py:57: AssertionError
 _________________________ test_decode_multiple_letters _________________________
 
     def test_decode_multiple_letters():
@@ -76,7 +76,7 @@ E       AssertionError: assert 'iar' == 'abc'
 E         - abc
 E         + iar
 
-test_generated.py:93: AssertionError
+test_generated.py:61: AssertionError
 ____________________ test_decode_with_non_alphabetic_chars _____________________
 
     def test_decode_with_non_alphabetic_chars():
@@ -85,7 +85,7 @@ E       AssertionError: assert 'i6a8s' == 'abc'
 E         - abc
 E         + i6a8s
 
-test_generated.py:97: AssertionError
+test_generated.py:65: AssertionError
 __________________________ test_decode_with_uppercase __________________________
 
     def test_decode_with_uppercase():
@@ -94,7 +94,7 @@ E       AssertionError: assert 'i' == 'A'
 E         - A
 E         + i
 
-test_generated.py:101: AssertionError
+test_generated.py:69: AssertionError
 _________________________ test_decode_with_mixed_case __________________________
 
     def test_decode_with_mixed_case():
@@ -103,7 +103,7 @@ E       AssertionError: assert 'iar' == 'AbC'
 E         - AbC
 E         + iar
 
-test_generated.py:105: AssertionError
+test_generated.py:73: AssertionError
 _____________________ test_translate_with_negative_origin ______________________
 
     def test_translate_with_negative_origin():
@@ -114,7 +114,7 @@ E       AssertionError: assert 'f' == 'd'
 E         - d
 E         + f
 
-test_generated.py:144: AssertionError
+test_generated.py:112: AssertionError
 ______________________ test_translate_with_non_alphabetic ______________________
 
     def test_translate_with_non_alphabetic():
@@ -124,7 +124,7 @@ E       AssertionError: assert 'f1i' == 'd6f'
 E         - d6f
 E         + f1i
 
-test_generated.py:149: AssertionError
+test_generated.py:117: AssertionError
 _______________________ test_translate_with_invalid_mode _______________________
 
     def test_translate_with_invalid_mode():
@@ -132,7 +132,7 @@ _______________________ test_translate_with_invalid_mode _______________________
         with pytest.raises(ValueError):
 >           translate("a", 3, 5, 2)
 
-test_generated.py:155: 
+test_generated.py:123: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 text = 'a', a_key = 3, b_key = 5, mode = 2
@@ -156,7 +156,7 @@ text = 'a', a_key = 3, b_key = 5, mode = 2
 >               chars.append(chr(new + 97))
 E               UnboundLocalError: local variable 'new' referenced before assignment
 
-test_generated.py:34: UnboundLocalError
+example.py:29: UnboundLocalError
 _________________________ test_mod_inverse_non_coprime _________________________
 
     def test_mod_inverse_non_coprime():
@@ -164,7 +164,7 @@ _________________________ test_mod_inverse_non_coprime _________________________
 >       with pytest.raises(ValueError):
 E       Failed: DID NOT RAISE <class 'ValueError'>
 
-test_generated.py:171: Failed
+test_generated.py:139: Failed
 ________________________ test_mod_inverse_with_large_a _________________________
 
     def test_mod_inverse_with_large_a():
@@ -172,7 +172,7 @@ ________________________ test_mod_inverse_with_large_a _________________________
 E       assert 1 == (100 % 26)
 E        +  where 1 = mod_inverse(100, 26)
 
-test_generated.py:176: AssertionError
+test_generated.py:144: AssertionError
 ________________________ test_encode_with_large_values _________________________
 
     def test_encode_with_large_values():
@@ -181,7 +181,7 @@ E       AssertionError: assert 'lct' == 'fjy'
 E         - fjy
 E         + lct
 
-test_generated.py:182: AssertionError
+test_generated.py:150: AssertionError
 _______________________ test_decode_with_block_structure _______________________
 
     def test_decode_with_block_structure():
@@ -193,7 +193,7 @@ E         - hello world
 E         ?      -
 E         + helloworld
 
-test_generated.py:207: AssertionError
+test_generated.py:175: AssertionError
 ___________________ test_decode_with_mixed_case_and_numbers ____________________
 
     def test_decode_with_mixed_case_and_numbers():
@@ -206,21 +206,21 @@ E         ? ^
 E         + hello123
 E         ? ^
 
-test_generated.py:213: AssertionError
+test_generated.py:181: AssertionError
 _________________________ test_encode_with_negative_a __________________________
 
     def test_encode_with_negative_a():
 >       with pytest.raises(ValueError):
 E       Failed: DID NOT RAISE <class 'ValueError'>
 
-test_generated.py:222: Failed
+test_generated.py:190: Failed
 _________________________ test_decode_with_negative_a __________________________
 
     def test_decode_with_negative_a():
 >       with pytest.raises(ValueError):
 E       Failed: DID NOT RAISE <class 'ValueError'>
 
-test_generated.py:227: Failed
+test_generated.py:195: Failed
 ___________________________ test_encode_with_zero_b ____________________________
 
     def test_encode_with_zero_b():
@@ -229,7 +229,7 @@ E       AssertionError: assert 'a' == 'd'
 E         - d
 E         + a
 
-test_generated.py:232: AssertionError
+test_generated.py:200: AssertionError
 _________________________ test_encode_with_negative_b __________________________
 
     def test_encode_with_negative_b():
@@ -238,7 +238,7 @@ E       AssertionError: assert 'v' == 'd'
 E         - d
 E         + v
 
-test_generated.py:236: AssertionError
+test_generated.py:204: AssertionError
 - generated xml file: /opt/repro/work/phase_c/qwen3-4b-instruct/basic/small_cat2/affine-cipher/iter_1/suite/suite_branch_junit.xml -
 =========================== short test summary info ============================
 FAILED test_generated.py::test_encode_single_letter - AssertionError: assert ...
@@ -264,6 +264,6 @@ FAILED test_generated.py::test_encode_with_negative_a - Failed: DID NOT RAISE...
 FAILED test_generated.py::test_decode_with_negative_a - Failed: DID NOT RAISE...
 FAILED test_generated.py::test_encode_with_zero_b - AssertionError: assert 'a...
 FAILED test_generated.py::test_encode_with_negative_b - AssertionError: asser...
-23 failed, 14 passed in 0.31s
+23 failed, 14 passed in 0.26s
 
 --- stderr ---

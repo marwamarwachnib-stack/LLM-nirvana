@@ -1,214 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="17" skipped="0" tests="26" time="0.259" timestamp="2026-10-13T21:04:37.287446" hostname="vm"><testcase classname="test_generated" name="test_rebase_normal_case" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_normal_case():
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="26" time="0.141" timestamp="2026-10-13T21:05:22.444008" hostname="vm"><testcase classname="test_generated" name="test_rebase_normal_case" time="0.001"><failure message="assert [1, 1, 1, 1, 0, 1, ...] == [1, 0, 1, 0, 1, 1]&#10;  At index 1 diff: 1 != 0&#10;  Left contains one more item: 1&#10;  Use -v to get more diff">def test_rebase_normal_case():
         # Normal conversion: 123 base 10 to base 2
 &gt;       assert rebase(10, [1, 2, 3], 2) == [1, 0, 1, 0, 1, 1]
+E       assert [1, 1, 1, 1, 0, 1, ...] == [1, 0, 1, 0, 1, 1]
+E         At index 1 diff: 1 != 0
+E         Left contains one more item: 1
+E         Use -v to get more diff
 
-test_generated.py:37: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 123, base_to = 2
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_single_digit" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_single_digit():
-&gt;       assert rebase(10, [5], 2) == [1, 0, 1]
-
-test_generated.py:40: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 5, base_to = 2
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_zero_input" time="0.001" /><testcase classname="test_generated" name="test_rebase_empty_digits" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_rebase_empty_digits():
+test_generated.py:17: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rebase_single_digit" time="0.000" /><testcase classname="test_generated" name="test_rebase_zero_input" time="0.001" /><testcase classname="test_generated" name="test_rebase_empty_digits" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_rebase_empty_digits():
 &gt;       with pytest.raises(ValueError, match="all digits must satisfy 0 &lt;= d &lt; input base"):
 E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
 
-test_generated.py:46: Failed</failure></testcase><testcase classname="test_generated" name="test_rebase_single_zero" time="0.000" /><testcase classname="test_generated" name="test_rebase_two_digits" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_two_digits():
+test_generated.py:26: Failed</failure></testcase><testcase classname="test_generated" name="test_rebase_single_zero" time="0.000" /><testcase classname="test_generated" name="test_rebase_two_digits" time="0.001"><failure message="assert [1, 5] == [19]&#10;  At index 0 diff: 1 != 19&#10;  Left contains one more item: 5&#10;  Use -v to get more diff">def test_rebase_two_digits():
 &gt;       assert rebase(8, [1, 7], 10) == [19]
+E       assert [1, 5] == [19]
+E         At index 0 diff: 1 != 19
+E         Left contains one more item: 5
+E         Use -v to get more diff
 
-test_generated.py:53: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 15, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_large_number" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_large_number():
+test_generated.py:33: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rebase_large_number" time="0.001"><failure message="assert [4, 13, 2] == [1, 2, 3, 4]&#10;  At index 0 diff: 4 != 1&#10;  Right contains one more item: 4&#10;  Use -v to get more diff">def test_rebase_large_number():
         # 1234 in base 10 → base 16
 &gt;       assert rebase(10, [1, 2, 3, 4], 16) == [1, 2, 3, 4]
+E       assert [4, 13, 2] == [1, 2, 3, 4]
+E         At index 0 diff: 4 != 1
+E         Right contains one more item: 4
+E         Use -v to get more diff
 
-test_generated.py:57: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 1234, base_to = 16
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_to_base_2" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_to_base_2():
+test_generated.py:37: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rebase_to_base_2" time="0.001"><failure message="assert [1, 1, 0, 0, 1, 0, ...] == [1, 1, 0, 1]&#10;  At index 3 diff: 0 != 1&#10;  Left contains 3 more items, first extra item: 1&#10;  Use -v to get more diff">def test_rebase_to_base_2():
 &gt;       assert rebase(10, [1, 0, 1], 2) == [1, 1, 0, 1]
+E       assert [1, 1, 0, 0, 1, 0, ...] == [1, 1, 0, 1]
+E         At index 3 diff: 0 != 1
+E         Left contains 3 more items, first extra item: 1
+E         Use -v to get more diff
 
-test_generated.py:60: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 101, base_to = 2
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_to_base_3" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_to_base_3():
+test_generated.py:40: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rebase_to_base_3" time="0.001"><failure message="assert [1, 1, 0] == [1, 2]&#10;  At index 1 diff: 1 != 2&#10;  Left contains one more item: 0&#10;  Use -v to get more diff">def test_rebase_to_base_3():
 &gt;       assert rebase(10, [1, 2], 3) == [1, 2]
+E       assert [1, 1, 0] == [1, 2]
+E         At index 1 diff: 1 != 2
+E         Left contains one more item: 0
+E         Use -v to get more diff
 
-test_generated.py:63: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 12, base_to = 3
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_invalid_from_base" time="0.001" /><testcase classname="test_generated" name="test_invalid_to_base" time="0.001" /><testcase classname="test_generated" name="test_negative_digit" time="0.001" /><testcase classname="test_generated" name="test_digit_out_of_range" time="0.000" /><testcase classname="test_generated" name="test_digit_equal_to_base" time="0.001" /><testcase classname="test_generated" name="test_all_zeros" time="0.000" /><testcase classname="test_generated" name="test_from_base_2" time="0.001"><failure message="NameError: name 'base' is not defined">def test_from_base_2():
-&gt;       assert rebase(2, [1, 0, 1], 10) == [5]
-
-test_generated.py:89: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 5, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_from_base_2_to_base_2" time="0.001"><failure message="NameError: name 'base' is not defined">def test_from_base_2_to_base_2():
-&gt;       assert rebase(2, [1, 1], 2) == [1, 1]
-
-test_generated.py:92: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 3, base_to = 2
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_from_base_3" time="0.001"><failure message="NameError: name 'base' is not defined">def test_from_base_3():
+test_generated.py:43: AssertionError</failure></testcase><testcase classname="test_generated" name="test_invalid_from_base" time="0.001" /><testcase classname="test_generated" name="test_invalid_to_base" time="0.001" /><testcase classname="test_generated" name="test_negative_digit" time="0.001" /><testcase classname="test_generated" name="test_digit_out_of_range" time="0.000" /><testcase classname="test_generated" name="test_digit_equal_to_base" time="0.000" /><testcase classname="test_generated" name="test_all_zeros" time="0.000" /><testcase classname="test_generated" name="test_from_base_2" time="0.000" /><testcase classname="test_generated" name="test_from_base_2_to_base_2" time="0.001" /><testcase classname="test_generated" name="test_from_base_3" time="0.001"><failure message="assert [1, 1] == [10]&#10;  At index 0 diff: 1 != 10&#10;  Left contains one more item: 1&#10;  Use -v to get more diff">def test_from_base_3():
 &gt;       assert rebase(3, [1, 0, 2], 10) == [10]
+E       assert [1, 1] == [10]
+E         At index 0 diff: 1 != 10
+E         Left contains one more item: 1
+E         Use -v to get more diff
 
-test_generated.py:95: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 11, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_mixed_base_conversion" time="0.001"><failure message="NameError: name 'base' is not defined">def test_mixed_base_conversion():
-        # 11 in base 3 = 4 in base 10 → 4 in base 5 = [4]
-&gt;       assert rebase(3, [1, 1], 5) == [4]
-
-test_generated.py:99: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 4, base_to = 5
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_input_with_leading_zeros" time="0.001"><failure message="NameError: name 'base' is not defined">def test_input_with_leading_zeros():
-        # [0, 1, 0] in base 10 → 10 in base 10 → [1, 0]
-&gt;       assert rebase(10, [0, 1, 0], 10) == [1, 0]
-
-test_generated.py:103: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 10, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_large_base" time="0.001"><failure message="ValueError: all digits must satisfy 0 &lt;= d &lt; input base">def test_rebase_with_large_base():
+test_generated.py:75: AssertionError</failure></testcase><testcase classname="test_generated" name="test_mixed_base_conversion" time="0.000" /><testcase classname="test_generated" name="test_input_with_leading_zeros" time="0.000" /><testcase classname="test_generated" name="test_rebase_with_large_base" time="0.000"><failure message="ValueError: all digits must satisfy 0 &lt;= d &lt; input base">def test_rebase_with_large_base():
         # 10 in base 10 → base 16 → [10]
 &gt;       assert rebase(10, [10], 16) == [10]
 
-test_generated.py:107: 
+test_generated.py:87: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 from_base = 10, digits = [10], to_base = 16
@@ -224,65 +66,15 @@ from_base = 10, digits = [10], to_base = 16
 &gt;           raise ValueError("all digits must satisfy 0 &lt;= d &lt; input base")
 E           ValueError: all digits must satisfy 0 &lt;= d &lt; input base
 
-test_generated.py:26: ValueError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_digit_0_at_end" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_with_digit_0_at_end():
+example.py:23: ValueError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_digit_0_at_end" time="0.001"><failure message="assert [1, 0, 2, 1, 0] == [1, 0, 2]&#10;  Left contains 2 more items, first extra item: 1&#10;  Use -v to get more diff">def test_rebase_with_digit_0_at_end():
         # [1, 0, 2] in base 10 → base 3 → [1, 0, 2] in base 3 is valid
 &gt;       assert rebase(10, [1, 0, 2], 3) == [1, 0, 2]
+E       assert [1, 0, 2, 1, 0] == [1, 0, 2]
+E         Left contains 2 more items, first extra item: 1
+E         Use -v to get more diff
 
-test_generated.py:111: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 102, base_to = 3
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_base_2_negative" time="0.001" /><testcase classname="test_generated" name="test_rebase_with_empty_list" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_rebase_with_empty_list():
+test_generated.py:91: AssertionError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_base_2_negative" time="0.000" /><testcase classname="test_generated" name="test_rebase_with_empty_list" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_rebase_with_empty_list():
 &gt;       with pytest.raises(ValueError, match="all digits must satisfy 0 &lt;= d &lt; input base"):
 E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
 
-test_generated.py:118: Failed</failure></testcase><testcase classname="test_generated" name="test_rebase_with_duplicate_digits" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_with_duplicate_digits():
-        # [1, 1] in base 2 → base 10 → 3
-&gt;       assert rebase(2, [1, 1], 10) == [3]
-
-test_generated.py:123: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 3, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase><testcase classname="test_generated" name="test_rebase_with_nonzero_to_zero" time="0.001"><failure message="NameError: name 'base' is not defined">def test_rebase_with_nonzero_to_zero():
-        # 123 in base 10 → base 10 → [1, 2, 3]
-&gt;       assert rebase(10, [1, 2, 3], 10) == [1, 2, 3]
-
-test_generated.py:127: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-test_generated.py:28: in rebase
-    return to_digits(from_digits(digits, from_base), to_base)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-number = 123, base_to = 10
-
-    def to_digits(number, base_to):
-        result = []
-        while number &gt; 0:
-            result.append(number % base_to)
-&gt;           number //= base(base_to)
-E           NameError: name 'base' is not defined
-
-test_generated.py:12: NameError</failure></testcase></testsuite></testsuites>
+test_generated.py:98: Failed</failure></testcase><testcase classname="test_generated" name="test_rebase_with_duplicate_digits" time="0.000" /><testcase classname="test_generated" name="test_rebase_with_nonzero_to_zero" time="0.000" /></testsuite></testsuites>

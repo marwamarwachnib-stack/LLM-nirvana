@@ -3,5 +3,13 @@
   "fenced_blocks_used": 1,
   "imports_redirected": [],
   "lines_dropped_to_parse": 2,
+  "redefinitions_removed": [
+    "BLOCK_SIZE",
+    "ALPHABET",
+    "mod_inverse",
+    "translate",
+    "encode",
+    "decode"
+  ],
   "star_import_added": true
 }

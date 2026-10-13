@@ -3,5 +3,10 @@
   "fenced_blocks_used": 1,
   "imports_redirected": [],
   "lines_dropped_to_parse": 0,
+  "redefinitions_removed": [
+    "from_digits",
+    "to_digits",
+    "rebase"
+  ],
   "star_import_added": true
 }

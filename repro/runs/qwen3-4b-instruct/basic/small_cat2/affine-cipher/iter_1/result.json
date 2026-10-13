@@ -6,9 +6,17 @@
     "fenced_blocks_used": 1,
     "imports_redirected": [],
     "lines_dropped_to_parse": 2,
+    "redefinitions_removed": [
+      "BLOCK_SIZE",
+      "ALPHABET",
+      "mod_inverse",
+      "translate",
+      "encode",
+      "decode"
+    ],
     "star_import_added": true
   },
-  "finished_at": "2026-10-13T20:56:48.704654+00:00",
+  "finished_at": "2026-10-13T21:05:22.122984+00:00",
   "iteration": 1,
   "module_source": "0_100 LOC/cat2_functions/affine-cipher/example.py",
   "sample": "affine-cipher",
@@ -16,21 +24,17 @@
   "suite": {
     "branch": {
       "coverage": {
-        "covered_branches": 0,
+        "covered_branches": 18,
         "executed_lines": [
           1,
           2,
           5,
-          13,
-          34,
-          40
-        ],
-        "missing_lines": [
           6,
           7,
           8,
           9,
           10,
+          13,
           14,
           15,
           16,
@@ -47,14 +51,17 @@
           28,
           29,
           31,
+          34,
           35,
           36,
+          40,
           41
         ],
-        "missing_statements": 24,
+        "missing_lines": [],
+        "missing_statements": 0,
         "num_branches": 18,
         "num_statements": 30,
-        "percent": 12.5
+        "percent": 100.0
       },
       "junit": {
         "collection_error": false,
@@ -99,7 +106,7 @@
           },
           {
             "failure_class": "assertion",
-            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f0a647f0070>()\n +      where <built-in method split of str object at 0x7f0a647f0070> = 'armmv'.split",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f5ae9fa82b0>()\n +      where <built-in method split of str object at 0x7f5ae9fa82b0> = 'armmv'.split",
             "name": "test_generated::test_encode_with_block_size",
             "outcome": "failed"
           },
@@ -266,16 +273,12 @@
           1,
           2,
           5,
-          13,
-          34,
-          40
-        ],
-        "missing_lines": [
           6,
           7,
           8,
           9,
           10,
+          13,
           14,
           15,
           16,
@@ -292,14 +295,17 @@
           28,
           29,
           31,
+          34,
           35,
           36,
+          40,
           41
         ],
-        "missing_statements": 24,
+        "missing_lines": [],
+        "missing_statements": 0,
         "num_branches": null,
         "num_statements": 30,
-        "percent": 20.0
+        "percent": 100.0
       },
       "junit": {
         "collection_error": false,
@@ -344,7 +350,7 @@
           },
           {
             "failure_class": "assertion",
-            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f78bf64f830>()\n +      where <built-in method split of str object at 0x7f78bf64f830> = 'armmv'.split",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f33b943ecb0>()\n +      where <built-in method split of str object at 0x7f33b943ecb0> = 'armmv'.split",
             "name": "test_generated::test_encode_with_block_size",
             "outcome": "failed"
           },
@@ -504,7 +510,7 @@
       "timeout": false
     },
     "summary": {
-      "branch_cov": 12.5,
+      "branch_cov": 100.0,
       "collected": 37,
       "collection_error": false,
       "errors": 0,
@@ -516,10 +522,26 @@
       },
       "passed": 14,
       "skipped": 0,
-      "stmt_cov": 20.0,
+      "stmt_cov": 100.0,
       "xfailed": 0
     },
     "target": "example.py",
     "test_file": "test_generated.py"
+  },
+  "unrepaired": {
+    "branch_cov": 12.5,
+    "collected": 37,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 23,
+    "failure_classes": {
+      "assertion": 19,
+      "runtime": 1,
+      "try_except": 3
+    },
+    "passed": 14,
+    "skipped": 0,
+    "stmt_cov": 20.0,
+    "xfailed": 0
   }
 }
