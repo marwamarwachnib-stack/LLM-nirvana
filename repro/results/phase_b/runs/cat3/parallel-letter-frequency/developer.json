@@ -1,0 +1,194 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 16,
+      "executed_lines": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 16,
+      "num_statements": 40,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_case_insensitivity",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_multiline_text",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_one_letter",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_punctuations",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_repeated_string_with_known_frequencies",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_whitespaces",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 40,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_case_insensitivity",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_multiline_text",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_one_letter",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_punctuations",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_repeated_string_with_known_frequencies",
+          "outcome": "passed"
+        },
+        {
+          "name": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_whitespaces",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 7,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 7,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "parallel_letter_frequency_test.py"
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="23" skipped="0" tests="37" time="0.285" timestamp="2026-10-13T20:56:47.304960" hostname="vm"><testcase classname="test_generated" name="test_encode_empty_string" time="0.001" /><testcase classname="test_generated" name="test_encode_single_letter" time="0.001"><failure message="AssertionError: assert 'f' == 'd'&#10;  - d&#10;  + f">def test_encode_single_letter():
+&gt;       assert encode("a", 3, 5) == "d"
+E       AssertionError: assert 'f' == 'd'
+E         - d
+E         + f
+
+test_generated.py:59: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_multiple_letters" time="0.001"><failure message="AssertionError: assert 'fil' == 'dfe'&#10;  - dfe&#10;  + fil">def test_encode_multiple_letters():
+&gt;       assert encode("abc", 3, 5) == "dfe"
+E       AssertionError: assert 'fil' == 'dfe'
+E         - dfe
+E         + fil
+
+test_generated.py:63: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_non_alphabetic_chars" time="0.001"><failure message="AssertionError: assert 'f1i2l' == 'd6f8h'&#10;  - d6f8h&#10;  + f1i2l">def test_encode_with_non_alphabetic_chars():
+&gt;       assert encode("a1b2c", 3, 5) == "d6f8h"
+E       AssertionError: assert 'f1i2l' == 'd6f8h'
+E         - d6f8h
+E         + f1i2l
+
+test_generated.py:67: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_uppercase" time="0.001"><failure message="AssertionError: assert 'f' == 'D'&#10;  - D&#10;  + f">def test_encode_with_uppercase():
+&gt;       assert encode("A", 3, 5) == "D"
+E       AssertionError: assert 'f' == 'D'
+E         - D
+E         + f
+
+test_generated.py:71: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_mixed_case" time="0.001"><failure message="AssertionError: assert 'fil' == 'DfE'&#10;  - DfE&#10;  + fil">def test_encode_with_mixed_case():
+&gt;       assert encode("AbC", 3, 5) == "DfE"
+E       AssertionError: assert 'fil' == 'DfE'
+E         - DfE
+E         + fil
+
+test_generated.py:75: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_numbers" time="0.000" /><testcase classname="test_generated" name="test_encode_with_block_size" time="0.001"><failure message="AssertionError: assert 1 == 2&#10; +  where 1 = len(['armmv'])&#10; +    where ['armmv'] = &lt;built-in method split of str object at 0x7f78bf64f830&gt;()&#10; +      where &lt;built-in method split of str object at 0x7f78bf64f830&gt; = 'armmv'.split">def test_encode_with_block_size():
+        result = encode("hello", 3, 5)
+&gt;       assert len(result.split()) == 2  # 5 chars → 2 blocks
+E       AssertionError: assert 1 == 2
+E        +  where 1 = len(['armmv'])
+E        +    where ['armmv'] = &lt;built-in method split of str object at 0x7f78bf64f830&gt;()
+E        +      where &lt;built-in method split of str object at 0x7f78bf64f830&gt; = 'armmv'.split
+
+test_generated.py:84: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_single_letter" time="0.001"><failure message="AssertionError: assert 'i' == 'a'&#10;  - a&#10;  + i">def test_decode_single_letter():
+&gt;       assert decode("d", 3, 5) == "a"
+E       AssertionError: assert 'i' == 'a'
+E         - a
+E         + i
+
+test_generated.py:89: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_multiple_letters" time="0.001"><failure message="AssertionError: assert 'iar' == 'abc'&#10;  - abc&#10;  + iar">def test_decode_multiple_letters():
+&gt;       assert decode("dfe", 3, 5) == "abc"
+E       AssertionError: assert 'iar' == 'abc'
+E         - abc
+E         + iar
+
+test_generated.py:93: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_non_alphabetic_chars" time="0.001"><failure message="AssertionError: assert 'i6a8s' == 'abc'&#10;  - abc&#10;  + i6a8s">def test_decode_with_non_alphabetic_chars():
+&gt;       assert decode("d6f8h", 3, 5) == "abc"
+E       AssertionError: assert 'i6a8s' == 'abc'
+E         - abc
+E         + i6a8s
+
+test_generated.py:97: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_uppercase" time="0.001"><failure message="AssertionError: assert 'i' == 'A'&#10;  - A&#10;  + i">def test_decode_with_uppercase():
+&gt;       assert decode("D", 3, 5) == "A"
+E       AssertionError: assert 'i' == 'A'
+E         - A
+E         + i
+
+test_generated.py:101: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_mixed_case" time="0.001"><failure message="AssertionError: assert 'iar' == 'AbC'&#10;  - AbC&#10;  + iar">def test_decode_with_mixed_case():
+&gt;       assert decode("DfE", 3, 5) == "AbC"
+E       AssertionError: assert 'iar' == 'AbC'
+E         - AbC
+E         + iar
+
+test_generated.py:105: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_numbers" time="0.001" /><testcase classname="test_generated" name="test_decode_block_size" time="0.000" /><testcase classname="test_generated" name="test_decode_with_original_encoding" time="0.000" /><testcase classname="test_generated" name="test_decode_with_different_a_value" time="0.001" /><testcase classname="test_generated" name="test_encode_with_a_not_coprime" time="0.000" /><testcase classname="test_generated" name="test_decode_with_a_not_coprime" time="0.000" /><testcase classname="test_generated" name="test_translate_with_negative_origin" time="0.001"><failure message="AssertionError: assert 'f' == 'd'&#10;  - d&#10;  + f">def test_translate_with_negative_origin():
+        # Test if origin &lt; 0 is handled correctly
+        result = translate("a", 3, 5, 0)
+&gt;       assert result == "d"
+E       AssertionError: assert 'f' == 'd'
+E         - d
+E         + f
+
+test_generated.py:144: AssertionError</failure></testcase><testcase classname="test_generated" name="test_translate_with_non_alphabetic" time="0.001"><failure message="AssertionError: assert 'f1i' == 'd6f'&#10;  - d6f&#10;  + f1i">def test_translate_with_non_alphabetic():
+        result = translate("a1b", 3, 5, 0)
+&gt;       assert result == "d6f"
+E       AssertionError: assert 'f1i' == 'd6f'
+E         - d6f
+E         + f1i
+
+test_generated.py:149: AssertionError</failure></testcase><testcase classname="test_generated" name="test_translate_with_invalid_mode" time="0.001"><failure message="UnboundLocalError: local variable 'new' referenced before assignment">def test_translate_with_invalid_mode():
+        # mode should only be 0 or 1
+        with pytest.raises(ValueError):
+&gt;           translate("a", 3, 5, 2)
+
+test_generated.py:155: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = 'a', a_key = 3, b_key = 5, mode = 2
+
+    def translate(text, a_key, b_key, mode):
+        inverse = mod_inverse(a_key, ALPHABET)
+        if inverse == 1:
+            raise ValueError('a and m must be coprime.')
+    
+        chars = []
+        for character in text:
+            if character.isalnum():
+                origin = ord(character.lower()) - 97
+                if origin &lt; 0:
+                    chars.append(character)
+                    continue
+                if mode == 0:
+                    new = (a_key * origin + b_key) % ALPHABET
+                elif mode == 1:
+                    new = (inverse * (origin - b_key)) % ALPHABET
+&gt;               chars.append(chr(new + 97))
+E               UnboundLocalError: local variable 'new' referenced before assignment
+
+test_generated.py:34: UnboundLocalError</failure></testcase><testcase classname="test_generated" name="test_mod_inverse_correct_values" time="0.000" /><testcase classname="test_generated" name="test_mod_inverse_non_coprime" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_mod_inverse_non_coprime():
+        # a=2, 2 and 26 are not coprime → mod_inverse should raise ValueError
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:171: Failed</failure></testcase><testcase classname="test_generated" name="test_mod_inverse_with_large_a" time="0.001"><failure message="assert 1 == (100 % 26)&#10; +  where 1 = mod_inverse(100, 26)">def test_mod_inverse_with_large_a():
+&gt;       assert mod_inverse(100, 26) == 100 % 26  # 100 % 26 = 22
+E       assert 1 == (100 % 26)
+E        +  where 1 = mod_inverse(100, 26)
+
+test_generated.py:176: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_large_values" time="0.001"><failure message="AssertionError: assert 'lct' == 'fjy'&#10;  - fjy&#10;  + lct">def test_encode_with_large_values():
+&gt;       assert encode("xyz", 17, 10) == "fjy"
+E       AssertionError: assert 'lct' == 'fjy'
+E         - fjy
+E         + lct
+
+test_generated.py:182: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_large_values" time="0.000" /><testcase classname="test_generated" name="test_encode_with_very_long_string" time="0.001" /><testcase classname="test_generated" name="test_decode_with_very_long_string" time="0.001" /><testcase classname="test_generated" name="test_decode_with_block_structure" time="0.001"><failure message="AssertionError: assert 'helloworld' == 'hello world'&#10;  - hello world&#10;  ?      -&#10;  + helloworld">def test_decode_with_block_structure():
+        cipher = encode("hello world", 3, 5)
+        decoded = decode(cipher, 3, 5)
+&gt;       assert decoded == "hello world"
+E       AssertionError: assert 'helloworld' == 'hello world'
+E         - hello world
+E         ?      -
+E         + helloworld
+
+test_generated.py:207: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_mixed_case_and_numbers" time="0.001"><failure message="AssertionError: assert 'hello123' == 'Hello123'&#10;  - Hello123&#10;  ? ^&#10;  + hello123&#10;  ? ^">def test_decode_with_mixed_case_and_numbers():
+        cipher = encode("Hello123", 3, 5)
+        decoded = decode(cipher, 3, 5)
+&gt;       assert decoded == "Hello123"
+E       AssertionError: assert 'hello123' == 'Hello123'
+E         - Hello123
+E         ? ^
+E         + hello123
+E         ? ^
+
+test_generated.py:213: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_zero_a" time="0.001" /><testcase classname="test_generated" name="test_encode_with_negative_a" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_encode_with_negative_a():
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:222: Failed</failure></testcase><testcase classname="test_generated" name="test_decode_with_negative_a" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_decode_with_negative_a():
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:227: Failed</failure></testcase><testcase classname="test_generated" name="test_encode_with_zero_b" time="0.001"><failure message="AssertionError: assert 'a' == 'd'&#10;  - d&#10;  + a">def test_encode_with_zero_b():
+&gt;       assert encode("a", 3, 0) == "d"
+E       AssertionError: assert 'a' == 'd'
+E         - d
+E         + a
+
+test_generated.py:232: AssertionError</failure></testcase><testcase classname="test_generated" name="test_encode_with_negative_b" time="0.001"><failure message="AssertionError: assert 'v' == 'd'&#10;  - d&#10;  + v">def test_encode_with_negative_b():
+&gt;       assert encode("a", 3, -5) == "d"  # because (3*0 -5) % 26 = 21 → chr(21+97) = 'v'? Wait, no.
+E       AssertionError: assert 'v' == 'd'
+E         - d
+E         + v
+
+test_generated.py:236: AssertionError</failure></testcase><testcase classname="test_generated" name="test_decode_with_negative_b" time="0.000" /></testsuite></testsuites>

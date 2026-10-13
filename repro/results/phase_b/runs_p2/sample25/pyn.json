@@ -1,0 +1,678 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 20,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        19,
+        20,
+        21,
+        24,
+        25,
+        29,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        72,
+        73,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        93,
+        94,
+        97,
+        98,
+        112,
+        132,
+        134,
+        135,
+        138,
+        139,
+        140,
+        141,
+        142,
+        144,
+        145,
+        150,
+        151,
+        152,
+        154,
+        155,
+        157,
+        167,
+        176,
+        178,
+        179,
+        181,
+        182,
+        184,
+        185,
+        187,
+        188,
+        190,
+        191,
+        192,
+        194,
+        195,
+        196,
+        197,
+        198,
+        201,
+        202,
+        203,
+        207,
+        208,
+        213,
+        214,
+        219,
+        220,
+        227,
+        239,
+        240,
+        241,
+        243,
+        244,
+        245,
+        247,
+        248,
+        250,
+        251,
+        252,
+        253,
+        254
+      ],
+      "missing_lines": [
+        153,
+        168,
+        199,
+        204
+      ],
+      "missing_statements": 4,
+      "num_branches": 26,
+      "num_statements": 101,
+      "percent": 92.1259842519685
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_base::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_base::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_16",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_21",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_22",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_24",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_base::test_case_25",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_27",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_29",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_31",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_32",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_33",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_34",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_35",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_36",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_37",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_38",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_39",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_40",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_41",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_42",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_43",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        19,
+        20,
+        21,
+        24,
+        25,
+        29,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        72,
+        73,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        93,
+        94,
+        97,
+        98,
+        112,
+        132,
+        134,
+        135,
+        138,
+        139,
+        140,
+        141,
+        142,
+        144,
+        145,
+        150,
+        151,
+        152,
+        154,
+        155,
+        157,
+        167,
+        176,
+        178,
+        179,
+        181,
+        182,
+        184,
+        185,
+        187,
+        188,
+        190,
+        191,
+        192,
+        194,
+        195,
+        196,
+        197,
+        198,
+        201,
+        202,
+        203,
+        207,
+        208,
+        213,
+        214,
+        219,
+        220,
+        227,
+        239,
+        240,
+        241,
+        243,
+        244,
+        245,
+        247,
+        248,
+        250,
+        251,
+        252,
+        253,
+        254
+      ],
+      "missing_lines": [
+        153,
+        168,
+        199,
+        204
+      ],
+      "missing_statements": 4,
+      "num_branches": null,
+      "num_statements": 101,
+      "percent": 96.03960396039604
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_base::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_base::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_16",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_21",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_22",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 4855823748917988287 == 5322473327714082801",
+          "name": "test_base::test_case_24",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_base::test_case_25",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_27",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_29",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_31",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_base::test_case_32",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_33",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_base::test_case_34",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_35",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_36",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_37",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_38",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_39",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_40",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_41",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert -833247603234532628 == -3236363584314578347",
+          "name": "test_base::test_case_42",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_base::test_case_43",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 92.1259842519685,
+    "collected": 44,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 6,
+    "failure_classes": {
+      "assertion": 6,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 23,
+    "skipped": 0,
+    "stmt_cov": 96.03960396039604,
+    "xfailed": 15
+  },
+  "target": "base.py",
+  "test_file": "test_base.py"
+}

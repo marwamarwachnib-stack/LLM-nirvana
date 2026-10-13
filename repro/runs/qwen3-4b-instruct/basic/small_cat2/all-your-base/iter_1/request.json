@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "def from_digits(digits, base):\n    return sum(number * base ** idx for idx, number in enumerate(reversed(digits)))\n\n\ndef to_digits(number, base_to):\n    result = []\n    while number > 0:\n        result.append(number % base_to)\n        number //= base_to\n    if result:\n        return result[::-1]  # list(reversed(result))\n    return [0]\n\n\ndef rebase(from_base, digits, to_base):\n    if from_base < 2:\n        raise ValueError(\"input base must be >= 2\")\n\n    if to_base < 2:\n        raise ValueError(\"output base must be >= 2\")\n\n    if any(True for idx in digits if idx < 0 or idx >= from_base):\n        raise ValueError(\"all digits must satisfy 0 <= d < input base\")\n\n    return to_digits(from_digits(digits, from_base), to_base)\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

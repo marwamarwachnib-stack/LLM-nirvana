@@ -1,0 +1,336 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 23,
+      "executed_lines": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        31,
+        32,
+        33,
+        34,
+        35,
+        41,
+        42,
+        44,
+        53,
+        54,
+        56,
+        57,
+        63,
+        70,
+        71,
+        73,
+        74,
+        79,
+        86,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        101,
+        102,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        115,
+        116,
+        118,
+        119,
+        124,
+        125,
+        126,
+        130,
+        132
+      ],
+      "missing_lines": [
+        28,
+        29,
+        37,
+        55,
+        59,
+        72,
+        76,
+        83,
+        117,
+        120,
+        121,
+        127,
+        128
+      ],
+      "missing_statements": 13,
+      "num_branches": 32,
+      "num_statements": 69,
+      "percent": 78.21782178217822
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_parse_empty_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_parse_short_description_only",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert True == False\n +  where True = <common.Docstring object at 0x7f9119f1ed10>.blank_after_short_description",
+          "name": "test_example::test_parse_short_and_long_description",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']\n  At index 1 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type_and_optional",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type_and_default",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['returns'] == ['returns:']\n  At index 0 diff: 'returns' != 'returns:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_returns",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['returns'] == ['returns:', 'str']\n  At index 0 diff: 'returns' != 'returns:'\n  Right contains one more item: 'str'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_returns_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['yields'] == ['yields:']\n  At index 0 diff: 'yields' != 'yields:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_yields",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['yields'] == ['yields:', 'int']\n  At index 0 diff: 'yields' != 'yields:'\n  Right contains one more item: 'int'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_yields_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['raises'] == ['raises:', 'ValueError']\n  At index 0 diff: 'raises' != 'raises:'\n  Right contains one more item: 'ValueError'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_raises",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        31,
+        32,
+        33,
+        34,
+        35,
+        41,
+        42,
+        44,
+        53,
+        54,
+        56,
+        57,
+        63,
+        70,
+        71,
+        73,
+        74,
+        79,
+        86,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        101,
+        102,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        115,
+        116,
+        118,
+        119,
+        124,
+        125,
+        126,
+        130,
+        132
+      ],
+      "missing_lines": [
+        28,
+        29,
+        37,
+        55,
+        59,
+        72,
+        76,
+        83,
+        117,
+        120,
+        121,
+        127,
+        128
+      ],
+      "missing_statements": 13,
+      "num_branches": null,
+      "num_statements": 69,
+      "percent": 81.15942028985508
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_parse_empty_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_parse_short_description_only",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert True == False\n +  where True = <common.Docstring object at 0x7f848c6f6d10>.blank_after_short_description",
+          "name": "test_example::test_parse_short_and_long_description",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']\n  At index 1 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type_and_optional",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_param_with_type_and_default",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['returns'] == ['returns:']\n  At index 0 diff: 'returns' != 'returns:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_returns",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['returns'] == ['returns:', 'str']\n  At index 0 diff: 'returns' != 'returns:'\n  Right contains one more item: 'str'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_returns_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['yields'] == ['yields:']\n  At index 0 diff: 'yields' != 'yields:'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_yields",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['yields'] == ['yields:', 'int']\n  At index 0 diff: 'yields' != 'yields:'\n  Right contains one more item: 'int'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_yields_with_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert ['raises'] == ['raises:', 'ValueError']\n  At index 0 diff: 'raises' != 'raises:'\n  Right contains one more item: 'ValueError'\n  Use -v to get more diff",
+          "name": "test_example::test_parse_meta_raises",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 78.21782178217822,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 10,
+    "failure_classes": {
+      "assertion": 10,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 2,
+    "skipped": 0,
+    "stmt_cov": 81.15942028985508,
+    "xfailed": 0
+  },
+  "target": "rest.py",
+  "test_file": "test_example.py"
+}

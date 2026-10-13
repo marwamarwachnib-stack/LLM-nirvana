@@ -1,0 +1,278 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 10,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        36,
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 12,
+      "num_statements": 38,
+      "percent": 96.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_at_negative_position_facing_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_at_origin_facing_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_east_to_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_east_to_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_north_to_east",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_north_to_west",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_south_to_east",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_south_to_west",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_west_to_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_west_to_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_east_increments_x",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_north_increments_y",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_south_decrements_y",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_west_decrements_x",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_east_and_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_east_and_north_from_readme",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_west_and_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_west_and_south",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        36,
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 38,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_at_negative_position_facing_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_at_origin_facing_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_east_to_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_east_to_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_north_to_east",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_north_to_west",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_south_to_east",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_south_to_west",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_west_to_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_changes_west_to_south",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_east_increments_x",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_north_increments_y",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_south_decrements_y",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_facing_west_decrements_x",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_east_and_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_east_and_north_from_readme",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_west_and_north",
+          "outcome": "passed"
+        },
+        {
+          "name": "robot_simulator_test.RobotSimulatorTest::test_moving_west_and_south",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 96.0,
+    "collected": 18,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 18,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "robot_simulator_test.py"
+}

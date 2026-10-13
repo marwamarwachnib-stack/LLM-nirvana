@@ -1,0 +1,10 @@
+{
+  "gpt": {
+    "abs_diff<=1": 35,
+    "compared": 40
+  },
+  "pyn": {
+    "abs_diff<=1": 32,
+    "compared": 37
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 8,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        17,
+        18,
+        21,
+        22,
+        25,
+        26
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 8,
+      "num_statements": 17,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "bob_test.BobTest::test_alternate_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_a_numeric_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_a_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_gibberish",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_ending_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_forceful_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_multiple_line_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_no_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_non_letters_with_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_non_question_ending_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_other_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_prattling_on",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_prolonged_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_question_with_no_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_gibberish",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_with_no_exclamation_mark",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_with_special_characters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_starting_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_statement_containing_question_mark",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_stating_something",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_talking_forcefully",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_using_acronyms_in_regular_speech",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        17,
+        18,
+        21,
+        22,
+        25,
+        26
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 17,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "bob_test.BobTest::test_alternate_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_a_numeric_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_a_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_asking_gibberish",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_ending_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_forceful_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_multiple_line_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_no_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_non_letters_with_question",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_non_question_ending_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_other_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_prattling_on",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_prolonged_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_question_with_no_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_gibberish",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_with_no_exclamation_mark",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_shouting_with_special_characters",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_silence",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_starting_with_whitespace",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_statement_containing_question_mark",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_stating_something",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_talking_forcefully",
+          "outcome": "passed"
+        },
+        {
+          "name": "bob_test.BobTest::test_using_acronyms_in_regular_speech",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 25,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 25,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "bob_test.py"
+}

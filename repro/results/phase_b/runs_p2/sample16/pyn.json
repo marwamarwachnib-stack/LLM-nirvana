@@ -1,0 +1,306 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 5,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10,
+        15,
+        20,
+        21,
+        22,
+        24,
+        25,
+        27,
+        31,
+        38,
+        39,
+        50,
+        51,
+        52,
+        56,
+        66,
+        68,
+        78,
+        80,
+        89,
+        90,
+        93,
+        95,
+        102,
+        104,
+        106,
+        113,
+        115,
+        117,
+        124,
+        126,
+        128,
+        135,
+        137,
+        139,
+        147,
+        149,
+        151,
+        158,
+        160
+      ],
+      "missing_lines": [
+        48,
+        54,
+        91,
+        103
+      ],
+      "missing_statements": 4,
+      "num_branches": 8,
+      "num_statements": 46,
+      "percent": 87.03703703703704
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_lazy::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_lazy::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_lazy::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_lazy::test_case_5",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_lazy::test_case_11",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_14",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10,
+        15,
+        20,
+        21,
+        22,
+        24,
+        25,
+        27,
+        31,
+        38,
+        39,
+        50,
+        51,
+        52,
+        56,
+        66,
+        68,
+        78,
+        80,
+        89,
+        90,
+        93,
+        95,
+        102,
+        104,
+        106,
+        113,
+        115,
+        117,
+        124,
+        126,
+        128,
+        135,
+        137,
+        139,
+        147,
+        149,
+        151,
+        158,
+        160
+      ],
+      "missing_lines": [
+        48,
+        54,
+        91,
+        103
+      ],
+      "missing_statements": 4,
+      "num_branches": null,
+      "num_statements": 46,
+      "percent": 91.30434782608695
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_lazy::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_lazy::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_lazy::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_lazy::test_case_5",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_lazy::test_case_11",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_lazy::test_case_14",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 87.03703703703704,
+    "collected": 15,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 2,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 2,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 91.30434782608695,
+    "xfailed": 10
+  },
+  "target": "lazy.py",
+  "test_file": "test_lazy.py"
+}

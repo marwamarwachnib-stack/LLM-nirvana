@@ -1,0 +1,390 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 29,
+      "executed_lines": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        23,
+        29,
+        30,
+        32,
+        40,
+        41,
+        42,
+        47,
+        48,
+        51,
+        56,
+        57,
+        59,
+        60,
+        64,
+        66,
+        67,
+        69,
+        72,
+        73,
+        75,
+        87,
+        92,
+        93,
+        97,
+        104,
+        105,
+        110,
+        119,
+        120,
+        125,
+        134,
+        135,
+        137,
+        141,
+        142,
+        152,
+        163,
+        164,
+        167,
+        168,
+        172,
+        173,
+        174,
+        176,
+        178,
+        179,
+        181,
+        186,
+        187,
+        188,
+        189,
+        190,
+        192,
+        203,
+        204,
+        206,
+        208,
+        209,
+        210
+      ],
+      "missing_lines": [
+        24,
+        26,
+        44,
+        45,
+        61,
+        62,
+        70,
+        88,
+        191,
+        193,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        205,
+        211
+      ],
+      "missing_statements": 20,
+      "num_branches": 46,
+      "num_statements": 91,
+      "percent": 72.99270072992701
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\x1b[0;33mpr...[1;30m\\x1b[0m' == 'my_attribute, my_method'\n  - my_attribute, my_method\n  + #x1B[0;33mproperty:#x1B[0m\n  +     #x1B[0;36mmy_attribute#x1B[0m\n  + #x1B[0;33mspecial attribute:#x1B[0m\n  +     #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__dict__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__doc__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__module__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__weakref__#x1B[0m\n  + #x1B[0;33mabstract class:#x1B[0m\n  +     #x1B[0;36m__subclass",
+          "name": "test_example::test_pretty_dir_repr",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 29 == 2\n +  where 29 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[...#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_len",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 26 == 0\n +  where 26 = <bound method PrettyDir.index of #x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[...[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m>('my_attribute')\n +    where <bound method PrettyDir.index of #x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute",
+          "name": "test_example::test_pretty_dir_index",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 2 == 1\n +  where 2 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mattribute access:#x1B[0m\\n    #x1B[0;36m__getattribute__#x1B[0m)",
+          "name": "test_example::test_pretty_dir_search",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 7 == 1\n +  where 7 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[...0m#x1B[0;36m__weakref__#x1B[0m\\n#x1B[0;33mdescriptor:#x1B[0m\\n    #x1B[0;36mmy_property#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m)",
+          "name": "test_example::test_pretty_dir_properties",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 22 == 1\n +  where 22 = len(#x1B[0;33mabstract class:#x1B[0m\\n    #x1B[0;36m__subclasshook__#x1B[0m\\n#x1B[0;33mobject customization:#x1B[0m\\n    #x1B[0;36m__format__#x1B[0m#x1B...reduce__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__reduce_ex__#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_methods",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3 == 2\n +  where 3 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mdescriptor:#x1B[0m\\n    #x1B[0;36mmy_property#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_public",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 8 == 0\n +  where 8 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__dict__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0...#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_own",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ValueError: max() arg is an empty sequence",
+          "name": "test_example::test_pretty_attribute_repr",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ValueError: max() arg is an empty sequence",
+          "name": "test_example::test_pretty_attribute_oneline_doc",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert \"str(object='') -> str\" == '@property wi...roperty value'\n  - @property with getter, property value\n  + str(object='') -> str",
+          "name": "test_example::test_pretty_attribute_oneline_doc_property",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '' == 'class method, Hello, World!'\n  - class method, Hello, World!",
+          "name": "test_example::test_pretty_attribute_oneline_doc_method",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        23,
+        29,
+        30,
+        32,
+        40,
+        41,
+        42,
+        47,
+        48,
+        51,
+        56,
+        57,
+        59,
+        60,
+        64,
+        66,
+        67,
+        69,
+        72,
+        73,
+        75,
+        87,
+        92,
+        93,
+        97,
+        104,
+        105,
+        110,
+        119,
+        120,
+        125,
+        134,
+        135,
+        137,
+        141,
+        142,
+        152,
+        163,
+        164,
+        167,
+        168,
+        172,
+        173,
+        174,
+        176,
+        178,
+        179,
+        181,
+        186,
+        187,
+        188,
+        189,
+        190,
+        192,
+        203,
+        204,
+        206,
+        208,
+        209,
+        210
+      ],
+      "missing_lines": [
+        24,
+        26,
+        44,
+        45,
+        61,
+        62,
+        70,
+        88,
+        191,
+        193,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        205,
+        211
+      ],
+      "missing_statements": 20,
+      "num_branches": null,
+      "num_statements": 91,
+      "percent": 78.02197802197803
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\x1b[0;33mpr...[1;30m\\x1b[0m' == 'my_attribute, my_method'\n  - my_attribute, my_method\n  + #x1B[0;33mproperty:#x1B[0m\n  +     #x1B[0;36mmy_attribute#x1B[0m\n  + #x1B[0;33mspecial attribute:#x1B[0m\n  +     #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__dict__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__doc__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__module__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__weakref__#x1B[0m\n  + #x1B[0;33mabstract class:#x1B[0m\n  +     #x1B[0;36m__subclass",
+          "name": "test_example::test_pretty_dir_repr",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 29 == 2\n +  where 29 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[...#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_len",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 26 == 0\n +  where 26 = <bound method PrettyDir.index of #x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[...[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m>('my_attribute')\n +    where <bound method PrettyDir.index of #x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute",
+          "name": "test_example::test_pretty_dir_index",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 2 == 1\n +  where 2 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mattribute access:#x1B[0m\\n    #x1B[0;36m__getattribute__#x1B[0m)",
+          "name": "test_example::test_pretty_dir_search",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 7 == 1\n +  where 7 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__class__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[...0m#x1B[0;36m__weakref__#x1B[0m\\n#x1B[0;33mdescriptor:#x1B[0m\\n    #x1B[0;36mmy_property#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m)",
+          "name": "test_example::test_pretty_dir_properties",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 22 == 1\n +  where 22 = len(#x1B[0;33mabstract class:#x1B[0m\\n    #x1B[0;36m__subclasshook__#x1B[0m\\n#x1B[0;33mobject customization:#x1B[0m\\n    #x1B[0;36m__format__#x1B[0m#x1B...reduce__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0;36m__reduce_ex__#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_methods",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3 == 2\n +  where 3 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mdescriptor:#x1B[0m\\n    #x1B[0;36mmy_property#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_public",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 8 == 0\n +  where 8 = len(#x1B[0;33mproperty:#x1B[0m\\n    #x1B[0;36mmy_attribute#x1B[0m\\n#x1B[0;33mspecial attribute:#x1B[0m\\n    #x1B[0;36m__dict__#x1B[0m#x1B[1;30m, #x1B[0m#x1B[0...#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m@property with getter#x1B[0m\\n#x1B[0;33mfunction:#x1B[0m\\n    #x1B[0;36mmy_method#x1B[0m#x1B[0;36m: #x1B[0m#x1B[1;30m#x1B[0m)",
+          "name": "test_example::test_pretty_dir_own",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ValueError: max() arg is an empty sequence",
+          "name": "test_example::test_pretty_attribute_repr",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ValueError: max() arg is an empty sequence",
+          "name": "test_example::test_pretty_attribute_oneline_doc",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert \"str(object='') -> str\" == '@property wi...roperty value'\n  - @property with getter, property value\n  + str(object='') -> str",
+          "name": "test_example::test_pretty_attribute_oneline_doc_property",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '' == 'class method, Hello, World!'\n  - class method, Hello, World!",
+          "name": "test_example::test_pretty_attribute_oneline_doc_method",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 72.99270072992701,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 12,
+    "failure_classes": {
+      "assertion": 10,
+      "runtime": 2,
+      "try_except": 0
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": 78.02197802197803,
+    "xfailed": 0
+  },
+  "target": "api.py",
+  "test_file": "test_example.py"
+}

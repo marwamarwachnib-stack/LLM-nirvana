@@ -1,0 +1,52 @@
+{
+  "branch": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "collection failure",
+          "name": "::test_sessions",
+          "outcome": "error"
+        }
+      ]
+    },
+    "returncode": 2,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "collection failure",
+          "name": "::test_sessions",
+          "outcome": "error"
+        }
+      ]
+    },
+    "returncode": 2,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": null,
+    "collected": 1,
+    "collection_error": false,
+    "errors": 1,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": null,
+    "xfailed": 0
+  },
+  "target": "sessions.py",
+  "test_file": "test_sessions.py"
+}

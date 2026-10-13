@@ -1,0 +1,302 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 3,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        25,
+        26,
+        28,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        71,
+        77,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        112,
+        125,
+        127,
+        128
+      ],
+      "missing_lines": [
+        18,
+        29,
+        48,
+        49,
+        50,
+        51,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        78,
+        79,
+        80,
+        81,
+        105,
+        107,
+        108,
+        109
+      ],
+      "missing_statements": 22,
+      "num_branches": 4,
+      "num_statements": 73,
+      "percent": 70.12987012987013
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'ParseError' object has no attribute 'text'",
+          "name": "test_example::test_tokenize_yaml_error[-No content.]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'base.ParseError'>",
+          "name": "test_example::test_tokenize_yaml_error[Not a valid YAML string-parse_error]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'DictToken' is not defined",
+          "name": "test_example::test_tokenize_yaml",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: 25-validator0-expected_value0-expected_errors0]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: 25-validator1-None-expected_errors1]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: abc-validator2-None-expected_errors2]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'ParseError' object has no attribute 'text'",
+          "name": "test_example::test_validate_yaml_empty_string",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml_parse_error",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        25,
+        26,
+        28,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        71,
+        77,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        112,
+        125,
+        127,
+        128
+      ],
+      "missing_lines": [
+        18,
+        29,
+        48,
+        49,
+        50,
+        51,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        78,
+        79,
+        80,
+        81,
+        105,
+        107,
+        108,
+        109
+      ],
+      "missing_statements": 22,
+      "num_branches": null,
+      "num_statements": 73,
+      "percent": 69.86301369863014
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'ParseError' object has no attribute 'text'",
+          "name": "test_example::test_tokenize_yaml_error[-No content.]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'base.ParseError'>",
+          "name": "test_example::test_tokenize_yaml_error[Not a valid YAML string-parse_error]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'DictToken' is not defined",
+          "name": "test_example::test_tokenize_yaml",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: 25-validator0-expected_value0-expected_errors0]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: 25-validator1-None-expected_errors1]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml[name: John\\nage: abc-validator2-None-expected_errors2]",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'ParseError' object has no attribute 'text'",
+          "name": "test_example::test_validate_yaml_empty_string",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'dict' object has no attribute 'validate'",
+          "name": "test_example::test_validate_yaml_parse_error",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 70.12987012987013,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 8,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 7,
+      "try_except": 1
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": 69.86301369863014,
+    "xfailed": 0
+  },
+  "target": "tokenize_yaml.py",
+  "test_file": "test_example.py"
+}

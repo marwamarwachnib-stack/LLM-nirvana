@@ -1,0 +1,198 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 24,
+      "executed_lines": [
+        1,
+        5,
+        10,
+        13,
+        23,
+        36,
+        55,
+        56,
+        57,
+        58,
+        61,
+        81,
+        82,
+        83,
+        85,
+        88,
+        109,
+        110,
+        111,
+        112,
+        116,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        146,
+        201,
+        202,
+        203,
+        206,
+        228,
+        229,
+        230,
+        231
+      ],
+      "missing_lines": [
+        84
+      ],
+      "missing_statements": 1,
+      "num_branches": 26,
+      "num_statements": 37,
+      "percent": 95.23809523809524
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_objutils::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_7",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        5,
+        10,
+        13,
+        23,
+        36,
+        55,
+        56,
+        57,
+        58,
+        61,
+        81,
+        82,
+        83,
+        85,
+        88,
+        109,
+        110,
+        111,
+        112,
+        116,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        146,
+        201,
+        202,
+        203,
+        206,
+        228,
+        229,
+        230,
+        231
+      ],
+      "missing_lines": [
+        84
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 37,
+      "percent": 97.29729729729729
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_objutils::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_objutils::test_case_7",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 95.23809523809524,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 97.29729729729729,
+    "xfailed": 0
+  },
+  "target": "objutils.py",
+  "test_file": "test_objutils.py"
+}

@@ -1,0 +1,544 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 0,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 0,
+      "num_statements": 22,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "clock_test.ClockTest::test_add_across_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_one_day_1500_min_25_hrs",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_one_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_two_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_two_hours_with_carry",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_no_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_to_next_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_breakfast_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_a_minute_apart",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_an_hour_apart",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_hour_overflow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_hour_overflow_by_several_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_minute_overflow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_minute_overflow_by_several_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour_that_wraps",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hours_and_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute_that_wraps",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_same_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_dinner_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_full_clock_and_zeroed_clock",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_rolls_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_rolls_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_lunch_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_midnight_is_zero_hours",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_and_minutes_both_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_rolls_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_rolls_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_sixty_minutes_is_previous_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_on_the_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_past_the_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_sixty_minutes_is_next_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_across_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_an_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_hours",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_hours_with_borrow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_to_previous_hour",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 22,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "clock_test.ClockTest::test_add_across_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_one_day_1500_min_25_hrs",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_one_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_two_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_more_than_two_hours_with_carry",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_no_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_add_to_next_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_breakfast_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_a_minute_apart",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_an_hour_apart",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_hour_overflow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_hour_overflow_by_several_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_minute_overflow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_minute_overflow_by_several_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour_that_wraps",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hours_and_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute_that_wraps",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_clocks_with_same_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_dinner_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_full_clock_and_zeroed_clock",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_rolls_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_hour_rolls_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_lunch_time",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_midnight_is_zero_hours",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_and_minutes_both_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_rolls_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_hour_rolls_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes_roll_over",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_minutes_roll_over_continuously",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_negative_sixty_minutes_is_previous_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_on_the_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_past_the_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_sixty_minutes_is_next_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_across_midnight",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_minutes",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_an_hour",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_days",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_hours",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_more_than_two_hours_with_borrow",
+          "outcome": "passed"
+        },
+        {
+          "name": "clock_test.ClockTest::test_subtract_to_previous_hour",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 55,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 55,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "clock_test.py"
+}

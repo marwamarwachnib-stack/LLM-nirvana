@@ -1,0 +1,525 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 2,
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T20:56:48.704654+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/affine-cipher/example.py",
+  "sample": "affine-cipher",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 0,
+        "executed_lines": [
+          1,
+          2,
+          5,
+          13,
+          34,
+          40
+        ],
+        "missing_lines": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          35,
+          36,
+          41
+        ],
+        "missing_statements": 24,
+        "num_branches": 18,
+        "num_statements": 30,
+        "percent": 12.5
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_encode_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'd'\n  - d\n  + f",
+            "name": "test_generated::test_encode_single_letter",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'fil' == 'dfe'\n  - dfe\n  + fil",
+            "name": "test_generated::test_encode_multiple_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f1i2l' == 'd6f8h'\n  - d6f8h\n  + f1i2l",
+            "name": "test_generated::test_encode_with_non_alphabetic_chars",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'D'\n  - D\n  + f",
+            "name": "test_generated::test_encode_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'fil' == 'DfE'\n  - DfE\n  + fil",
+            "name": "test_generated::test_encode_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f0a647f0070>()\n +      where <built-in method split of str object at 0x7f0a647f0070> = 'armmv'.split",
+            "name": "test_generated::test_encode_with_block_size",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i' == 'a'\n  - a\n  + i",
+            "name": "test_generated::test_decode_single_letter",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'iar' == 'abc'\n  - abc\n  + iar",
+            "name": "test_generated::test_decode_multiple_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i6a8s' == 'abc'\n  - abc\n  + i6a8s",
+            "name": "test_generated::test_decode_with_non_alphabetic_chars",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i' == 'A'\n  - A\n  + i",
+            "name": "test_generated::test_decode_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'iar' == 'AbC'\n  - AbC\n  + iar",
+            "name": "test_generated::test_decode_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_block_size",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_original_encoding",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_different_a_value",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_a_not_coprime",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_a_not_coprime",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'd'\n  - d\n  + f",
+            "name": "test_generated::test_translate_with_negative_origin",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f1i' == 'd6f'\n  - d6f\n  + f1i",
+            "name": "test_generated::test_translate_with_non_alphabetic",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "UnboundLocalError: local variable 'new' referenced before assignment",
+            "name": "test_generated::test_translate_with_invalid_mode",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_mod_inverse_correct_values",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_mod_inverse_non_coprime",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 1 == (100 % 26)\n +  where 1 = mod_inverse(100, 26)",
+            "name": "test_generated::test_mod_inverse_with_large_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'lct' == 'fjy'\n  - fjy\n  + lct",
+            "name": "test_generated::test_encode_with_large_values",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_large_values",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_very_long_string",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_very_long_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'hello world'\n  - hello world\n  ?      -\n  + helloworld",
+            "name": "test_generated::test_decode_with_block_structure",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hello123' == 'Hello123'\n  - Hello123\n  ? ^\n  + hello123\n  ? ^",
+            "name": "test_generated::test_decode_with_mixed_case_and_numbers",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_zero_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_encode_with_negative_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_decode_with_negative_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'a' == 'd'\n  - d\n  + a",
+            "name": "test_generated::test_encode_with_zero_b",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'v' == 'd'\n  - d\n  + v",
+            "name": "test_generated::test_encode_with_negative_b",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_negative_b",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 45,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          5,
+          13,
+          34,
+          40
+        ],
+        "missing_lines": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          35,
+          36,
+          41
+        ],
+        "missing_statements": 24,
+        "num_branches": null,
+        "num_statements": 30,
+        "percent": 20.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_encode_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'd'\n  - d\n  + f",
+            "name": "test_generated::test_encode_single_letter",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'fil' == 'dfe'\n  - dfe\n  + fil",
+            "name": "test_generated::test_encode_multiple_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f1i2l' == 'd6f8h'\n  - d6f8h\n  + f1i2l",
+            "name": "test_generated::test_encode_with_non_alphabetic_chars",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'D'\n  - D\n  + f",
+            "name": "test_generated::test_encode_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'fil' == 'DfE'\n  - DfE\n  + fil",
+            "name": "test_generated::test_encode_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 1 == 2\n +  where 1 = len(['armmv'])\n +    where ['armmv'] = <built-in method split of str object at 0x7f78bf64f830>()\n +      where <built-in method split of str object at 0x7f78bf64f830> = 'armmv'.split",
+            "name": "test_generated::test_encode_with_block_size",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i' == 'a'\n  - a\n  + i",
+            "name": "test_generated::test_decode_single_letter",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'iar' == 'abc'\n  - abc\n  + iar",
+            "name": "test_generated::test_decode_multiple_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i6a8s' == 'abc'\n  - abc\n  + i6a8s",
+            "name": "test_generated::test_decode_with_non_alphabetic_chars",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'i' == 'A'\n  - A\n  + i",
+            "name": "test_generated::test_decode_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'iar' == 'AbC'\n  - AbC\n  + iar",
+            "name": "test_generated::test_decode_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_block_size",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_original_encoding",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_different_a_value",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_a_not_coprime",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_a_not_coprime",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f' == 'd'\n  - d\n  + f",
+            "name": "test_generated::test_translate_with_negative_origin",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'f1i' == 'd6f'\n  - d6f\n  + f1i",
+            "name": "test_generated::test_translate_with_non_alphabetic",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "UnboundLocalError: local variable 'new' referenced before assignment",
+            "name": "test_generated::test_translate_with_invalid_mode",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_mod_inverse_correct_values",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_mod_inverse_non_coprime",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 1 == (100 % 26)\n +  where 1 = mod_inverse(100, 26)",
+            "name": "test_generated::test_mod_inverse_with_large_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'lct' == 'fjy'\n  - fjy\n  + lct",
+            "name": "test_generated::test_encode_with_large_values",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_large_values",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_very_long_string",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_very_long_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'hello world'\n  - hello world\n  ?      -\n  + helloworld",
+            "name": "test_generated::test_decode_with_block_structure",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'hello123' == 'Hello123'\n  - Hello123\n  ? ^\n  + hello123\n  ? ^",
+            "name": "test_generated::test_decode_with_mixed_case_and_numbers",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_zero_a",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_encode_with_negative_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_decode_with_negative_a",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'a' == 'd'\n  - d\n  + a",
+            "name": "test_generated::test_encode_with_zero_b",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'v' == 'd'\n  - d\n  + v",
+            "name": "test_generated::test_encode_with_negative_b",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_negative_b",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 12.5,
+      "collected": 37,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 23,
+      "failure_classes": {
+        "assertion": 19,
+        "runtime": 1,
+        "try_except": 3
+      },
+      "passed": 14,
+      "skipped": 0,
+      "stmt_cov": 20.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

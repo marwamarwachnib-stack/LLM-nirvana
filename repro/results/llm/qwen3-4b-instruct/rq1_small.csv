@@ -1,0 +1,2 @@
+category,program,llm_stmt,llm_branch,tests,passed,failed,errors,collection_error,fail_assertion,fail_try_except,fail_runtime,redefinitions_removed,star_import_added,imports_redirected,lines_dropped_to_parse,unrepaired_stmt,pynguin_stmt,pynguin_branch,developer_stmt,developer_branch
+cat2,affine-cipher,20.0,12.5,37,14,23,0,False,19,3,1,0,True,0,2,,100.0,100.0,100.0,97.91666666666667

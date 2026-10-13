@@ -1,0 +1,240 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 3,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        18,
+        22,
+        30,
+        32,
+        33,
+        36,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        94,
+        99,
+        141
+      ],
+      "missing_lines": [
+        23,
+        25,
+        27,
+        95,
+        96,
+        97,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137,
+        139
+      ],
+      "missing_statements": 39,
+      "num_branches": 32,
+      "num_statements": 69,
+      "percent": 32.67326732673267
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_exception::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_exception::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_exception::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_exception::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_exception::test_case_4",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        18,
+        22,
+        30,
+        32,
+        33,
+        36,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        94,
+        99,
+        141
+      ],
+      "missing_lines": [
+        23,
+        25,
+        27,
+        95,
+        96,
+        97,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137,
+        139
+      ],
+      "missing_statements": 39,
+      "num_branches": null,
+      "num_statements": 69,
+      "percent": 43.47826086956522
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_exception::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_exception::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_exception::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_exception::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_exception::test_case_4",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 32.67326732673267,
+    "collected": 5,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 4,
+    "skipped": 0,
+    "stmt_cov": 43.47826086956522,
+    "xfailed": 1
+  },
+  "target": "exception.py",
+  "test_file": "test_exception.py"
+}

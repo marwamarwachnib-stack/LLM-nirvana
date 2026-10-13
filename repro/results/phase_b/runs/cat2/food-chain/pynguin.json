@@ -1,0 +1,194 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 14,
+      "executed_lines": [
+        1,
+        3,
+        5,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        42,
+        43,
+        45,
+        48,
+        49,
+        52,
+        53,
+        54,
+        55,
+        57,
+        58,
+        59,
+        62,
+        63
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 14,
+      "num_statements": 39,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_5",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        5,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        42,
+        43,
+        45,
+        48,
+        49,
+        52,
+        53,
+        54,
+        55,
+        57,
+        58,
+        59,
+        62,
+        63
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 39,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_5",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 6,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 1,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 5
+  },
+  "target": "example.py",
+  "test_file": "test_example.py"
+}

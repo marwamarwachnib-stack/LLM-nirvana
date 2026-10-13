@@ -1,0 +1,130 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 3,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        57,
+        58,
+        59,
+        61,
+        62,
+        63,
+        65,
+        68,
+        71
+      ],
+      "missing_lines": [
+        66,
+        69,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79
+      ],
+      "missing_statements": 8,
+      "num_branches": 4,
+      "num_statements": 21,
+      "percent": 64.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_decorators::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_decorators::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_decorators::test_case_2",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        57,
+        58,
+        59,
+        61,
+        62,
+        63,
+        65,
+        68,
+        71
+      ],
+      "missing_lines": [
+        66,
+        69,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79
+      ],
+      "missing_statements": 8,
+      "num_branches": null,
+      "num_statements": 21,
+      "percent": 61.904761904761905
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_decorators::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_decorators::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_decorators::test_case_2",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 64.0,
+    "collected": 3,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 2,
+    "skipped": 0,
+    "stmt_cov": 61.904761904761905,
+    "xfailed": 1
+  },
+  "target": "decorators.py",
+  "test_file": "test_decorators.py"
+}

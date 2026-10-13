@@ -1,0 +1,13 @@
+# Versions recorded in the original artifacts (compilation_report.txt, *.pyc names)
+pytest==7.4.0
+pluggy==1.3.0
+# Pynguin: version not stated in the paper or repo. 0.34.0 is the newest release
+# compatible with Python 3.10 that predates the repository (2024-01-27); ASSUMPTION.
+pynguin==0.34.0
+# Coverage measurement (coverage.py is used by calc_coverage.py / cov*.py); version not recorded.
+coverage==7.3.2
+mccabe==0.7.0
+# Analysis
+scipy==1.11.4
+numpy==1.26.2
+requests==2.31.0

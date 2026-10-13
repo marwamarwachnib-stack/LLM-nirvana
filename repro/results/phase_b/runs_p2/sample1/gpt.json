@@ -1,0 +1,150 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 2,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        57,
+        58,
+        59,
+        61,
+        62,
+        65,
+        68,
+        69,
+        71
+      ],
+      "missing_lines": [
+        63,
+        66,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79
+      ],
+      "missing_statements": 8,
+      "num_branches": 4,
+      "num_statements": 21,
+      "percent": 60.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property",
+          "outcome": "passed"
+        },
+        {
+          "message": "async def function and no async plugin installed (see warnings)",
+          "name": "test_example.TestCachedProperty::test_cached_property_async",
+          "outcome": "skipped"
+        },
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property_multiple_instances",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 6 == 11\n +  where 6 = <gpt.test_example.TestCachedProperty.test_cached_property_reset.<locals>.MyClass object at 0x7fbe19924a90>.y",
+          "name": "test_example.TestCachedProperty::test_cached_property_reset",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property_no_overwrite",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        57,
+        58,
+        59,
+        61,
+        62,
+        65,
+        68,
+        69,
+        71
+      ],
+      "missing_lines": [
+        63,
+        66,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79
+      ],
+      "missing_statements": 8,
+      "num_branches": null,
+      "num_statements": 21,
+      "percent": 61.904761904761905
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property",
+          "outcome": "passed"
+        },
+        {
+          "message": "async def function and no async plugin installed (see warnings)",
+          "name": "test_example.TestCachedProperty::test_cached_property_async",
+          "outcome": "skipped"
+        },
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property_multiple_instances",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 6 == 11\n +  where 6 = <gpt.test_example.TestCachedProperty.test_cached_property_reset.<locals>.MyClass object at 0x7fa3a9938a90>.y",
+          "name": "test_example.TestCachedProperty::test_cached_property_reset",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example.TestCachedProperty::test_cached_property_no_overwrite",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 60.0,
+    "collected": 5,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 1,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 1,
+    "stmt_cov": 61.904761904761905,
+    "xfailed": 0
+  },
+  "target": "decorators.py",
+  "test_file": "test_example.py"
+}

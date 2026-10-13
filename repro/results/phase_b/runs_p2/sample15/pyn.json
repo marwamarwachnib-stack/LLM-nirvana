@@ -1,0 +1,408 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 22,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        24,
+        25,
+        27,
+        36,
+        37,
+        39,
+        40,
+        42,
+        47,
+        48,
+        49,
+        51,
+        52,
+        54,
+        56,
+        57,
+        66,
+        67,
+        71,
+        72,
+        73,
+        75,
+        77,
+        86,
+        88,
+        97,
+        99,
+        108,
+        109,
+        111,
+        113,
+        122,
+        123,
+        127,
+        132,
+        141,
+        142,
+        144,
+        145,
+        147,
+        152,
+        161,
+        162,
+        164,
+        165,
+        168
+      ],
+      "missing_lines": [
+        58,
+        59,
+        61,
+        68,
+        124,
+        125,
+        128,
+        130,
+        148,
+        150
+      ],
+      "missing_statements": 10,
+      "num_branches": 30,
+      "num_statements": 64,
+      "percent": 80.85106382978724
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_20",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_21",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        24,
+        25,
+        27,
+        36,
+        37,
+        39,
+        40,
+        42,
+        47,
+        48,
+        49,
+        51,
+        52,
+        54,
+        56,
+        57,
+        66,
+        67,
+        71,
+        72,
+        73,
+        75,
+        77,
+        86,
+        88,
+        97,
+        99,
+        108,
+        109,
+        111,
+        113,
+        122,
+        123,
+        127,
+        132,
+        141,
+        142,
+        144,
+        145,
+        147,
+        152,
+        161,
+        162,
+        164,
+        165,
+        168
+      ],
+      "missing_lines": [
+        58,
+        59,
+        61,
+        68,
+        124,
+        125,
+        128,
+        130,
+        148,
+        150
+      ],
+      "missing_statements": 10,
+      "num_branches": null,
+      "num_statements": 64,
+      "percent": 84.375
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_immutable_list::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_20",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_immutable_list::test_case_21",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 80.85106382978724,
+    "collected": 22,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 84.375,
+    "xfailed": 19
+  },
+  "target": "immutable_list.py",
+  "test_file": "test_immutable_list.py"
+}

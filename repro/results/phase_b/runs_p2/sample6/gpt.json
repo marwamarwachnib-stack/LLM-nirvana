@@ -1,0 +1,174 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 13,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        15,
+        45,
+        47,
+        52,
+        53,
+        54,
+        56,
+        62,
+        63,
+        68,
+        73,
+        74,
+        78
+      ],
+      "missing_lines": [
+        46,
+        48,
+        57,
+        69,
+        79
+      ],
+      "missing_statements": 5,
+      "num_branches": 18,
+      "num_statements": 23,
+      "percent": 75.60975609756098
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_ends_with_underscore",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_starts_with_underscore",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_starts_with_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_is_keyword",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_is_builtin_name",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_empty_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_valid_identifier",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        15,
+        45,
+        47,
+        52,
+        53,
+        54,
+        56,
+        62,
+        63,
+        68,
+        73,
+        74,
+        78
+      ],
+      "missing_lines": [
+        46,
+        48,
+        57,
+        69,
+        79
+      ],
+      "missing_statements": 5,
+      "num_branches": null,
+      "num_statements": 23,
+      "percent": 78.26086956521739
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_ends_with_underscore",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_starts_with_underscore",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_starts_with_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_is_keyword",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "try_except",
+          "message": "Failed: DID NOT RAISE <class 'SyntaxError'>",
+          "name": "test_example::test_validate_identifier_is_builtin_name",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_empty_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_validate_identifier_valid_identifier",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 75.60975609756098,
+    "collected": 7,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 3,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 3
+    },
+    "passed": 4,
+    "skipped": 0,
+    "stmt_cov": 78.26086956521739,
+    "xfailed": 0
+  },
+  "target": "validators.py",
+  "test_file": "test_example.py"
+}

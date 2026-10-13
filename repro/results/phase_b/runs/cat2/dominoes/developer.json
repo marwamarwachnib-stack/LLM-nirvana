@@ -1,0 +1,210 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 16,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 16,
+      "num_statements": 24,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "dominoes_test.DominoesTest::test_can_reverse_dominoes",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_can_t_be_chained",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_double_loop",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_simple",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_single_isolated",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_empty_input_empty_output",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_need_backtrack",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_nine_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_separate_loops",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_separate_three_domino_loops",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_singleton_input_singleton_output",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_singleton_that_can_t_be_chained",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_three_elements",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 24,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "dominoes_test.DominoesTest::test_can_reverse_dominoes",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_can_t_be_chained",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_double_loop",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_simple",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_disconnected_single_isolated",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_empty_input_empty_output",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_need_backtrack",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_nine_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_separate_loops",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_separate_three_domino_loops",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_singleton_input_singleton_output",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_singleton_that_can_t_be_chained",
+          "outcome": "passed"
+        },
+        {
+          "name": "dominoes_test.DominoesTest::test_three_elements",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 13,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 13,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "dominoes_test.py"
+}

@@ -1,0 +1,242 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 2,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        20,
+        21
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 2,
+      "num_statements": 16,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_10_is_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_11_is_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_12_is_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_13_is_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_14_is_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_15_is_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_16_is_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_17_is_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_18_is_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_3_is_n4",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_4_is_n3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_5_is_n3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_6_is_n2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_7_is_n2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_8_is_n1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_9_is_n1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_each_ability_is_only_calculated_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_random_ability_is_within_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_random_character_is_valid",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        20,
+        21
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 16,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_10_is_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_11_is_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_12_is_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_13_is_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_14_is_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_15_is_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_16_is_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_17_is_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_18_is_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_3_is_n4",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_4_is_n3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_5_is_n3",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_6_is_n2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_7_is_n2",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_8_is_n1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_ability_modifier_for_score_9_is_n1",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_each_ability_is_only_calculated_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_random_ability_is_within_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "dnd_character_test.DndCharacterTest::test_random_character_is_valid",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 19,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 19,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "dnd_character_test.py"
+}

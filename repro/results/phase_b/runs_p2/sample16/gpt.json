@@ -1,0 +1,252 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 7,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10,
+        15,
+        20,
+        21,
+        22,
+        24,
+        27,
+        38,
+        39,
+        48,
+        50,
+        51,
+        52,
+        54,
+        56,
+        66,
+        68,
+        78,
+        80,
+        89,
+        90,
+        91,
+        93,
+        95,
+        102,
+        104,
+        106,
+        113,
+        115,
+        117,
+        124,
+        126,
+        128,
+        135,
+        137,
+        139,
+        147,
+        149,
+        151,
+        158,
+        160
+      ],
+      "missing_lines": [
+        31,
+        103
+      ],
+      "missing_statements": 2,
+      "num_branches": 8,
+      "num_statements": 46,
+      "percent": 94.44444444444444
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_lazy_of",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_lazy_with_map",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert <function test_lazy_with_ap.<locals>.<lambda> at 0x7f3faa302d40> == 10\n +  where <function test_lazy_with_ap.<locals>.<lambda> at 0x7f3faa302d40> = <bound method Lazy.get of <lazy.Lazy object at 0x7f3faa2b5c90>>()\n +    where <bound method Lazy.get of <lazy.Lazy object at 0x7f3faa2b5c90>> = <lazy.Lazy object at 0x7f3faa2b5c90>.get",
+          "name": "test_example::test_lazy_with_ap",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert <function Lazy.of.<locals>.<lambda> at 0x7f3faa325a20> == 10\n +  where <function Lazy.of.<locals>.<lambda> at 0x7f3faa325a20> = <bound method Lazy.get of <lazy.Lazy object at 0x7f3faa2b6530>>()\n +    where <bound method Lazy.get of <lazy.Lazy object at 0x7f3faa2b6530>> = <lazy.Lazy object at 0x7f3faa2b6530>.get",
+          "name": "test_example::test_lazy_with_bind",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Box' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_box",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Right' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_either",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Maybe' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_maybe",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_lazy_with_to_try",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Validation' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_validation",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10,
+        15,
+        20,
+        21,
+        22,
+        24,
+        27,
+        38,
+        39,
+        48,
+        50,
+        51,
+        52,
+        54,
+        56,
+        66,
+        68,
+        78,
+        80,
+        89,
+        90,
+        91,
+        93,
+        95,
+        102,
+        104,
+        106,
+        113,
+        115,
+        117,
+        124,
+        126,
+        128,
+        135,
+        137,
+        139,
+        147,
+        149,
+        151,
+        158,
+        160
+      ],
+      "missing_lines": [
+        31,
+        103
+      ],
+      "missing_statements": 2,
+      "num_branches": null,
+      "num_statements": 46,
+      "percent": 95.65217391304348
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_lazy_of",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_lazy_with_map",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert <function test_lazy_with_ap.<locals>.<lambda> at 0x7fe2db28ad40> == 10\n +  where <function test_lazy_with_ap.<locals>.<lambda> at 0x7fe2db28ad40> = <bound method Lazy.get of <lazy.Lazy object at 0x7fe2db259c90>>()\n +    where <bound method Lazy.get of <lazy.Lazy object at 0x7fe2db259c90>> = <lazy.Lazy object at 0x7fe2db259c90>.get",
+          "name": "test_example::test_lazy_with_ap",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert <function Lazy.of.<locals>.<lambda> at 0x7fe2db2bda20> == 10\n +  where <function Lazy.of.<locals>.<lambda> at 0x7fe2db2bda20> = <bound method Lazy.get of <lazy.Lazy object at 0x7fe2db25a530>>()\n +    where <bound method Lazy.get of <lazy.Lazy object at 0x7fe2db25a530>> = <lazy.Lazy object at 0x7fe2db25a530>.get",
+          "name": "test_example::test_lazy_with_bind",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Box' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_box",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Right' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_either",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Maybe' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_maybe",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_lazy_with_to_try",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Validation' object has no attribute 'get'",
+          "name": "test_example::test_lazy_with_to_validation",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 94.44444444444444,
+    "collected": 9,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 6,
+    "failure_classes": {
+      "assertion": 2,
+      "runtime": 4,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 95.65217391304348,
+    "xfailed": 0
+  },
+  "target": "lazy.py",
+  "test_file": "test_example.py"
+}

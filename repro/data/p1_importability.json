@@ -1,0 +1,166 @@
+{
+  "p1_cat1/s15": {
+    "error": "Colmap converter: error: the following arguments are required: --source_path/-s",
+    "importable": false
+  },
+  "p1_cat2/s1": {
+    "error": "ModuleNotFoundError: No module named 'copier'",
+    "importable": false
+  },
+  "p1_cat2/s10": {
+    "error": "ModuleNotFoundError: No module named 'vbench'",
+    "importable": false
+  },
+  "p1_cat2/s11": {
+    "error": "ModuleNotFoundError: No module named 'pyaudio'",
+    "importable": false
+  },
+  "p1_cat2/s12": {
+    "error": "ModuleNotFoundError: No module named 'MySQLdb'",
+    "importable": false
+  },
+  "p1_cat2/s13": {
+    "error": "ModuleNotFoundError: No module named 'allocation'",
+    "importable": false
+  },
+  "p1_cat2/s14": {
+    "error": "ModuleNotFoundError: No module named 'Quadrotor'",
+    "importable": false
+  },
+  "p1_cat2/s15": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat2/s16": {
+    "error": "ModuleNotFoundError: No module named 'ArmNavigation'",
+    "importable": false
+  },
+  "p1_cat2/s17": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat2/s18": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat2/s19": {
+    "error": "ModuleNotFoundError: No module named 'cvxpy'",
+    "importable": false
+  },
+  "p1_cat2/s2": {
+    "error": "AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?",
+    "importable": false
+  },
+  "p1_cat2/s20": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat2/s3": {
+    "error": "ModuleNotFoundError: No module named 'onnxruntime'",
+    "importable": false
+  },
+  "p1_cat2/s4": {
+    "error": "ModuleNotFoundError: No module named 'onnxruntime'",
+    "importable": false
+  },
+  "p1_cat2/s5": {
+    "error": "ModuleNotFoundError: No module named 'torch'",
+    "importable": false
+  },
+  "p1_cat2/s6": {
+    "error": "ModuleNotFoundError: No module named 'torch'",
+    "importable": false
+  },
+  "p1_cat2/s7": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat2/s8": {
+    "error": "ModuleNotFoundError: No module named 'utils'",
+    "importable": false
+  },
+  "p1_cat2/s9": {
+    "error": "ModuleNotFoundError: No module named 'Stoner'",
+    "importable": false
+  },
+  "p1_cat3/s1": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s10": {
+    "error": "ModuleNotFoundError: No module named 'discord'",
+    "importable": false
+  },
+  "p1_cat3/s11": {
+    "error": "ModuleNotFoundError: No module named 'discord'",
+    "importable": false
+  },
+  "p1_cat3/s12": {
+    "error": "ModuleNotFoundError: No module named 'prompttools'",
+    "importable": false
+  },
+  "p1_cat3/s13": {
+    "error": "ModuleNotFoundError: No module named 'pandas'",
+    "importable": false
+  },
+  "p1_cat3/s14": {
+    "error": "ModuleNotFoundError: No module named 'cPickle'",
+    "importable": false
+  },
+  "p1_cat3/s15": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s16": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s17": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s18": {
+    "error": "ModuleNotFoundError: No module named 'move_to_pose'",
+    "importable": false
+  },
+  "p1_cat3/s19": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s2": {
+    "error": "AttributeError: module 'collections' has no attribute 'abc'",
+    "importable": false
+  },
+  "p1_cat3/s20": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s3": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s4": {
+    "error": null,
+    "importable": true
+  },
+  "p1_cat3/s5": {
+    "error": "ModuleNotFoundError: No module named 'bson'",
+    "importable": false
+  },
+  "p1_cat3/s6": {
+    "error": "ModuleNotFoundError: No module named 'bson'",
+    "importable": false
+  },
+  "p1_cat3/s7": {
+    "error": "ModuleNotFoundError: No module named 'pacemaker'",
+    "importable": false
+  },
+  "p1_cat3/s8": {
+    "error": "ModuleNotFoundError: No module named 'skvideo'",
+    "importable": false
+  },
+  "p1_cat3/s9": {
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: 'dowstocks.csv'",
+    "importable": false
+  }
+}

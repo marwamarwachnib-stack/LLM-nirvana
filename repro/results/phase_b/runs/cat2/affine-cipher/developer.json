@@ -1,0 +1,246 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 17,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        34,
+        35,
+        36,
+        40,
+        41
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 18,
+      "num_statements": 30,
+      "percent": 97.91666666666667
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_a_sentence",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_exercism",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_a_not_coprime_to_m",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_no_spaces_in_input",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_too_many_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_deep_thought",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_mindblowingly",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_no",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_o_m_g",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_omg",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_with_a_not_coprime_to_m",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_yes",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        34,
+        35,
+        36,
+        40,
+        41
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 30,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_a_sentence",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_exercism",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_a_not_coprime_to_m",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_no_spaces_in_input",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_decode_with_too_many_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_deep_thought",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_mindblowingly",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_no",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_o_m_g",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_omg",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_with_a_not_coprime_to_m",
+          "outcome": "passed"
+        },
+        {
+          "name": "affine_cipher_test.AffineCipherTest::test_encode_yes",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 97.91666666666667,
+    "collected": 16,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 16,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "affine_cipher_test.py"
+}

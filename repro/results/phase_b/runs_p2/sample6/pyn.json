@@ -1,0 +1,184 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 18,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        15,
+        45,
+        46,
+        47,
+        48,
+        52,
+        53,
+        54,
+        56,
+        57,
+        62,
+        63,
+        68,
+        69,
+        73,
+        74,
+        78,
+        79
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 18,
+      "num_statements": 23,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_validators::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_9",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        15,
+        45,
+        46,
+        47,
+        48,
+        52,
+        53,
+        54,
+        56,
+        57,
+        62,
+        63,
+        68,
+        69,
+        73,
+        74,
+        78,
+        79
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 23,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_validators::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_validators::test_case_9",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 10,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 10,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "validators.py",
+  "test_file": "test_validators.py"
+}

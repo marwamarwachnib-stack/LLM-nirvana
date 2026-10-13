@@ -1,0 +1,2194 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 220,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        11,
+        13,
+        21,
+        22,
+        23,
+        25,
+        33,
+        34,
+        36,
+        37,
+        39,
+        40,
+        42,
+        43,
+        44,
+        48,
+        49,
+        51,
+        52,
+        54,
+        57,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        66,
+        67,
+        69,
+        70,
+        71,
+        73,
+        75,
+        76,
+        77,
+        79,
+        80,
+        82,
+        83,
+        84,
+        86,
+        88,
+        89,
+        91,
+        93,
+        96,
+        97,
+        107,
+        118,
+        120,
+        121,
+        122,
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        145,
+        147,
+        149,
+        150,
+        151,
+        152,
+        154,
+        155,
+        158,
+        161,
+        162,
+        164,
+        165,
+        168,
+        170,
+        174,
+        175,
+        176,
+        178,
+        179,
+        180,
+        182,
+        183,
+        185,
+        187,
+        188,
+        190,
+        193,
+        194,
+        195,
+        207,
+        218,
+        220,
+        221,
+        222,
+        225,
+        228,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        239,
+        240,
+        242,
+        244,
+        245,
+        246,
+        247,
+        248,
+        253,
+        254,
+        255,
+        257,
+        258,
+        260,
+        261,
+        262,
+        263,
+        264,
+        266,
+        270,
+        271,
+        272,
+        273,
+        274,
+        277,
+        279,
+        280,
+        282,
+        283,
+        285,
+        286,
+        288,
+        289,
+        291,
+        292,
+        293,
+        294,
+        296,
+        297,
+        299,
+        302,
+        303,
+        306,
+        307,
+        310,
+        311,
+        313,
+        314,
+        317,
+        318,
+        319,
+        330,
+        332,
+        333,
+        334,
+        336,
+        337,
+        339,
+        340,
+        341,
+        343,
+        344,
+        346,
+        347,
+        349,
+        350,
+        351,
+        352,
+        354,
+        357,
+        358,
+        364,
+        370,
+        371,
+        375,
+        377,
+        378,
+        380,
+        381,
+        382,
+        388,
+        391,
+        392,
+        403,
+        415,
+        417,
+        418,
+        419,
+        421,
+        422,
+        425,
+        426,
+        428,
+        429,
+        430,
+        431,
+        432,
+        435,
+        436,
+        437,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        447,
+        448,
+        450,
+        451,
+        452,
+        453,
+        455,
+        456,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        472,
+        473,
+        474,
+        475,
+        477,
+        478,
+        479,
+        480,
+        483,
+        484,
+        485,
+        486,
+        487,
+        490,
+        491,
+        492,
+        494,
+        495,
+        496,
+        497,
+        500,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        511,
+        514,
+        517,
+        518,
+        522,
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        543,
+        545,
+        546,
+        548,
+        551,
+        552,
+        563,
+        573,
+        575,
+        577,
+        582,
+        583,
+        584,
+        585,
+        587,
+        588,
+        589,
+        590,
+        591,
+        593,
+        594,
+        595,
+        597,
+        598,
+        599,
+        600,
+        601,
+        603,
+        604,
+        606,
+        607,
+        608,
+        609,
+        611,
+        616,
+        617,
+        618,
+        619,
+        621,
+        625,
+        626,
+        627,
+        628,
+        630,
+        631,
+        632,
+        637,
+        640,
+        641,
+        649,
+        650,
+        657,
+        660,
+        662,
+        663,
+        664,
+        666,
+        672,
+        673,
+        675,
+        678,
+        679,
+        680,
+        683,
+        684,
+        685,
+        688,
+        689,
+        690,
+        693,
+        694,
+        695,
+        698,
+        699,
+        701,
+        702,
+        704,
+        705,
+        706,
+        708,
+        709,
+        710,
+        711,
+        712,
+        714,
+        715,
+        716,
+        717,
+        718,
+        722,
+        723,
+        728,
+        730,
+        733,
+        734,
+        737,
+        738,
+        742,
+        743,
+        746,
+        747,
+        751,
+        753,
+        754,
+        755,
+        756,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763
+      ],
+      "missing_lines": [
+        72,
+        141,
+        142,
+        146,
+        153,
+        167,
+        171,
+        172,
+        189,
+        241,
+        243,
+        268,
+        379,
+        383,
+        384,
+        385,
+        386,
+        387,
+        449,
+        493,
+        498,
+        512,
+        541,
+        605,
+        620,
+        622,
+        633,
+        634,
+        635,
+        636,
+        638,
+        643,
+        644,
+        645,
+        647,
+        651,
+        652,
+        653,
+        655,
+        658,
+        667
+      ],
+      "missing_statements": 41,
+      "num_branches": 264,
+      "num_statements": 441,
+      "percent": 87.94326241134752
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_fields::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_16",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_21",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_22",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_24",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Float object at 0x7fd6e277aa10>.exclusive_minimum",
+          "name": "test_fields::test_case_25",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_27",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_29",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_31",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_32",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_33",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_34",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_35",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_36",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_37",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_38",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_39",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_40",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_41",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_42",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_43",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_44",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_45",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_46",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_47",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_48",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_49",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_50",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_51",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_52",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_53",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_54",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_55",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_56",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_57",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_58",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_59",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_60",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_61",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "typesystem.base.ValidationError: Must be a valid datetime format.",
+          "name": "test_fields::test_case_62",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_63",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_64",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_65",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_66",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_67",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_68",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_69",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_70",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_71",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_72",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_73",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_74",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_75",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_76",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_77",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_78",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_79",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_80",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_81",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_82",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_83",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_84",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_85",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_86",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_87",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_88",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_89",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_90",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_91",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_92",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_93",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_94",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_95",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_96",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_97",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_98",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_99",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_100",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_101",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_102",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_103",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_104",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_105",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Integer object at 0x7fd6e2a3f9d0>.minimum",
+          "name": "test_fields::test_case_106",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_107",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_108",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_109",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_110",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_111",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_112",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_113",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_114",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_115",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_116",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_117",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_118",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_119",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_120",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_121",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_122",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_123",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_124",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_125",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_126",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Integer object at 0x7fd6df722740>.minimum",
+          "name": "test_fields::test_case_127",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_128",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_129",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_130",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_131",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_132",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_133",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_134",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_135",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_136",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_137",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_138",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_139",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_140",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_141",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_142",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_143",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_144",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_145",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_146",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        11,
+        13,
+        21,
+        22,
+        23,
+        25,
+        33,
+        34,
+        36,
+        37,
+        39,
+        40,
+        42,
+        43,
+        44,
+        48,
+        49,
+        51,
+        52,
+        54,
+        57,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        66,
+        67,
+        69,
+        70,
+        71,
+        73,
+        75,
+        76,
+        77,
+        79,
+        80,
+        82,
+        83,
+        84,
+        86,
+        88,
+        89,
+        91,
+        93,
+        96,
+        97,
+        107,
+        118,
+        120,
+        121,
+        122,
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        145,
+        147,
+        149,
+        150,
+        151,
+        152,
+        154,
+        155,
+        158,
+        161,
+        162,
+        164,
+        165,
+        168,
+        170,
+        174,
+        175,
+        176,
+        178,
+        179,
+        180,
+        182,
+        183,
+        185,
+        187,
+        188,
+        190,
+        193,
+        194,
+        195,
+        207,
+        218,
+        220,
+        221,
+        222,
+        225,
+        228,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        239,
+        240,
+        242,
+        244,
+        245,
+        246,
+        247,
+        248,
+        253,
+        254,
+        255,
+        257,
+        258,
+        260,
+        261,
+        262,
+        263,
+        264,
+        266,
+        270,
+        271,
+        272,
+        273,
+        274,
+        277,
+        279,
+        280,
+        282,
+        283,
+        285,
+        286,
+        288,
+        289,
+        291,
+        292,
+        293,
+        294,
+        296,
+        297,
+        299,
+        302,
+        303,
+        306,
+        307,
+        310,
+        311,
+        313,
+        314,
+        317,
+        318,
+        319,
+        330,
+        332,
+        333,
+        334,
+        336,
+        337,
+        339,
+        340,
+        341,
+        343,
+        344,
+        346,
+        347,
+        349,
+        350,
+        351,
+        352,
+        354,
+        357,
+        358,
+        364,
+        370,
+        371,
+        375,
+        377,
+        378,
+        380,
+        381,
+        382,
+        388,
+        391,
+        392,
+        403,
+        415,
+        417,
+        418,
+        419,
+        421,
+        422,
+        425,
+        426,
+        428,
+        429,
+        430,
+        431,
+        432,
+        435,
+        436,
+        437,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        447,
+        448,
+        450,
+        451,
+        452,
+        453,
+        455,
+        456,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        472,
+        473,
+        474,
+        475,
+        477,
+        478,
+        479,
+        480,
+        483,
+        484,
+        485,
+        486,
+        487,
+        490,
+        491,
+        492,
+        494,
+        495,
+        496,
+        497,
+        500,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        511,
+        514,
+        517,
+        518,
+        522,
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        543,
+        545,
+        546,
+        548,
+        551,
+        552,
+        563,
+        573,
+        575,
+        577,
+        582,
+        583,
+        584,
+        585,
+        587,
+        588,
+        589,
+        590,
+        591,
+        593,
+        594,
+        595,
+        597,
+        598,
+        599,
+        600,
+        601,
+        603,
+        604,
+        606,
+        607,
+        608,
+        609,
+        611,
+        616,
+        617,
+        618,
+        619,
+        621,
+        625,
+        626,
+        627,
+        628,
+        630,
+        631,
+        632,
+        637,
+        640,
+        641,
+        649,
+        650,
+        657,
+        660,
+        662,
+        663,
+        664,
+        666,
+        672,
+        673,
+        675,
+        678,
+        679,
+        680,
+        683,
+        684,
+        685,
+        688,
+        689,
+        690,
+        693,
+        694,
+        695,
+        698,
+        699,
+        701,
+        702,
+        704,
+        705,
+        706,
+        708,
+        709,
+        710,
+        711,
+        712,
+        714,
+        715,
+        716,
+        717,
+        718,
+        722,
+        723,
+        728,
+        730,
+        733,
+        734,
+        737,
+        738,
+        742,
+        743,
+        746,
+        747,
+        751,
+        753,
+        754,
+        755,
+        756,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763
+      ],
+      "missing_lines": [
+        72,
+        141,
+        142,
+        146,
+        153,
+        167,
+        171,
+        172,
+        189,
+        241,
+        243,
+        268,
+        379,
+        383,
+        384,
+        385,
+        386,
+        387,
+        449,
+        493,
+        498,
+        512,
+        541,
+        605,
+        620,
+        622,
+        633,
+        634,
+        635,
+        636,
+        638,
+        643,
+        644,
+        645,
+        647,
+        651,
+        652,
+        653,
+        655,
+        658,
+        667
+      ],
+      "missing_statements": 41,
+      "num_branches": null,
+      "num_statements": 441,
+      "percent": 90.70294784580499
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_fields::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_16",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_21",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_22",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_24",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Float object at 0x7fe0934daa10>.exclusive_minimum",
+          "name": "test_fields::test_case_25",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_27",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_29",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_31",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_32",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_33",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_34",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_35",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_36",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_37",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_38",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_39",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_40",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_41",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_42",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_43",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_44",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_45",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_46",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_47",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_48",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_49",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_50",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_51",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_52",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_53",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_54",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_55",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_56",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_57",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_58",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_59",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_60",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_61",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "typesystem.base.ValidationError: Must be a valid datetime format.",
+          "name": "test_fields::test_case_62",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_63",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_64",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_65",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_66",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_67",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_68",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_69",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_70",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_71",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_72",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_73",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_74",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_75",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_76",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_77",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_78",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_79",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_80",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_81",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_82",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_83",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_84",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_85",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_86",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_87",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_88",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_89",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_90",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_91",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_92",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_93",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_94",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_95",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_96",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_97",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_98",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_99",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_100",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_101",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_102",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_103",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_104",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_105",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Integer object at 0x7fe0936e79d0>.minimum",
+          "name": "test_fields::test_case_106",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_107",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_108",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_109",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_110",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_111",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_112",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_113",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_114",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_115",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_116",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_117",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_118",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_119",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_120",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_121",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_122",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_123",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_124",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_125",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_126",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 3281355014145 == 32989410669706\n +  where 3281355014145 = <fields.Integer object at 0x7fe09012a740>.minimum",
+          "name": "test_fields::test_case_127",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_fields::test_case_128",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_129",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_130",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_131",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_132",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_133",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_134",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_135",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_136",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_137",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_138",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_139",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_fields::test_case_140",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_fields::test_case_141",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_142",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_143",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_144",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_145",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_fields::test_case_146",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 87.94326241134752,
+    "collected": 147,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 4,
+    "failure_classes": {
+      "assertion": 3,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 116,
+    "skipped": 0,
+    "stmt_cov": 90.70294784580499,
+    "xfailed": 27
+  },
+  "target": "fields.py",
+  "test_file": "test_fields.py"
+}

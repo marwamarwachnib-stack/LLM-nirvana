@@ -1,0 +1,380 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 10,
+      "executed_lines": [
+        1,
+        3,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        40,
+        44,
+        45,
+        46,
+        47,
+        49,
+        53,
+        54,
+        56,
+        63,
+        64,
+        66,
+        67,
+        74,
+        75,
+        76,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        89,
+        94,
+        95,
+        97,
+        98,
+        101,
+        102,
+        103,
+        105,
+        106
+      ],
+      "missing_lines": [
+        30,
+        34,
+        38,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_statements": 8,
+      "num_branches": 10,
+      "num_statements": 62,
+      "percent": 88.88888888888889
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_tokens::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 476786 == 271545738",
+          "name": "test_tokens::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_tokens::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokens::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokens::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_19",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        40,
+        44,
+        45,
+        46,
+        47,
+        49,
+        53,
+        54,
+        56,
+        63,
+        64,
+        66,
+        67,
+        74,
+        75,
+        76,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        89,
+        94,
+        95,
+        97,
+        98,
+        101,
+        102,
+        103,
+        105,
+        106
+      ],
+      "missing_lines": [
+        30,
+        34,
+        38,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_statements": 8,
+      "num_branches": null,
+      "num_statements": 62,
+      "percent": 87.09677419354838
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_tokens::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "assert 476786 == 271545738",
+          "name": "test_tokens::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_tokens::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokens::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokens::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokens::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokens::test_case_19",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 88.88888888888889,
+    "collected": 20,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 1,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 6,
+    "skipped": 0,
+    "stmt_cov": 87.09677419354838,
+    "xfailed": 13
+  },
+  "target": "tokens.py",
+  "test_file": "test_tokens.py"
+}

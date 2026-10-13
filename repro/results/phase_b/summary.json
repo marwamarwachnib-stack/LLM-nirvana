@@ -1,0 +1,26 @@
+{
+  "cat2": {
+    "branch_match_count": 19,
+    "dev_all_pass_programs": 18,
+    "dev_branch_mean": 99.12,
+    "dev_stmt_mean": 99.42,
+    "n": 19,
+    "rerun_branch_mean": 95.43,
+    "rerun_stmt_mean": 95.54,
+    "saved_branch_mean": 95.42,
+    "saved_stmt_mean": 95.58,
+    "stmt_match_count": 19
+  },
+  "cat3": {
+    "branch_match_count": 20,
+    "dev_all_pass_programs": 20,
+    "dev_branch_mean": 98.84,
+    "dev_stmt_mean": 99.58,
+    "n": 20,
+    "rerun_branch_mean": 95.58,
+    "rerun_stmt_mean": 96.43,
+    "saved_branch_mean": 95.65,
+    "saved_stmt_mean": 96.37,
+    "stmt_match_count": 19
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 1,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        13,
+        18,
+        20,
+        21,
+        23,
+        24,
+        26,
+        35,
+        37,
+        46,
+        48,
+        57,
+        59,
+        66,
+        68,
+        70,
+        77,
+        79,
+        81,
+        88,
+        90,
+        92,
+        99,
+        101,
+        103,
+        110,
+        112
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 2,
+      "num_statements": 29,
+      "percent": 96.7741935483871
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_box::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_box::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_box::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_7",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_8",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_11",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        13,
+        18,
+        20,
+        21,
+        23,
+        24,
+        26,
+        35,
+        37,
+        46,
+        48,
+        57,
+        59,
+        66,
+        68,
+        70,
+        77,
+        79,
+        81,
+        88,
+        90,
+        92,
+        99,
+        101,
+        103,
+        110,
+        112
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 29,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_box::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_box::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_box::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_box::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_7",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_8",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_box::test_case_11",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 96.7741935483871,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 6,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 6,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 3
+  },
+  "target": "box.py",
+  "test_file": "test_box.py"
+}

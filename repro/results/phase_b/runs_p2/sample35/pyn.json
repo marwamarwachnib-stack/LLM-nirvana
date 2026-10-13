@@ -1,0 +1,470 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 27,
+      "executed_lines": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        11,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        29,
+        30,
+        33,
+        35,
+        37,
+        41,
+        45,
+        48,
+        49,
+        58,
+        59,
+        60,
+        62,
+        63,
+        69,
+        71,
+        77,
+        80,
+        81,
+        91,
+        92,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        104,
+        105,
+        112,
+        113,
+        114,
+        117,
+        118,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        139,
+        141,
+        142,
+        143,
+        144,
+        147,
+        157,
+        158,
+        165,
+        166,
+        173,
+        174,
+        183,
+        185,
+        186,
+        187,
+        188,
+        192,
+        201,
+        202,
+        204,
+        207,
+        208,
+        210,
+        211,
+        213,
+        214,
+        216,
+        221,
+        256,
+        257,
+        262,
+        263,
+        264,
+        266,
+        267,
+        272,
+        278,
+        281,
+        286,
+        287,
+        288,
+        291,
+        294,
+        295,
+        296,
+        297,
+        299,
+        300,
+        303,
+        304,
+        305,
+        306,
+        307,
+        310,
+        311,
+        313,
+        314,
+        323,
+        326,
+        331
+      ],
+      "missing_lines": [
+        136,
+        137,
+        145,
+        190,
+        279,
+        315,
+        319,
+        320,
+        321
+      ],
+      "missing_statements": 9,
+      "num_branches": 32,
+      "num_statements": 115,
+      "percent": 90.47619047619048
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_numpydoc::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_numpydoc::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_numpydoc::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_numpydoc::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_16",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        11,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        29,
+        30,
+        33,
+        35,
+        37,
+        41,
+        45,
+        48,
+        49,
+        58,
+        59,
+        60,
+        62,
+        63,
+        69,
+        71,
+        77,
+        80,
+        81,
+        91,
+        92,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        104,
+        105,
+        112,
+        113,
+        114,
+        117,
+        118,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        139,
+        141,
+        142,
+        143,
+        144,
+        147,
+        157,
+        158,
+        165,
+        166,
+        173,
+        174,
+        183,
+        185,
+        186,
+        187,
+        188,
+        192,
+        201,
+        202,
+        204,
+        207,
+        208,
+        210,
+        211,
+        213,
+        214,
+        216,
+        221,
+        256,
+        257,
+        262,
+        263,
+        264,
+        266,
+        267,
+        272,
+        278,
+        281,
+        286,
+        287,
+        288,
+        291,
+        294,
+        295,
+        296,
+        297,
+        299,
+        300,
+        303,
+        304,
+        305,
+        306,
+        307,
+        310,
+        311,
+        313,
+        314,
+        323,
+        326,
+        331
+      ],
+      "missing_lines": [
+        136,
+        137,
+        145,
+        190,
+        279,
+        315,
+        319,
+        320,
+        321
+      ],
+      "missing_statements": 9,
+      "num_branches": null,
+      "num_statements": 115,
+      "percent": 92.17391304347827
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_numpydoc::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_numpydoc::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_numpydoc::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_numpydoc::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_numpydoc::test_case_16",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 90.47619047619048,
+    "collected": 17,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 4,
+    "skipped": 0,
+    "stmt_cov": 92.17391304347827,
+    "xfailed": 13
+  },
+  "target": "numpydoc.py",
+  "test_file": "test_numpydoc.py"
+}

@@ -1,0 +1,174 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 6,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 6,
+      "num_statements": 14,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_5_level_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_6_level_nest_list_with_null_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_6_level_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_all_values_in_nested_list_are_null",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_flattens_a_nested_array",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_flattens_array_with_just_integers_present",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_no_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_null_values_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 14,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_5_level_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_6_level_nest_list_with_null_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_6_level_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_all_values_in_nested_list_are_null",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_flattens_a_nested_array",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_flattens_array_with_just_integers_present",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_no_nesting",
+          "outcome": "passed"
+        },
+        {
+          "name": "flatten_array_test.FlattenArrayTest::test_null_values_are_omitted_from_the_final_result",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 11,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 11,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "flatten_array_test.py"
+}

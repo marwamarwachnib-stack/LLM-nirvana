@@ -1,0 +1,286 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 4,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        25,
+        26,
+        28,
+        29,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        112,
+        125,
+        127,
+        128
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 4,
+      "num_statements": 73,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_8",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        25,
+        26,
+        28,
+        29,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        112,
+        125,
+        127,
+        128
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 73,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_tokenize_yaml::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_tokenize_yaml::test_case_8",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 9,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 4,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 5
+  },
+  "target": "tokenize_yaml.py",
+  "test_file": "test_tokenize_yaml.py"
+}

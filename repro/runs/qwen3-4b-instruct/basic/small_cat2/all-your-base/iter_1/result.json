@@ -1,0 +1,389 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 0,
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T21:04:38.879452+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/all-your-base/example.py",
+  "sample": "all-your-base",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 0,
+        "executed_lines": [
+          1,
+          5,
+          15
+        ],
+        "missing_lines": [
+          2,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25
+        ],
+        "missing_statements": 15,
+        "num_branches": 13,
+        "num_statements": 18,
+        "percent": 9.67741935483871
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_normal_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_single_digit",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_zero_input",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_rebase_empty_digits",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_single_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_two_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_large_number",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_to_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_to_base_3",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_invalid_from_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_invalid_to_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_negative_digit",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_digit_out_of_range",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_digit_equal_to_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_all_zeros",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_2_to_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_3",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_mixed_base_conversion",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_input_with_leading_zeros",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "ValueError: all digits must satisfy 0 <= d < input base",
+            "name": "test_generated::test_rebase_with_large_base",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_digit_0_at_end",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_with_base_2_negative",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_rebase_with_empty_list",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_duplicate_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_nonzero_to_zero",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 26,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          5,
+          15
+        ],
+        "missing_lines": [
+          2,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25
+        ],
+        "missing_statements": 15,
+        "num_branches": null,
+        "num_statements": 18,
+        "percent": 16.666666666666668
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_normal_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_single_digit",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_zero_input",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_rebase_empty_digits",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_single_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_two_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_large_number",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_to_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_to_base_3",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_invalid_from_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_invalid_to_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_negative_digit",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_digit_out_of_range",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_digit_equal_to_base",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_all_zeros",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_2_to_base_2",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_from_base_3",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_mixed_base_conversion",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_input_with_leading_zeros",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "ValueError: all digits must satisfy 0 <= d < input base",
+            "name": "test_generated::test_rebase_with_large_base",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_digit_0_at_end",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_rebase_with_base_2_negative",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_rebase_with_empty_list",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_duplicate_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "NameError: name 'base' is not defined",
+            "name": "test_generated::test_rebase_with_nonzero_to_zero",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 9.67741935483871,
+      "collected": 26,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 17,
+      "failure_classes": {
+        "assertion": 0,
+        "runtime": 15,
+        "try_except": 2
+      },
+      "passed": 9,
+      "skipped": 0,
+      "stmt_cov": 16.666666666666668,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

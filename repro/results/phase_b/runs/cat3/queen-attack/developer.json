@@ -1,0 +1,210 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 12,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 12,
+      "num_statements": 20,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_first_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_fourth_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_same_column",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_same_row",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_second_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_third_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_cannot_attack",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_column_on_board",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_positive_column",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_positive_row",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_row_on_board",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_with_a_valid_position",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queens_same_position_can_attack",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 20,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_first_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_fourth_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_same_column",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_same_row",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_second_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_can_attack_on_third_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_cannot_attack",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_column_on_board",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_positive_column",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_positive_row",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_must_have_row_on_board",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queen_with_a_valid_position",
+          "outcome": "passed"
+        },
+        {
+          "name": "queen_attack_test.QueenAttackTest::test_queens_same_position_can_attack",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 14,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 14,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "queen_attack_test.py"
+}

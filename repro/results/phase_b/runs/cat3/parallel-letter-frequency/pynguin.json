@@ -1,0 +1,166 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 8,
+      "executed_lines": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "missing_lines": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        39
+      ],
+      "missing_statements": 9,
+      "num_branches": 16,
+      "num_statements": 40,
+      "percent": 69.64285714285714
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "missing_lines": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        39
+      ],
+      "missing_statements": 9,
+      "num_branches": null,
+      "num_statements": 40,
+      "percent": 77.5
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 69.64285714285714,
+    "collected": 3,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 2,
+    "skipped": 0,
+    "stmt_cov": 77.5,
+    "xfailed": 1
+  },
+  "target": "example.py",
+  "test_file": "test_example.py"
+}

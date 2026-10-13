@@ -1,0 +1,330 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 8,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        13,
+        14,
+        15,
+        18,
+        19,
+        21,
+        24,
+        25,
+        33,
+        41,
+        42,
+        45,
+        46,
+        48,
+        58,
+        59,
+        60,
+        61,
+        62,
+        65,
+        66,
+        68,
+        77,
+        78,
+        79,
+        80,
+        83,
+        84,
+        86,
+        93,
+        94,
+        95,
+        98,
+        99,
+        101,
+        108,
+        109,
+        110,
+        113,
+        114,
+        116,
+        118,
+        119,
+        120,
+        121,
+        122,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        134,
+        135,
+        136,
+        137,
+        138,
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "missing_lines": [
+        139,
+        146
+      ],
+      "missing_statements": 2,
+      "num_branches": 12,
+      "num_statements": 59,
+      "percent": 91.54929577464789
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_DocstringMeta",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_Docstring",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises_raises_property[args0-description-type_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises_raises_property[args1-None-type_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        13,
+        14,
+        15,
+        18,
+        19,
+        21,
+        24,
+        25,
+        33,
+        41,
+        42,
+        45,
+        46,
+        48,
+        58,
+        59,
+        60,
+        61,
+        62,
+        65,
+        66,
+        68,
+        77,
+        78,
+        79,
+        80,
+        83,
+        84,
+        86,
+        93,
+        94,
+        95,
+        98,
+        99,
+        101,
+        108,
+        109,
+        110,
+        113,
+        114,
+        116,
+        118,
+        119,
+        120,
+        121,
+        122,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        134,
+        135,
+        136,
+        137,
+        138,
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "missing_lines": [
+        139,
+        146
+      ],
+      "missing_statements": 2,
+      "num_branches": null,
+      "num_statements": 59,
+      "percent": 96.61016949152543
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_DocstringMeta",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_Docstring",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises_raises_property[args0-description-type_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringRaises_raises_property[args1-None-type_name]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 91.54929577464789,
+    "collected": 17,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 17,
+    "skipped": 0,
+    "stmt_cov": 96.61016949152543,
+    "xfailed": 0
+  },
+  "target": "common.py",
+  "test_file": "test_example.py"
+}

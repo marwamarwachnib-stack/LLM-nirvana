@@ -1,0 +1,246 @@
+{
+  "branch": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_0",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_2",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_3",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_11",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_12",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_18",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_0",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_2",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_3",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_11",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'pdir.api.PrettyDir' == 'api.PrettyDir'\n  - api.PrettyDir\n  + pdir.api.PrettyDir\n  ? +++++",
+          "name": "test_api::test_case_12",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_18",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": null,
+    "collected": 19,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 8,
+    "failure_classes": {
+      "assertion": 8,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": null,
+    "xfailed": 11
+  },
+  "target": "api.py",
+  "test_file": "test_api.py"
+}

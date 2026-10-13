@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "BLOCK_SIZE = 5\nALPHABET = 26\n\n\ndef mod_inverse(a_key, alphabet):\n    a_key = a_key % alphabet\n    for idx in range(1, alphabet):\n        if (a_key * idx) % alphabet == 1:\n            return idx\n    return 1\n\n\ndef translate(text, a_key, b_key, mode):\n    inverse = mod_inverse(a_key, ALPHABET)\n    if inverse == 1:\n        raise ValueError('a and m must be coprime.')\n\n    chars = []\n    for character in text:\n        if character.isalnum():\n            origin = ord(character.lower()) - 97\n            if origin < 0:\n                chars.append(character)\n                continue\n            if mode == 0:\n                new = (a_key * origin + b_key) % ALPHABET\n            elif mode == 1:\n                new = (inverse * (origin - b_key)) % ALPHABET\n            chars.append(chr(new + 97))\n\n    return ''.join(chars)\n\n\ndef encode(plain, a, b):\n    cipher = translate(plain, a, b, 0)\n    return ' '.join([cipher[idx:idx + BLOCK_SIZE]\n                     for idx in range(0, len(cipher), BLOCK_SIZE)])\n\n\ndef decode(ciphered, a, b):\n    return translate(ciphered, a, b, 1)\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

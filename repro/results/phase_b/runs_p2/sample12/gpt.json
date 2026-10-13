@@ -1,0 +1,364 @@
+{
+  "branch": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_chunked_upload_stream_iter",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_chunked_multipart_upload_stream_iter",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_as_bytes_for_str_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_as_bytes_for_byte_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_wrap_function_with_callback",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_is_stdin_with_valid_stdin",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_is_stdin_with_invalid_stdin",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_observe_stdin_for_data_thread_with_threshold",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_observe_stdin_for_data_thread_without_threshold",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_read_file_with_selectors_with_valid_file",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_read_file_with_selectors_with_invalid_file",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_file_like_and_non_zero_length",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_file_like_and_zero_length",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_chunked_and_encoder",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_chunked_and_stream",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_not_chunked",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_str_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_byte_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_dict_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_file_like_input_and_offline_false",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_file_like_input_and_offline_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_chunked_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_content_length_header_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_get_multipart_data_and_content_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_economical_data",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_non_economical_data",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_always_true",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_chunked_upload_stream_iter",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_chunked_multipart_upload_stream_iter",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_as_bytes_for_str_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_as_bytes_for_byte_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_wrap_function_with_callback",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_is_stdin_with_valid_stdin",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_is_stdin_with_invalid_stdin",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_observe_stdin_for_data_thread_with_threshold",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_observe_stdin_for_data_thread_without_threshold",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_read_file_with_selectors_with_valid_file",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_read_file_with_selectors_with_invalid_file",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_file_like_and_non_zero_length",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_file_like_and_zero_length",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_chunked_and_encoder",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_chunked_and_stream",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_file_for_upload_with_not_chunked",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_str_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_byte_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_dict_input",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_file_like_input_and_offline_false",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_file_like_input_and_offline_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_chunked_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "Failed: Fixture \"environment\" called directly. Fixtures are not meant to be called directly,\nbut are created automatically when test functions request them as parameters.\nSee https://docs.pytest.org/en/stable/explanation/fixtures.html for more information about fixtures, and\nhttps://docs.pytest.org/en/stable/deprecations.html#calling-fixtures-directly about how to update your code.",
+          "name": "test_example::test_prepare_request_body_with_content_length_header_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_get_multipart_data_and_content_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_economical_data",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_non_economical_data",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NameError: name 'uploads' is not defined",
+          "name": "test_example::test_compress_request_with_always_true",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": null,
+    "collected": 27,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 27,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 27,
+      "try_except": 0
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": null,
+    "xfailed": 0
+  },
+  "target": "uploads.py",
+  "test_file": "test_example.py"
+}

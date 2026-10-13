@@ -1,0 +1,280 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 27,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        22,
+        23,
+        25,
+        26,
+        28,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41,
+        44,
+        51,
+        52,
+        54,
+        55,
+        57,
+        63,
+        65,
+        67,
+        70,
+        72,
+        73,
+        76,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        88,
+        90,
+        91,
+        92,
+        93,
+        94,
+        98,
+        99,
+        101,
+        102,
+        104,
+        108
+      ],
+      "missing_lines": [
+        87
+      ],
+      "missing_statements": 1,
+      "num_branches": 28,
+      "num_statements": 58,
+      "percent": 97.67441860465117
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_largest_if_no_palindrome_in_the_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_smallest_if_no_palindrome_in_the_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_largest_if_min_is_more_than_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_smallest_if_min_is_more_than_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_double_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_four_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_single_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_triple_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_double_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_four_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_single_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_triple_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_smallest_product_does_not_use_the_smallest_factor",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        22,
+        23,
+        25,
+        26,
+        28,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41,
+        44,
+        51,
+        52,
+        54,
+        55,
+        57,
+        63,
+        65,
+        67,
+        70,
+        72,
+        73,
+        76,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        88,
+        90,
+        91,
+        92,
+        93,
+        94,
+        98,
+        99,
+        101,
+        102,
+        104,
+        108
+      ],
+      "missing_lines": [
+        87
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 58,
+      "percent": 98.27586206896552
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_largest_if_no_palindrome_in_the_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_smallest_if_no_palindrome_in_the_range",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_largest_if_min_is_more_than_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_smallest_if_min_is_more_than_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_double_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_four_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_single_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_triple_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_double_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_four_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_single_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_triple_digit_factors",
+          "outcome": "passed"
+        },
+        {
+          "name": "palindrome_products_test.PalindromeProductsTest::test_smallest_product_does_not_use_the_smallest_factor",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 97.67441860465117,
+    "collected": 13,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 13,
+    "skipped": 0,
+    "stmt_cov": 98.27586206896552,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "palindrome_products_test.py"
+}

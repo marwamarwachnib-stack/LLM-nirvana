@@ -1,0 +1,384 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 2,
+      "executed_lines": [
+        1,
+        2,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        24,
+        25,
+        29,
+        31,
+        32,
+        34,
+        41,
+        44,
+        45,
+        49,
+        51,
+        52,
+        54,
+        61,
+        64,
+        65,
+        69,
+        71,
+        72,
+        74,
+        81,
+        84,
+        85,
+        89,
+        90,
+        92,
+        99,
+        102,
+        103,
+        107,
+        108,
+        110,
+        117,
+        120,
+        121,
+        125,
+        126,
+        128,
+        135,
+        140,
+        141,
+        145,
+        147,
+        148,
+        150,
+        157,
+        160,
+        161,
+        165,
+        167,
+        168,
+        170,
+        177
+      ],
+      "missing_lines": [
+        21
+      ],
+      "missing_statements": 1,
+      "num_branches": 2,
+      "num_statements": 39,
+      "percent": 97.5609756097561
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_20",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        24,
+        25,
+        29,
+        31,
+        32,
+        34,
+        41,
+        44,
+        45,
+        49,
+        51,
+        52,
+        54,
+        61,
+        64,
+        65,
+        69,
+        71,
+        72,
+        74,
+        81,
+        84,
+        85,
+        89,
+        90,
+        92,
+        99,
+        102,
+        103,
+        107,
+        108,
+        110,
+        117,
+        120,
+        121,
+        125,
+        126,
+        128,
+        135,
+        140,
+        141,
+        145,
+        147,
+        148,
+        150,
+        157,
+        160,
+        161,
+        165,
+        167,
+        168,
+        170,
+        177
+      ],
+      "missing_lines": [
+        21
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 39,
+      "percent": 97.43589743589743
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_semigroups::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_13",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_15",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_semigroups::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_semigroups::test_case_20",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 97.5609756097561,
+    "collected": 21,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 7,
+    "skipped": 0,
+    "stmt_cov": 97.43589743589743,
+    "xfailed": 14
+  },
+  "target": "semigroups.py",
+  "test_file": "test_semigroups.py"
+}

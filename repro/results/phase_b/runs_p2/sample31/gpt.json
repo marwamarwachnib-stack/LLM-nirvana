@@ -1,0 +1,318 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 3,
+      "executed_lines": [
+        1,
+        3,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        21,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        49,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        66,
+        74,
+        75,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        88,
+        94,
+        97,
+        101,
+        102,
+        103,
+        105,
+        106
+      ],
+      "missing_lines": [
+        44,
+        45,
+        46,
+        47,
+        53,
+        54,
+        67,
+        76,
+        86,
+        89,
+        95,
+        98
+      ],
+      "missing_statements": 12,
+      "num_branches": 10,
+      "num_statements": 62,
+      "percent": 73.61111111111111
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'tokens' == 'exampl'\n  - exampl\n  + tokens",
+          "name": "test_example::test_token_string",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NotImplementedError",
+          "name": "test_example::test_token_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Position' object has no attribute 'line'",
+          "name": "test_example::test_token_start",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Position' object has no attribute 'line'",
+          "name": "test_example::test_token_end",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_token_lookup",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_token_lookup_key",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_scalar_token_get_value",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_child_token",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_key_token",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_list_token_get_value",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_list_token_get_child_token",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        21,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        49,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        66,
+        74,
+        75,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        88,
+        94,
+        97,
+        101,
+        102,
+        103,
+        105,
+        106
+      ],
+      "missing_lines": [
+        44,
+        45,
+        46,
+        47,
+        53,
+        54,
+        67,
+        76,
+        86,
+        89,
+        95,
+        98
+      ],
+      "missing_statements": 12,
+      "num_branches": null,
+      "num_statements": 62,
+      "percent": 80.64516129032258
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'tokens' == 'exampl'\n  - exampl\n  + tokens",
+          "name": "test_example::test_token_string",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "NotImplementedError",
+          "name": "test_example::test_token_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Position' object has no attribute 'line'",
+          "name": "test_example::test_token_start",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'Position' object has no attribute 'line'",
+          "name": "test_example::test_token_end",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_token_lookup",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_token_lookup_key",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_scalar_token_get_value",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_value",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_child_token",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'str' object has no attribute '_value'",
+          "name": "test_example::test_dict_token_get_key_token",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_list_token_get_value",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_list_token_get_child_token",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 73.61111111111111,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 9,
+    "failure_classes": {
+      "assertion": 1,
+      "runtime": 8,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 80.64516129032258,
+    "xfailed": 0
+  },
+  "target": "tokens.py",
+  "test_file": "test_example.py"
+}

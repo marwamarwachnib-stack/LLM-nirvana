@@ -1,0 +1,202 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 14,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        20,
+        21,
+        23
+      ],
+      "missing_lines": [
+        22
+      ],
+      "missing_statements": 1,
+      "num_branches": 15,
+      "num_statements": 15,
+      "percent": 93.33333333333333
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_euler_big_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_invalid_character_in_digits",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_negative_span",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_span_longer_than_string_length",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        20,
+        21,
+        23
+      ],
+      "missing_lines": [
+        22
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 15,
+      "percent": 93.33333333333333
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_euler_big_number",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_invalid_character_in_digits",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_negative_span",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_rejects_span_longer_than_string_length",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero",
+          "outcome": "passed"
+        },
+        {
+          "name": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 93.33333333333333,
+    "collected": 14,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 14,
+    "skipped": 0,
+    "stmt_cov": 93.33333333333333,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "largest_series_product_test.py"
+}

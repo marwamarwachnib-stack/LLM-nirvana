@@ -1,0 +1,300 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 2,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        12,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        33,
+        34,
+        45,
+        52,
+        54,
+        61,
+        63,
+        72,
+        74,
+        83,
+        85,
+        96,
+        98,
+        111,
+        118,
+        120,
+        121,
+        124,
+        131,
+        133,
+        135,
+        142,
+        144,
+        146,
+        153,
+        155
+      ],
+      "missing_lines": [
+        31,
+        43,
+        105,
+        107,
+        108,
+        109,
+        122
+      ],
+      "missing_statements": 7,
+      "num_branches": 6,
+      "num_statements": 41,
+      "percent": 76.59574468085107
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_validation::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_validation::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_8",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_12",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_13",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        12,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        33,
+        34,
+        45,
+        52,
+        54,
+        61,
+        63,
+        72,
+        74,
+        83,
+        85,
+        96,
+        98,
+        111,
+        118,
+        120,
+        121,
+        124,
+        131,
+        133,
+        135,
+        142,
+        144,
+        146,
+        153,
+        155
+      ],
+      "missing_lines": [
+        31,
+        43,
+        105,
+        107,
+        108,
+        109,
+        122
+      ],
+      "missing_statements": 7,
+      "num_branches": null,
+      "num_statements": 41,
+      "percent": 82.92682926829268
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_validation::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_1",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_validation::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_8",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_9",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_10",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "[XPASS(strict)] ",
+          "name": "test_validation::test_case_12",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_validation::test_case_13",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 76.59574468085107,
+    "collected": 14,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 5,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 5,
+      "try_except": 0
+    },
+    "passed": 1,
+    "skipped": 0,
+    "stmt_cov": 82.92682926829268,
+    "xfailed": 8
+  },
+  "target": "validation.py",
+  "test_file": "test_validation.py"
+}

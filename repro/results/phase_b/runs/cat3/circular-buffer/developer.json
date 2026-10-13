@@ -1,0 +1,244 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 6,
+      "executed_lines": [
+        1,
+        2,
+        7,
+        8,
+        11,
+        12,
+        17,
+        18,
+        21,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 6,
+      "num_statements": 35,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_a_read_frees_up_capacity_for_another_write",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_can_read_an_item_just_written",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_clear_does_nothing_on_empty_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_clear_frees_up_capacity_for_another_write",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_each_item_may_only_be_read_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_full_buffer_can_t_be_written_to",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_items_are_read_in_the_order_they_are_written",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_reading_empty_buffer_should_fail",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        7,
+        8,
+        11,
+        12,
+        17,
+        18,
+        21,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 35,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_a_read_frees_up_capacity_for_another_write",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_can_read_an_item_just_written",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_clear_does_nothing_on_empty_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_clear_frees_up_capacity_for_another_write",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_each_item_may_only_be_read_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_full_buffer_can_t_be_written_to",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_items_are_read_in_the_order_they_are_written",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes",
+          "outcome": "passed"
+        },
+        {
+          "name": "circular_buffer_test.CircularBufferTest::test_reading_empty_buffer_should_fail",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 14,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 14,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "circular_buffer_test.py"
+}

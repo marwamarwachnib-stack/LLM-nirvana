@@ -1,0 +1,12 @@
+# p2 project releases chosen by scripts/p2_projects.py (see data/p2_projects.json)
+codetiming==1.4.0
+dataclasses-json==0.5.3
+docstring-parser==0.7.3
+flutes==0.3.0
+flutils==0.7
+httpie==3.2.2
+pdir2==0.3.2
+pymonet==0.12.0
+python-string-utils==1.0.0
+sty==1.0.0rc1
+typesystem==0.2.4

@@ -1,0 +1,190 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 4,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        12,
+        13,
+        14,
+        18,
+        19
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 4,
+      "num_statements": 10,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_a_sentence",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_exercism",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_with_no_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_with_too_many_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_deep_thought",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_mindblowingly",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_no",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_omg",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_yes",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        12,
+        13,
+        14,
+        18,
+        19
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 10,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_a_sentence",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_exercism",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_with_no_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_decode_with_too_many_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_all_the_letters",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_deep_thought",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_mindblowingly",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_no",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_omg",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "atbash_cipher_test.AtbashCipherTest::test_encode_yes",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 14,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 14,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "atbash_cipher_test.py"
+}

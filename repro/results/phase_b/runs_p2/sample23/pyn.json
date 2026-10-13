@@ -1,0 +1,850 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 74,
+      "executed_lines": [
+        4,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        36,
+        38,
+        50,
+        52,
+        53,
+        55,
+        56,
+        59,
+        60,
+        63,
+        64,
+        67,
+        68,
+        71,
+        72,
+        73,
+        76,
+        78,
+        79,
+        81,
+        83,
+        84,
+        86,
+        88,
+        89,
+        91,
+        92,
+        95,
+        97,
+        100,
+        104,
+        106,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        116,
+        117,
+        118,
+        119,
+        122,
+        125,
+        128,
+        131,
+        133,
+        136,
+        142,
+        145,
+        146,
+        152,
+        154,
+        156,
+        159,
+        161,
+        162,
+        163,
+        164,
+        166,
+        167,
+        169,
+        170,
+        172,
+        173,
+        174,
+        176,
+        177,
+        180,
+        183,
+        188,
+        191,
+        193,
+        195,
+        196,
+        197,
+        201,
+        204,
+        212,
+        213,
+        214,
+        215,
+        217,
+        219,
+        220,
+        222,
+        223,
+        225,
+        226,
+        227,
+        229,
+        230,
+        232,
+        233,
+        235,
+        236,
+        238,
+        239,
+        241,
+        246,
+        247,
+        250,
+        252,
+        253,
+        256,
+        257,
+        260,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        274,
+        277,
+        282,
+        294,
+        295,
+        297,
+        300,
+        315,
+        316,
+        318,
+        319,
+        321,
+        324,
+        341,
+        342,
+        344,
+        345,
+        347,
+        349,
+        350,
+        352,
+        354,
+        357,
+        369,
+        370,
+        373,
+        376,
+        379,
+        382,
+        397,
+        398,
+        400,
+        402,
+        405,
+        429,
+        430,
+        433,
+        447,
+        448,
+        451,
+        454,
+        457,
+        459,
+        462,
+        485,
+        486,
+        489,
+        492,
+        495,
+        497,
+        500,
+        523,
+        524,
+        526,
+        529,
+        551,
+        552,
+        554,
+        555,
+        556,
+        558,
+        561,
+        595,
+        598,
+        608,
+        611,
+        634,
+        637,
+        649
+      ],
+      "missing_lines": [
+        207,
+        209,
+        242,
+        248,
+        261,
+        275
+      ],
+      "missing_statements": 6,
+      "num_branches": 76,
+      "num_statements": 201,
+      "percent": 97.11191335740072
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_manipulation::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_16",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_19",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_21",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_22",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_24",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_25",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_27",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_29",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_31",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_32",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_33",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_34",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_35",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_36",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_37",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_38",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_39",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_40",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_41",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_42",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_43",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        4,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        36,
+        38,
+        50,
+        52,
+        53,
+        55,
+        56,
+        59,
+        60,
+        63,
+        64,
+        67,
+        68,
+        71,
+        72,
+        73,
+        76,
+        78,
+        79,
+        81,
+        83,
+        84,
+        86,
+        88,
+        89,
+        91,
+        92,
+        95,
+        97,
+        100,
+        104,
+        106,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        116,
+        117,
+        118,
+        119,
+        122,
+        125,
+        128,
+        131,
+        133,
+        136,
+        142,
+        145,
+        146,
+        152,
+        154,
+        156,
+        159,
+        161,
+        162,
+        163,
+        164,
+        166,
+        167,
+        169,
+        170,
+        172,
+        173,
+        174,
+        176,
+        177,
+        180,
+        183,
+        188,
+        191,
+        193,
+        195,
+        196,
+        197,
+        201,
+        204,
+        212,
+        213,
+        214,
+        215,
+        217,
+        219,
+        220,
+        222,
+        223,
+        225,
+        226,
+        227,
+        229,
+        230,
+        232,
+        233,
+        235,
+        236,
+        238,
+        239,
+        241,
+        246,
+        247,
+        250,
+        252,
+        253,
+        256,
+        257,
+        260,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        274,
+        277,
+        282,
+        294,
+        295,
+        297,
+        300,
+        315,
+        316,
+        318,
+        319,
+        321,
+        324,
+        341,
+        342,
+        344,
+        345,
+        347,
+        349,
+        350,
+        352,
+        354,
+        357,
+        369,
+        370,
+        373,
+        376,
+        379,
+        382,
+        397,
+        398,
+        400,
+        402,
+        405,
+        429,
+        430,
+        433,
+        447,
+        448,
+        451,
+        454,
+        457,
+        459,
+        462,
+        485,
+        486,
+        489,
+        492,
+        495,
+        497,
+        500,
+        523,
+        524,
+        526,
+        529,
+        551,
+        552,
+        554,
+        555,
+        556,
+        558,
+        561,
+        595,
+        598,
+        608,
+        611,
+        634,
+        637,
+        649
+      ],
+      "missing_lines": [
+        207,
+        209,
+        242,
+        248,
+        261,
+        275
+      ],
+      "missing_statements": 6,
+      "num_branches": null,
+      "num_statements": 201,
+      "percent": 97.01492537313433
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_manipulation::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_11",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_12",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_14",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_16",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_18",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_19",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_20",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_21",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_22",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_23",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_24",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_25",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_26",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_27",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_28",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_29",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_30",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_31",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_32",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_33",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_34",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_35",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_36",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_37",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_38",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_39",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_40",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_manipulation::test_case_41",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_manipulation::test_case_42",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_manipulation::test_case_43",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 97.11191335740072,
+    "collected": 44,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 26,
+    "skipped": 0,
+    "stmt_cov": 97.01492537313433,
+    "xfailed": 18
+  },
+  "target": "manipulation.py",
+  "test_file": "test_manipulation.py"
+}

@@ -1,0 +1,220 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 10,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        10,
+        13,
+        16,
+        17,
+        19,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        30,
+        32,
+        33,
+        35,
+        42,
+        44,
+        45,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        75,
+        76
+      ],
+      "missing_lines": [
+        37,
+        46,
+        77
+      ],
+      "missing_statements": 3,
+      "num_branches": 12,
+      "num_statements": 40,
+      "percent": 90.38461538461539
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_add",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_clear",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_count",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_total",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_mean",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_median",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert nan == 0.0\n +  where nan = <bound method Timers.stdev of {'timer1': 1.5}>('timer1')\n +    where <bound method Timers.stdev of {'timer1': 1.5}> = {'timer1': 1.5}.stdev",
+          "name": "test_example::test_stdev",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        10,
+        13,
+        16,
+        17,
+        19,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        30,
+        32,
+        33,
+        35,
+        42,
+        44,
+        45,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        75,
+        76
+      ],
+      "missing_lines": [
+        37,
+        46,
+        77
+      ],
+      "missing_statements": 3,
+      "num_branches": null,
+      "num_statements": 40,
+      "percent": 92.5
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_add",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_clear",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_count",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_total",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_mean",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_median",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert nan == 0.0\n +  where nan = <bound method Timers.stdev of {'timer1': 1.5}>('timer1')\n +    where <bound method Timers.stdev of {'timer1': 1.5}> = {'timer1': 1.5}.stdev",
+          "name": "test_example::test_stdev",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 90.38461538461539,
+    "collected": 9,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 1,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 92.5,
+    "xfailed": 0
+  },
+  "target": "_timers.py",
+  "test_file": "test_example.py"
+}

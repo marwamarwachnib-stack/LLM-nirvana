@@ -1,0 +1,424 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 24,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        15,
+        22,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        37,
+        40,
+        44,
+        45,
+        50,
+        51,
+        53,
+        54,
+        55,
+        58,
+        59,
+        60,
+        64,
+        65,
+        66,
+        68,
+        70,
+        73,
+        74,
+        79,
+        80,
+        82,
+        83,
+        84,
+        87,
+        88,
+        89,
+        91,
+        92,
+        93,
+        97,
+        98,
+        99,
+        101,
+        103,
+        106,
+        107,
+        112,
+        113,
+        115,
+        116,
+        117,
+        120,
+        121,
+        122,
+        124,
+        125,
+        127,
+        135,
+        137,
+        138,
+        139,
+        143,
+        144,
+        145,
+        147,
+        149,
+        151,
+        154,
+        157,
+        158,
+        160,
+        163,
+        164,
+        165,
+        166,
+        168,
+        170,
+        171
+      ],
+      "missing_lines": [
+        56,
+        61,
+        62,
+        85,
+        94,
+        95,
+        118,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        140,
+        141,
+        152,
+        161
+      ],
+      "missing_statements": 18,
+      "num_branches": 32,
+      "num_statements": 102,
+      "percent": 80.59701492537313
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert True == False\n +  where True = <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7fd2185c3700>>(datetime.datetime(2026, 10, 13, 20, 58, 43, 365437))\n +    where <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7fd2185c3700>> = <formats.DateFormat object at 0x7fd2185c3700>.is_native_type\n +    and   datetime.datetime(2026, 10, 13, 20, 58, 43, 365437) = <built-in method now of type object at 0x7fd219e7ea60>()\n +      where <",
+          "name": "test_example::test_date_format_native_type",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_date_format_valid_date",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_date_format_invalid_date",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_date_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_time_format_native_type",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_time_format_valid_time",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_time_format_invalid_time",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_time_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_datetime_format_native_type",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_datetime_format_valid_datetime",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_datetime_format_invalid_datetime",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_datetime_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given",
+          "name": "test_example::test_uuid_format_native_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "base.ValidationError: Must be valid UUID format.",
+          "name": "test_example::test_uuid_format_valid_uuid",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_uuid_format_invalid_uuid",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'None' == None\n +  where 'None' = <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7fd218492710>>(None)\n +    where <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7fd218492710>> = <formats.UUIDFormat object at 0x7fd218492710>.serialize",
+          "name": "test_example::test_uuid_format_serialize",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        15,
+        22,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        37,
+        40,
+        44,
+        45,
+        50,
+        51,
+        53,
+        54,
+        55,
+        58,
+        59,
+        60,
+        64,
+        65,
+        66,
+        68,
+        70,
+        73,
+        74,
+        79,
+        80,
+        82,
+        83,
+        84,
+        87,
+        88,
+        89,
+        91,
+        92,
+        93,
+        97,
+        98,
+        99,
+        101,
+        103,
+        106,
+        107,
+        112,
+        113,
+        115,
+        116,
+        117,
+        120,
+        121,
+        122,
+        124,
+        125,
+        127,
+        135,
+        137,
+        138,
+        139,
+        143,
+        144,
+        145,
+        147,
+        149,
+        151,
+        154,
+        157,
+        158,
+        160,
+        163,
+        164,
+        165,
+        166,
+        168,
+        170,
+        171
+      ],
+      "missing_lines": [
+        56,
+        61,
+        62,
+        85,
+        94,
+        95,
+        118,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        140,
+        141,
+        152,
+        161
+      ],
+      "missing_statements": 18,
+      "num_branches": null,
+      "num_statements": 102,
+      "percent": 82.3529411764706
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert True == False\n +  where True = <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7f094ee87700>>(datetime.datetime(2026, 10, 13, 20, 58, 42, 588495))\n +    where <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7f094ee87700>> = <formats.DateFormat object at 0x7f094ee87700>.is_native_type\n +    and   datetime.datetime(2026, 10, 13, 20, 58, 42, 588495) = <built-in method now of type object at 0x7f0950738a60>()\n +      where <",
+          "name": "test_example::test_date_format_native_type",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_date_format_valid_date",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_date_format_invalid_date",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_date_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_time_format_native_type",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_time_format_valid_time",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_time_format_invalid_time",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_time_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_datetime_format_native_type",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_datetime_format_valid_datetime",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_datetime_format_invalid_datetime",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_datetime_format_serialize",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given",
+          "name": "test_example::test_uuid_format_native_type",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "base.ValidationError: Must be valid UUID format.",
+          "name": "test_example::test_uuid_format_valid_uuid",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: expected exception must be a BaseException type, not str",
+          "name": "test_example::test_uuid_format_invalid_uuid",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'None' == None\n +  where 'None' = <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7f094ed56710>>(None)\n +    where <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7f094ed56710>> = <formats.UUIDFormat object at 0x7f094ed56710>.serialize",
+          "name": "test_example::test_uuid_format_serialize",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 80.59701492537313,
+    "collected": 16,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 8,
+    "failure_classes": {
+      "assertion": 2,
+      "runtime": 6,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 82.3529411764706,
+    "xfailed": 0
+  },
+  "target": "formats.py",
+  "test_file": "test_example.py"
+}

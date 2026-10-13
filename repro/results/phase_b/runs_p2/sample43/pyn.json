@@ -1,0 +1,250 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 5,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        25,
+        28,
+        31,
+        32,
+        55,
+        58,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        86
+      ],
+      "missing_lines": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        44,
+        45,
+        48,
+        49,
+        51,
+        52,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "missing_statements": 34,
+      "num_branches": 21,
+      "num_statements": 60,
+      "percent": 38.27160493827161
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_run::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "FileNotFoundError: [Errno 2] No such file or directory: 'CC'",
+          "name": "test_run::test_case_5",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_6",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        25,
+        28,
+        31,
+        32,
+        55,
+        58,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        86
+      ],
+      "missing_lines": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        44,
+        45,
+        48,
+        49,
+        51,
+        52,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "missing_statements": 34,
+      "num_branches": null,
+      "num_statements": 60,
+      "percent": 43.333333333333336
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_run::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "FileNotFoundError: [Errno 2] No such file or directory: 'CC'",
+          "name": "test_run::test_case_5",
+          "outcome": "failed"
+        },
+        {
+          "message": "",
+          "name": "test_run::test_case_6",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 38.27160493827161,
+    "collected": 7,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 1,
+    "skipped": 0,
+    "stmt_cov": 43.333333333333336,
+    "xfailed": 5
+  },
+  "target": "run.py",
+  "test_file": "test_run.py"
+}

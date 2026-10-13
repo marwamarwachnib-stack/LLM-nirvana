@@ -1,0 +1,312 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 5,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        6,
+        12,
+        20,
+        27,
+        28,
+        29,
+        30,
+        32,
+        38,
+        39,
+        46,
+        51,
+        53,
+        54,
+        55,
+        57,
+        61,
+        62,
+        66,
+        68,
+        69,
+        74,
+        83,
+        84,
+        85,
+        88,
+        105
+      ],
+      "missing_lines": [
+        35,
+        58,
+        59,
+        63,
+        64,
+        93,
+        94,
+        96,
+        97,
+        99
+      ],
+      "missing_statements": 10,
+      "num_branches": 13,
+      "num_statements": 40,
+      "percent": 66.0377358490566
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?\"",
+          "name": "test_example::test_init_poolmanager",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_verify_false",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_verify_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?",
+          "name": "test_example::test_init_poolmanager_ssl_version",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: module 'ssl' has no attribute 'PROTOCOL_unknown'",
+          "name": "test_example::test_init_poolmanager_ssl_version_unknown",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_ciphers_default",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_ciphers_custom",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?\"",
+          "name": "test_example::test_proxy_manager_for",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 41\n  def test_cert_verify(cert_file, key_file):\nE       fixture 'cert_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' ",
+          "name": "test_example::test_cert_verify",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'NoneType' object has no attribute 'cert_reqs'",
+          "name": "test_example::test_cert_verify_no_cert",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 52\n  def test_cert_verify_encrypted_key_file(key_file_encrypted):\nE       fixture 'key_file_encrypted' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pyt",
+          "name": "test_example::test_cert_verify_encrypted_key_file",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 89\n  def test_is_key_file_encrypted(key_file, key_file_encrypted):\nE       fixture 'key_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fix",
+          "name": "test_example::test_is_key_file_encrypted",
+          "outcome": "error"
+        },
+        {
+          "name": "test_example::test_ssl_version_args",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_get_default_ciphers_names",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 69\n  def test_to_raw_cert(cert_file, key_file):\nE       fixture 'cert_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' ",
+          "name": "test_example::test_to_raw_cert",
+          "outcome": "error"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        4,
+        6,
+        12,
+        20,
+        27,
+        28,
+        29,
+        30,
+        32,
+        38,
+        39,
+        46,
+        51,
+        53,
+        54,
+        55,
+        57,
+        61,
+        62,
+        66,
+        68,
+        69,
+        74,
+        83,
+        84,
+        85,
+        88,
+        105
+      ],
+      "missing_lines": [
+        35,
+        58,
+        59,
+        63,
+        64,
+        93,
+        94,
+        96,
+        97,
+        99
+      ],
+      "missing_statements": 10,
+      "num_branches": null,
+      "num_statements": 40,
+      "percent": 75.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?\"",
+          "name": "test_example::test_init_poolmanager",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_verify_false",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_verify_true",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?",
+          "name": "test_example::test_init_poolmanager_ssl_version",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: module 'ssl' has no attribute 'PROTOCOL_unknown'",
+          "name": "test_example::test_init_poolmanager_ssl_version_unknown",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_ciphers_default",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?",
+          "name": "test_example::test_init_poolmanager_ciphers_custom",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?\"",
+          "name": "test_example::test_proxy_manager_for",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 41\n  def test_cert_verify(cert_file, key_file):\nE       fixture 'cert_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' ",
+          "name": "test_example::test_cert_verify",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'NoneType' object has no attribute 'cert_reqs'",
+          "name": "test_example::test_cert_verify_no_cert",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 52\n  def test_cert_verify_encrypted_key_file(key_file_encrypted):\nE       fixture 'key_file_encrypted' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pyt",
+          "name": "test_example::test_cert_verify_encrypted_key_file",
+          "outcome": "error"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 89\n  def test_is_key_file_encrypted(key_file, key_file_encrypted):\nE       fixture 'key_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fix",
+          "name": "test_example::test_is_key_file_encrypted",
+          "outcome": "error"
+        },
+        {
+          "name": "test_example::test_ssl_version_args",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_get_default_ciphers_names",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "failed on setup with \"file /opt/repro/work/phase_b_p2/sample11/gpt/test_example.py, line 69\n  def test_to_raw_cert(cert_file, key_file):\nE       fixture 'cert_file' not found\n>       available fixtures: adapter, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, platformdirs_isolated, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' ",
+          "name": "test_example::test_to_raw_cert",
+          "outcome": "error"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 66.0377358490566,
+    "collected": 15,
+    "collection_error": false,
+    "errors": 6,
+    "failed": 7,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 13,
+      "try_except": 0
+    },
+    "passed": 2,
+    "skipped": 0,
+    "stmt_cov": 75.0,
+    "xfailed": 0
+  },
+  "target": "ssl_.py",
+  "test_file": "test_example.py"
+}

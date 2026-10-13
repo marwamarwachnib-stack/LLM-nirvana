@@ -1,0 +1,233 @@
+{
+  "notes": [
+    "Category labels for p2 are NOT in the repository; structure_rule_* groups use our AST rule (classes -> cat3).",
+    "Missed statements (exact): 'Missing' ranges intersected with executable statement lines (coverage.py PythonParser).",
+    "Missed statements (naive): every line number inside the 'Missing' ranges; this reproduces the paper's Table 5 magnitudes.",
+    "ChatGPT tests for the small set and the iterative rounds are not in the repository; Tables 1 (ChatGPT), 3 and 4 cannot be recomputed."
+  ],
+  "p2": {
+    "all_with_both_reports": {
+      "branch_tests": {
+        "n": 41,
+        "ttest_ind_p": 0.324,
+        "wilcoxon_p": 0.173
+      },
+      "gpt_branch": 73.39,
+      "gpt_missed_mean": 28.44,
+      "gpt_stmt": 77.44,
+      "intersect_missed_mean": 13,
+      "intersect_missed_naive_mean": 17.71,
+      "maximum_covered_ours": 15.44,
+      "minimum_covered_ours": 7.41,
+      "minimum_missed": 20.41,
+      "n": 41,
+      "pyn_branch": 78.15,
+      "pyn_missed_mean": 20.41,
+      "pyn_stmt": 81.61,
+      "stmt_tests": {
+        "n": 41,
+        "ttest_ind_p": 0.349,
+        "wilcoxon_p": 0.171
+      },
+      "union_missed_mean": 35.85,
+      "union_missed_naive_mean": 50.02
+    },
+    "excluded_samples_missing_reports": [
+      "sample8",
+      "sample10"
+    ],
+    "excluding_non_pynguin_suites": {
+      "branch_tests": {
+        "n": 38,
+        "ttest_ind_p": 0.627,
+        "wilcoxon_p": 0.441
+      },
+      "gpt_branch": 75.34,
+      "gpt_missed_mean": 27.05,
+      "gpt_stmt": 79.11,
+      "intersect_missed_mean": 12.84,
+      "intersect_missed_naive_mean": 17.32,
+      "maximum_covered_ours": 14.21,
+      "minimum_covered_ours": 7.95,
+      "minimum_missed": 20.79,
+      "n": 38,
+      "pyn_branch": 77.74,
+      "pyn_missed_mean": 20.79,
+      "pyn_stmt": 81.29,
+      "stmt_tests": {
+        "n": 38,
+        "ttest_ind_p": 0.631,
+        "wilcoxon_p": 0.469
+      },
+      "union_missed_mean": 35,
+      "union_missed_naive_mean": 48.24
+    },
+    "structure_rule_cat2": {
+      "branch_tests": {
+        "n": 9,
+        "ttest_ind_p": 0.195,
+        "wilcoxon_p": 0.164
+      },
+      "gpt_branch": 74.78,
+      "gpt_missed_mean": 28.89,
+      "gpt_stmt": 77.44,
+      "intersect_missed_mean": 8,
+      "intersect_missed_naive_mean": 11.67,
+      "maximum_covered_ours": 20.89,
+      "minimum_covered_ours": 3.11,
+      "minimum_missed": 11.11,
+      "n": 9,
+      "pyn_branch": 86.22,
+      "pyn_missed_mean": 11.11,
+      "pyn_stmt": 88.78,
+      "stmt_tests": {
+        "n": 9,
+        "ttest_ind_p": 0.169,
+        "wilcoxon_p": 0.161
+      },
+      "union_missed_mean": 32,
+      "union_missed_naive_mean": 48
+    },
+    "structure_rule_cat3": {
+      "branch_tests": {
+        "n": 32,
+        "ttest_ind_p": 0.613,
+        "wilcoxon_p": 0.405
+      },
+      "gpt_branch": 73.0,
+      "gpt_missed_mean": 28.31,
+      "gpt_stmt": 77.44,
+      "intersect_missed_mean": 14.41,
+      "intersect_missed_naive_mean": 19.41,
+      "maximum_covered_ours": 13.9,
+      "minimum_covered_ours": 8.62,
+      "minimum_missed": 23.03,
+      "n": 32,
+      "pyn_branch": 75.88,
+      "pyn_missed_mean": 23.03,
+      "pyn_stmt": 79.59,
+      "stmt_tests": {
+        "n": 32,
+        "ttest_ind_p": 0.681,
+        "wilcoxon_p": 0.445
+      },
+      "union_missed_mean": 36.94,
+      "union_missed_naive_mean": 50.59
+    },
+    "structure_rule_counts": {
+      "cat1": 0,
+      "cat2": 10,
+      "cat3": 33
+    }
+  },
+  "paper": {
+    "table1": {
+      "cat1_original": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "cat1_refactored": [
+        97.45,
+        0,
+        96.85,
+        0
+      ],
+      "cat2": [
+        93.26,
+        90.3,
+        91.68,
+        90.1
+      ],
+      "cat3": [
+        91.55,
+        97.0,
+        89.5,
+        96.15
+      ]
+    },
+    "table1_pvalues": {
+      "cat2": [
+        0.631,
+        0.807
+      ],
+      "cat3": [
+        0.218,
+        0.193
+      ]
+    },
+    "table2": {
+      "all40": [
+        77.43,
+        81.63,
+        73.39,
+        78.36
+      ],
+      "cat2": [
+        77.44,
+        88.77,
+        74.77,
+        86.22
+      ],
+      "cat3": [
+        77.4,
+        79.6,
+        73.0,
+        76.15
+      ]
+    },
+    "table2_pvalues": {
+      "cat2": [
+        0.169,
+        0.195
+      ],
+      "cat3": [
+        0.677,
+        0.58
+      ]
+    },
+    "table5": {
+      "intersecting_missed": 17.78,
+      "maximum_covered": 31.64,
+      "minimum_covered": 2.51,
+      "minimum_missed": 20.29,
+      "union_missed": 50.33
+    }
+  },
+  "small_set": {
+    "cat1": {
+      "n_programs": 21,
+      "n_with_pynguin_tests": 0,
+      "paper_pynguin_stmt_branch": [
+        null,
+        null
+      ],
+      "pynguin_branch_mean_coveragepy": null,
+      "pynguin_report_mean": null,
+      "pynguin_stmt_mean_coveragepy": null
+    },
+    "cat2": {
+      "n_programs": 19,
+      "n_with_pynguin_tests": 19,
+      "paper_pynguin_stmt_branch": [
+        90.3,
+        90.1
+      ],
+      "pynguin_branch_mean_coveragepy": 95.42,
+      "pynguin_report_mean": 95.12,
+      "pynguin_stmt_mean_coveragepy": 95.58
+    },
+    "cat3": {
+      "n_programs": 20,
+      "n_with_pynguin_tests": 20,
+      "paper_pynguin_stmt_branch": [
+        97.0,
+        96.15
+      ],
+      "pynguin_branch_mean_coveragepy": 95.65,
+      "pynguin_report_mean": 90.26,
+      "pynguin_stmt_mean_coveragepy": 96.37
+    }
+  }
+}

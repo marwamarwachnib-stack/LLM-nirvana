@@ -1,0 +1,26 @@
+{
+  "details": {
+    "families": [
+      "qwen3"
+    ],
+    "family": "qwen3",
+    "format": "gguf",
+    "parameter_size": "4.0B",
+    "parent_model": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "quantization_level": "Q4_K_M",
+    "runner": "llamacpp"
+  },
+  "digest": "c0da26bca542ac57d91252e21c217f9e1367cb7bf2ab7d822b29bad2a632502f",
+  "model": "qwen3-4b-instruct",
+  "ollama_version": "0.40.3",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "parameters": null,
+  "template_sha256": "c979e0e71a3e21b8f208e6ab120d5cb29327885f29d2a8b18fda67a723798e18"
+}

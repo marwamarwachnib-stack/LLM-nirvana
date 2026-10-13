@@ -1,0 +1,200 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 9,
+      "executed_lines": [
+        1,
+        3,
+        13,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        44,
+        47,
+        68,
+        69,
+        70,
+        71,
+        72,
+        75,
+        81,
+        97,
+        100,
+        153,
+        154,
+        157,
+        205,
+        212,
+        233,
+        234,
+        235,
+        236
+      ],
+      "missing_lines": [
+        40,
+        41,
+        43,
+        206,
+        207,
+        208,
+        209
+      ],
+      "missing_statements": 7,
+      "num_branches": 12,
+      "num_statements": 36,
+      "percent": 79.16666666666667
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_strutils::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_strutils::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_strutils::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_strutils::test_case_7",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        13,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        44,
+        47,
+        68,
+        69,
+        70,
+        71,
+        72,
+        75,
+        81,
+        97,
+        100,
+        153,
+        154,
+        157,
+        205,
+        212,
+        233,
+        234,
+        235,
+        236
+      ],
+      "missing_lines": [
+        40,
+        41,
+        43,
+        206,
+        207,
+        208,
+        209
+      ],
+      "missing_statements": 7,
+      "num_branches": null,
+      "num_statements": 36,
+      "percent": 80.55555555555556
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_strutils::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_strutils::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_strutils::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_strutils::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_strutils::test_case_7",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 79.16666666666667,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 6,
+    "skipped": 0,
+    "stmt_cov": 80.55555555555556,
+    "xfailed": 2
+  },
+  "target": "strutils.py",
+  "test_file": "test_strutils.py"
+}

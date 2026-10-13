@@ -1,0 +1,196 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 15,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27
+      ],
+      "missing_lines": [
+        24
+      ],
+      "missing_statements": 1,
+      "num_branches": 16,
+      "num_statements": 23,
+      "percent": 94.87179487179488
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_example::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_9",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27
+      ],
+      "missing_lines": [
+        24
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 23,
+      "percent": 95.65217391304348
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_example::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_case_9",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 94.87179487179488,
+    "collected": 10,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 5,
+    "skipped": 0,
+    "stmt_cov": 95.65217391304348,
+    "xfailed": 5
+  },
+  "target": "example.py",
+  "test_file": "test_example.py"
+}

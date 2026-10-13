@@ -1,0 +1,560 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 49,
+      "executed_lines": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        15,
+        16,
+        20,
+        22,
+        25,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        55,
+        56,
+        59,
+        60,
+        181,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        213,
+        214,
+        215,
+        217,
+        218,
+        219,
+        220,
+        223,
+        224,
+        229,
+        230,
+        231,
+        233,
+        234,
+        235,
+        236,
+        239,
+        240,
+        245,
+        246,
+        247,
+        249,
+        250,
+        251,
+        252,
+        255,
+        256,
+        257,
+        258,
+        259,
+        261,
+        263,
+        271,
+        273,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        291,
+        293,
+        297,
+        298,
+        301,
+        302,
+        304,
+        306,
+        309,
+        313,
+        314,
+        316,
+        317,
+        320,
+        321,
+        322,
+        323,
+        327,
+        331,
+        332,
+        333,
+        336,
+        339,
+        340,
+        342,
+        343,
+        351,
+        356,
+        361,
+        364,
+        368,
+        369,
+        371,
+        373,
+        378,
+        393,
+        394,
+        396,
+        398,
+        412,
+        414,
+        423
+      ],
+      "missing_lines": [
+        18,
+        53,
+        221,
+        225,
+        226,
+        227,
+        237,
+        241,
+        242,
+        243,
+        253,
+        380,
+        382,
+        387,
+        391,
+        392
+      ],
+      "missing_statements": 16,
+      "num_branches": 62,
+      "num_statements": 142,
+      "percent": 85.7843137254902
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_20",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_21",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_22",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        15,
+        16,
+        20,
+        22,
+        25,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        55,
+        56,
+        59,
+        60,
+        181,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        213,
+        214,
+        215,
+        217,
+        218,
+        219,
+        220,
+        223,
+        224,
+        229,
+        230,
+        231,
+        233,
+        234,
+        235,
+        236,
+        239,
+        240,
+        245,
+        246,
+        247,
+        249,
+        250,
+        251,
+        252,
+        255,
+        256,
+        257,
+        258,
+        259,
+        261,
+        263,
+        271,
+        273,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        291,
+        293,
+        297,
+        298,
+        301,
+        302,
+        304,
+        306,
+        309,
+        313,
+        314,
+        316,
+        317,
+        320,
+        321,
+        322,
+        323,
+        327,
+        331,
+        332,
+        333,
+        336,
+        339,
+        340,
+        342,
+        343,
+        351,
+        356,
+        361,
+        364,
+        368,
+        369,
+        371,
+        373,
+        378,
+        393,
+        394,
+        396,
+        398,
+        412,
+        414,
+        423
+      ],
+      "missing_lines": [
+        18,
+        53,
+        221,
+        225,
+        226,
+        227,
+        237,
+        241,
+        242,
+        243,
+        253,
+        380,
+        382,
+        387,
+        391,
+        392
+      ],
+      "missing_statements": 16,
+      "num_branches": null,
+      "num_statements": 142,
+      "percent": 88.73239436619718
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_0",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_txtutils::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_10",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_txtutils::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_17",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_19",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_20",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_21",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_txtutils::test_case_22",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 85.7843137254902,
+    "collected": 23,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 88.73239436619718,
+    "xfailed": 15
+  },
+  "target": "txtutils.py",
+  "test_file": "test_txtutils.py"
+}

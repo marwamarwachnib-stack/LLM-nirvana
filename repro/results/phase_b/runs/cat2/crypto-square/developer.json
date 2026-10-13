@@ -1,0 +1,148 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 6,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        16,
+        20,
+        21,
+        22,
+        23
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 6,
+      "num_statements": 13,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_lowercase",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_normalization_results_in_empty_plaintext",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_remove_punctuation",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_remove_spaces",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        16,
+        20,
+        21,
+        22,
+        23
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 13,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_lowercase",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_normalization_results_in_empty_plaintext",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_remove_punctuation",
+          "outcome": "passed"
+        },
+        {
+          "name": "crypto_square_test.CryptoSquareTest::test_remove_spaces",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "crypto_square_test.py"
+}

@@ -1,0 +1,104 @@
+{
+  "model": "qwen3-4b-instruct",
+  "model_info": {
+    "details": {
+      "families": [
+        "qwen3"
+      ],
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_size": "4.0B",
+      "parent_model": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    },
+    "digest": "c0da26bca542ac57d91252e21c217f9e1367cb7bf2ab7d822b29bad2a632502f",
+    "model": "qwen3-4b-instruct",
+    "ollama_version": "0.40.3",
+    "options": {
+      "num_ctx": 16384,
+      "num_predict": 2048,
+      "seed": 42,
+      "temperature": 0.7,
+      "top_k": 20,
+      "top_p": 0.8
+    },
+    "parameters": null,
+    "template_sha256": "c979e0e71a3e21b8f208e6ab120d5cb29327885f29d2a8b18fda67a723798e18"
+  },
+  "rq1_p2": {
+    "paper_table2": {
+      "all40": [
+        77.43,
+        81.63,
+        73.39,
+        78.36
+      ],
+      "cat2": [
+        77.44,
+        88.77,
+        74.77,
+        86.22
+      ],
+      "cat3": [
+        77.4,
+        79.6,
+        73.0,
+        76.15
+      ]
+    },
+    "paper_table5": {
+      "intersecting_missed": 17.78,
+      "maximum_covered": 31.64,
+      "minimum_covered": 2.51,
+      "minimum_missed": 20.29,
+      "union_missed": 50.33
+    }
+  },
+  "rq1_small": {
+    "cat2": {
+      "branch_tests": {
+        "n_pairs": 1
+      },
+      "execution": {
+        "redefinition_repairs": 0,
+        "suites_all_tests_pass": 0,
+        "suites_collected_ok": 1,
+        "truncated_replies": 1
+      },
+      "llm_branch": 12.5,
+      "llm_stmt": 20.0,
+      "llm_stmt_unrepaired": 20.0,
+      "n": 1,
+      "paper_chatgpt_stmt_branch": [
+        93.26,
+        91.68
+      ],
+      "paper_pvalues": [
+        0.631,
+        0.807
+      ],
+      "paper_pynguin_stmt_branch": [
+        90.3,
+        90.1
+      ],
+      "pynguin_branch": 100.0,
+      "pynguin_stmt": 100.0,
+      "rq3_correctness": {
+        "assertion_pct": 82.61,
+        "failing_tests": 23,
+        "pct_incorrect_mean_per_suite": 62.16,
+        "pct_incorrect_pooled": 62.16,
+        "runtime_pct": 4.35,
+        "suites": 1,
+        "suites_compiling": 1,
+        "tests": 37,
+        "try_except_pct": 13.04
+      },
+      "stmt_tests": {
+        "n_pairs": 1
+      }
+    }
+  },
+  "rq2_iterative": {}
+}

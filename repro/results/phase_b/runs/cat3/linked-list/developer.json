@@ -1,0 +1,394 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 26,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        58,
+        59,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        70,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79,
+        80,
+        81,
+        83,
+        85,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        94
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 26,
+      "num_statements": 72,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "linked_list_test.LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_a_list_with_items",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_an_empty_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_is_correct_after_mutation",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_only_the_first_occurrence",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_first_of_two_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_only_element",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_second_of_two_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_pop_gets_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_popping_to_empty_doesn_t_break_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shift_gets_an_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shift_gets_first_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_unshift_adds_element_at_start_of_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        58,
+        59,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        70,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        79,
+        80,
+        81,
+        83,
+        85,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        94
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 72,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "linked_list_test.LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_a_list_with_items",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_an_empty_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_count_is_correct_after_mutation",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_only_the_first_occurrence",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_first_of_two_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_only_element",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_deletes_the_second_of_two_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_pop_gets_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_popping_to_empty_doesn_t_break_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shift_gets_an_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shift_gets_first_element_from_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_unshift_adds_element_at_start_of_the_list",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "linked_list_test.LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 24,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 24,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "linked_list_test.py"
+}

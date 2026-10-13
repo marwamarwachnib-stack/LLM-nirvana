@@ -1,0 +1,432 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 16,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 16,
+      "num_statements": 35,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "custom_set_test.CustomSetTest::test_add_to_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_add_to_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_adding_an_existing_element_does_not_change_the_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_sets_are_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_nothing_is_contained_in_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_different_elements_are_not_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_elements_are_not_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_no_elements_are_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_the_same_elements_are_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_the_empty_set_is_disjoint_with_itself",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_when_the_element_is_in_the_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_when_the_element_is_not_in_the_set",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 35,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "custom_set_test.CustomSetTest::test_add_to_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_add_to_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_adding_an_existing_element_does_not_change_the_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_empty_sets_are_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_nothing_is_contained_in_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_different_elements_are_not_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_elements_are_not_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_no_elements_are_empty",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_sets_with_the_same_elements_are_equal",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_the_empty_set_is_disjoint_with_itself",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_empty_sets_is_an_empty_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_when_the_element_is_in_the_set",
+          "outcome": "passed"
+        },
+        {
+          "name": "custom_set_test.CustomSetTest::test_when_the_element_is_not_in_the_set",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 38,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 38,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "custom_set_test.py"
+}

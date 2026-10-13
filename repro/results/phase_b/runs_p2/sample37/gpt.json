@@ -1,0 +1,272 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 4,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        32,
+        37,
+        39,
+        62,
+        63,
+        71,
+        76,
+        78,
+        79,
+        83,
+        85,
+        88,
+        89,
+        100,
+        118,
+        130,
+        131,
+        133,
+        134,
+        135,
+        138,
+        139,
+        140,
+        144,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        155
+      ],
+      "missing_lines": [
+        50,
+        86,
+        102,
+        103,
+        104,
+        106,
+        108
+      ],
+      "missing_statements": 7,
+      "num_branches": 8,
+      "num_statements": 57,
+      "percent": 83.07692307692308
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: Person() takes no arguments",
+          "name": "test_example::test_to_json",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_from_json",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: Person() takes no arguments",
+          "name": "test_example::test_to_dict",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_from_dict",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_schema",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'function' object has no attribute 'value'",
+          "name": "test_example::test_letter_case",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "dataclasses_json.undefined.UndefinedParameterError: Invalid undefined parameter action, must be one of ['INCLUDE', 'RAISE', 'EXCLUDE']",
+          "name": "test_example::test_undefined",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: api() takes no arguments",
+          "name": "test_example::test_partial",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        32,
+        37,
+        39,
+        62,
+        63,
+        71,
+        76,
+        78,
+        79,
+        83,
+        85,
+        88,
+        89,
+        100,
+        118,
+        130,
+        131,
+        133,
+        134,
+        135,
+        138,
+        139,
+        140,
+        144,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        155
+      ],
+      "missing_lines": [
+        50,
+        86,
+        102,
+        103,
+        104,
+        106,
+        108
+      ],
+      "missing_statements": 7,
+      "num_branches": null,
+      "num_statements": 57,
+      "percent": 87.71929824561404
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: Person() takes no arguments",
+          "name": "test_example::test_to_json",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_from_json",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: Person() takes no arguments",
+          "name": "test_example::test_to_dict",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_from_dict",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: must be called with a dataclass type or instance",
+          "name": "test_example::test_schema",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "AttributeError: 'function' object has no attribute 'value'",
+          "name": "test_example::test_letter_case",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "dataclasses_json.undefined.UndefinedParameterError: Invalid undefined parameter action, must be one of ['INCLUDE', 'RAISE', 'EXCLUDE']",
+          "name": "test_example::test_undefined",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "TypeError: api() takes no arguments",
+          "name": "test_example::test_partial",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 83.07692307692308,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 8,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 8,
+      "try_except": 0
+    },
+    "passed": 0,
+    "skipped": 0,
+    "stmt_cov": 87.71929824561404,
+    "xfailed": 0
+  },
+  "target": "api.py",
+  "test_file": "test_example.py"
+}

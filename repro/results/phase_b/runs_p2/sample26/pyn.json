@@ -1,0 +1,452 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 11,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        15,
+        22,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        35,
+        37,
+        38,
+        40,
+        41,
+        44,
+        45,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        64,
+        65,
+        66,
+        68,
+        73,
+        74,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        97,
+        98,
+        99,
+        101,
+        106,
+        107,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        143,
+        144,
+        145,
+        147,
+        157,
+        158,
+        160,
+        161,
+        163,
+        164,
+        165,
+        166,
+        168,
+        170,
+        171
+      ],
+      "missing_lines": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        70,
+        87,
+        88,
+        89,
+        91,
+        92,
+        93,
+        94,
+        95,
+        103,
+        120,
+        121,
+        122,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        135,
+        137,
+        138,
+        139,
+        140,
+        141,
+        149,
+        151,
+        152,
+        154
+      ],
+      "missing_statements": 38,
+      "num_branches": 32,
+      "num_statements": 102,
+      "percent": 55.97014925373134
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_formats::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_formats::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_formats::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_19",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        15,
+        22,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        35,
+        37,
+        38,
+        40,
+        41,
+        44,
+        45,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        64,
+        65,
+        66,
+        68,
+        73,
+        74,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        97,
+        98,
+        99,
+        101,
+        106,
+        107,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        143,
+        144,
+        145,
+        147,
+        157,
+        158,
+        160,
+        161,
+        163,
+        164,
+        165,
+        166,
+        168,
+        170,
+        171
+      ],
+      "missing_lines": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        70,
+        87,
+        88,
+        89,
+        91,
+        92,
+        93,
+        94,
+        95,
+        103,
+        120,
+        121,
+        122,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        135,
+        137,
+        138,
+        139,
+        140,
+        141,
+        149,
+        151,
+        152,
+        154
+      ],
+      "missing_statements": 38,
+      "num_branches": null,
+      "num_statements": 102,
+      "percent": 62.745098039215684
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_formats::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_formats::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_formats::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_6",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_7",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_8",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_9",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_11",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_12",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_13",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_14",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_15",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_16",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_17",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_formats::test_case_18",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_formats::test_case_19",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 55.97014925373134,
+    "collected": 20,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 9,
+    "skipped": 0,
+    "stmt_cov": 62.745098039215684,
+    "xfailed": 11
+  },
+  "target": "formats.py",
+  "test_file": "test_formats.py"
+}

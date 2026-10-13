@@ -1,0 +1,258 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 22,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 22,
+      "num_statements": 36,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "bank_account_test.BankAccountTest::test_can_do_multiple_operations_sequentially",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_check_balance_of_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_close_an_account_that_was_not_opened",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_into_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_into_unopened_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_negative",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_open_an_already_opened_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_from_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_more_than_deposited",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_negative",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_multiple_deposits",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_newly_opened_account_has_zero_balance",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_reopened_account_does_not_retain_balance",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_single_deposit",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_withdraw_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_withdraw_twice",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 36,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "bank_account_test.BankAccountTest::test_can_do_multiple_operations_sequentially",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_check_balance_of_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_close_an_account_that_was_not_opened",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_into_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_into_unopened_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_deposit_negative",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_open_an_already_opened_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_from_closed_account",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_more_than_deposited",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_cannot_withdraw_negative",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_multiple_deposits",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_newly_opened_account_has_zero_balance",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_reopened_account_does_not_retain_balance",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_single_deposit",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_withdraw_once",
+          "outcome": "passed"
+        },
+        {
+          "name": "bank_account_test.BankAccountTest::test_withdraw_twice",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 16,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 16,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "bank_account_test.py"
+}

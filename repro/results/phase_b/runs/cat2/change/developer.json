@@ -1,0 +1,202 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 14,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 14,
+      "num_statements": 24,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "change_test.ChangeTest::test_another_possible_change_without_unit_coins_available",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_cannot_find_negative_change_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_for_1_cent",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_with_lilliputian_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_with_lower_elbonia_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_error_if_no_combination_can_add_up_to_target",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_large_target_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_multiple_coin_change",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_no_coins_make_0_change",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_possible_change_without_unit_coins_available",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_single_coin_change",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 24,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "change_test.ChangeTest::test_another_possible_change_without_unit_coins_available",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_cannot_find_negative_change_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_for_1_cent",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_with_lilliputian_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_change_with_lower_elbonia_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_error_if_no_combination_can_add_up_to_target",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_large_target_values",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_multiple_coin_change",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_no_coins_make_0_change",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_possible_change_without_unit_coins_available",
+          "outcome": "passed"
+        },
+        {
+          "name": "change_test.ChangeTest::test_single_coin_change",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 12,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "change_test.py"
+}

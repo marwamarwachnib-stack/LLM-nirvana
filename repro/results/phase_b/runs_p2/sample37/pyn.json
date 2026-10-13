@@ -1,0 +1,242 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 4,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        32,
+        37,
+        39,
+        50,
+        62,
+        63,
+        78,
+        79,
+        85,
+        86,
+        88,
+        89,
+        118,
+        130,
+        131,
+        133,
+        134,
+        135,
+        138,
+        139,
+        140,
+        144
+      ],
+      "missing_lines": [
+        71,
+        76,
+        83,
+        100,
+        102,
+        103,
+        104,
+        106,
+        108,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        155
+      ],
+      "missing_statements": 16,
+      "num_branches": 8,
+      "num_statements": 57,
+      "percent": 69.23076923076923
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_api::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_api::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_6",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        32,
+        37,
+        39,
+        50,
+        62,
+        63,
+        78,
+        79,
+        85,
+        86,
+        88,
+        89,
+        118,
+        130,
+        131,
+        133,
+        134,
+        135,
+        138,
+        139,
+        140,
+        144
+      ],
+      "missing_lines": [
+        71,
+        76,
+        83,
+        100,
+        102,
+        103,
+        104,
+        106,
+        108,
+        147,
+        148,
+        149,
+        150,
+        152,
+        154,
+        155
+      ],
+      "missing_statements": 16,
+      "num_branches": null,
+      "num_statements": 57,
+      "percent": 71.9298245614035
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_api::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_2",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_api::test_case_3",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_4",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_5",
+          "outcome": "xfailed"
+        },
+        {
+          "message": "",
+          "name": "test_api::test_case_6",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 69.23076923076923,
+    "collected": 7,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 2,
+    "skipped": 0,
+    "stmt_cov": 71.9298245614035,
+    "xfailed": 5
+  },
+  "target": "api.py",
+  "test_file": "test_api.py"
+}

@@ -1,0 +1,448 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 2,
+      "executed_lines": [
+        1,
+        2,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        24,
+        25,
+        29,
+        31,
+        34,
+        41,
+        44,
+        45,
+        49,
+        51,
+        54,
+        61,
+        64,
+        65,
+        69,
+        71,
+        74,
+        81,
+        84,
+        85,
+        89,
+        92,
+        99,
+        102,
+        103,
+        107,
+        110,
+        117,
+        120,
+        121,
+        125,
+        128,
+        135,
+        140,
+        141,
+        145,
+        147,
+        150,
+        157,
+        160,
+        161,
+        165,
+        167,
+        170,
+        177
+      ],
+      "missing_lines": [
+        21
+      ],
+      "missing_statements": 1,
+      "num_branches": 2,
+      "num_statements": 39,
+      "percent": 97.5609756097561
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_sum_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_concat_true_true",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_concat_true_false",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_concat_true_true",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_concat_true_false",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_fold",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "KeyError: 1",
+          "name": "test_example::test_map_concat",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_max_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_concat",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        24,
+        25,
+        29,
+        31,
+        34,
+        41,
+        44,
+        45,
+        49,
+        51,
+        54,
+        61,
+        64,
+        65,
+        69,
+        71,
+        74,
+        81,
+        84,
+        85,
+        89,
+        92,
+        99,
+        102,
+        103,
+        107,
+        110,
+        117,
+        120,
+        121,
+        125,
+        128,
+        135,
+        140,
+        141,
+        145,
+        147,
+        150,
+        157,
+        160,
+        161,
+        165,
+        167,
+        170,
+        177
+      ],
+      "missing_lines": [
+        21
+      ],
+      "missing_statements": 1,
+      "num_branches": null,
+      "num_statements": 39,
+      "percent": 97.43589743589743
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_sum_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_sum_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_concat_true_true",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_all_concat_true_false",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_concat_true_true",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_one_concat_true_false",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_first_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_last_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_map_fold",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "KeyError: 1",
+          "name": "test_example::test_map_concat",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_max_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_max_concat",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_init",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_eq",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_fold",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_min_concat",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 97.5609756097561,
+    "collected": 34,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 33,
+    "skipped": 0,
+    "stmt_cov": 97.43589743589743,
+    "xfailed": 0
+  },
+  "target": "semigroups.py",
+  "test_file": "test_example.py"
+}

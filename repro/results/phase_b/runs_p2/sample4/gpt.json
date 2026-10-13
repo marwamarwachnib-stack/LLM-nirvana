@@ -1,0 +1,200 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 12,
+      "executed_lines": [
+        1,
+        3,
+        13,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        47,
+        68,
+        69,
+        70,
+        71,
+        72,
+        75,
+        81,
+        97,
+        100,
+        153,
+        154,
+        157,
+        205,
+        212,
+        233,
+        234,
+        235,
+        236
+      ],
+      "missing_lines": [
+        206,
+        207,
+        208,
+        209
+      ],
+      "missing_statements": 4,
+      "num_branches": 12,
+      "num_statements": 36,
+      "percent": 91.66666666666667
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...20\\\\U0001f6d1' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  + \\x31\\x2e\\u2605\\x20\\U0001f6d1",
+          "name": "test_example::test_as_escaped_unicode_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...x9f\\\\x9b\\\\x91' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  ?           ^               ^    ^   ^\n  + \\x31\\x2e\\xe2\\x98\\x85\\x20\\xf0\\x9f\\x9b\\x91\n  ?           ^               ^    ^   ^",
+          "name": "test_example::test_as_escaped_utf8_literal",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_camel_to_underscore",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '1.\u00e2\\x98\\x85 \u00f0\\x9f\\x9b\\x91' == '1.\u2605 #x1F6D1'\n  - 1.\u2605 #x1F6D1\n  + 1.\u00e2\u0098\u0085\n  +  \u00f0\u009f\u009b\u0091",
+          "name": "test_example::test_convert_escaped_unicode_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/repro/conda/envs/p2/lib/python3.10/codecs.py)",
+          "name": "test_example::test_convert_escaped_utf8_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'OneTwo' == 'oneTwo'\n  - oneTwo\n  ? ^\n  + OneTwo\n  ? ^",
+          "name": "test_example::test_underscore_to_camel",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        3,
+        13,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        47,
+        68,
+        69,
+        70,
+        71,
+        72,
+        75,
+        81,
+        97,
+        100,
+        153,
+        154,
+        157,
+        205,
+        212,
+        233,
+        234,
+        235,
+        236
+      ],
+      "missing_lines": [
+        206,
+        207,
+        208,
+        209
+      ],
+      "missing_statements": 4,
+      "num_branches": null,
+      "num_statements": 36,
+      "percent": 88.88888888888889
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...20\\\\U0001f6d1' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  + \\x31\\x2e\\u2605\\x20\\U0001f6d1",
+          "name": "test_example::test_as_escaped_unicode_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...x9f\\\\x9b\\\\x91' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  ?           ^               ^    ^   ^\n  + \\x31\\x2e\\xe2\\x98\\x85\\x20\\xf0\\x9f\\x9b\\x91\n  ?           ^               ^    ^   ^",
+          "name": "test_example::test_as_escaped_utf8_literal",
+          "outcome": "failed"
+        },
+        {
+          "name": "test_example::test_camel_to_underscore",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert '1.\u00e2\\x98\\x85 \u00f0\\x9f\\x9b\\x91' == '1.\u2605 #x1F6D1'\n  - 1.\u2605 #x1F6D1\n  + 1.\u00e2\u0098\u0085\n  +  \u00f0\u009f\u009b\u0091",
+          "name": "test_example::test_convert_escaped_unicode_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/repro/conda/envs/p2/lib/python3.10/codecs.py)",
+          "name": "test_example::test_convert_escaped_utf8_literal",
+          "outcome": "failed"
+        },
+        {
+          "failure_class": "assertion",
+          "message": "AssertionError: assert 'OneTwo' == 'oneTwo'\n  - oneTwo\n  ? ^\n  + OneTwo\n  ? ^",
+          "name": "test_example::test_underscore_to_camel",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 91.66666666666667,
+    "collected": 6,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 5,
+    "failure_classes": {
+      "assertion": 4,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 1,
+    "skipped": 0,
+    "stmt_cov": 88.88888888888889,
+    "xfailed": 0
+  },
+  "target": "strutils.py",
+  "test_file": "test_example.py"
+}

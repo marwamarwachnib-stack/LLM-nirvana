@@ -1,0 +1,196 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 13,
+      "executed_lines": [
+        4,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        21,
+        33,
+        35,
+        36,
+        38,
+        41,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        63,
+        78,
+        79,
+        81,
+        82,
+        83,
+        85,
+        88,
+        106,
+        107,
+        109,
+        112,
+        113,
+        115,
+        118,
+        130,
+        131,
+        132,
+        135,
+        136,
+        137,
+        138
+      ],
+      "missing_lines": [
+        110,
+        116,
+        119,
+        122,
+        123,
+        124,
+        127,
+        140
+      ],
+      "missing_statements": 8,
+      "num_branches": 18,
+      "num_statements": 50,
+      "percent": 80.88235294117646
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_uuid",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_random_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_secure_random_hex",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "OverflowError: Invalid start/stop/step configuration",
+          "name": "test_example::test_roman_range",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        4,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        21,
+        33,
+        35,
+        36,
+        38,
+        41,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        63,
+        78,
+        79,
+        81,
+        82,
+        83,
+        85,
+        88,
+        106,
+        107,
+        109,
+        112,
+        113,
+        115,
+        118,
+        130,
+        131,
+        132,
+        135,
+        136,
+        137,
+        138
+      ],
+      "missing_lines": [
+        110,
+        116,
+        119,
+        122,
+        123,
+        124,
+        127,
+        140
+      ],
+      "missing_statements": 8,
+      "num_branches": null,
+      "num_statements": 50,
+      "percent": 84.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_uuid",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_random_string",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_example::test_secure_random_hex",
+          "outcome": "passed"
+        },
+        {
+          "failure_class": "runtime",
+          "message": "OverflowError: Invalid start/stop/step configuration",
+          "name": "test_example::test_roman_range",
+          "outcome": "failed"
+        }
+      ]
+    },
+    "returncode": 1,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 80.88235294117646,
+    "collected": 4,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 1,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 84.0,
+    "xfailed": 0
+  },
+  "target": "generation.py",
+  "test_file": "test_example.py"
+}

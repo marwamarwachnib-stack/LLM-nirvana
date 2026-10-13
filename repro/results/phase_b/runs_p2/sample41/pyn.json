@@ -1,0 +1,140 @@
+{
+  "branch": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_attr_category::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_attr_category::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_attr_category::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_attr_category::test_case_11",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": null,
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_attr_category::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_1",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_attr_category::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_attr_category::test_case_4",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_5",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_6",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_7",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_8",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_9",
+          "outcome": "passed"
+        },
+        {
+          "name": "test_attr_category::test_case_10",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_attr_category::test_case_11",
+          "outcome": "xfailed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": null,
+    "collected": 12,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 10,
+    "skipped": 0,
+    "stmt_cov": null,
+    "xfailed": 2
+  },
+  "target": "attr_category.py",
+  "test_file": "test_attr_category.py"
+}

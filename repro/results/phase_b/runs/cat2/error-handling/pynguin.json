@@ -1,0 +1,134 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 0,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19
+      ],
+      "missing_lines": [
+        20,
+        21
+      ],
+      "missing_statements": 2,
+      "num_branches": 2,
+      "num_statements": 15,
+      "percent": 76.47058823529412
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_4",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19
+      ],
+      "missing_lines": [
+        20,
+        21
+      ],
+      "missing_statements": 2,
+      "num_branches": null,
+      "num_statements": 15,
+      "percent": 86.66666666666667
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "test_example::test_case_0",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_1",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_2",
+          "outcome": "passed"
+        },
+        {
+          "message": "",
+          "name": "test_example::test_case_3",
+          "outcome": "xfailed"
+        },
+        {
+          "name": "test_example::test_case_4",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 76.47058823529412,
+    "collected": 5,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 3,
+    "skipped": 0,
+    "stmt_cov": 86.66666666666667,
+    "xfailed": 2
+  },
+  "target": "example.py",
+  "test_file": "test_example.py"
+}

@@ -1,0 +1,168 @@
+{
+  "branch": {
+    "coverage": {
+      "covered_branches": 10,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        37,
+        38
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": 10,
+      "num_statements": 23,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "beer_song_test.BeerSongTest::test_all_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_first_generic_verse",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_first_two_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_last_generic_verse",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_last_three_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_0_bottles",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_1_bottle",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_2_bottles",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "stmt": {
+    "coverage": {
+      "covered_branches": null,
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        17,
+        18,
+        19,
+        21,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        37,
+        38
+      ],
+      "missing_lines": [],
+      "missing_statements": 0,
+      "num_branches": null,
+      "num_statements": 23,
+      "percent": 100.0
+    },
+    "junit": {
+      "collection_error": false,
+      "tests": [
+        {
+          "name": "beer_song_test.BeerSongTest::test_all_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_first_generic_verse",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_first_two_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_last_generic_verse",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_last_three_verses",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_0_bottles",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_1_bottle",
+          "outcome": "passed"
+        },
+        {
+          "name": "beer_song_test.BeerSongTest::test_verse_with_2_bottles",
+          "outcome": "passed"
+        }
+      ]
+    },
+    "returncode": 0,
+    "timeout": false
+  },
+  "summary": {
+    "branch_cov": 100.0,
+    "collected": 8,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 0,
+    "failure_classes": {
+      "assertion": 0,
+      "runtime": 0,
+      "try_except": 0
+    },
+    "passed": 8,
+    "skipped": 0,
+    "stmt_cov": 100.0,
+    "xfailed": 0
+  },
+  "target": "example.py",
+  "test_file": "beer_song_test.py"
+}
