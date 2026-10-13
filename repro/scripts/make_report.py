@@ -163,6 +163,11 @@ def main(model: str) -> None:
         w("|---|---|---|---|---|---|---|---|")
         for c, r in it.items():
             w(f"| {c} | {r['n_finished']} | {r['iter1']} | {r['iter5']} | {r['best']} | {r['diff_best_least']} | {r['median_iters_to_plateau']} | {r['paper_table3']} |")
+    sfl = RESULTS / "sfl" / "SFL_RESULTS.md"
+    if sfl.exists():
+        w("\n" + sfl.read_text().replace("## SFL results", "## 3b. SFL results", 1))
+        w("Method: [scripts/sfl/](scripts/sfl/) (mutate.py, spectra.py, formulas.py, run_sfl.py, analyze_sfl.py); "
+          "per-mutant data: `results/sfl/mutants.csv`, `results/sfl/raw/`.\n")
     w("\n## 4. Status\n")
     w(f"* Small set: {n_small}/{planned['small']} modules; p2: {n_p2}/{planned['p2']}; p1 iterative: {n_it}/{planned['p1']} (13 of 41 p1 modules are runnable).")
     w("* Not run: Category 1 scripts (refactoring step unspecified), the 28 p1 modules with unavailable dependencies, "
