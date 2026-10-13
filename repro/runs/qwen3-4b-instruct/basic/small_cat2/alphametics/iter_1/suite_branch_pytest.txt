@@ -1,0 +1,238 @@
+$ coverage run --branch -m pytest test_generated.py
+returncode=1 timeout=False
+--- stdout ---
+FFF.FF.F..FFFFFFFFFFFFFFF                                                [100%]
+=================================== FAILURES ===================================
+_______________________________ test_empty_input _______________________________
+
+    def test_empty_input():
+        """Test with empty string."""
+        with pytest.raises(ValueError) as excinfo:
+>           solve("")
+
+test_generated.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+example.py:133: in solve
+    nzchars = {warhol[-1] for sigmund in full_exp for warhol in sigmund}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f4631441540>
+
+>   nzchars = {warhol[-1] for sigmund in full_exp for warhol in sigmund}
+E   IndexError: list index out of range
+
+example.py:133: IndexError
+_____________________________ test_invalid_format ______________________________
+
+    def test_invalid_format():
+        """Test with invalid format like 'A+B=C' but not properly split."""
+>       with pytest.raises(ValueError) as excinfo:
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+test_generated.py:15: Failed
+__________________________ test_single_word_equation ___________________________
+
+    def test_single_word_equation():
+        """Test a simple equation: A + B = C."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:22: AssertionError
+_________________________ test_leading_zero_forbidden __________________________
+
+    def test_leading_zero_forbidden():
+        """Test that leading letters cannot be zero."""
+        result = solve("SEND + MORE = MONEY")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:37: AssertionError
+_______________________ test_all_leading_letters_nonzero _______________________
+
+    def test_all_leading_letters_nonzero():
+        """All letters are leading → all must be non-zero."""
+        result = solve("A + B = C")
+>       assert result['A'] != 0
+E       TypeError: 'NoneType' object is not subscriptable
+
+test_generated.py:45: TypeError
+__________________________ test_zero_allowed_letters ___________________________
+
+    def test_zero_allowed_letters():
+        """Test a case where a non-leading letter can be zero."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:57: AssertionError
+____________________________ test_carry_over_logic _____________________________
+
+    def test_carry_over_logic():
+        """Test that carry-over is correctly computed and propagated."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:75: AssertionError
+______________________________ test_max_rank_zero ______________________________
+
+    def test_max_rank_zero():
+        """Test when all words are of length 1 → max digit rank is 0."""
+        result = solve("A = B")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:85: AssertionError
+____________________________ test_identical_letters ____________________________
+
+    def test_identical_letters():
+        """Test equation with repeated letters (e.g., A + A = B)"""
+        result = solve("A + A = B")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:90: AssertionError
+__________________________ test_long_word_with_carry ___________________________
+
+    def test_long_word_with_carry():
+        """Test with carry propagation across digits (e.g., A + B = C, but with 2-digit carry)."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:97: AssertionError
+____________________________ test_no_unique_letters ____________________________
+
+    def test_no_unique_letters():
+        """Test with only one letter in all terms."""
+        result = solve("A + B = A")
+        assert result is None  # leads to B = 0, but A = A → A + B = A → B = 0, but A is leading → A ≠ 0 → possible?
+    
+        # Let's analyze: A + 0 = A → valid if A ≠ 0 → so solution should exist
+        # But only if B can be zero (not leading)
+        # So if B is not leading, zero is allowed → should return valid solution
+        result = solve("A + B = A")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:109: AssertionError
+_____________________________ test_all_zero_digits _____________________________
+
+    def test_all_zero_digits():
+        """Test that solver avoids assigning 0 to all letters when needed."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:116: AssertionError
+______________________ test_mixed_leading_and_non_leading ______________________
+
+    def test_mixed_leading_and_non_leading():
+        """Test where some letters are leading (cannot be zero), others are not."""
+        result = solve("SEND + MORE = MONEY")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:125: AssertionError
+_____________________ test_duplicate_letters_in_same_rank ______________________
+
+    def test_duplicate_letters_in_same_rank():
+        """Test that same letter appears multiple times in same digit rank."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:138: AssertionError
+___________________________ test_no_letters_in_word ____________________________
+
+    def test_no_letters_in_word():
+        """Test with empty words (should be ignored)."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:143: AssertionError
+___________________________ test_negative_multiplier ___________________________
+
+    def test_negative_multiplier():
+        """Test with negative multiplier (right side of equation)."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:148: AssertionError
+___________________________ test_puzzle_with_spaces ____________________________
+
+    def test_puzzle_with_spaces():
+        """Test with extra spaces."""
+        result = solve("  A + B = C  ")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:153: AssertionError
+__________________________ test_puzzle_with_uppercase __________________________
+
+    def test_puzzle_with_uppercase():
+        """Test that uppercase conversion works."""
+        result = solve("a + b = c")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:158: AssertionError
+_________________________ test_puzzle_with_mixed_case __________________________
+
+    def test_puzzle_with_mixed_case():
+        """Test case-insensitive parsing."""
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:163: AssertionError
+______________________ test_equation_with_multiple_terms _______________________
+
+    def test_equation_with_multiple_terms():
+        """Test with multiple terms on each side."""
+        result = solve("A + B + C = D + E")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:168: AssertionError
+______________________ test_solver_returns_first_solution ______________________
+
+    def test_solver_returns_first_solution():
+        """Test that solver returns first valid solution (not all permutations)."""
+        # This is a complex one: we expect only one solution per puzzle
+        # So we can check that if multiple solutions exist, we get the first
+        # But since we are not generating all, we assume solver returns one
+        result = solve("A + B = C")
+>       assert result is not None
+E       assert None is not None
+
+test_generated.py:177: AssertionError
+- generated xml file: /opt/repro/work/phase_c/qwen3-4b-instruct/basic/small_cat2/alphametics/iter_1/suite/suite_branch_junit.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_empty_input - IndexError: list index out of range
+FAILED test_generated.py::test_invalid_format - Failed: DID NOT RAISE <class ...
+FAILED test_generated.py::test_single_word_equation - assert None is not None
+FAILED test_generated.py::test_leading_zero_forbidden - assert None is not None
+FAILED test_generated.py::test_all_leading_letters_nonzero - TypeError: 'None...
+FAILED test_generated.py::test_zero_allowed_letters - assert None is not None
+FAILED test_generated.py::test_carry_over_logic - assert None is not None
+FAILED test_generated.py::test_max_rank_zero - assert None is not None
+FAILED test_generated.py::test_identical_letters - assert None is not None
+FAILED test_generated.py::test_long_word_with_carry - assert None is not None
+FAILED test_generated.py::test_no_unique_letters - assert None is not None
+FAILED test_generated.py::test_all_zero_digits - assert None is not None
+FAILED test_generated.py::test_mixed_leading_and_non_leading - assert None is...
+FAILED test_generated.py::test_duplicate_letters_in_same_rank - assert None i...
+FAILED test_generated.py::test_no_letters_in_word - assert None is not None
+FAILED test_generated.py::test_negative_multiplier - assert None is not None
+FAILED test_generated.py::test_puzzle_with_spaces - assert None is not None
+FAILED test_generated.py::test_puzzle_with_uppercase - assert None is not None
+FAILED test_generated.py::test_puzzle_with_mixed_case - assert None is not None
+FAILED test_generated.py::test_equation_with_multiple_terms - assert None is ...
+FAILED test_generated.py::test_solver_returns_first_solution - assert None is...
+21 failed, 4 passed in 0.26s
+
+--- stderr ---

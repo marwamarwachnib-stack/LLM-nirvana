@@ -1,0 +1,514 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [
+      "solve -> example"
+    ],
+    "lines_dropped_to_parse": 3,
+    "redefinitions_removed": [],
+    "star_import_added": false
+  },
+  "finished_at": "2026-10-13T21:35:28.740447+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/alphametics/example.py",
+  "sample": "alphametics",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 46,
+        "executed_lines": [
+          1,
+          12,
+          15,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          29,
+          33,
+          34,
+          36,
+          37,
+          41,
+          46,
+          52,
+          64,
+          69,
+          72,
+          80,
+          81,
+          82,
+          85,
+          86,
+          87,
+          89,
+          92,
+          94,
+          96,
+          99,
+          100,
+          102,
+          106,
+          112,
+          116,
+          119,
+          126,
+          130,
+          133,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          152,
+          154,
+          155,
+          156,
+          161,
+          164,
+          165,
+          167,
+          170,
+          173,
+          175,
+          177
+        ],
+        "missing_lines": [
+          30,
+          74,
+          75,
+          79,
+          113,
+          157
+        ],
+        "missing_statements": 6,
+        "num_branches": 52,
+        "num_statements": 74,
+        "percent": 90.47619047619048
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "runtime",
+            "message": "IndexError: list index out of range",
+            "name": "test_generated::test_empty_input",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_invalid_format",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_single_word_equation",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_solution",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_leading_zero_forbidden",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "TypeError: 'NoneType' object is not subscriptable",
+            "name": "test_generated::test_all_leading_letters_nonzero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_letters_in_equation",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_zero_allowed_letters",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_solution_due_to_digit_constraints",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_digit_equation",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_carry_over_logic",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_max_rank_zero",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_identical_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_long_word_with_carry",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_no_unique_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_all_zero_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_mixed_leading_and_non_leading",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_duplicate_letters_in_same_rank",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_no_letters_in_word",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_negative_multiplier",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_equation_with_multiple_terms",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_solver_returns_first_solution",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 48,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          12,
+          15,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          29,
+          33,
+          34,
+          36,
+          37,
+          41,
+          46,
+          52,
+          64,
+          69,
+          72,
+          80,
+          81,
+          82,
+          85,
+          86,
+          87,
+          89,
+          92,
+          94,
+          96,
+          99,
+          100,
+          102,
+          106,
+          112,
+          116,
+          119,
+          126,
+          130,
+          133,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          152,
+          154,
+          155,
+          156,
+          161,
+          164,
+          165,
+          167,
+          170,
+          173,
+          175,
+          177
+        ],
+        "missing_lines": [
+          30,
+          74,
+          75,
+          79,
+          113,
+          157
+        ],
+        "missing_statements": 6,
+        "num_branches": null,
+        "num_statements": 74,
+        "percent": 91.89189189189189
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "failure_class": "runtime",
+            "message": "IndexError: list index out of range",
+            "name": "test_generated::test_empty_input",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "try_except",
+            "message": "Failed: DID NOT RAISE <class 'ValueError'>",
+            "name": "test_generated::test_invalid_format",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_single_word_equation",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_solution",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_leading_zero_forbidden",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "TypeError: 'NoneType' object is not subscriptable",
+            "name": "test_generated::test_all_leading_letters_nonzero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_letters_in_equation",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_zero_allowed_letters",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_no_solution_due_to_digit_constraints",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_single_digit_equation",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_carry_over_logic",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_max_rank_zero",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_identical_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_long_word_with_carry",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_no_unique_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_all_zero_digits",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_mixed_leading_and_non_leading",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_duplicate_letters_in_same_rank",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_no_letters_in_word",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_negative_multiplier",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_puzzle_with_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_equation_with_multiple_terms",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert None is not None",
+            "name": "test_generated::test_solver_returns_first_solution",
+            "outcome": "failed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 90.47619047619048,
+      "collected": 25,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 21,
+      "failure_classes": {
+        "assertion": 18,
+        "runtime": 2,
+        "try_except": 1
+      },
+      "passed": 4,
+      "skipped": 0,
+      "stmt_cov": 91.89189189189189,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

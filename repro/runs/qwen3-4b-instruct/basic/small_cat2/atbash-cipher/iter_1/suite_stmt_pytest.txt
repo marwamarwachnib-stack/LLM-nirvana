@@ -1,0 +1,267 @@
+$ coverage run  -m pytest test_generated.py
+returncode=1 timeout=False
+--- stdout ---
+.F.FFFFFF...FFFFF..FFFFFFFF..FF...                                       [100%]
+=================================== FAILURES ===================================
+________________________ test_encode_single_alphabetic _________________________
+
+    def test_encode_single_alphabetic():
+>       assert encode("a") == "a"
+E       AssertionError: assert 'z' == 'a'
+E         - a
+E         + z
+
+test_generated.py:24: AssertionError
+____________________________ test_encode_mixed_case ____________________________
+
+    def test_encode_mixed_case():
+>       assert encode("Hello World!") == "ello wold"
+E       AssertionError: assert 'svool dliow' == 'ello wold'
+E         - ello wold
+E         + svool dliow
+
+test_generated.py:32: AssertionError
+___________________ test_encode_with_punctuation_and_symbols ___________________
+
+    def test_encode_with_punctuation_and_symbols():
+>       assert encode("Hello, World! @2024") == "ello wold 2024"
+E       AssertionError: assert 'svool dliow 2024' == 'ello wold 2024'
+E         - ello wold 2024
+E         + svool dliow 2024
+
+test_generated.py:36: AssertionError
+_______________________ test_encode_with_multiple_spaces _______________________
+
+    def test_encode_with_multiple_spaces():
+>       assert encode("  a   b  c  ") == "a b c"
+E       AssertionError: assert 'zyx' == 'a b c'
+E         - a b c
+E         + zyx
+
+test_generated.py:40: AssertionError
+_____________________ test_encode_with_numbers_and_letters _____________________
+
+    def test_encode_with_numbers_and_letters():
+>       assert encode("abc123xyz") == "abc12 3xyz"
+E       AssertionError: assert 'zyx12 3cba' == 'abc12 3xyz'
+E         - abc12 3xyz
+E         + zyx12 3cba
+
+test_generated.py:44: AssertionError
+____________________________ test_encode_long_input ____________________________
+
+    def test_encode_long_input():
+        long_text = "The quick brown fox jumps over the lazy dog! 123456"
+        expected = "the qick brow fox jum over the lazy dog 12345"
+>       assert encode(long_text) == expected
+E       AssertionError: assert 'gsvjf rxpyi ...abwlt 12345 6' == 'the qick bro...azy dog 12345'
+E         - the qick brow fox jum over the lazy dog 12345
+E         + gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt 12345 6
+
+test_generated.py:50: AssertionError
+___________________________ test_encode_short_input ____________________________
+
+    def test_encode_short_input():
+>       assert encode("a") == "a"
+E       AssertionError: assert 'z' == 'a'
+E         - a
+E         + z
+
+test_generated.py:54: AssertionError
+___________________________ test_decode_single_block ___________________________
+
+    def test_decode_single_block():
+>       assert decode("ello") == "ello"
+E       AssertionError: assert 'vool' == 'ello'
+E         - ello
+E         + vool
+
+test_generated.py:70: AssertionError
+___________________________ test_decode_with_spaces ____________________________
+
+    def test_decode_with_spaces():
+        # After encoding, spaces are preserved in the block format
+        encoded = encode("a b c")
+>       assert decode(encoded) == "a b c"
+E       AssertionError: assert 'abc' == 'a b c'
+E         - a b c
+E         ?  - -
+E         + abc
+
+test_generated.py:102: AssertionError
+____________________ test_decode_mixed_case_after_encoding _____________________
+
+    def test_decode_mixed_case_after_encoding():
+        # After encoding, all are lowercase, so decode should return same
+>       assert decode("ello wold 2024") == "ello wold 2024"
+E       AssertionError: assert 'vooldlow2024' == 'ello wold 2024'
+E         - ello wold 2024
+E         + vooldlow2024
+
+test_generated.py:79: AssertionError
+_____________________ test_decode_with_block_size_handling _____________________
+
+    def test_decode_with_block_size_handling():
+        # Make sure decode works correctly even when blocks are split
+        encoded = encode("hello world")
+>       assert decode(encoded) == "hello world"
+E       AssertionError: assert 'helloworld' == 'hello world'
+E         - hello world
+E         ?      -
+E         + helloworld
+
+test_generated.py:85: AssertionError
+____________________________ test_decode_long_input ____________________________
+
+    def test_decode_long_input():
+        encoded = encode("The quick brown fox jumps over the lazy dog!")
+        decoded = decode(encoded)
+>       assert decoded == "the qick brow fox jum over the lazy dog"
+E       AssertionError: assert 'thequickbrow...verthelazydog' == 'the qick bro... the lazy dog'
+E         - the qick brow fox jum over the lazy dog
+E         ?    -    -    ^   -   ^    -   -    -
+E         + thequickbrownfoxjumpsoverthelazydog
+E         ?     +       ^      ^^
+
+test_generated.py:91: AssertionError
+________________________ test_encode_decode_round_trip _________________________
+
+    def test_encode_decode_round_trip():
+        # Test full cycle: encode → decode → should get original text (after transformation)
+        test_cases = [
+            "Hello World!",
+            "abc123",
+            "Test@2024",
+            "  a  b  c  ",
+            "12345",
+            "",
+            "A",
+            "aBc",
+            "The Quick Brown Fox",
+            "xyz!@#",
+        ]
+        for text in test_cases:
+            encoded = encode(text)
+            decoded = decode(encoded)
+            # After encoding and decoding, we expect the transformed version (lowercase, only alnums)
+            # But the original text is not preserved — it's transformed.
+            # So we test that the decoded output matches the base_trans of the original
+            expected = base_trans(text)
+>           assert decoded == expected
+E           AssertionError: assert 'helloworld' == 'svooldliow'
+E             - svooldliow
+E             + helloworld
+
+test_generated.py:131: AssertionError
+___________________________ test_block_size_is_fixed ___________________________
+
+    def test_block_size_is_fixed():
+        # Block size is always 5
+>       assert len(encode("a")["a":]) == 5  # Actually, just verify it's split properly
+E       TypeError: slice indices must be integers or None or have an __index__ method
+
+test_generated.py:136: TypeError
+__________________________ test_block_size_5_exactly ___________________________
+
+    def test_block_size_5_exactly():
+>       assert encode("abcde") == "abcde"
+E       AssertionError: assert 'zyxwv' == 'abcde'
+E         - abcde
+E         + zyxwv
+
+test_generated.py:142: AssertionError
+_______________________ test_block_size_5_with_remainder _______________________
+
+    def test_block_size_5_with_remainder():
+>       assert encode("abcde f") == "abcde f"
+E       AssertionError: assert 'zyxwv u' == 'abcde f'
+E         - abcde f
+E         + zyxwv u
+
+test_generated.py:146: AssertionError
+_________________ test_block_size_with_last_block_less_than_5 __________________
+
+    def test_block_size_with_last_block_less_than_5():
+>       assert encode("abc") == "abc"
+E       AssertionError: assert 'zyx' == 'abc'
+E         - abc
+E         + zyx
+
+test_generated.py:150: AssertionError
+_______________________ test_decode_with_multiple_spaces _______________________
+
+    def test_decode_with_multiple_spaces():
+        encoded = encode("a b c")
+>       assert decode(encoded) == "a b c"
+E       AssertionError: assert 'abc' == 'a b c'
+E         - a b c
+E         ?  - -
+E         + abc
+
+test_generated.py:155: AssertionError
+___________________ test_encode_preserves_alphanumeric_order ___________________
+
+    def test_encode_preserves_alphanumeric_order():
+        # After transformation, order of alphanumeric chars is preserved
+>       assert encode("A1b2C3") == "a1b2c3"
+E       AssertionError: assert 'z1y2x 3' == 'a1b2c3'
+E         - a1b2c3
+E         + z1y2x 3
+
+test_generated.py:160: AssertionError
+__________________ test_decode_returns_only_transformed_chars __________________
+
+    def test_decode_returns_only_transformed_chars():
+        # Only alphanumerics are preserved in base_trans
+>       assert decode("hello world") == "ello wold"
+E       AssertionError: assert 'svooldliow' == 'ello wold'
+E         - ello wold
+E         + svooldliow
+
+test_generated.py:165: AssertionError
+______________________ test_edge_case_with_only_uppercase ______________________
+
+    def test_edge_case_with_only_uppercase():
+>       assert encode("HELLO") == "ello"
+E       AssertionError: assert 'svool' == 'ello'
+E         - ello
+E         + svool
+
+test_generated.py:177: AssertionError
+___________________ test_edge_case_with_unicode_alphanumeric ___________________
+
+    def test_edge_case_with_unicode_alphanumeric():
+        # This assumes the input only contains ASCII
+        # If we were to extend, we'd need to handle Unicode, but not in scope
+>       assert encode("αβγ") == ""  # non-alphanumeric, so filtered out
+E       AssertionError: assert 'αβγ' == ''
+E         + αβγ
+
+test_generated.py:183: AssertionError
+- generated xml file: /opt/repro/work/phase_c/qwen3-4b-instruct/basic/small_cat2/atbash-cipher/iter_1/suite/suite_stmt_junit.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_encode_single_alphabetic - AssertionError: ass...
+FAILED test_generated.py::test_encode_mixed_case - AssertionError: assert 'sv...
+FAILED test_generated.py::test_encode_with_punctuation_and_symbols - Assertio...
+FAILED test_generated.py::test_encode_with_multiple_spaces - AssertionError: ...
+FAILED test_generated.py::test_encode_with_numbers_and_letters - AssertionErr...
+FAILED test_generated.py::test_encode_long_input - AssertionError: assert 'gs...
+FAILED test_generated.py::test_encode_short_input - AssertionError: assert 'z...
+FAILED test_generated.py::test_decode_single_block - AssertionError: assert '...
+FAILED test_generated.py::test_decode_with_spaces - AssertionError: assert 'a...
+FAILED test_generated.py::test_decode_mixed_case_after_encoding - AssertionEr...
+FAILED test_generated.py::test_decode_with_block_size_handling - AssertionErr...
+FAILED test_generated.py::test_decode_long_input - AssertionError: assert 'th...
+FAILED test_generated.py::test_encode_decode_round_trip - AssertionError: ass...
+FAILED test_generated.py::test_block_size_is_fixed - TypeError: slice indices...
+FAILED test_generated.py::test_block_size_5_exactly - AssertionError: assert ...
+FAILED test_generated.py::test_block_size_5_with_remainder - AssertionError: ...
+FAILED test_generated.py::test_block_size_with_last_block_less_than_5 - Asser...
+FAILED test_generated.py::test_decode_with_multiple_spaces - AssertionError: ...
+FAILED test_generated.py::test_encode_preserves_alphanumeric_order - Assertio...
+FAILED test_generated.py::test_decode_returns_only_transformed_chars - Assert...
+FAILED test_generated.py::test_edge_case_with_only_uppercase - AssertionError...
+FAILED test_generated.py::test_edge_case_with_unicode_alphanumeric - Assertio...
+22 failed, 12 passed in 0.20s
+
+--- stderr ---

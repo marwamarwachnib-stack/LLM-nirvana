@@ -1,0 +1,478 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [],
+    "lines_dropped_to_parse": 0,
+    "redefinitions_removed": [
+      "BLOCK_SIZE",
+      "trtbl",
+      "base_trans",
+      "encode",
+      "decode"
+    ],
+    "star_import_added": true
+  },
+  "finished_at": "2026-10-13T21:40:35.198280+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/atbash-cipher/example.py",
+  "sample": "atbash-cipher",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 4,
+        "executed_lines": [
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13,
+          14,
+          18,
+          19
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 4,
+        "num_statements": 10,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_encode_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z' == 'a'\n  - a\n  + z",
+            "name": "test_generated::test_encode_single_alphabetic",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_single_digit",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool dliow' == 'ello wold'\n  - ello wold\n  + svool dliow",
+            "name": "test_generated::test_encode_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool dliow 2024' == 'ello wold 2024'\n  - ello wold 2024\n  + svool dliow 2024",
+            "name": "test_generated::test_encode_with_punctuation_and_symbols",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx' == 'a b c'\n  - a b c\n  + zyx",
+            "name": "test_generated::test_encode_with_multiple_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx12 3cba' == 'abc12 3xyz'\n  - abc12 3xyz\n  + zyx12 3cba",
+            "name": "test_generated::test_encode_with_numbers_and_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'gsvjf rxpyi ...abwlt 12345 6' == 'the qick bro...azy dog 12345'\n  - the qick brow fox jum over the lazy dog 12345\n  + gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt 12345 6",
+            "name": "test_generated::test_encode_long_input",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z' == 'a'\n  - a\n  + z",
+            "name": "test_generated::test_encode_short_input",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_all_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_only_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_empty_cipher",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'vool' == 'ello'\n  - ello\n  + vool",
+            "name": "test_generated::test_decode_single_block",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'abc' == 'a b c'\n  - a b c\n  ?  - -\n  + abc",
+            "name": "test_generated::test_decode_with_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'vooldlow2024' == 'ello wold 2024'\n  - ello wold 2024\n  + vooldlow2024",
+            "name": "test_generated::test_decode_mixed_case_after_encoding",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'hello world'\n  - hello world\n  ?      -\n  + helloworld",
+            "name": "test_generated::test_decode_with_block_size_handling",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'thequickbrow...verthelazydog' == 'the qick bro... the lazy dog'\n  - the qick brow fox jum over the lazy dog\n  ?    -    -    ^   -   ^    -   -    -\n  + thequickbrownfoxjumpsoverthelazydog\n  ?     +       ^      ^^",
+            "name": "test_generated::test_decode_long_input",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_all_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'svooldliow'\n  - svooldliow\n  + helloworld",
+            "name": "test_generated::test_encode_decode_round_trip",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "TypeError: slice indices must be integers or None or have an __index__ method",
+            "name": "test_generated::test_block_size_is_fixed",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyxwv' == 'abcde'\n  - abcde\n  + zyxwv",
+            "name": "test_generated::test_block_size_5_exactly",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyxwv u' == 'abcde f'\n  - abcde f\n  + zyxwv u",
+            "name": "test_generated::test_block_size_5_with_remainder",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx' == 'abc'\n  - abc\n  + zyx",
+            "name": "test_generated::test_block_size_with_last_block_less_than_5",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'abc' == 'a b c'\n  - a b c\n  ?  - -\n  + abc",
+            "name": "test_generated::test_decode_with_multiple_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z1y2x 3' == 'a1b2c3'\n  - a1b2c3\n  + z1y2x 3",
+            "name": "test_generated::test_encode_preserves_alphanumeric_order",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svooldliow' == 'ello wold'\n  - ello wold\n  + svooldliow",
+            "name": "test_generated::test_decode_returns_only_transformed_chars",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_no_alphanumerics",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_edge_case_with_only_digits",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool' == 'ello'\n  - ello\n  + svool",
+            "name": "test_generated::test_edge_case_with_only_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '\u03b1\u03b2\u03b3' == ''\n  + \u03b1\u03b2\u03b3",
+            "name": "test_generated::test_edge_case_with_unicode_alphanumeric",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_control_characters",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_empty_string",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 36,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13,
+          14,
+          18,
+          19
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 10,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_encode_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z' == 'a'\n  - a\n  + z",
+            "name": "test_generated::test_encode_single_alphabetic",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_single_digit",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool dliow' == 'ello wold'\n  - ello wold\n  + svool dliow",
+            "name": "test_generated::test_encode_mixed_case",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool dliow 2024' == 'ello wold 2024'\n  - ello wold 2024\n  + svool dliow 2024",
+            "name": "test_generated::test_encode_with_punctuation_and_symbols",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx' == 'a b c'\n  - a b c\n  + zyx",
+            "name": "test_generated::test_encode_with_multiple_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx12 3cba' == 'abc12 3xyz'\n  - abc12 3xyz\n  + zyx12 3cba",
+            "name": "test_generated::test_encode_with_numbers_and_letters",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'gsvjf rxpyi ...abwlt 12345 6' == 'the qick bro...azy dog 12345'\n  - the qick brow fox jum over the lazy dog 12345\n  + gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt 12345 6",
+            "name": "test_generated::test_encode_long_input",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z' == 'a'\n  - a\n  + z",
+            "name": "test_generated::test_encode_short_input",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_encode_with_all_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_only_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_empty_cipher",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'vool' == 'ello'\n  - ello\n  + vool",
+            "name": "test_generated::test_decode_single_block",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'abc' == 'a b c'\n  - a b c\n  ?  - -\n  + abc",
+            "name": "test_generated::test_decode_with_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'vooldlow2024' == 'ello wold 2024'\n  - ello wold 2024\n  + vooldlow2024",
+            "name": "test_generated::test_decode_mixed_case_after_encoding",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'hello world'\n  - hello world\n  ?      -\n  + helloworld",
+            "name": "test_generated::test_decode_with_block_size_handling",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'thequickbrow...verthelazydog' == 'the qick bro... the lazy dog'\n  - the qick brow fox jum over the lazy dog\n  ?    -    -    ^   -   ^    -   -    -\n  + thequickbrownfoxjumpsoverthelazydog\n  ?     +       ^      ^^",
+            "name": "test_generated::test_decode_long_input",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_numbers",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_all_non_alphanumeric",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'helloworld' == 'svooldliow'\n  - svooldliow\n  + helloworld",
+            "name": "test_generated::test_encode_decode_round_trip",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "runtime",
+            "message": "TypeError: slice indices must be integers or None or have an __index__ method",
+            "name": "test_generated::test_block_size_is_fixed",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyxwv' == 'abcde'\n  - abcde\n  + zyxwv",
+            "name": "test_generated::test_block_size_5_exactly",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyxwv u' == 'abcde f'\n  - abcde f\n  + zyxwv u",
+            "name": "test_generated::test_block_size_5_with_remainder",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'zyx' == 'abc'\n  - abc\n  + zyx",
+            "name": "test_generated::test_block_size_with_last_block_less_than_5",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'abc' == 'a b c'\n  - a b c\n  ?  - -\n  + abc",
+            "name": "test_generated::test_decode_with_multiple_spaces",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'z1y2x 3' == 'a1b2c3'\n  - a1b2c3\n  + z1y2x 3",
+            "name": "test_generated::test_encode_preserves_alphanumeric_order",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svooldliow' == 'ello wold'\n  - ello wold\n  + svooldliow",
+            "name": "test_generated::test_decode_returns_only_transformed_chars",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_decode_with_no_alphanumerics",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_edge_case_with_only_digits",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'svool' == 'ello'\n  - ello\n  + svool",
+            "name": "test_generated::test_edge_case_with_only_uppercase",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '\u03b1\u03b2\u03b3' == ''\n  + \u03b1\u03b2\u03b3",
+            "name": "test_generated::test_edge_case_with_unicode_alphanumeric",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_input_with_control_characters",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_encode_with_empty_string",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_decode_with_empty_string",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 34,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 22,
+      "failure_classes": {
+        "assertion": 21,
+        "runtime": 1,
+        "try_except": 0
+      },
+      "passed": 12,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  },
+  "unrepaired": {
+    "branch_cov": 42.857142857142854,
+    "collected": 34,
+    "collection_error": false,
+    "errors": 0,
+    "failed": 22,
+    "failure_classes": {
+      "assertion": 21,
+      "runtime": 1,
+      "try_except": 0
+    },
+    "passed": 12,
+    "skipped": 0,
+    "stmt_cov": 60.0,
+    "xfailed": 0
+  }
+}

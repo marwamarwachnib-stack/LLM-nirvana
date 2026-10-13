@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "def recite(start, take=1):\n    results = []\n    for idx in range(start, start - take, -1):\n        results.extend(verse(idx))\n        if idx > start - take + 1:\n            results.append('')\n    return results\n\n\ndef verse(number):\n    return [\n        f'{_bottles(number).capitalize()} of beer on the wall, {_bottles(number)} of beer.',\n        f'{_action(number)}{_next_bottle(number)}'\n    ]\n\n\ndef _action(current_verse):\n    if current_verse == 0:\n        return 'Go to the store and buy some more, '\n    else:\n        return f'Take {\"one\" if current_verse > 1 else \"it\"} down and pass it around, '\n\n\ndef _next_bottle(current_verse):\n    return f'{_bottles(_next_verse(current_verse))} of beer on the wall.'\n\n\ndef _bottles(number):\n    if number == 0:\n        return 'no more bottles'\n    if number == 1:\n        return '1 bottle'\n    else:\n        return f'{number} bottles'\n\n\ndef _next_verse(current_verse):\n    return current_verse - 1 if current_verse > 0 else 99\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "from string import ascii_lowercase\n\n\nBLOCK_SIZE = 5\ntrtbl = str.maketrans(ascii_lowercase, ascii_lowercase[::-1])\n\n\ndef base_trans(text):\n    return ''.join([character for character in text if character.isalnum()]).lower().translate(trtbl)\n\n\ndef encode(plain):\n    cipher = base_trans(plain)\n    return ' '.join(cipher[idx:idx + BLOCK_SIZE]\n                     for idx in range(0, len(cipher), BLOCK_SIZE))\n\n\ndef decode(ciphered):\n    return base_trans(ciphered)\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

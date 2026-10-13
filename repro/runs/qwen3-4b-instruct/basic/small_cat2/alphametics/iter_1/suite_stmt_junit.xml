@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="21" skipped="0" tests="25" time="0.257" timestamp="2026-10-13T21:35:27.423477" hostname="vm"><testcase classname="test_generated" name="test_empty_input" time="0.001"><failure message="IndexError: list index out of range">def test_empty_input():
+        """Test with empty string."""
+        with pytest.raises(ValueError) as excinfo:
+&gt;           solve("")
+
+test_generated.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+example.py:133: in solve
+    nzchars = {warhol[-1] for sigmund in full_exp for warhol in sigmund}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7fc55cccd540&gt;
+
+&gt;   nzchars = {warhol[-1] for sigmund in full_exp for warhol in sigmund}
+E   IndexError: list index out of range
+
+example.py:133: IndexError</failure></testcase><testcase classname="test_generated" name="test_invalid_format" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_invalid_format():
+        """Test with invalid format like 'A+B=C' but not properly split."""
+&gt;       with pytest.raises(ValueError) as excinfo:
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:15: Failed</failure></testcase><testcase classname="test_generated" name="test_single_word_equation" time="0.001"><failure message="assert None is not None">def test_single_word_equation():
+        """Test a simple equation: A + B = C."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:22: AssertionError</failure></testcase><testcase classname="test_generated" name="test_no_solution" time="0.001" /><testcase classname="test_generated" name="test_leading_zero_forbidden" time="0.006"><failure message="assert None is not None">def test_leading_zero_forbidden():
+        """Test that leading letters cannot be zero."""
+        result = solve("SEND + MORE = MONEY")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:37: AssertionError</failure></testcase><testcase classname="test_generated" name="test_all_leading_letters_nonzero" time="0.001"><failure message="TypeError: 'NoneType' object is not subscriptable">def test_all_leading_letters_nonzero():
+        """All letters are leading → all must be non-zero."""
+        result = solve("A + B = C")
+&gt;       assert result['A'] != 0
+E       TypeError: 'NoneType' object is not subscriptable
+
+test_generated.py:45: TypeError</failure></testcase><testcase classname="test_generated" name="test_no_letters_in_equation" time="0.001" /><testcase classname="test_generated" name="test_zero_allowed_letters" time="0.001"><failure message="assert None is not None">def test_zero_allowed_letters():
+        """Test a case where a non-leading letter can be zero."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:57: AssertionError</failure></testcase><testcase classname="test_generated" name="test_no_solution_due_to_digit_constraints" time="0.001" /><testcase classname="test_generated" name="test_single_digit_equation" time="0.000" /><testcase classname="test_generated" name="test_carry_over_logic" time="0.001"><failure message="assert None is not None">def test_carry_over_logic():
+        """Test that carry-over is correctly computed and propagated."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:75: AssertionError</failure></testcase><testcase classname="test_generated" name="test_max_rank_zero" time="0.001"><failure message="assert None is not None">def test_max_rank_zero():
+        """Test when all words are of length 1 → max digit rank is 0."""
+        result = solve("A = B")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:85: AssertionError</failure></testcase><testcase classname="test_generated" name="test_identical_letters" time="0.001"><failure message="assert None is not None">def test_identical_letters():
+        """Test equation with repeated letters (e.g., A + A = B)"""
+        result = solve("A + A = B")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:90: AssertionError</failure></testcase><testcase classname="test_generated" name="test_long_word_with_carry" time="0.001"><failure message="assert None is not None">def test_long_word_with_carry():
+        """Test with carry propagation across digits (e.g., A + B = C, but with 2-digit carry)."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:97: AssertionError</failure></testcase><testcase classname="test_generated" name="test_no_unique_letters" time="0.001"><failure message="assert None is not None">def test_no_unique_letters():
+        """Test with only one letter in all terms."""
+        result = solve("A + B = A")
+        assert result is None  # leads to B = 0, but A = A → A + B = A → B = 0, but A is leading → A ≠ 0 → possible?
+    
+        # Let's analyze: A + 0 = A → valid if A ≠ 0 → so solution should exist
+        # But only if B can be zero (not leading)
+        # So if B is not leading, zero is allowed → should return valid solution
+        result = solve("A + B = A")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:109: AssertionError</failure></testcase><testcase classname="test_generated" name="test_all_zero_digits" time="0.001"><failure message="assert None is not None">def test_all_zero_digits():
+        """Test that solver avoids assigning 0 to all letters when needed."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:116: AssertionError</failure></testcase><testcase classname="test_generated" name="test_mixed_leading_and_non_leading" time="0.006"><failure message="assert None is not None">def test_mixed_leading_and_non_leading():
+        """Test where some letters are leading (cannot be zero), others are not."""
+        result = solve("SEND + MORE = MONEY")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:125: AssertionError</failure></testcase><testcase classname="test_generated" name="test_duplicate_letters_in_same_rank" time="0.001"><failure message="assert None is not None">def test_duplicate_letters_in_same_rank():
+        """Test that same letter appears multiple times in same digit rank."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:138: AssertionError</failure></testcase><testcase classname="test_generated" name="test_no_letters_in_word" time="0.001"><failure message="assert None is not None">def test_no_letters_in_word():
+        """Test with empty words (should be ignored)."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:143: AssertionError</failure></testcase><testcase classname="test_generated" name="test_negative_multiplier" time="0.001"><failure message="assert None is not None">def test_negative_multiplier():
+        """Test with negative multiplier (right side of equation)."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:148: AssertionError</failure></testcase><testcase classname="test_generated" name="test_puzzle_with_spaces" time="0.002"><failure message="assert None is not None">def test_puzzle_with_spaces():
+        """Test with extra spaces."""
+        result = solve("  A + B = C  ")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:153: AssertionError</failure></testcase><testcase classname="test_generated" name="test_puzzle_with_uppercase" time="0.001"><failure message="assert None is not None">def test_puzzle_with_uppercase():
+        """Test that uppercase conversion works."""
+        result = solve("a + b = c")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:158: AssertionError</failure></testcase><testcase classname="test_generated" name="test_puzzle_with_mixed_case" time="0.001"><failure message="assert None is not None">def test_puzzle_with_mixed_case():
+        """Test case-insensitive parsing."""
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:163: AssertionError</failure></testcase><testcase classname="test_generated" name="test_equation_with_multiple_terms" time="0.016"><failure message="assert None is not None">def test_equation_with_multiple_terms():
+        """Test with multiple terms on each side."""
+        result = solve("A + B + C = D + E")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:168: AssertionError</failure></testcase><testcase classname="test_generated" name="test_solver_returns_first_solution" time="0.002"><failure message="assert None is not None">def test_solver_returns_first_solution():
+        """Test that solver returns first valid solution (not all permutations)."""
+        # This is a complex one: we expect only one solution per puzzle
+        # So we can check that if multiple solutions exist, we get the first
+        # But since we are not generating all, we assume solver returns one
+        result = solve("A + B = C")
+&gt;       assert result is not None
+E       assert None is not None
+
+test_generated.py:177: AssertionError</failure></testcase></testsuite></testsuites>

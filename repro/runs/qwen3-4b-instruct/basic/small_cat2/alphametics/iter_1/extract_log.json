@@ -1,0 +1,10 @@
+{
+  "empty": false,
+  "fenced_blocks_used": 1,
+  "imports_redirected": [
+    "solve -> example"
+  ],
+  "lines_dropped_to_parse": 3,
+  "redefinitions_removed": [],
+  "star_import_added": false
+}
