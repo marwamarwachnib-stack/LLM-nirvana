@@ -37,6 +37,10 @@ def main(model: str) -> None:
       "**RECOMPUTED** = derived here from saved artifacts; **NEW** = new experiment with a local LLM; "
       "**PARTIAL** = not all planned samples have finished; **NOT REPRODUCIBLE** = data missing from the repository.\n")
 
+    status = REPRO / "STATUS.md"   # hand-written, dated audit; kept verbatim at the top
+    if status.exists():
+        w(status.read_text())
+
     # ---------------- Phase A ----------------
     w("## 1. Paper results recomputed from the repository's saved artifacts (Phase A, no execution)\n")
     p2 = A.get("p2", {})
