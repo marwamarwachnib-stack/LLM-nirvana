@@ -1,0 +1,150 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m02",
+   "operator": "UOD",
+   "original": "not self.db.get(name, 0)",
+   "replacement": "(self.db.get(name, 0))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 18,
+   "line": 18,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "True",
+   "replacement": "False"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 20,
+   "line": 20,
+   "mutant_id": "m04",
+   "operator": "CRP",
+   "original": "False",
+   "replacement": "True"
+  }
+ ],
+ "n_candidates": 4,
+ "n_sampled": 4,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 20,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 20,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 20,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    20,
+    23,
+    24,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36
+   ],
+   "test_sha256": "72827c03772b6cf4256fd2f378ae6ddff2703ccacb6053ba647e973b415e27b9",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 5,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    20,
+    23,
+    24,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36
+   ],
+   "test_sha256": "155f248289afa90c74c4ca4dd6f451b0bdf68ba88283084966370b430034b3af",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "grade-school",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

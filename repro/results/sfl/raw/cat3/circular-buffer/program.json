@@ -1,0 +1,242 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 25,
+   "line": 25,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 26,
+   "line": 26,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 42,
+   "line": 42,
+   "mutant_id": "m03",
+   "operator": "AOR",
+   "original": "(self.write_point + 1) % len(self.buffer)",
+   "replacement": "((self.write_point + 1) // len(self.buffer))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 42,
+   "line": 42,
+   "mutant_id": "m04",
+   "operator": "AOR",
+   "original": "self.write_point + 1",
+   "replacement": "(self.write_point - 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 42,
+   "line": 42,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 46,
+   "line": 46,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "self.write_point == self.read_point",
+   "replacement": "(self.write_point != self.read_point)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 47,
+   "line": 47,
+   "mutant_id": "m07",
+   "operator": "AOR",
+   "original": "self.read_point + 1",
+   "replacement": "(self.read_point - 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 48,
+   "line": 48,
+   "mutant_id": "m08",
+   "operator": "AOR",
+   "original": "self.write_point + 1",
+   "replacement": "(self.write_point - 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 48,
+   "line": 48,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 55,
+   "line": 55,
+   "mutant_id": "m10",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  }
+ ],
+ "n_candidates": 18,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 14,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    7,
+    8,
+    11,
+    12,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "test_sha256": "12c42720071f96b5b340c36c35f4ffce46c8745519feca56f92f2dd9afd38aef",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 12,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 12,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 12,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    7,
+    8,
+    11,
+    12,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "test_sha256": "a9742037196ed54e877cba2d4aa39c6d10d9429d7896b4eadc1d90e86ddd3aef",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "circular-buffer",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

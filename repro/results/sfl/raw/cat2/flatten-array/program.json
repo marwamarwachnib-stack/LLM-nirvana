@@ -1,0 +1,141 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "False",
+   "replacement": "True"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "True",
+   "replacement": "False"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m03",
+   "operator": "LCR",
+   "original": "is_iterable(item) and not isinstance(item, (str, bytes))",
+   "replacement": "(is_iterable(item) or not isinstance(item, (str, bytes)))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m04",
+   "operator": "UOD",
+   "original": "not isinstance(item, (str, bytes))",
+   "replacement": "(isinstance(item, (str, bytes)))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m05",
+   "operator": "ROR",
+   "original": "item is not None",
+   "replacement": "(item is None)"
+  }
+ ],
+ "n_candidates": 5,
+ "n_sampled": 5,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 11,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 11,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 11,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "test_sha256": "567f541546bf19db7e06e93dd7b2a3d2f683efab22d01b05eb42024c85660240",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 5,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "test_sha256": "1e32721742fa3d562a112ab80085af8febb825266d55138cb22cbfec37157a0c",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "flatten-array",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

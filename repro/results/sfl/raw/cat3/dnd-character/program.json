@@ -1,0 +1,200 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 13,
+   "line": 13,
+   "mutant_id": "m01",
+   "operator": "AOR",
+   "original": "10 + modifier(self.constitution)",
+   "replacement": "(10 - modifier(self.constitution))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 13,
+   "line": 13,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "10",
+   "replacement": "11"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m04",
+   "operator": "CRP",
+   "original": "4",
+   "replacement": "5"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "6",
+   "replacement": "7"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 17,
+   "line": 17,
+   "mutant_id": "m06",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m07",
+   "operator": "AOR",
+   "original": "(value-10)/2",
+   "replacement": "((value - 10) * 2)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m08",
+   "operator": "AOR",
+   "original": "value-10",
+   "replacement": "(value + 10)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "10",
+   "replacement": "11"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m10",
+   "operator": "CRP",
+   "original": "2",
+   "replacement": "3"
+  }
+ ],
+ "n_candidates": 10,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 19,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 19,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 19,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    20,
+    21
+   ],
+   "test_sha256": "9324ef8299061bf1d1e228ac325bd17efc824174fdd04c2a7d623735a6cd9f3a",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 2,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 2,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 2,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    20,
+    21
+   ],
+   "test_sha256": "e701dc77a204d52544c312e49cad27a3fb271149e9a886351d8c98414437a082",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "dnd-character",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

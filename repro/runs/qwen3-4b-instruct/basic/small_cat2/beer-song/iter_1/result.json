@@ -1,0 +1,380 @@
+{
+  "category": "cat2",
+  "dataset": "small_cat2",
+  "extract_log": {
+    "empty": false,
+    "fenced_blocks_used": 1,
+    "imports_redirected": [
+      "bottle_song -> example"
+    ],
+    "lines_dropped_to_parse": 0,
+    "redefinitions_removed": [],
+    "star_import_added": false
+  },
+  "finished_at": "2026-10-13T22:08:48.925696+00:00",
+  "iteration": 1,
+  "module_source": "0_100 LOC/cat2_functions/beer-song/example.py",
+  "sample": "beer-song",
+  "stop": true,
+  "suite": {
+    "branch": {
+      "coverage": {
+        "covered_branches": 10,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          17,
+          18,
+          19,
+          21,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          34,
+          37,
+          38
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": 10,
+        "num_statements": 23,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_recite_valid_range",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_single_verse",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_last_verse",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_zero_bottles",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_from_one_to_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_zero_start",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_zero_start_take_multiple",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['-1 bottles ...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: '-1 bottles of beer on the wall, -1 bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_negative_start",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_recite_take_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['3 bottles o...ll.', '', ...] == ['3 bottles o...ll.', '', ...]\n  At index 9 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Left contains 3 more items, first extra item: ''\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_take_large",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_verse_one_bottle",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_verse_two_bottles",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_verse_zero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_action_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'Take it down...s it around, ' == 'Take one dow...s it around, '\n  - Take one down and pass it around, \n  ?      ^^^\n  + Take it down and pass it around, \n  ?      ^^",
+            "name": "test_generated::test_action_one",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_action_multiple",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_two",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_two",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 99 == 98\n +  where 99 = _next_verse(-1)",
+            "name": "test_generated::test_next_verse_negative",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_bottles_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_bottles_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_bottles_two",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '-1 bottles' == 'no more bottles'\n  - no more bottles\n  + -1 bottles",
+            "name": "test_generated::test_bottles_negative",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_bottles_99",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "num_asserts": 28,
+    "stmt": {
+      "coverage": {
+        "covered_branches": null,
+        "executed_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          17,
+          18,
+          19,
+          21,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          34,
+          37,
+          38
+        ],
+        "missing_lines": [],
+        "missing_statements": 0,
+        "num_branches": null,
+        "num_statements": 23,
+        "percent": 100.0
+      },
+      "junit": {
+        "collection_error": false,
+        "tests": [
+          {
+            "name": "test_generated::test_recite_valid_range",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_single_verse",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_last_verse",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_zero_bottles",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_recite_from_one_to_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_zero_start",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_zero_start_take_multiple",
+            "outcome": "failed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['-1 bottles ...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: '-1 bottles of beer on the wall, -1 bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_negative_start",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_recite_take_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['3 bottles o...ll.', '', ...] == ['3 bottles o...ll.', '', ...]\n  At index 9 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Left contains 3 more items, first extra item: ''\n  Use -v to get more diff",
+            "name": "test_generated::test_recite_take_large",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_verse_one_bottle",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_verse_two_bottles",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']\n  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'\n  Use -v to get more diff",
+            "name": "test_generated::test_verse_zero",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_action_zero",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert 'Take it down...s it around, ' == 'Take one dow...s it around, '\n  - Take one down and pass it around, \n  ?      ^^^\n  + Take it down and pass it around, \n  ?      ^^",
+            "name": "test_generated::test_action_one",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_action_multiple",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_two",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_bottle_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_next_verse_two",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "assert 99 == 98\n +  where 99 = _next_verse(-1)",
+            "name": "test_generated::test_next_verse_negative",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_bottles_zero",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_bottles_one",
+            "outcome": "passed"
+          },
+          {
+            "name": "test_generated::test_bottles_two",
+            "outcome": "passed"
+          },
+          {
+            "failure_class": "assertion",
+            "message": "AssertionError: assert '-1 bottles' == 'no more bottles'\n  - no more bottles\n  + -1 bottles",
+            "name": "test_generated::test_bottles_negative",
+            "outcome": "failed"
+          },
+          {
+            "name": "test_generated::test_bottles_99",
+            "outcome": "passed"
+          }
+        ]
+      },
+      "returncode": 1,
+      "timeout": false
+    },
+    "summary": {
+      "branch_cov": 100.0,
+      "collected": 28,
+      "collection_error": false,
+      "errors": 0,
+      "failed": 8,
+      "failure_classes": {
+        "assertion": 8,
+        "runtime": 0,
+        "try_except": 0
+      },
+      "passed": 20,
+      "skipped": 0,
+      "stmt_cov": 100.0,
+      "xfailed": 0
+    },
+    "target": "example.py",
+    "test_file": "test_generated.py"
+  }
+}

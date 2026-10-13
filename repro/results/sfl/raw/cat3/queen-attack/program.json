@@ -1,0 +1,208 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 3,
+   "line": 3,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 3,
+   "line": 3,
+   "mutant_id": "m02",
+   "operator": "ROR",
+   "original": "row < 0",
+   "replacement": "(row <= 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "7",
+   "replacement": "8"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m04",
+   "operator": "UOD",
+   "original": "not 0 <= row <= 7",
+   "replacement": "(0 <= row <= 7)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "column < 0",
+   "replacement": "(column <= 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 9,
+   "line": 9,
+   "mutant_id": "m07",
+   "operator": "UOD",
+   "original": "not 0 <= column <= 7",
+   "replacement": "(0 <= column <= 7)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 19,
+   "line": 19,
+   "mutant_id": "m08",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 19,
+   "line": 19,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 19,
+   "line": 19,
+   "mutant_id": "m10",
+   "operator": "ROR",
+   "original": "edx == 0",
+   "replacement": "(edx != 0)"
+  }
+ ],
+ "n_candidates": 21,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 14,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22
+   ],
+   "test_sha256": "bbcf07f327b0542b23911a8fe3d2d9553b6d74034b281ca2391245ffedc4a5a8",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 9,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 9,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 9,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22
+   ],
+   "test_sha256": "7330bdb04ecce7d27c7b788fe0f09412ff5d4c1bb886b8273c36cc4ade9a391b",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "queen-attack",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

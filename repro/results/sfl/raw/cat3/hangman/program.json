@@ -1,0 +1,244 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 8,
+   "line": 8,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "9",
+   "replacement": "10"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 17,
+   "line": 17,
+   "mutant_id": "m02",
+   "operator": "ROR",
+   "original": "self.status != STATUS_ONGOING",
+   "replacement": "(self.status == STATUS_ONGOING)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 27,
+   "line": 27,
+   "mutant_id": "m03",
+   "operator": "ROR",
+   "original": "idx not in self.guesses",
+   "replacement": "(idx in self.guesses)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 33,
+   "line": 33,
+   "mutant_id": "m04",
+   "operator": "LCR",
+   "original": "char not in self.word or char in self.guesses",
+   "replacement": "(char not in self.word and char in self.guesses)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 33,
+   "line": 33,
+   "mutant_id": "m05",
+   "operator": "ROR",
+   "original": "char not in self.word",
+   "replacement": "(char in self.word)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 33,
+   "line": 33,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "char in self.guesses",
+   "replacement": "(char not in self.guesses)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 34,
+   "line": 34,
+   "mutant_id": "m07",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 39,
+   "line": 39,
+   "mutant_id": "m08",
+   "operator": "ROR",
+   "original": "self.masked_word == self.word",
+   "replacement": "(self.masked_word != self.word)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 41,
+   "line": 41,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 41,
+   "line": 41,
+   "mutant_id": "m10",
+   "operator": "ROR",
+   "original": "self.remaining_guesses < 0",
+   "replacement": "(self.remaining_guesses <= 0)"
+  }
+ ],
+ "n_candidates": 10,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 7,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 7,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 7,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    46,
+    47,
+    49,
+    50
+   ],
+   "test_sha256": "0eece50307284a914eca79d25ea623d023029f1b173bfbc60293578d3570a11a",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 8,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    46,
+    47,
+    49,
+    50
+   ],
+   "test_sha256": "62e88a6991c38c410346a51c8e20e55d3e037d1516a5133750211dee65f6f7f8",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "hangman",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

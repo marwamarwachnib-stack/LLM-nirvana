@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="28" time="0.138" timestamp="2026-10-13T22:08:47.904471" hostname="vm"><testcase classname="test_generated" name="test_recite_valid_range" time="0.001" /><testcase classname="test_generated" name="test_recite_single_verse" time="0.001" /><testcase classname="test_generated" name="test_recite_last_verse" time="0.000" /><testcase classname="test_generated" name="test_recite_zero_bottles" time="0.000" /><testcase classname="test_generated" name="test_recite_from_one_to_zero" time="0.000" /><testcase classname="test_generated" name="test_recite_zero_start" time="0.001"><failure message="AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']&#10;  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'&#10;  Use -v to get more diff">def test_recite_zero_start():
+        """Test start = 0 — should go to 99 (due to _next_verse)"""
+        result = recite(0, 1)
+        expected = [
+            "no more bottles of beer on the wall, no more bottles of beer.",
+            "Go to the store and buy some more, 99 bottles of beer on the wall."
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']
+E         At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'
+E         Use -v to get more diff
+
+test_generated.py:68: AssertionError</failure></testcase><testcase classname="test_generated" name="test_recite_zero_start_take_multiple" time="0.001"><failure message="AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']&#10;  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'&#10;  Use -v to get more diff">def test_recite_zero_start_take_multiple():
+        """Test start=0, take=2 — should go from 0 to 98 (via 99)"""
+        result = recite(0, 2)
+        expected = [
+            "no more bottles of beer on the wall, no more bottles of beer.",
+            "Go to the store and buy some more, 99 bottles of beer on the wall.",
+            "",
+            "99 bottles of beer on the wall, 99 bottles of beer.",
+            "Take one down and pass it around, 98 bottles of beer on the wall."
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']
+E         At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'
+E         Use -v to get more diff
+
+test_generated.py:81: AssertionError</failure></testcase><testcase classname="test_generated" name="test_recite_negative_start" time="0.001"><failure message="AssertionError: assert ['-1 bottles ...on the wall.'] == ['no more bot...on the wall.']&#10;  At index 0 diff: '-1 bottles of beer on the wall, -1 bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'&#10;  Use -v to get more diff">def test_recite_negative_start():
+        """Test negative start — should work with wrap-around logic."""
+        result = recite(-1, 1)
+        expected = [
+            "no more bottles of beer on the wall, no more bottles of beer.",
+            "Go to the store and buy some more, 99 bottles of beer on the wall."
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['-1 bottles ...on the wall.'] == ['no more bot...on the wall.']
+E         At index 0 diff: '-1 bottles of beer on the wall, -1 bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'
+E         Use -v to get more diff
+
+test_generated.py:91: AssertionError</failure></testcase><testcase classname="test_generated" name="test_recite_take_zero" time="0.000" /><testcase classname="test_generated" name="test_recite_take_large" time="0.001"><failure message="AssertionError: assert ['3 bottles o...ll.', '', ...] == ['3 bottles o...ll.', '', ...]&#10;  At index 9 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'&#10;  Left contains 3 more items, first extra item: ''&#10;  Use -v to get more diff">def test_recite_take_large():
+        """Test take larger than range (should still work correctly)."""
+        result = recite(3, 5)
+        # Should go from 3 → -2 (since range(start, start-take, -1) = 3 to -2)
+        expected = [
+            "3 bottles of beer on the wall, 3 bottles of beer.",
+            "Take one down and pass it around, 2 bottles of beer on the wall.",
+            "",
+            "2 bottles of beer on the wall, 2 bottles of beer.",
+            "Take one down and pass it around, 1 bottle of beer on the wall.",
+            "",
+            "1 bottle of beer on the wall, 1 bottle of beer.",
+            "Take it down and pass it around, no more bottles of beer on the wall.",
+            "",
+            "no more bottles of beer on the wall, no more bottles of beer.",
+            "Go to the store and buy some more, 99 bottles of beer on the wall."
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['3 bottles o...ll.', '', ...] == ['3 bottles o...ll.', '', ...]
+E         At index 9 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'
+E         Left contains 3 more items, first extra item: ''
+E         Use -v to get more diff
+
+test_generated.py:117: AssertionError</failure></testcase><testcase classname="test_generated" name="test_verse_one_bottle" time="0.000" /><testcase classname="test_generated" name="test_verse_two_bottles" time="0.000" /><testcase classname="test_generated" name="test_verse_zero" time="0.001"><failure message="AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']&#10;  At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'&#10;  Use -v to get more diff">def test_verse_zero():
+        """Test verse(0) — should return store action."""
+        result = verse(0)
+        expected = [
+            "no more bottles of beer on the wall, no more bottles of beer.",
+            "Go to the store and buy some more, 99 bottles of beer on the wall."
+        ]
+&gt;       assert result == expected
+E       AssertionError: assert ['No more bot...on the wall.'] == ['no more bot...on the wall.']
+E         At index 0 diff: 'No more bottles of beer on the wall, no more bottles of beer.' != 'no more bottles of beer on the wall, no more bottles of beer.'
+E         Use -v to get more diff
+
+test_generated.py:147: AssertionError</failure></testcase><testcase classname="test_generated" name="test_action_zero" time="0.000" /><testcase classname="test_generated" name="test_action_one" time="0.001"><failure message="AssertionError: assert 'Take it down...s it around, ' == 'Take one dow...s it around, '&#10;  - Take one down and pass it around, &#10;  ?      ^^^&#10;  + Take it down and pass it around, &#10;  ?      ^^">def test_action_one():
+        """Test _action(1) — should return 'Take one down'."""
+&gt;       assert _action(1) == "Take one down and pass it around, "
+E       AssertionError: assert 'Take it down...s it around, ' == 'Take one dow...s it around, '
+E         - Take one down and pass it around, 
+E         ?      ^^^
+E         + Take it down and pass it around, 
+E         ?      ^^
+
+test_generated.py:157: AssertionError</failure></testcase><testcase classname="test_generated" name="test_action_multiple" time="0.000" /><testcase classname="test_generated" name="test_next_bottle_one" time="0.000" /><testcase classname="test_generated" name="test_next_bottle_two" time="0.000" /><testcase classname="test_generated" name="test_next_bottle_zero" time="0.000" /><testcase classname="test_generated" name="test_next_verse_zero" time="0.000" /><testcase classname="test_generated" name="test_next_verse_one" time="0.000" /><testcase classname="test_generated" name="test_next_verse_two" time="0.000" /><testcase classname="test_generated" name="test_next_verse_negative" time="0.001"><failure message="assert 99 == 98&#10; +  where 99 = _next_verse(-1)">def test_next_verse_negative():
+        """Test _next_verse(-1) — should return 98."""
+&gt;       assert _next_verse(-1) == 98
+E       assert 99 == 98
+E        +  where 99 = _next_verse(-1)
+
+test_generated.py:197: AssertionError</failure></testcase><testcase classname="test_generated" name="test_bottles_zero" time="0.000" /><testcase classname="test_generated" name="test_bottles_one" time="0.000" /><testcase classname="test_generated" name="test_bottles_two" time="0.000" /><testcase classname="test_generated" name="test_bottles_negative" time="0.001"><failure message="AssertionError: assert '-1 bottles' == 'no more bottles'&#10;  - no more bottles&#10;  + -1 bottles">def test_bottles_negative():
+        """Test _bottles(-1) — should still return 'no more bottles' (edge case)."""
+&gt;       assert _bottles(-1) == "no more bottles"
+E       AssertionError: assert '-1 bottles' == 'no more bottles'
+E         - no more bottles
+E         + -1 bottles
+
+test_generated.py:217: AssertionError</failure></testcase><testcase classname="test_generated" name="test_bottles_99" time="0.000" /></testsuite></testsuites>

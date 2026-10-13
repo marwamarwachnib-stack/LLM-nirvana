@@ -1,0 +1,216 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 12,
+   "line": 12,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 12,
+   "line": 12,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 12,
+   "line": 12,
+   "mutant_id": "m03",
+   "operator": "LCR",
+   "original": "len(chain) == 1 and last[0] == domino[0]",
+   "replacement": "(len(chain) == 1 or last[0] == domino[0])"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 17,
+   "line": 17,
+   "mutant_id": "m04",
+   "operator": "AOR",
+   "original": "chain + [domino]",
+   "replacement": "(chain - [domino])"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 24,
+   "line": 24,
+   "mutant_id": "m05",
+   "operator": "UOD",
+   "original": "not any(dominoes)",
+   "replacement": "(any(dominoes))"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m06",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m07",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m08",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m09",
+   "operator": "ROR",
+   "original": "chain is not None",
+   "replacement": "(chain is None)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 28,
+   "line": 28,
+   "mutant_id": "m10",
+   "operator": "ROR",
+   "original": "chain[0][0] == chain[-1][1]",
+   "replacement": "(chain[0][0] != chain[-1][1])"
+  }
+ ],
+ "n_candidates": 34,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 13,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 13,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 13,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "test_sha256": "9645efc873738b9247ced09ccdce782fe2124646d24588d52c23df59e23ab140",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 15,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 15,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 15,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "test_sha256": "593077cc4e7d77053336a6586d9f8619cf4ae30db1fd02ad770b1264183f9344",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "dominoes",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

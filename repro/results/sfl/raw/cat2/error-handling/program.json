@@ -1,0 +1,110 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "True",
+   "replacement": "False"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "False",
+   "replacement": "True"
+  }
+ ],
+ "n_candidates": 2,
+ "n_sampled": 2,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 5,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21
+   ],
+   "test_sha256": "c1f743c37a76278031f0aeafddc5432de1e56d8c3800ef18ef6d2fef714d1883",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 5,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 5,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21
+   ],
+   "test_sha256": "4e0dd8e7da806d9744a173f018d195cfaa3576875fa0f45af1112fc999212fe8",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "error-handling",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

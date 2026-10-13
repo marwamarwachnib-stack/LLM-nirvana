@@ -1,0 +1,14 @@
+{
+  "keep_alive": "60m",
+  "model": "qwen3-4b-instruct",
+  "options": {
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+  },
+  "prompt": "def response(hey_bob):\n    hey_bob = hey_bob.strip()\n\n    if _is_silence(hey_bob):\n        return 'Fine. Be that way!'\n    if _is_shouting(hey_bob):\n        if _is_question(hey_bob):\n            return \"Calm down, I know what I'm doing!\"\n        else:\n            return 'Whoa, chill out!'\n    elif _is_question(hey_bob):\n        return 'Sure.'\n    else:\n        return 'Whatever.'\n\n\ndef _is_silence(hey_bob):\n    return hey_bob == ''\n\n\ndef _is_shouting(hey_bob):\n    return hey_bob.isupper()\n\n\ndef _is_question(hey_bob):\n    return hey_bob.endswith('?')\n\nYou give unit test cases in pytest for given code.\nWrite unittests using pytest for the given python code that cover all the edge cases.",
+  "stream": false
+}

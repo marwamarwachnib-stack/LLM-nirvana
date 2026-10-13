@@ -1,0 +1,240 @@
+{
+ "category": "cat3",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 6,
+   "line": 6,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "False",
+   "replacement": "True"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 12,
+   "line": 12,
+   "mutant_id": "m02",
+   "operator": "UOD",
+   "original": "not self.is_open",
+   "replacement": "(self.is_open)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 20,
+   "line": 20,
+   "mutant_id": "m03",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 24,
+   "line": 24,
+   "mutant_id": "m04",
+   "operator": "UOD",
+   "original": "not self.is_open",
+   "replacement": "(self.is_open)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 26,
+   "line": 26,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 32,
+   "line": 32,
+   "mutant_id": "m06",
+   "operator": "UOD",
+   "original": "not self.is_open",
+   "replacement": "(self.is_open)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 34,
+   "line": 34,
+   "mutant_id": "m07",
+   "operator": "ROR",
+   "original": "amount <= 0",
+   "replacement": "(amount < 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 36,
+   "line": 36,
+   "mutant_id": "m08",
+   "operator": "ROR",
+   "original": "amount > self.balance",
+   "replacement": "(amount >= self.balance)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 41,
+   "line": 41,
+   "mutant_id": "m09",
+   "operator": "UOD",
+   "original": "not self.is_open",
+   "replacement": "(self.is_open)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 43,
+   "line": 43,
+   "mutant_id": "m10",
+   "operator": "CRP",
+   "original": "False",
+   "replacement": "True"
+  }
+ ],
+ "n_candidates": 13,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 16,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 16,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 16,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43
+   ],
+   "test_sha256": "d4bfe068ce35af331541c5420eefb6e08bb0c1bf3920a2043bc3a4b763f1c380",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 15,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 15,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 15,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43
+   ],
+   "test_sha256": "7e91dee1d218690fe2b25b04c2c1c64b1af8bfb604ec6bc005a5a75c6d8031e1",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "bank-account",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}
