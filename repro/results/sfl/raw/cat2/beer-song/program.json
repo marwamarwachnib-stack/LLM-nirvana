@@ -1,0 +1,214 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 3,
+   "line": 3,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m03",
+   "operator": "ROR",
+   "original": "idx > start - take + 1",
+   "replacement": "(idx >= start - take + 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 18,
+   "line": 18,
+   "mutant_id": "m04",
+   "operator": "ROR",
+   "original": "current_verse == 0",
+   "replacement": "(current_verse != 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 21,
+   "line": 21,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "current_verse > 1",
+   "replacement": "(current_verse >= 1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 29,
+   "line": 29,
+   "mutant_id": "m07",
+   "operator": "ROR",
+   "original": "number == 0",
+   "replacement": "(number != 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 38,
+   "line": 38,
+   "mutant_id": "m08",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 38,
+   "line": 38,
+   "mutant_id": "m09",
+   "operator": "CRP",
+   "original": "99",
+   "replacement": "100"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 38,
+   "line": 38,
+   "mutant_id": "m10",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  }
+ ],
+ "n_candidates": 20,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 8,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    11,
+    17,
+    18,
+    19,
+    21,
+    24,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    37,
+    38
+   ],
+   "test_sha256": "91c87daae769e12821ba3526858ca3fd45c3501033669edb6101e486d74eff1f",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 4,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 4,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 4,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    11,
+    17,
+    18,
+    19,
+    21,
+    24,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    37,
+    38
+   ],
+   "test_sha256": "cf790582ed394370599573b9181ffd59412385e87f5e4231bbdcbf4375f39def",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "beer-song",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": false,
+  "llm": false,
+  "pynguin": true
+ }
+}

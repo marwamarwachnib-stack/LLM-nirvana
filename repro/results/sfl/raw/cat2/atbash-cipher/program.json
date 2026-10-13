@@ -1,0 +1,241 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 4,
+   "line": 4,
+   "mutant_id": "m01",
+   "operator": "CRP",
+   "original": "5",
+   "replacement": "6"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": false,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "1",
+   "replacement": "2"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 5,
+   "line": 5,
+   "mutant_id": "m03",
+   "operator": "UOD",
+   "original": "-1",
+   "replacement": "(1)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 14,
+   "mutant_id": "m04",
+   "operator": "AOR",
+   "original": "idx + BLOCK_SIZE",
+   "replacement": "(idx - BLOCK_SIZE)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 14,
+   "line": 15,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  }
+ ],
+ "n_candidates": 5,
+ "n_sampled": 5,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 14,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 14,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    12,
+    13,
+    14,
+    18,
+    19
+   ],
+   "test_sha256": "5b5d56b376620d3654710795208f18fa85dc14e022990c5a153cbd0809c8ddc8",
+   "unmapped_contexts": []
+  },
+  "dev+llm": {
+   "deselected": [
+    "test_llm.py::test_block_size_5_exactly",
+    "test_llm.py::test_block_size_5_with_remainder",
+    "test_llm.py::test_block_size_is_fixed",
+    "test_llm.py::test_block_size_with_last_block_less_than_5",
+    "test_llm.py::test_decode_long_input",
+    "test_llm.py::test_decode_mixed_case_after_encoding",
+    "test_llm.py::test_decode_returns_only_transformed_chars",
+    "test_llm.py::test_decode_single_block",
+    "test_llm.py::test_decode_with_block_size_handling",
+    "test_llm.py::test_decode_with_multiple_spaces",
+    "test_llm.py::test_decode_with_spaces",
+    "test_llm.py::test_edge_case_with_only_uppercase",
+    "test_llm.py::test_edge_case_with_unicode_alphanumeric",
+    "test_llm.py::test_encode_decode_round_trip",
+    "test_llm.py::test_encode_long_input",
+    "test_llm.py::test_encode_mixed_case",
+    "test_llm.py::test_encode_preserves_alphanumeric_order",
+    "test_llm.py::test_encode_short_input",
+    "test_llm.py::test_encode_single_alphabetic",
+    "test_llm.py::test_encode_with_multiple_spaces",
+    "test_llm.py::test_encode_with_numbers_and_letters",
+    "test_llm.py::test_encode_with_punctuation_and_symbols"
+   ],
+   "kept_failing": 0,
+   "kept_tests": 26,
+   "runs": [
+    {
+     "failing": 22,
+     "tests": 48,
+     "timeout": false
+    },
+    {
+     "failing": 22,
+     "tests": 48,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    12,
+    13,
+    14,
+    18,
+    19
+   ],
+   "test_sha256": "5b5d56b376620d3654710795208f18fa85dc14e022990c5a153cbd0809c8ddc880a7e5a85a087820bc5cf932689a81268e8cffbd700bcba908fdc658e68f024a",
+   "unmapped_contexts": []
+  },
+  "llm": {
+   "deselected": [
+    "test_llm.py::test_block_size_5_exactly",
+    "test_llm.py::test_block_size_5_with_remainder",
+    "test_llm.py::test_block_size_is_fixed",
+    "test_llm.py::test_block_size_with_last_block_less_than_5",
+    "test_llm.py::test_decode_long_input",
+    "test_llm.py::test_decode_mixed_case_after_encoding",
+    "test_llm.py::test_decode_returns_only_transformed_chars",
+    "test_llm.py::test_decode_single_block",
+    "test_llm.py::test_decode_with_block_size_handling",
+    "test_llm.py::test_decode_with_multiple_spaces",
+    "test_llm.py::test_decode_with_spaces",
+    "test_llm.py::test_edge_case_with_only_uppercase",
+    "test_llm.py::test_edge_case_with_unicode_alphanumeric",
+    "test_llm.py::test_encode_decode_round_trip",
+    "test_llm.py::test_encode_long_input",
+    "test_llm.py::test_encode_mixed_case",
+    "test_llm.py::test_encode_preserves_alphanumeric_order",
+    "test_llm.py::test_encode_short_input",
+    "test_llm.py::test_encode_single_alphabetic",
+    "test_llm.py::test_encode_with_multiple_spaces",
+    "test_llm.py::test_encode_with_numbers_and_letters",
+    "test_llm.py::test_encode_with_punctuation_and_symbols"
+   ],
+   "kept_failing": 0,
+   "kept_tests": 12,
+   "runs": [
+    {
+     "failing": 22,
+     "tests": 34,
+     "timeout": false
+    },
+    {
+     "failing": 22,
+     "tests": 34,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    12,
+    13,
+    14,
+    18,
+    19
+   ],
+   "test_sha256": "80a7e5a85a087820bc5cf932689a81268e8cffbd700bcba908fdc658e68f024a",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 6,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 6,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 6,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    12,
+    13,
+    14,
+    18,
+    19
+   ],
+   "test_sha256": "b341bfe7e5ebde6a7e8ad0c498efda72bccfc325739fb57be60630f0570d1032",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "atbash-cipher",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": true,
+  "llm": true,
+  "pynguin": true
+ }
+}
