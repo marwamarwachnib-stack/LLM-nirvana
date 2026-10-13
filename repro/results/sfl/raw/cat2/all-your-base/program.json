@@ -1,0 +1,304 @@
+{
+ "category": "cat2",
+ "mutants": [
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 2,
+   "line": 2,
+   "mutant_id": "m01",
+   "operator": "AOR",
+   "original": "base ** idx",
+   "replacement": "(base * idx)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m02",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 7,
+   "line": 7,
+   "mutant_id": "m03",
+   "operator": "ROR",
+   "original": "number > 0",
+   "replacement": "(number >= 0)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 8,
+   "line": 8,
+   "mutant_id": "m04",
+   "operator": "AOR",
+   "original": "number % base_to",
+   "replacement": "(number // base_to)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 16,
+   "line": 16,
+   "mutant_id": "m05",
+   "operator": "CRP",
+   "original": "2",
+   "replacement": "3"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 19,
+   "line": 19,
+   "mutant_id": "m06",
+   "operator": "ROR",
+   "original": "to_base < 2",
+   "replacement": "(to_base <= 2)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m07",
+   "operator": "CRP",
+   "original": "0",
+   "replacement": "1"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m08",
+   "operator": "CRP",
+   "original": "True",
+   "replacement": "False"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m09",
+   "operator": "LCR",
+   "original": "idx < 0 or idx >= from_base",
+   "replacement": "(idx < 0 and idx >= from_base)"
+  },
+  {
+   "check_fault_is_statement": true,
+   "check_imports": true,
+   "check_one_line_changed": true,
+   "fault_line": 22,
+   "line": 22,
+   "mutant_id": "m10",
+   "operator": "ROR",
+   "original": "idx < 0",
+   "replacement": "(idx <= 0)"
+  }
+ ],
+ "n_candidates": 17,
+ "n_sampled": 10,
+ "original": {
+  "dev": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 21,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 21,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 21,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "test_sha256": "19bdd1173d47dc4e24db251e8fc80258c77c9ea5dbc895e01f20c0fb055b46bf",
+   "unmapped_contexts": []
+  },
+  "dev+llm": {
+   "deselected": [
+    "test_llm.py::test_from_base_3",
+    "test_llm.py::test_rebase_empty_digits",
+    "test_llm.py::test_rebase_large_number",
+    "test_llm.py::test_rebase_normal_case",
+    "test_llm.py::test_rebase_to_base_2",
+    "test_llm.py::test_rebase_to_base_3",
+    "test_llm.py::test_rebase_two_digits",
+    "test_llm.py::test_rebase_with_digit_0_at_end",
+    "test_llm.py::test_rebase_with_empty_list",
+    "test_llm.py::test_rebase_with_large_base"
+   ],
+   "kept_failing": 0,
+   "kept_tests": 37,
+   "runs": [
+    {
+     "failing": 10,
+     "tests": 47,
+     "timeout": false
+    },
+    {
+     "failing": 10,
+     "tests": 47,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "test_sha256": "19bdd1173d47dc4e24db251e8fc80258c77c9ea5dbc895e01f20c0fb055b46bff7e8f87056ece96fbc1ba68e570205e72ad9f655d2204b6d10c90b61f7548326",
+   "unmapped_contexts": []
+  },
+  "llm": {
+   "deselected": [
+    "test_llm.py::test_from_base_3",
+    "test_llm.py::test_rebase_empty_digits",
+    "test_llm.py::test_rebase_large_number",
+    "test_llm.py::test_rebase_normal_case",
+    "test_llm.py::test_rebase_to_base_2",
+    "test_llm.py::test_rebase_to_base_3",
+    "test_llm.py::test_rebase_two_digits",
+    "test_llm.py::test_rebase_with_digit_0_at_end",
+    "test_llm.py::test_rebase_with_empty_list",
+    "test_llm.py::test_rebase_with_large_base"
+   ],
+   "kept_failing": 0,
+   "kept_tests": 16,
+   "runs": [
+    {
+     "failing": 10,
+     "tests": 26,
+     "timeout": false
+    },
+    {
+     "failing": 10,
+     "tests": 26,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "test_sha256": "f7e8f87056ece96fbc1ba68e570205e72ad9f655d2204b6d10c90b61f7548326",
+   "unmapped_contexts": []
+  },
+  "pynguin": {
+   "deselected": [],
+   "kept_failing": 0,
+   "kept_tests": 8,
+   "runs": [
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    },
+    {
+     "failing": 0,
+     "tests": 8,
+     "timeout": false
+    }
+   ],
+   "statements": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "test_sha256": "04d2f41bb2b4834fa08bccbfa49c2e50b352ffd28f69a0228a686e430b683b0c",
+   "unmapped_contexts": []
+  }
+ },
+ "program": "all-your-base",
+ "suites_available": {
+  "dev": true,
+  "dev+llm": true,
+  "llm": true,
+  "pynguin": true
+ }
+}
