@@ -1,0 +1,232 @@
+{
+ "summary": {
+  "collected": 11,
+  "passed": 11,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 14,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 6,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.83
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.44,
+  "collected": 11,
+  "passed": 11,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 14,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                    Stmts   Miss  Cover   Missing\n-----------------------------------------------------\nflatten_array.py           14      0   100%\nflatten_array_test.py      47      0   100%\n-----------------------------------------------------\nTOTAL                      61      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_5_level_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_6_level_nest_list_with_null_values",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_6_level_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_all_values_in_nested_list_are_null",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_empty",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_flattens_a_nested_array",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_flattens_array_with_just_integers_present",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_no_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_null_values_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.39,
+  "collected": 11,
+  "passed": 11,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 14,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 6,
+   "partial": 0,
+   "covered_branches": 6,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                    Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------------\nflatten_array.py           14      0      6      0   100%\nflatten_array_test.py      47      0      0      0   100%\n-------------------------------------------------------------------\nTOTAL                      61      0      6      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_5_level_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_6_level_nest_list_with_null_values",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_6_level_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_all_values_in_nested_list_are_null",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_empty",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_flattens_a_nested_array",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_flattens_array_with_just_integers_present",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_no_nesting",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "flatten_array_test.FlattenArrayTest::test_null_values_are_omitted_from_the_final_result",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

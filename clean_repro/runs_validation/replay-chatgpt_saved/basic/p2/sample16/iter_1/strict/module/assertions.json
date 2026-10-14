@@ -1,0 +1,73 @@
+{
+ "status": "ok",
+ "static_assertions": 9,
+ "static_never_reached": 0,
+ "executed_assertions": 9,
+ "incorrect": 6,
+ "pct_incorrect": 66.67,
+ "n_assertion_error": 2,
+ "n_try_except": 0,
+ "n_runtime": 4,
+ "pct_of_incorrect": {
+  "assertion": 33.33,
+  "try_except": 0.0,
+  "runtime": 66.67
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_lazy_of",
+   "aid": "test_generated.py:7:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_ap",
+   "aid": "test_generated.py:18:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_bind",
+   "aid": "test_generated.py:23:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_map",
+   "aid": "test_generated.py:12:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_to_box",
+   "aid": "test_generated.py:28:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Box' object has no attribute 'get'"
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_to_either",
+   "aid": "test_generated.py:33:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Right' object has no attribute 'get'"
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_to_maybe",
+   "aid": "test_generated.py:38:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Maybe' object has no attribute 'get'"
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_to_try",
+   "aid": "test_generated.py:43:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_lazy_with_to_validation",
+   "aid": "test_generated.py:48:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Validation' object has no attribute 'get'"
+  }
+ ]
+}

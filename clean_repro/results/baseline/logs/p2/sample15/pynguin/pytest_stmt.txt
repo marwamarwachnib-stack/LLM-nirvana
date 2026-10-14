@@ -1,0 +1,7 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample15/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample15/pynguin/junit_stmt.xml test_immutable_list.py
+# returncode=0 timed_out=False
+xxx.xxxxxxx.xx.xxxxxxx                                                   [100%]
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample15/pynguin/junit_stmt.xml -
+3 passed, 19 xfailed in 0.76s
+
+--- stderr ---

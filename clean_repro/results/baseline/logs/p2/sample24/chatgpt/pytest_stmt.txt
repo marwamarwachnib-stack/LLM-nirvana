@@ -1,0 +1,41 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample24/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample24/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_______________________________ test_EfRegister ________________________________
+
+    def test_EfRegister():
+>       assert ef.b.render() == '\x1b[1m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_example.py:5: AttributeError
+_______________________________ test_FgRegister ________________________________
+
+    def test_FgRegister():
+>       assert fg.black.render() == '\x1b[30m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_example.py:19: AttributeError
+_______________________________ test_BgRegister ________________________________
+
+    def test_BgRegister():
+>       assert bg.black.render() == '\x1b[40m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_example.py:46: AttributeError
+_______________________________ test_RsRegister ________________________________
+
+    def test_RsRegister():
+>       assert rs.all.render() == '\x1b[0m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_example.py:73: AttributeError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample24/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_EfRegister - AttributeError: 'Style' object has ...
+FAILED test_example.py::test_FgRegister - AttributeError: 'Style' object has ...
+FAILED test_example.py::test_BgRegister - AttributeError: 'Style' object has ...
+FAILED test_example.py::test_RsRegister - AttributeError: 'Style' object has ...
+4 failed in 0.20s
+
+--- stderr ---

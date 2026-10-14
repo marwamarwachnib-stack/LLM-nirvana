@@ -1,0 +1,103 @@
+{
+ "status": "ok",
+ "static_assertions": 15,
+ "static_never_reached": 1,
+ "executed_assertions": 14,
+ "incorrect": 6,
+ "pct_incorrect": 42.86,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 6,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 0.0,
+  "runtime": 100.0
+ },
+ "tests_with_errors_outside_assertions": 1,
+ "records": [
+  {
+   "test": "test_generated.py::test_box_bind",
+   "aid": "test_generated.py:34:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_eq",
+   "aid": "test_generated.py:15:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_init",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_map",
+   "aid": "test_generated.py:27:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_str",
+   "aid": "test_generated.py:20:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_to_either",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_to_either",
+   "aid": "test_generated.py:56:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Right' object has no attribute 'get'"
+  },
+  {
+   "test": "test_generated.py::test_box_to_lazy",
+   "aid": "test_generated.py:62:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Lazy' object has no attribute 'evaluate'"
+  },
+  {
+   "test": "test_generated.py::test_box_to_maybe",
+   "aid": "test_generated.py:48:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+  },
+  {
+   "test": "test_generated.py::test_box_to_maybe",
+   "aid": "test_generated.py:49:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Maybe' object has no attribute 'get'"
+  },
+  {
+   "test": "test_generated.py::test_box_to_try",
+   "aid": "test_generated.py:68:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'bool' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_box_to_try",
+   "aid": "test_generated.py:69:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_to_validation",
+   "aid": "test_generated.py:75:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_box_to_validation",
+   "aid": "test_generated.py:76:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Validation' object has no attribute 'get'"
+  }
+ ]
+}

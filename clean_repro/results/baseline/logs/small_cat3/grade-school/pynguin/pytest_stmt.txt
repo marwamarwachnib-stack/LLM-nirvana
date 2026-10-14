@@ -1,0 +1,7 @@
+$ /opt/clean_repro/conda/envs/exec/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/small_cat3/grade-school/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/small_cat3/grade-school/pynguin/junit_stmt.xml test_example.py
+# returncode=0 timed_out=False
+xx.xx                                                                    [100%]
+- generated xml file: /opt/clean_repro/work/baseline/small_cat3/grade-school/pynguin/junit_stmt.xml -
+1 passed, 4 xfailed in 0.08s
+
+--- stderr ---

@@ -1,0 +1,98 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample23/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample23/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+.FF.FFF..FF...                                                           [100%]
+=================================== FAILURES ===================================
+___________________________ test_camel_case_to_snake ___________________________
+
+    def test_camel_case_to_snake():
+>       assert manipulation.camel_case_to_snake("ThisIsACamelStringTest") == "this_is_a_camel_case_string_test"
+E       AssertionError: assert 'this_is_a_camel_string_test' == 'this_is_a_ca...e_string_test'
+E         - this_is_a_camel_case_string_test
+E         ?                 -----
+E         + this_is_a_camel_string_test
+
+test_example.py:9: AssertionError
+___________________________ test_snake_case_to_camel ___________________________
+
+    def test_snake_case_to_camel():
+        assert manipulation.snake_case_to_camel("the_snake_is_green") == "TheSnakeIsGreen"
+        assert manipulation.snake_case_to_camel("apple_tree") == "AppleTree"
+>       assert manipulation.snake_case_to_camel("this_is_an_manipulation") == "ThisIsAnmanipulation"
+E       AssertionError: assert 'ThisIsAnManipulation' == 'ThisIsAnmanipulation'
+E         - ThisIsAnmanipulation
+E         ?         ^
+E         + ThisIsAnManipulation
+E         ?         ^
+
+test_example.py:16: AssertionError
+_______________________________ test_strip_html ________________________________
+
+    def test_strip_html():
+>       assert manipulation.strip_html("<p>Hello World</p>") == "Hello World"
+E       AssertionError: assert '' == 'Hello World'
+E         - Hello World
+
+test_example.py:24: AssertionError
+________________________________ test_prettify _________________________________
+
+    def test_prettify():
+>       assert manipulation.prettify(" unprettified string ,, like this one,will be\"prettified\" .th' s awesome! ") == "Unprettified string, like this one, will be \"prettified\". It's awesome!"
+E       assert "Unprettified...Th's awesome!" == "Unprettified...It's awesome!"
+E         Skipping 48 identical leading characters in diff, use -v to show
+E         - ttified". It's awesome!
+E         ?           ^^
+E         + ttified". Th's awesome!
+E         ?           ^^
+
+test_example.py:28: AssertionError
+_________________________________ test_asciify _________________________________
+
+    def test_asciify():
+>       assert manipulation.asciify("èéùúòóäåëýñÅÀÁÇÌÍÑÓË") == "eeuuooaaeyn"
+E       AssertionError: assert 'eeuuooaaeynAAACIINOE' == 'eeuuooaaeyn'
+E         - eeuuooaaeyn
+E         + eeuuooaaeynAAACIINOE
+
+test_example.py:32: AssertionError
+______________________________ test_strip_margin _______________________________
+
+    def test_strip_margin():
+        input_string = """
+        This is a
+        multi line
+        string
+        """
+        expected_output = "This is a\nmulti line\nstring"
+>       assert manipulation.strip_margin(input_string) == expected_output
+E       AssertionError: assert '\nThis is a\...ine\nstring\n' == 'This is a\nm... line\nstring'
+E         + 
+E           This is a
+E           multi line
+E         - string
+E         + string
+E         ?       +
+
+test_example.py:51: AssertionError
+________________________________ test_compress _________________________________
+
+    def test_compress():
+>       assert len(manipulation.compress("hello world")) < len("hello world")
+E       AssertionError: assert 28 < 11
+E        +  where 28 = len('eNrLSM3JyVcozy_KSQEAGgsEXQ==')
+E        +    where 'eNrLSM3JyVcozy_KSQEAGgsEXQ==' = <function compress at 0x7fecd4e4b130>('hello world')
+E        +      where <function compress at 0x7fecd4e4b130> = manipulation.compress
+E        +  and   11 = len('hello world')
+
+test_example.py:54: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample23/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_camel_case_to_snake - AssertionError: assert 'th...
+FAILED test_example.py::test_snake_case_to_camel - AssertionError: assert 'Th...
+FAILED test_example.py::test_strip_html - AssertionError: assert '' == 'Hello...
+FAILED test_example.py::test_prettify - assert "Unprettified...Th's awesome!"...
+FAILED test_example.py::test_asciify - AssertionError: assert 'eeuuooaaeynAAA...
+FAILED test_example.py::test_strip_margin - AssertionError: assert '\nThis is...
+FAILED test_example.py::test_compress - AssertionError: assert 28 < 11
+7 failed, 7 passed in 0.19s
+
+--- stderr ---

@@ -1,0 +1,79 @@
+sample_id,category,suite,mode,saved_cover,new_cover,saved_stmts,new_stmts,saved_miss,new_miss,saved_missing,new_missing,status,collected,passed,failed,errors,collection_error,saved_branch,new_branch,saved_brpart,new_brpart
+small_cat2/affine-cipher,2,pynguin(saved),stmt,100.0,100.0,30,30,0,0,,,exact,11,3,0,0,False,,,,
+small_cat2/affine-cipher,2,pynguin(saved),branch,100.0,100.0,30,30,0,0,,,exact,11,3,0,0,False,18,18,0,0
+small_cat2/all-your-base,2,pynguin(saved),stmt,100.0,100.0,18,18,0,0,,,exact,8,5,0,0,False,,,,
+small_cat2/all-your-base,2,pynguin(saved),branch,100.0,100.0,18,18,0,0,,,exact,8,5,0,0,False,13,13,0,0
+small_cat2/alphametics,2,pynguin(saved),stmt,96.0,96.0,74,74,3,3,"75, 113, 157","75, 113, 157",exact,5,5,0,0,False,,,,
+small_cat2/alphametics,2,pynguin(saved),branch,95.0,95.0,74,74,3,3,"75, 113, 157","75, 113, 157",exact,5,5,0,0,False,52,52,3,3
+small_cat2/atbash-cipher,2,pynguin(saved),stmt,100.0,100.0,10,10,0,0,,,exact,6,1,0,0,False,,,,
+small_cat2/atbash-cipher,2,pynguin(saved),branch,100.0,100.0,10,10,0,0,,,exact,6,1,0,0,False,4,4,0,0
+small_cat2/beer-song,2,pynguin(saved),stmt,100.0,100.0,23,23,0,0,,,exact,4,3,0,0,False,,,,
+small_cat2/beer-song,2,pynguin(saved),branch,100.0,100.0,23,23,0,0,,,exact,4,3,0,0,False,10,10,0,0
+small_cat2/bob,2,pynguin(saved),stmt,100.0,100.0,17,17,0,0,,,exact,7,2,0,0,False,,,,
+small_cat2/bob,2,pynguin(saved),branch,100.0,100.0,17,17,0,0,,,exact,7,2,0,0,False,8,8,0,0
+small_cat2/change,2,pynguin(saved),stmt,100.0,100.0,24,24,0,0,,,exact,6,3,0,0,False,,,,
+small_cat2/change,2,pynguin(saved),branch,100.0,100.0,24,24,0,0,,,exact,6,3,0,0,False,14,14,0,0
+small_cat2/crypto-square,2,pynguin(saved),stmt,100.0,100.0,13,13,0,0,,,exact,3,1,0,0,False,,,,
+small_cat2/crypto-square,2,pynguin(saved),branch,100.0,100.0,13,13,0,0,,,exact,3,1,0,0,False,6,6,0,0
+small_cat2/diamond,2,pynguin(saved),stmt,77.0,77.0,13,13,3,3,3-5,3-5,exact,2,0,0,0,False,,,,
+small_cat2/diamond,2,pynguin(saved),branch,80.0,80.0,13,13,3,3,3-5,3-5,exact,2,0,0,0,False,2,2,0,0
+small_cat2/dominoes,2,pynguin(saved),stmt,100.0,100.0,24,24,0,0,,,exact,15,6,0,0,False,,,,
+small_cat2/dominoes,2,pynguin(saved),branch,100.0,100.0,24,24,0,0,,,exact,15,6,0,0,False,16,16,0,0
+small_cat2/error-handling,2,pynguin(saved),stmt,87.0,87.0,15,15,2,2,20-21,20-21,exact,5,3,0,0,False,,,,
+small_cat2/error-handling,2,pynguin(saved),branch,76.0,76.0,15,15,2,2,20-21,20-21,exact,5,3,0,0,False,2,2,0,0
+small_cat2/flatten-array,2,pynguin(saved),stmt,100.0,100.0,14,14,0,0,,,exact,5,2,0,0,False,,,,
+small_cat2/flatten-array,2,pynguin(saved),branch,100.0,100.0,14,14,0,0,,,exact,5,2,0,0,False,6,6,0,0
+small_cat2/food-chain,2,pynguin(saved),stmt,100.0,100.0,39,39,0,0,,,exact,6,1,0,0,False,,,,
+small_cat2/food-chain,2,pynguin(saved),branch,100.0,100.0,39,39,0,0,,,exact,6,1,0,0,False,14,14,0,0
+small_cat2/knapsack,2,pynguin(saved),stmt,60.0,60.0,10,10,4,4,8-14,8-14,exact,3,0,0,0,False,,,,
+small_cat2/knapsack,2,pynguin(saved),branch,67.0,67.0,10,10,4,4,8-14,8-14,exact,3,0,0,0,False,8,8,2,2
+small_cat2/largest-series-product,2,pynguin(saved),stmt,100.0,100.0,15,15,0,0,,,exact,8,2,0,0,False,,,,
+small_cat2/largest-series-product,2,pynguin(saved),branch,100.0,100.0,15,15,0,0,,,exact,8,2,0,0,False,15,15,0,0
+small_cat2/markdown,2,pynguin(saved),stmt,100.0,100.0,58,58,0,0,,,exact,10,9,0,0,False,,,,
+small_cat2/markdown,2,pynguin(saved),branch,100.0,100.0,58,58,0,0,,,exact,10,9,0,0,False,28,28,0,0
+small_cat2/minesweeper,2,pynguin(saved),stmt,100.0,100.0,31,31,0,0,,,exact,7,4,0,0,False,,,,
+small_cat2/minesweeper,2,pynguin(saved),branch,100.0,100.0,31,31,0,0,,,exact,7,4,0,0,False,25,25,0,0
+small_cat2/palindrome-products,2,pynguin(saved),stmt,100.0,100.0,58,58,0,0,,,exact,11,7,0,0,False,,,,
+small_cat2/palindrome-products,2,pynguin(saved),branch,100.0,100.0,58,58,0,0,,,exact,11,7,0,0,False,28,28,0,0
+small_cat2/poker,2,pynguin(saved),stmt,96.0,96.0,23,23,1,1,24,24,exact,10,5,0,0,False,,,,
+small_cat2/poker,2,pynguin(saved),branch,95.0,95.0,23,23,1,1,24,24,exact,10,5,0,0,False,16,16,1,1
+small_cat3/bank-account,3,pynguin(saved),stmt,100.0,100.0,36,36,0,0,,,exact,15,9,0,0,False,,,,
+small_cat3/bank-account,3,pynguin(saved),branch,100.0,100.0,36,36,0,0,,,exact,15,9,0,0,False,22,22,0,0
+small_cat3/binary-search-tree,3,pynguin(saved),stmt,100.0,100.0,40,40,0,0,,,exact,5,5,0,0,False,,,,
+small_cat3/binary-search-tree,3,pynguin(saved),branch,98.0,98.0,40,40,0,0,31->24,31->24,exact,5,5,0,0,False,16,16,1,1
+small_cat3/circular-buffer,3,pynguin(saved),stmt,97.0,97.0,35,35,1,1,42,42,exact,12,4,0,0,False,,,,
+small_cat3/circular-buffer,3,pynguin(saved),branch,98.0,98.0,35,35,1,1,42,42,exact,12,4,0,0,False,6,6,0,0
+small_cat3/clock,3,pynguin(saved),stmt,100.0,100.0,22,22,0,0,,,exact,4,0,0,0,False,,,,
+small_cat3/clock,3,pynguin(saved),branch,100.0,100.0,22,22,0,0,,,exact,4,0,0,0,False,0,0,0,0
+small_cat3/complex-numbers,3,pynguin(saved),stmt,100.0,100.0,70,70,0,0,,,exact,16,4,0,0,False,,,,
+small_cat3/complex-numbers,3,pynguin(saved),branch,100.0,100.0,70,70,0,0,,,exact,16,4,0,0,False,18,18,0,0
+small_cat3/custom-set,3,pynguin(saved),stmt,100.0,100.0,35,35,0,0,,,exact,16,6,0,0,False,,,,
+small_cat3/custom-set,3,pynguin(saved),branch,100.0,100.0,35,35,0,0,,,exact,16,6,0,0,False,16,16,0,0
+small_cat3/dnd-character,3,pynguin(saved),stmt,100.0,100.0,16,16,0,0,,,exact,2,1,0,0,False,,,,
+small_cat3/dnd-character,3,pynguin(saved),branch,100.0,100.0,16,16,0,0,,,exact,2,1,0,0,False,2,2,0,0
+small_cat3/forth,3,pynguin(saved),stmt,87.0,87.0,54,54,7,7,"27, 41, 50-52, 59, 61","27, 41, 50-52, 59, 61",exact,20,14,0,0,False,,,,
+small_cat3/forth,3,pynguin(saved),branch,86.0,86.0,54,54,7,7,"27, 41, 50-52, 59, 61","27, 41, 50-52, 59, 61",exact,20,14,0,0,False,32,32,3,3
+small_cat3/grade-school,3,pynguin(saved),stmt,100.0,100.0,24,24,0,0,,,exact,5,1,0,0,False,,,,
+small_cat3/grade-school,3,pynguin(saved),branch,100.0,100.0,24,24,0,0,,,exact,5,1,0,0,False,10,10,0,0
+small_cat3/hangman,3,pynguin(saved),stmt,100.0,100.0,38,38,0,0,,,exact,8,3,0,0,False,,,,
+small_cat3/hangman,3,pynguin(saved),branch,100.0,100.0,38,38,0,0,,,exact,8,3,0,0,False,14,14,0,0
+small_cat3/kindergarten-garden,3,pynguin(saved),stmt,100.0,100.0,15,15,0,0,,,exact,5,0,0,0,False,,,,
+small_cat3/kindergarten-garden,3,pynguin(saved),branch,100.0,100.0,15,15,0,0,,,exact,5,0,0,0,False,6,6,0,0
+small_cat3/ledger,3,pynguin(saved),stmt,80.0,80.0,51,51,10,10,"40-45, 52, 61-62, 71","40-45, 52, 61-62, 71",exact,6,1,0,0,False,,,,
+small_cat3/ledger,3,pynguin(saved),branch,80.0,80.0,51,51,10,10,"40-45, 52, 61-62, 71","40-45, 52, 61-62, 71",exact,6,1,0,0,False,8,8,0,0
+small_cat3/linked-list,3,pynguin(saved),stmt,100.0,100.0,72,72,0,0,,,exact,13,8,0,0,False,,,,
+small_cat3/linked-list,3,pynguin(saved),branch,100.0,100.0,72,72,0,0,,,exact,13,8,0,0,False,26,26,0,0
+small_cat3/luhn,3,pynguin(saved),stmt,100.0,100.0,18,18,0,0,,,exact,5,0,0,0,False,,,,
+small_cat3/luhn,3,pynguin(saved),branch,100.0,100.0,18,18,0,0,,,exact,5,0,0,0,False,8,8,0,0
+small_cat3/meetup,3,pynguin(saved),stmt,94.0,94.0,17,17,1,1,23,23,exact,6,1,0,0,False,,,,
+small_cat3/meetup,3,pynguin(saved),branch,92.0,92.0,17,17,1,1,23,23,exact,6,1,0,0,False,8,8,1,1
+small_cat3/parallel-letter-frequency,3,pynguin(saved),stmt,78.0,78.0,40,40,9,9,"26-33, 39","26-33, 39",exact,3,2,0,0,False,,,,
+small_cat3/parallel-letter-frequency,3,pynguin(saved),branch,70.0,70.0,40,40,9,9,"26-33, 39","26-33, 39",exact,3,2,0,0,False,16,16,2,2
+small_cat3/phone-number,3,pynguin(saved),stmt,100.0,100.0,38,38,0,0,,,exact,17,2,0,0,False,,,,
+small_cat3/phone-number,3,pynguin(saved),branch,100.0,100.0,38,38,0,0,,,exact,17,2,0,0,False,24,24,0,0
+small_cat3/queen-attack,3,pynguin(saved),stmt,95.0,95.0,20,20,1,1,22,22,exact,9,7,0,0,False,,,,
+small_cat3/queen-attack,3,pynguin(saved),branch,94.0,94.0,20,20,1,1,22,22,exact,9,7,0,0,False,12,12,1,1
+small_cat3/robot-name,3,pynguin(saved),stmt,100.0,100.0,23,23,0,0,,,exact,5,4,0,0,False,,,,
+small_cat3/robot-name,3,pynguin(saved),branch,97.0,97.0,23,23,0,0,27->25,27->25,exact,5,4,0,0,False,8,8,1,1
+small_cat3/robot-simulator,3,pynguin(saved),stmt,,97.0,,38,,1,,53,no saved report,11,3,0,0,False,,,,
+small_cat3/robot-simulator,3,pynguin(saved),branch,98.0,98.0,38,38,1,1,53,53,exact,11,3,0,0,False,12,12,0,0

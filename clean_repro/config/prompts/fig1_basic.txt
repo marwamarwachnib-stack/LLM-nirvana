@@ -1,0 +1,2 @@
+You give unit test cases in pytest for given code.
+Write unittests using pytest for the given python code that cover all the edge cases.

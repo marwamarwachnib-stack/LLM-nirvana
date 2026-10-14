@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="8" time="0.144" timestamp="2026-10-14T00:43:47.291512" hostname="vm"><testcase classname="test_generated" name="test_position_equal" time="0.001" /><testcase classname="test_generated" name="test_position_not_equal" time="0.001" /><testcase classname="test_generated" name="test_message_eq" time="0.001" /><testcase classname="test_generated" name="test_message_neq" time="0.001" /><testcase classname="test_generated" name="test_error_eq" time="0.001"><failure message="AssertionError: assert BaseError(tex...code='custom') == BaseError(tex...code='custom')&#10;  Use -v to get more diff">def test_error_eq():
+        error1 = BaseError(text="Error message")
+        error2 = BaseError(text="Error message")
+&gt;       assert error1 == error2
+E       AssertionError: assert BaseError(tex...code='custom') == BaseError(tex...code='custom')
+E         Use -v to get more diff
+
+test_generated.py:32: AssertionError</failure></testcase><testcase classname="test_generated" name="test_error_neq" time="0.001" /><testcase classname="test_generated" name="test_validation_result_bool" time="0.001" /><testcase classname="test_generated" name="test_validation_result_repr" time="0.001"><failure message="assert &quot;ValidationRe...de='custom'))&quot; == &quot;ValidationRe...valid data'))&quot;&#10;  Skipping 48 identical leading characters in diff, use -v to show&#10;  - alid data'))&#10;  + alid data', code='custom'))">def test_validation_result_repr():
+        result1 = ValidationResult(value=["a", "b", "c"])
+        result2 = ValidationResult(error=ValidationError(text="Invalid data"))
+        assert repr(result1) == "ValidationResult(value=['a', 'b', 'c'])"
+&gt;       assert repr(result2) == "ValidationResult(error=ValidationError(text='Invalid data'))"
+E       assert "ValidationRe...de='custom'))" == "ValidationRe...valid data'))"
+E         Skipping 48 identical leading characters in diff, use -v to show
+E         - alid data'))
+E         + alid data', code='custom'))
+
+test_generated.py:52: AssertionError</failure></testcase></testsuite></testsuites>

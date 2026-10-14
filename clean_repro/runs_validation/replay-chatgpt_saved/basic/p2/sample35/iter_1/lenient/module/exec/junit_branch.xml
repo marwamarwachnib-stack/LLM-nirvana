@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="0.130" timestamp="2026-10-14T00:45:25.003241" hostname="vm"><testcase classname="test_generated" name="test_parse_empty_string" time="0.008"><failure message="NameError: name 'Docstring' is not defined">def test_parse_empty_string():
+        parser = NumpydocParser()
+        docstring = parser.parse("")
+    
+&gt;       assert docstring == Docstring()
+E       NameError: name 'Docstring' is not defined
+
+test_generated.py:9: NameError</failure></testcase><testcase classname="test_generated" name="test_parse_short_description" time="0.001" /><testcase classname="test_generated" name="test_parse_long_description" time="0.001" /><testcase classname="test_generated" name="test_parse_multiple_sections" time="0.001"><failure message="assert True is False&#10; +  where True = &lt;common.Docstring object at 0x7f5509021c00&gt;.blank_after_long_description">def test_parse_multiple_sections():
+        parser = NumpydocParser()
+        docstring = parser.parse("Short description\n\nLong description\n\nParameters\n----------\nparam1 : type\n    Description of param1\n\nReturns\n-------\nreturn_type\n    Description of return value")
+    
+        assert docstring.short_description == "Short description"
+        assert docstring.long_description == "Long description"
+        assert docstring.blank_after_short_description is True
+&gt;       assert docstring.blank_after_long_description is False
+E       assert True is False
+E        +  where True = &lt;common.Docstring object at 0x7f5509021c00&gt;.blank_after_long_description
+
+test_generated.py:36: AssertionError</failure></testcase></testsuite></testsuites>

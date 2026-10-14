@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.442" timestamp="2026-10-14T00:24:23.519046" hostname="vm"><testcase classname="" name="test_generated" time="0.000"><error message="collection failure">/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/runner.py:341: in from_call
+    result: Optional[TResult] = func()
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/runner.py:372: in &lt;lambda&gt;
+    call = CallInfo.from_call(lambda: list(collector.collect()), "collect")
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/python.py:531: in collect
+    self._inject_setup_module_fixture()
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/python.py:545: in _inject_setup_module_fixture
+    self.obj, ("setUpModule", "setup_module")
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/python.py:310: in obj
+    self._obj = obj = self._getobj()
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/python.py:528: in _getobj
+    return self._importtestmodule()
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/python.py:617: in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/pathlib.py:565: in import_path
+    importlib.import_module(module_name)
+/opt/clean_repro/conda/envs/exec/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1050: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1027: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1006: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:688: in _load_unlocked
+    ???
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:178: in exec_module
+    exec(co, module.__dict__)
+test_generated.py:2: in &lt;module&gt;
+    from example import card_value, total_points
+example.py:9: in &lt;module&gt;
+    multiplier, trump = input().split()
+/opt/clean_repro/conda/envs/exec/lib/python3.10/site-packages/_pytest/capture.py:202: in read
+    raise OSError(
+E   OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.</error></testcase></testsuite></testsuites>

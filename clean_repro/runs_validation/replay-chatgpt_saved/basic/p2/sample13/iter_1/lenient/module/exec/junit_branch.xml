@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="11" time="0.191" timestamp="2026-10-14T00:42:17.324850" hostname="vm"><testcase classname="test_generated" name="test_box_init" time="0.001" /><testcase classname="test_generated" name="test_box_eq" time="0.002" /><testcase classname="test_generated" name="test_box_str" time="0.001" /><testcase classname="test_generated" name="test_box_map" time="0.001" /><testcase classname="test_generated" name="test_box_bind" time="0.001" /><testcase classname="test_generated" name="test_box_ap" time="0.001"><failure message="TypeError: 'int' object is not callable">def test_box_ap():
+        value1 = 5
+        value2 = lambda x: x+5
+        box1 = Box(value1)
+        box2 = Box(value2)
+&gt;       new_box = box1.ap(box2)
+
+test_generated.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+box.py:57: in ap
+    return applicative.map(self.value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;box.Box object at 0x7fc277d0b3d0&gt;, mapper = 5
+
+    def map(self, mapper: Callable[[T], U]) -&gt; 'Box[U]':
+        """
+        Take function (A) -&gt; b and applied this function on current box value and returns new box with mapped value.
+    
+        :param mapper: mapper function
+        :type mapper: Function(A) -&gt; B
+        :returns: new box with mapped value
+        :rtype: Box[B]
+        """
+&gt;       return Box(mapper(self.value))
+E       TypeError: 'int' object is not callable
+
+box.py:35: TypeError</failure></testcase><testcase classname="test_generated" name="test_box_to_maybe" time="0.003"><failure message="AttributeError: 'Maybe' object has no attribute 'is_just'">def test_box_to_maybe():
+        value = 5
+        box = Box(value)
+        maybe = box.to_maybe()
+&gt;       assert maybe.is_just() == True
+E       AttributeError: 'Maybe' object has no attribute 'is_just'
+
+test_generated.py:48: AttributeError</failure></testcase><testcase classname="test_generated" name="test_box_to_either" time="0.002"><failure message="AttributeError: 'Right' object has no attribute 'get'">def test_box_to_either():
+        value = 5
+        box = Box(value)
+        either = box.to_either()
+        assert either.is_right() == True
+&gt;       assert either.get() == value
+E       AttributeError: 'Right' object has no attribute 'get'
+
+test_generated.py:56: AttributeError</failure></testcase><testcase classname="test_generated" name="test_box_to_lazy" time="0.002"><failure message="AttributeError: 'Lazy' object has no attribute 'evaluate'">def test_box_to_lazy():
+        value = 5
+        box = Box(value)
+        lazy = box.to_lazy()
+&gt;       assert lazy.evaluate() == value
+E       AttributeError: 'Lazy' object has no attribute 'evaluate'
+
+test_generated.py:62: AttributeError</failure></testcase><testcase classname="test_generated" name="test_box_to_try" time="0.002"><failure message="TypeError: 'bool' object is not callable">def test_box_to_try():
+        value = 5
+        box = Box(value)
+        try_monad = box.to_try()
+&gt;       assert try_monad.is_success() == True
+E       TypeError: 'bool' object is not callable
+
+test_generated.py:68: TypeError</failure></testcase><testcase classname="test_generated" name="test_box_to_validation" time="0.002"><failure message="AttributeError: 'Validation' object has no attribute 'get'">def test_box_to_validation():
+        value = 5
+        box = Box(value)
+        validation = box.to_validation()
+        assert validation.is_success() == True
+&gt;       assert validation.get() == value
+E       AttributeError: 'Validation' object has no attribute 'get'
+
+test_generated.py:76: AttributeError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,40 @@
+# Test execution for the p2 set.  Same test tooling as requirements_exec.txt.
+pytest==7.4.0
+pluggy==1.3.0
+coverage==7.3.2
+# Packages the saved reports show as imported from installed/checked-out packages
+# (absolute paths in the saved reports): httpie (cli-master), pdir2-0.3.2, flutes.
+# Versions = the releases selected in data/p2_projects.csv.
+httpie==3.2.2
+pdir2==0.3.2
+flutes==0.3.0
+# pymonet: the authors' module copies (samples 13-21) import "pymonet.*" inside methods and the saved
+# coverage shows those lines executed, so pymonet was importable in their environment (inference).
+pymonet==0.12.0
+# Third-party imports of the p2 modules; versions current in Oct 2023 (assumption, not recorded).
+requests[socks]==2.31.0
+charset-normalizer==3.3.0
+defusedxml==0.7.1
+Pygments==2.16.1
+requests-toolbelt==1.0.0
+multidict==6.0.4
+rich==13.6.0
+Jinja2==3.1.2
+PyYAML==6.0.1
+marshmallow==3.20.1
+marshmallow-enum==1.5.1
+typing-inspect==0.9.0
+stringcase==1.2.0
+tqdm==4.66.1
+termcolor==2.3.0
+psutil==5.9.5
+ipython==8.16.1
+typing_extensions==4.8.0
+# httpie's own test fixtures (samples 9-12: the files in the "pynguin coverage" folder are httpie's
+# developer tests, not Pynguin output)
+pytest-httpbin==2.0.0
+pytest-lazy-fixture==0.6.3
+responses==0.23.3
+pytest-mock==3.11.1
+werkzeug==2.0.3
+pyOpenSSL==23.2.0

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="14" time="0.141" timestamp="2026-10-14T00:42:19.676505" hostname="vm"><testcase classname="test_generated" name="test_either_case_left" time="0.002" /><testcase classname="test_generated" name="test_either_case_right" time="0.001" /><testcase classname="test_generated" name="test_left_map" time="0.001" /><testcase classname="test_generated" name="test_left_bind" time="0.001" /><testcase classname="test_generated" name="test_left_is_left" time="0.001" /><testcase classname="test_generated" name="test_left_is_right" time="0.001" /><testcase classname="test_generated" name="test_left_to_maybe" time="0.002"><failure message="TypeError: 'bool' object is not callable">def test_left_to_maybe():
+        left = Left(5)
+        result = left.to_maybe()
+    
+&gt;       assert result.is_nothing()
+E       TypeError: 'bool' object is not callable
+
+test_generated.py:69: TypeError</failure></testcase><testcase classname="test_generated" name="test_left_to_validation" time="0.002"><failure message="assert None == [5]&#10; +  where None = &lt;pymonet.validation.Validation object at 0x7fcfdfab7a30&gt;.value">def test_left_to_validation():
+        left = Left(5)
+        result = left.to_validation()
+    
+        assert result.is_fail()
+&gt;       assert result.value == [5]
+E       assert None == [5]
+E        +  where None = &lt;pymonet.validation.Validation object at 0x7fcfdfab7a30&gt;.value
+
+test_generated.py:77: AssertionError</failure></testcase><testcase classname="test_generated" name="test_right_map" time="0.001" /><testcase classname="test_generated" name="test_right_bind" time="0.001" /><testcase classname="test_generated" name="test_right_is_right" time="0.001" /><testcase classname="test_generated" name="test_right_is_left" time="0.001" /><testcase classname="test_generated" name="test_right_to_maybe" time="0.001"><failure message="AttributeError: 'Maybe' object has no attribute 'is_just'">def test_right_to_maybe():
+        right = Right(5)
+        result = right.to_maybe()
+    
+&gt;       assert result.is_just()
+E       AttributeError: 'Maybe' object has no attribute 'is_just'
+
+test_generated.py:118: AttributeError</failure></testcase><testcase classname="test_generated" name="test_right_to_validation" time="0.001" /></testsuite></testsuites>

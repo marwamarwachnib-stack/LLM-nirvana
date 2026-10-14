@@ -1,0 +1,270 @@
+{
+ "summary": {
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 39,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 14,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.79
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.4,
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    3,
+    5,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    21,
+    22,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    40,
+    42,
+    43,
+    45,
+    48,
+    49,
+    52,
+    53,
+    54,
+    55,
+    57,
+    58,
+    59,
+    62,
+    63
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                 Stmts   Miss  Cover   Missing\n--------------------------------------------------\nfood_chain.py           39      0   100%\nfood_chain_test.py      23      0   100%\n--------------------------------------------------\nTOTAL                   62      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_bird",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_cat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_cow",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_dog",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_fly",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_full_song",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_goat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_horse",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_multiple_verses",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_spider",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.39,
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    3,
+    5,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    21,
+    22,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    40,
+    42,
+    43,
+    45,
+    48,
+    49,
+    52,
+    53,
+    54,
+    55,
+    57,
+    58,
+    59,
+    62,
+    63
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 14,
+   "partial": 0,
+   "covered_branches": 14,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                 Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------\nfood_chain.py           39      0     14      0   100%\nfood_chain_test.py      23      0      0      0   100%\n----------------------------------------------------------------\nTOTAL                   62      0     14      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_bird",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_cat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_cow",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_dog",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_fly",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_full_song",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_goat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_horse",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_multiple_verses",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "food_chain_test.FoodChainTest::test_spider",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="12" time="0.219" timestamp="2026-10-14T00:44:47.624836" hostname="vm"><testcase classname="test_generated" name="test_token_string" time="0.002"><failure message="AssertionError: assert 'tokens' == 'exampl'&#10;  - exampl&#10;  + tokens">def test_token_string():
+        t = Token("string", 0, 5, "tokens")
+&gt;       assert t.string == "exampl"
+E       AssertionError: assert 'tokens' == 'exampl'
+E         - exampl
+E         + tokens
+
+test_generated.py:7: AssertionError</failure></testcase><testcase classname="test_generated" name="test_token_value" time="0.001"><failure message="NotImplementedError">def test_token_value():
+        t = Token("value", 0, 4, "tokens")
+&gt;       assert t.value == "value"
+
+test_generated.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:30: in value
+    return self._get_value()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Token('token')
+
+    def _get_value(self) -&gt; typing.Any:
+&gt;       raise NotImplementedError  # pragma: nocover
+E       NotImplementedError
+
+tokens.py:16: NotImplementedError</failure></testcase><testcase classname="test_generated" name="test_token_start" time="0.001"><failure message="AttributeError: 'Position' object has no attribute 'line'">def test_token_start():
+        t = Token("start", 0, 4, "tokens")
+&gt;       assert t.start.line == 1
+E       AttributeError: 'Position' object has no attribute 'line'
+
+test_generated.py:15: AttributeError</failure></testcase><testcase classname="test_generated" name="test_token_end" time="0.001"><failure message="AttributeError: 'Position' object has no attribute 'line'">def test_token_end():
+        t = Token("end", 0, 2, "tokens")
+&gt;       assert t.end.line == 1
+E       AttributeError: 'Position' object has no attribute 'line'
+
+test_generated.py:21: AttributeError</failure></testcase><testcase classname="test_generated" name="test_token_lookup" time="0.001"><failure message="AttributeError: 'str' object has no attribute '_value'">def test_token_lookup():
+&gt;       d1 = DictToken({"key1": ScalarToken("value1", 0, 5, "tokens")}, 0, 5, "tokens")
+
+test_generated.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_keyiterator object at 0x7ff330116b10&gt;
+
+&gt;   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError</failure></testcase><testcase classname="test_generated" name="test_token_lookup_key" time="0.001"><failure message="AttributeError: 'str' object has no attribute '_value'">def test_token_lookup_key():
+&gt;       d1 = DictToken({"key1": ScalarToken("value1", 0, 5, "tokens")}, 0, 5, "tokens")
+
+test_generated.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_keyiterator object at 0x7ff3300ce5c0&gt;
+
+&gt;   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError</failure></testcase><testcase classname="test_generated" name="test_scalar_token_get_value" time="0.001" /><testcase classname="test_generated" name="test_dict_token_get_value" time="0.001"><failure message="AttributeError: 'str' object has no attribute '_value'">def test_dict_token_get_value():
+&gt;       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_keyiterator object at 0x7ff330117920&gt;
+
+&gt;   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError</failure></testcase><testcase classname="test_generated" name="test_dict_token_get_child_token" time="0.001"><failure message="AttributeError: 'str' object has no attribute '_value'">def test_dict_token_get_child_token():
+&gt;       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_keyiterator object at 0x7ff3301bb560&gt;
+
+&gt;   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError</failure></testcase><testcase classname="test_generated" name="test_dict_token_get_key_token" time="0.001"><failure message="AttributeError: 'str' object has no attribute '_value'">def test_dict_token_get_key_token():
+&gt;       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_keyiterator object at 0x7ff330115350&gt;
+
+&gt;   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError</failure></testcase><testcase classname="test_generated" name="test_list_token_get_value" time="0.001" /><testcase classname="test_generated" name="test_list_token_get_child_token" time="0.001" /></testsuite></testsuites>

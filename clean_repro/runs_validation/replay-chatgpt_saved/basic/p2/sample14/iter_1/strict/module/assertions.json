@@ -1,0 +1,121 @@
+{
+ "status": "ok",
+ "static_assertions": 17,
+ "static_never_reached": 0,
+ "executed_assertions": 17,
+ "incorrect": 3,
+ "pct_incorrect": 17.65,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 2,
+ "pct_of_incorrect": {
+  "assertion": 33.33,
+  "try_except": 0.0,
+  "runtime": 66.67
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_either_case_left",
+   "aid": "test_generated.py:15:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_either_case_right",
+   "aid": "test_generated.py:28:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_bind",
+   "aid": "test_generated.py:48:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_is_left",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_is_right",
+   "aid": "test_generated.py:62:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_map",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_to_maybe",
+   "aid": "test_generated.py:69:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'bool' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_left_to_validation",
+   "aid": "test_generated.py:76:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_left_to_validation",
+   "aid": "test_generated.py:77:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_bind",
+   "aid": "test_generated.py:97:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_is_left",
+   "aid": "test_generated.py:111:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_is_right",
+   "aid": "test_generated.py:104:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_map",
+   "aid": "test_generated.py:87:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_to_maybe",
+   "aid": "test_generated.py:118:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+  },
+  {
+   "test": "test_generated.py::test_right_to_maybe",
+   "aid": "test_generated.py:119:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_to_validation",
+   "aid": "test_generated.py:126:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_right_to_validation",
+   "aid": "test_generated.py:127:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

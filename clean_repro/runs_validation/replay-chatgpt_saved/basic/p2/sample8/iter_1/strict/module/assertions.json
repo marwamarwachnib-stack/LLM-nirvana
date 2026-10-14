@@ -1,0 +1,18 @@
+{
+ "status": "ok",
+ "static_assertions": 13,
+ "static_never_reached": 13,
+ "executed_assertions": 0,
+ "incorrect": 0,
+ "pct_incorrect": null,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": null,
+  "try_except": null,
+  "runtime": null
+ },
+ "tests_with_errors_outside_assertions": 1,
+ "records": []
+}

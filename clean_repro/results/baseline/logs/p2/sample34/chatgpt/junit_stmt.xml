@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="5" time="0.144" timestamp="2026-10-14T00:53:26.400763" hostname="vm"><testcase classname="test_example" name="test_parse_empty" time="0.002" /><testcase classname="test_example" name="test_parse_short_description_only" time="0.001" /><testcase classname="test_example" name="test_parse_long_description_only" time="0.001"><failure message="AssertionError: assert 'A long description.' is None&#10; +  where 'A long description.' = &lt;common.Docstring object at 0x7fb4bed2cca0&gt;.short_description">def test_parse_long_description_only():
+        parser = GoogleParser()
+        docstring = parser.parse('\nA long description.\n')
+&gt;       assert docstring.short_description is None
+E       AssertionError: assert 'A long description.' is None
+E        +  where 'A long description.' = &lt;common.Docstring object at 0x7fb4bed2cca0&gt;.short_description
+
+test_example.py:25: AssertionError</failure></testcase><testcase classname="test_example" name="test_parse_short_and_long_description" time="0.001"><failure message="assert True == False&#10; +  where True = &lt;common.Docstring object at 0x7fb4be9dbdf0&gt;.blank_after_short_description">def test_parse_short_and_long_description():
+        parser = GoogleParser()
+        docstring = parser.parse('This is a short description.\n\nA long description.\n')
+        assert docstring.short_description == 'This is a short description.'
+        assert docstring.long_description == 'A long description.'
+&gt;       assert docstring.blank_after_short_description == False
+E       assert True == False
+E        +  where True = &lt;common.Docstring object at 0x7fb4be9dbdf0&gt;.blank_after_short_description
+
+test_example.py:36: AssertionError</failure></testcase><testcase classname="test_example" name="test_parse_multiple_sections" time="0.001"><failure message="assert True == False&#10; +  where True = &lt;common.Docstring object at 0x7fb4bed2eef0&gt;.blank_after_short_description">def test_parse_multiple_sections():
+        parser = GoogleParser()
+        docstring_text = '''
+        This is a short description.
+    
+        Args:
+            arg1 (int): Description for arg1.
+            arg2 (str): Description for arg2.
+    
+        Returns:
+            int: Description for the return value.
+        '''
+        docstring = parser.parse(docstring_text)
+        assert docstring.short_description == 'This is a short description.'
+        assert docstring.long_description is None
+&gt;       assert docstring.blank_after_short_description == False
+E       assert True == False
+E        +  where True = &lt;common.Docstring object at 0x7fb4bed2eef0&gt;.blank_after_short_description
+
+test_example.py:55: AssertionError</failure></testcase></testsuite></testsuites>

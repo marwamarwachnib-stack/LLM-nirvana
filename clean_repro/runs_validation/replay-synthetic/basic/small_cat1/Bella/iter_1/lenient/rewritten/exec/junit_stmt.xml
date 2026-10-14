@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="0.069" timestamp="2026-10-14T00:24:25.146850" hostname="vm"><testcase classname="test_generated" name="test_trump_card" time="0.001" /><testcase classname="test_generated" name="test_non_trump_card" time="0.001" /><testcase classname="test_generated" name="test_total" time="0.001" /><testcase classname="test_generated" name="test_wrong_expectation" time="0.001"><failure message="AssertionError: assert 0 == 14&#10; +  where 0 = total_points(['9S'], 'H')">def test_wrong_expectation():
+&gt;       assert total_points(["9S"], "H") == 14
+E       AssertionError: assert 0 == 14
+E        +  where 0 = total_points(['9S'], 'H')
+
+test_generated.py:14: AssertionError</failure></testcase></testsuite></testsuites>

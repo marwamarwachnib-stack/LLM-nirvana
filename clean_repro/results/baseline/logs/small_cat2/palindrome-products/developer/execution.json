@@ -1,0 +1,348 @@
+{
+ "summary": {
+  "collected": 13,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 98.28,
+  "stmts": 58,
+  "missing_lines": [
+   87
+  ],
+  "branch_cover": 97.67,
+  "branches": 28,
+  "branch_only_cover": 96.43,
+  "fail_kinds": {},
+  "wall_seconds": 1.56
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.78,
+  "collected": 13,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    23,
+    25,
+    26,
+    28,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    40,
+    41,
+    44,
+    51,
+    52,
+    54,
+    55,
+    57,
+    63,
+    65,
+    67,
+    70,
+    72,
+    73,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    88,
+    90,
+    91,
+    92,
+    93,
+    94,
+    98,
+    99,
+    101,
+    102,
+    104,
+    108
+   ],
+   "missing_lines": [
+    87
+   ],
+   "stmt_cover": 98.27586206896552,
+   "cover_percent": 98.27586206896552
+  },
+  "report_text": "Name                          Stmts   Miss  Cover   Missing\n-----------------------------------------------------------\npalindrome_products.py           58      1    98%   87\npalindrome_products_test.py      59      0   100%\n-----------------------------------------------------------\nTOTAL                           117      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_largest_if_no_palindrome_in_the_range",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_smallest_if_no_palindrome_in_the_range",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_largest_if_min_is_more_than_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_smallest_if_min_is_more_than_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_double_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_four_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_single_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_triple_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_double_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_four_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_single_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_triple_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_smallest_product_does_not_use_the_smallest_factor",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.78,
+  "collected": 13,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    23,
+    25,
+    26,
+    28,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    40,
+    41,
+    44,
+    51,
+    52,
+    54,
+    55,
+    57,
+    63,
+    65,
+    67,
+    70,
+    72,
+    73,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    88,
+    90,
+    91,
+    92,
+    93,
+    94,
+    98,
+    99,
+    101,
+    102,
+    104,
+    108
+   ],
+   "missing_lines": [
+    87
+   ],
+   "stmt_cover": 98.27586206896552,
+   "cover_percent": 97.67441860465117,
+   "branches": 28,
+   "partial": 1,
+   "covered_branches": 27,
+   "branch_only_cover": 96.42857142857143
+  },
+  "report_text": "Name                          Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------------------\npalindrome_products.py           58      1     28      1    98%   87\npalindrome_products_test.py      59      0      4      0   100%\n-------------------------------------------------------------------------\nTOTAL                           117      1     32      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_largest_if_no_palindrome_in_the_range",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_empty_result_for_smallest_if_no_palindrome_in_the_range",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_largest_if_min_is_more_than_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_error_result_for_smallest_if_min_is_more_than_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_double_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_four_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_single_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_largest_palindrome_from_triple_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_double_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_four_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_single_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_find_the_smallest_palindrome_from_triple_digit_factors",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "palindrome_products_test.PalindromeProductsTest::test_smallest_product_does_not_use_the_smallest_factor",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

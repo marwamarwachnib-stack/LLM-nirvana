@@ -1,0 +1,91 @@
+{
+ "status": "ok",
+ "static_assertions": 18,
+ "static_never_reached": 6,
+ "executed_assertions": 12,
+ "incorrect": 4,
+ "pct_incorrect": 33.33,
+ "n_assertion_error": 0,
+ "n_try_except": 4,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 100.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 3,
+ "records": [
+  {
+   "test": "test_generated.py::test_exception_wrapper_invalid_handler",
+   "aid": "test_generated.py:99:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_no_handler",
+   "aid": "test_generated.py:29:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'ValueError'>"
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler",
+   "aid": "test_generated.py:43:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'ValueError'>"
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_args",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_args",
+   "aid": "test_generated.py:51:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_args",
+   "aid": "test_generated.py:52:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_args",
+   "aid": "test_generated.py:59:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'ValueError'>"
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_kwargs",
+   "aid": "test_generated.py:66:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_kwargs",
+   "aid": "test_generated.py:67:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_kwargs",
+   "aid": "test_generated.py:68:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_exception_wrapper_with_handler_and_kwargs",
+   "aid": "test_generated.py:75:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'ValueError'>"
+  }
+ ]
+}

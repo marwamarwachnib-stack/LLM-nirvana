@@ -1,0 +1,6 @@
+model,sample_id,category,iteration,stmt_cover,carried_forward,extraction_status,stop_reason
+replay-synthetic,small_cat2/minesweeper,2,1,83.87,False,ok,
+replay-synthetic,small_cat2/minesweeper,2,2,100.0,False,ok,no missed statement left
+replay-synthetic,small_cat2/minesweeper,2,3,100.0,True,,
+replay-synthetic,small_cat2/minesweeper,2,4,100.0,True,,
+replay-synthetic,small_cat2/minesweeper,2,5,100.0,True,,

@@ -1,0 +1,115 @@
+{
+ "status": "ok",
+ "static_assertions": 16,
+ "static_never_reached": 2,
+ "executed_assertions": 16,
+ "incorrect": 14,
+ "pct_incorrect": 87.5,
+ "n_assertion_error": 2,
+ "n_try_except": 1,
+ "n_runtime": 11,
+ "pct_of_incorrect": {
+  "assertion": 14.29,
+  "try_except": 7.14,
+  "runtime": 78.57
+ },
+ "tests_with_errors_outside_assertions": 3,
+ "records": [
+  {
+   "test": "test_generated.py::test_tokenize_yaml",
+   "aid": "test_generated.py:21:assert",
+   "kind": "runtime",
+   "exc": "NameError: name 'DictToken' is not defined"
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml",
+   "aid": "test_generated.py:22:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml",
+   "aid": "test_generated.py:23:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml",
+   "aid": "test_generated.py:24:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'DictToken' object has no attribute 'content'"
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml_error[-No content.]",
+   "aid": "test_generated.py:10:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml_error[-No content.]",
+   "aid": "test_generated.py:12:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'ParseError' object has no attribute 'text'"
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml_error[Not a valid YAML string-parse_error]",
+   "aid": "test_generated.py:10:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'base.ParseError'>"
+  },
+  {
+   "test": "test_generated.py::test_tokenize_yaml_error[Not a valid YAML string-parse_error]",
+   "aid": "test_generated.py:12:assert",
+   "kind": "runtime",
+   "exc": "AssertionError: .value can only be used after the context manager exits"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_empty_string",
+   "aid": "test_generated.py:37:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_empty_string",
+   "aid": "test_generated.py:39:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'ParseError' object has no attribute 'text'"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_empty_string",
+   "aid": "test_generated.py:40:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'ParseError' object has no attribute 'code'"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_empty_string",
+   "aid": "test_generated.py:41:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'ParseError' object has no attribute 'position'"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_parse_error",
+   "aid": "test_generated.py:44:raises",
+   "kind": "runtime",
+   "exc": "AttributeError: 'dict' object has no attribute 'validate'"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_parse_error",
+   "aid": "test_generated.py:46:assert",
+   "kind": "runtime",
+   "exc": "AssertionError: .value can only be used after the context manager exits"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_parse_error",
+   "aid": "test_generated.py:47:assert",
+   "kind": "runtime",
+   "exc": "AssertionError: .value can only be used after the context manager exits"
+  },
+  {
+   "test": "test_generated.py::test_validate_yaml_parse_error",
+   "aid": "test_generated.py:48:assert",
+   "kind": "runtime",
+   "exc": "AssertionError: .value can only be used after the context manager exits"
+  }
+ ]
+}

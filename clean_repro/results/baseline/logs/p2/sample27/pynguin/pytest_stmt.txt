@@ -1,0 +1,99 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample27/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample27/pynguin/junit_stmt.xml test_json_schema.py
+# returncode=1 timed_out=False
+...xxxxx.xxx..x..xx.x.xxx.xxxx..x.F.xxx.x.xxxx                           [100%]
+=================================== FAILURES ===================================
+_________________________________ test_case_34 _________________________________
+
+    def test_case_34():
+        str_0 = "a\x0c"
+        none_type_0 = None
+        dict_0 = {str_0: none_type_0, none_type_0: str_0}
+        field_0 = module_0.type_from_json_schema(dict_0, dict_0)
+        assert f"{type(field_0).__module__}.{type(field_0).__qualname__}" == "fields.Union"
+        assert field_0.default is None
+        assert field_0.title == ""
+        assert field_0.description == ""
+        assert field_0.allow_null is True
+        assert (
+            f"{type(field_0.any_of).__module__}.{type(field_0.any_of).__qualname__}"
+            == "builtins.list"
+        )
+        assert len(field_0.any_of) == 5
+        assert module_0.TYPE_CONSTRAINTS == {
+            "minItems",
+            "pattern",
+            "additionalProperties",
+            "maximum",
+            "exclusiveMinimum",
+            "multipleOf",
+            "properties",
+            "minLength",
+            "items",
+            "propertyNames",
+            "maxProperties",
+            "uniqueItems",
+            "boolean_schema",
+            "minProperties",
+            "exclusiveMaximum",
+            "minimum",
+            "maxLength",
+            "maxItems",
+            "additionalItems",
+            "contains",
+            "required",
+            "patternProperties",
+            "type",
+            "dependencies",
+        }
+        field_1 = module_0.from_json_schema(dict_0)
+        assert f"{type(field_1).__module__}.{type(field_1).__qualname__}" == "fields.Any"
+        assert field_1.title == ""
+        assert field_1.description == ""
+        assert field_1.allow_null is False
+        var_0 = module_0.to_json_schema(field_0)
+        not_0 = module_3.Not(field_1)
+        assert (
+            f"{type(not_0.negated).__module__}.{type(not_0.negated).__qualname__}"
+            == "fields.Any"
+        )
+        object_0 = module_2.Object(additional_properties=not_0, required=none_type_0)
+        var_1 = module_0.to_json_schema(object_0)
+        field_2 = module_0.from_json_schema(var_1, none_type_0)
+        assert f"{type(field_2).__module__}.{type(field_2).__qualname__}" == "fields.Object"
+        assert field_2.title == ""
+        assert field_2.description == ""
+        assert field_2.allow_null is False
+        assert field_2.properties == {}
+        assert field_2.pattern_properties == {}
+        assert (
+            f"{type(field_2.additional_properties).__module__}.{type(field_2.additional_properties).__qualname__}"
+            == "composites.Not"
+        )
+        assert field_2.property_names is None
+        assert field_2.min_properties is None
+        assert field_2.max_properties is None
+        assert field_2.required == []
+        not_1 = module_3.Not(var_0)
+>       assert not_1.negated == {
+            "anyOf": [
+                {"type": "boolean"},
+                {"type": "string", "default": ""},
+                {"type": "array", "minItems": 0, "additionalItems": True},
+                {"type": "number"},
+                {"type": "object"},
+            ],
+            "default": None,
+        }
+E       AssertionError: assert {'anyOf': [{'...efault': None} == {'anyOf': [{'...efault': None}
+E         Omitting 1 identical items, use -vv to show
+E         Differing items:
+E         {'anyOf': [{'type': 'number'}, {'type': 'boolean'}, {'type': 'object'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}]} != {'anyOf': [{'type': 'boolean'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}, {'type': 'number'}, {'type': 'object'}]}
+E         Use -v to get more diff
+
+test_json_schema.py:1208: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample27/pynguin/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_json_schema.py::test_case_34 - AssertionError: assert {'anyOf': [...
+1 failed, 17 passed, 28 xfailed in 2.69s
+
+--- stderr ---

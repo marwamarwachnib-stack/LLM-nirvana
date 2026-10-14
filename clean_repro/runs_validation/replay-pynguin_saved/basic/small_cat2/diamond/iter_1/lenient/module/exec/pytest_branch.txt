@@ -1,0 +1,7 @@
+$ /opt/clean_repro/conda/envs/exec/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-pynguin_saved/basic/small_cat2/diamond/iter_1/lenient/module/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-pynguin_saved/basic/small_cat2/diamond/iter_1/lenient/module/junit_branch.xml test_generated.py
+# returncode=0 timed_out=False
+xx                                                                       [100%]
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-pynguin_saved/basic/small_cat2/diamond/iter_1/lenient/module/junit_branch.xml -
+2 xfailed in 0.05s
+
+--- stderr ---

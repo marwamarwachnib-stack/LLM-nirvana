@@ -1,0 +1,375 @@
+{
+ "summary": {
+  "collected": 14,
+  "passed": 11,
+  "failed": 3,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 84.21,
+  "stmts": 57,
+  "missing_lines": [
+   46,
+   55,
+   57,
+   66,
+   68,
+   77,
+   79,
+   82,
+   111
+  ],
+  "branch_cover": 81.97,
+  "branches": 4,
+  "branch_only_cover": 50.0,
+  "fail_kinds": {
+   "runtime": 2,
+   "assertion": 1
+  },
+  "wall_seconds": 2.12
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.08,
+  "collected": 14,
+  "passed": 11,
+  "failed": 3,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 57,
+   "miss": 9,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    14,
+    15,
+    17,
+    18,
+    22,
+    33,
+    34,
+    35,
+    37,
+    48,
+    59,
+    70,
+    81,
+    85,
+    86,
+    88,
+    95,
+    97,
+    104,
+    106,
+    113,
+    118,
+    120,
+    125,
+    127,
+    134,
+    136,
+    138,
+    145,
+    147,
+    150,
+    151,
+    153,
+    162,
+    164,
+    173,
+    175,
+    180,
+    182,
+    187,
+    189,
+    196,
+    198,
+    200,
+    207,
+    209
+   ],
+   "missing_lines": [
+    46,
+    55,
+    57,
+    66,
+    68,
+    77,
+    79,
+    82,
+    111
+   ],
+   "stmt_cover": 84.21052631578948,
+   "cover_percent": 84.21052631578948
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             0      0   100%\neither.py              57      9    84%   46, 55-57, 66-68, 77-79, 82, 111\ntest_generated.py      77      5    94%   10, 20, 33, 43, 119\n-------------------------------------------------\nTOTAL                 134     14    90%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_either_case_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_either_case_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_is_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_is_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'bool' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_left_to_validation",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert None == [5]\n +  where None = <pymonet.validation.Validation object at 0x7fcfdfab7a30>.value"
+   },
+   {
+    "nodeid": "test_generated::test_right_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_is_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_is_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+   },
+   {
+    "nodeid": "test_generated::test_right_to_validation",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.04,
+  "collected": 14,
+  "passed": 11,
+  "failed": 3,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 57,
+   "miss": 9,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    14,
+    15,
+    17,
+    18,
+    22,
+    33,
+    34,
+    35,
+    37,
+    48,
+    59,
+    70,
+    81,
+    85,
+    86,
+    88,
+    95,
+    97,
+    104,
+    106,
+    113,
+    118,
+    120,
+    125,
+    127,
+    134,
+    136,
+    138,
+    145,
+    147,
+    150,
+    151,
+    153,
+    162,
+    164,
+    173,
+    175,
+    180,
+    182,
+    187,
+    189,
+    196,
+    198,
+    200,
+    207,
+    209
+   ],
+   "missing_lines": [
+    46,
+    55,
+    57,
+    66,
+    68,
+    77,
+    79,
+    82,
+    111
+   ],
+   "stmt_cover": 84.21052631578948,
+   "cover_percent": 81.9672131147541,
+   "branches": 4,
+   "partial": 0,
+   "covered_branches": 2,
+   "branch_only_cover": 50.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             0      0      0      0   100%\neither.py              57      9      4      0    82%   46, 55-57, 66-68, 77-79, 82, 111\ntest_generated.py      77      5      0      0    94%   10, 20, 33, 43, 119\n---------------------------------------------------------------\nTOTAL                 134     14      4      0    88%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_either_case_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_either_case_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_is_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_is_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_left_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'bool' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_left_to_validation",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert None == [5]\n +  where None = <pymonet.validation.Validation object at 0x7f75a7fcfa30>.value"
+   },
+   {
+    "nodeid": "test_generated::test_right_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_is_right",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_is_left",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_right_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+   },
+   {
+    "nodeid": "test_generated::test_right_to_validation",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

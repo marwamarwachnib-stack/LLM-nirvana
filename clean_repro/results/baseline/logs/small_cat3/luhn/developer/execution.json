@@ -1,0 +1,384 @@
+{
+ "summary": {
+  "collected": 23,
+  "passed": 23,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 18,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 8,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.83
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.43,
+  "collected": 23,
+  "passed": 23,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 18,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name           Stmts   Miss  Cover   Missing\n--------------------------------------------\nluhn.py           18      0   100%\nluhn_test.py      51      0   100%\n--------------------------------------------\nTOTAL             69      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_single_zero_is_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_valid_canadian_sin",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_canadian_sin",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_credit_card",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_long_number_with_an_even_remainder",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_is_valid_can_be_called_repeatedly",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_more_than_a_single_zero_is_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_single_digit_strings_can_not_be_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_single_zero_with_space_is_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_number_with_an_even_number_of_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_number_with_an_odd_number_of_spaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_punctuation_included_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_symbols_included_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_very_long_input_is_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.4,
+  "collected": 23,
+  "passed": 23,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 18,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 8,
+   "partial": 0,
+   "covered_branches": 8,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name           Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------\nluhn.py           18      0      8      0   100%\nluhn_test.py      51      0      0      0   100%\n----------------------------------------------------------\nTOTAL             69      0      8      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_single_zero_is_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_a_valid_canadian_sin",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_canadian_sin",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_credit_card",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_invalid_long_number_with_an_even_remainder",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_is_valid_can_be_called_repeatedly",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_more_than_a_single_zero_is_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_single_digit_strings_can_not_be_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_single_zero_with_space_is_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_number_with_an_even_number_of_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_number_with_an_odd_number_of_spaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_punctuation_included_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_valid_strings_with_symbols_included_become_invalid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "luhn_test.LuhnTest::test_very_long_input_is_valid",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

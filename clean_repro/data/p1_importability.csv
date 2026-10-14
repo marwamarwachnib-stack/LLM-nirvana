@@ -1,0 +1,42 @@
+sample_id,category,importable,error,loc
+p1_cat1/s15,1,False,Colmap converter: error: the following arguments are required: --source_path/-s,115
+p1_cat2/s1,2,False,ModuleNotFoundError: No module named 'copier',190
+p1_cat2/s2,2,False,AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?,133
+p1_cat2/s3,2,False,ModuleNotFoundError: No module named 'onnxruntime',192
+p1_cat2/s4,2,False,ModuleNotFoundError: No module named 'onnxruntime',222
+p1_cat2/s5,2,False,ModuleNotFoundError: No module named 'torch',123
+p1_cat2/s6,2,False,ModuleNotFoundError: No module named 'torch',210
+p1_cat2/s7,2,True,,117
+p1_cat2/s8,2,False,ModuleNotFoundError: No module named 'utils',263
+p1_cat2/s9,2,False,ModuleNotFoundError: No module named 'Stoner',385
+p1_cat2/s10,2,False,ModuleNotFoundError: No module named 'vbench',149
+p1_cat2/s11,2,False,ModuleNotFoundError: No module named 'pyaudio',95
+p1_cat2/s12,2,False,ModuleNotFoundError: No module named 'MySQLdb',131
+p1_cat2/s13,2,False,ModuleNotFoundError: No module named 'allocation',120
+p1_cat2/s14,2,False,ModuleNotFoundError: No module named 'Quadrotor',213
+p1_cat2/s15,2,True,,268
+p1_cat2/s16,2,False,ModuleNotFoundError: No module named 'ArmNavigation',167
+p1_cat2/s17,2,True,,144
+p1_cat2/s18,2,True,,192
+p1_cat2/s19,2,True,,187
+p1_cat2/s20,2,True,,246
+p1_cat3/s1,3,True,,169
+p1_cat3/s2,3,False,AttributeError: module 'collections' has no attribute 'abc',144
+p1_cat3/s3,3,True,,111
+p1_cat3/s4,3,False,ModuleNotFoundError: No module named 'i3',153
+p1_cat3/s5,3,False,ModuleNotFoundError: No module named 'copy_state_db',199
+p1_cat3/s6,3,False,ModuleNotFoundError: No module named 'bson',260
+p1_cat3/s7,3,False,ModuleNotFoundError: No module named 'pacemaker',274
+p1_cat3/s8,3,False,ModuleNotFoundError: No module named 'skvideo',142
+p1_cat3/s9,3,False,FileNotFoundError: [Errno 2] No such file or directory: 'dowstocks.csv',171
+p1_cat3/s10,3,False,ModuleNotFoundError: No module named 'discord',125
+p1_cat3/s11,3,False,ModuleNotFoundError: No module named 'discord',151
+p1_cat3/s12,3,False,ModuleNotFoundError: No module named 'prompttools',135
+p1_cat3/s13,3,True,,176
+p1_cat3/s14,3,False,ModuleNotFoundError: No module named 'cPickle',256
+p1_cat3/s15,3,True,,214
+p1_cat3/s16,3,True,,205
+p1_cat3/s17,3,True,,190
+p1_cat3/s18,3,False,ModuleNotFoundError: No module named 'move_to_pose',240
+p1_cat3/s19,3,True,,312
+p1_cat3/s20,3,True,,215

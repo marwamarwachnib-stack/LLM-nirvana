@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="11" time="0.178" timestamp="2026-10-14T00:43:12.791466" hostname="vm"><testcase classname="test_generated" name="test_success" time="0.001" /><testcase classname="test_generated" name="test_fail" time="0.001" /><testcase classname="test_generated" name="test_eq" time="0.001" /><testcase classname="test_generated" name="test_map" time="0.001" /><testcase classname="test_generated" name="test_bind" time="0.001" /><testcase classname="test_generated" name="test_ap" time="0.001"><failure message="TypeError: 'Validation' object is not callable">def test_ap():
+        val1 = Validation.success(5)
+        val2 = Validation.success(lambda x: x * 2)
+&gt;       new_val = val2.ap(val1)
+
+test_generated.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;validation.Validation object at 0x7fc91e4aac20&gt;
+fn = &lt;validation.Validation object at 0x7fc91e4aacb0&gt;
+
+    def ap(self, fn):
+        """
+        It takes as a parameter function returning another Validation.
+        Function is called with Validation value and returns new Validation with previous value
+        and concated new and old errors.
+    
+        :param monad: monad contains function
+        :type monad: Function(A) -&gt; Validation[Any, List[E]]
+        :returns: new validation with stored errors
+        :rtype: Validation[A, List[E]]
+        """
+&gt;       return Validation(self.value, self.errors + fn(self.value).errors)
+E       TypeError: 'Validation' object is not callable
+
+validation.py:96: TypeError</failure></testcase><testcase classname="test_generated" name="test_to_either" time="0.002"><failure message="AttributeError: 'Right' object has no attribute 'right'">def test_to_either():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        either1 = val1.to_either()
+        either2 = val2.to_either()
+        assert either1.is_right() is True
+&gt;       assert either1.right() == 5
+E       AttributeError: 'Right' object has no attribute 'right'
+
+test_generated.py:51: AttributeError</failure></testcase><testcase classname="test_generated" name="test_to_maybe" time="0.002"><failure message="AttributeError: 'Maybe' object has no attribute 'is_just'">def test_to_maybe():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        maybe1 = val1.to_maybe()
+        maybe2 = val2.to_maybe()
+&gt;       assert maybe1.is_just() is True
+E       AttributeError: 'Maybe' object has no attribute 'is_just'
+
+test_generated.py:60: AttributeError</failure></testcase><testcase classname="test_generated" name="test_to_box" time="0.001" /><testcase classname="test_generated" name="test_to_lazy" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">def test_to_lazy():
+        val = Validation.success(5)
+        lazy = val.to_lazy()
+&gt;       assert lazy.value() == 5
+E       TypeError: 'NoneType' object is not callable
+
+test_generated.py:72: TypeError</failure></testcase><testcase classname="test_generated" name="test_to_try" time="0.001"><failure message="TypeError: 'bool' object is not callable">def test_to_try():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        try1 = val1.to_try()
+        try2 = val2.to_try()
+&gt;       assert try1.is_success() is True
+E       TypeError: 'bool' object is not callable
+
+test_generated.py:79: TypeError</failure></testcase></testsuite></testsuites>

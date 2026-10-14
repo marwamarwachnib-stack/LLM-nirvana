@@ -1,0 +1,149 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample25/pynguin/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample25/pynguin/junit_branch.xml test_base.py
+# returncode=1 timed_out=False
+.......x.F..xx..Fx.x.x..F..xx....x.xFxFxxxFx                             [100%]
+=================================== FAILURES ===================================
+_________________________________ test_case_9 __________________________________
+
+    def test_case_9():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+>       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:144: AssertionError
+_________________________________ test_case_16 _________________________________
+
+    def test_case_16():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+>       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:237: AssertionError
+_________________________________ test_case_24 _________________________________
+
+    def test_case_24():
+        none_type_0 = None
+        validation_result_0 = module_0.ValidationResult()
+        position_0 = module_0.Position(none_type_0, none_type_0, none_type_0)
+        none_type_1 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_1
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+>       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:387: AssertionError
+_________________________________ test_case_36 _________________________________
+
+    def test_case_36():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        str_1 = message_0.__repr__()
+        assert (
+            str_1
+            == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom', index=['cfPI`g:CXV\\x0cS\\tI'], position='cfPI`g:CXV\\x0cS\\tI')"
+        )
+        bool_0 = message_0.__eq__(message_0)
+        assert bool_0 is True
+        message_1 = module_0.Message(
+            text=none_type_0, key=none_type_0, start_position=none_type_0
+        )
+        assert message_1.code == "custom"
+        assert message_1.index == []
+        parse_error_0 = module_0.ParseError(text=str_0, position=none_type_0)
+        assert (
+            f"{type(parse_error_0).__module__}.{type(parse_error_0).__qualname__}"
+            == "base.ParseError"
+        )
+        assert len(parse_error_0) == 1
+        int_0 = message_1.__hash__()
+>       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:677: AssertionError
+_________________________________ test_case_38 _________________________________
+
+    def test_case_38():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=none_type_0, index=none_type_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == []
+        str_1 = message_0.__repr__()
+        assert str_1 == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom')"
+        bool_0 = message_0.__eq__(none_type_0)
+        assert bool_0 is False
+        message_1 = module_0.Message(text=str_0, code=str_1, key=none_type_0)
+        assert message_1.code == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom')"
+        assert message_1.index == []
+        parse_error_0 = module_0.ParseError(text=str_1)
+        assert (
+            f"{type(parse_error_0).__module__}.{type(parse_error_0).__qualname__}"
+            == "base.ParseError"
+        )
+        assert len(parse_error_0) == 1
+        int_0 = message_0.__hash__()
+>       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:786: AssertionError
+_________________________________ test_case_42 _________________________________
+
+    def test_case_42():
+        none_type_0 = None
+        validation_result_0 = module_0.ValidationResult()
+        bool_0 = True
+        position_0 = module_0.Position(bool_0, bool_0, none_type_0)
+        none_type_1 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(text=str_0, end_position=none_type_0)
+        assert message_0.code == "custom"
+        assert message_0.index == []
+        int_0 = message_0.__hash__()
+>       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:954: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample25/pynguin/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_base.py::test_case_9 - assert 4855823748917988287 == 532247332771...
+FAILED test_base.py::test_case_16 - assert 4855823748917988287 == 53224733277...
+FAILED test_base.py::test_case_24 - assert 4855823748917988287 == 53224733277...
+FAILED test_base.py::test_case_36 - assert -833247603234532628 == -3236363584...
+FAILED test_base.py::test_case_38 - assert -833247603234532628 == -3236363584...
+FAILED test_base.py::test_case_42 - assert -833247603234532628 == -3236363584...
+6 failed, 23 passed, 15 xfailed in 1.27s
+
+--- stderr ---

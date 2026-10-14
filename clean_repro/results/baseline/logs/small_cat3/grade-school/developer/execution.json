@@ -1,0 +1,360 @@
+{
+ "summary": {
+  "collected": 20,
+  "passed": 20,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 24,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 10,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.81
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.37,
+  "collected": 20,
+  "passed": 20,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 24,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    20,
+    23,
+    24,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                   Stmts   Miss  Cover   Missing\n----------------------------------------------------\ngrade_school.py           24      0   100%\ngrade_school_test.py     143      0   100%\n----------------------------------------------------\nTOTAL                    167      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_add_a_student",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_adding_multiple_students_in_the_same_grade_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_adding_students_in_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_cannot_add_same_student_to_multiple_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_cannot_add_student_to_same_grade_in_the_roster_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_grade_is_empty_if_no_students_in_that_grade",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_grade_is_empty_if_no_students_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_multiple_students_in_the_same_grade_are_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_roster_is_empty_when_no_student_is_added",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_is_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_multiple_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_other_grade_for_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_same_grade_in_the_roster_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_same_grade_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_grades_and_then_by_name_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_name_in_a_grade",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_name_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_in_multiple_grades_are_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.44,
+  "collected": 20,
+  "passed": 20,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 24,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    20,
+    23,
+    24,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 10,
+   "partial": 0,
+   "covered_branches": 10,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                   Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------------------\ngrade_school.py           24      0     10      0   100%\ngrade_school_test.py     143      0      0      0   100%\n------------------------------------------------------------------\nTOTAL                    167      0     10      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_add_a_student",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_adding_multiple_students_in_the_same_grade_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_adding_students_in_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_cannot_add_same_student_to_multiple_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_cannot_add_student_to_same_grade_in_the_roster_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_grade_is_empty_if_no_students_in_that_grade",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_grade_is_empty_if_no_students_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_multiple_students_in_the_same_grade_are_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_roster_is_empty_when_no_student_is_added",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_is_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_multiple_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_other_grade_for_multiple_grades",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_same_grade_in_the_roster_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_student_not_added_to_same_grade_more_than_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_grades_and_then_by_name_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_grades_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_name_in_a_grade",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_are_sorted_by_name_in_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "grade_school_test.GradeSchoolTest::test_students_in_multiple_grades_are_added_to_the_roster",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

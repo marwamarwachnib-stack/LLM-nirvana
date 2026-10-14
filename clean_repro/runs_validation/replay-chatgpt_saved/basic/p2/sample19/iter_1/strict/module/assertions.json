@@ -1,0 +1,223 @@
+{
+ "status": "ok",
+ "static_assertions": 34,
+ "static_never_reached": 0,
+ "executed_assertions": 34,
+ "incorrect": 1,
+ "pct_incorrect": 2.94,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 1,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 0.0,
+  "runtime": 100.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_all_concat_true_false",
+   "aid": "test_generated.py:45:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_all_concat_true_true",
+   "aid": "test_generated.py:40:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_all_eq",
+   "aid": "test_generated.py:31:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_all_fold",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_all_init",
+   "aid": "test_generated.py:26:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_first_concat",
+   "aid": "test_generated.py:88:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_first_eq",
+   "aid": "test_generated.py:79:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_first_fold",
+   "aid": "test_generated.py:83:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_first_init",
+   "aid": "test_generated.py:74:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_last_concat",
+   "aid": "test_generated.py:107:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_last_eq",
+   "aid": "test_generated.py:98:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_last_fold",
+   "aid": "test_generated.py:102:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_last_init",
+   "aid": "test_generated.py:93:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_map_concat",
+   "aid": "test_generated.py:126:assert",
+   "kind": "runtime",
+   "exc": "KeyError: 1"
+  },
+  {
+   "test": "test_generated.py::test_map_eq",
+   "aid": "test_generated.py:117:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_map_fold",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_map_init",
+   "aid": "test_generated.py:112:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_max_concat",
+   "aid": "test_generated.py:145:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_max_eq",
+   "aid": "test_generated.py:136:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_max_fold",
+   "aid": "test_generated.py:140:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_max_init",
+   "aid": "test_generated.py:131:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_min_concat",
+   "aid": "test_generated.py:164:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_min_eq",
+   "aid": "test_generated.py:155:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_min_fold",
+   "aid": "test_generated.py:159:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_min_init",
+   "aid": "test_generated.py:150:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_one_concat_true_false",
+   "aid": "test_generated.py:69:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_one_concat_true_true",
+   "aid": "test_generated.py:64:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_one_eq",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_one_fold",
+   "aid": "test_generated.py:59:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_one_init",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_sum_concat",
+   "aid": "test_generated.py:21:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_sum_eq",
+   "aid": "test_generated.py:12:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_sum_fold",
+   "aid": "test_generated.py:16:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_sum_init",
+   "aid": "test_generated.py:7:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

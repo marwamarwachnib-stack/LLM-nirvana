@@ -1,0 +1,360 @@
+{
+ "summary": {
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 18,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 13,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.82
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.39,
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 18,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                    Stmts   Miss  Cover   Missing\n-----------------------------------------------------\nall_your_base.py           18      0   100%\nall_your_base_test.py      72      0   100%\n-----------------------------------------------------\nTOTAL                      90      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_15_bit_integer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_binary_to_multiple_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_binary_to_single_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_both_bases_are_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_decimal_to_binary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_hexadecimal_to_trinary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_one",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_invalid_positive_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_leading_zeros",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_multiple_zeros",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_negative_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_one",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_bit_one_to_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_decimal_to_binary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_trinary_to_hexadecimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.43,
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 18,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 13,
+   "partial": 0,
+   "covered_branches": 13,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                    Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------------\nall_your_base.py           18      0     13      0   100%\nall_your_base_test.py      72      0     18      0   100%\n-------------------------------------------------------------------\nTOTAL                      90      0     31      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_15_bit_integer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_binary_to_multiple_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_binary_to_single_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_both_bases_are_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_decimal_to_binary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_hexadecimal_to_trinary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_one",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_input_base_is_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_invalid_positive_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_leading_zeros",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_multiple_zeros",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_negative_digit",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_negative",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_one",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_output_base_is_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_bit_one_to_decimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_decimal_to_binary",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_single_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "all_your_base_test.AllYourBaseTest::test_trinary_to_hexadecimal",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

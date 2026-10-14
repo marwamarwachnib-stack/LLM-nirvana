@@ -1,0 +1,109 @@
+{
+ "status": "ok",
+ "static_assertions": 15,
+ "static_never_reached": 0,
+ "executed_assertions": 15,
+ "incorrect": 5,
+ "pct_incorrect": 33.33,
+ "n_assertion_error": 5,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_try_bind_failure",
+   "aid": "test_generated.py:26:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_bind_success",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_filter_failure",
+   "aid": "test_generated.py:54:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_filter_success",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_get",
+   "aid": "test_generated.py:58:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_get_or_else_failure",
+   "aid": "test_generated.py:66:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_get_or_else_success",
+   "aid": "test_generated.py:62:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_map_failure",
+   "aid": "test_generated.py:18:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_map_success",
+   "aid": "test_generated.py:14:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_of_failure",
+   "aid": "test_generated.py:10:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_of_success",
+   "aid": "test_generated.py:6:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_on_fail",
+   "aid": "test_generated.py:45:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_on_fail",
+   "aid": "test_generated.py:46:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_on_success",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_try_on_success",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

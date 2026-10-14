@@ -1,0 +1,7 @@
+Name                     Stmts   Miss  Cover   Missing
+------------------------------------------------------
+error_handling.py           15      0   100%
+error_handling_test.py      33      1    97%   55
+test_utils.py               21      0   100%
+------------------------------------------------------
+TOTAL                       69      1    99%

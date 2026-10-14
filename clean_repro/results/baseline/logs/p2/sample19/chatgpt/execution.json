@@ -1,0 +1,598 @@
+{
+ "summary": {
+  "collected": 34,
+  "passed": 33,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 97.44,
+  "stmts": 39,
+  "missing_lines": [
+   21
+  ],
+  "branch_cover": 97.56,
+  "branches": 2,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {
+   "runtime": 1
+  },
+  "wall_seconds": 2.2
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.06,
+  "collected": 34,
+  "passed": 33,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    24,
+    25,
+    29,
+    31,
+    34,
+    41,
+    44,
+    45,
+    49,
+    51,
+    54,
+    61,
+    64,
+    65,
+    69,
+    71,
+    74,
+    81,
+    84,
+    85,
+    89,
+    92,
+    99,
+    102,
+    103,
+    107,
+    110,
+    117,
+    120,
+    121,
+    125,
+    128,
+    135,
+    140,
+    141,
+    145,
+    147,
+    150,
+    157,
+    160,
+    161,
+    165,
+    167,
+    170,
+    177
+   ],
+   "missing_lines": [
+    21
+   ],
+   "stmt_cover": 97.43589743589743,
+   "cover_percent": 97.43589743589743
+  },
+  "report_text": "Name              Stmts   Miss  Cover   Missing\n-----------------------------------------------\n__init__.py           0      0   100%\nsemigroups.py        39      1    97%   21\ntest_example.py     122      0   100%\n-----------------------------------------------\nTOTAL               161      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_sum_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_concat_true_true",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_concat_true_false",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_concat_true_true",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_concat_true_false",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_concat",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "KeyError: 1"
+   },
+   {
+    "nodeid": "test_example::test_max_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.14,
+  "collected": 34,
+  "passed": 33,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    24,
+    25,
+    29,
+    31,
+    34,
+    41,
+    44,
+    45,
+    49,
+    51,
+    54,
+    61,
+    64,
+    65,
+    69,
+    71,
+    74,
+    81,
+    84,
+    85,
+    89,
+    92,
+    99,
+    102,
+    103,
+    107,
+    110,
+    117,
+    120,
+    121,
+    125,
+    128,
+    135,
+    140,
+    141,
+    145,
+    147,
+    150,
+    157,
+    160,
+    161,
+    165,
+    167,
+    170,
+    177
+   ],
+   "missing_lines": [
+    21
+   ],
+   "stmt_cover": 97.43589743589743,
+   "cover_percent": 97.5609756097561,
+   "branches": 2,
+   "partial": 0,
+   "covered_branches": 2,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name              Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------\n__init__.py           0      0      0      0   100%\nsemigroups.py        39      1      2      0    98%   21\ntest_example.py     122      0     16      0   100%\n-------------------------------------------------------------\nTOTAL               161      1     18      0    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_sum_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_sum_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_concat_true_true",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_all_concat_true_false",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_concat_true_true",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_one_concat_true_false",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_first_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_last_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map_concat",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "KeyError: 1"
+   },
+   {
+    "nodeid": "test_example::test_max_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_max_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_fold",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_min_concat",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "summary": {
+  "collected": 12,
+  "passed": 10,
+  "failed": 2,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 97.3,
+  "stmts": 37,
+  "missing_lines": [
+   141
+  ],
+  "branch_cover": 93.65,
+  "branches": 26,
+  "branch_only_cover": 88.46,
+  "fail_kinds": {
+   "assertion": 1,
+   "runtime": 1
+  },
+  "wall_seconds": 2.16
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.11,
+  "collected": 12,
+  "passed": 10,
+  "failed": 2,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 37,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    5,
+    10,
+    13,
+    23,
+    36,
+    55,
+    56,
+    57,
+    58,
+    61,
+    81,
+    82,
+    83,
+    84,
+    85,
+    88,
+    109,
+    110,
+    111,
+    112,
+    116,
+    138,
+    139,
+    140,
+    142,
+    143,
+    146,
+    201,
+    202,
+    203,
+    206,
+    228,
+    229,
+    230,
+    231
+   ],
+   "missing_lines": [
+    141
+   ],
+   "stmt_cover": 97.29729729729729,
+   "cover_percent": 97.29729729729729
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             5      0   100%\nmoduleutils.py        235     85    64%   65-66, 69-70, 73-74, 77, 117, 170-171, 182, 196, 202-203, 227-238, 253-255, 291, 326, 333, 482, 503, 512, 517-522, 538, 563-605, 611-612, 633, 639-640, 644, 649-660, 703-772\nobjutils.py            37      1    97%   141\ntest_generated.py      39      0   100%\n-------------------------------------------------\nTOTAL                 316     86    73%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_has_any_attrs_returns_true_when_object_has_any_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_attrs_returns_false_when_object_does_not_have_any_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_callables_returns_true_when_object_has_any_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_callables_returns_false_when_object_does_not_have_any_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_attrs_returns_true_when_object_has_all_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_attrs_returns_false_when_object_does_not_have_all_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_callables_returns_true_when_object_has_all_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_callables_returns_false_when_object_does_not_have_all_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_list_like_returns_true_when_object_is_list_like",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_list_like_returns_false_when_object_is_not_list_like",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert False is True\n +  where False = is_subclass_of_any(dict_keys(['a', 'b']), list, set, dict)\n +    where dict_keys(['a', 'b']) = <built-in method keys of dict object at 0x7fc1cc888c00>()\n +      where <built-in method keys of dict object at 0x7fc1cc888c00> = {'a': 1, 'b': 2}.keys"
+   },
+   {
+    "nodeid": "test_generated::test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "NameError: name 'deque' is not defined"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.05,
+  "collected": 12,
+  "passed": 10,
+  "failed": 2,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 37,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    5,
+    10,
+    13,
+    23,
+    36,
+    55,
+    56,
+    57,
+    58,
+    61,
+    81,
+    82,
+    83,
+    84,
+    85,
+    88,
+    109,
+    110,
+    111,
+    112,
+    116,
+    138,
+    139,
+    140,
+    142,
+    143,
+    146,
+    201,
+    202,
+    203,
+    206,
+    228,
+    229,
+    230,
+    231
+   ],
+   "missing_lines": [
+    141
+   ],
+   "stmt_cover": 97.29729729729729,
+   "cover_percent": 93.65079365079364,
+   "branches": 26,
+   "partial": 3,
+   "covered_branches": 23,
+   "branch_only_cover": 88.46153846153847
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             5      0      0      0   100%\nmoduleutils.py        235     85     86     17    60%   65-66, 69-70, 73-74, 77, 117, 125->130, 170-171, 182, 196, 202-203, 227-238, 253-255, 291, 326, 333, 372->376, 482, 503, 512, 517-522, 538, 563-605, 611-612, 633, 639-640, 644, 649-660, 703-772\nobjutils.py            37      1     26      3    94%   82->85, 83->82, 141\ntest_generated.py      39      0      0      0   100%\n---------------------------------------------------------------\nTOTAL                 316     86    112     20    69%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_has_any_attrs_returns_true_when_object_has_any_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_attrs_returns_false_when_object_does_not_have_any_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_callables_returns_true_when_object_has_any_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_any_callables_returns_false_when_object_does_not_have_any_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_attrs_returns_true_when_object_has_all_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_attrs_returns_false_when_object_does_not_have_all_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_callables_returns_true_when_object_has_all_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_has_callables_returns_false_when_object_does_not_have_all_callable_attributes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_list_like_returns_true_when_object_is_list_like",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_list_like_returns_false_when_object_is_not_list_like",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert False is True\n +  where False = is_subclass_of_any(dict_keys(['a', 'b']), list, set, dict)\n +    where dict_keys(['a', 'b']) = <built-in method keys of dict object at 0x7f4736bed380>()\n +      where <built-in method keys of dict object at 0x7f4736bed380> = {'a': 1, 'b': 2}.keys"
+   },
+   {
+    "nodeid": "test_generated::test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "NameError: name 'deque' is not defined"
+   }
+  ]
+ }
+}

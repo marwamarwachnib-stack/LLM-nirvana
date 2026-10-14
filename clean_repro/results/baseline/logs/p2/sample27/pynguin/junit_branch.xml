@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="28" tests="46" time="2.800" timestamp="2026-10-14T00:52:06.299954" hostname="vm"><testcase classname="test_json_schema" name="test_case_0" time="0.001" /><testcase classname="test_json_schema" name="test_case_1" time="0.001" /><testcase classname="test_json_schema" name="test_case_2" time="0.001" /><testcase classname="test_json_schema" name="test_case_3" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_4" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_5" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_6" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_7" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_8" time="0.001" /><testcase classname="test_json_schema" name="test_case_9" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_10" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_11" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_12" time="0.001" /><testcase classname="test_json_schema" name="test_case_13" time="0.001" /><testcase classname="test_json_schema" name="test_case_14" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_15" time="0.001" /><testcase classname="test_json_schema" name="test_case_16" time="0.001" /><testcase classname="test_json_schema" name="test_case_17" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_18" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_19" time="0.001" /><testcase classname="test_json_schema" name="test_case_20" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_21" time="0.001" /><testcase classname="test_json_schema" name="test_case_22" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_23" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_24" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_25" time="0.001" /><testcase classname="test_json_schema" name="test_case_26" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_27" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_28" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_29" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_30" time="0.001" /><testcase classname="test_json_schema" name="test_case_31" time="0.001" /><testcase classname="test_json_schema" name="test_case_32" time="0.002"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_33" time="0.003" /><testcase classname="test_json_schema" name="test_case_34" time="0.004"><failure message="AssertionError: assert {'anyOf': [{'...efault': None} == {'anyOf': [{'...efault': None}&#10;  Omitting 1 identical items, use -vv to show&#10;  Differing items:&#10;  {'anyOf': [{'type': 'number'}, {'type': 'boolean'}, {'type': 'object'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}]} != {'anyOf': [{'type': 'boolean'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}, {'type': 'number'}, {'type': 'object'}]}&#10;  Use -v to get more diff">def test_case_34():
+        str_0 = "a\x0c"
+        none_type_0 = None
+        dict_0 = {str_0: none_type_0, none_type_0: str_0}
+        field_0 = module_0.type_from_json_schema(dict_0, dict_0)
+        assert f"{type(field_0).__module__}.{type(field_0).__qualname__}" == "fields.Union"
+        assert field_0.default is None
+        assert field_0.title == ""
+        assert field_0.description == ""
+        assert field_0.allow_null is True
+        assert (
+            f"{type(field_0.any_of).__module__}.{type(field_0.any_of).__qualname__}"
+            == "builtins.list"
+        )
+        assert len(field_0.any_of) == 5
+        assert module_0.TYPE_CONSTRAINTS == {
+            "minItems",
+            "pattern",
+            "additionalProperties",
+            "maximum",
+            "exclusiveMinimum",
+            "multipleOf",
+            "properties",
+            "minLength",
+            "items",
+            "propertyNames",
+            "maxProperties",
+            "uniqueItems",
+            "boolean_schema",
+            "minProperties",
+            "exclusiveMaximum",
+            "minimum",
+            "maxLength",
+            "maxItems",
+            "additionalItems",
+            "contains",
+            "required",
+            "patternProperties",
+            "type",
+            "dependencies",
+        }
+        field_1 = module_0.from_json_schema(dict_0)
+        assert f"{type(field_1).__module__}.{type(field_1).__qualname__}" == "fields.Any"
+        assert field_1.title == ""
+        assert field_1.description == ""
+        assert field_1.allow_null is False
+        var_0 = module_0.to_json_schema(field_0)
+        not_0 = module_3.Not(field_1)
+        assert (
+            f"{type(not_0.negated).__module__}.{type(not_0.negated).__qualname__}"
+            == "fields.Any"
+        )
+        object_0 = module_2.Object(additional_properties=not_0, required=none_type_0)
+        var_1 = module_0.to_json_schema(object_0)
+        field_2 = module_0.from_json_schema(var_1, none_type_0)
+        assert f"{type(field_2).__module__}.{type(field_2).__qualname__}" == "fields.Object"
+        assert field_2.title == ""
+        assert field_2.description == ""
+        assert field_2.allow_null is False
+        assert field_2.properties == {}
+        assert field_2.pattern_properties == {}
+        assert (
+            f"{type(field_2.additional_properties).__module__}.{type(field_2.additional_properties).__qualname__}"
+            == "composites.Not"
+        )
+        assert field_2.property_names is None
+        assert field_2.min_properties is None
+        assert field_2.max_properties is None
+        assert field_2.required == []
+        not_1 = module_3.Not(var_0)
+&gt;       assert not_1.negated == {
+            "anyOf": [
+                {"type": "boolean"},
+                {"type": "string", "default": ""},
+                {"type": "array", "minItems": 0, "additionalItems": True},
+                {"type": "number"},
+                {"type": "object"},
+            ],
+            "default": None,
+        }
+E       AssertionError: assert {'anyOf': [{'...efault': None} == {'anyOf': [{'...efault': None}
+E         Omitting 1 identical items, use -vv to show
+E         Differing items:
+E         {'anyOf': [{'type': 'number'}, {'type': 'boolean'}, {'type': 'object'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}]} != {'anyOf': [{'type': 'boolean'}, {'default': '', 'type': 'string'}, {'additionalItems': True, 'minItems': 0, 'type': 'array'}, {'type': 'number'}, {'type': 'object'}]}
+E         Use -v to get more diff
+
+test_json_schema.py:1208: AssertionError</failure></testcase><testcase classname="test_json_schema" name="test_case_35" time="0.001" /><testcase classname="test_json_schema" name="test_case_36" time="0.002"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_37" time="0.002"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_38" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_39" time="0.001" /><testcase classname="test_json_schema" name="test_case_40" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_41" time="0.001" /><testcase classname="test_json_schema" name="test_case_42" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_43" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_44" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_json_schema" name="test_case_45" time="0.001"><skipped type="pytest.xfail" message="" /></testcase></testsuite></testsuites>

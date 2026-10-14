@@ -1,0 +1,404 @@
+{
+ "summary": {
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 97.37,
+  "stmts": 38,
+  "missing_lines": [
+   53
+  ],
+  "branch_cover": 95.16,
+  "branches": 24,
+  "branch_only_cover": 91.67,
+  "fail_kinds": {},
+  "wall_seconds": 0.82
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.41,
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 38,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    18,
+    19,
+    21,
+    22,
+    24,
+    26,
+    27,
+    28,
+    30,
+    31,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    46,
+    47,
+    48,
+    50,
+    51
+   ],
+   "missing_lines": [
+    53
+   ],
+   "stmt_cover": 97.36842105263158,
+   "cover_percent": 97.36842105263158
+  },
+  "report_text": "Name                   Stmts   Miss  Cover   Missing\n----------------------------------------------------\nphone_number.py           38      1    97%   53\nphone_number_test.py      92      0   100%\n----------------------------------------------------\nTOTAL                    130      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_area_code",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_numbers_with_dots",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_numbers_with_multiple_spaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_the_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_0_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_1_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_11_digits_does_not_start_with_a_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_9_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_more_than_11_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_with_letters",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_with_punctuations",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_pretty_print",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_pretty_print_with_full_us_phone_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1_even_with_punctuation",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.41,
+  "collected": 21,
+  "passed": 21,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 38,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    18,
+    19,
+    21,
+    22,
+    24,
+    26,
+    27,
+    28,
+    30,
+    31,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    46,
+    47,
+    48,
+    50,
+    51
+   ],
+   "missing_lines": [
+    53
+   ],
+   "stmt_cover": 97.36842105263158,
+   "cover_percent": 95.16129032258064,
+   "branches": 24,
+   "partial": 2,
+   "covered_branches": 22,
+   "branch_only_cover": 91.66666666666667
+  },
+  "report_text": "Name                   Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------------------\nphone_number.py           38      1     24      2    95%   47->50, 53\nphone_number_test.py      92      0     26      0   100%\n------------------------------------------------------------------\nTOTAL                    130      1     50      2    98%\n",
+  "tests": [
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_area_code",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_numbers_with_dots",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_numbers_with_multiple_spaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_cleans_the_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_0_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_area_code_starts_with_1_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1_on_valid_11_digit_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_11_digits_does_not_start_with_a_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_9_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_when_more_than_11_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_with_letters",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_invalid_with_punctuations",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_pretty_print",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_pretty_print_with_full_us_phone_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "phone_number_test.PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1_even_with_punctuation",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

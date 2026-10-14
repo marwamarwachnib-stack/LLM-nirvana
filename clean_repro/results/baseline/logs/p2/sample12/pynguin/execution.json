@@ -1,0 +1,50 @@
+{
+ "summary": {
+  "collected": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": true,
+  "timed_out": false,
+  "returncode": 4,
+  "stmt_cover": null,
+  "stmts": null,
+  "missing_lines": null,
+  "branch_cover": null,
+  "branches": null,
+  "branch_only_cover": null,
+  "fail_kinds": {},
+  "wall_seconds": 2.26
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 4,
+  "timed_out": false,
+  "wall_seconds": 1.1,
+  "collected": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": true,
+  "module_cover": null,
+  "report_text": "Name                      Stmts   Miss  Cover   Missing\n-------------------------------------------------------\n__init__.py                   0      0   100%\n_ctx/httpie/__init__.py       4      0   100%\n_ctx/httpie/core.py         170    160     6%   13-294\nconftest.py                  46     42     9%   13-91\nutils/__init__.py           236    222     6%   17-455\n-------------------------------------------------------\nTOTAL                       456    424     7%\n",
+  "tests": []
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 4,
+  "timed_out": false,
+  "wall_seconds": 1.16,
+  "collected": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": true,
+  "module_cover": null,
+  "report_text": "Name                      Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------------\n__init__.py                   0      0      0      0   100%\n_ctx/httpie/__init__.py       4      0      0      0   100%\n_ctx/httpie/core.py         170    160     80      0     4%   13-294\nconftest.py                  46     42      6      0     8%   13-91\nutils/__init__.py           236    222     53      0     5%   17-455\n---------------------------------------------------------------------\nTOTAL                       456    424    139      0     5%\n",
+  "tests": []
+ }
+}

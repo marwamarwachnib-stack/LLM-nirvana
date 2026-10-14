@@ -1,0 +1,148 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample31/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample31/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+FFFFFF.FFF..                                                             [100%]
+=================================== FAILURES ===================================
+______________________________ test_token_string _______________________________
+
+    def test_token_string():
+        t = Token("string", 0, 5, "tokens")
+>       assert t.string == "exampl"
+E       AssertionError: assert 'tokens' == 'exampl'
+E         - exampl
+E         + tokens
+
+test_generated.py:7: AssertionError
+_______________________________ test_token_value _______________________________
+
+    def test_token_value():
+        t = Token("value", 0, 4, "tokens")
+>       assert t.value == "value"
+
+test_generated.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:30: in value
+    return self._get_value()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Token('token')
+
+    def _get_value(self) -> typing.Any:
+>       raise NotImplementedError  # pragma: nocover
+E       NotImplementedError
+
+tokens.py:16: NotImplementedError
+_______________________________ test_token_start _______________________________
+
+    def test_token_start():
+        t = Token("start", 0, 4, "tokens")
+>       assert t.start.line == 1
+E       AttributeError: 'Position' object has no attribute 'line'
+
+test_generated.py:15: AttributeError
+________________________________ test_token_end ________________________________
+
+    def test_token_end():
+        t = Token("end", 0, 2, "tokens")
+>       assert t.end.line == 1
+E       AttributeError: 'Position' object has no attribute 'line'
+
+test_generated.py:21: AttributeError
+______________________________ test_token_lookup _______________________________
+
+    def test_token_lookup():
+>       d1 = DictToken({"key1": ScalarToken("value1", 0, 5, "tokens")}, 0, 5, "tokens")
+
+test_generated.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_keyiterator object at 0x7fc99cb92340>
+
+>   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError
+____________________________ test_token_lookup_key _____________________________
+
+    def test_token_lookup_key():
+>       d1 = DictToken({"key1": ScalarToken("value1", 0, 5, "tokens")}, 0, 5, "tokens")
+
+test_generated.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_keyiterator object at 0x7fc99cc098a0>
+
+>   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError
+__________________________ test_dict_token_get_value ___________________________
+
+    def test_dict_token_get_value():
+>       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_keyiterator object at 0x7fc99cb939c0>
+
+>   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError
+_______________________ test_dict_token_get_child_token ________________________
+
+    def test_dict_token_get_child_token():
+>       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_keyiterator object at 0x7fc99e1311c0>
+
+>   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError
+________________________ test_dict_token_get_key_token _________________________
+
+    def test_dict_token_get_key_token():
+>       d = DictToken({"key": ScalarToken("value", 0, 4, "tokens")}, 0, 4, "tokens")
+
+test_generated.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokens.py:85: in __init__
+    self._child_keys = {k._value: k for k in self._value.keys()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_keyiterator object at 0x7fc99cb92200>
+
+>   self._child_keys = {k._value: k for k in self._value.keys()}
+E   AttributeError: 'str' object has no attribute '_value'
+
+tokens.py:85: AttributeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample31/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_token_string - AssertionError: assert 'tokens'...
+FAILED test_generated.py::test_token_value - NotImplementedError
+FAILED test_generated.py::test_token_start - AttributeError: 'Position' objec...
+FAILED test_generated.py::test_token_end - AttributeError: 'Position' object ...
+FAILED test_generated.py::test_token_lookup - AttributeError: 'str' object ha...
+FAILED test_generated.py::test_token_lookup_key - AttributeError: 'str' objec...
+FAILED test_generated.py::test_dict_token_get_value - AttributeError: 'str' o...
+FAILED test_generated.py::test_dict_token_get_child_token - AttributeError: '...
+FAILED test_generated.py::test_dict_token_get_key_token - AttributeError: 'st...
+9 failed, 3 passed in 0.24s
+
+--- stderr ---

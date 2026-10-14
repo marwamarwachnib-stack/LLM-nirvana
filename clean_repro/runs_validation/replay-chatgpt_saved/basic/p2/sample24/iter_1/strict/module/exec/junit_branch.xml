@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.208" timestamp="2026-10-14T00:43:39.881910" hostname="vm"><testcase classname="test_generated" name="test_EfRegister" time="0.001"><failure message="AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?">def test_EfRegister():
+&gt;       assert ef.b.render() == '\x1b[1m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:5: AttributeError</failure></testcase><testcase classname="test_generated" name="test_FgRegister" time="0.001"><failure message="AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?">def test_FgRegister():
+&gt;       assert fg.black.render() == '\x1b[30m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:19: AttributeError</failure></testcase><testcase classname="test_generated" name="test_BgRegister" time="0.001"><failure message="AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?">def test_BgRegister():
+&gt;       assert bg.black.render() == '\x1b[40m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:46: AttributeError</failure></testcase><testcase classname="test_generated" name="test_RsRegister" time="0.001"><failure message="AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?">def test_RsRegister():
+&gt;       assert rs.all.render() == '\x1b[0m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:73: AttributeError</failure></testcase></testsuite></testsuites>

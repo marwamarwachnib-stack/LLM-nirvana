@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.305" timestamp="2026-10-14T00:50:14.075125" hostname="vm"><testcase classname="" name="test_sessions" time="0.000"><error message="collection failure">ImportError while importing test module '/opt/clean_repro/work/baseline/p2/sample10/pynguin/test_sessions.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../conda/envs/p2/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test_sessions.py:12: in &lt;module&gt;
+    from .fixtures import FILE_PATH_ARG, UNICODE
+E   ModuleNotFoundError: No module named 'pynguin.fixtures'</error></testcase></testsuite></testsuites>

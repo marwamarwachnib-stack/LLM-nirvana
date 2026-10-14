@@ -1,0 +1,19 @@
+{
+ "log": [
+  "E1/E2: 2 Python block(s), 1 with tests",
+  "E4: line 2: from bella -> from example",
+  "R1: rewritten program = 1 non-test block(s)"
+ ],
+ "n_blocks": 2,
+ "n_test_blocks": 1,
+ "truncated": false,
+ "parses": true,
+ "import_redirects": [
+  "line 2: from bella -> from example"
+ ],
+ "removed_duplicates": [],
+ "status": "ok",
+ "generation_error": "",
+ "generation_seconds": 0.0,
+ "reply_chars": 779
+}

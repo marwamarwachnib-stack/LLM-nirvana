@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="15" tests="44" time="1.360" timestamp="2026-10-14T00:51:45.992837" hostname="vm"><testcase classname="test_base" name="test_case_0" time="0.001" /><testcase classname="test_base" name="test_case_1" time="0.001" /><testcase classname="test_base" name="test_case_2" time="0.001" /><testcase classname="test_base" name="test_case_3" time="0.001" /><testcase classname="test_base" name="test_case_4" time="0.001" /><testcase classname="test_base" name="test_case_5" time="0.001" /><testcase classname="test_base" name="test_case_6" time="0.001" /><testcase classname="test_base" name="test_case_7" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_8" time="0.001" /><testcase classname="test_base" name="test_case_9" time="0.001"><failure message="assert 4855823748917988287 == 5322473327714082801">def test_case_9():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+&gt;       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:144: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_10" time="0.001" /><testcase classname="test_base" name="test_case_11" time="0.001" /><testcase classname="test_base" name="test_case_12" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_13" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_14" time="0.001" /><testcase classname="test_base" name="test_case_15" time="0.001" /><testcase classname="test_base" name="test_case_16" time="0.001"><failure message="assert 4855823748917988287 == 5322473327714082801">def test_case_16():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+&gt;       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:237: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_17" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_18" time="0.001" /><testcase classname="test_base" name="test_case_19" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_20" time="0.001" /><testcase classname="test_base" name="test_case_21" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_22" time="0.001" /><testcase classname="test_base" name="test_case_23" time="0.001" /><testcase classname="test_base" name="test_case_24" time="0.001"><failure message="assert 4855823748917988287 == 5322473327714082801">def test_case_24():
+        none_type_0 = None
+        validation_result_0 = module_0.ValidationResult()
+        position_0 = module_0.Position(none_type_0, none_type_0, none_type_0)
+        none_type_1 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_1
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        int_0 = message_0.__hash__()
+&gt;       assert int_0 == 5322473327714082801
+E       assert 4855823748917988287 == 5322473327714082801
+
+test_base.py:387: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_25" time="0.001" /><testcase classname="test_base" name="test_case_26" time="0.001" /><testcase classname="test_base" name="test_case_27" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_28" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_29" time="0.001" /><testcase classname="test_base" name="test_case_30" time="0.001" /><testcase classname="test_base" name="test_case_31" time="0.001" /><testcase classname="test_base" name="test_case_32" time="0.001" /><testcase classname="test_base" name="test_case_33" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_34" time="0.001" /><testcase classname="test_base" name="test_case_35" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_36" time="0.001"><failure message="assert -833247603234532628 == -3236363584314578347">def test_case_36():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=str_0, position=str_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == ["cfPI`g:CXV\x0cS\tI"]
+        assert message_0.start_position == "cfPI`g:CXV\x0cS\tI"
+        assert message_0.end_position == "cfPI`g:CXV\x0cS\tI"
+        str_1 = message_0.__repr__()
+        assert (
+            str_1
+            == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom', index=['cfPI`g:CXV\\x0cS\\tI'], position='cfPI`g:CXV\\x0cS\\tI')"
+        )
+        bool_0 = message_0.__eq__(message_0)
+        assert bool_0 is True
+        message_1 = module_0.Message(
+            text=none_type_0, key=none_type_0, start_position=none_type_0
+        )
+        assert message_1.code == "custom"
+        assert message_1.index == []
+        parse_error_0 = module_0.ParseError(text=str_0, position=none_type_0)
+        assert (
+            f"{type(parse_error_0).__module__}.{type(parse_error_0).__qualname__}"
+            == "base.ParseError"
+        )
+        assert len(parse_error_0) == 1
+        int_0 = message_1.__hash__()
+&gt;       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:677: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_37" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_38" time="0.001"><failure message="assert -833247603234532628 == -3236363584314578347">def test_case_38():
+        none_type_0 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(
+            text=str_0, key=none_type_0, index=none_type_0, start_position=none_type_0
+        )
+        assert message_0.code == "custom"
+        assert message_0.index == []
+        str_1 = message_0.__repr__()
+        assert str_1 == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom')"
+        bool_0 = message_0.__eq__(none_type_0)
+        assert bool_0 is False
+        message_1 = module_0.Message(text=str_0, code=str_1, key=none_type_0)
+        assert message_1.code == "Message(text='cfPI`g:CXV\\x0cS\\tI', code='custom')"
+        assert message_1.index == []
+        parse_error_0 = module_0.ParseError(text=str_1)
+        assert (
+            f"{type(parse_error_0).__module__}.{type(parse_error_0).__qualname__}"
+            == "base.ParseError"
+        )
+        assert len(parse_error_0) == 1
+        int_0 = message_0.__hash__()
+&gt;       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:786: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_39" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_40" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_41" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_base" name="test_case_42" time="0.001"><failure message="assert -833247603234532628 == -3236363584314578347">def test_case_42():
+        none_type_0 = None
+        validation_result_0 = module_0.ValidationResult()
+        bool_0 = True
+        position_0 = module_0.Position(bool_0, bool_0, none_type_0)
+        none_type_1 = None
+        str_0 = "cfPI`g:CXV\x0cS\tI"
+        message_0 = module_0.Message(text=str_0, end_position=none_type_0)
+        assert message_0.code == "custom"
+        assert message_0.index == []
+        int_0 = message_0.__hash__()
+&gt;       assert int_0 == -3236363584314578347
+E       assert -833247603234532628 == -3236363584314578347
+
+test_base.py:954: AssertionError</failure></testcase><testcase classname="test_base" name="test_case_43" time="0.001"><skipped type="pytest.xfail" message="" /></testcase></testsuite></testsuites>

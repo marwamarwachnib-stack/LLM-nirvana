@@ -1,0 +1,312 @@
+{
+ "summary": {
+  "collected": 13,
+  "passed": 9,
+  "failed": 4,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 100.0,
+  "stmts": 39,
+  "missing_lines": [],
+  "branch_cover": 96.08,
+  "branches": 12,
+  "branch_only_cover": 83.33,
+  "fail_kinds": {
+   "assertion": 4
+  },
+  "wall_seconds": 2.06
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 0.98,
+  "collected": 13,
+  "passed": 9,
+  "failed": 4,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    10,
+    11,
+    12,
+    14,
+    15,
+    19,
+    22,
+    23,
+    35,
+    36,
+    37,
+    38,
+    40,
+    49,
+    50,
+    51,
+    53,
+    62,
+    63,
+    64,
+    66,
+    75,
+    76,
+    77,
+    79,
+    88,
+    89,
+    90,
+    92,
+    103,
+    104,
+    105,
+    107,
+    114,
+    116,
+    126,
+    127,
+    128
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             0      0   100%\nmonad_try.py           39      0   100%\ntest_generated.py      49      1    98%   46\n-------------------------------------------------\nTOTAL                  88      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_try_of_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_of_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f5706b09030> == <monad_try.Try object at 0x7f5706b0a980>\n +  where <monad_try.Try object at 0x7f5706b0a980> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_map_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_map_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f5706b7bee0> == <monad_try.Try object at 0x7f5706b7bf70>\n +  where <monad_try.Try object at 0x7f5706b7bf70> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_bind_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_bind_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f5706ba3ac0> == <monad_try.Try object at 0x7f5706ba39d0>\n +  where <monad_try.Try object at 0x7f5706ba39d0> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_on_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_on_fail",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f5706b7a2c0> == <monad_try.Try object at 0x7f5706b781f0>\n +  where <monad_try.Try object at 0x7f5706b781f0> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_filter_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_filter_failure",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get_or_else_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get_or_else_failure",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.08,
+  "collected": 13,
+  "passed": 9,
+  "failed": 4,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    10,
+    11,
+    12,
+    14,
+    15,
+    19,
+    22,
+    23,
+    35,
+    36,
+    37,
+    38,
+    40,
+    49,
+    50,
+    51,
+    53,
+    62,
+    63,
+    64,
+    66,
+    75,
+    76,
+    77,
+    79,
+    88,
+    89,
+    90,
+    92,
+    103,
+    104,
+    105,
+    107,
+    114,
+    116,
+    126,
+    127,
+    128
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 96.07843137254902,
+   "branches": 12,
+   "partial": 2,
+   "covered_branches": 10,
+   "branch_only_cover": 83.33333333333333
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             0      0      0      0   100%\nmonad_try.py           39      0     12      2    96%   75->77, 88->90\ntest_generated.py      49      1     26      0    99%   46\n---------------------------------------------------------------\nTOTAL                  88      1     38      2    98%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_try_of_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_of_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f70040b9030> == <monad_try.Try object at 0x7f70040ba980>\n +  where <monad_try.Try object at 0x7f70040ba980> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_map_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_map_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f700412fee0> == <monad_try.Try object at 0x7f700412ff70>\n +  where <monad_try.Try object at 0x7f700412ff70> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_bind_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_bind_failure",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f7004153ac0> == <monad_try.Try object at 0x7f70041539d0>\n +  where <monad_try.Try object at 0x7f70041539d0> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_on_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_on_fail",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert <monad_try.Try object at 0x7f700412e2c0> == <monad_try.Try object at 0x7f700412c1f0>\n +  where <monad_try.Try object at 0x7f700412c1f0> = Try(ZeroDivisionError('division by zero'), False)\n +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')"
+   },
+   {
+    "nodeid": "test_generated::test_try_filter_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_filter_failure",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get_or_else_success",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_try_get_or_else_failure",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

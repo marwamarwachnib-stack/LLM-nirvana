@@ -1,0 +1,44 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample14/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample14/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+......FF....F.                                                           [100%]
+=================================== FAILURES ===================================
+______________________________ test_left_to_maybe ______________________________
+
+    def test_left_to_maybe():
+        left = Left(5)
+        result = left.to_maybe()
+    
+>       assert result.is_nothing()
+E       TypeError: 'bool' object is not callable
+
+test_example.py:69: TypeError
+___________________________ test_left_to_validation ____________________________
+
+    def test_left_to_validation():
+        left = Left(5)
+        result = left.to_validation()
+    
+        assert result.is_fail()
+>       assert result.value == [5]
+E       assert None == [5]
+E        +  where None = <pymonet.validation.Validation object at 0x7fe8ef757a30>.value
+
+test_example.py:77: AssertionError
+_____________________________ test_right_to_maybe ______________________________
+
+    def test_right_to_maybe():
+        right = Right(5)
+        result = right.to_maybe()
+    
+>       assert result.is_just()
+E       AttributeError: 'Maybe' object has no attribute 'is_just'
+
+test_example.py:118: AttributeError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample14/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_left_to_maybe - TypeError: 'bool' object is not ...
+FAILED test_example.py::test_left_to_validation - assert None == [5]
+FAILED test_example.py::test_right_to_maybe - AttributeError: 'Maybe' object ...
+3 failed, 11 passed in 0.12s
+
+--- stderr ---

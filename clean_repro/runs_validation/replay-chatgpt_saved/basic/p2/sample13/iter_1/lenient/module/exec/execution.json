@@ -1,0 +1,270 @@
+{
+ "summary": {
+  "collected": 11,
+  "passed": 5,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 100.0,
+  "stmts": 29,
+  "missing_lines": [],
+  "branch_cover": 96.77,
+  "branches": 2,
+  "branch_only_cover": 50.0,
+  "fail_kinds": {
+   "runtime": 6
+  },
+  "wall_seconds": 2.2
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.02,
+  "collected": 11,
+  "passed": 5,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 29,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    18,
+    20,
+    21,
+    23,
+    24,
+    26,
+    35,
+    37,
+    46,
+    48,
+    57,
+    59,
+    66,
+    68,
+    70,
+    77,
+    79,
+    81,
+    88,
+    90,
+    92,
+    99,
+    101,
+    103,
+    110,
+    112
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             0      0   100%\nbox.py                 29      0   100%\ntest_generated.py      64      3    95%   42, 49, 69\n-------------------------------------------------\nTOTAL                  93      3    97%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_box_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_str",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_ap",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'int' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_either",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Right' object has no attribute 'get'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_lazy",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Lazy' object has no attribute 'evaluate'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_try",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'bool' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_validation",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Validation' object has no attribute 'get'"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.18,
+  "collected": 11,
+  "passed": 5,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 29,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    18,
+    20,
+    21,
+    23,
+    24,
+    26,
+    35,
+    37,
+    46,
+    48,
+    57,
+    59,
+    66,
+    68,
+    70,
+    77,
+    79,
+    81,
+    88,
+    90,
+    92,
+    99,
+    101,
+    103,
+    110,
+    112
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 96.7741935483871,
+   "branches": 2,
+   "partial": 1,
+   "covered_branches": 1,
+   "branch_only_cover": 50.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             0      0      0      0   100%\nbox.py                 29      0      2      1    97%   90->exit\ntest_generated.py      64      3      6      1    94%   38->exit, 42, 49, 69\n---------------------------------------------------------------\nTOTAL                  93      3      8      2    95%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_box_init",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_eq",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_str",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_bind",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_box_ap",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'int' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_maybe",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_either",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Right' object has no attribute 'get'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_lazy",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Lazy' object has no attribute 'evaluate'"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_try",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "TypeError: 'bool' object is not callable"
+   },
+   {
+    "nodeid": "test_generated::test_box_to_validation",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "AttributeError: 'Validation' object has no attribute 'get'"
+   }
+  ]
+ }
+}

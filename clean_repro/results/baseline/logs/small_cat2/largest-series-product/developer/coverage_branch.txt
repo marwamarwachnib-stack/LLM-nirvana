@@ -1,0 +1,6 @@
+Name                             Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------
+largest_series_product.py           15      1     15      1    93%   22
+largest_series_product_test.py      43      0      8      0   100%
+----------------------------------------------------------------------------
+TOTAL                               58      1     23      1    98%

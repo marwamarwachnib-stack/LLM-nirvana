@@ -1,0 +1,100 @@
+{
+ "sample_id": "p2/sample7",
+ "group": "p2",
+ "category": "3",
+ "mode": "basic",
+ "model": "replay-chatgpt_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 9,
+    "passed": 8,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 92.5,
+    "stmts": 40,
+    "missing_lines": [
+     37,
+     46,
+     77
+    ],
+    "branch_cover": 90.38,
+    "branches": 12,
+    "branch_only_cover": 83.33,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 2.31,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 12,
+     "static_never_reached": 0,
+     "executed_assertions": 12,
+     "incorrect": 2,
+     "pct_incorrect": 16.67,
+     "n_assertion_error": 2,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 92
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 9,
+    "passed": 8,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 92.5,
+    "stmts": 40,
+    "missing_lines": [
+     37,
+     46,
+     77
+    ],
+    "branch_cover": 90.38,
+    "branches": 12,
+    "branch_only_cover": 83.33,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 1.98,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 12,
+     "static_never_reached": 0,
+     "executed_assertions": 12,
+     "incorrect": 2,
+     "pct_incorrect": 16.67,
+     "n_assertion_error": 2,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 92
+   }
+  }
+ }
+}

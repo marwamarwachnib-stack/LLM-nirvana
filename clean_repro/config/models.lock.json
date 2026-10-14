@@ -1,0 +1,5 @@
+{
+  "_comment": "Filled only after a verified download: file sha256 of the GGUF and the digest Ollama reports. Empty = not available; the pipeline refuses to run a model without a digest.",
+  "qwen2.5-coder-7b-instruct": {"gguf_sha256": null, "ollama_digest": null},
+  "deepseek-coder-6.7b-instruct": {"gguf_sha256": null, "ollama_digest": null}
+}

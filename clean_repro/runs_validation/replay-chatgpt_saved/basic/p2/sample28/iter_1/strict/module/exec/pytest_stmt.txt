@@ -1,0 +1,101 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample28/iter_1/strict/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample28/iter_1/strict/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_______________________ test_schema_with_required_fields _______________________
+
+    def test_schema_with_required_fields():
+>       class MySchema(Schema):
+
+test_generated.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class MySchema(Schema):
+>       name = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:7: TypeError
+_______________________ test_schema_with_default_values ________________________
+
+    def test_schema_with_default_values():
+        class MySchema(Schema):
+            name = Field(default="John")
+            age = Field(default=25)
+            address = Field(default="")
+    
+        # Valid input with missing fields
+        data = {}
+        schema = MySchema(data)
+>       assert schema["name"] == "John"
+
+test_generated.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = MySchema() [sparse], key = 'name'
+
+    def __getitem__(self, key: typing.Any) -> typing.Any:
+        try:
+            field = self.fields[key]
+            value = getattr(self, key)
+        except (KeyError, AttributeError):
+>           raise KeyError(key) from None
+E           KeyError: 'name'
+
+schemas.py:180: KeyError
+________________________ test_schema_with_nested_fields ________________________
+
+    def test_schema_with_nested_fields():
+>       class AddressSchema(Schema):
+
+test_generated.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class AddressSchema(Schema):
+>       street = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:46: TypeError
+_________________________ test_schema_with_array_field _________________________
+
+    def test_schema_with_array_field():
+        class MySchema(Schema):
+            tags = Array(Field())
+    
+        # Valid input with array field
+        data = {"tags": ["red", "green", "blue"]}
+        schema = MySchema(data)
+        assert schema["tags"] == ["red", "green", "blue"]
+    
+        # Valid input with empty array
+        data = {"tags": []}
+        schema = MySchema(data)
+        assert schema["tags"] == []
+    
+        # Invalid input with non-array value
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE <class 'base.ValidationError'>
+
+test_generated.py:99: Failed
+_______________________ test_schema_with_reference_field _______________________
+
+    def test_schema_with_reference_field():
+>       class UserSchema(Schema):
+
+test_generated.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class UserSchema(Schema):
+>       name = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:104: TypeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample28/iter_1/strict/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_schema_with_required_fields - TypeError: Field...
+FAILED test_generated.py::test_schema_with_default_values - KeyError: 'name'
+FAILED test_generated.py::test_schema_with_nested_fields - TypeError: Field._...
+FAILED test_generated.py::test_schema_with_array_field - Failed: DID NOT RAIS...
+FAILED test_generated.py::test_schema_with_reference_field - TypeError: Field...
+5 failed in 0.17s
+
+--- stderr ---

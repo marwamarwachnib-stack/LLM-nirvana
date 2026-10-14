@@ -1,0 +1,24 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample20/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample20/pynguin/junit_stmt.xml test_validation.py
+# returncode=1 timed_out=False
+xF.xxxxxFFFxFx                                                           [100%]
+=================================== FAILURES ===================================
+_________________________________ test_case_1 __________________________________
+[XPASS(strict)] 
+_________________________________ test_case_8 __________________________________
+[XPASS(strict)] 
+_________________________________ test_case_9 __________________________________
+[XPASS(strict)] 
+_________________________________ test_case_10 _________________________________
+[XPASS(strict)] 
+_________________________________ test_case_12 _________________________________
+[XPASS(strict)] 
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample20/pynguin/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_validation.py::test_case_1
+FAILED test_validation.py::test_case_8
+FAILED test_validation.py::test_case_9
+FAILED test_validation.py::test_case_10
+FAILED test_validation.py::test_case_12
+5 failed, 1 passed, 8 xfailed in 0.25s
+
+--- stderr ---

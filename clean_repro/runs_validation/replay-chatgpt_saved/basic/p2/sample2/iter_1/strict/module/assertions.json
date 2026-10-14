@@ -1,0 +1,91 @@
+{
+ "status": "ok",
+ "static_assertions": 12,
+ "static_never_reached": 0,
+ "executed_assertions": 12,
+ "incorrect": 2,
+ "pct_incorrect": 16.67,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 1,
+ "pct_of_incorrect": {
+  "assertion": 50.0,
+  "try_except": 0.0,
+  "runtime": 50.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_has_any_attrs_returns_false_when_object_does_not_have_any_attributes",
+   "aid": "test_generated.py:12:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_any_attrs_returns_true_when_object_has_any_attributes",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_any_callables_returns_false_when_object_does_not_have_any_callable_attributes",
+   "aid": "test_generated.py:21:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_any_callables_returns_true_when_object_has_any_callable_attributes",
+   "aid": "test_generated.py:17:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_attrs_returns_false_when_object_does_not_have_all_attributes",
+   "aid": "test_generated.py:30:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_attrs_returns_true_when_object_has_all_attributes",
+   "aid": "test_generated.py:26:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_callables_returns_false_when_object_does_not_have_all_callable_attributes",
+   "aid": "test_generated.py:39:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_has_callables_returns_true_when_object_has_all_callable_attributes",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_is_list_like_returns_false_when_object_is_not_list_like",
+   "aid": "test_generated.py:48:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_is_list_like_returns_true_when_object_is_list_like",
+   "aid": "test_generated.py:44:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes",
+   "aid": "test_generated.py:57:assert",
+   "kind": "runtime",
+   "exc": "NameError: name 'deque' is not defined"
+  },
+  {
+   "test": "test_generated.py::test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes",
+   "aid": "test_generated.py:53:assert",
+   "kind": "assertion",
+   "exc": ""
+  }
+ ]
+}

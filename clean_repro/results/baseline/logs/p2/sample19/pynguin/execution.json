@@ -1,0 +1,456 @@
+{
+ "summary": {
+  "collected": 21,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 14,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 97.44,
+  "stmts": 39,
+  "missing_lines": [
+   21
+  ],
+  "branch_cover": 97.56,
+  "branches": 2,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 2.85
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.36,
+  "collected": 21,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 14,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    24,
+    25,
+    29,
+    31,
+    32,
+    34,
+    41,
+    44,
+    45,
+    49,
+    51,
+    52,
+    54,
+    61,
+    64,
+    65,
+    69,
+    71,
+    72,
+    74,
+    81,
+    84,
+    85,
+    89,
+    90,
+    92,
+    99,
+    102,
+    103,
+    107,
+    108,
+    110,
+    117,
+    120,
+    121,
+    125,
+    126,
+    128,
+    135,
+    140,
+    141,
+    145,
+    147,
+    148,
+    150,
+    157,
+    160,
+    161,
+    165,
+    167,
+    168,
+    170,
+    177
+   ],
+   "missing_lines": [
+    21
+   ],
+   "stmt_cover": 97.43589743589743,
+   "cover_percent": 97.43589743589743
+  },
+  "report_text": "Name                 Stmts   Miss  Cover   Missing\n--------------------------------------------------\n__init__.py              0      0   100%\nsemigroups.py           39      1    97%   21\ntest_semigroups.py     316      0   100%\n--------------------------------------------------\nTOTAL                  355      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_semigroups::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_16",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_17",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_18",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_20",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.49,
+  "collected": 21,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 14,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 39,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    24,
+    25,
+    29,
+    31,
+    32,
+    34,
+    41,
+    44,
+    45,
+    49,
+    51,
+    52,
+    54,
+    61,
+    64,
+    65,
+    69,
+    71,
+    72,
+    74,
+    81,
+    84,
+    85,
+    89,
+    90,
+    92,
+    99,
+    102,
+    103,
+    107,
+    108,
+    110,
+    117,
+    120,
+    121,
+    125,
+    126,
+    128,
+    135,
+    140,
+    141,
+    145,
+    147,
+    148,
+    150,
+    157,
+    160,
+    161,
+    165,
+    167,
+    168,
+    170,
+    177
+   ],
+   "missing_lines": [
+    21
+   ],
+   "stmt_cover": 97.43589743589743,
+   "cover_percent": 97.5609756097561,
+   "branches": 2,
+   "partial": 0,
+   "covered_branches": 2,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                 Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------\n__init__.py              0      0      0      0   100%\nsemigroups.py           39      1      2      0    98%   21\ntest_semigroups.py     316      0      0      0   100%\n----------------------------------------------------------------\nTOTAL                  355      1      2      0    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_semigroups::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_16",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_17",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_18",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_semigroups::test_case_20",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

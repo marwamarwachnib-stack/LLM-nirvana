@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="9" time="0.168" timestamp="2026-10-14T00:53:51.510061" hostname="vm"><testcase classname="test_example.Testcore" name="test_asdict_dataclass" time="0.002"><failure message="AssertionError: assert &lt;chatgpt.test_example.MyDataClass object at 0x7fb304b15660&gt; == {'name': 'test', 'value': 100}&#10; +  where &lt;chatgpt.test_example.MyDataClass object at 0x7fb304b15660&gt; = _asdict(&lt;chatgpt.test_example.MyDataClass object at 0x7fb304b17a00&gt;)">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304abe2c0&gt;
+
+    def test_asdict_dataclass(self):
+        obj = MyDataClass("test", 100)
+        expected = {"name": "test", "value": 100}
+&gt;       assert _asdict(obj) == expected
+E       AssertionError: assert &lt;chatgpt.test_example.MyDataClass object at 0x7fb304b15660&gt; == {'name': 'test', 'value': 100}
+E        +  where &lt;chatgpt.test_example.MyDataClass object at 0x7fb304b15660&gt; = _asdict(&lt;chatgpt.test_example.MyDataClass object at 0x7fb304b17a00&gt;)
+
+test_example.py:28: AssertionError</failure></testcase><testcase classname="test_example.Testcore" name="test_asdict_mapping" time="0.001" /><testcase classname="test_example.Testcore" name="test_asdict_collection" time="0.001" /><testcase classname="test_example.Testcore" name="test_asdict_nested" time="0.001"><failure message="AssertionError: assert {'key1': &lt;cha...3': [1, 2, 3]} == {'key1': {'na...3': [1, 2, 3]}&#10;  Omitting 2 identical items, use -vv to show&#10;  Differing items:&#10;  {'key1': &lt;chatgpt.test_example.MyDataClass object at 0x7fb3048c1150&gt;} != {'key1': {'name': 'test', 'value': 100}}&#10;  Use -v to get more diff">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b15090&gt;
+
+    def test_asdict_nested(self):
+        obj = {
+            "key1": MyDataClass("test", 100),
+            "key2": {"nested": "value"},
+            "key3": [1, 2, 3]
+        }
+        expected = {
+            "key1": {"name": "test", "value": 100},
+            "key2": {"nested": "value"},
+            "key3": [1, 2, 3]
+        }
+&gt;       assert _asdict(obj) == expected
+E       AssertionError: assert {'key1': &lt;cha...3': [1, 2, 3]} == {'key1': {'na...3': [1, 2, 3]}
+E         Omitting 2 identical items, use -vv to show
+E         Differing items:
+E         {'key1': &lt;chatgpt.test_example.MyDataClass object at 0x7fb3048c1150&gt;} != {'key1': {'name': 'test', 'value': 100}}
+E         Use -v to get more diff
+
+test_example.py:51: AssertionError</failure></testcase><testcase classname="test_example.Testcore" name="test_decode_dataclass" time="0.001"><failure message="TypeError: _decode_dataclass() missing 1 required positional argument: 'infer_missing'">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b159c0&gt;
+
+    def test_decode_dataclass(self):
+        data = {"name": "test", "value": 100}
+        expected = MyDataClass("test", 100)
+&gt;       assert _decode_dataclass(MyDataClass, data) == expected
+E       TypeError: _decode_dataclass() missing 1 required positional argument: 'infer_missing'
+
+test_example.py:56: TypeError</failure></testcase><testcase classname="test_example.Testcore" name="test_decode_generic_list" time="0.001"><failure message="TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b16b30&gt;
+
+    def test_decode_generic_list(self):
+        data = [1, 2, 3]
+        expected = [1, 2, 3]
+&gt;       assert _decode_generic(list, data) == expected
+E       TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'
+
+test_example.py:61: TypeError</failure></testcase><testcase classname="test_example.Testcore" name="test_decode_generic_dict" time="0.001"><failure message="TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b159f0&gt;
+
+    def test_decode_generic_dict(self):
+        data = {"key1": "value1", "key2": 123}
+        expected = {"key1": "value1", "key2": 123}
+&gt;       assert _decode_generic(dict, data) == expected
+E       TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'
+
+test_example.py:66: TypeError</failure></testcase><testcase classname="test_example.Testcore" name="test_is_supported_generic_true" time="0.001"><failure message="assert True is False&#10; +  where True = _is_supported_generic(bytes)">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b14610&gt;
+
+    def test_is_supported_generic_true(self):
+        assert _is_supported_generic(list) is True
+        assert _is_supported_generic(dict) is True
+        assert _is_supported_generic(set) is True
+        assert _is_supported_generic(tuple) is True
+        assert _is_supported_generic(str) is False
+&gt;       assert _is_supported_generic(bytes) is False
+E       assert True is False
+E        +  where True = _is_supported_generic(bytes)
+
+test_example.py:74: AssertionError</failure></testcase><testcase classname="test_example.Testcore" name="test_support_extended_types" time="0.001"><failure message="assert datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) == datetime.datetime(2026, 10, 14, 0, 53, 51, 672557)&#10; +  where datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) = _support_extended_types(datetime, datetime.datetime(2026, 10, 14, 0, 53, 51, 672552))&#10; +    where datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) = &lt;built-in method now of type object at 0x7fb307834a60&gt;()&#10; +      where &lt;built-in method now of type object at 0x7fb307834a60&gt; = datetime.now&#10; +  and   datetime.datetime(2026, 10, 14, 0, 53, 51, 672557) = &lt;built-in method now of type object at 0x7fb307834a60&gt;()&#10; +    where &lt;built-in method now of type object at 0x7fb307834a60&gt; = datetime.now">self = &lt;chatgpt.test_example.Testcore object at 0x7fb304b14f40&gt;
+
+    def test_support_extended_types(self):
+        assert _support_extended_types(int, 10) == 10
+        assert _support_extended_types(str, "test") == "test"
+        assert _support_extended_types(float, 3.14) == 3.14
+        assert _support_extended_types(bool, True) is True
+        assert _support_extended_types(Decimal, "10.5") == Decimal("10.5")
+&gt;       assert _support_extended_types(datetime, datetime.now()) == datetime.now()
+E       assert datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) == datetime.datetime(2026, 10, 14, 0, 53, 51, 672557)
+E        +  where datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) = _support_extended_types(datetime, datetime.datetime(2026, 10, 14, 0, 53, 51, 672552))
+E        +    where datetime.datetime(2026, 10, 14, 0, 53, 51, 672552) = &lt;built-in method now of type object at 0x7fb307834a60&gt;()
+E        +      where &lt;built-in method now of type object at 0x7fb307834a60&gt; = datetime.now
+E        +  and   datetime.datetime(2026, 10, 14, 0, 53, 51, 672557) = &lt;built-in method now of type object at 0x7fb307834a60&gt;()
+E        +    where &lt;built-in method now of type object at 0x7fb307834a60&gt; = datetime.now
+
+test_example.py:83: AssertionError</failure></testcase></testsuite></testsuites>

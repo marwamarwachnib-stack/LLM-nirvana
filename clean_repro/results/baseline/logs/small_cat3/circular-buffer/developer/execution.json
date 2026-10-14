@@ -1,0 +1,314 @@
+{
+ "summary": {
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 35,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 6,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.78
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.4,
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 35,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    7,
+    8,
+    11,
+    12,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                      Stmts   Miss  Cover   Missing\n-------------------------------------------------------\ncircular_buffer.py           35      0   100%\ncircular_buffer_test.py     104      0   100%\n-------------------------------------------------------\nTOTAL                       139      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_a_read_frees_up_capacity_for_another_write",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_can_read_an_item_just_written",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_clear_does_nothing_on_empty_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_clear_frees_up_capacity_for_another_write",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_each_item_may_only_be_read_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_full_buffer_can_t_be_written_to",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_items_are_read_in_the_order_they_are_written",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_reading_empty_buffer_should_fail",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.38,
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 35,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    7,
+    8,
+    11,
+    12,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 6,
+   "partial": 0,
+   "covered_branches": 6,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                      Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------------\ncircular_buffer.py           35      0      6      0   100%\ncircular_buffer_test.py     104      0     10      0   100%\n---------------------------------------------------------------------\nTOTAL                       139      0     16      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_a_read_frees_up_capacity_for_another_write",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_can_read_an_item_just_written",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_clear_does_nothing_on_empty_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_clear_frees_up_capacity_for_another_write",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_each_item_may_only_be_read_once",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_full_buffer_can_t_be_written_to",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_items_are_read_in_the_order_they_are_written",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "circular_buffer_test.CircularBufferTest::test_reading_empty_buffer_should_fail",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

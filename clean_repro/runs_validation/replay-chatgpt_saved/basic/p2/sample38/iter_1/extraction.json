@@ -1,0 +1,15 @@
+{
+ "log": [
+  "E1/E2: 1 Python block(s), 1 with tests"
+ ],
+ "n_blocks": 1,
+ "n_test_blocks": 1,
+ "truncated": false,
+ "parses": true,
+ "import_redirects": [],
+ "removed_duplicates": [],
+ "status": "ok",
+ "generation_error": "",
+ "generation_seconds": 0.01,
+ "reply_chars": 2990
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="7" time="0.118" timestamp="2026-10-14T00:46:55.126438" hostname="vm"><testcase classname="test_generated" name="test_validate_identifier_ends_with_underscore" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;">def test_validate_identifier_ends_with_underscore():
+&gt;       with pytest.raises(SyntaxError):
+E       Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;
+
+test_generated.py:11: Failed</failure></testcase><testcase classname="test_generated" name="test_validate_identifier_starts_with_underscore" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;">def test_validate_identifier_starts_with_underscore():
+&gt;       with pytest.raises(SyntaxError):
+E       Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;
+
+test_generated.py:17: Failed</failure></testcase><testcase classname="test_generated" name="test_validate_identifier_starts_with_number" time="0.001" /><testcase classname="test_generated" name="test_validate_identifier_is_keyword" time="0.001" /><testcase classname="test_generated" name="test_validate_identifier_is_builtin_name" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;">def test_validate_identifier_is_builtin_name():
+&gt;       with pytest.raises(SyntaxError):
+E       Failed: DID NOT RAISE &lt;class 'SyntaxError'&gt;
+
+test_generated.py:35: Failed</failure></testcase><testcase classname="test_generated" name="test_validate_identifier_empty_string" time="0.001" /><testcase classname="test_generated" name="test_validate_identifier_valid_identifier" time="0.001" /></testsuite></testsuites>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.131" timestamp="2026-10-14T00:46:48.282959" hostname="vm"><testcase classname="test_generated" name="test_len_without_ansi" time="0.002" /><testcase classname="test_generated" name="test_AnsiTextWrapper_wrap" time="0.003"><failure message="AssertionError: assert ['Lorem', 'ip...piscing', ...] == ['Lorem', 'ip...piscing', ...]&#10;  At index 3 diff: 'amet, cons' != 'amet,'&#10;  Use -v to get more diff">def test_AnsiTextWrapper_wrap():
+        wrapper = txtutils.AnsiTextWrapper(width=10)
+        text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        expected_output = [
+            'Lorem',
+            'ipsum',
+            'dolor sit',
+            'amet,',
+            'consectetur',
+            'adipiscing',
+            'elit.'
+        ]
+&gt;       assert wrapper.wrap(text) == expected_output
+E       AssertionError: assert ['Lorem', 'ip...piscing', ...] == ['Lorem', 'ip...piscing', ...]
+E         At index 3 diff: 'amet, cons' != 'amet,'
+E         Use -v to get more diff
+
+test_generated.py:21: AssertionError</failure></testcase><testcase classname="test_generated" name="test_AnsiTextWrapper_fill" time="0.001" /></testsuite></testsuites>

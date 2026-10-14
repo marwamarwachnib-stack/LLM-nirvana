@@ -1,0 +1,344 @@
+{
+ "summary": {
+  "collected": 14,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 8,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 82.93,
+  "stmts": 41,
+  "missing_lines": [
+   31,
+   43,
+   105,
+   107,
+   108,
+   109,
+   122
+  ],
+  "branch_cover": 76.6,
+  "branches": 6,
+  "branch_only_cover": 33.33,
+  "fail_kinds": {
+   "runtime": 5
+  },
+  "wall_seconds": 2.44
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.15,
+  "collected": 14,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 8,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 41,
+   "miss": 7,
+   "executed_lines": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    12,
+    16,
+    17,
+    18,
+    19,
+    21,
+    22,
+    33,
+    34,
+    45,
+    52,
+    54,
+    61,
+    63,
+    72,
+    74,
+    83,
+    85,
+    96,
+    98,
+    111,
+    118,
+    120,
+    121,
+    124,
+    131,
+    133,
+    135,
+    142,
+    144,
+    146,
+    153,
+    155
+   ],
+   "missing_lines": [
+    31,
+    43,
+    105,
+    107,
+    108,
+    109,
+    122
+   ],
+   "stmt_cover": 82.92682926829268,
+   "cover_percent": 82.92682926829268
+  },
+  "report_text": "Name                 Stmts   Miss  Cover   Missing\n--------------------------------------------------\n__init__.py              0      0   100%\ntest_validation.py     143      0   100%\nvalidation.py           41      7    83%   31, 43, 105-109, 122\n--------------------------------------------------\nTOTAL                  184      7    96%\n",
+  "tests": [
+   {
+    "nodeid": "test_validation::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_1",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_3",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_8",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_9",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_10",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_11",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_12",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.29,
+  "collected": 14,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 8,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 41,
+   "miss": 7,
+   "executed_lines": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    12,
+    16,
+    17,
+    18,
+    19,
+    21,
+    22,
+    33,
+    34,
+    45,
+    52,
+    54,
+    61,
+    63,
+    72,
+    74,
+    83,
+    85,
+    96,
+    98,
+    111,
+    118,
+    120,
+    121,
+    124,
+    131,
+    133,
+    135,
+    142,
+    144,
+    146,
+    153,
+    155
+   ],
+   "missing_lines": [
+    31,
+    43,
+    105,
+    107,
+    108,
+    109,
+    122
+   ],
+   "stmt_cover": 82.92682926829268,
+   "cover_percent": 76.59574468085107,
+   "branches": 6,
+   "partial": 2,
+   "covered_branches": 2,
+   "branch_only_cover": 33.333333333333336
+  },
+  "report_text": "Name                 Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------\n__init__.py              0      0      0      0   100%\ntest_validation.py     143      0      0      0   100%\nvalidation.py           41      7      6      2    77%   31, 43, 105-109, 122, 144->exit\n----------------------------------------------------------------\nTOTAL                  184      7      6      2    94%\n",
+  "tests": [
+   {
+    "nodeid": "test_validation::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_1",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_3",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_8",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_9",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_10",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_11",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_validation::test_case_12",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_validation::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

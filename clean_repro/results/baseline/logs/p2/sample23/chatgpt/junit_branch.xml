@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="14" time="0.229" timestamp="2026-10-14T00:51:38.669230" hostname="vm"><testcase classname="test_example" name="test_reverse" time="0.002" /><testcase classname="test_example" name="test_camel_case_to_snake" time="0.002"><failure message="AssertionError: assert 'this_is_a_camel_string_test' == 'this_is_a_ca...e_string_test'&#10;  - this_is_a_camel_case_string_test&#10;  ?                 -----&#10;  + this_is_a_camel_string_test">def test_camel_case_to_snake():
+&gt;       assert manipulation.camel_case_to_snake("ThisIsACamelStringTest") == "this_is_a_camel_case_string_test"
+E       AssertionError: assert 'this_is_a_camel_string_test' == 'this_is_a_ca...e_string_test'
+E         - this_is_a_camel_case_string_test
+E         ?                 -----
+E         + this_is_a_camel_string_test
+
+test_example.py:9: AssertionError</failure></testcase><testcase classname="test_example" name="test_snake_case_to_camel" time="0.003"><failure message="AssertionError: assert 'ThisIsAnManipulation' == 'ThisIsAnmanipulation'&#10;  - ThisIsAnmanipulation&#10;  ?         ^&#10;  + ThisIsAnManipulation&#10;  ?         ^">def test_snake_case_to_camel():
+        assert manipulation.snake_case_to_camel("the_snake_is_green") == "TheSnakeIsGreen"
+        assert manipulation.snake_case_to_camel("apple_tree") == "AppleTree"
+&gt;       assert manipulation.snake_case_to_camel("this_is_an_manipulation") == "ThisIsAnmanipulation"
+E       AssertionError: assert 'ThisIsAnManipulation' == 'ThisIsAnmanipulation'
+E         - ThisIsAnmanipulation
+E         ?         ^
+E         + ThisIsAnManipulation
+E         ?         ^
+
+test_example.py:16: AssertionError</failure></testcase><testcase classname="test_example" name="test_shuffle" time="0.001" /><testcase classname="test_example" name="test_strip_html" time="0.001"><failure message="AssertionError: assert '' == 'Hello World'&#10;  - Hello World">def test_strip_html():
+&gt;       assert manipulation.strip_html("&lt;p&gt;Hello World&lt;/p&gt;") == "Hello World"
+E       AssertionError: assert '' == 'Hello World'
+E         - Hello World
+
+test_example.py:24: AssertionError</failure></testcase><testcase classname="test_example" name="test_prettify" time="0.001"><failure message="assert &quot;Unprettified...Th's awesome!&quot; == &quot;Unprettified...It's awesome!&quot;&#10;  Skipping 48 identical leading characters in diff, use -v to show&#10;  - ttified&quot;. It's awesome!&#10;  ?           ^^&#10;  + ttified&quot;. Th's awesome!&#10;  ?           ^^">def test_prettify():
+&gt;       assert manipulation.prettify(" unprettified string ,, like this one,will be\"prettified\" .th' s awesome! ") == "Unprettified string, like this one, will be \"prettified\". It's awesome!"
+E       assert "Unprettified...Th's awesome!" == "Unprettified...It's awesome!"
+E         Skipping 48 identical leading characters in diff, use -v to show
+E         - ttified". It's awesome!
+E         ?           ^^
+E         + ttified". Th's awesome!
+E         ?           ^^
+
+test_example.py:28: AssertionError</failure></testcase><testcase classname="test_example" name="test_asciify" time="0.001"><failure message="AssertionError: assert 'eeuuooaaeynAAACIINOE' == 'eeuuooaaeyn'&#10;  - eeuuooaaeyn&#10;  + eeuuooaaeynAAACIINOE">def test_asciify():
+&gt;       assert manipulation.asciify("èéùúòóäåëýñÅÀÁÇÌÍÑÓË") == "eeuuooaaeyn"
+E       AssertionError: assert 'eeuuooaaeynAAACIINOE' == 'eeuuooaaeyn'
+E         - eeuuooaaeyn
+E         + eeuuooaaeynAAACIINOE
+
+test_example.py:32: AssertionError</failure></testcase><testcase classname="test_example" name="test_slugify" time="0.001" /><testcase classname="test_example" name="test_booleanize" time="0.001" /><testcase classname="test_example" name="test_strip_margin" time="0.001"><failure message="AssertionError: assert '\nThis is a\...ine\nstring\n' == 'This is a\nm... line\nstring'&#10;  + &#10;    This is a&#10;    multi line&#10;  - string&#10;  + string&#10;  ?       +">def test_strip_margin():
+        input_string = """
+        This is a
+        multi line
+        string
+        """
+        expected_output = "This is a\nmulti line\nstring"
+&gt;       assert manipulation.strip_margin(input_string) == expected_output
+E       AssertionError: assert '\nThis is a\...ine\nstring\n' == 'This is a\nm... line\nstring'
+E         + 
+E           This is a
+E           multi line
+E         - string
+E         + string
+E         ?       +
+
+test_example.py:51: AssertionError</failure></testcase><testcase classname="test_example" name="test_compress" time="0.004"><failure message="AssertionError: assert 28 &lt; 11&#10; +  where 28 = len('eNrLSM3JyVcozy_KSQEAGgsEXQ==')&#10; +    where 'eNrLSM3JyVcozy_KSQEAGgsEXQ==' = &lt;function compress at 0x7fac2584f130&gt;('hello world')&#10; +      where &lt;function compress at 0x7fac2584f130&gt; = manipulation.compress&#10; +  and   11 = len('hello world')">def test_compress():
+&gt;       assert len(manipulation.compress("hello world")) &lt; len("hello world")
+E       AssertionError: assert 28 &lt; 11
+E        +  where 28 = len('eNrLSM3JyVcozy_KSQEAGgsEXQ==')
+E        +    where 'eNrLSM3JyVcozy_KSQEAGgsEXQ==' = &lt;function compress at 0x7fac2584f130&gt;('hello world')
+E        +      where &lt;function compress at 0x7fac2584f130&gt; = manipulation.compress
+E        +  and   11 = len('hello world')
+
+test_example.py:54: AssertionError</failure></testcase><testcase classname="test_example" name="test_decompress" time="0.002" /><testcase classname="test_example" name="test_roman_encode" time="0.001" /><testcase classname="test_example" name="test_roman_decode" time="0.001" /></testsuite></testsuites>

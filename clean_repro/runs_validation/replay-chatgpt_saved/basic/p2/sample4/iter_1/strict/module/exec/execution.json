@@ -1,0 +1,226 @@
+{
+ "summary": {
+  "collected": 6,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 88.89,
+  "stmts": 36,
+  "missing_lines": [
+   206,
+   207,
+   208,
+   209
+  ],
+  "branch_cover": 91.67,
+  "branches": 12,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {
+   "assertion": 4,
+   "runtime": 1
+  },
+  "wall_seconds": 2.12
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.08,
+  "collected": 6,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 36,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    3,
+    13,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    44,
+    47,
+    68,
+    69,
+    70,
+    71,
+    72,
+    75,
+    81,
+    97,
+    100,
+    153,
+    154,
+    157,
+    205,
+    212,
+    233,
+    234,
+    235,
+    236
+   ],
+   "missing_lines": [
+    206,
+    207,
+    208,
+    209
+   ],
+   "stmt_cover": 88.88888888888889,
+   "cover_percent": 88.88888888888889
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             5      0   100%\nmoduleutils.py        235     85    64%   65-66, 69-70, 73-74, 77, 117, 170-171, 182, 196, 202-203, 227-238, 253-255, 291, 326, 333, 482, 503, 512, 517-522, 538, 563-605, 611-612, 633, 639-640, 644, 649-660, 703-772\nstrutils.py            36      4    89%   206-209\ntest_generated.py      29      0   100%\n-------------------------------------------------\nTOTAL                 305     89    71%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_as_escaped_unicode_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...20\\\\U0001f6d1' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  + \\x31\\x2e\\u2605\\x20\\U0001f6d1"
+   },
+   {
+    "nodeid": "test_generated::test_as_escaped_utf8_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...x9f\\\\x9b\\\\x91' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  ?           ^               ^    ^   ^\n  + \\x31\\x2e\\xe2\\x98\\x85\\x20\\xf0\\x9f\\x9b\\x91\n  ?           ^               ^    ^   ^"
+   },
+   {
+    "nodeid": "test_generated::test_camel_to_underscore",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_convert_escaped_unicode_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '1.\u00e2\\x98\\x85 \u00f0\\x9f\\x9b\\x91' == '1.\u2605 #x1F6D1'\n  - 1.\u2605 #x1F6D1\n  + 1.\u00e2\u0098\u0085\n  +  \u00f0\u009f\u009b\u0091"
+   },
+   {
+    "nodeid": "test_generated::test_convert_escaped_utf8_literal",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/clean_repro/conda/envs/p2/lib/python3.10/codecs.py)"
+   },
+   {
+    "nodeid": "test_generated::test_underscore_to_camel",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert 'OneTwo' == 'oneTwo'\n  - oneTwo\n  ? ^\n  + OneTwo\n  ? ^"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.04,
+  "collected": 6,
+  "passed": 1,
+  "failed": 5,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 36,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    3,
+    13,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    44,
+    47,
+    68,
+    69,
+    70,
+    71,
+    72,
+    75,
+    81,
+    97,
+    100,
+    153,
+    154,
+    157,
+    205,
+    212,
+    233,
+    234,
+    235,
+    236
+   ],
+   "missing_lines": [
+    206,
+    207,
+    208,
+    209
+   ],
+   "stmt_cover": 88.88888888888889,
+   "cover_percent": 91.66666666666667,
+   "branches": 12,
+   "partial": 0,
+   "covered_branches": 12,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             5      0      0      0   100%\nmoduleutils.py        235     85     86     17    60%   65-66, 69-70, 73-74, 77, 117, 125->130, 170-171, 182, 196, 202-203, 227-238, 253-255, 291, 326, 333, 372->376, 482, 503, 512, 517-522, 538, 563-605, 611-612, 633, 639-640, 644, 649-660, 703-772\nstrutils.py            36      4     12      0    92%   206-209\ntest_generated.py      29      0      0      0   100%\n---------------------------------------------------------------\nTOTAL                 305     89     98     17    67%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_as_escaped_unicode_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...20\\\\U0001f6d1' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  + \\x31\\x2e\\u2605\\x20\\U0001f6d1"
+   },
+   {
+    "nodeid": "test_generated::test_as_escaped_utf8_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '\\\\x31\\\\x2e\\\\...x9f\\\\x9b\\\\x91' == '\\\\x31\\\\x2e\\\\...x9F\\\\x9B\\\\x91'\n  - \\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91\n  ?           ^               ^    ^   ^\n  + \\x31\\x2e\\xe2\\x98\\x85\\x20\\xf0\\x9f\\x9b\\x91\n  ?           ^               ^    ^   ^"
+   },
+   {
+    "nodeid": "test_generated::test_camel_to_underscore",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_convert_escaped_unicode_literal",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert '1.\u00e2\\x98\\x85 \u00f0\\x9f\\x9b\\x91' == '1.\u2605 #x1F6D1'\n  - 1.\u2605 #x1F6D1\n  + 1.\u00e2\u0098\u0085\n  +  \u00f0\u009f\u009b\u0091"
+   },
+   {
+    "nodeid": "test_generated::test_convert_escaped_utf8_literal",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/clean_repro/conda/envs/p2/lib/python3.10/codecs.py)"
+   },
+   {
+    "nodeid": "test_generated::test_underscore_to_camel",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert 'OneTwo' == 'oneTwo'\n  - oneTwo\n  ? ^\n  + OneTwo\n  ? ^"
+   }
+  ]
+ }
+}

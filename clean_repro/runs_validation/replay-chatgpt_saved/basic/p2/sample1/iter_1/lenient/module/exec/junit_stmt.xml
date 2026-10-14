@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="5" time="0.101" timestamp="2026-10-14T00:41:45.656325" hostname="vm"><testcase classname="test_generated.TestCachedProperty" name="test_cached_property" time="0.001" /><testcase classname="test_generated.TestCachedProperty" name="test_cached_property_async" time="0.001"><skipped type="pytest.skip" message="async def function and no async plugin installed (see warnings)">/opt/clean_repro/conda/envs/p2/lib/python3.10/site-packages/_pytest/python.py:184: async def function and no async plugin installed (see warnings)</skipped></testcase><testcase classname="test_generated.TestCachedProperty" name="test_cached_property_multiple_instances" time="0.001" /><testcase classname="test_generated.TestCachedProperty" name="test_cached_property_reset" time="0.001"><failure message="assert 6 == 11&#10; +  where 6 = &lt;module.test_generated.TestCachedProperty.test_cached_property_reset.&lt;locals&gt;.MyClass object at 0x7fb1c4986ad0&gt;.y">self = &lt;module.test_generated.TestCachedProperty object at 0x7fb1c4984640&gt;
+
+    def test_cached_property_reset(self):
+        class MyClass:
+            def __init__(self):
+                self.x = 5
+    
+            @cached_property
+            def y(self):
+                return self.x + 1
+    
+        obj = MyClass()
+        assert obj.y == 6
+        obj.x = 10
+&gt;       assert obj.y == 11
+E       assert 6 == 11
+E        +  where 6 = &lt;module.test_generated.TestCachedProperty.test_cached_property_reset.&lt;locals&gt;.MyClass object at 0x7fb1c4986ad0&gt;.y
+
+test_generated.py:62: AssertionError</failure></testcase><testcase classname="test_generated.TestCachedProperty" name="test_cached_property_no_overwrite" time="0.001" /></testsuite></testsuites>

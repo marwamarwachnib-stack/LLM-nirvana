@@ -1,0 +1,320 @@
+{
+ "summary": {
+  "collected": 11,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 58,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 28,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.97
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.47,
+  "collected": 11,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    23,
+    25,
+    26,
+    28,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    40,
+    41,
+    44,
+    51,
+    52,
+    54,
+    55,
+    57,
+    63,
+    65,
+    67,
+    70,
+    72,
+    73,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    87,
+    88,
+    90,
+    91,
+    92,
+    93,
+    94,
+    98,
+    99,
+    101,
+    102,
+    104,
+    108
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\nexample.py             58      0   100%\ntest_generated.py      61      0   100%\n-------------------------------------------------\nTOTAL                 119      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_9",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.5,
+  "collected": 11,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    23,
+    25,
+    26,
+    28,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    40,
+    41,
+    44,
+    51,
+    52,
+    54,
+    55,
+    57,
+    63,
+    65,
+    67,
+    70,
+    72,
+    73,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    87,
+    88,
+    90,
+    91,
+    92,
+    93,
+    94,
+    98,
+    99,
+    101,
+    102,
+    104,
+    108
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 28,
+   "partial": 0,
+   "covered_branches": 28,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\nexample.py             58      0     28      0   100%\ntest_generated.py      61      0      0      0   100%\n---------------------------------------------------------------\nTOTAL                 119      0     28      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_9",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

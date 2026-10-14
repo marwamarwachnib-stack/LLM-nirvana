@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="6" failures="7" skipped="0" tests="15" time="0.389" timestamp="2026-10-13T23:54:57.605742" hostname="vm"><testcase classname="test_example" name="test_init_poolmanager" time="0.002"><error message="failed on setup with &quot;AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?&quot;">@pytest.fixture
+    def adapter():
+&gt;       return HTTPieHTTPSAdapter(verify=True, ssl_version='tls1.2')
+
+test_example.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ctx/httpie/ssl_.py:46: in __init__
+    self._ssl_context = self._create_ssl_context(
+_ctx/httpie/ssl_.py:76: in _create_ssl_context
+    ssl_version=resolve_ssl_version(ssl_version),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidate = 'tls1.2'
+
+    def resolve_ssl_version(candidate: None | int | str) -&gt; int:
+        """
+        like resolve_cert_reqs
+        """
+        if candidate is None:
+            return PROTOCOL_TLS
+    
+        if isinstance(candidate, str):
+            res = getattr(ssl, candidate, None)
+            if res is None:
+&gt;               res = getattr(ssl, "PROTOCOL_" + candidate)
+E               AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?
+
+../../../../../conda/envs/p2/lib/python3.10/site-packages/urllib3/util/ssl_.py:178: AttributeError</error></testcase><testcase classname="test_example" name="test_init_poolmanager_verify_false" time="0.002"><failure message="AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?">def test_init_poolmanager_verify_false():
+        adapter = HTTPieHTTPSAdapter(verify=False)
+&gt;       assert adapter.ssl_context.cert_reqs == ssl.CERT_NONE
+E       AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?
+
+test_example.py:15: AttributeError</failure></testcase><testcase classname="test_example" name="test_init_poolmanager_verify_true" time="0.002"><failure message="AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?">def test_init_poolmanager_verify_true():
+        adapter = HTTPieHTTPSAdapter(verify=True)
+&gt;       assert adapter.ssl_context.cert_reqs == ssl.CERT_REQUIRED
+E       AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?
+
+test_example.py:19: AttributeError</failure></testcase><testcase classname="test_example" name="test_init_poolmanager_ssl_version" time="0.001"><failure message="AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?">def test_init_poolmanager_ssl_version():
+&gt;       adapter = HTTPieHTTPSAdapter(verify=True, ssl_version='tls1.2')
+
+test_example.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ctx/httpie/ssl_.py:46: in __init__
+    self._ssl_context = self._create_ssl_context(
+_ctx/httpie/ssl_.py:76: in _create_ssl_context
+    ssl_version=resolve_ssl_version(ssl_version),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidate = 'tls1.2'
+
+    def resolve_ssl_version(candidate: None | int | str) -&gt; int:
+        """
+        like resolve_cert_reqs
+        """
+        if candidate is None:
+            return PROTOCOL_TLS
+    
+        if isinstance(candidate, str):
+            res = getattr(ssl, candidate, None)
+            if res is None:
+&gt;               res = getattr(ssl, "PROTOCOL_" + candidate)
+E               AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?
+
+../../../../../conda/envs/p2/lib/python3.10/site-packages/urllib3/util/ssl_.py:178: AttributeError</failure></testcase><testcase classname="test_example" name="test_init_poolmanager_ssl_version_unknown" time="0.001"><failure message="AttributeError: module 'ssl' has no attribute 'PROTOCOL_unknown'">def test_init_poolmanager_ssl_version_unknown():
+&gt;       adapter = HTTPieHTTPSAdapter(verify=True, ssl_version='unknown')
+
+test_example.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ctx/httpie/ssl_.py:46: in __init__
+    self._ssl_context = self._create_ssl_context(
+_ctx/httpie/ssl_.py:76: in _create_ssl_context
+    ssl_version=resolve_ssl_version(ssl_version),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidate = 'unknown'
+
+    def resolve_ssl_version(candidate: None | int | str) -&gt; int:
+        """
+        like resolve_cert_reqs
+        """
+        if candidate is None:
+            return PROTOCOL_TLS
+    
+        if isinstance(candidate, str):
+            res = getattr(ssl, candidate, None)
+            if res is None:
+&gt;               res = getattr(ssl, "PROTOCOL_" + candidate)
+E               AttributeError: module 'ssl' has no attribute 'PROTOCOL_unknown'
+
+../../../../../conda/envs/p2/lib/python3.10/site-packages/urllib3/util/ssl_.py:178: AttributeError</failure></testcase><testcase classname="test_example" name="test_init_poolmanager_ciphers_default" time="0.002"><failure message="AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?">def test_init_poolmanager_ciphers_default():
+        adapter = HTTPieHTTPSAdapter(verify=True)
+&gt;       assert adapter.ssl_context.ciphers == DEFAULT_SSL_CIPHERS_STRING
+E       AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?
+
+test_example.py:31: AttributeError</failure></testcase><testcase classname="test_example" name="test_init_poolmanager_ciphers_custom" time="0.002"><failure message="AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?">def test_init_poolmanager_ciphers_custom():
+        adapter = HTTPieHTTPSAdapter(verify=True, ciphers='AES256-SHA')
+&gt;       assert adapter.ssl_context.ciphers == 'AES256-SHA'
+E       AttributeError: 'HTTPieHTTPSAdapter' object has no attribute 'ssl_context'. Did you mean: '_ssl_context'?
+
+test_example.py:35: AttributeError</failure></testcase><testcase classname="test_example" name="test_proxy_manager_for" time="0.001"><error message="failed on setup with &quot;AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?&quot;">@pytest.fixture
+    def adapter():
+&gt;       return HTTPieHTTPSAdapter(verify=True, ssl_version='tls1.2')
+
+test_example.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ctx/httpie/ssl_.py:46: in __init__
+    self._ssl_context = self._create_ssl_context(
+_ctx/httpie/ssl_.py:76: in _create_ssl_context
+    ssl_version=resolve_ssl_version(ssl_version),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidate = 'tls1.2'
+
+    def resolve_ssl_version(candidate: None | int | str) -&gt; int:
+        """
+        like resolve_cert_reqs
+        """
+        if candidate is None:
+            return PROTOCOL_TLS
+    
+        if isinstance(candidate, str):
+            res = getattr(ssl, candidate, None)
+            if res is None:
+&gt;               res = getattr(ssl, "PROTOCOL_" + candidate)
+E               AttributeError: module 'ssl' has no attribute 'PROTOCOL_tls1.2'. Did you mean: 'PROTOCOL_TLSv1_2'?
+
+../../../../../conda/envs/p2/lib/python3.10/site-packages/urllib3/util/ssl_.py:178: AttributeError</error></testcase><testcase classname="test_example" name="test_cert_verify" time="0.001"><error message="failed on setup with &quot;file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 41&#10;  def test_cert_verify(cert_file, key_file):&#10;E       fixture 'cert_file' not found&#10;&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory&#10;&gt;       use 'pytest --fixtures [testpath]' for help on them.&#10;&#10;/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:41&quot;">file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 41
+  def test_cert_verify(cert_file, key_file):
+E       fixture 'cert_file' not found
+&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use 'pytest --fixtures [testpath]' for help on them.
+
+/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:41</error></testcase><testcase classname="test_example" name="test_cert_verify_no_cert" time="0.002"><failure message="AttributeError: 'NoneType' object has no attribute 'cert_reqs'">def test_cert_verify_no_cert():
+        adapter = HTTPieHTTPSAdapter(verify=True)
+&gt;       result = adapter.cert_verify(None, 'https://www.ssl_.com', True, None)
+
+test_example.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ctx/httpie/ssl_.py:66: in cert_verify
+    return super().cert_verify(conn, url, verify, cert)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ssl_.HTTPieHTTPSAdapter object at 0x7f06d54808e0&gt;, conn = None
+url = 'https://www.ssl_.com', verify = True, cert = None
+
+    def cert_verify(self, conn, url, verify, cert):
+        """Verify a SSL certificate. This method should not be called from user
+        code, and is only exposed for use when subclassing the
+        :class:`HTTPAdapter &lt;requests.adapters.HTTPAdapter&gt;`.
+    
+        :param conn: The urllib3 connection object associated with the cert.
+        :param url: The requested URL.
+        :param verify: Either a boolean, in which case it controls whether we verify
+            the server's TLS certificate, or a string, in which case it must be a path
+            to a CA bundle to use
+        :param cert: The SSL certificate to verify.
+        """
+        if url.lower().startswith("https") and verify:
+    
+            cert_loc = None
+    
+            # Allow self-specified cert location.
+            if verify is not True:
+                cert_loc = verify
+    
+            if not cert_loc:
+                cert_loc = extract_zipped_paths(DEFAULT_CA_BUNDLE_PATH)
+    
+            if not cert_loc or not os.path.exists(cert_loc):
+                raise OSError(
+                    f"Could not find a suitable TLS CA certificate bundle, "
+                    f"invalid path: {cert_loc}"
+                )
+    
+&gt;           conn.cert_reqs = "CERT_REQUIRED"
+E           AttributeError: 'NoneType' object has no attribute 'cert_reqs'
+
+../../../../../conda/envs/p2/lib/python3.10/site-packages/requests/adapters.py:266: AttributeError</failure></testcase><testcase classname="test_example" name="test_cert_verify_encrypted_key_file" time="0.001"><error message="failed on setup with &quot;file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 52&#10;  def test_cert_verify_encrypted_key_file(key_file_encrypted):&#10;E       fixture 'key_file_encrypted' not found&#10;&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory&#10;&gt;       use 'pytest --fixtures [testpath]' for help on them.&#10;&#10;/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:52&quot;">file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 52
+  def test_cert_verify_encrypted_key_file(key_file_encrypted):
+E       fixture 'key_file_encrypted' not found
+&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use 'pytest --fixtures [testpath]' for help on them.
+
+/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:52</error></testcase><testcase classname="test_example" name="test_is_key_file_encrypted" time="0.001"><error message="failed on setup with &quot;file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 89&#10;  def test_is_key_file_encrypted(key_file, key_file_encrypted):&#10;E       fixture 'key_file' not found&#10;&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory&#10;&gt;       use 'pytest --fixtures [testpath]' for help on them.&#10;&#10;/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:89&quot;">file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 89
+  def test_is_key_file_encrypted(key_file, key_file_encrypted):
+E       fixture 'key_file' not found
+&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use 'pytest --fixtures [testpath]' for help on them.
+
+/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:89</error></testcase><testcase classname="test_example" name="test_ssl_version_args" time="0.001" /><testcase classname="test_example" name="test_get_default_ciphers_names" time="0.001" /><testcase classname="test_example" name="test_to_raw_cert" time="0.001"><error message="failed on setup with &quot;file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 69&#10;  def test_to_raw_cert(cert_file, key_file):&#10;E       fixture 'cert_file' not found&#10;&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory&#10;&gt;       use 'pytest --fixtures [testpath]' for help on them.&#10;&#10;/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:69&quot;">file /opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py, line 69
+  def test_to_raw_cert(cert_file, key_file):
+E       fixture 'cert_file' not found
+&gt;       available fixtures: _httpbin_with_chunked_support_available, _remote_httpbin_available, adapter, broken_plugin, capfd, capfdbinary, caplog, capsys, capsysbinary, class_based_httpbin, class_based_httpbin_secure, class_mocker, doctest_namespace, dummy_plugin, dummy_plugins, http_server, httpbin, httpbin_add_ca_bundle, httpbin_both, httpbin_ca_bundle, httpbin_secure, httpbin_secure_untrusted, httpbin_with_chunked_support, httpie_plugins, httpie_plugins_success, interface, localhost_http_server, mock_env, mocker, module_mocker, monkeypatch, package_mocker, pyopenssl_inject, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, remote_httpbin, session_mocker, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use 'pytest --fixtures [testpath]' for help on them.
+
+/opt/clean_repro/work/baseline/p2/sample11/chatgpt/test_example.py:69</error></testcase></testsuite></testsuites>

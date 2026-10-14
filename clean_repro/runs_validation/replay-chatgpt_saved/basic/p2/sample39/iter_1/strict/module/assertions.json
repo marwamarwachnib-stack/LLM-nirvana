@@ -1,0 +1,85 @@
+{
+ "status": "ok",
+ "static_assertions": 23,
+ "static_never_reached": 12,
+ "executed_assertions": 11,
+ "incorrect": 8,
+ "pct_incorrect": 72.73,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 8,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 0.0,
+  "runtime": 100.0
+ },
+ "tests_with_errors_outside_assertions": 3,
+ "records": [
+  {
+   "test": "test_generated.py::test_CatchAllUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:66:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_CatchAllUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:67:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_CatchAllUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:68:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_IgnoreUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:42:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_IgnoreUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:43:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_RaiseUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:17:assert",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_RaiseUndefinedParameters_handle_from_dict",
+   "aid": "test_generated.py:18:raises",
+   "kind": "runtime",
+   "exc": "TypeError: must be called with a dataclass type or instance"
+  },
+  {
+   "test": "test_generated.py::test_Undefined",
+   "aid": "test_generated.py:93:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Undefined",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Undefined",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_UndefinedParameterError",
+   "aid": "test_generated.py:99:raises",
+   "kind": "runtime",
+   "exc": "TypeError: ValidationError.__init__() missing 1 required positional argument: 'message'"
+  }
+ ]
+}

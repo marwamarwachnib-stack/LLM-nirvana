@@ -1,0 +1,21 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample15/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample15/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+.............F...                                                        [100%]
+=================================== FAILURES ===================================
+_________________________________ test_filter __________________________________
+
+    def test_filter():
+        lst1 = ImmutableList(1, ImmutableList(2, ImmutableList(3)))
+        lst2 = lst1.filter(lambda x: x % 2 == 0)
+        assert lst2.head == 2
+>       assert lst2.tail is None
+E       assert <immutable_list.ImmutableList object at 0x7fe75511dd50> is None
+E        +  where <immutable_list.ImmutableList object at 0x7fe75511dd50> = <immutable_list.ImmutableList object at 0x7fe75511dcf0>.tail
+
+test_example.py:91: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample15/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_filter - assert <immutable_list.ImmutableList ob...
+1 failed, 16 passed in 0.13s
+
+--- stderr ---

@@ -1,0 +1,120 @@
+{
+ "sample_id": "p2/sample36",
+ "group": "p2",
+ "category": "2",
+ "mode": "basic",
+ "model": "replay-chatgpt_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 12,
+    "passed": 2,
+    "failed": 10,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 81.16,
+    "stmts": 69,
+    "missing_lines": [
+     28,
+     29,
+     37,
+     55,
+     59,
+     72,
+     76,
+     83,
+     117,
+     120,
+     121,
+     127,
+     128
+    ],
+    "branch_cover": 78.22,
+    "branches": 32,
+    "branch_only_cover": 71.88,
+    "fail_kinds": {
+     "assertion": 10
+    },
+    "wall_seconds": 2.47,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 92,
+     "static_never_reached": 0,
+     "executed_assertions": 92,
+     "incorrect": 16,
+     "pct_incorrect": 17.39,
+     "n_assertion_error": 16,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 81
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 12,
+    "passed": 2,
+    "failed": 10,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 81.16,
+    "stmts": 69,
+    "missing_lines": [
+     28,
+     29,
+     37,
+     55,
+     59,
+     72,
+     76,
+     83,
+     117,
+     120,
+     121,
+     127,
+     128
+    ],
+    "branch_cover": 78.22,
+    "branches": 32,
+    "branch_only_cover": 71.88,
+    "fail_kinds": {
+     "assertion": 10
+    },
+    "wall_seconds": 2.49,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 92,
+     "static_never_reached": 0,
+     "executed_assertions": 92,
+     "incorrect": 16,
+     "pct_incorrect": 17.39,
+     "n_assertion_error": 16,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 81
+   }
+  }
+ }
+}

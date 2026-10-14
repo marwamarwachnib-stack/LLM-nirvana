@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="13" time="0.153" timestamp="2026-10-14T00:51:06.835163" hostname="vm"><testcase classname="test_example" name="test_try_of_success" time="0.002" /><testcase classname="test_example" name="test_try_of_failure" time="0.001"><failure message="AssertionError: assert &lt;monad_try.Try object at 0x7f87272e4e50&gt; == &lt;monad_try.Try object at 0x7f87272e69b0&gt;&#10; +  where &lt;monad_try.Try object at 0x7f87272e69b0&gt; = Try(ZeroDivisionError('division by zero'), False)&#10; +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')">def test_try_of_failure():
+        value = Try.of(lambda: 1/0)
+&gt;       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert &lt;monad_try.Try object at 0x7f87272e4e50&gt; == &lt;monad_try.Try object at 0x7f87272e69b0&gt;
+E        +  where &lt;monad_try.Try object at 0x7f87272e69b0&gt; = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:10: AssertionError</failure></testcase><testcase classname="test_example" name="test_try_map_success" time="0.001" /><testcase classname="test_example" name="test_try_map_failure" time="0.001"><failure message="AssertionError: assert &lt;monad_try.Try object at 0x7f872735fee0&gt; == &lt;monad_try.Try object at 0x7f872735ff70&gt;&#10; +  where &lt;monad_try.Try object at 0x7f872735ff70&gt; = Try(ZeroDivisionError('division by zero'), False)&#10; +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')">def test_try_map_failure():
+        value = Try.of(lambda: 1/0).map(lambda x: x * 2)
+&gt;       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert &lt;monad_try.Try object at 0x7f872735fee0&gt; == &lt;monad_try.Try object at 0x7f872735ff70&gt;
+E        +  where &lt;monad_try.Try object at 0x7f872735ff70&gt; = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:18: AssertionError</failure></testcase><testcase classname="test_example" name="test_try_bind_success" time="0.001" /><testcase classname="test_example" name="test_try_bind_failure" time="0.001"><failure message="AssertionError: assert &lt;monad_try.Try object at 0x7f87272e6bf0&gt; == &lt;monad_try.Try object at 0x7f87272e6c50&gt;&#10; +  where &lt;monad_try.Try object at 0x7f87272e6c50&gt; = Try(ZeroDivisionError('division by zero'), False)&#10; +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')">def test_try_bind_failure():
+        value = Try.of(lambda: 1/0).bind(lambda x: Try.of(lambda: x * 2))
+&gt;       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert &lt;monad_try.Try object at 0x7f87272e6bf0&gt; == &lt;monad_try.Try object at 0x7f87272e6c50&gt;
+E        +  where &lt;monad_try.Try object at 0x7f87272e6c50&gt; = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:26: AssertionError</failure></testcase><testcase classname="test_example" name="test_try_on_success" time="0.001" /><testcase classname="test_example" name="test_try_on_fail" time="0.001"><failure message="AssertionError: assert &lt;monad_try.Try object at 0x7f8727383af0&gt; == &lt;monad_try.Try object at 0x7f87273838b0&gt;&#10; +  where &lt;monad_try.Try object at 0x7f87273838b0&gt; = Try(ZeroDivisionError('division by zero'), False)&#10; +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')">def test_try_on_fail():
+        fail_callback = []
+    
+        def callback(x):
+            fail_callback.append(x)
+    
+        value = Try.of(lambda: 1/0).on_fail(callback)
+&gt;       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert &lt;monad_try.Try object at 0x7f8727383af0&gt; == &lt;monad_try.Try object at 0x7f87273838b0&gt;
+E        +  where &lt;monad_try.Try object at 0x7f87273838b0&gt; = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:45: AssertionError</failure></testcase><testcase classname="test_example" name="test_try_filter_success" time="0.001" /><testcase classname="test_example" name="test_try_filter_failure" time="0.001" /><testcase classname="test_example" name="test_try_get" time="0.001" /><testcase classname="test_example" name="test_try_get_or_else_success" time="0.001" /><testcase classname="test_example" name="test_try_get_or_else_failure" time="0.001" /></testsuite></testsuites>

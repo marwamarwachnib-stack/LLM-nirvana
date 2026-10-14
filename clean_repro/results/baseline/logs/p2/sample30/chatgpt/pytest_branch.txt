@@ -1,0 +1,171 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample30/chatgpt/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample30/chatgpt/junit_branch.xml test_example.py
+# returncode=1 timed_out=False
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+____________________ test_tokenize_yaml_error[-No content.] ____________________
+
+content = '', expected_error = 'No content.'
+
+    @pytest.mark.parametrize("content, expected_error", [
+        ("", "No content."),
+        ("Not a valid YAML string", "parse_error")
+    ])
+    def test_tokenize_yaml_error(content, expected_error):
+        with pytest.raises(ParseError) as exc:
+            tokenize_yaml(content)
+>       assert exc.value.text == expected_error
+E       AttributeError: 'ParseError' object has no attribute 'text'
+
+test_example.py:12: AttributeError
+________ test_tokenize_yaml_error[Not a valid YAML string-parse_error] _________
+
+content = 'Not a valid YAML string', expected_error = 'parse_error'
+
+    @pytest.mark.parametrize("content, expected_error", [
+        ("", "No content."),
+        ("Not a valid YAML string", "parse_error")
+    ])
+    def test_tokenize_yaml_error(content, expected_error):
+>       with pytest.raises(ParseError) as exc:
+E       Failed: DID NOT RAISE <class 'base.ParseError'>
+
+test_example.py:10: Failed
+______________________________ test_tokenize_yaml ______________________________
+
+    def test_tokenize_yaml():
+        content = '''
+        name: John Doe
+        age: 25
+        '''
+    
+        token = tokenize_yaml(content)
+>       assert isinstance(token, DictToken)
+E       NameError: name 'DictToken' is not defined
+
+test_example.py:21: NameError
+_ test_validate_yaml[name: John\nage: 25-validator0-expected_value0-expected_errors0] _
+
+content = 'name: John\nage: 25'
+validator = {'age': <class 'int'>, 'name': <class 'str'>}
+expected_value = {'age': 25, 'name': 'John'}, expected_errors = []
+
+    @pytest.mark.parametrize("content, validator, expected_value, expected_errors", [
+        ("name: John\nage: 25", {"name": str, "age": int}, {"name": "John", "age": 25}, []),
+        ("name: John\nage: 25", {"name": str, "age": str}, None, ["age must be of type str"]),
+        ("name: John\nage: abc", {"name": str, "age": int}, None, ["age must be of type int"]),
+    ])
+    def test_validate_yaml(content, validator, expected_value, expected_errors):
+>       value, errors = validate_yaml(content, validator)
+
+test_example.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokenize_yaml.py:128: in validate_yaml
+    return validate_with_positions(token=token, validator=validator)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validate_with_positions(
+        *, token: Token, validator: typing.Union[Field, typing.Type[Schema]]
+    ) -> typing.Any:
+        try:
+>           return validator.validate(token.value)
+E           AttributeError: 'dict' object has no attribute 'validate'
+
+positional_validation.py:13: AttributeError
+___ test_validate_yaml[name: John\nage: 25-validator1-None-expected_errors1] ___
+
+content = 'name: John\nage: 25'
+validator = {'age': <class 'str'>, 'name': <class 'str'>}, expected_value = None
+expected_errors = ['age must be of type str']
+
+    @pytest.mark.parametrize("content, validator, expected_value, expected_errors", [
+        ("name: John\nage: 25", {"name": str, "age": int}, {"name": "John", "age": 25}, []),
+        ("name: John\nage: 25", {"name": str, "age": str}, None, ["age must be of type str"]),
+        ("name: John\nage: abc", {"name": str, "age": int}, None, ["age must be of type int"]),
+    ])
+    def test_validate_yaml(content, validator, expected_value, expected_errors):
+>       value, errors = validate_yaml(content, validator)
+
+test_example.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokenize_yaml.py:128: in validate_yaml
+    return validate_with_positions(token=token, validator=validator)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validate_with_positions(
+        *, token: Token, validator: typing.Union[Field, typing.Type[Schema]]
+    ) -> typing.Any:
+        try:
+>           return validator.validate(token.value)
+E           AttributeError: 'dict' object has no attribute 'validate'
+
+positional_validation.py:13: AttributeError
+__ test_validate_yaml[name: John\nage: abc-validator2-None-expected_errors2] ___
+
+content = 'name: John\nage: abc'
+validator = {'age': <class 'int'>, 'name': <class 'str'>}, expected_value = None
+expected_errors = ['age must be of type int']
+
+    @pytest.mark.parametrize("content, validator, expected_value, expected_errors", [
+        ("name: John\nage: 25", {"name": str, "age": int}, {"name": "John", "age": 25}, []),
+        ("name: John\nage: 25", {"name": str, "age": str}, None, ["age must be of type str"]),
+        ("name: John\nage: abc", {"name": str, "age": int}, None, ["age must be of type int"]),
+    ])
+    def test_validate_yaml(content, validator, expected_value, expected_errors):
+>       value, errors = validate_yaml(content, validator)
+
+test_example.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokenize_yaml.py:128: in validate_yaml
+    return validate_with_positions(token=token, validator=validator)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validate_with_positions(
+        *, token: Token, validator: typing.Union[Field, typing.Type[Schema]]
+    ) -> typing.Any:
+        try:
+>           return validator.validate(token.value)
+E           AttributeError: 'dict' object has no attribute 'validate'
+
+positional_validation.py:13: AttributeError
+_______________________ test_validate_yaml_empty_string ________________________
+
+    def test_validate_yaml_empty_string():
+        with pytest.raises(ParseError) as exc:
+            validate_yaml("", {"name": str, "age": int})
+>       assert exc.value.text == "No content."
+E       AttributeError: 'ParseError' object has no attribute 'text'
+
+test_example.py:39: AttributeError
+________________________ test_validate_yaml_parse_error ________________________
+
+    def test_validate_yaml_parse_error():
+        with pytest.raises(ParseError) as exc:
+>           validate_yaml("Not a valid YAML string", {"name": str, "age": int})
+
+test_example.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tokenize_yaml.py:128: in validate_yaml
+    return validate_with_positions(token=token, validator=validator)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validate_with_positions(
+        *, token: Token, validator: typing.Union[Field, typing.Type[Schema]]
+    ) -> typing.Any:
+        try:
+>           return validator.validate(token.value)
+E           AttributeError: 'dict' object has no attribute 'validate'
+
+positional_validation.py:13: AttributeError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample30/chatgpt/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_tokenize_yaml_error[-No content.] - AttributeErr...
+FAILED test_example.py::test_tokenize_yaml_error[Not a valid YAML string-parse_error]
+FAILED test_example.py::test_tokenize_yaml - NameError: name 'DictToken' is n...
+FAILED test_example.py::test_validate_yaml[name: John\nage: 25-validator0-expected_value0-expected_errors0]
+FAILED test_example.py::test_validate_yaml[name: John\nage: 25-validator1-None-expected_errors1]
+FAILED test_example.py::test_validate_yaml[name: John\nage: abc-validator2-None-expected_errors2]
+FAILED test_example.py::test_validate_yaml_empty_string - AttributeError: 'Pa...
+FAILED test_example.py::test_validate_yaml_parse_error - AttributeError: 'dic...
+8 failed in 0.19s
+
+--- stderr ---

@@ -1,0 +1,1695 @@
+{
+ "sample1/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "decorators.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample1/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "decorators.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample2/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "objutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample2/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "objutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample3/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "packages.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample3/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "packages.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample4/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "strutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample4/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "strutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample5/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "txtutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample5/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "txtutils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample6/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "validators.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample6/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "moduleutils.py": "R2",
+   "validators.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample7/pynguin": {
+  "rules": {
+   "_timers.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample7/chatgpt": {
+  "rules": {
+   "_timers.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample8/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/httpie-master/httpie/__init__.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "compat.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample8/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/httpie-master/httpie/__init__.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "compat.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample9/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/rich_palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample9/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample10/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "sessions.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample10/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "sessions.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample11/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/rich_help.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/rich_palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample11/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample12/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/rich_help.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/rich_palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "fixtures/__init__.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample12/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/adapters.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argparser.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/argtypes.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/definition.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/dicts.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/exceptions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/errors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/interpret.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/parse.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/nested_json/tokens.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/options.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/requestitems.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cli/utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/client.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/context.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/cookies.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/downloads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/encoding.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__build_channel__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemon_runner.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/daemons.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/internal/update_warnings.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_1_0_session_cookie_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/legacy/v3_2_0_session_header_format.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/__main__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/cli.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/compat.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/core.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/check_updates.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/export_args.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/plugins.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/manager/tasks/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/colors.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/headers.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/formatters/xml.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/common.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/json.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/lexers/metadata.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/models.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/processing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/streams.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/ui/palette.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/output/writer.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/base.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/builtin.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/manager.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/plugins/registry.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/sessions.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/status.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/utils.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "conftest.py": "R4",
+   "utils/__init__.py": "R4",
+   "utils/http_server.py": "R4",
+   "utils/plugins_cli.py": "R4"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/httpie"
+  ]
+ },
+ "sample13/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "either.py": "R2",
+   "lazy.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "box.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample13/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "either.py": "R2",
+   "lazy.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "box.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample14/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "lazy.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "either.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample14/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "maybe.py": "R2",
+   "validation.py": "R2",
+   "either.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample15/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "immutable_list.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample15/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "immutable_list.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample16/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "either.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "lazy.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample16/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "either.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "lazy.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample17/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "lazy.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "maybe.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample17/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "either.py": "R2",
+   "lazy.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R2",
+   "maybe.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample18/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "monad_try.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample18/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "monad_try.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample19/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "semigroups.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample19/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "semigroups.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample20/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "lazy.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample20/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "box.py": "R2",
+   "either.py": "R2",
+   "lazy.py": "R2",
+   "maybe.py": "R2",
+   "monad_try.py": "R2",
+   "validation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample21/pynguin": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "utils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample21/chatgpt": {
+  "rules": {
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)",
+   "utils.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample22/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "_regex.py": "R2",
+   "errors.py": "R2",
+   "manipulation.py": "R2",
+   "validation.py": "R2",
+   "generation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample22/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "_regex.py": "R2",
+   "errors.py": "R2",
+   "manipulation.py": "R2",
+   "validation.py": "R2",
+   "generation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample23/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "_regex.py": "R2",
+   "errors.py": "R2",
+   "generation.py": "R2",
+   "validation.py": "R2",
+   "manipulation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample23/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "_regex.py": "R2",
+   "errors.py": "R2",
+   "generation.py": "R2",
+   "validation.py": "R2",
+   "manipulation.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample24/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "lib.py": "R2",
+   "primitive.py": "R2",
+   "renderfunc.py": "R2",
+   "rendertype.py": "R2",
+   "register.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample24/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "lib.py": "R2",
+   "primitive.py": "R2",
+   "renderfunc.py": "R2",
+   "rendertype.py": "R2",
+   "register.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample25/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "base.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample25/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "base.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample26/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "formats.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample26/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "formats.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample27/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "json_schema.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample27/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "json_schema.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample28/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "schemas.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample28/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "schemas.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample29/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "forms.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample29/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "forms.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample30/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "tokenize_yaml.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample30/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "tokenize_yaml.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample31/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "unique.py": "R2",
+   "tokens.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample31/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "fields.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "unique.py": "R2",
+   "tokens.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample32/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "fields.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample32/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "base.py": "R2",
+   "composites.py": "R2",
+   "formats.py": "R2",
+   "forms.py": "R2",
+   "json_schema.py": "R2",
+   "positional_validation.py": "R2b (tokenize/positional_validation.py)",
+   "schemas.py": "R2",
+   "tokenize_json.py": "R2b (tokenize/tokenize_json.py)",
+   "tokenize_yaml.py": "R2b (tokenize/tokenize_yaml.py)",
+   "tokens.py": "R2b (tokenize/tokens.py)",
+   "unique.py": "R2",
+   "fields.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample33/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "google.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "common.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample33/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "google.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "common.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample34/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "google.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample34/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "google.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample35/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "google.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "numpydoc.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample35/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "google.py": "R2",
+   "parser.py": "R2",
+   "rest.py": "R2",
+   "styles.py": "R2",
+   "numpydoc.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample36/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "google.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "styles.py": "R2",
+   "rest.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample36/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "common.py": "R2",
+   "google.py": "R2",
+   "numpydoc.py": "R2",
+   "parser.py": "R2",
+   "styles.py": "R2",
+   "rest.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample37/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "cfg.py": "R2",
+   "core.py": "R2",
+   "mm.py": "R2",
+   "undefined.py": "R2",
+   "utils.py": "R2",
+   "api.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample37/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "cfg.py": "R2",
+   "core.py": "R2",
+   "mm.py": "R2",
+   "undefined.py": "R2",
+   "utils.py": "R2",
+   "api.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample38/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "api.py": "R2",
+   "cfg.py": "R2",
+   "mm.py": "R2",
+   "undefined.py": "R2",
+   "utils.py": "R2",
+   "core.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample38/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "api.py": "R2",
+   "cfg.py": "R2",
+   "mm.py": "R2",
+   "undefined.py": "R2",
+   "utils.py": "R2",
+   "core.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample39/pynguin": {
+  "rules": {
+   "__init__.py": "R2",
+   "api.py": "R2",
+   "cfg.py": "R2",
+   "core.py": "R2",
+   "mm.py": "R2",
+   "utils.py": "R2",
+   "undefined.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample39/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "api.py": "R2",
+   "cfg.py": "R2",
+   "core.py": "R2",
+   "mm.py": "R2",
+   "utils.py": "R2",
+   "undefined.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample40/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/_internal_utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/color.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/configuration.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/format.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/pdir"
+  ]
+ },
+ "sample40/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/_internal_utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/color.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/configuration.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/format.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/pdir"
+  ]
+ },
+ "sample41/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/_internal_utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/color.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/configuration.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/format.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/pdir"
+  ]
+ },
+ "sample41/chatgpt": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/_internal_utils.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/color.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/configuration.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/constants.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/format.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/pdir"
+  ]
+ },
+ "sample42/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/__version__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/exception.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/fs.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/io.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/iterator.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/log.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/math.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/multiproc.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/run.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/structure.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/timing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/types.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/flutes"
+  ]
+ },
+ "sample42/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "__version__.py": "R2",
+   "fs.py": "R2",
+   "iterator.py": "R2",
+   "log.py": "R2",
+   "multiproc.py": "R2",
+   "run.py": "R2",
+   "structure.py": "R2",
+   "timing.py": "R2",
+   "types_renamed.py": "R3",
+   "exception.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ },
+ "sample43/pynguin": {
+  "rules": {
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/__init__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/__version__.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/exception.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/fs.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/io.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/iterator.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/log.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/math.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/multiproc.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/run.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/structure.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/timing.py": "R5",
+   "/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/types.py": "R5",
+   "__init__.py": "R6 (saved report: 0 statements -> empty file)"
+  },
+  "missing": [],
+  "pythonpath": [
+   "_ctx",
+   "_ctx_site"
+  ],
+  "append_path": [
+   "_ctx/flutes"
+  ]
+ },
+ "sample43/chatgpt": {
+  "rules": {
+   "__init__.py": "R2",
+   "__version__.py": "R2",
+   "exception.py": "R2",
+   "fs.py": "R2",
+   "iterator.py": "R2",
+   "log.py": "R2",
+   "multiproc.py": "R2",
+   "structure.py": "R2",
+   "timing.py": "R2",
+   "types_renamed.py": "R3",
+   "run.py": "R1"
+  },
+  "missing": [],
+  "pythonpath": [],
+  "append_path": []
+ }
+}

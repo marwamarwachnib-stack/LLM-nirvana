@@ -1,0 +1,43 @@
+{
+ "status": "ok",
+ "static_assertions": 4,
+ "static_never_reached": 0,
+ "executed_assertions": 4,
+ "incorrect": 1,
+ "pct_incorrect": 25.0,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_non_trump_card",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_total",
+   "aid": "test_generated.py:11:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_trump_card",
+   "aid": "test_generated.py:5:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_wrong_expectation",
+   "aid": "test_generated.py:14:assert",
+   "kind": "assertion",
+   "exc": ""
+  }
+ ]
+}

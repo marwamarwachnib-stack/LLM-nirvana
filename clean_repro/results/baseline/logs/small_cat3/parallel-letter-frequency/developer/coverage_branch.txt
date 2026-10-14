@@ -1,0 +1,6 @@
+Name                                Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------------
+parallel_letter_frequency.py           40      0     16      0   100%
+parallel_letter_frequency_test.py      37      1      4      1    95%   61
+-------------------------------------------------------------------------------
+TOTAL                                  77      1     20      1    98%

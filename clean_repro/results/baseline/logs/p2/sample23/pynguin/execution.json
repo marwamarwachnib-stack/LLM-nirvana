@@ -1,0 +1,1011 @@
+{
+ "summary": {
+  "collected": 44,
+  "passed": 26,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 18,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 97.01,
+  "stmts": 201,
+  "missing_lines": [
+   207,
+   209,
+   242,
+   248,
+   261,
+   275
+  ],
+  "branch_cover": 97.11,
+  "branches": 76,
+  "branch_only_cover": 97.37,
+  "fail_kinds": {},
+  "wall_seconds": 4.11
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 2.07,
+  "collected": 44,
+  "passed": 26,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 18,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 201,
+   "miss": 6,
+   "executed_lines": [
+    4,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    36,
+    38,
+    50,
+    52,
+    53,
+    55,
+    56,
+    59,
+    60,
+    63,
+    64,
+    67,
+    68,
+    71,
+    72,
+    73,
+    76,
+    78,
+    79,
+    81,
+    83,
+    84,
+    86,
+    88,
+    89,
+    91,
+    92,
+    95,
+    97,
+    100,
+    104,
+    106,
+    108,
+    109,
+    110,
+    111,
+    112,
+    114,
+    116,
+    117,
+    118,
+    119,
+    122,
+    125,
+    128,
+    131,
+    133,
+    136,
+    142,
+    145,
+    146,
+    152,
+    154,
+    156,
+    159,
+    161,
+    162,
+    163,
+    164,
+    166,
+    167,
+    169,
+    170,
+    172,
+    173,
+    174,
+    176,
+    177,
+    180,
+    183,
+    188,
+    191,
+    193,
+    195,
+    196,
+    197,
+    201,
+    204,
+    212,
+    213,
+    214,
+    215,
+    217,
+    219,
+    220,
+    222,
+    223,
+    225,
+    226,
+    227,
+    229,
+    230,
+    232,
+    233,
+    235,
+    236,
+    238,
+    239,
+    241,
+    246,
+    247,
+    250,
+    252,
+    253,
+    256,
+    257,
+    260,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    274,
+    277,
+    282,
+    294,
+    295,
+    297,
+    300,
+    315,
+    316,
+    318,
+    319,
+    321,
+    324,
+    341,
+    342,
+    344,
+    345,
+    347,
+    349,
+    350,
+    352,
+    354,
+    357,
+    369,
+    370,
+    373,
+    376,
+    379,
+    382,
+    397,
+    398,
+    400,
+    402,
+    405,
+    429,
+    430,
+    433,
+    447,
+    448,
+    451,
+    454,
+    457,
+    459,
+    462,
+    485,
+    486,
+    489,
+    492,
+    495,
+    497,
+    500,
+    523,
+    524,
+    526,
+    529,
+    551,
+    552,
+    554,
+    555,
+    556,
+    558,
+    561,
+    595,
+    598,
+    608,
+    611,
+    634,
+    637,
+    649
+   ],
+   "missing_lines": [
+    207,
+    209,
+    242,
+    248,
+    261,
+    275
+   ],
+   "stmt_cover": 97.01492537313433,
+   "cover_percent": 97.01492537313433
+  },
+  "report_text": "Name                   Stmts   Miss  Cover   Missing\n----------------------------------------------------\n__init__.py                4      0   100%\n_regex.py                 30      0   100%\nerrors.py                  6      0   100%\ngeneration.py             50     38    24%   33-38, 53-60, 78-85, 106-140\nmanipulation.py          201      6    97%   207-209, 242, 248, 261, 275\ntest_manipulation.py     400      0   100%\nvalidation.py            152    106    30%   44-47, 50-63, 66-78, 136, 172, 193-201, 220-244, 269-283, 359-365, 385-390, 407-415, 431, 448, 471-494, 510-513, 529, 547-552, 571-574, 595-598, 617-618, 637-638, 656-657\n----------------------------------------------------\nTOTAL                    843    150    82%\n",
+  "tests": [
+   {
+    "nodeid": "test_manipulation::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_3",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_7",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_13",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_16",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_17",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_18",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_19",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_20",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_21",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_22",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_23",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_24",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_25",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_26",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_27",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_28",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_29",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_30",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_31",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_32",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_33",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_34",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_35",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_36",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_37",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_38",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_39",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_40",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_41",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_42",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_43",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 2.04,
+  "collected": 44,
+  "passed": 26,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 18,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 201,
+   "miss": 6,
+   "executed_lines": [
+    4,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    36,
+    38,
+    50,
+    52,
+    53,
+    55,
+    56,
+    59,
+    60,
+    63,
+    64,
+    67,
+    68,
+    71,
+    72,
+    73,
+    76,
+    78,
+    79,
+    81,
+    83,
+    84,
+    86,
+    88,
+    89,
+    91,
+    92,
+    95,
+    97,
+    100,
+    104,
+    106,
+    108,
+    109,
+    110,
+    111,
+    112,
+    114,
+    116,
+    117,
+    118,
+    119,
+    122,
+    125,
+    128,
+    131,
+    133,
+    136,
+    142,
+    145,
+    146,
+    152,
+    154,
+    156,
+    159,
+    161,
+    162,
+    163,
+    164,
+    166,
+    167,
+    169,
+    170,
+    172,
+    173,
+    174,
+    176,
+    177,
+    180,
+    183,
+    188,
+    191,
+    193,
+    195,
+    196,
+    197,
+    201,
+    204,
+    212,
+    213,
+    214,
+    215,
+    217,
+    219,
+    220,
+    222,
+    223,
+    225,
+    226,
+    227,
+    229,
+    230,
+    232,
+    233,
+    235,
+    236,
+    238,
+    239,
+    241,
+    246,
+    247,
+    250,
+    252,
+    253,
+    256,
+    257,
+    260,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    274,
+    277,
+    282,
+    294,
+    295,
+    297,
+    300,
+    315,
+    316,
+    318,
+    319,
+    321,
+    324,
+    341,
+    342,
+    344,
+    345,
+    347,
+    349,
+    350,
+    352,
+    354,
+    357,
+    369,
+    370,
+    373,
+    376,
+    379,
+    382,
+    397,
+    398,
+    400,
+    402,
+    405,
+    429,
+    430,
+    433,
+    447,
+    448,
+    451,
+    454,
+    457,
+    459,
+    462,
+    485,
+    486,
+    489,
+    492,
+    495,
+    497,
+    500,
+    523,
+    524,
+    526,
+    529,
+    551,
+    552,
+    554,
+    555,
+    556,
+    558,
+    561,
+    595,
+    598,
+    608,
+    611,
+    634,
+    637,
+    649
+   ],
+   "missing_lines": [
+    207,
+    209,
+    242,
+    248,
+    261,
+    275
+   ],
+   "stmt_cover": 97.01492537313433,
+   "cover_percent": 97.11191335740072,
+   "branches": 76,
+   "partial": 2,
+   "covered_branches": 74,
+   "branch_only_cover": 97.36842105263158
+  },
+  "report_text": "Name                   Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------------------\n__init__.py                4      0      0      0   100%\n_regex.py                 30      0      0      0   100%\nerrors.py                  6      0      0      0   100%\ngeneration.py             50     38     18      0    18%   33-38, 53-60, 78-85, 106-140\nmanipulation.py          201      6     76      2    97%   207-209, 242, 248, 261, 275\ntest_manipulation.py     400      0     22      0   100%\nvalidation.py            152    106     66      1    22%   44-47, 50-63, 66-78, 136, 172, 193-201, 220-244, 269-283, 359-365, 385-390, 407-415, 431, 448, 471-494, 510-513, 529, 547-552, 571-574, 595-598, 617-618, 637-638, 656-657\n------------------------------------------------------------------\nTOTAL                    843    150    182      3    77%\n",
+  "tests": [
+   {
+    "nodeid": "test_manipulation::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_3",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_7",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_13",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_16",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_17",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_18",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_19",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_20",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_21",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_22",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_23",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_24",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_25",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_26",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_27",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_28",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_29",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_30",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_31",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_32",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_33",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_34",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_35",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_36",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_37",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_38",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_39",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_40",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_41",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_42",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_manipulation::test_case_43",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,571 @@
+{
+ "status": "ok",
+ "static_assertions": 92,
+ "static_never_reached": 0,
+ "executed_assertions": 92,
+ "incorrect": 16,
+ "pct_incorrect": 17.39,
+ "n_assertion_error": 16,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:10:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:11:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:12:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:13:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_empty_string",
+   "aid": "test_generated.py:9:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:39:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:40:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:41:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:42:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:43:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:44:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:45:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:46:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:47:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:48:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:49:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:56:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:57:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:58:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:59:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:60:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:61:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:62:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type",
+   "aid": "test_generated.py:63:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:81:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:82:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:83:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:84:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:85:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:86:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:87:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:88:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_default",
+   "aid": "test_generated.py:89:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:68:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:69:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:70:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:71:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:72:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:73:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:74:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:75:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_param_with_type_and_optional",
+   "aid": "test_generated.py:76:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:138:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:139:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:140:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:141:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:142:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_raises",
+   "aid": "test_generated.py:143:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:100:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:96:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:97:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:98:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns",
+   "aid": "test_generated.py:99:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:105:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:106:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:107:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:108:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:109:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:110:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_returns_with_type",
+   "aid": "test_generated.py:111:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:116:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:117:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:118:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:119:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:120:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields",
+   "aid": "test_generated.py:122:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:127:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:128:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:129:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:130:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:131:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:132:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_meta_yields_with_type",
+   "aid": "test_generated.py:133:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:28:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:29:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:30:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:31:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:32:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_and_long_description",
+   "aid": "test_generated.py:33:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:18:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:19:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:20:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:21:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_parse_short_description_only",
+   "aid": "test_generated.py:23:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

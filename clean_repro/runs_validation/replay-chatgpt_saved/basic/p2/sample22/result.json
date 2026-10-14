@@ -1,0 +1,110 @@
+{
+ "sample_id": "p2/sample22",
+ "group": "p2",
+ "category": "2",
+ "mode": "basic",
+ "model": "replay-chatgpt_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 4,
+    "passed": 3,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 84.0,
+    "stmts": 50,
+    "missing_lines": [
+     110,
+     116,
+     119,
+     122,
+     123,
+     124,
+     127,
+     140
+    ],
+    "branch_cover": 80.88,
+    "branches": 18,
+    "branch_only_cover": 72.22,
+    "fail_kinds": {
+     "runtime": 1
+    },
+    "wall_seconds": 2.35,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 19,
+     "static_never_reached": 7,
+     "executed_assertions": 12,
+     "incorrect": 0,
+     "pct_incorrect": 0.0,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 1
+    },
+    "stmt_cover_report": 84
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 4,
+    "passed": 3,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 84.0,
+    "stmts": 50,
+    "missing_lines": [
+     110,
+     116,
+     119,
+     122,
+     123,
+     124,
+     127,
+     140
+    ],
+    "branch_cover": 80.88,
+    "branches": 18,
+    "branch_only_cover": 72.22,
+    "fail_kinds": {
+     "runtime": 1
+    },
+    "wall_seconds": 2.16,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 19,
+     "static_never_reached": 7,
+     "executed_assertions": 12,
+     "incorrect": 0,
+     "pct_incorrect": 0.0,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 1
+    },
+    "stmt_cover_report": 84
+   }
+  }
+ }
+}

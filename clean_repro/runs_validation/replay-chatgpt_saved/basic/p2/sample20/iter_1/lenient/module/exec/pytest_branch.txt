@@ -1,0 +1,85 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample20/iter_1/lenient/module/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample20/iter_1/lenient/module/junit_branch.xml test_generated.py
+# returncode=1 timed_out=False
+.....FFF.FF                                                              [100%]
+=================================== FAILURES ===================================
+___________________________________ test_ap ____________________________________
+
+    def test_ap():
+        val1 = Validation.success(5)
+        val2 = Validation.success(lambda x: x * 2)
+>       new_val = val2.ap(val1)
+
+test_generated.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <validation.Validation object at 0x7f0f6952ac20>
+fn = <validation.Validation object at 0x7f0f6952acb0>
+
+    def ap(self, fn):
+        """
+        It takes as a parameter function returning another Validation.
+        Function is called with Validation value and returns new Validation with previous value
+        and concated new and old errors.
+    
+        :param monad: monad contains function
+        :type monad: Function(A) -> Validation[Any, List[E]]
+        :returns: new validation with stored errors
+        :rtype: Validation[A, List[E]]
+        """
+>       return Validation(self.value, self.errors + fn(self.value).errors)
+E       TypeError: 'Validation' object is not callable
+
+validation.py:96: TypeError
+________________________________ test_to_either ________________________________
+
+    def test_to_either():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        either1 = val1.to_either()
+        either2 = val2.to_either()
+        assert either1.is_right() is True
+>       assert either1.right() == 5
+E       AttributeError: 'Right' object has no attribute 'right'
+
+test_generated.py:51: AttributeError
+________________________________ test_to_maybe _________________________________
+
+    def test_to_maybe():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        maybe1 = val1.to_maybe()
+        maybe2 = val2.to_maybe()
+>       assert maybe1.is_just() is True
+E       AttributeError: 'Maybe' object has no attribute 'is_just'
+
+test_generated.py:60: AttributeError
+_________________________________ test_to_lazy _________________________________
+
+    def test_to_lazy():
+        val = Validation.success(5)
+        lazy = val.to_lazy()
+>       assert lazy.value() == 5
+E       TypeError: 'NoneType' object is not callable
+
+test_generated.py:72: TypeError
+_________________________________ test_to_try __________________________________
+
+    def test_to_try():
+        val1 = Validation.success(5)
+        val2 = Validation.fail(["error"])
+        try1 = val1.to_try()
+        try2 = val2.to_try()
+>       assert try1.is_success() is True
+E       TypeError: 'bool' object is not callable
+
+test_generated.py:79: TypeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample20/iter_1/lenient/module/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_ap - TypeError: 'Validation' object is not cal...
+FAILED test_generated.py::test_to_either - AttributeError: 'Right' object has...
+FAILED test_generated.py::test_to_maybe - AttributeError: 'Maybe' object has ...
+FAILED test_generated.py::test_to_lazy - TypeError: 'NoneType' object is not ...
+FAILED test_generated.py::test_to_try - TypeError: 'bool' object is not callable
+5 failed, 6 passed in 0.14s
+
+--- stderr ---

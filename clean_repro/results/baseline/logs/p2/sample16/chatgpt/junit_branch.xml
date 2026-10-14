@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="9" time="0.135" timestamp="2026-10-14T00:50:54.148454" hostname="vm"><testcase classname="test_example" name="test_lazy_of" time="0.001" /><testcase classname="test_example" name="test_lazy_with_map" time="0.001" /><testcase classname="test_example" name="test_lazy_with_ap" time="0.001"><failure message="assert &lt;function test_lazy_with_ap.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba166560&gt; == 10&#10; +  where &lt;function test_lazy_with_ap.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba166560&gt; = &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;&gt;()&#10; +    where &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;&gt; = &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;.get">def test_lazy_with_ap():
+        lazy1 = Lazy.of(lambda x: x + 5)
+        lazy2 = Lazy.of(5)
+        lazy_ap = lazy1.ap(lazy2)
+&gt;       assert lazy_ap.get() == 10
+E       assert &lt;function test_lazy_with_ap.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba166560&gt; == 10
+E        +  where &lt;function test_lazy_with_ap.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba166560&gt; = &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;&gt;()
+E        +    where &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;&gt; = &lt;lazy.Lazy object at 0x7f9fba1bb430&gt;.get
+
+test_example.py:18: AssertionError</failure></testcase><testcase classname="test_example" name="test_lazy_with_bind" time="0.001"><failure message="assert &lt;function Lazy.of.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba1e4040&gt; == 10&#10; +  where &lt;function Lazy.of.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba1e4040&gt; = &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;&gt;()&#10; +    where &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;&gt; = &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;.get">def test_lazy_with_bind():
+        lazy = Lazy.of(5)
+        lazy_bind = lazy.bind(lambda x: Lazy.of(x + 5))
+&gt;       assert lazy_bind.get() == 10
+E       assert &lt;function Lazy.of.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba1e4040&gt; == 10
+E        +  where &lt;function Lazy.of.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9fba1e4040&gt; = &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;&gt;()
+E        +    where &lt;bound method Lazy.get of &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;&gt; = &lt;lazy.Lazy object at 0x7f9fba17b7c0&gt;.get
+
+test_example.py:23: AssertionError</failure></testcase><testcase classname="test_example" name="test_lazy_with_to_box" time="0.002"><failure message="AttributeError: 'Box' object has no attribute 'get'">def test_lazy_with_to_box():
+        lazy = Lazy.of(5)
+        box = lazy.to_box()
+&gt;       assert box.get() == 5
+E       AttributeError: 'Box' object has no attribute 'get'
+
+test_example.py:28: AttributeError</failure></testcase><testcase classname="test_example" name="test_lazy_with_to_either" time="0.002"><failure message="AttributeError: 'Right' object has no attribute 'get'">def test_lazy_with_to_either():
+        lazy = Lazy.of(5)
+        either = lazy.to_either()
+&gt;       assert either.get() == 5
+E       AttributeError: 'Right' object has no attribute 'get'
+
+test_example.py:33: AttributeError</failure></testcase><testcase classname="test_example" name="test_lazy_with_to_maybe" time="0.002"><failure message="AttributeError: 'Maybe' object has no attribute 'get'">def test_lazy_with_to_maybe():
+        lazy = Lazy.of(5)
+        maybe = lazy.to_maybe()
+&gt;       assert maybe.get() == 5
+E       AttributeError: 'Maybe' object has no attribute 'get'
+
+test_example.py:38: AttributeError</failure></testcase><testcase classname="test_example" name="test_lazy_with_to_try" time="0.002" /><testcase classname="test_example" name="test_lazy_with_to_validation" time="0.001"><failure message="AttributeError: 'Validation' object has no attribute 'get'">def test_lazy_with_to_validation():
+        lazy = Lazy.of(5)
+        validation = lazy.to_validation()
+&gt;       assert validation.get() == 5
+E       AttributeError: 'Validation' object has no attribute 'get'
+
+test_example.py:48: AttributeError</failure></testcase></testsuite></testsuites>

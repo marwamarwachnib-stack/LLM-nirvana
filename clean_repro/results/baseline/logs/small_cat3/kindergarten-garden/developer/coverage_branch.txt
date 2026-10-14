@@ -1,0 +1,6 @@
+Name                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------
+kindergarten_garden.py           15      0      6      0   100%
+kindergarten_garden_test.py      60      0      0      0   100%
+-------------------------------------------------------------------------
+TOTAL                            75      0      6      0   100%

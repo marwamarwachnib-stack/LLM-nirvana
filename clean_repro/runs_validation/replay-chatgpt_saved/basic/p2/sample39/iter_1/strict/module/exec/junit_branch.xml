@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="8" time="0.369" timestamp="2026-10-14T00:45:53.255874" hostname="vm"><testcase classname="test_generated" name="test_UndefinedParameterError" time="0.002"><failure message="TypeError: ValidationError.__init__() missing 1 required positional argument: 'message'">def test_UndefinedParameterError():
+        with pytest.raises(UndefinedParameterError):
+&gt;           raise UndefinedParameterError()
+E           TypeError: ValidationError.__init__() missing 1 required positional argument: 'message'
+
+test_generated.py:100: TypeError</failure></testcase><testcase classname="test_generated" name="test_RaiseUndefinedParameters_handle_from_dict" time="0.001"><failure message="TypeError: must be called with a dataclass type or instance">def test_RaiseUndefinedParameters_handle_from_dict():
+        class TestClass:
+            def __init__(self, a):
+                self.a = a
+    
+&gt;       assert _RaiseUndefinedParameters.handle_from_dict(TestClass, {'a': 1}) == {'a': 1}
+
+test_generated.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+undefined.py:68: in handle_from_dict
+    _UndefinedParameterAction._separate_defined_undefined_kvs(
+undefined.py:50: in _separate_defined_undefined_kvs
+    class_fields = fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = &lt;class 'module.test_generated.test_RaiseUndefinedParameters_handle_from_dict.&lt;locals&gt;.TestClass'&gt;
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+&gt;           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError</failure></testcase><testcase classname="test_generated" name="test_RaiseUndefinedParameters_create_init" time="0.001"><failure message="TypeError: test_RaiseUndefinedParameters_create_init.&lt;locals&gt;.TestClass.__init__() missing 1 required positional argument: 'a'">def test_RaiseUndefinedParameters_create_init():
+        class TestClass:
+            def __init__(self, a):
+                self.a = a
+    
+        init_func = _RaiseUndefinedParameters.create_init(TestClass)
+        obj = TestClass(1)
+&gt;       init_func(obj)
+E       TypeError: test_RaiseUndefinedParameters_create_init.&lt;locals&gt;.TestClass.__init__() missing 1 required positional argument: 'a'
+
+test_generated.py:29: TypeError</failure></testcase><testcase classname="test_generated" name="test_IgnoreUndefinedParameters_handle_from_dict" time="0.001"><failure message="TypeError: must be called with a dataclass type or instance">def test_IgnoreUndefinedParameters_handle_from_dict():
+        class TestClass:
+            def __init__(self, a):
+                self.a = a
+    
+&gt;       assert _IgnoreUndefinedParameters.handle_from_dict(TestClass, {'a': 1}) == {'a': 1}
+
+test_generated.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+undefined.py:89: in handle_from_dict
+    _UndefinedParameterAction._separate_defined_undefined_kvs(
+undefined.py:50: in _separate_defined_undefined_kvs
+    class_fields = fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = &lt;class 'module.test_generated.test_IgnoreUndefinedParameters_handle_from_dict.&lt;locals&gt;.TestClass'&gt;
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+&gt;           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError</failure></testcase><testcase classname="test_generated" name="test_IgnoreUndefinedParameters_create_init" time="0.001"><failure message="TypeError: must be called with a dataclass type or instance">def test_IgnoreUndefinedParameters_create_init():
+        class TestClass:
+            def __init__(self, a):
+                self.a = a
+    
+        init_func = _IgnoreUndefinedParameters.create_init(TestClass)
+        obj = TestClass(1)
+&gt;       init_func(obj)
+
+test_generated.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+undefined.py:101: in _ignore_init
+    _CatchAllUndefinedParameters._separate_defined_undefined_kvs(
+undefined.py:50: in _separate_defined_undefined_kvs
+    class_fields = fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = &lt;class 'module.test_generated.test_IgnoreUndefinedParameters_create_init.&lt;locals&gt;.TestClass'&gt;
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+&gt;           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError</failure></testcase><testcase classname="test_generated" name="test_CatchAllUndefinedParameters_handle_from_dict" time="0.001"><failure message="TypeError: must be called with a dataclass type or instance">def test_CatchAllUndefinedParameters_handle_from_dict():
+        class TestClass:
+            def __init__(self, a, catch_all: CatchAll = None):
+                self.a = a
+                self.catch_all = catch_all
+    
+&gt;       assert _CatchAllUndefinedParameters.handle_from_dict(TestClass, {'a': 1}) == {'a': 1}
+
+test_generated.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+undefined.py:135: in handle_from_dict
+    known, unknown = _UndefinedParameterAction \
+undefined.py:50: in _separate_defined_undefined_kvs
+    class_fields = fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = &lt;class 'module.test_generated.test_CatchAllUndefinedParameters_handle_from_dict.&lt;locals&gt;.TestClass'&gt;
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+&gt;           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError</failure></testcase><testcase classname="test_generated" name="test_CatchAllUndefinedParameters_create_init" time="0.001"><failure message="TypeError: must be called with a dataclass type or instance">def test_CatchAllUndefinedParameters_create_init():
+        class TestClass:
+            def __init__(self, a, catch_all: CatchAll = None):
+                self.a = a
+                self.catch_all = catch_all
+    
+        init_func = _CatchAllUndefinedParameters.create_init(TestClass)
+        obj = TestClass(1)
+&gt;       init_func(obj)
+
+test_generated.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+undefined.py:217: in _catch_all_init
+    _CatchAllUndefinedParameters._separate_defined_undefined_kvs(
+undefined.py:50: in _separate_defined_undefined_kvs
+    class_fields = fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = &lt;class 'module.test_generated.test_CatchAllUndefinedParameters_create_init.&lt;locals&gt;.TestClass'&gt;
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+&gt;           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError</failure></testcase><testcase classname="test_generated" name="test_Undefined" time="0.001" /></testsuite></testsuites>

@@ -1,0 +1,96 @@
+{
+ "sample_id": "small_cat2/alphametics",
+ "group": "small",
+ "category": "2",
+ "mode": "basic",
+ "model": "replay-pynguin_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 5,
+    "passed": 5,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 0,
+    "stmt_cover": 95.95,
+    "stmts": 74,
+    "missing_lines": [
+     75,
+     113,
+     157
+    ],
+    "branch_cover": 95.24,
+    "branches": 52,
+    "branch_only_cover": 94.23,
+    "fail_kinds": {},
+    "wall_seconds": 0.82,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 0,
+     "static_never_reached": 0,
+     "executed_assertions": 0,
+     "incorrect": 0,
+     "pct_incorrect": null,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 96
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 5,
+    "passed": 5,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 0,
+    "stmt_cover": 95.95,
+    "stmts": 74,
+    "missing_lines": [
+     75,
+     113,
+     157
+    ],
+    "branch_cover": 95.24,
+    "branches": 52,
+    "branch_only_cover": 94.23,
+    "fail_kinds": {},
+    "wall_seconds": 0.91,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 0,
+     "static_never_reached": 0,
+     "executed_assertions": 0,
+     "incorrect": 0,
+     "pct_incorrect": null,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 96
+   }
+  }
+ }
+}

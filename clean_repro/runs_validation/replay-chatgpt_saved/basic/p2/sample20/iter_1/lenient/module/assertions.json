@@ -1,0 +1,181 @@
+{
+ "status": "ok",
+ "static_assertions": 29,
+ "static_never_reached": 2,
+ "executed_assertions": 27,
+ "incorrect": 8,
+ "pct_incorrect": 29.63,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 8,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 0.0,
+  "runtime": 100.0
+ },
+ "tests_with_errors_outside_assertions": 1,
+ "records": [
+  {
+   "test": "test_generated.py::test_bind",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bind",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_eq",
+   "aid": "test_generated.py:23:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_eq",
+   "aid": "test_generated.py:24:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_fail",
+   "aid": "test_generated.py:14:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_fail",
+   "aid": "test_generated.py:15:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_fail",
+   "aid": "test_generated.py:16:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_fail",
+   "aid": "test_generated.py:17:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_map",
+   "aid": "test_generated.py:29:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_map",
+   "aid": "test_generated.py:30:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_success",
+   "aid": "test_generated.py:10:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_success",
+   "aid": "test_generated.py:7:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_success",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_success",
+   "aid": "test_generated.py:9:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_to_box",
+   "aid": "test_generated.py:67:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_to_either",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_to_either",
+   "aid": "test_generated.py:51:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Right' object has no attribute 'right'"
+  },
+  {
+   "test": "test_generated.py::test_to_either",
+   "aid": "test_generated.py:52:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_to_either",
+   "aid": "test_generated.py:53:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Left' object has no attribute 'left'"
+  },
+  {
+   "test": "test_generated.py::test_to_lazy",
+   "aid": "test_generated.py:72:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'NoneType' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_to_maybe",
+   "aid": "test_generated.py:60:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Maybe' object has no attribute 'is_just'"
+  },
+  {
+   "test": "test_generated.py::test_to_maybe",
+   "aid": "test_generated.py:61:assert",
+   "kind": "runtime",
+   "exc": "TypeError: Maybe.just() missing 1 required positional argument: 'value'"
+  },
+  {
+   "test": "test_generated.py::test_to_maybe",
+   "aid": "test_generated.py:62:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'bool' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_to_try",
+   "aid": "test_generated.py:79:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'bool' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_to_try",
+   "aid": "test_generated.py:80:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_to_try",
+   "aid": "test_generated.py:81:assert",
+   "kind": "runtime",
+   "exc": "TypeError: 'bool' object is not callable"
+  },
+  {
+   "test": "test_generated.py::test_to_try",
+   "aid": "test_generated.py:82:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

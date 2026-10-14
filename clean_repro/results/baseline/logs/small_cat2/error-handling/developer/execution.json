@@ -1,0 +1,162 @@
+{
+ "summary": {
+  "collected": 5,
+  "passed": 5,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 15,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 2,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.8
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.39,
+  "collected": 5,
+  "passed": 5,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 15,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                     Stmts   Miss  Cover   Missing\n------------------------------------------------------\nerror_handling.py           15      0   100%\nerror_handling_test.py      33      1    97%   55\ntest_utils.py               21      0   100%\n------------------------------------------------------\nTOTAL                       69      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_filelike_objects_are_closed_on_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_filelike_objects_are_closed_without_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_return_none",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_return_tuple",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_throw_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.41,
+  "collected": 5,
+  "passed": 5,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 15,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 2,
+   "partial": 0,
+   "covered_branches": 2,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                     Stmts   Miss Branch BrPart  Cover   Missing\n--------------------------------------------------------------------\nerror_handling.py           15      0      2      0   100%\nerror_handling_test.py      33      1      6      1    95%   55\ntest_utils.py               21      0      2      0   100%\n--------------------------------------------------------------------\nTOTAL                       69      1     10      1    97%\n",
+  "tests": [
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_filelike_objects_are_closed_on_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_filelike_objects_are_closed_without_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_return_none",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_return_tuple",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "error_handling_test.ErrorHandlingTest::test_throw_exception",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="16" time="0.246" timestamp="2026-10-14T00:43:58.505441" hostname="vm"><testcase classname="test_generated" name="test_date_format_native_type" time="0.002"><failure message="AssertionError: assert True == False&#10; +  where True = &lt;bound method DateFormat.is_native_type of &lt;formats.DateFormat object at 0x7faac118d180&gt;&gt;(datetime.datetime(2026, 10, 14, 0, 43, 58, 606948))&#10; +    where &lt;bound method DateFormat.is_native_type of &lt;formats.DateFormat object at 0x7faac118d180&gt;&gt; = &lt;formats.DateFormat object at 0x7faac118d180&gt;.is_native_type&#10; +    and   datetime.datetime(2026, 10, 14, 0, 43, 58, 606948) = &lt;built-in method now of type object at 0x7faac3ab6a60&gt;()&#10; +      where &lt;built-in method now of type object at 0x7faac3ab6a60&gt; = &lt;class 'datetime.datetime'&gt;.now&#10; +        where &lt;class 'datetime.datetime'&gt; = datetime.datetime">def test_date_format_native_type():
+        formatter = DateFormat()
+        assert formatter.is_native_type(datetime.date.today()) == True
+&gt;       assert formatter.is_native_type(datetime.datetime.now()) == False
+E       AssertionError: assert True == False
+E        +  where True = &lt;bound method DateFormat.is_native_type of &lt;formats.DateFormat object at 0x7faac118d180&gt;&gt;(datetime.datetime(2026, 10, 14, 0, 43, 58, 606948))
+E        +    where &lt;bound method DateFormat.is_native_type of &lt;formats.DateFormat object at 0x7faac118d180&gt;&gt; = &lt;formats.DateFormat object at 0x7faac118d180&gt;.is_native_type
+E        +    and   datetime.datetime(2026, 10, 14, 0, 43, 58, 606948) = &lt;built-in method now of type object at 0x7faac3ab6a60&gt;()
+E        +      where &lt;built-in method now of type object at 0x7faac3ab6a60&gt; = &lt;class 'datetime.datetime'&gt;.now
+E        +        where &lt;class 'datetime.datetime'&gt; = datetime.datetime
+
+test_generated.py:9: AssertionError</failure></testcase><testcase classname="test_generated" name="test_date_format_valid_date" time="0.001" /><testcase classname="test_generated" name="test_date_format_invalid_date" time="0.001"><failure message="TypeError: expected exception must be a BaseException type, not str">def test_date_format_invalid_date():
+        formatter = DateFormat()
+&gt;       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:18: TypeError</failure></testcase><testcase classname="test_generated" name="test_date_format_serialize" time="0.001" /><testcase classname="test_generated" name="test_time_format_native_type" time="0.001" /><testcase classname="test_generated" name="test_time_format_valid_time" time="0.001" /><testcase classname="test_generated" name="test_time_format_invalid_time" time="0.001"><failure message="TypeError: expected exception must be a BaseException type, not str">def test_time_format_invalid_time():
+        formatter = TimeFormat()
+&gt;       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:42: TypeError</failure></testcase><testcase classname="test_generated" name="test_time_format_serialize" time="0.001" /><testcase classname="test_generated" name="test_datetime_format_native_type" time="0.001" /><testcase classname="test_generated" name="test_datetime_format_valid_datetime" time="0.001" /><testcase classname="test_generated" name="test_datetime_format_invalid_datetime" time="0.001"><failure message="TypeError: expected exception must be a BaseException type, not str">def test_datetime_format_invalid_datetime():
+        formatter = DateTimeFormat()
+&gt;       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:69: TypeError</failure></testcase><testcase classname="test_generated" name="test_datetime_format_serialize" time="0.001" /><testcase classname="test_generated" name="test_uuid_format_native_type" time="0.001"><failure message="TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given">def test_uuid_format_native_type():
+        formatter = UUIDFormat()
+&gt;       assert formatter.is_native_type(uuid.UUID()) == True
+
+test_generated.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;[AttributeError("'UUID' object has no attribute 'int'") raised in repr()] UUID object at 0x7faac10cf640&gt;
+hex = None, bytes = None, bytes_le = None, fields = None, int = None
+version = None
+
+    def __init__(self, hex=None, bytes=None, bytes_le=None, fields=None,
+                       int=None, version=None,
+                       *, is_safe=SafeUUID.unknown):
+        r"""Create a UUID from either a string of 32 hexadecimal digits,
+        a string of 16 bytes as the 'bytes' argument, a string of 16 bytes
+        in little-endian order as the 'bytes_le' argument, a tuple of six
+        integers (32-bit time_low, 16-bit time_mid, 16-bit time_hi_version,
+        8-bit clock_seq_hi_variant, 8-bit clock_seq_low, 48-bit node) as
+        the 'fields' argument, or a single 128-bit integer as the 'int'
+        argument.  When a string of hex digits is given, curly braces,
+        hyphens, and a URN prefix are all optional.  For example, these
+        expressions all yield the same UUID:
+    
+        UUID('{12345678-1234-5678-1234-567812345678}')
+        UUID('12345678123456781234567812345678')
+        UUID('urn:uuid:12345678-1234-5678-1234-567812345678')
+        UUID(bytes='\x12\x34\x56\x78'*4)
+        UUID(bytes_le='\x78\x56\x34\x12\x34\x12\x78\x56' +
+                      '\x12\x34\x56\x78\x12\x34\x56\x78')
+        UUID(fields=(0x12345678, 0x1234, 0x5678, 0x12, 0x34, 0x567812345678))
+        UUID(int=0x12345678123456781234567812345678)
+    
+        Exactly one of 'hex', 'bytes', 'bytes_le', 'fields', or 'int' must
+        be given.  The 'version' argument is optional; if given, the resulting
+        UUID will have its variant and version set according to RFC 4122,
+        overriding the given 'hex', 'bytes', 'bytes_le', 'fields', or 'int'.
+    
+        is_safe is an enum exposed as an attribute on the instance.  It
+        indicates whether the UUID has been generated in a way that is safe
+        for multiprocessing applications, via uuid_generate_time_safe(3).
+        """
+    
+        if [hex, bytes, bytes_le, fields, int].count(None) != 4:
+&gt;           raise TypeError('one of the hex, bytes, bytes_le, fields, '
+                            'or int arguments must be given')
+E           TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/uuid.py:171: TypeError</failure></testcase><testcase classname="test_generated" name="test_uuid_format_valid_uuid" time="0.001"><failure message="base.ValidationError: Must be valid UUID format.">def test_uuid_format_valid_uuid():
+        formatter = UUIDFormat()
+        assert formatter.validate("123e4567-e89b-12d3-a456-426655440000") == uuid.UUID("123e4567-e89b-12d3-a456-426655440000")
+&gt;       assert formatter.validate("00000000-0000-0000-0000-000000000000") == uuid.UUID("00000000-0000-0000-0000-000000000000")
+
+test_generated.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;formats.UUIDFormat object at 0x7faac117ad10&gt;
+value = '00000000-0000-0000-0000-000000000000'
+
+    def validate(self, value: typing.Any) -&gt; uuid.UUID:
+        match = UUID_REGEX.match(value)
+        if not match:
+&gt;           raise self.validation_error("format")
+E           base.ValidationError: Must be valid UUID format.
+
+formats.py:166: ValidationError</failure></testcase><testcase classname="test_generated" name="test_uuid_format_invalid_uuid" time="0.001"><failure message="TypeError: expected exception must be a BaseException type, not str">def test_uuid_format_invalid_uuid():
+        formatter = UUIDFormat()
+&gt;       with pytest.raises(formatter.validation_error("format")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:94: TypeError</failure></testcase><testcase classname="test_generated" name="test_uuid_format_serialize" time="0.001"><failure message="AssertionError: assert 'None' == None&#10; +  where 'None' = &lt;bound method UUIDFormat.serialize of &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;&gt;(None)&#10; +    where &lt;bound method UUIDFormat.serialize of &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;&gt; = &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;.serialize">def test_uuid_format_serialize():
+        formatter = UUIDFormat()
+        assert formatter.serialize(uuid.UUID("123e4567-e89b-12d3-a456-426655440000")) == "123e4567-e89b-12d3-a456-426655440000"
+&gt;       assert formatter.serialize(None) == None
+E       AssertionError: assert 'None' == None
+E        +  where 'None' = &lt;bound method UUIDFormat.serialize of &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;&gt;(None)
+E        +    where &lt;bound method UUIDFormat.serialize of &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;&gt; = &lt;formats.UUIDFormat object at 0x7faac10d17b0&gt;.serialize
+
+test_generated.py:102: AssertionError</failure></testcase></testsuite></testsuites>

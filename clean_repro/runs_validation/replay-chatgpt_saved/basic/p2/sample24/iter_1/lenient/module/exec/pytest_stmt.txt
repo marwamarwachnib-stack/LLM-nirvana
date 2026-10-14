@@ -1,0 +1,41 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample24/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample24/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_______________________________ test_EfRegister ________________________________
+
+    def test_EfRegister():
+>       assert ef.b.render() == '\x1b[1m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:5: AttributeError
+_______________________________ test_FgRegister ________________________________
+
+    def test_FgRegister():
+>       assert fg.black.render() == '\x1b[30m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:19: AttributeError
+_______________________________ test_BgRegister ________________________________
+
+    def test_BgRegister():
+>       assert bg.black.render() == '\x1b[40m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:46: AttributeError
+_______________________________ test_RsRegister ________________________________
+
+    def test_RsRegister():
+>       assert rs.all.render() == '\x1b[0m'
+E       AttributeError: 'Style' object has no attribute 'render'. Did you mean: 'center'?
+
+test_generated.py:73: AttributeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample24/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_EfRegister - AttributeError: 'Style' object ha...
+FAILED test_generated.py::test_FgRegister - AttributeError: 'Style' object ha...
+FAILED test_generated.py::test_BgRegister - AttributeError: 'Style' object ha...
+FAILED test_generated.py::test_RsRegister - AttributeError: 'Style' object ha...
+4 failed in 0.19s
+
+--- stderr ---
