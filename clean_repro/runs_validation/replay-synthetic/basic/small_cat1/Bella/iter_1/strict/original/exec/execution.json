@@ -1,0 +1,115 @@
+{
+ "summary": {
+  "collected": 1,
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "skipped": 0,
+  "collection_error": true,
+  "timed_out": false,
+  "returncode": 2,
+  "stmt_cover": 33.33,
+  "stmts": 9,
+  "missing_lines": [
+   10,
+   11,
+   12,
+   13,
+   15,
+   17
+  ],
+  "branch_cover": 23.08,
+  "branches": 4,
+  "branch_only_cover": 0.0,
+  "fail_kinds": {
+   "runtime": 1
+  },
+  "wall_seconds": 1.65
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 2,
+  "timed_out": false,
+  "wall_seconds": 0.87,
+  "collected": 1,
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "skipped": 0,
+  "collection_error": true,
+  "module_cover": {
+   "stmts": 9,
+   "miss": 6,
+   "executed_lines": [
+    1,
+    5,
+    8,
+    9
+   ],
+   "missing_lines": [
+    10,
+    11,
+    12,
+    13,
+    15,
+    17
+   ],
+   "stmt_cover": 33.333333333333336,
+   "cover_percent": 33.333333333333336
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\nexample.py              9      6    33%   10-17\ntest_generated.py      10      8    20%   4-14\n-------------------------------------------------\nTOTAL                  19     14    26%\n",
+  "tests": [
+   {
+    "nodeid": "::test_generated",
+    "outcome": "error",
+    "kind": "runtime",
+    "message": "collection failure"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 2,
+  "timed_out": false,
+  "wall_seconds": 0.78,
+  "collected": 1,
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "skipped": 0,
+  "collection_error": true,
+  "module_cover": {
+   "stmts": 9,
+   "miss": 6,
+   "executed_lines": [
+    1,
+    5,
+    8,
+    9
+   ],
+   "missing_lines": [
+    10,
+    11,
+    12,
+    13,
+    15,
+    17
+   ],
+   "stmt_cover": 33.333333333333336,
+   "cover_percent": 23.076923076923077,
+   "branches": 4,
+   "partial": 0,
+   "covered_branches": 0,
+   "branch_only_cover": 0.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\nexample.py              9      6      4      0    23%   10-17\ntest_generated.py      10      8      0      0    20%   4-14\n---------------------------------------------------------------\nTOTAL                  19     14      4      0    22%\n",
+  "tests": [
+   {
+    "nodeid": "::test_generated",
+    "outcome": "error",
+    "kind": "runtime",
+    "message": "collection failure"
+   }
+  ]
+ }
+}

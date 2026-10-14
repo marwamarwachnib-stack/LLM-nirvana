@@ -1,0 +1,276 @@
+{
+ "summary": {
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 97.5,
+  "stmts": 40,
+  "missing_lines": [
+   8
+  ],
+  "branch_cover": 96.43,
+  "branches": 16,
+  "branch_only_cover": 93.75,
+  "fail_kinds": {},
+  "wall_seconds": 0.77
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.38,
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    47,
+    48,
+    49,
+    50
+   ],
+   "missing_lines": [
+    8
+   ],
+   "stmt_cover": 97.5,
+   "cover_percent": 97.5
+  },
+  "report_text": "Name                         Stmts   Miss  Cover   Missing\n----------------------------------------------------------\nbinary_search_tree.py           40      1    98%   8\nbinary_search_tree_test.py      50      4    92%   66-67, 78, 86\n----------------------------------------------------------\nTOTAL                           90      5    94%\n",
+  "tests": [
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_create_complex_tree",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_complex_tree",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_single_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_data_is_retained",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_greater_number_at_right_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_same_number_at_left_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_smaller_number_at_left_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.39,
+  "collected": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    47,
+    48,
+    49,
+    50
+   ],
+   "missing_lines": [
+    8
+   ],
+   "stmt_cover": 97.5,
+   "cover_percent": 96.42857142857143,
+   "branches": 16,
+   "partial": 1,
+   "covered_branches": 15,
+   "branch_only_cover": 93.75
+  },
+  "report_text": "Name                         Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------------------------\nbinary_search_tree.py           40      1     16      1    96%   8, 31->24\nbinary_search_tree_test.py      50      4      8      2    90%   66-67, 78, 86\n------------------------------------------------------------------------\nTOTAL                           90      5     24      3    93%\n",
+  "tests": [
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_create_complex_tree",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_complex_tree",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_can_sort_single_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_data_is_retained",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_greater_number_at_right_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_same_number_at_left_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "binary_search_tree_test.BinarySearchTreeTest::test_smaller_number_at_left_node",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

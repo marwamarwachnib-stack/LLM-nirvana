@@ -1,0 +1,118 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample38/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample38/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+F..FFFFFF                                                                [100%]
+=================================== FAILURES ===================================
+________________________ Testcore.test_asdict_dataclass ________________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55962c0>
+
+    def test_asdict_dataclass(self):
+        obj = MyDataClass("test", 100)
+        expected = {"name": "test", "value": 100}
+>       assert _asdict(obj) == expected
+E       AssertionError: assert <module.test_generated.MyDataClass object at 0x7f49b55f1660> == {'name': 'test', 'value': 100}
+E        +  where <module.test_generated.MyDataClass object at 0x7f49b55f1660> = _asdict(<module.test_generated.MyDataClass object at 0x7f49b55f3a00>)
+
+test_generated.py:28: AssertionError
+_________________________ Testcore.test_asdict_nested __________________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f1090>
+
+    def test_asdict_nested(self):
+        obj = {
+            "key1": MyDataClass("test", 100),
+            "key2": {"nested": "value"},
+            "key3": [1, 2, 3]
+        }
+        expected = {
+            "key1": {"name": "test", "value": 100},
+            "key2": {"nested": "value"},
+            "key3": [1, 2, 3]
+        }
+>       assert _asdict(obj) == expected
+E       AssertionError: assert {'key1': <mod...3': [1, 2, 3]} == {'key1': {'na...3': [1, 2, 3]}
+E         Omitting 2 identical items, use -vv to show
+E         Differing items:
+E         {'key1': <module.test_generated.MyDataClass object at 0x7f49b53a1150>} != {'key1': {'name': 'test', 'value': 100}}
+E         Use -v to get more diff
+
+test_generated.py:51: AssertionError
+________________________ Testcore.test_decode_dataclass ________________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f19c0>
+
+    def test_decode_dataclass(self):
+        data = {"name": "test", "value": 100}
+        expected = MyDataClass("test", 100)
+>       assert _decode_dataclass(MyDataClass, data) == expected
+E       TypeError: _decode_dataclass() missing 1 required positional argument: 'infer_missing'
+
+test_generated.py:56: TypeError
+______________________ Testcore.test_decode_generic_list _______________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f2b30>
+
+    def test_decode_generic_list(self):
+        data = [1, 2, 3]
+        expected = [1, 2, 3]
+>       assert _decode_generic(list, data) == expected
+E       TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'
+
+test_generated.py:61: TypeError
+______________________ Testcore.test_decode_generic_dict _______________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f19f0>
+
+    def test_decode_generic_dict(self):
+        data = {"key1": "value1", "key2": 123}
+        expected = {"key1": "value1", "key2": 123}
+>       assert _decode_generic(dict, data) == expected
+E       TypeError: _decode_generic() missing 1 required positional argument: 'infer_missing'
+
+test_generated.py:66: TypeError
+___________________ Testcore.test_is_supported_generic_true ____________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f0610>
+
+    def test_is_supported_generic_true(self):
+        assert _is_supported_generic(list) is True
+        assert _is_supported_generic(dict) is True
+        assert _is_supported_generic(set) is True
+        assert _is_supported_generic(tuple) is True
+        assert _is_supported_generic(str) is False
+>       assert _is_supported_generic(bytes) is False
+E       assert True is False
+E        +  where True = _is_supported_generic(bytes)
+
+test_generated.py:74: AssertionError
+_____________________ Testcore.test_support_extended_types _____________________
+
+self = <module.test_generated.Testcore object at 0x7f49b55f0f40>
+
+    def test_support_extended_types(self):
+        assert _support_extended_types(int, 10) == 10
+        assert _support_extended_types(str, "test") == "test"
+        assert _support_extended_types(float, 3.14) == 3.14
+        assert _support_extended_types(bool, True) is True
+        assert _support_extended_types(Decimal, "10.5") == Decimal("10.5")
+>       assert _support_extended_types(datetime, datetime.now()) == datetime.now()
+E       assert datetime.datetime(2026, 10, 14, 0, 45, 47, 698380) == datetime.datetime(2026, 10, 14, 0, 45, 47, 698388)
+E        +  where datetime.datetime(2026, 10, 14, 0, 45, 47, 698380) = _support_extended_types(datetime, datetime.datetime(2026, 10, 14, 0, 45, 47, 698380))
+E        +    where datetime.datetime(2026, 10, 14, 0, 45, 47, 698380) = <built-in method now of type object at 0x7f49b824fa60>()
+E        +      where <built-in method now of type object at 0x7f49b824fa60> = datetime.now
+E        +  and   datetime.datetime(2026, 10, 14, 0, 45, 47, 698388) = <built-in method now of type object at 0x7f49b824fa60>()
+E        +    where <built-in method now of type object at 0x7f49b824fa60> = datetime.now
+
+test_generated.py:83: AssertionError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample38/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::Testcore::test_asdict_dataclass - AssertionError: a...
+FAILED test_generated.py::Testcore::test_asdict_nested - AssertionError: asse...
+FAILED test_generated.py::Testcore::test_decode_dataclass - TypeError: _decod...
+FAILED test_generated.py::Testcore::test_decode_generic_list - TypeError: _de...
+FAILED test_generated.py::Testcore::test_decode_generic_dict - TypeError: _de...
+FAILED test_generated.py::Testcore::test_is_supported_generic_true - assert T...
+FAILED test_generated.py::Testcore::test_support_extended_types - assert date...
+7 failed, 2 passed in 0.17s
+
+--- stderr ---

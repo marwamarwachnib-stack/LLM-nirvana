@@ -1,0 +1,214 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample37/iter_1/strict/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample37/iter_1/strict/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+_________________________________ test_to_json _________________________________
+
+    def test_to_json():
+>       person = Person(name="John Doe", age=25)
+E       TypeError: Person() takes no arguments
+
+test_generated.py:11: TypeError
+________________________________ test_from_json ________________________________
+
+    def test_from_json():
+        json_str = '{"name": "John Doe", "age": 25}'
+>       person = Person.from_json(json_str)
+
+test_generated.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+api.py:76: in from_json
+    return cls.from_dict(kvs, infer_missing=infer_missing)
+api.py:83: in from_dict
+    return _decode_dataclass(cls, kvs, infer_missing)
+core.py:133: in _decode_dataclass
+    overrides = _user_overrides_or_exts(cls)
+core.py:58: in _user_overrides_or_exts
+    for field in fields(cls):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = <class 'module.test_generated.Person'>
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+>           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError
+_________________________________ test_to_dict _________________________________
+
+    def test_to_dict():
+>       person = Person(name="John Doe", age=25)
+E       TypeError: Person() takes no arguments
+
+test_generated.py:21: TypeError
+________________________________ test_from_dict ________________________________
+
+    def test_from_dict():
+        person_dict = {'name': 'John Doe', 'age': 25}
+>       person = Person.from_dict(person_dict)
+
+test_generated.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+api.py:83: in from_dict
+    return _decode_dataclass(cls, kvs, infer_missing)
+core.py:133: in _decode_dataclass
+    overrides = _user_overrides_or_exts(cls)
+core.py:58: in _user_overrides_or_exts
+    for field in fields(cls):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = <class 'module.test_generated.Person'>
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+>           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError
+_________________________________ test_schema __________________________________
+
+    def test_schema():
+>       schema = Person.schema()
+
+test_generated.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+api.py:100: in schema
+    Schema = build_schema(cls, DataClassJsonMixin, infer_missing, partial)
+mm.py:324: in build_schema
+    {'fields': tuple(field.name for field in dc_fields(cls)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_or_instance = <class 'module.test_generated.Person'>
+
+    def fields(class_or_instance):
+        """Return a tuple describing the fields of this dataclass.
+    
+        Accepts a dataclass or an instance of one. Tuple elements are of
+        type Field.
+        """
+    
+        # Might it be worth caching this, per class?
+        try:
+            fields = getattr(class_or_instance, _FIELDS)
+        except AttributeError:
+>           raise TypeError('must be called with a dataclass type or instance') from None
+E           TypeError: must be called with a dataclass type or instance
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/dataclasses.py:1198: TypeError
+_______________________________ test_letter_case _______________________________
+
+    def test_letter_case():
+>       @dataclass_json(letter_case=LetterCase.CAMEL.value)
+E       AttributeError: 'function' object has no attribute 'value'
+
+test_generated.py:35: AttributeError
+________________________________ test_undefined ________________________________
+
+    def test_undefined():
+        @dataclass_json(undefined="ignore")
+>       class UndefinedDataClass(DataClassJsonMixin):
+
+test_generated.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+api.py:131: in wrap
+    return _process_class(cls, letter_case, undefined)
+api.py:140: in _process_class
+    cls.dataclass_json_config = config(letter_case=letter_case,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+metadata = {'dataclasses_json': {}}
+
+    def config(metadata: dict = None, *,
+               # TODO: these can be typed more precisely
+               # Specifically, a Callable[A, B], where `B` is bound as a JSON type
+               encoder: Callable = None,
+               decoder: Callable = None,
+               mm_field: MarshmallowField = None,
+               letter_case: Callable[[str], str] = None,
+               undefined: Optional[Union[str, Undefined]] = None,
+               field_name: str = None,
+               exclude: Optional[Callable[[str, T], bool]] = None,
+               ) -> Dict[str, dict]:
+        if metadata is None:
+            metadata = {}
+    
+        lib_metadata = metadata.setdefault('dataclasses_json', {})
+    
+        if encoder is not None:
+            lib_metadata['encoder'] = encoder
+    
+        if decoder is not None:
+            lib_metadata['decoder'] = decoder
+    
+        if mm_field is not None:
+            lib_metadata['mm_field'] = mm_field
+    
+        if field_name is not None:
+            if letter_case is not None:
+                @functools.wraps(letter_case)
+                def override(_, _letter_case=letter_case, _field_name=field_name):
+                    return _letter_case(_field_name)
+            else:
+                def override(_, _field_name=field_name):
+                    return _field_name
+            letter_case = override
+    
+        if letter_case is not None:
+            lib_metadata['letter_case'] = letter_case
+    
+        if undefined is not None:
+            # Get the corresponding action for undefined parameters
+            if isinstance(undefined, str):
+                if not hasattr(Undefined, undefined.upper()):
+                    valid_actions = list(action.name for action in Undefined)
+>                   raise UndefinedParameterError(
+                        f"Invalid undefined parameter action, "
+                        f"must be one of {valid_actions}")
+E                   undefined.UndefinedParameterError: Invalid undefined parameter action, must be one of ['INCLUDE', 'RAISE', 'EXCLUDE']
+
+cfg.py:87: UndefinedParameterError
+_________________________________ test_partial _________________________________
+
+    def test_partial():
+        @dataclass_json
+        class api(DataClassJsonMixin):
+            name: str
+            age: int
+            gender: str
+    
+>       api = api(name="John Doe", age=25, gender="Male")
+E       TypeError: api() takes no arguments
+
+test_generated.py:59: TypeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample37/iter_1/strict/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_to_json - TypeError: Person() takes no arguments
+FAILED test_generated.py::test_from_json - TypeError: must be called with a d...
+FAILED test_generated.py::test_to_dict - TypeError: Person() takes no arguments
+FAILED test_generated.py::test_from_dict - TypeError: must be called with a d...
+FAILED test_generated.py::test_schema - TypeError: must be called with a data...
+FAILED test_generated.py::test_letter_case - AttributeError: 'function' objec...
+FAILED test_generated.py::test_undefined - undefined.UndefinedParameterError:...
+FAILED test_generated.py::test_partial - TypeError: api() takes no arguments
+8 failed in 0.32s
+
+--- stderr ---

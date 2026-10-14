@@ -1,0 +1,109 @@
+{
+ "status": "ok",
+ "static_assertions": 15,
+ "static_never_reached": 0,
+ "executed_assertions": 15,
+ "incorrect": 6,
+ "pct_incorrect": 40.0,
+ "n_assertion_error": 4,
+ "n_try_except": 1,
+ "n_runtime": 1,
+ "pct_of_incorrect": {
+  "assertion": 66.67,
+  "try_except": 16.67,
+  "runtime": 16.67
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_bump_version_alpha_pre_release",
+   "aid": "test_generated.py:34:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_alpha_pre_release",
+   "aid": "test_generated.py:36:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_alpha_pre_release_invalid_position",
+   "aid": "test_generated.py:46:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_alpha_pre_release_invalid_position",
+   "aid": "test_generated.py:49:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'ValueError'>"
+  },
+  {
+   "test": "test_generated.py::test_bump_version_beta_pre_release",
+   "aid": "test_generated.py:40:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_beta_pre_release",
+   "aid": "test_generated.py:42:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_major_position",
+   "aid": "test_generated.py:28:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_major_position",
+   "aid": "test_generated.py:30:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_minor_position",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_minor_position",
+   "aid": "test_generated.py:24:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_no_change",
+   "aid": "test_generated.py:10:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_no_change",
+   "aid": "test_generated.py:12:assert",
+   "kind": "runtime",
+   "exc": "ValueError: invalid version number '1'"
+  },
+  {
+   "test": "test_generated.py::test_bump_version_no_change",
+   "aid": "test_generated.py:8:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_patch_position",
+   "aid": "test_generated.py:16:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_bump_version_patch_position",
+   "aid": "test_generated.py:18:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

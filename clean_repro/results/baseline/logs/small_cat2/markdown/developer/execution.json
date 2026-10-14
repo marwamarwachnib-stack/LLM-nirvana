@@ -1,0 +1,392 @@
+{
+ "summary": {
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 58,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 28,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 0.84
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.41,
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    32,
+    33,
+    34,
+    35,
+    36,
+    39,
+    42,
+    43,
+    44,
+    45,
+    46,
+    49,
+    52,
+    53,
+    55,
+    57,
+    58,
+    59,
+    60,
+    62,
+    64,
+    65,
+    66,
+    68,
+    69,
+    71,
+    72,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    82,
+    84
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name               Stmts   Miss  Cover   Missing\n------------------------------------------------\nmarkdown.py           58      0   100%\nmarkdown_test.py      37      0   100%\n------------------------------------------------\nTOTAL                 95      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_h7_header_level_is_a_paragraph",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_mixed_normal_italics_and_bold_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parses_normal_text_as_a_paragraph",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parsing_bold_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parsing_italics",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_unordered_lists",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_a_little_bit_of_everything",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h1_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h2_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h3_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h4_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h5_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h6_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.43,
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 58,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    32,
+    33,
+    34,
+    35,
+    36,
+    39,
+    42,
+    43,
+    44,
+    45,
+    46,
+    49,
+    52,
+    53,
+    55,
+    57,
+    58,
+    59,
+    60,
+    62,
+    64,
+    65,
+    66,
+    68,
+    69,
+    71,
+    72,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    82,
+    84
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 28,
+   "partial": 0,
+   "covered_branches": 28,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name               Stmts   Miss Branch BrPart  Cover   Missing\n--------------------------------------------------------------\nmarkdown.py           58      0     28      0   100%\nmarkdown_test.py      37      0      0      0   100%\n--------------------------------------------------------------\nTOTAL                 95      0     28      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_h7_header_level_is_a_paragraph",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_mixed_normal_italics_and_bold_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parses_normal_text_as_a_paragraph",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parsing_bold_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_parsing_italics",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_unordered_lists",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_a_little_bit_of_everything",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h1_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h2_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h3_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h4_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h5_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_h6_header_level",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "markdown_test.MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,235 @@
+{
+ "status": "ok",
+ "static_assertions": 36,
+ "static_never_reached": 0,
+ "executed_assertions": 36,
+ "incorrect": 0,
+ "pct_incorrect": 0.0,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": null,
+  "try_except": null,
+  "runtime": null
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_case_0",
+   "aid": "test_generated.py:9:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_1",
+   "aid": "test_generated.py:17:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_1",
+   "aid": "test_generated.py:18:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_10",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_10",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_11",
+   "aid": "test_generated.py:103:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_11",
+   "aid": "test_generated.py:104:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_11",
+   "aid": "test_generated.py:105:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_12",
+   "aid": "test_generated.py:114:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_12",
+   "aid": "test_generated.py:115:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_12",
+   "aid": "test_generated.py:117:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_13",
+   "aid": "test_generated.py:124:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_13",
+   "aid": "test_generated.py:125:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_13",
+   "aid": "test_generated.py:127:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_14",
+   "aid": "test_generated.py:136:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_14",
+   "aid": "test_generated.py:137:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_14",
+   "aid": "test_generated.py:139:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_14",
+   "aid": "test_generated.py:141:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_2",
+   "aid": "test_generated.py:24:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_3",
+   "aid": "test_generated.py:30:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_4",
+   "aid": "test_generated.py:37:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_4",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_4",
+   "aid": "test_generated.py:40:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_4",
+   "aid": "test_generated.py:41:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_5",
+   "aid": "test_generated.py:47:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:56:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:58:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_7",
+   "aid": "test_generated.py:65:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_7",
+   "aid": "test_generated.py:66:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_7",
+   "aid": "test_generated.py:67:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_8",
+   "aid": "test_generated.py:75:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_8",
+   "aid": "test_generated.py:76:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_9",
+   "aid": "test_generated.py:84:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_9",
+   "aid": "test_generated.py:85:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_9",
+   "aid": "test_generated.py:86:raises",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "status": "ok",
+ "static_assertions": 6,
+ "static_never_reached": 0,
+ "executed_assertions": 6,
+ "incorrect": 3,
+ "pct_incorrect": 50.0,
+ "n_assertion_error": 0,
+ "n_try_except": 3,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 100.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_validate_identifier_empty_string",
+   "aid": "test_generated.py:41:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validate_identifier_ends_with_underscore",
+   "aid": "test_generated.py:11:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'SyntaxError'>"
+  },
+  {
+   "test": "test_generated.py::test_validate_identifier_is_builtin_name",
+   "aid": "test_generated.py:35:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'SyntaxError'>"
+  },
+  {
+   "test": "test_generated.py::test_validate_identifier_is_keyword",
+   "aid": "test_generated.py:29:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validate_identifier_starts_with_number",
+   "aid": "test_generated.py:23:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validate_identifier_starts_with_underscore",
+   "aid": "test_generated.py:17:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'SyntaxError'>"
+  }
+ ]
+}

@@ -1,0 +1,415 @@
+{
+ "summary": {
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 96.61,
+  "stmts": 59,
+  "missing_lines": [
+   139,
+   146
+  ],
+  "branch_cover": 91.55,
+  "branches": 12,
+  "branch_only_cover": 66.67,
+  "fail_kinds": {},
+  "wall_seconds": 2.07
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.05,
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 59,
+   "miss": 2,
+   "executed_lines": [
+    1,
+    2,
+    4,
+    13,
+    14,
+    15,
+    18,
+    19,
+    21,
+    24,
+    25,
+    33,
+    41,
+    42,
+    45,
+    46,
+    48,
+    58,
+    59,
+    60,
+    61,
+    62,
+    65,
+    66,
+    68,
+    77,
+    78,
+    79,
+    80,
+    83,
+    84,
+    86,
+    93,
+    94,
+    95,
+    98,
+    99,
+    101,
+    108,
+    109,
+    110,
+    113,
+    114,
+    116,
+    118,
+    119,
+    120,
+    121,
+    122,
+    124,
+    125,
+    126,
+    128,
+    129,
+    130,
+    134,
+    135,
+    136,
+    137,
+    138,
+    141,
+    142,
+    143,
+    144,
+    145
+   ],
+   "missing_lines": [
+    139,
+    146
+   ],
+   "stmt_cover": 96.61016949152543,
+   "cover_percent": 96.61016949152543
+  },
+  "report_text": "Name              Stmts   Miss  Cover   Missing\n-----------------------------------------------\n__init__.py           4      0   100%\ncommon.py            59      2    97%   139, 146\ngoogle.py           131    104    21%   69-73, 76-80, 97-114, 117-130, 135-173, 181-182, 189-266, 274\nnumpydoc.py         115     72    37%   22-24, 28-30, 69, 77, 92, 95-99, 114, 129-147, 166, 186-192, 211-216, 262-264, 267, 278-279, 286-323, 331\nparser.py            14     11    21%   15-25\nrest.py              69     63     9%   22-83, 91-132\nstyles.py             8      0   100%\ntest_example.py      99      0   100%\n-----------------------------------------------\nTOTAL               499    252    49%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_DocstringMeta",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_Docstring",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises_raises_property[args0-description-type_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises_raises_property[args1-None-type_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.02,
+  "collected": 17,
+  "passed": 17,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 59,
+   "miss": 2,
+   "executed_lines": [
+    1,
+    2,
+    4,
+    13,
+    14,
+    15,
+    18,
+    19,
+    21,
+    24,
+    25,
+    33,
+    41,
+    42,
+    45,
+    46,
+    48,
+    58,
+    59,
+    60,
+    61,
+    62,
+    65,
+    66,
+    68,
+    77,
+    78,
+    79,
+    80,
+    83,
+    84,
+    86,
+    93,
+    94,
+    95,
+    98,
+    99,
+    101,
+    108,
+    109,
+    110,
+    113,
+    114,
+    116,
+    118,
+    119,
+    120,
+    121,
+    122,
+    124,
+    125,
+    126,
+    128,
+    129,
+    130,
+    134,
+    135,
+    136,
+    137,
+    138,
+    141,
+    142,
+    143,
+    144,
+    145
+   ],
+   "missing_lines": [
+    139,
+    146
+   ],
+   "stmt_cover": 96.61016949152543,
+   "cover_percent": 91.54929577464789,
+   "branches": 12,
+   "partial": 4,
+   "covered_branches": 8,
+   "branch_only_cover": 66.66666666666667
+  },
+  "report_text": "Name              Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------\n__init__.py           4      0      0      0   100%\ncommon.py            59      2     12      4    92%   137->136, 139, 144->143, 146\ngoogle.py           131    104     60      0    14%   69-73, 76-80, 97-114, 117-130, 135-173, 181-182, 189-266, 274\nnumpydoc.py         115     72     32      0    29%   22-24, 28-30, 69, 77, 92, 95-99, 114, 129-147, 166, 186-192, 211-216, 262-264, 267, 278-279, 286-323, 331\nparser.py            14     11      8      0    14%   15-25\nrest.py              69     63     32      0     6%   22-83, 91-132\nstyles.py             8      0      0      0   100%\ntest_example.py      99      0      0      0   100%\n-------------------------------------------------------------\nTOTAL               499    252    144      4    40%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_DocstringMeta",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_Docstring",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises_raises_property[args0-description-type_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringRaises_raises_property[args1-None-type_name]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

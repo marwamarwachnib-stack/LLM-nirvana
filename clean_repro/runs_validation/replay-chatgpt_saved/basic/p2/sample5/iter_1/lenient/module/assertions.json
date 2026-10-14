@@ -1,0 +1,31 @@
+{
+ "status": "ok",
+ "static_assertions": 2,
+ "static_never_reached": 0,
+ "executed_assertions": 2,
+ "incorrect": 1,
+ "pct_incorrect": 50.0,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_AnsiTextWrapper_wrap",
+   "aid": "test_generated.py:21:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_len_without_ansi",
+   "aid": "test_generated.py:7:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

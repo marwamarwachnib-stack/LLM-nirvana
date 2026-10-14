@@ -1,0 +1,274 @@
+{
+ "summary": {
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 93.33,
+  "stmts": 15,
+  "missing_lines": [
+   22
+  ],
+  "branch_cover": 93.33,
+  "branches": 15,
+  "branch_only_cover": 93.33,
+  "fail_kinds": {},
+  "wall_seconds": 0.84
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.41,
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 15,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    20,
+    21,
+    23
+   ],
+   "missing_lines": [
+    22
+   ],
+   "stmt_cover": 93.33333333333333,
+   "cover_percent": 93.33333333333333
+  },
+  "report_text": "Name                             Stmts   Miss  Cover   Missing\n--------------------------------------------------------------\nlargest_series_product.py           15      1    93%   22\nlargest_series_product_test.py      43      0   100%\n--------------------------------------------------------------\nTOTAL                               58      1    98%\n",
+  "tests": [
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_euler_big_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_invalid_character_in_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_negative_span",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_span_longer_than_string_length",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.43,
+  "collected": 14,
+  "passed": 14,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 15,
+   "miss": 1,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    20,
+    21,
+    23
+   ],
+   "missing_lines": [
+    22
+   ],
+   "stmt_cover": 93.33333333333333,
+   "cover_percent": 93.33333333333333,
+   "branches": 15,
+   "partial": 1,
+   "covered_branches": 14,
+   "branch_only_cover": 93.33333333333333
+  },
+  "report_text": "Name                             Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------------------\nlargest_series_product.py           15      1     15      1    93%   22\nlargest_series_product_test.py      43      0      8      0   100%\n----------------------------------------------------------------------------\nTOTAL                               58      1     23      1    98%\n",
+  "tests": [
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_euler_big_number",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_invalid_character_in_digits",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_negative_span",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_rejects_span_longer_than_string_length",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "largest_series_product_test.LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

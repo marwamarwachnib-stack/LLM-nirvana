@@ -1,0 +1,102 @@
+{
+ "sample_id": "p2/sample15",
+ "group": "p2",
+ "category": "3",
+ "mode": "basic",
+ "model": "replay-chatgpt_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 17,
+    "passed": 16,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 93.75,
+    "stmts": 64,
+    "missing_lines": [
+     19,
+     124,
+     142,
+     162
+    ],
+    "branch_cover": 92.55,
+    "branches": 30,
+    "branch_only_cover": 90.0,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 2.22,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 39,
+     "static_never_reached": 0,
+     "executed_assertions": 39,
+     "incorrect": 1,
+     "pct_incorrect": 2.56,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 94
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 17,
+    "passed": 16,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 93.75,
+    "stmts": 64,
+    "missing_lines": [
+     19,
+     124,
+     142,
+     162
+    ],
+    "branch_cover": 92.55,
+    "branches": 30,
+    "branch_only_cover": 90.0,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 2.26,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 39,
+     "static_never_reached": 0,
+     "executed_assertions": 39,
+     "incorrect": 1,
+     "pct_incorrect": 2.56,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 94
+   }
+  }
+ }
+}

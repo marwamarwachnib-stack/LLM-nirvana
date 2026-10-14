@@ -1,0 +1,30 @@
+table,row,column,value,n,source
+T1,small cat2,pynguin_stmt,95.58,19,saved line/branch_coverage.txt
+T1,small cat2,pynguin_branch,95.42,19,saved line/branch_coverage.txt
+T1,small cat3,pynguin_stmt,96.37,19,saved line/branch_coverage.txt
+T1,small cat3,pynguin_branch,95.65,20,saved line/branch_coverage.txt
+T2,large cat2 (derived),chatgpt_stmt,77.44,9,saved p2 reports
+T2,large cat2 (derived),pynguin_stmt,88.78,9,saved p2 reports
+T2,large cat2 (derived),p_ttest_stmt,0.1691,9,saved p2 reports
+T2,large cat2 (derived),chatgpt_branch,74.78,9,saved p2 reports
+T2,large cat2 (derived),pynguin_branch,86.22,9,saved p2 reports
+T2,large cat2 (derived),p_ttest_branch,0.1953,9,saved p2 reports
+T2,large cat3 (derived),chatgpt_stmt,77.44,32,saved p2 reports
+T2,large cat3 (derived),pynguin_stmt,79.59,32,saved p2 reports
+T2,large cat3 (derived),p_ttest_stmt,0.6811,32,saved p2 reports
+T2,large cat3 (derived),chatgpt_branch,73.0,32,saved p2 reports
+T2,large cat3 (derived),pynguin_branch,75.88,32,saved p2 reports
+T2,large cat3 (derived),p_ttest_branch,0.6128,32,saved p2 reports
+T2,large all,chatgpt_stmt,77.44,41,saved p2 reports
+T2,large all,pynguin_stmt,81.61,41,saved p2 reports
+T2,large all,p_ttest_stmt,0.3487,41,saved p2 reports
+T2,large all,chatgpt_branch,73.39,41,saved p2 reports
+T2,large all,pynguin_branch,78.15,41,saved p2 reports
+T2,large all,p_ttest_branch,0.3237,41,saved p2 reports
+T5,p2 (paper-like line counting),intersecting_missed,17.71,41,saved p2 reports
+T5,p2 (paper-like line counting),union_missed,50.02,41,saved p2 reports
+T5,p2 (paper-like line counting),"minimum_missed [mean of per-module min(|L|,|P|)]",20.17,41,saved p2 reports
+T5,p2 (paper-like line counting),minimum_missed [min of means],28.85,41,saved p2 reports
+T5,p2 (paper-like line counting),minimum_covered [mean of per-module min - intersect],2.46,41,saved p2 reports
+T5,p2 (paper-like line counting),maximum_covered [mean of per-module max - intersect],29.85,41,saved p2 reports
+T5,p2 (paper-like line counting),maximum_covered [union - intersect],32.31,41,saved p2 reports

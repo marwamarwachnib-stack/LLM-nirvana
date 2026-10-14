@@ -1,0 +1,529 @@
+{
+ "status": "ok",
+ "static_assertions": 45,
+ "static_never_reached": 0,
+ "executed_assertions": 85,
+ "incorrect": 0,
+ "pct_incorrect": 0.0,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": null,
+  "try_except": null,
+  "runtime": null
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_Docstring",
+   "aid": "test_generated.py:77:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Docstring",
+   "aid": "test_generated.py:78:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Docstring",
+   "aid": "test_generated.py:79:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Docstring",
+   "aid": "test_generated.py:80:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_Docstring",
+   "aid": "test_generated.py:81:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated",
+   "aid": "test_generated.py:70:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated",
+   "aid": "test_generated.py:71:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated",
+   "aid": "test_generated.py:72:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+   "aid": "test_generated.py:156:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+   "aid": "test_generated.py:157:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+   "aid": "test_generated.py:158:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args0-description-version]",
+   "aid": "test_generated.py:162:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+   "aid": "test_generated.py:156:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+   "aid": "test_generated.py:157:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+   "aid": "test_generated.py:158:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringDeprecated_deprecation_property[args1-None-None]",
+   "aid": "test_generated.py:162:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringMeta",
+   "aid": "test_generated.py:21:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringMeta",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:33:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:34:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:37:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:103:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:96:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:97:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:98:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args0-description-arg_name-type_name-True-default]",
+   "aid": "test_generated.py:99:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:103:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:96:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:97:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:98:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args1-description-arg_name-type_name-None-default]",
+   "aid": "test_generated.py:99:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:103:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:94:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:95:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:96:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:97:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:98:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringParam_params_property[args2-description-arg_name-None-True-None]",
+   "aid": "test_generated.py:99:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises",
+   "aid": "test_generated.py:60:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises",
+   "aid": "test_generated.py:61:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises",
+   "aid": "test_generated.py:62:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args0-description-type_name]",
+   "aid": "test_generated.py:138:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args0-description-type_name]",
+   "aid": "test_generated.py:139:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args0-description-type_name]",
+   "aid": "test_generated.py:140:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args0-description-type_name]",
+   "aid": "test_generated.py:144:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args1-None-type_name]",
+   "aid": "test_generated.py:138:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args1-None-type_name]",
+   "aid": "test_generated.py:139:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args1-None-type_name]",
+   "aid": "test_generated.py:140:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringRaises_raises_property[args1-None-type_name]",
+   "aid": "test_generated.py:144:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns",
+   "aid": "test_generated.py:48:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns",
+   "aid": "test_generated.py:49:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns",
+   "aid": "test_generated.py:50:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns",
+   "aid": "test_generated.py:51:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns",
+   "aid": "test_generated.py:52:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:118:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:119:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:120:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:122:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args0-description-type_name-return_name]",
+   "aid": "test_generated.py:126:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:118:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:119:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:120:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:122:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args1-description-None-return_name]",
+   "aid": "test_generated.py:126:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:118:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:119:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:120:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:122:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args2-description-type_name-None]",
+   "aid": "test_generated.py:126:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:118:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:119:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:120:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:121:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:122:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_DocstringReturns_returns_property[args3-description-type_name-return_name]",
+   "aid": "test_generated.py:126:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

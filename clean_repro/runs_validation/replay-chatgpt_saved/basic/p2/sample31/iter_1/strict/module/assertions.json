@@ -1,0 +1,85 @@
+{
+ "status": "ok",
+ "static_assertions": 16,
+ "static_never_reached": 5,
+ "executed_assertions": 11,
+ "incorrect": 8,
+ "pct_incorrect": 72.73,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 7,
+ "pct_of_incorrect": {
+  "assertion": 12.5,
+  "try_except": 0.0,
+  "runtime": 87.5
+ },
+ "tests_with_errors_outside_assertions": 5,
+ "records": [
+  {
+   "test": "test_generated.py::test_list_token_get_child_token",
+   "aid": "test_generated.py:60:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_list_token_get_value",
+   "aid": "test_generated.py:55:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_scalar_token_get_value",
+   "aid": "test_generated.py:37:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_token_end",
+   "aid": "test_generated.py:21:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'line'"
+  },
+  {
+   "test": "test_generated.py::test_token_end",
+   "aid": "test_generated.py:22:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'column'"
+  },
+  {
+   "test": "test_generated.py::test_token_end",
+   "aid": "test_generated.py:23:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'offset'"
+  },
+  {
+   "test": "test_generated.py::test_token_start",
+   "aid": "test_generated.py:15:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'line'"
+  },
+  {
+   "test": "test_generated.py::test_token_start",
+   "aid": "test_generated.py:16:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'column'"
+  },
+  {
+   "test": "test_generated.py::test_token_start",
+   "aid": "test_generated.py:17:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Position' object has no attribute 'offset'"
+  },
+  {
+   "test": "test_generated.py::test_token_string",
+   "aid": "test_generated.py:7:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_token_value",
+   "aid": "test_generated.py:11:assert",
+   "kind": "runtime",
+   "exc": "NotImplementedError: "
+  }
+ ]
+}

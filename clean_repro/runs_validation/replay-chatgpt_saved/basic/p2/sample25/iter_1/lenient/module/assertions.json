@@ -1,0 +1,79 @@
+{
+ "status": "ok",
+ "static_assertions": 10,
+ "static_never_reached": 0,
+ "executed_assertions": 10,
+ "incorrect": 2,
+ "pct_incorrect": 20.0,
+ "n_assertion_error": 2,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_error_eq",
+   "aid": "test_generated.py:32:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_error_neq",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_message_eq",
+   "aid": "test_generated.py:20:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_message_neq",
+   "aid": "test_generated.py:26:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_position_equal",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_position_not_equal",
+   "aid": "test_generated.py:14:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validation_result_bool",
+   "aid": "test_generated.py:44:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validation_result_bool",
+   "aid": "test_generated.py:45:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validation_result_repr",
+   "aid": "test_generated.py:51:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_validation_result_repr",
+   "aid": "test_generated.py:52:assert",
+   "kind": "assertion",
+   "exc": ""
+  }
+ ]
+}

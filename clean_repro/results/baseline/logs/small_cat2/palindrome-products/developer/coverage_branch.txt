@@ -1,0 +1,6 @@
+Name                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------
+palindrome_products.py           58      1     28      1    98%   87
+palindrome_products_test.py      59      0      4      0   100%
+-------------------------------------------------------------------------
+TOTAL                           117      1     32      1    99%

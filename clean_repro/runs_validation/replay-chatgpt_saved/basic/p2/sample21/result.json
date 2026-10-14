@@ -1,0 +1,104 @@
+{
+ "sample_id": "p2/sample21",
+ "group": "p2",
+ "category": "2",
+ "mode": "basic",
+ "model": "replay-chatgpt_saved",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "module": {
+    "collected": 9,
+    "passed": 8,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 89.8,
+    "stmts": 49,
+    "missing_lines": [
+     34,
+     133,
+     134,
+     135,
+     159
+    ],
+    "branch_cover": 85.33,
+    "branches": 26,
+    "branch_only_cover": 76.92,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 2.07,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 9,
+     "static_never_reached": 0,
+     "executed_assertions": 9,
+     "incorrect": 1,
+     "pct_incorrect": 11.11,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 90
+   }
+  },
+  "lenient": {
+   "module": {
+    "collected": 9,
+    "passed": 8,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 89.8,
+    "stmts": 49,
+    "missing_lines": [
+     34,
+     133,
+     134,
+     135,
+     159
+    ],
+    "branch_cover": 85.33,
+    "branches": 26,
+    "branch_only_cover": 76.92,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 2.19,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 9,
+     "static_never_reached": 0,
+     "executed_assertions": 9,
+     "incorrect": 1,
+     "pct_incorrect": 11.11,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 90
+   }
+  }
+ }
+}

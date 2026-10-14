@@ -1,0 +1,56 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample34/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample34/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+..FFF                                                                    [100%]
+=================================== FAILURES ===================================
+_______________________ test_parse_long_description_only _______________________
+
+    def test_parse_long_description_only():
+        parser = GoogleParser()
+        docstring = parser.parse('\nA long description.\n')
+>       assert docstring.short_description is None
+E       AssertionError: assert 'A long description.' is None
+E        +  where 'A long description.' = <common.Docstring object at 0x7f0767ad8ca0>.short_description
+
+test_generated.py:25: AssertionError
+____________________ test_parse_short_and_long_description _____________________
+
+    def test_parse_short_and_long_description():
+        parser = GoogleParser()
+        docstring = parser.parse('This is a short description.\n\nA long description.\n')
+        assert docstring.short_description == 'This is a short description.'
+        assert docstring.long_description == 'A long description.'
+>       assert docstring.blank_after_short_description == False
+E       assert True == False
+E        +  where True = <common.Docstring object at 0x7f076778bdf0>.blank_after_short_description
+
+test_generated.py:36: AssertionError
+_________________________ test_parse_multiple_sections _________________________
+
+    def test_parse_multiple_sections():
+        parser = GoogleParser()
+        docstring_text = '''
+        This is a short description.
+    
+        Args:
+            arg1 (int): Description for arg1.
+            arg2 (str): Description for arg2.
+    
+        Returns:
+            int: Description for the return value.
+        '''
+        docstring = parser.parse(docstring_text)
+        assert docstring.short_description == 'This is a short description.'
+        assert docstring.long_description is None
+>       assert docstring.blank_after_short_description == False
+E       assert True == False
+E        +  where True = <common.Docstring object at 0x7f0767adb6a0>.blank_after_short_description
+
+test_generated.py:55: AssertionError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample34/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_parse_long_description_only - AssertionError: ...
+FAILED test_generated.py::test_parse_short_and_long_description - assert True...
+FAILED test_generated.py::test_parse_multiple_sections - assert True == False
+3 failed, 2 passed in 0.14s
+
+--- stderr ---

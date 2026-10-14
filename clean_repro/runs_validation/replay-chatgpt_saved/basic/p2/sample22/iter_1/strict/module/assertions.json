@@ -1,0 +1,91 @@
+{
+ "status": "ok",
+ "static_assertions": 19,
+ "static_never_reached": 7,
+ "executed_assertions": 12,
+ "incorrect": 0,
+ "pct_incorrect": 0.0,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": null,
+  "try_except": null,
+  "runtime": null
+ },
+ "tests_with_errors_outside_assertions": 1,
+ "records": [
+  {
+   "test": "test_generated.py::test_random_string",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_random_string",
+   "aid": "test_generated.py:23:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_random_string",
+   "aid": "test_generated.py:27:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_secure_random_hex",
+   "aid": "test_generated.py:34:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_secure_random_hex",
+   "aid": "test_generated.py:35:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_secure_random_hex",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_secure_random_hex",
+   "aid": "test_generated.py:40:raises",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid",
+   "aid": "test_generated.py:10:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid",
+   "aid": "test_generated.py:14:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid",
+   "aid": "test_generated.py:15:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid",
+   "aid": "test_generated.py:16:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid",
+   "aid": "test_generated.py:9:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

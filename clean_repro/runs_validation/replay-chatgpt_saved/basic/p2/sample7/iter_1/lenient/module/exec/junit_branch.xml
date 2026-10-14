@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="9" time="0.106" timestamp="2026-10-14T00:47:02.145067" hostname="vm"><testcase classname="test_generated" name="test_add" time="0.001" /><testcase classname="test_generated" name="test_clear" time="0.001" /><testcase classname="test_generated" name="test_count" time="0.001" /><testcase classname="test_generated" name="test_total" time="0.001" /><testcase classname="test_generated" name="test_min" time="0.001" /><testcase classname="test_generated" name="test_max" time="0.001" /><testcase classname="test_generated" name="test_mean" time="0.001" /><testcase classname="test_generated" name="test_median" time="0.001" /><testcase classname="test_generated" name="test_stdev" time="0.001"><failure message="AssertionError: assert nan == 0.0&#10; +  where nan = &lt;bound method Timers.stdev of {'timer1': 1.5}&gt;('timer1')&#10; +    where &lt;bound method Timers.stdev of {'timer1': 1.5}&gt; = {'timer1': 1.5}.stdev">timers = {'timer1': 1.5}
+
+    def test_stdev(timers):
+        timers.add("timer1", 1.5)
+&gt;       assert timers.stdev("timer1") == 0.0
+E       AssertionError: assert nan == 0.0
+E        +  where nan = &lt;bound method Timers.stdev of {'timer1': 1.5}&gt;('timer1')
+E        +    where &lt;bound method Timers.stdev of {'timer1': 1.5}&gt; = {'timer1': 1.5}.stdev
+
+test_generated.py:51: AssertionError</failure></testcase></testsuite></testsuites>

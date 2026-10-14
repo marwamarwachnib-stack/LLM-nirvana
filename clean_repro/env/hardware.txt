@@ -1,0 +1,10 @@
+# recorded 2026-10-13T23:36:48Z
+CPU(s):                                  4
+Model name:                              Intel(R) Xeon(R) Processor @ 2.80GHz
+Thread(s) per core:                      1
+Flags: avx2 avx512_vnni avx512f f16c fma 
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       492Mi        15Gi        14Mi       209Mi        15Gi
+GPU: none
+OS: Ubuntu 24.04.5 LTS 6.18.44-fc-v114
+/dev/vda        252G  9.0G   30G  23% /

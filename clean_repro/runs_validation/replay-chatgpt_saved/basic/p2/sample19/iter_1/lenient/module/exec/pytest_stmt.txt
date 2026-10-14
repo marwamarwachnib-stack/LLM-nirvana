@@ -1,0 +1,30 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample19/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample19/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+.........................F........                                       [100%]
+=================================== FAILURES ===================================
+_______________________________ test_map_concat ________________________________
+
+    def test_map_concat():
+        m1 = Map({1: Sum(5), 2: Sum(3)})
+        m2 = Map({2: Sum(7), 3: Sum(2)})
+>       assert m1.concat(m2) == Map({1: Sum(5), 2: Sum(10), 3: Sum(2)})
+
+test_generated.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+semigroups.py:136: in concat
+    {key: value.concat(semigroup.value[key]) for key, value in self.value.items()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <dict_itemiterator object at 0x7efe9ad8ccc0>
+
+>       {key: value.concat(semigroup.value[key]) for key, value in self.value.items()}
+    )
+E   KeyError: 1
+
+semigroups.py:136: KeyError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample19/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_map_concat - KeyError: 1
+1 failed, 33 passed in 0.20s
+
+--- stderr ---

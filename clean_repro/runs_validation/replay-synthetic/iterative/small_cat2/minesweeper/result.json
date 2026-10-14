@@ -1,0 +1,51 @@
+{
+ "sample_id": "small_cat2/minesweeper",
+ "group": "small",
+ "category": "2",
+ "mode": "iterative",
+ "model": "replay-synthetic",
+ "variant": "strict",
+ "stop_reason": "no missed statement left",
+ "iterations": [
+  {
+   "k": 1,
+   "extraction_status": "ok",
+   "files": [
+    "test_iter1.py"
+   ],
+   "stmt_cover": 83.87,
+   "stmt_cover_report": 84,
+   "branch_cover": 82.14,
+   "missing": [
+    12,
+    19,
+    21,
+    25,
+    40
+   ],
+   "improved": null,
+   "stop_reason": ""
+  },
+  {
+   "k": 2,
+   "extraction_status": "ok",
+   "files": [
+    "test_iter1.py",
+    "test_iter2.py"
+   ],
+   "stmt_cover": 100.0,
+   "stmt_cover_report": 100,
+   "branch_cover": 100.0,
+   "missing": [],
+   "improved": true,
+   "stop_reason": "no missed statement left"
+  }
+ ],
+ "coverage_by_iteration": [
+  83.87,
+  100.0,
+  100.0,
+  100.0,
+  100.0
+ ]
+}

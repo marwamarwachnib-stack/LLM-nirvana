@@ -1,0 +1,73 @@
+{
+ "status": "ok",
+ "static_assertions": 25,
+ "static_never_reached": 16,
+ "executed_assertions": 9,
+ "incorrect": 4,
+ "pct_incorrect": 44.44,
+ "n_assertion_error": 0,
+ "n_try_except": 1,
+ "n_runtime": 3,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 25.0,
+  "runtime": 75.0
+ },
+ "tests_with_errors_outside_assertions": 3,
+ "records": [
+  {
+   "test": "test_generated.py::test_schema_with_array_field",
+   "aid": "test_generated.py:91:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_schema_with_array_field",
+   "aid": "test_generated.py:96:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_schema_with_array_field",
+   "aid": "test_generated.py:99:raises",
+   "kind": "try_except",
+   "exc": "Failed: DID NOT RAISE <class 'base.ValidationError'>"
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:33:assert",
+   "kind": "runtime",
+   "exc": "KeyError: 'name'"
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:34:assert",
+   "kind": "runtime",
+   "exc": "KeyError: 'age'"
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:35:assert",
+   "kind": "runtime",
+   "exc": "KeyError: 'address'"
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:40:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:41:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_schema_with_default_values",
+   "aid": "test_generated.py:42:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

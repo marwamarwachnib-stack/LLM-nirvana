@@ -1,0 +1,241 @@
+{
+ "status": "ok",
+ "static_assertions": 37,
+ "static_never_reached": 0,
+ "executed_assertions": 37,
+ "incorrect": 14,
+ "pct_incorrect": 37.84,
+ "n_assertion_error": 2,
+ "n_try_except": 0,
+ "n_runtime": 12,
+ "pct_of_incorrect": {
+  "assertion": 14.29,
+  "try_except": 0.0,
+  "runtime": 85.71
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_date_format_invalid_date",
+   "aid": "test_generated.py:18:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_date_format_invalid_date",
+   "aid": "test_generated.py:20:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_date_format_native_type",
+   "aid": "test_generated.py:8:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_date_format_native_type",
+   "aid": "test_generated.py:9:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_date_format_serialize",
+   "aid": "test_generated.py:25:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_date_format_serialize",
+   "aid": "test_generated.py:26:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_date_format_valid_date",
+   "aid": "test_generated.py:13:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_date_format_valid_date",
+   "aid": "test_generated.py:14:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_invalid_datetime",
+   "aid": "test_generated.py:69:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_invalid_datetime",
+   "aid": "test_generated.py:71:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_invalid_datetime",
+   "aid": "test_generated.py:73:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_native_type",
+   "aid": "test_generated.py:57:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_native_type",
+   "aid": "test_generated.py:58:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_serialize",
+   "aid": "test_generated.py:78:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_serialize",
+   "aid": "test_generated.py:79:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_valid_datetime",
+   "aid": "test_generated.py:62:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_valid_datetime",
+   "aid": "test_generated.py:63:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_valid_datetime",
+   "aid": "test_generated.py:64:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_datetime_format_valid_datetime",
+   "aid": "test_generated.py:65:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_invalid_time",
+   "aid": "test_generated.py:42:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_time_format_invalid_time",
+   "aid": "test_generated.py:44:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_time_format_invalid_time",
+   "aid": "test_generated.py:46:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_time_format_native_type",
+   "aid": "test_generated.py:31:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_native_type",
+   "aid": "test_generated.py:32:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_serialize",
+   "aid": "test_generated.py:51:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_serialize",
+   "aid": "test_generated.py:52:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_valid_time",
+   "aid": "test_generated.py:36:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_valid_time",
+   "aid": "test_generated.py:37:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_time_format_valid_time",
+   "aid": "test_generated.py:38:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_invalid_uuid",
+   "aid": "test_generated.py:94:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_invalid_uuid",
+   "aid": "test_generated.py:96:raises",
+   "kind": "runtime",
+   "exc": "TypeError: expected exception must be a BaseException type, not str"
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_native_type",
+   "aid": "test_generated.py:84:assert",
+   "kind": "runtime",
+   "exc": "TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given"
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_native_type",
+   "aid": "test_generated.py:85:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_serialize",
+   "aid": "test_generated.py:101:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_serialize",
+   "aid": "test_generated.py:102:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_valid_uuid",
+   "aid": "test_generated.py:89:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_uuid_format_valid_uuid",
+   "aid": "test_generated.py:90:assert",
+   "kind": "runtime",
+   "exc": "ValidationError: Must be valid UUID format."
+  }
+ ]
+}

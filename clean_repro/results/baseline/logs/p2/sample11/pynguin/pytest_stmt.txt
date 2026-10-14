@@ -1,0 +1,12 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample11/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample11/pynguin/junit_stmt.xml test_ssl_.py
+# returncode=4 timed_out=False
+
+--- stderr ---
+ImportError while loading conftest '/opt/clean_repro/work/baseline/p2/sample11/pynguin/conftest.py'.
+conftest.py:6: in <module>
+    from .utils import ( # noqa
+utils/__init__.py:16: in <module>
+    import httpie.core as core
+_ctx/httpie/core.py:12: in <module>
+    from __init__ import __version__ as httpie_version
+E   ImportError: cannot import name '__version__' from '__init__' (/opt/clean_repro/work/baseline/p2/sample11/pynguin/__init__.py)

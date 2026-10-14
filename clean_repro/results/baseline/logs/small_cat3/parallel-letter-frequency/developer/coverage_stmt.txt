@@ -1,0 +1,6 @@
+Name                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------
+parallel_letter_frequency.py           40      0   100%
+parallel_letter_frequency_test.py      37      1    97%   61
+-----------------------------------------------------------------
+TOTAL                                  77      1    99%

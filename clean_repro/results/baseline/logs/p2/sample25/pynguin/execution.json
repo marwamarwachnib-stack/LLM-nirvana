@@ -1,0 +1,821 @@
+{
+ "summary": {
+  "collected": 44,
+  "passed": 23,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 15,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 96.04,
+  "stmts": 101,
+  "missing_lines": [
+   153,
+   168,
+   199,
+   204
+  ],
+  "branch_cover": 92.13,
+  "branches": 26,
+  "branch_only_cover": 76.92,
+  "fail_kinds": {
+   "assertion": 6
+  },
+  "wall_seconds": 4.49
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 2.32,
+  "collected": 44,
+  "passed": 23,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 15,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 101,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    19,
+    20,
+    21,
+    24,
+    25,
+    29,
+    55,
+    56,
+    57,
+    58,
+    59,
+    61,
+    63,
+    64,
+    65,
+    67,
+    68,
+    69,
+    70,
+    72,
+    73,
+    81,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    93,
+    94,
+    97,
+    98,
+    112,
+    132,
+    134,
+    135,
+    138,
+    139,
+    140,
+    141,
+    142,
+    144,
+    145,
+    150,
+    151,
+    152,
+    154,
+    155,
+    157,
+    167,
+    176,
+    178,
+    179,
+    181,
+    182,
+    184,
+    185,
+    187,
+    188,
+    190,
+    191,
+    192,
+    194,
+    195,
+    196,
+    197,
+    198,
+    201,
+    202,
+    203,
+    207,
+    208,
+    213,
+    214,
+    219,
+    220,
+    227,
+    239,
+    240,
+    241,
+    243,
+    244,
+    245,
+    247,
+    248,
+    250,
+    251,
+    252,
+    253,
+    254
+   ],
+   "missing_lines": [
+    153,
+    168,
+    199,
+    204
+   ],
+   "stmt_cover": 96.03960396039604,
+   "cover_percent": 96.03960396039604
+  },
+  "report_text": "Name                       Stmts   Miss  Cover   Missing\n--------------------------------------------------------\n__init__.py                   10      0   100%\nbase.py                      101      4    96%   153, 168, 199, 204\ncomposites.py                 60     40    33%   16-17, 20, 37-39, 42-54, 66-68, 71-73, 86-88, 91-94, 111-115, 118-122\nfields.py                    441    289    34%   36, 39, 56-60, 63, 66, 69-72, 75-76, 79, 83, 88, 125, 136-141, 144-184, 187-189, 239-298, 313, 332-353, 369-374, 377-387, 417-418, 447-547, 587-590, 593-594, 603-659, 662-674, 679, 684, 689, 694, 705, 708-733, 742, 753-755, 758-762\nformats.py                   102     67    34%   31-32, 51, 54-62, 65-70, 80, 83-95, 98-103, 113, 116-141, 144-154, 161, 164-168, 171\nforms.py                      65     46    29%   41-44, 47-54, 64-73, 87-97, 100-103, 106, 109, 114-118, 123-136, 145\njson_schema.py               269    246     9%   113-147, 154-169, 179-196, 206-329, 335-337, 341-343, 347-349, 353-355, 359-361, 365-367, 371-373, 377-394, 401-562, 566-569\npositional_validation.py      21     15    29%   12-36\nschemas.py                   159    100    37%   14, 17, 20, 29, 37-48, 63-64, 70-71, 75-76, 88, 96-131, 135-136, 146-148, 154-158, 164, 167-173, 176-182, 185-187, 190, 193-201, 219-220, 224-226, 230-235, 238-242, 245-247\ntest_base.py                 709    170    76%   84-125, 238-239, 388-414, 678-702, 787-815, 898-900, 927-940, 955-988, 1006-1053\ntokenize_json.py             132    114    14%   29-95, 101-155, 160-162, 166-180, 196-197\ntokenize_yaml.py              73     61    16%   18, 26-109, 125-128\ntokens.py                     62     31    50%   10-13, 26, 30, 34, 38, 44-47, 53-54, 57-61, 64, 67, 76, 79, 84-86, 89, 95, 98, 103, 106\nunique.py                     25     17    32%   16-18, 21-22, 25-26, 34-59\n--------------------------------------------------------\nTOTAL                       2229   1200    46%\n",
+  "tests": [
+   {
+    "nodeid": "test_base::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_8",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_9",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_12",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_16",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_17",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_18",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_20",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_21",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_22",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_23",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_24",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_25",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_26",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_27",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_28",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_29",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_30",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_31",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_32",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_33",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_34",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_35",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_36",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_37",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_38",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_39",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_40",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_41",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_42",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_43",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 2.17,
+  "collected": 44,
+  "passed": 23,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 15,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 101,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    19,
+    20,
+    21,
+    24,
+    25,
+    29,
+    55,
+    56,
+    57,
+    58,
+    59,
+    61,
+    63,
+    64,
+    65,
+    67,
+    68,
+    69,
+    70,
+    72,
+    73,
+    81,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    93,
+    94,
+    97,
+    98,
+    112,
+    132,
+    134,
+    135,
+    138,
+    139,
+    140,
+    141,
+    142,
+    144,
+    145,
+    150,
+    151,
+    152,
+    154,
+    155,
+    157,
+    167,
+    176,
+    178,
+    179,
+    181,
+    182,
+    184,
+    185,
+    187,
+    188,
+    190,
+    191,
+    192,
+    194,
+    195,
+    196,
+    197,
+    198,
+    201,
+    202,
+    203,
+    207,
+    208,
+    213,
+    214,
+    219,
+    220,
+    227,
+    239,
+    240,
+    241,
+    243,
+    244,
+    245,
+    247,
+    248,
+    250,
+    251,
+    252,
+    253,
+    254
+   ],
+   "missing_lines": [
+    153,
+    168,
+    199,
+    204
+   ],
+   "stmt_cover": 96.03960396039604,
+   "cover_percent": 92.1259842519685,
+   "branches": 26,
+   "partial": 4,
+   "covered_branches": 20,
+   "branch_only_cover": 76.92307692307692
+  },
+  "report_text": "Name                       Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------------\n__init__.py                   10      0      0      0   100%\nbase.py                      101      4     26      4    92%   153, 168, 199, 204\ncomposites.py                 60     40     14      0    27%   16-17, 20, 37-39, 42-54, 66-68, 71-73, 86-88, 91-94, 111-115, 118-122\nfields.py                    441    289    264     11    25%   36, 39, 56-60, 63, 66, 69-72, 75-76, 79, 83, 88, 125, 136-141, 144-184, 187-189, 239-298, 313, 332-353, 369-374, 377-387, 417-418, 447-547, 576->exit, 587-590, 593-594, 603-659, 662-674, 679, 684, 689, 694, 705, 708-733, 742, 753-755, 758-762\nformats.py                   102     67     32      0    26%   31-32, 51, 54-62, 65-70, 80, 83-95, 98-103, 113, 116-141, 144-154, 161, 164-168, 171\nforms.py                      65     46     14      0    24%   41-44, 47-54, 64-73, 87-97, 100-103, 106, 109, 114-118, 123-136, 145\njson_schema.py               269    246    195      0     5%   113-147, 154-169, 179-196, 206-329, 335-337, 341-343, 347-349, 353-355, 359-361, 365-367, 371-373, 377-394, 401-562, 566-569\npositional_validation.py      21     15      6      0    22%   12-36\nschemas.py                   159    100     88      6    28%   14, 17, 20, 29, 37-48, 63-64, 70-71, 75-76, 80->exit, 88, 96-131, 135-136, 146-148, 154-158, 164, 167-173, 176-182, 185-187, 190, 193-201, 219-220, 224-226, 230-235, 238-242, 245-247\ntest_base.py                 709    170     26      0    76%   84-125, 238-239, 388-414, 678-702, 787-815, 898-900, 927-940, 955-988, 1006-1053\ntokenize_json.py             132    114     42      0    10%   29-95, 101-155, 160-162, 166-180, 196-197\ntokenize_yaml.py              73     61      4      0    16%   18, 26-109, 125-128\ntokens.py                     62     31     10      0    43%   10-13, 26, 30, 34, 38, 44-47, 53-54, 57-61, 64, 67, 76, 79, 84-86, 89, 95, 98, 103, 106\nunique.py                     25     17     14      0    21%   16-18, 21-22, 25-26, 34-59\n----------------------------------------------------------------------\nTOTAL                       2229   1200    735     21    37%\n",
+  "tests": [
+   {
+    "nodeid": "test_base::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_8",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_9",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_10",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_12",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_16",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_17",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_18",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_20",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_21",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_22",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_23",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_24",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert 4855823748917988287 == 5322473327714082801"
+   },
+   {
+    "nodeid": "test_base::test_case_25",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_26",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_27",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_28",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_29",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_30",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_31",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_32",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_33",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_34",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_35",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_36",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_37",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_38",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_39",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_40",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_41",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_base::test_case_42",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert -833247603234532628 == -3236363584314578347"
+   },
+   {
+    "nodeid": "test_base::test_case_43",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

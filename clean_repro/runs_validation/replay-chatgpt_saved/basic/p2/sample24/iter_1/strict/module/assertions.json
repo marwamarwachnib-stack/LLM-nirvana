@@ -1,0 +1,475 @@
+{
+ "status": "ok",
+ "static_assertions": 76,
+ "static_never_reached": 0,
+ "executed_assertions": 76,
+ "incorrect": 76,
+ "pct_incorrect": 100.0,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 76,
+ "pct_of_incorrect": {
+  "assertion": 0.0,
+  "try_except": 0.0,
+  "runtime": 100.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:46:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:47:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:48:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:49:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:50:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:51:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:52:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:53:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:54:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:55:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:56:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:57:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:58:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:59:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:60:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:61:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:62:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:63:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:64:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:65:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:66:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:67:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:68:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:69:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_BgRegister",
+   "aid": "test_generated.py:70:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:10:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:11:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:12:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:13:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:14:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:15:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:16:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:5:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:6:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:7:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:8:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_EfRegister",
+   "aid": "test_generated.py:9:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:19:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:20:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:21:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:22:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:23:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:24:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:25:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:26:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:27:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:28:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:29:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:30:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:31:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:32:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:33:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:34:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:35:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:36:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:37:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:38:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:39:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:40:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:41:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:42:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_FgRegister",
+   "aid": "test_generated.py:43:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:73:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:74:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:75:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:76:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:77:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:78:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:79:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:80:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:81:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:82:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:83:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:84:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:85:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  },
+  {
+   "test": "test_generated.py::test_RsRegister",
+   "aid": "test_generated.py:86:assert",
+   "kind": "runtime",
+   "exc": "AttributeError: 'Style' object has no attribute 'render'"
+  }
+ ]
+}

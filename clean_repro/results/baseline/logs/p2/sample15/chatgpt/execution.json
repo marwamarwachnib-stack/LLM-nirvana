@@ -1,0 +1,417 @@
+{
+ "summary": {
+  "collected": 17,
+  "passed": 16,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 93.75,
+  "stmts": 64,
+  "missing_lines": [
+   19,
+   124,
+   142,
+   162
+  ],
+  "branch_cover": 92.55,
+  "branches": 30,
+  "branch_only_cover": 90.0,
+  "fail_kinds": {
+   "assertion": 1
+  },
+  "wall_seconds": 2.19
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.06,
+  "collected": 17,
+  "passed": 16,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 64,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    18,
+    24,
+    27,
+    36,
+    37,
+    39,
+    40,
+    42,
+    47,
+    48,
+    49,
+    51,
+    52,
+    54,
+    56,
+    57,
+    58,
+    59,
+    61,
+    66,
+    67,
+    68,
+    71,
+    72,
+    73,
+    75,
+    77,
+    86,
+    88,
+    97,
+    99,
+    108,
+    109,
+    111,
+    113,
+    122,
+    123,
+    125,
+    127,
+    128,
+    130,
+    132,
+    141,
+    144,
+    145,
+    147,
+    148,
+    150,
+    152,
+    161,
+    164,
+    165,
+    168
+   ],
+   "missing_lines": [
+    19,
+    124,
+    142,
+    162
+   ],
+   "stmt_cover": 93.75,
+   "cover_percent": 93.75
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             0      0   100%\nimmutable_list.py      64      4    94%   19, 124, 142, 162\ntest_example.py        84      0   100%\n-------------------------------------------------\nTOTAL                 148      4    97%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_constructor",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_constructor_with_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_add",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_add_with_invalid_instance",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_len",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_len_with_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_of",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_of_with_single_element",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_empty",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_to_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_append",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_unshift",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_filter",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert <immutable_list.ImmutableList object at 0x7fe75511dd50> is None\n +  where <immutable_list.ImmutableList object at 0x7fe75511dd50> = <immutable_list.ImmutableList object at 0x7fe75511dcf0>.tail"
+   },
+   {
+    "nodeid": "test_example::test_find",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_find_with_non_existing_element",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_reduce",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.13,
+  "collected": 17,
+  "passed": 16,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 64,
+   "miss": 4,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    18,
+    24,
+    27,
+    36,
+    37,
+    39,
+    40,
+    42,
+    47,
+    48,
+    49,
+    51,
+    52,
+    54,
+    56,
+    57,
+    58,
+    59,
+    61,
+    66,
+    67,
+    68,
+    71,
+    72,
+    73,
+    75,
+    77,
+    86,
+    88,
+    97,
+    99,
+    108,
+    109,
+    111,
+    113,
+    122,
+    123,
+    125,
+    127,
+    128,
+    130,
+    132,
+    141,
+    144,
+    145,
+    147,
+    148,
+    150,
+    152,
+    161,
+    164,
+    165,
+    168
+   ],
+   "missing_lines": [
+    19,
+    124,
+    142,
+    162
+   ],
+   "stmt_cover": 93.75,
+   "cover_percent": 92.55319148936171,
+   "branches": 30,
+   "partial": 3,
+   "covered_branches": 27,
+   "branch_only_cover": 90.0
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             0      0      0      0   100%\nimmutable_list.py      64      4     30      3    93%   19, 124, 142, 162\ntest_example.py        84      0     12      0   100%\n---------------------------------------------------------------\nTOTAL                 148      4     42      3    96%\n",
+  "tests": [
+   {
+    "nodeid": "test_example::test_constructor",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_constructor_with_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_add",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_add_with_invalid_instance",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_len",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_len_with_empty_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_of",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_of_with_single_element",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_empty",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_to_list",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_append",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_unshift",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_map",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_filter",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert <immutable_list.ImmutableList object at 0x7f7bff2b1d50> is None\n +  where <immutable_list.ImmutableList object at 0x7f7bff2b1d50> = <immutable_list.ImmutableList object at 0x7f7bff2b1cf0>.tail"
+   },
+   {
+    "nodeid": "test_example::test_find",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_find_with_non_existing_element",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_example::test_reduce",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

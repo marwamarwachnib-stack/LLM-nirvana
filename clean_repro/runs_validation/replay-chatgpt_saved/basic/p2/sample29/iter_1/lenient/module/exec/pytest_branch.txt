@@ -1,0 +1,261 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample29/iter_1/lenient/module/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample29/iter_1/lenient/module/junit_branch.xml test_generated.py
+# returncode=1 timed_out=False
+FFF.FFF.F.                                                               [100%]
+=================================== FAILURES ===================================
+__________________ TestForm.test_render_fields_without_values __________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2fa7d0>
+
+    def test_render_fields_without_values(self):
+        schema = Mock(fields={"field1": Field(), "field2": Field()})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema)
+    
+>       assert form.render_fields() == "<html>...</html>"
+
+test_generated.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+forms.py:51: in render_fields
+    html += self.render_field(
+forms.py:64: in render_field
+    field_id_prefix = "form-" + self.schema.__name__.lower() + "-"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock id='140366496904720'>, name = '__name__'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+>           raise AttributeError(name)
+E           AttributeError: __name__
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/unittest/mock.py:645: AttributeError
+___________________ TestForm.test_render_fields_with_values ____________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2fa6e0>
+
+    def test_render_fields_with_values(self):
+        schema = Mock(fields={"field1": Field(), "field2": Field()})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema, values={"field1": "value1", "field2": "value2"})
+    
+>       assert form.render_fields() == "<html>...</html>"
+
+test_generated.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+forms.py:51: in render_fields
+    html += self.render_field(
+forms.py:64: in render_field
+    field_id_prefix = "form-" + self.schema.__name__.lower() + "-"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock id='140366498349264'>, name = '__name__'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+>           raise AttributeError(name)
+E           AttributeError: __name__
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/unittest/mock.py:645: AttributeError
+__________________________ TestForm.test_render_field __________________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2fa500>
+
+    def test_render_field(self):
+        field = Field(title="Field", allow_null=False)
+        schema = Mock(fields={"field1": field})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema)
+    
+>       assert form.render_field(field_name="field1", field=field) == "<input type='text' name='field1' required/>"
+
+test_generated.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+forms.py:64: in render_field
+    field_id_prefix = "form-" + self.schema.__name__.lower() + "-"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock id='140366498294192'>, name = '__name__'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+>           raise AttributeError(name)
+E           AttributeError: __name__
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/unittest/mock.py:645: AttributeError
+______________________ TestForm.test_input_type_for_field ______________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2fac50>
+
+    def test_input_type_for_field(self):
+        boolean_field = Boolean()
+        string_field = String(format="email")
+        other_field = Field()
+        schema = Mock(fields={"boolean_field": boolean_field, "string_field": string_field, "other_field": other_field})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema)
+    
+>       assert form.input_type_for_field(boolean_field) == "checkbox"
+E       AssertionError: assert 'text' == 'checkbox'
+E         - checkbox
+E         + text
+
+test_generated.py:53: AssertionError
+______________________________ TestForm.test_str _______________________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2faf50>
+
+    def test_str(self):
+        schema = Mock(fields={"field1": Field(), "field2": Field()})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema)
+    
+>       assert str(form) == "<html>...</html>"
+
+test_generated.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+forms.py:106: in __str__
+    return self.render_fields()
+forms.py:51: in render_fields
+    html += self.render_field(
+forms.py:64: in render_field
+    field_id_prefix = "form-" + self.schema.__name__.lower() + "-"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock id='140366498661040'>, name = '__name__'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+>           raise AttributeError(name)
+E           AttributeError: __name__
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/unittest/mock.py:645: AttributeError
+______________________________ TestForm.test_html ______________________________
+
+self = <module.test_generated.TestForm object at 0x7fa99f2fb340>
+
+    def test_html(self):
+        schema = Mock(fields={"field1": Field(), "field2": Field()})
+        jinja2_forms = Jinja2Forms(directory="templates")
+        form = Form(env=jinja2_forms.env, schema=schema)
+    
+>       assert form.__html__() == "<html>...</html>"
+
+test_generated.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <forms.Form object at 0x7fa99f471ea0>
+
+    def __html__(self) -> "jinja2.Markup":
+>       return jinja2.Markup(self.render_fields())
+E       AttributeError: module 'jinja2' has no attribute 'Markup'
+
+forms.py:109: AttributeError
+_____________ TestJinja2Forms.test_load_template_env_with_package ______________
+
+self = <module.test_generated.TestJinja2Forms object at 0x7fa99f2fb1c0>
+
+    def test_load_template_env_with_package(self):
+>       jinja2_forms = Jinja2Forms(package="forms")
+
+test_generated.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+forms.py:118: in __init__
+    self.env = self.load_template_env(directory=directory, package=package)
+forms.py:126: in load_template_env
+    loader = jinja2.PackageLoader(package, "templates")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <jinja2.loaders.PackageLoader object at 0x7fa99f4a9ea0>
+package_name = 'forms', package_path = 'templates', encoding = 'utf-8'
+
+    def __init__(
+        self,
+        package_name: str,
+        package_path: "str" = "templates",
+        encoding: str = "utf-8",
+    ) -> None:
+        package_path = os.path.normpath(package_path).rstrip(os.path.sep)
+    
+        # normpath preserves ".", which isn't valid in zip paths.
+        if package_path == os.path.curdir:
+            package_path = ""
+        elif package_path[:2] == os.path.curdir + os.path.sep:
+            package_path = package_path[2:]
+    
+        self.package_path = package_path
+        self.package_name = package_name
+        self.encoding = encoding
+    
+        # Make sure the package exists. This also makes namespace
+        # packages work, otherwise get_loader returns None.
+        import_module(package_name)
+        spec = importlib.util.find_spec(package_name)
+        assert spec is not None, "An import spec was not found for the package."
+        loader = spec.loader
+        assert loader is not None, "A loader was not found for the package."
+        self._loader = loader
+        self._archive = None
+        template_root = None
+    
+        if isinstance(loader, zipimport.zipimporter):
+            self._archive = loader.archive
+            pkgdir = next(iter(spec.submodule_search_locations))  # type: ignore
+            template_root = os.path.join(pkgdir, package_path).rstrip(os.path.sep)
+        else:
+            roots: t.List[str] = []
+    
+            # One element for regular packages, multiple for namespace
+            # packages, or None for single module file.
+            if spec.submodule_search_locations:
+                roots.extend(spec.submodule_search_locations)
+            # A single module file, use the parent directory instead.
+            elif spec.origin is not None:
+                roots.append(os.path.dirname(spec.origin))
+    
+            for root in roots:
+                root = os.path.join(root, package_path)
+    
+                if os.path.isdir(root):
+                    template_root = root
+                    break
+    
+        if template_root is None:
+>           raise ValueError(
+                f"The {package_name!r} package was not installed in a"
+                " way that PackageLoader understands."
+            )
+E           ValueError: The 'forms' package was not installed in a way that PackageLoader understands.
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/site-packages/jinja2/loaders.py:323: ValueError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample29/iter_1/lenient/module/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::TestForm::test_render_fields_without_values - Attri...
+FAILED test_generated.py::TestForm::test_render_fields_with_values - Attribut...
+FAILED test_generated.py::TestForm::test_render_field - AttributeError: __name__
+FAILED test_generated.py::TestForm::test_input_type_for_field - AssertionErro...
+FAILED test_generated.py::TestForm::test_str - AttributeError: __name__
+FAILED test_generated.py::TestForm::test_html - AttributeError: module 'jinja...
+FAILED test_generated.py::TestJinja2Forms::test_load_template_env_with_package
+7 failed, 3 passed in 0.58s
+
+--- stderr ---

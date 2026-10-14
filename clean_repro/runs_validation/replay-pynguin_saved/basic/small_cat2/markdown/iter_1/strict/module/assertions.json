@@ -1,0 +1,73 @@
+{
+ "status": "ok",
+ "static_assertions": 9,
+ "static_never_reached": 0,
+ "executed_assertions": 9,
+ "incorrect": 0,
+ "pct_incorrect": 0.0,
+ "n_assertion_error": 0,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": null,
+  "try_except": null,
+  "runtime": null
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_case_0",
+   "aid": "test_generated.py:10:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_3",
+   "aid": "test_generated.py:27:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_4",
+   "aid": "test_generated.py:33:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_5",
+   "aid": "test_generated.py:39:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:45:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:48:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_6",
+   "aid": "test_generated.py:51:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_7",
+   "aid": "test_generated.py:62:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_case_9",
+   "aid": "test_generated.py:73:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

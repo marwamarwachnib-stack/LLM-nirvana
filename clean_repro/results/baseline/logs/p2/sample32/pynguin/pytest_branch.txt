@@ -1,0 +1,64 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample32/pynguin/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample32/pynguin/junit_branch.xml test_fields.py
+# returncode=1 timed_out=False
+.....x.....x.......x.....F..xx.............xxxx......x.x....x......x.... [ 48%]
+....x.xxxx.....xx.......x..x......F................x.x.F.x......x...x... [ 97%]
+...                                                                      [100%]
+=================================== FAILURES ===================================
+_________________________________ test_case_25 _________________________________
+
+    def test_case_25():
+        var_0 = module_1.getnode()
+        float_0 = module_0.Float(exclusive_minimum=var_0, exclusive_maximum=var_0)
+        assert f"{type(float_0).__module__}.{type(float_0).__qualname__}" == "fields.Float"
+        assert float_0.title == ""
+        assert float_0.description == ""
+        assert float_0.allow_null is False
+        assert float_0.minimum is None
+        assert float_0.maximum is None
+>       assert float_0.exclusive_minimum == 32989410669706
+E       assert 3281355014145 == 32989410669706
+E        +  where 3281355014145 = <fields.Float object at 0x7f5d13d02860>.exclusive_minimum
+
+test_fields.py:693: AssertionError
+________________________________ test_case_106 _________________________________
+
+    def test_case_106():
+        var_0 = module_1.getnode()
+        integer_0 = module_0.Integer(minimum=var_0, multiple_of=var_0)
+        assert (
+            f"{type(integer_0).__module__}.{type(integer_0).__qualname__}"
+            == "fields.Integer"
+        )
+        assert integer_0.title == ""
+        assert integer_0.description == ""
+        assert integer_0.allow_null is False
+>       assert integer_0.minimum == 32989410669706
+E       assert 3281355014145 == 32989410669706
+E        +  where 3281355014145 = <fields.Integer object at 0x7f5d14016f80>.minimum
+
+test_fields.py:3559: AssertionError
+________________________________ test_case_127 _________________________________
+
+    def test_case_127():
+        var_0 = module_1.getnode()
+        integer_0 = module_0.Integer(minimum=var_0, multiple_of=var_0)
+        assert (
+            f"{type(integer_0).__module__}.{type(integer_0).__qualname__}"
+            == "fields.Integer"
+        )
+        assert integer_0.title == ""
+        assert integer_0.description == ""
+        assert integer_0.allow_null is False
+>       assert integer_0.minimum == 32989410669706
+E       assert 3281355014145 == 32989410669706
+E        +  where 3281355014145 = <fields.Integer object at 0x7f5d1401cf70>.minimum
+
+test_fields.py:4774: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample32/pynguin/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_fields.py::test_case_25 - assert 3281355014145 == 32989410669706
+FAILED test_fields.py::test_case_106 - assert 3281355014145 == 32989410669706
+FAILED test_fields.py::test_case_127 - assert 3281355014145 == 32989410669706
+3 failed, 117 passed, 27 xfailed in 10.98s
+
+--- stderr ---

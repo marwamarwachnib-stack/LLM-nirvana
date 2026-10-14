@@ -1,0 +1,182 @@
+{
+ "sample_id": "small_cat1/Bella",
+ "group": "small",
+ "category": "1",
+ "mode": "basic",
+ "model": "replay-synthetic",
+ "extraction_status": "ok",
+ "generation_error": "",
+ "truncated": false,
+ "variants": {
+  "strict": {
+   "original": {
+    "collected": 1,
+    "passed": 0,
+    "failed": 0,
+    "errors": 1,
+    "skipped": 0,
+    "collection_error": true,
+    "timed_out": false,
+    "returncode": 2,
+    "stmt_cover": 33.33,
+    "stmts": 9,
+    "missing_lines": [
+     10,
+     11,
+     12,
+     13,
+     15,
+     17
+    ],
+    "branch_cover": 23.08,
+    "branches": 4,
+    "branch_only_cover": 0.0,
+    "fail_kinds": {
+     "runtime": 1
+    },
+    "wall_seconds": 1.65,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 4,
+     "static_never_reached": 4,
+     "executed_assertions": 0,
+     "incorrect": 0,
+     "pct_incorrect": null,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 1
+    },
+    "stmt_cover_report": 33
+   },
+   "rewritten": {
+    "collected": 4,
+    "passed": 3,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 100.0,
+    "stmts": 7,
+    "missing_lines": [],
+    "branch_cover": 100.0,
+    "branches": 4,
+    "branch_only_cover": 100.0,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 0.89,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 4,
+     "static_never_reached": 0,
+     "executed_assertions": 4,
+     "incorrect": 1,
+     "pct_incorrect": 25.0,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 100
+   }
+  },
+  "lenient": {
+   "original": {
+    "collected": 1,
+    "passed": 0,
+    "failed": 0,
+    "errors": 1,
+    "skipped": 0,
+    "collection_error": true,
+    "timed_out": false,
+    "returncode": 2,
+    "stmt_cover": 33.33,
+    "stmts": 9,
+    "missing_lines": [
+     10,
+     11,
+     12,
+     13,
+     15,
+     17
+    ],
+    "branch_cover": 23.08,
+    "branches": 4,
+    "branch_only_cover": 0.0,
+    "fail_kinds": {
+     "runtime": 1
+    },
+    "wall_seconds": 1.58,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 4,
+     "static_never_reached": 4,
+     "executed_assertions": 0,
+     "incorrect": 0,
+     "pct_incorrect": null,
+     "n_assertion_error": 0,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+     },
+     "tests_with_errors_outside_assertions": 1
+    },
+    "stmt_cover_report": 33
+   },
+   "rewritten": {
+    "collected": 4,
+    "passed": 3,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "collection_error": false,
+    "timed_out": false,
+    "returncode": 1,
+    "stmt_cover": 100.0,
+    "stmts": 7,
+    "missing_lines": [],
+    "branch_cover": 100.0,
+    "branches": 4,
+    "branch_only_cover": 100.0,
+    "fail_kinds": {
+     "assertion": 1
+    },
+    "wall_seconds": 0.88,
+    "assertions": {
+     "status": "ok",
+     "static_assertions": 4,
+     "static_never_reached": 0,
+     "executed_assertions": 4,
+     "incorrect": 1,
+     "pct_incorrect": 25.0,
+     "n_assertion_error": 1,
+     "n_try_except": 0,
+     "n_runtime": 0,
+     "pct_of_incorrect": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+     },
+     "tests_with_errors_outside_assertions": 0
+    },
+    "stmt_cover_report": 100
+   }
+  }
+ }
+}

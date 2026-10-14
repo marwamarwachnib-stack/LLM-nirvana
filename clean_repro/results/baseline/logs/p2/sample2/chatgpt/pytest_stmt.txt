@@ -1,0 +1,30 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample2/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample2/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+..........FF                                                             [100%]
+=================================== FAILURES ===================================
+_ test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes __
+
+    def test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes():
+        obj = {'a': 1, 'b': 2}
+>       assert is_subclass_of_any(obj.keys(), list, set, dict) is True
+E       AssertionError: assert False is True
+E        +  where False = is_subclass_of_any(dict_keys(['a', 'b']), list, set, dict)
+E        +    where dict_keys(['a', 'b']) = <built-in method keys of dict object at 0x7f0b74f18880>()
+E        +      where <built-in method keys of dict object at 0x7f0b74f18880> = {'a': 1, 'b': 2}.keys
+
+test_example.py:53: AssertionError
+_ test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes _
+
+    def test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes():
+        obj = {'a': 1, 'b': 2}
+>       assert is_subclass_of_any(obj.keys(), tuple, deque, str) is False
+E       NameError: name 'deque' is not defined
+
+test_example.py:57: NameError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample2/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_is_subclass_of_any_returns_true_when_object_is_subclass_of_any_classes
+FAILED test_example.py::test_is_subclass_of_any_returns_false_when_object_is_not_subclass_of_any_classes
+2 failed, 10 passed in 0.11s
+
+--- stderr ---

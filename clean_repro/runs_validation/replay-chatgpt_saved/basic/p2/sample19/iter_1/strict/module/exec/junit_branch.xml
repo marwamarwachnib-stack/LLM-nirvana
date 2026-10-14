@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="34" time="0.210" timestamp="2026-10-14T00:42:55.747427" hostname="vm"><testcase classname="test_generated" name="test_sum_init" time="0.001" /><testcase classname="test_generated" name="test_sum_eq" time="0.001" /><testcase classname="test_generated" name="test_sum_fold" time="0.001" /><testcase classname="test_generated" name="test_sum_concat" time="0.001" /><testcase classname="test_generated" name="test_all_init" time="0.001" /><testcase classname="test_generated" name="test_all_eq" time="0.001" /><testcase classname="test_generated" name="test_all_fold" time="0.001" /><testcase classname="test_generated" name="test_all_concat_true_true" time="0.001" /><testcase classname="test_generated" name="test_all_concat_true_false" time="0.001" /><testcase classname="test_generated" name="test_one_init" time="0.001" /><testcase classname="test_generated" name="test_one_eq" time="0.001" /><testcase classname="test_generated" name="test_one_fold" time="0.001" /><testcase classname="test_generated" name="test_one_concat_true_true" time="0.001" /><testcase classname="test_generated" name="test_one_concat_true_false" time="0.001" /><testcase classname="test_generated" name="test_first_init" time="0.001" /><testcase classname="test_generated" name="test_first_eq" time="0.001" /><testcase classname="test_generated" name="test_first_fold" time="0.001" /><testcase classname="test_generated" name="test_first_concat" time="0.001" /><testcase classname="test_generated" name="test_last_init" time="0.000" /><testcase classname="test_generated" name="test_last_eq" time="0.001" /><testcase classname="test_generated" name="test_last_fold" time="0.001" /><testcase classname="test_generated" name="test_last_concat" time="0.001" /><testcase classname="test_generated" name="test_map_init" time="0.001" /><testcase classname="test_generated" name="test_map_eq" time="0.001" /><testcase classname="test_generated" name="test_map_fold" time="0.001" /><testcase classname="test_generated" name="test_map_concat" time="0.001"><failure message="KeyError: 1">def test_map_concat():
+        m1 = Map({1: Sum(5), 2: Sum(3)})
+        m2 = Map({2: Sum(7), 3: Sum(2)})
+&gt;       assert m1.concat(m2) == Map({1: Sum(5), 2: Sum(10), 3: Sum(2)})
+
+test_generated.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+semigroups.py:136: in concat
+    {key: value.concat(semigroup.value[key]) for key, value in self.value.items()}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;dict_itemiterator object at 0x7f15a84d1da0&gt;
+
+&gt;       {key: value.concat(semigroup.value[key]) for key, value in self.value.items()}
+    )
+E   KeyError: 1
+
+semigroups.py:136: KeyError</failure></testcase><testcase classname="test_generated" name="test_max_init" time="0.001" /><testcase classname="test_generated" name="test_max_eq" time="0.001" /><testcase classname="test_generated" name="test_max_fold" time="0.001" /><testcase classname="test_generated" name="test_max_concat" time="0.001" /><testcase classname="test_generated" name="test_min_init" time="0.001" /><testcase classname="test_generated" name="test_min_eq" time="0.001" /><testcase classname="test_generated" name="test_min_fold" time="0.001" /><testcase classname="test_generated" name="test_min_concat" time="0.001" /></testsuite></testsuites>

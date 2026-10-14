@@ -1,0 +1,61 @@
+{
+ "status": "ok",
+ "static_assertions": 7,
+ "static_never_reached": 0,
+ "executed_assertions": 7,
+ "incorrect": 5,
+ "pct_incorrect": 71.43,
+ "n_assertion_error": 4,
+ "n_try_except": 0,
+ "n_runtime": 1,
+ "pct_of_incorrect": {
+  "assertion": 80.0,
+  "try_except": 0.0,
+  "runtime": 20.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_as_escaped_unicode_literal",
+   "aid": "test_generated.py:8:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_as_escaped_utf8_literal",
+   "aid": "test_generated.py:13:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_camel_to_underscore",
+   "aid": "test_generated.py:18:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_convert_escaped_unicode_literal",
+   "aid": "test_generated.py:23:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_convert_escaped_utf8_literal",
+   "aid": "test_generated.py:28:assert",
+   "kind": "runtime",
+   "exc": "ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/clean_repro/conda/envs/p2/lib/python3.10/codecs.py)"
+  },
+  {
+   "test": "test_generated.py::test_underscore_to_camel",
+   "aid": "test_generated.py:33:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_underscore_to_camel",
+   "aid": "test_generated.py:37:assert",
+   "kind": "assertion",
+   "exc": ""
+  }
+ ]
+}

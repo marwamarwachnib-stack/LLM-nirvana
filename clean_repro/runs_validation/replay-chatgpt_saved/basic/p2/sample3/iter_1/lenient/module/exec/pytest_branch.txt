@@ -1,0 +1,70 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample3/iter_1/lenient/module/.coverage_branch --branch -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample3/iter_1/lenient/module/junit_branch.xml test_generated.py
+# returncode=1 timed_out=False
+F...FFF                                                                  [100%]
+=================================== FAILURES ===================================
+_________________________ test_bump_version_no_change __________________________
+
+    def test_bump_version_no_change():
+        # No change in version when bumping patch position
+>       assert bump_version('1.2.3') == '1.2.3'
+E       AssertionError: assert '1.2.4' == '1.2.3'
+E         - 1.2.3
+E         ?     ^
+E         + 1.2.4
+E         ?     ^
+
+test_generated.py:8: AssertionError
+_____________________ test_bump_version_alpha_pre_release ______________________
+
+    def test_bump_version_alpha_pre_release():
+        # Increase minor pre-release version alpha by 1
+        assert bump_version('1.2.3a0', pre_release='a') == '1.2.3a1'
+        # Increase minor pre-release version alpha by 2
+>       assert bump_version('1.2.3a0', pre_release='a') == '1.2.3a2'
+E       AssertionError: assert '1.2.3a1' == '1.2.3a2'
+E         - 1.2.3a2
+E         ?       ^
+E         + 1.2.3a1
+E         ?       ^
+
+test_generated.py:36: AssertionError
+______________________ test_bump_version_beta_pre_release ______________________
+
+    def test_bump_version_beta_pre_release():
+        # Increase minor pre-release version beta by 1
+        assert bump_version('1.2.3b0', pre_release='b') == '1.2.3b1'
+        # Increase minor pre-release version beta by 2
+>       assert bump_version('1.2.3b0', pre_release='b') == '1.2.3b2'
+E       AssertionError: assert '1.2.3b1' == '1.2.3b2'
+E         - 1.2.3b2
+E         ?       ^
+E         + 1.2.3b1
+E         ?       ^
+
+test_generated.py:42: AssertionError
+_____________ test_bump_version_alpha_pre_release_invalid_position _____________
+
+    def test_bump_version_alpha_pre_release_invalid_position():
+        # Trying to bump major part to a pre-release version
+        with pytest.raises(ValueError):
+            bump_version('1.2.3', position=0, pre_release='alpha')
+        # Trying to bump patch part to a pre-release version
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+test_generated.py:49: Failed
+=============================== warnings summary ===============================
+test_generated.py: 13 warnings
+  /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample3/iter_1/lenient/module/packages.py:101: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    ver_obj = StrictVersion(version)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample3/iter_1/lenient/module/junit_branch.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_bump_version_no_change - AssertionError: asser...
+FAILED test_generated.py::test_bump_version_alpha_pre_release - AssertionErro...
+FAILED test_generated.py::test_bump_version_beta_pre_release - AssertionError...
+FAILED test_generated.py::test_bump_version_alpha_pre_release_invalid_position
+4 failed, 3 passed, 13 warnings in 0.22s
+
+--- stderr ---

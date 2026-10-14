@@ -1,0 +1,14 @@
+Name                           Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------
+__init__.py                        0      0      0      0   100%
+_ctx/pdir/__init__.py              4      2      0      0    50%   4-6
+_ctx/pdir/_internal_utils.py      31     15     16      2    43%   12-22, 26-29, 34, 36, 39, 49
+_ctx/pdir/api.py                  91     79     46      0     9%   22-210
+_ctx/pdir/attr_category.py        69     26     18      1    51%   50, 54, 61-63, 67->exit, 222-228, 237-279
+_ctx/pdir/color.py                17      6      4      1    57%   11-15, 20, 23
+_ctx/pdir/configuration.py        66     17     16      3    63%   71-89, 95-97
+_ctx/pdir/constants.py            13      0      0      0   100%
+_ctx/pdir/format.py               38     33     11      0    10%   10-68
+test_attr_category.py            116    114      2      0     2%   6-3676
+--------------------------------------------------------------------------
+TOTAL                            445    292    113      7    29%

@@ -1,0 +1,15 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample16/pynguin/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample16/pynguin/junit_stmt.xml test_lazy.py
+# returncode=1 timed_out=False
+..x.xFxxxxxFxxx                                                          [100%]
+=================================== FAILURES ===================================
+_________________________________ test_case_5 __________________________________
+[XPASS(strict)] 
+_________________________________ test_case_11 _________________________________
+[XPASS(strict)] 
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample16/pynguin/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_lazy.py::test_case_5
+FAILED test_lazy.py::test_case_11
+2 failed, 3 passed, 10 xfailed in 0.39s
+
+--- stderr ---

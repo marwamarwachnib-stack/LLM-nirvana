@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="11" skipped="0" tests="15" time="0.460" timestamp="2026-10-14T00:53:15.615120" hostname="vm"><testcase classname="test_example" name="test_string_field_validate_blank" time="0.002"><failure message="AssertionError: assert '' == ' '&#10;  Strings contain only whitespace, escaping them using repr()&#10;  - ' '&#10;  ?  -&#10;  + ''">def test_string_field_validate_blank():
+        field = String(allow_blank=True)
+        assert field.validate("") == ""
+&gt;       assert field.validate(" ") == " "
+E       AssertionError: assert '' == ' '
+E         Strings contain only whitespace, escaping them using repr()
+E         - ' '
+E         ?  -
+E         + ''
+
+test_example.py:16: AssertionError</failure></testcase><testcase classname="test_example" name="test_string_field_validate_not_blank" time="0.001"><failure message="base.ValidationError: Must not be blank.">def test_string_field_validate_not_blank():
+        field = String(allow_blank=False)
+&gt;       assert field.validate("") == ValidationError
+
+test_example.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.String object at 0x7f075c2ef490&gt;, value = ''
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None and self.allow_blank and not strict:
+            # Leniently cast nulls to empty strings if allow_blank.
+            return ""
+        elif value is None:
+            raise self.validation_error("null")
+        elif self.format in FORMATS and FORMATS[self.format].is_native_type(value):
+            return value
+        elif not isinstance(value, str):
+            raise self.validation_error("type")
+    
+        # The null character is always invalid.
+        value = value.replace("\0", "")
+    
+        # Strip leading/trailing whitespace by default.
+        if self.trim_whitespace:
+            value = value.strip()
+    
+        if not self.allow_blank and not value:
+            if self.allow_null and not strict:
+                # Leniently cast empty strings (after trimming) to null if allow_null.
+                return None
+&gt;           raise self.validation_error("blank")
+E           base.ValidationError: Must not be blank.
+
+fields.py:168: ValidationError</failure></testcase><testcase classname="test_example" name="test_string_field_validate_pattern" time="0.001"><failure message="base.ValidationError: Must match the pattern /^([a-z]+)$/.">def test_string_field_validate_pattern():
+        field = String(pattern=r"^([a-z]+)$")
+        assert field.validate("abc") == "abc"
+&gt;       assert field.validate("ABC") == ValidationError
+
+test_example.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.String object at 0x7f075c097c40&gt;, value = 'ABC'
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None and self.allow_blank and not strict:
+            # Leniently cast nulls to empty strings if allow_blank.
+            return ""
+        elif value is None:
+            raise self.validation_error("null")
+        elif self.format in FORMATS and FORMATS[self.format].is_native_type(value):
+            return value
+        elif not isinstance(value, str):
+            raise self.validation_error("type")
+    
+        # The null character is always invalid.
+        value = value.replace("\0", "")
+    
+        # Strip leading/trailing whitespace by default.
+        if self.trim_whitespace:
+            value = value.strip()
+    
+        if not self.allow_blank and not value:
+            if self.allow_null and not strict:
+                # Leniently cast empty strings (after trimming) to null if allow_null.
+                return None
+            raise self.validation_error("blank")
+    
+        if self.min_length is not None:
+            if len(value) &lt; self.min_length:
+                raise self.validation_error("min_length")
+    
+        if self.max_length is not None:
+            if len(value) &gt; self.max_length:
+                raise self.validation_error("max_length")
+    
+        if self.pattern_regex is not None:
+            if not self.pattern_regex.search(value):
+&gt;               raise self.validation_error("pattern")
+E               base.ValidationError: Must match the pattern /^([a-z]+)$/.
+
+fields.py:180: ValidationError</failure></testcase><testcase classname="test_example" name="test_string_field_serialize" time="0.001" /><testcase classname="test_example" name="test_number_field_validate_integer" time="0.001" /><testcase classname="test_example" name="test_number_field_validate_decimal" time="0.001" /><testcase classname="test_example" name="test_boolean_field_validate" time="0.001"><failure message="base.ValidationError: May not be null.">def test_boolean_field_validate():
+        field = Boolean()
+        assert field.validate(True) == True
+        assert field.validate(False) == False
+        assert field.validate("true") == True
+        assert field.validate("false") == False
+        assert field.validate("on") == True
+        assert field.validate("off") == False
+        assert field.validate("1") == True
+        assert field.validate("0") == False
+        assert field.validate("") == False
+        assert field.validate(1) == True
+        assert field.validate(0) == False
+&gt;       assert field.validate(None) == ValidationError
+
+test_example.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Boolean object at 0x7f075c2b0bb0&gt;, value = None
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+    
+        elif value is None:
+&gt;           raise self.validation_error("null")
+E           base.ValidationError: May not be null.
+
+fields.py:337: ValidationError</failure></testcase><testcase classname="test_example" name="test_choice_field_validate" time="0.001"><failure message="base.ValidationError: Not a valid choice.">def test_choice_field_validate():
+        field = Choice(choices=["option1", "option2"])
+        assert field.validate("option1") == "option1"
+        assert field.validate("option2") == "option2"
+&gt;       assert field.validate("option3") == ValidationError
+
+test_example.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Choice object at 0x7f075c2eba60&gt;, value = 'option3'
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None:
+            raise self.validation_error("null")
+        elif value not in Uniqueness([key for key, value in self.choices]):
+            if value == "":
+                if self.allow_null and not strict:
+                    return None
+                raise self.validation_error("required")
+&gt;           raise self.validation_error("choice")
+E           base.ValidationError: Not a valid choice.
+
+fields.py:387: ValidationError</failure></testcase><testcase classname="test_example" name="test_choice_field_validate_with_tuples" time="0.001"><failure message="base.ValidationError: Not a valid choice.">def test_choice_field_validate_with_tuples():
+        field = Choice(choices=[("option1", "Option 1"), ("option2", "Option 2")])
+        assert field.validate("option1") == "option1"
+        assert field.validate("option2") == "option2"
+&gt;       assert field.validate("option3") == ValidationError
+
+test_example.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Choice object at 0x7f075c083d00&gt;, value = 'option3'
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None:
+            raise self.validation_error("null")
+        elif value not in Uniqueness([key for key, value in self.choices]):
+            if value == "":
+                if self.allow_null and not strict:
+                    return None
+                raise self.validation_error("required")
+&gt;           raise self.validation_error("choice")
+E           base.ValidationError: Not a valid choice.
+
+fields.py:387: ValidationError</failure></testcase><testcase classname="test_example" name="test_object_field_validate" time="0.001"><failure message="AssertionError: assert {'field1': 'abc'} == ValidationError&#10; +  where {'field1': 'abc'} = &lt;bound method Object.validate of &lt;fields.Object object at 0x7f075c2c3ca0&gt;&gt;({'field1': 'abc'})&#10; +    where &lt;bound method Object.validate of &lt;fields.Object object at 0x7f075c2c3ca0&gt;&gt; = &lt;fields.Object object at 0x7f075c2c3ca0&gt;.validate">def test_object_field_validate():
+        field = Object(properties={"field1": String(), "field2": Integer()})
+        assert field.validate({"field1": "abc", "field2": 10}) == {"field1": "abc", "field2": 10}
+        assert field.validate({"field1": "abc", "field2": 10, "field3": "def"}) == {"field1": "abc", "field2": 10, "field3": "def"}
+&gt;       assert field.validate({"field1": "abc"}) == ValidationError
+E       AssertionError: assert {'field1': 'abc'} == ValidationError
+E        +  where {'field1': 'abc'} = &lt;bound method Object.validate of &lt;fields.Object object at 0x7f075c2c3ca0&gt;&gt;({'field1': 'abc'})
+E        +    where &lt;bound method Object.validate of &lt;fields.Object object at 0x7f075c2c3ca0&gt;&gt; = &lt;fields.Object object at 0x7f075c2c3ca0&gt;.validate
+
+test_example.py:77: AssertionError</failure></testcase><testcase classname="test_example" name="test_array_field_validate" time="0.001"><failure message="base.ValidationError: {1: 'Must be a string.'}">def test_array_field_validate():
+        field = Array(items=String())
+        assert field.validate(["abc", "def"]) == ["abc", "def"]
+&gt;       assert field.validate(["abc", 123]) == ValidationError
+
+test_example.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Array object at 0x7f075c2b29b0&gt;, value = ['abc', 123]
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None:
+            raise self.validation_error("null")
+        elif not isinstance(value, list):
+            raise self.validation_error("type")
+    
+        if (
+            self.min_items is not None
+            and self.min_items == self.max_items
+            and len(value) != self.min_items
+        ):
+            raise self.validation_error("exact_items")
+        if self.min_items is not None and len(value) &lt; self.min_items:
+            if self.min_items == 1:
+                raise self.validation_error("empty")
+            raise self.validation_error("min_items")
+        elif self.max_items is not None and len(value) &gt; self.max_items:
+            raise self.validation_error("max_items")
+    
+        # Ensure all items are of the right type.
+        validated = []
+        error_messages: typing.List[Message] = []
+        if self.unique_items:
+            seen_items = Uniqueness()
+    
+        for pos, item in enumerate(value):
+            validator = None
+            if isinstance(self.items, list):
+                if pos &lt; len(self.items):
+                    validator = self.items[pos]
+                elif isinstance(self.additional_items, Field):
+                    validator = self.additional_items
+            elif self.items is not None:
+                validator = self.items
+    
+            if validator is None:
+                validated.append(item)
+            else:
+                item, error = validator.validate_or_error(item, strict=strict)
+                if error:
+                    error_messages += error.messages(add_prefix=pos)
+                else:
+                    validated.append(item)
+    
+            if self.unique_items:
+                if item in seen_items:
+                    text = self.get_error_text("unique_items")
+                    message = Message(text=text, code="unique_items", key=pos)
+                    error_messages.append(message)
+                else:
+                    seen_items.add(item)
+    
+        if error_messages:
+&gt;           raise ValidationError(messages=error_messages)
+E           base.ValidationError: {1: 'Must be a string.'}
+
+fields.py:658: ValidationError</failure></testcase><testcase classname="test_example" name="test_text_field_validate" time="0.001"><failure message="base.ValidationError: Must be a string.">def test_text_field_validate():
+        field = Text()
+        assert field.validate("abc") == "abc"
+        assert field.validate("123") == "123"
+&gt;       assert field.validate(123) == ValidationError
+
+test_example.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Text object at 0x7f075c2eb910&gt;, value = 123
+
+    def validate(self, value: typing.Any, *, strict: bool = False) -&gt; typing.Any:
+        if value is None and self.allow_null:
+            return None
+        elif value is None and self.allow_blank and not strict:
+            # Leniently cast nulls to empty strings if allow_blank.
+            return ""
+        elif value is None:
+            raise self.validation_error("null")
+        elif self.format in FORMATS and FORMATS[self.format].is_native_type(value):
+            return value
+        elif not isinstance(value, str):
+&gt;           raise self.validation_error("type")
+E           base.ValidationError: Must be a string.
+
+fields.py:155: ValidationError</failure></testcase><testcase classname="test_example" name="test_union_field_validate" time="0.001"><failure message="assert 10 == ValidationError&#10; +  where 10 = &lt;bound method Union.validate of &lt;fields.Union object at 0x7f075c4f7250&gt;&gt;(10.0)&#10; +    where &lt;bound method Union.validate of &lt;fields.Union object at 0x7f075c4f7250&gt;&gt; = &lt;fields.Union object at 0x7f075c4f7250&gt;.validate">def test_union_field_validate():
+        field = Union(any_of=[String(), Integer()])
+        assert field.validate("abc") == "abc"
+        assert field.validate(123) == 123
+&gt;       assert field.validate(10.0) == ValidationError
+E       assert 10 == ValidationError
+E        +  where 10 = &lt;bound method Union.validate of &lt;fields.Union object at 0x7f075c4f7250&gt;&gt;(10.0)
+E        +    where &lt;bound method Union.validate of &lt;fields.Union object at 0x7f075c4f7250&gt;&gt; = &lt;fields.Union object at 0x7f075c4f7250&gt;.validate
+
+test_example.py:95: AssertionError</failure></testcase><testcase classname="test_example" name="test_const_field_validate" time="0.001"><failure message="base.ValidationError: Must be the value 'abc'.">def test_const_field_validate():
+        field = Const(const="abc")
+        assert field.validate("abc") == "abc"
+&gt;       assert field.validate("def") == ValidationError
+
+test_example.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;fields.Const object at 0x7f075c2c3940&gt;, value = 'def', strict = False
+
+    def validate(self, value: typing.Any, strict: bool = False) -&gt; typing.Any:
+        if value != self.const:
+            if self.const is None:
+                raise self.validation_error("only_null")
+&gt;           raise self.validation_error("const")
+E           base.ValidationError: Must be the value 'abc'.
+
+fields.py:762: ValidationError</failure></testcase><testcase classname="test_example" name="test_any_field_validate" time="0.001" /></testsuite></testsuites>

@@ -1,0 +1,272 @@
+{
+ "summary": {
+  "collected": 9,
+  "passed": 8,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 92.5,
+  "stmts": 40,
+  "missing_lines": [
+   37,
+   46,
+   77
+  ],
+  "branch_cover": 90.38,
+  "branches": 12,
+  "branch_only_cover": 83.33,
+  "fail_kinds": {
+   "assertion": 1
+  },
+  "wall_seconds": 2.31
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.14,
+  "collected": 9,
+  "passed": 8,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 3,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    10,
+    13,
+    16,
+    17,
+    19,
+    21,
+    22,
+    24,
+    26,
+    27,
+    28,
+    30,
+    32,
+    33,
+    35,
+    42,
+    44,
+    45,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    75,
+    76
+   ],
+   "missing_lines": [
+    37,
+    46,
+    77
+   ],
+   "stmt_cover": 92.5,
+   "cover_percent": 92.5
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n_timers.py             40      3    92%   37, 46, 77\ntest_generated.py      43      2    95%   53-54\n-------------------------------------------------\nTOTAL                  83      5    94%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_add",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_clear",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_count",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_total",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_min",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_mean",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_median",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_stdev",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert nan == 0.0\n +  where nan = <bound method Timers.stdev of {'timer1': 1.5}>('timer1')\n +    where <bound method Timers.stdev of {'timer1': 1.5}> = {'timer1': 1.5}.stdev"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.17,
+  "collected": 9,
+  "passed": 8,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 3,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    10,
+    13,
+    16,
+    17,
+    19,
+    21,
+    22,
+    24,
+    26,
+    27,
+    28,
+    30,
+    32,
+    33,
+    35,
+    42,
+    44,
+    45,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    75,
+    76
+   ],
+   "missing_lines": [
+    37,
+    46,
+    77
+   ],
+   "stmt_cover": 92.5,
+   "cover_percent": 90.38461538461539,
+   "branches": 12,
+   "partial": 2,
+   "covered_branches": 10,
+   "branch_only_cover": 83.33333333333333
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n_timers.py             40      3     12      2    90%   37, 46, 77\ntest_generated.py      43      2      0      0    95%   53-54\n---------------------------------------------------------------\nTOTAL                  83      5     12      2    93%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_add",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_clear",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_count",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_total",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_min",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_max",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_mean",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_median",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_stdev",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert nan == 0.0\n +  where nan = <bound method Timers.stdev of {'timer1': 1.5}>('timer1')\n +    where <bound method Timers.stdev of {'timer1': 1.5}> = {'timer1': 1.5}.stdev"
+   }
+  ]
+ }
+}

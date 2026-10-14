@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="23" time="4.049" timestamp="2026-10-13T23:54:44.514949" hostname="vm"><testcase classname="test_ssl_" name="test_ssl_version[ssl2.3]" time="0.031" /><testcase classname="test_ssl_" name="test_ssl_version[tls1]" time="0.065" /><testcase classname="test_ssl_" name="test_ssl_version[tls1.1]" time="0.013" /><testcase classname="test_ssl_" name="test_ssl_version[tls1.2]" time="0.020" /><testcase classname="test_ssl_.TestClientCert" name="test_cert_and_key" time="0.021"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt', '--cert-key', ...]
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;pynguin.test_ssl_.TestClientCert object at 0x7ff9056b12d0&gt;
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    def test_cert_and_key(self, httpbin_secure):
+&gt;       r = http(httpbin_secure + '/get',
+                 '--cert', CLIENT_CERT,
+                 '--cert-key', CLIENT_KEY)
+
+test_ssl_.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_.TestClientCert" name="test_cert_pem" time="0.012"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem']
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.pem: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;pynguin.test_ssl_.TestClientCert object at 0x7ff9056b1330&gt;
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    def test_cert_pem(self, httpbin_secure):
+&gt;       r = http(httpbin_secure + '/get',
+                 '--cert', CLIENT_PEM)
+
+test_ssl_.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_.TestClientCert" name="test_cert_file_not_found" time="0.019" /><testcase classname="test_ssl_.TestClientCert" name="test_cert_file_invalid" time="0.015" /><testcase classname="test_ssl_.TestClientCert" name="test_cert_ok_but_missing_key" time="0.012"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt']
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/client.crt: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;pynguin.test_ssl_.TestClientCert object at 0x7ff9056b1840&gt;
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    def test_cert_ok_but_missing_key(self, httpbin_secure):
+        with pytest.raises(ssl_errors):
+&gt;           http(httpbin_secure + '/get',
+                 '--cert', CLIENT_CERT)
+
+test_ssl_.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_.TestServerCert" name="test_verify_no_OK" time="0.019" /><testcase classname="test_ssl_.TestServerCert" name="test_verify_false_OK[false]" time="0.019" /><testcase classname="test_ssl_.TestServerCert" name="test_verify_false_OK[fALse]" time="0.026" /><testcase classname="test_ssl_.TestServerCert" name="test_verify_custom_ca_bundle_path" time="0.020" /><testcase classname="test_ssl_.TestServerCert" name="test_self_signed_server_cert_by_default_raises_ssl_error" time="0.024" /><testcase classname="test_ssl_.TestServerCert" name="test_verify_custom_ca_bundle_invalid_path" time="0.013" /><testcase classname="test_ssl_.TestServerCert" name="test_verify_custom_ca_bundle_invalid_bundle" time="0.013" /><testcase classname="test_ssl_" name="test_ciphers" time="0.023" /><testcase classname="test_ssl_" name="test_ciphers_none_can_be_selected" time="0.011" /><testcase classname="test_ssl_" name="test_pyopenssl_presence" time="0.001" /><testcase classname="test_ssl_" name="test_password_protected_cert_prompt" time="0.011"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem', '--cert-key', ...]
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    @mock.patch('httpie.cli.argtypes.SSLCredentials._prompt_password',
+                new=lambda self, prompt: PWD_CLIENT_PASS)
+    def test_password_protected_cert_prompt(httpbin_secure):
+&gt;       r = http(httpbin_secure + '/get',
+                 '--cert', PWD_CLIENT_PEM,
+                 '--cert-key', PWD_CLIENT_KEY)
+
+test_ssl_.py:183: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_" name="test_password_protected_cert_prompt_invalid" time="0.012"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem', '--cert-key', ...]
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    @mock.patch('httpie.cli.argtypes.SSLCredentials._prompt_password',
+                new=lambda self, prompt: PWD_CLIENT_INVALID_PASS)
+    def test_password_protected_cert_prompt_invalid(httpbin_secure):
+        with pytest.raises(ssl_errors):
+&gt;           http(httpbin_secure + '/get',
+                 '--cert', PWD_CLIENT_PEM,
+                 '--cert-key', PWD_CLIENT_KEY)
+
+test_ssl_.py:193: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_" name="test_password_protected_cert_cli_arg" time="0.013"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem', '--cert-key', ...]
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    def test_password_protected_cert_cli_arg(httpbin_secure):
+&gt;       r = http(httpbin_secure + '/get',
+                 '--cert', PWD_CLIENT_PEM,
+                 '--cert-key', PWD_CLIENT_KEY,
+                 '--cert-key-pass', PWD_CLIENT_PASS)
+
+test_ssl_.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase><testcase classname="test_ssl_" name="test_password_protected_cert_cli_arg_invalid" time="0.183"><failure message="SystemExit: 2">filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+&gt;           with open(filename, 'rb'):
+E           FileNotFoundError: [Errno 2] No such file or directory: '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+_ctx/httpie/cli/argtypes.py:196: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+&gt;           result = type_func(arg_string)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2495: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def readable_file_arg(filename):
+        try:
+            with open(filename, 'rb'):
+                return filename
+        except OSError as ex:
+&gt;           raise argparse.ArgumentTypeError(f'{ex.filename}: {ex.strerror}')
+E           argparse.ArgumentTypeError: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+_ctx/httpie/cli/argtypes.py:199: ArgumentTypeError
+
+During handling of the above exception, another exception occurred:
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+args = ['--traceback', '--timeout=3', 'https://127.0.0.1:36299/get', '--cert', '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem', '--cert-key', ...]
+namespace = Namespace(method=None, url='https://127.0.0.1:36299/get', request_items=[], request_type=None, boundary=None, raw=None..., cert=None, cert_key=None, cert_key_pass=None, ignore_stdin=False, traceback=True, default_scheme='http', debug=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+&gt;               namespace, args = self._parse_known_args(args, namespace)
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1866: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2079: in _parse_known_args
+    start_index = consume_optional(start_index)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2019: in consume_optional
+    take_action(action, args, option_string)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1927: in take_action
+    argument_values = self._get_values(action, argument_strings)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2462: in _get_values
+    value = self._get_value(action, arg_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+action = _StoreAction(option_strings=['--cert'], dest='cert', nargs=None, const=None, default=None, type=&lt;function readable_fil... either contain both private key and certificate or you may\n    specify --cert-key separately.\n\n    ', metavar=None)
+arg_string = '/opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem'
+
+    def _get_value(self, action, arg_string):
+        type_func = self._registry_get('type', action.type, action.type)
+        if not callable(type_func):
+            msg = _('%r is not callable')
+            raise ArgumentError(action, msg % type_func)
+    
+        # convert the value to the appropriate type
+        try:
+            result = type_func(arg_string)
+    
+        # ArgumentTypeErrors indicate errors
+        except ArgumentTypeError:
+            name = getattr(action.type, '__name__', repr(action.type))
+            msg = str(_sys.exc_info()[1])
+&gt;           raise ArgumentError(action, msg)
+E           argparse.ArgumentError: argument --cert: /opt/clean_repro/work/baseline/p2/sample11/pynguin/client_certs/password_protected/client.pem: No such file or directory
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2501: ArgumentError
+
+During handling of the above exception, another exception occurred:
+
+httpbin_secure = &lt;pytest_httpbin.serve.SecureServer object at 0x7ff9056b0af0&gt;
+
+    def test_password_protected_cert_cli_arg_invalid(httpbin_secure):
+        with pytest.raises(ssl_errors):
+&gt;           http(httpbin_secure + '/get',
+                 '--cert', PWD_CLIENT_PEM,
+                 '--cert-key', PWD_CLIENT_KEY,
+                 '--cert-key-pass', PWD_CLIENT_INVALID_PASS)
+
+test_ssl_.py:208: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+utils/__init__.py:403: in http
+    exit_status = core.main(args=complete_args, **kwargs)
+_ctx/httpie/core.py:162: in main
+    return raw_main(
+_ctx/httpie/core.py:77: in raw_main
+    parsed_args = parser.parse_args(
+_ctx/httpie/cli/argparser.py:159: in parse_args
+    self.args, no_options = super().parse_known_args(args, namespace)
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:1869: in parse_known_args
+    self.error(str(err))
+_ctx/httpie/cli/argparser.py:613: in error
+    self.exit(2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = HTTPieArgumentParser(prog='http', usage=None, description='HTTPie: modern, user-friendly command-line HTTP client for ...pie.io&gt;', formatter_class=&lt;class 'httpie.cli.argparser.HTTPieHelpFormatter'&gt;, conflict_handler='error', add_help=False)
+status = 2, message = None
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+&gt;       _sys.exit(status)
+E       SystemExit: 2
+
+../../../../../conda/envs/p2/lib/python3.10/argparse.py:2581: SystemExit</failure></testcase></testsuite></testsuites>

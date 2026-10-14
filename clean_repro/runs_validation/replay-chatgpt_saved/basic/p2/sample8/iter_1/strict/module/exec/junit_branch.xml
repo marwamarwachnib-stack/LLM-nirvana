@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.171" timestamp="2026-10-14T00:47:05.715597" hostname="vm"><testcase classname="" name="test_generated" time="0.000"><error message="collection failure">ImportError while importing test module '/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample8/iter_1/strict/module/test_generated.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/clean_repro/conda/envs/p2/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test_generated.py:5: in &lt;module&gt;
+    from cookies import HTTPieCookiePolicy
+E   ModuleNotFoundError: No module named 'cookies'</error></testcase></testsuite></testsuites>

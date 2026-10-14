@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.103" timestamp="2026-10-14T00:46:16.840549" hostname="vm"><testcase classname="test_generated" name="test_get_attr_category" time="0.002"><failure message="assert (&lt;AttrCategor....PROPERTY: 5&gt;) == (&lt;AttrCategor....PROPERTY: 5&gt;)&#10;  At index 0 diff: &lt;AttrCategory.SPECIAL_ATTRIBUTE: 7&gt; != &lt;AttrCategory.MODULE_ATTRIBUTE: 6&gt;&#10;  Use -v to get more diff">def test_get_attr_category():
+        # Test for function attribute
+        assert get_attr_category('__add__', int.__add__, int) == (AttrCategory.ARITHMETIC, AttrCategory.FUNCTION)
+    
+        # Test for class attribute
+        assert get_attr_category('__init__', dict.__init__, dict) == (AttrCategory.OBJECT_CUSTOMIZATION, AttrCategory.FUNCTION)
+    
+        # Test for module attribute
+&gt;       assert get_attr_category('__name__', int.__name__, int) == (AttrCategory.MODULE_ATTRIBUTE, AttrCategory.PROPERTY)
+E       assert (&lt;AttrCategor....PROPERTY: 5&gt;) == (&lt;AttrCategor....PROPERTY: 5&gt;)
+E         At index 0 diff: &lt;AttrCategory.SPECIAL_ATTRIBUTE: 7&gt; != &lt;AttrCategory.MODULE_ATTRIBUTE: 6&gt;
+E         Use -v to get more diff
+
+test_generated.py:13: AssertionError</failure></testcase></testsuite></testsuites>

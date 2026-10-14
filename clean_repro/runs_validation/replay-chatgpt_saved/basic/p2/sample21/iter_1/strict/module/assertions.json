@@ -1,0 +1,73 @@
+{
+ "status": "ok",
+ "static_assertions": 9,
+ "static_never_reached": 0,
+ "executed_assertions": 9,
+ "incorrect": 1,
+ "pct_incorrect": 11.11,
+ "n_assertion_error": 1,
+ "n_try_except": 0,
+ "n_runtime": 0,
+ "pct_of_incorrect": {
+  "assertion": 100.0,
+  "try_except": 0.0,
+  "runtime": 0.0
+ },
+ "tests_with_errors_outside_assertions": 0,
+ "records": [
+  {
+   "test": "test_generated.py::test_compose",
+   "aid": "test_generated.py:22:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_cond",
+   "aid": "test_generated.py:28:assert",
+   "kind": "assertion",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_curried_filter",
+   "aid": "test_generated.py:16:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_curried_map",
+   "aid": "test_generated.py:13:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_curry",
+   "aid": "test_generated.py:7:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_eq",
+   "aid": "test_generated.py:10:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_find",
+   "aid": "test_generated.py:19:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_memoize",
+   "aid": "test_generated.py:32:assert",
+   "kind": "pass",
+   "exc": ""
+  },
+  {
+   "test": "test_generated.py::test_pipe",
+   "aid": "test_generated.py:25:assert",
+   "kind": "pass",
+   "exc": ""
+  }
+ ]
+}

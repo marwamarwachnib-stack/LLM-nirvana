@@ -1,0 +1,75 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample22/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample22/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+...F                                                                     [100%]
+=================================== FAILURES ===================================
+_______________________________ test_roman_range _______________________________
+
+    def test_roman_range():
+        # Test ascending range
+>       for i, roman_numeral in enumerate(generation.roman_range(1, 7)):
+
+test_example.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stop = 1, start = 7, step = 1
+
+    def roman_range(stop: int, start: int = 1, step: int = 1) -> Generator:
+        """
+        Similarly to native Python's `range()`, returns a Generator object which generates a new roman number
+        on each iteration instead of an integer.
+    
+        *Example:*
+    
+        >>> for n in roman_range(7): print(n)
+        >>> # prints: I, II, III, IV, V, VI, VII
+        >>> for n in roman_range(start=7, stop=1, step=-1): print(n)
+        >>> # prints: VII, VI, V, IV, III, II, I
+    
+        :param stop: Number at which the generation must stop (must be <= 3999).
+        :param start: Number at which the generation must start (must be >= 1).
+        :param step: Increment of each generation step (default to 1).
+        :return: Generator of roman numbers.
+        """
+    
+        def validate(arg_value, arg_name, allow_negative=False):
+            msg = '"{}" must be an integer in the range 1-3999'.format(arg_name)
+    
+            if not isinstance(arg_value, int):
+                raise ValueError(msg)
+    
+            if allow_negative:
+                arg_value = abs(arg_value)
+    
+            if arg_value < 1 or arg_value > 3999:
+                raise ValueError(msg)
+    
+        def generate():
+            current = start
+    
+            # generate values for each step
+            while current != stop:
+                yield roman_encode(current)
+                current += step
+    
+            # last value to return
+            yield roman_encode(current)
+    
+        # checks each single argument value
+        validate(stop, 'stop')
+        validate(start, 'start')
+        validate(step, 'step', allow_negative=True)
+    
+        # checks if the provided configuration leads to a feasible iteration with respect to boundaries or not
+        forward_exceed = step > 0 and (start > stop or start + step > stop)
+        backward_exceed = step < 0 and (start < stop or start + step < stop)
+        if forward_exceed or backward_exceed:
+>           raise OverflowError('Invalid start/stop/step configuration')
+E           OverflowError: Invalid start/stop/step configuration
+
+generation.py:138: OverflowError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample22/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_roman_range - OverflowError: Invalid start/stop/...
+1 failed, 3 passed in 0.16s
+
+--- stderr ---

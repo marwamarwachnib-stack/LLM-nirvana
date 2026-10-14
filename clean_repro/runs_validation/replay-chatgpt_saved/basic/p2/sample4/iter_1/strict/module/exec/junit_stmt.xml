@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="6" time="0.116" timestamp="2026-10-14T00:46:00.336342" hostname="vm"><testcase classname="test_generated" name="test_as_escaped_unicode_literal" time="0.002"><failure message="AssertionError: assert '\\x31\\x2e\\...20\\U0001f6d1' == '\\x31\\x2e\\...x9F\\x9B\\x91'&#10;  - \x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91&#10;  + \x31\x2e\u2605\x20\U0001f6d1">def test_as_escaped_unicode_literal():
+        text = '1.★ #x1F6D1'
+        expected_output = r'\x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91'
+&gt;       assert strutils.as_escaped_unicode_literal(text) == expected_output
+E       AssertionError: assert '\\x31\\x2e\\...20\\U0001f6d1' == '\\x31\\x2e\\...x9F\\x9B\\x91'
+E         - \x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91
+E         + \x31\x2e\u2605\x20\U0001f6d1
+
+test_generated.py:8: AssertionError</failure></testcase><testcase classname="test_generated" name="test_as_escaped_utf8_literal" time="0.002"><failure message="AssertionError: assert '\\x31\\x2e\\...x9f\\x9b\\x91' == '\\x31\\x2e\\...x9F\\x9B\\x91'&#10;  - \x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91&#10;  ?           ^               ^    ^   ^&#10;  + \x31\x2e\xe2\x98\x85\x20\xf0\x9f\x9b\x91&#10;  ?           ^               ^    ^   ^">def test_as_escaped_utf8_literal():
+        text = '1.★ #x1F6D1'
+        expected_output = r'\x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91'
+&gt;       assert strutils.as_escaped_utf8_literal(text) == expected_output
+E       AssertionError: assert '\\x31\\x2e\\...x9f\\x9b\\x91' == '\\x31\\x2e\\...x9F\\x9B\\x91'
+E         - \x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91
+E         ?           ^               ^    ^   ^
+E         + \x31\x2e\xe2\x98\x85\x20\xf0\x9f\x9b\x91
+E         ?           ^               ^    ^   ^
+
+test_generated.py:13: AssertionError</failure></testcase><testcase classname="test_generated" name="test_camel_to_underscore" time="0.001" /><testcase classname="test_generated" name="test_convert_escaped_unicode_literal" time="0.002"><failure message="AssertionError: assert '1.â\x98\x85 ð\x9f\x9b\x91' == '1.★ #x1F6D1'&#10;  - 1.★ #x1F6D1&#10;  + 1.â&#10;  +  ð">def test_convert_escaped_unicode_literal():
+        text = r'\x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91'
+        expected_output = '1.★ #x1F6D1'
+&gt;       assert strutils.convert_escaped_unicode_literal(text) == expected_output
+E       AssertionError: assert '1.â\x98\x85 ð\x9f\x9b\x91' == '1.★ #x1F6D1'
+E         - 1.★ #x1F6D1
+E         + 1.â
+E         +  ð
+
+test_generated.py:23: AssertionError</failure></testcase><testcase classname="test_generated" name="test_convert_escaped_utf8_literal" time="0.001"><failure message="ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/clean_repro/conda/envs/p2/lib/python3.10/codecs.py)">def test_convert_escaped_utf8_literal():
+        text = r'\x31\x2e\xE2\x98\x85\x20\xF0\x9F\x9B\x91'
+        expected_output = '1.★ #x1F6D1'
+&gt;       assert strutils.convert_escaped_utf8_literal(text) == expected_output
+
+test_generated.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+text = '\\x31\\x2e\\xE2\\x98\\x85\\x20\\xF0\\x9F\\x9B\\x91'
+
+    def convert_escaped_utf8_literal(
+            text: str
+    ) -&gt; str:
+        """Convert any escaped UTF-8 hexadecimal character bytes into the proper
+        string characters(s).
+    
+        This function will convert a string, that may contain escaped UTF-8
+        literal hexadecimal bytes, into a string with the proper characters.
+    
+        Args:
+            text (:obj:`str`): The string that may have escaped UTF8 hexadecimal.
+    
+        Raises:
+             UnicodeDecodeError: if any of the escaped hexadecimal characters
+                are not proper UTF8 bytes.
+    
+        :rtype:
+            :obj:`str`
+    
+                A string with each escaped UTF8 hexadecimal character converted
+                into the proper character.
+    
+        Examples:
+    
+            Basic usage:
+    
+                &gt;&gt;&gt; from flutils.strutils import convert_raw_utf8_escape
+                &gt;&gt;&gt; a = 'test\\\\xc2\\\\xa9'
+                &gt;&gt;&gt; convert_escaped_utf8_literal(a)
+                'test©'
+    
+            This function is intended for cases when the value of an environment
+            variable contains escaped UTF-8 literal characters (bytes) that need
+            to be converted to proper characters::
+    
+                $ export TEST='test\\\\xc2\\\\xa9'
+                $ python
+    
+            ::
+    
+                &gt;&gt;&gt; import os
+                &gt;&gt;&gt; from flutils.strutils import convert_raw_utf8_escape
+                &gt;&gt;&gt; a = os.getenv('TEST')
+                &gt;&gt;&gt; a
+                'test\\\\xc2\\\\xa9'
+                &gt;&gt;&gt; convert_escaped_utf8_literal(a)
+                'test©'
+        """
+&gt;       from codecs import register_codecs  # pylint:disable=C0415
+E       ImportError: cannot import name 'register_codecs' from 'codecs' (/opt/clean_repro/conda/envs/p2/lib/python3.10/codecs.py)
+
+strutils.py:205: ImportError</failure></testcase><testcase classname="test_generated" name="test_underscore_to_camel" time="0.001"><failure message="AssertionError: assert 'OneTwo' == 'oneTwo'&#10;  - oneTwo&#10;  ? ^&#10;  + OneTwo&#10;  ? ^">def test_underscore_to_camel():
+        text = 'foo_bar'
+        expected_output = 'fooBar'
+        assert strutils.underscore_to_camel(text) == expected_output
+    
+        text = '_one__two___'
+        expected_output = 'oneTwo'
+&gt;       assert strutils.underscore_to_camel(text, lower_first=False) == expected_output
+E       AssertionError: assert 'OneTwo' == 'oneTwo'
+E         - oneTwo
+E         ? ^
+E         + OneTwo
+E         ? ^
+
+test_generated.py:37: AssertionError</failure></testcase></testsuite></testsuites>

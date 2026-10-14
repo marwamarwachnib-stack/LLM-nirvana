@@ -1,0 +1,145 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample26/iter_1/lenient/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample26/iter_1/lenient/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+F.F...F...F.FFFF                                                         [100%]
+=================================== FAILURES ===================================
+_________________________ test_date_format_native_type _________________________
+
+    def test_date_format_native_type():
+        formatter = DateFormat()
+        assert formatter.is_native_type(datetime.date.today()) == True
+>       assert formatter.is_native_type(datetime.datetime.now()) == False
+E       AssertionError: assert True == False
+E        +  where True = <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7faac118d180>>(datetime.datetime(2026, 10, 14, 0, 43, 58, 606948))
+E        +    where <bound method DateFormat.is_native_type of <formats.DateFormat object at 0x7faac118d180>> = <formats.DateFormat object at 0x7faac118d180>.is_native_type
+E        +    and   datetime.datetime(2026, 10, 14, 0, 43, 58, 606948) = <built-in method now of type object at 0x7faac3ab6a60>()
+E        +      where <built-in method now of type object at 0x7faac3ab6a60> = <class 'datetime.datetime'>.now
+E        +        where <class 'datetime.datetime'> = datetime.datetime
+
+test_generated.py:9: AssertionError
+________________________ test_date_format_invalid_date _________________________
+
+    def test_date_format_invalid_date():
+        formatter = DateFormat()
+>       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:18: TypeError
+________________________ test_time_format_invalid_time _________________________
+
+    def test_time_format_invalid_time():
+        formatter = TimeFormat()
+>       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:42: TypeError
+____________________ test_datetime_format_invalid_datetime _____________________
+
+    def test_datetime_format_invalid_datetime():
+        formatter = DateTimeFormat()
+>       with pytest.raises(formatter.validation_error("invalid")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:69: TypeError
+_________________________ test_uuid_format_native_type _________________________
+
+    def test_uuid_format_native_type():
+        formatter = UUIDFormat()
+>       assert formatter.is_native_type(uuid.UUID()) == True
+
+test_generated.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'UUID' object has no attribute 'int'") raised in repr()] UUID object at 0x7faac10cf640>
+hex = None, bytes = None, bytes_le = None, fields = None, int = None
+version = None
+
+    def __init__(self, hex=None, bytes=None, bytes_le=None, fields=None,
+                       int=None, version=None,
+                       *, is_safe=SafeUUID.unknown):
+        r"""Create a UUID from either a string of 32 hexadecimal digits,
+        a string of 16 bytes as the 'bytes' argument, a string of 16 bytes
+        in little-endian order as the 'bytes_le' argument, a tuple of six
+        integers (32-bit time_low, 16-bit time_mid, 16-bit time_hi_version,
+        8-bit clock_seq_hi_variant, 8-bit clock_seq_low, 48-bit node) as
+        the 'fields' argument, or a single 128-bit integer as the 'int'
+        argument.  When a string of hex digits is given, curly braces,
+        hyphens, and a URN prefix are all optional.  For example, these
+        expressions all yield the same UUID:
+    
+        UUID('{12345678-1234-5678-1234-567812345678}')
+        UUID('12345678123456781234567812345678')
+        UUID('urn:uuid:12345678-1234-5678-1234-567812345678')
+        UUID(bytes='\x12\x34\x56\x78'*4)
+        UUID(bytes_le='\x78\x56\x34\x12\x34\x12\x78\x56' +
+                      '\x12\x34\x56\x78\x12\x34\x56\x78')
+        UUID(fields=(0x12345678, 0x1234, 0x5678, 0x12, 0x34, 0x567812345678))
+        UUID(int=0x12345678123456781234567812345678)
+    
+        Exactly one of 'hex', 'bytes', 'bytes_le', 'fields', or 'int' must
+        be given.  The 'version' argument is optional; if given, the resulting
+        UUID will have its variant and version set according to RFC 4122,
+        overriding the given 'hex', 'bytes', 'bytes_le', 'fields', or 'int'.
+    
+        is_safe is an enum exposed as an attribute on the instance.  It
+        indicates whether the UUID has been generated in a way that is safe
+        for multiprocessing applications, via uuid_generate_time_safe(3).
+        """
+    
+        if [hex, bytes, bytes_le, fields, int].count(None) != 4:
+>           raise TypeError('one of the hex, bytes, bytes_le, fields, '
+                            'or int arguments must be given')
+E           TypeError: one of the hex, bytes, bytes_le, fields, or int arguments must be given
+
+/opt/clean_repro/conda/envs/p2/lib/python3.10/uuid.py:171: TypeError
+_________________________ test_uuid_format_valid_uuid __________________________
+
+    def test_uuid_format_valid_uuid():
+        formatter = UUIDFormat()
+        assert formatter.validate("123e4567-e89b-12d3-a456-426655440000") == uuid.UUID("123e4567-e89b-12d3-a456-426655440000")
+>       assert formatter.validate("00000000-0000-0000-0000-000000000000") == uuid.UUID("00000000-0000-0000-0000-000000000000")
+
+test_generated.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <formats.UUIDFormat object at 0x7faac117ad10>
+value = '00000000-0000-0000-0000-000000000000'
+
+    def validate(self, value: typing.Any) -> uuid.UUID:
+        match = UUID_REGEX.match(value)
+        if not match:
+>           raise self.validation_error("format")
+E           base.ValidationError: Must be valid UUID format.
+
+formats.py:166: ValidationError
+________________________ test_uuid_format_invalid_uuid _________________________
+
+    def test_uuid_format_invalid_uuid():
+        formatter = UUIDFormat()
+>       with pytest.raises(formatter.validation_error("format")):
+E       TypeError: expected exception must be a BaseException type, not str
+
+test_generated.py:94: TypeError
+__________________________ test_uuid_format_serialize __________________________
+
+    def test_uuid_format_serialize():
+        formatter = UUIDFormat()
+        assert formatter.serialize(uuid.UUID("123e4567-e89b-12d3-a456-426655440000")) == "123e4567-e89b-12d3-a456-426655440000"
+>       assert formatter.serialize(None) == None
+E       AssertionError: assert 'None' == None
+E        +  where 'None' = <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7faac10d17b0>>(None)
+E        +    where <bound method UUIDFormat.serialize of <formats.UUIDFormat object at 0x7faac10d17b0>> = <formats.UUIDFormat object at 0x7faac10d17b0>.serialize
+
+test_generated.py:102: AssertionError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample26/iter_1/lenient/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_date_format_native_type - AssertionError: asse...
+FAILED test_generated.py::test_date_format_invalid_date - TypeError: expected...
+FAILED test_generated.py::test_time_format_invalid_time - TypeError: expected...
+FAILED test_generated.py::test_datetime_format_invalid_datetime - TypeError: ...
+FAILED test_generated.py::test_uuid_format_native_type - TypeError: one of th...
+FAILED test_generated.py::test_uuid_format_valid_uuid - base.ValidationError:...
+FAILED test_generated.py::test_uuid_format_invalid_uuid - TypeError: expected...
+FAILED test_generated.py::test_uuid_format_serialize - AssertionError: assert...
+8 failed, 8 passed in 0.24s
+
+--- stderr ---

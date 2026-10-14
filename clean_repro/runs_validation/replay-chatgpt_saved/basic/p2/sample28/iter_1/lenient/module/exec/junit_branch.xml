@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="0.167" timestamp="2026-10-14T00:44:16.464770" hostname="vm"><testcase classname="test_generated" name="test_schema_with_required_fields" time="0.001"><failure message="TypeError: Field.__init__() got an unexpected keyword argument 'required'">def test_schema_with_required_fields():
+&gt;       class MySchema(Schema):
+
+test_generated.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class MySchema(Schema):
+&gt;       name = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:7: TypeError</failure></testcase><testcase classname="test_generated" name="test_schema_with_default_values" time="0.001"><failure message="KeyError: 'name'">def test_schema_with_default_values():
+        class MySchema(Schema):
+            name = Field(default="John")
+            age = Field(default=25)
+            address = Field(default="")
+    
+        # Valid input with missing fields
+        data = {}
+        schema = MySchema(data)
+&gt;       assert schema["name"] == "John"
+
+test_generated.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = MySchema() [sparse], key = 'name'
+
+    def __getitem__(self, key: typing.Any) -&gt; typing.Any:
+        try:
+            field = self.fields[key]
+            value = getattr(self, key)
+        except (KeyError, AttributeError):
+&gt;           raise KeyError(key) from None
+E           KeyError: 'name'
+
+schemas.py:180: KeyError</failure></testcase><testcase classname="test_generated" name="test_schema_with_nested_fields" time="0.001"><failure message="TypeError: Field.__init__() got an unexpected keyword argument 'required'">def test_schema_with_nested_fields():
+&gt;       class AddressSchema(Schema):
+
+test_generated.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class AddressSchema(Schema):
+&gt;       street = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:46: TypeError</failure></testcase><testcase classname="test_generated" name="test_schema_with_array_field" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'base.ValidationError'&gt;">def test_schema_with_array_field():
+        class MySchema(Schema):
+            tags = Array(Field())
+    
+        # Valid input with array field
+        data = {"tags": ["red", "green", "blue"]}
+        schema = MySchema(data)
+        assert schema["tags"] == ["red", "green", "blue"]
+    
+        # Valid input with empty array
+        data = {"tags": []}
+        schema = MySchema(data)
+        assert schema["tags"] == []
+    
+        # Invalid input with non-array value
+&gt;       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE &lt;class 'base.ValidationError'&gt;
+
+test_generated.py:99: Failed</failure></testcase><testcase classname="test_generated" name="test_schema_with_reference_field" time="0.001"><failure message="TypeError: Field.__init__() got an unexpected keyword argument 'required'">def test_schema_with_reference_field():
+&gt;       class UserSchema(Schema):
+
+test_generated.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    class UserSchema(Schema):
+&gt;       name = Field(required=True)
+E       TypeError: Field.__init__() got an unexpected keyword argument 'required'
+
+test_generated.py:104: TypeError</failure></testcase></testsuite></testsuites>

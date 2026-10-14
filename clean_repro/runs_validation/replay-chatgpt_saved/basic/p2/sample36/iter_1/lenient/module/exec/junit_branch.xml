@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="12" time="0.336" timestamp="2026-10-14T00:45:32.844155" hostname="vm"><testcase classname="test_generated" name="test_parse_empty_string" time="0.001" /><testcase classname="test_generated" name="test_parse_short_description_only" time="0.001" /><testcase classname="test_generated" name="test_parse_short_and_long_description" time="0.001"><failure message="assert True == False&#10; +  where True = &lt;common.Docstring object at 0x7fac844f8490&gt;.blank_after_short_description">def test_parse_short_and_long_description():
+        text = "This is a short description.\n\nThis is a long description."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert result.short_description == "This is a short description."
+&gt;       assert result.blank_after_short_description == False
+E       assert True == False
+E        +  where True = &lt;common.Docstring object at 0x7fac844f8490&gt;.blank_after_short_description
+
+test_generated.py:30: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_param" time="0.001"><failure message="AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']&#10;  At index 1 diff: 'arg1' != 'arg1:'&#10;  Use -v to get more diff">def test_parse_meta_param():
+        text = ":param arg1: Description of arg1."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert result.short_description == None
+        assert result.blank_after_short_description == False
+        assert result.long_description == None
+        assert result.blank_after_long_description == False
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringParam)
+&gt;       assert result.meta[0].args == ["param", "arg1:"]
+E       AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']
+E         At index 1 diff: 'arg1' != 'arg1:'
+E         Use -v to get more diff
+
+test_generated.py:45: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_param_with_type" time="0.001"><failure message="AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']&#10;  At index 2 diff: 'arg1' != 'arg1:'&#10;  Use -v to get more diff">def test_parse_meta_param_with_type():
+        text = ":param str arg1: Description of arg1."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringParam)
+&gt;       assert result.meta[0].args == ["param", "str", "arg1:"]
+E       AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']
+E         At index 2 diff: 'arg1' != 'arg1:'
+E         Use -v to get more diff
+
+test_generated.py:58: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_param_with_type_and_optional" time="0.002"><failure message="AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']&#10;  At index 2 diff: 'arg1' != 'arg1:'&#10;  Use -v to get more diff">def test_parse_meta_param_with_type_and_optional():
+        text = ":param str arg1: Description of arg1 (optional)."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringParam)
+&gt;       assert result.meta[0].args == ["param", "str", "arg1:"]
+E       AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']
+E         At index 2 diff: 'arg1' != 'arg1:'
+E         Use -v to get more diff
+
+test_generated.py:71: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_param_with_type_and_default" time="0.001"><failure message="AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']&#10;  At index 2 diff: 'arg1' != 'arg1:'&#10;  Use -v to get more diff">def test_parse_meta_param_with_type_and_default():
+        text = ":param str arg1: Description of arg1 (defaults to 'default')."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringParam)
+&gt;       assert result.meta[0].args == ["param", "str", "arg1:"]
+E       AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']
+E         At index 2 diff: 'arg1' != 'arg1:'
+E         Use -v to get more diff
+
+test_generated.py:84: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_returns" time="0.002"><failure message="AssertionError: assert ['returns'] == ['returns:']&#10;  At index 0 diff: 'returns' != 'returns:'&#10;  Use -v to get more diff">def test_parse_meta_returns():
+        text = ":returns: The result."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringReturns)
+&gt;       assert result.meta[0].args == ["returns:"]
+E       AssertionError: assert ['returns'] == ['returns:']
+E         At index 0 diff: 'returns' != 'returns:'
+E         Use -v to get more diff
+
+test_generated.py:97: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_returns_with_type" time="0.002"><failure message="AssertionError: assert ['returns'] == ['returns:', 'str']&#10;  At index 0 diff: 'returns' != 'returns:'&#10;  Right contains one more item: 'str'&#10;  Use -v to get more diff">def test_parse_meta_returns_with_type():
+        text = ":returns: The result (str)."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringReturns)
+&gt;       assert result.meta[0].args == ["returns:", "str"]
+E       AssertionError: assert ['returns'] == ['returns:', 'str']
+E         At index 0 diff: 'returns' != 'returns:'
+E         Right contains one more item: 'str'
+E         Use -v to get more diff
+
+test_generated.py:108: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_yields" time="0.002"><failure message="AssertionError: assert ['yields'] == ['yields:']&#10;  At index 0 diff: 'yields' != 'yields:'&#10;  Use -v to get more diff">def test_parse_meta_yields():
+        text = ":yields: The value."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringReturns)
+&gt;       assert result.meta[0].args == ["yields:"]
+E       AssertionError: assert ['yields'] == ['yields:']
+E         At index 0 diff: 'yields' != 'yields:'
+E         Use -v to get more diff
+
+test_generated.py:119: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_yields_with_type" time="0.002"><failure message="AssertionError: assert ['yields'] == ['yields:', 'int']&#10;  At index 0 diff: 'yields' != 'yields:'&#10;  Right contains one more item: 'int'&#10;  Use -v to get more diff">def test_parse_meta_yields_with_type():
+        text = ":yields: The value (int)."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringReturns)
+&gt;       assert result.meta[0].args == ["yields:", "int"]
+E       AssertionError: assert ['yields'] == ['yields:', 'int']
+E         At index 0 diff: 'yields' != 'yields:'
+E         Right contains one more item: 'int'
+E         Use -v to get more diff
+
+test_generated.py:130: AssertionError</failure></testcase><testcase classname="test_generated" name="test_parse_meta_raises" time="0.002"><failure message="AssertionError: assert ['raises'] == ['raises:', 'ValueError']&#10;  At index 0 diff: 'raises' != 'raises:'&#10;  Right contains one more item: 'ValueError'&#10;  Use -v to get more diff">def test_parse_meta_raises():
+        text = ":raises: ValueError."
+        result = parse(text)
+        assert isinstance(result, Docstring)
+        assert len(result.meta) == 1
+        assert isinstance(result.meta[0], DocstringRaises)
+&gt;       assert result.meta[0].args == ["raises:", "ValueError"]
+E       AssertionError: assert ['raises'] == ['raises:', 'ValueError']
+E         At index 0 diff: 'raises' != 'raises:'
+E         Right contains one more item: 'ValueError'
+E         Use -v to get more diff
+
+test_generated.py:141: AssertionError</failure></testcase></testsuite></testsuites>

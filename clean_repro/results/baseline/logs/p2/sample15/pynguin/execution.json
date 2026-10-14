@@ -1,0 +1,483 @@
+{
+ "summary": {
+  "collected": 22,
+  "passed": 3,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 19,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 84.38,
+  "stmts": 64,
+  "missing_lines": [
+   58,
+   59,
+   61,
+   68,
+   124,
+   125,
+   128,
+   130,
+   148,
+   150
+  ],
+  "branch_cover": 80.85,
+  "branches": 30,
+  "branch_only_cover": 73.33,
+  "fail_kinds": {},
+  "wall_seconds": 3.43
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.73,
+  "collected": 22,
+  "passed": 3,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 19,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 64,
+   "miss": 10,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    24,
+    25,
+    27,
+    36,
+    37,
+    39,
+    40,
+    42,
+    47,
+    48,
+    49,
+    51,
+    52,
+    54,
+    56,
+    57,
+    66,
+    67,
+    71,
+    72,
+    73,
+    75,
+    77,
+    86,
+    88,
+    97,
+    99,
+    108,
+    109,
+    111,
+    113,
+    122,
+    123,
+    127,
+    132,
+    141,
+    142,
+    144,
+    145,
+    147,
+    152,
+    161,
+    162,
+    164,
+    165,
+    168
+   ],
+   "missing_lines": [
+    58,
+    59,
+    61,
+    68,
+    124,
+    125,
+    128,
+    130,
+    148,
+    150
+   ],
+   "stmt_cover": 84.375,
+   "cover_percent": 84.375
+  },
+  "report_text": "Name                     Stmts   Miss  Cover   Missing\n------------------------------------------------------\n__init__.py                  0      0   100%\nimmutable_list.py           64     10    84%   58-61, 68, 124-125, 128-130, 148-150\ntest_immutable_list.py     283      0   100%\n------------------------------------------------------\nTOTAL                      347     10    97%\n",
+  "tests": [
+   {
+    "nodeid": "test_immutable_list::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_9",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_12",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_16",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_17",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_18",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_20",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_21",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.7,
+  "collected": 22,
+  "passed": 3,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 19,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 64,
+   "miss": 10,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    24,
+    25,
+    27,
+    36,
+    37,
+    39,
+    40,
+    42,
+    47,
+    48,
+    49,
+    51,
+    52,
+    54,
+    56,
+    57,
+    66,
+    67,
+    71,
+    72,
+    73,
+    75,
+    77,
+    86,
+    88,
+    97,
+    99,
+    108,
+    109,
+    111,
+    113,
+    122,
+    123,
+    127,
+    132,
+    141,
+    142,
+    144,
+    145,
+    147,
+    152,
+    161,
+    162,
+    164,
+    165,
+    168
+   ],
+   "missing_lines": [
+    58,
+    59,
+    61,
+    68,
+    124,
+    125,
+    128,
+    130,
+    148,
+    150
+   ],
+   "stmt_cover": 84.375,
+   "cover_percent": 80.85106382978724,
+   "branches": 30,
+   "partial": 6,
+   "covered_branches": 22,
+   "branch_only_cover": 73.33333333333333
+  },
+  "report_text": "Name                     Stmts   Miss Branch BrPart  Cover   Missing\n--------------------------------------------------------------------\n__init__.py                  0      0      0      0   100%\nimmutable_list.py           64     10     30      6    81%   58-61, 68, 124-125, 128-130, 148-150\ntest_immutable_list.py     283      0      2      0   100%\n--------------------------------------------------------------------\nTOTAL                      347     10     32      6    95%\n",
+  "tests": [
+   {
+    "nodeid": "test_immutable_list::test_case_0",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_5",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_6",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_7",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_9",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_12",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_13",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_14",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_16",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_17",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_18",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_19",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_20",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_immutable_list::test_case_21",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

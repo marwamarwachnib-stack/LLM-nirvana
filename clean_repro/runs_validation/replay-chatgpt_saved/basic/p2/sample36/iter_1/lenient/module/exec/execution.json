@@ -1,0 +1,374 @@
+{
+ "summary": {
+  "collected": 12,
+  "passed": 2,
+  "failed": 10,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 81.16,
+  "stmts": 69,
+  "missing_lines": [
+   28,
+   29,
+   37,
+   55,
+   59,
+   72,
+   76,
+   83,
+   117,
+   120,
+   121,
+   127,
+   128
+  ],
+  "branch_cover": 78.22,
+  "branches": 32,
+  "branch_only_cover": 71.88,
+  "fail_kinds": {
+   "assertion": 10
+  },
+  "wall_seconds": 2.49
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.19,
+  "collected": 12,
+  "passed": 2,
+  "failed": 10,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 69,
+   "miss": 13,
+   "executed_lines": [
+    1,
+    3,
+    4,
+    5,
+    7,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    31,
+    32,
+    33,
+    34,
+    35,
+    41,
+    42,
+    44,
+    53,
+    54,
+    56,
+    57,
+    63,
+    70,
+    71,
+    73,
+    74,
+    79,
+    86,
+    91,
+    92,
+    93,
+    95,
+    96,
+    97,
+    98,
+    99,
+    101,
+    102,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    112,
+    115,
+    116,
+    118,
+    119,
+    124,
+    125,
+    126,
+    130,
+    132
+   ],
+   "missing_lines": [
+    28,
+    29,
+    37,
+    55,
+    59,
+    72,
+    76,
+    83,
+    117,
+    120,
+    121,
+    127,
+    128
+   ],
+   "stmt_cover": 81.15942028985508,
+   "cover_percent": 81.15942028985508
+  },
+  "report_text": "Name                Stmts   Miss  Cover   Missing\n-------------------------------------------------\n__init__.py             4      0   100%\ncommon.py              59     13    78%   108-110, 126, 130, 136-139, 143-146\ngoogle.py             131    104    21%   69-73, 76-80, 97-114, 117-130, 135-173, 181-182, 189-266, 274\nnumpydoc.py           115     72    37%   22-24, 28-30, 69, 77, 92, 95-99, 114, 129-147, 166, 186-192, 211-216, 262-264, 267, 278-279, 286-323, 331\nparser.py              14     11    21%   15-25\nrest.py                69     13    81%   28-29, 37, 55, 59, 72, 76, 83, 117, 120-121, 127-128\nstyles.py               8      0   100%\ntest_generated.py     132     38    71%   31-33, 46-50, 59-63, 72-76, 85-89, 98-100, 109-111, 120-122, 131-133, 142-143, 147\n-------------------------------------------------\nTOTAL                 532    251    53%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_parse_empty_string",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_parse_short_description_only",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_parse_short_and_long_description",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert True == False\n +  where True = <common.Docstring object at 0x7f1509828490>.blank_after_short_description"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']\n  At index 1 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type_and_optional",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type_and_default",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_returns",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['returns'] == ['returns:']\n  At index 0 diff: 'returns' != 'returns:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_returns_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['returns'] == ['returns:', 'str']\n  At index 0 diff: 'returns' != 'returns:'\n  Right contains one more item: 'str'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_yields",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['yields'] == ['yields:']\n  At index 0 diff: 'yields' != 'yields:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_yields_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['yields'] == ['yields:', 'int']\n  At index 0 diff: 'yields' != 'yields:'\n  Right contains one more item: 'int'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_raises",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['raises'] == ['raises:', 'ValueError']\n  At index 0 diff: 'raises' != 'raises:'\n  Right contains one more item: 'ValueError'\n  Use -v to get more diff"
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.3,
+  "collected": 12,
+  "passed": 2,
+  "failed": 10,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 69,
+   "miss": 13,
+   "executed_lines": [
+    1,
+    3,
+    4,
+    5,
+    7,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    31,
+    32,
+    33,
+    34,
+    35,
+    41,
+    42,
+    44,
+    53,
+    54,
+    56,
+    57,
+    63,
+    70,
+    71,
+    73,
+    74,
+    79,
+    86,
+    91,
+    92,
+    93,
+    95,
+    96,
+    97,
+    98,
+    99,
+    101,
+    102,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    112,
+    115,
+    116,
+    118,
+    119,
+    124,
+    125,
+    126,
+    130,
+    132
+   ],
+   "missing_lines": [
+    28,
+    29,
+    37,
+    55,
+    59,
+    72,
+    76,
+    83,
+    117,
+    120,
+    121,
+    127,
+    128
+   ],
+   "stmt_cover": 81.15942028985508,
+   "cover_percent": 78.21782178217822,
+   "branches": 32,
+   "partial": 9,
+   "covered_branches": 23,
+   "branch_only_cover": 71.875
+  },
+  "report_text": "Name                Stmts   Miss Branch BrPart  Cover   Missing\n---------------------------------------------------------------\n__init__.py             4      0      0      0   100%\ncommon.py              59     13     12      0    65%   108-110, 126, 130, 136-139, 143-146\ngoogle.py             131    104     60      0    14%   69-73, 76-80, 97-114, 117-130, 135-173, 181-182, 189-266, 274\nnumpydoc.py           115     72     32      0    29%   22-24, 28-30, 69, 77, 92, 95-99, 114, 129-147, 166, 186-192, 211-216, 262-264, 267, 278-279, 286-323, 331\nparser.py              14     11      8      0    14%   15-25\nrest.py                69     13     32      9    78%   28-29, 37, 55, 59, 72, 76, 83, 117, 120-121, 127-128\nstyles.py               8      0      0      0   100%\ntest_generated.py     132     38      2      1    71%   31-33, 46-50, 59-63, 72-76, 85-89, 98-100, 109-111, 120-122, 131-133, 142-143, 147\n---------------------------------------------------------------\nTOTAL                 532    251    146     10    45%\n",
+  "tests": [
+   {
+    "nodeid": "test_generated::test_parse_empty_string",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_parse_short_description_only",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generated::test_parse_short_and_long_description",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "assert True == False\n +  where True = <common.Docstring object at 0x7fac844f8490>.blank_after_short_description"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'arg1'] == ['param', 'arg1:']\n  At index 1 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type_and_optional",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_param_with_type_and_default",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['param', 'str', 'arg1'] == ['param', 'str', 'arg1:']\n  At index 2 diff: 'arg1' != 'arg1:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_returns",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['returns'] == ['returns:']\n  At index 0 diff: 'returns' != 'returns:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_returns_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['returns'] == ['returns:', 'str']\n  At index 0 diff: 'returns' != 'returns:'\n  Right contains one more item: 'str'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_yields",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['yields'] == ['yields:']\n  At index 0 diff: 'yields' != 'yields:'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_yields_with_type",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['yields'] == ['yields:', 'int']\n  At index 0 diff: 'yields' != 'yields:'\n  Right contains one more item: 'int'\n  Use -v to get more diff"
+   },
+   {
+    "nodeid": "test_generated::test_parse_meta_raises",
+    "outcome": "failed",
+    "kind": "assertion",
+    "message": "AssertionError: assert ['raises'] == ['raises:', 'ValueError']\n  At index 0 diff: 'raises' != 'raises:'\n  Right contains one more item: 'ValueError'\n  Use -v to get more diff"
+   }
+  ]
+ }
+}

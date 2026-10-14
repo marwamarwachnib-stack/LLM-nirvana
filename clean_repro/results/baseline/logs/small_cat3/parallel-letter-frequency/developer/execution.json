@@ -1,0 +1,236 @@
+{
+ "summary": {
+  "collected": 7,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 40,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 16,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 61.99
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 31.5,
+  "collected": 7,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 0,
+   "executed_lines": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    21,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                                Stmts   Miss  Cover   Missing\n-----------------------------------------------------------------\nparallel_letter_frequency.py           40      0   100%\nparallel_letter_frequency_test.py      37      1    97%   61\n-----------------------------------------------------------------\nTOTAL                                  77      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_case_insensitivity",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_multiline_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_numbers",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_one_letter",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_punctuations",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_repeated_string_with_known_frequencies",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_whitespaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 30.49,
+  "collected": 7,
+  "passed": 7,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 40,
+   "miss": 0,
+   "executed_lines": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    21,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 16,
+   "partial": 0,
+   "covered_branches": 16,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                                Stmts   Miss Branch BrPart  Cover   Missing\n-------------------------------------------------------------------------------\nparallel_letter_frequency.py           40      0     16      0   100%\nparallel_letter_frequency_test.py      37      1      4      1    95%   61\n-------------------------------------------------------------------------------\nTOTAL                                  77      1     20      1    98%\n",
+  "tests": [
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_case_insensitivity",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_multiline_text",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_numbers",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_one_letter",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_punctuations",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_repeated_string_with_known_frequencies",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "parallel_letter_frequency_test.ParallelLetterFrequencyTest::test_whitespaces",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

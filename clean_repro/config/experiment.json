@@ -1,0 +1,35 @@
+{
+  "_comment": "Experiment configuration of the clean reproduction. Values marked TO CONFIRM are proposals awaiting the user's decision before the pilot.",
+  "ollama_url": "http://127.0.0.1:11434",
+  "models": {
+    "qwen2.5-coder-7b-instruct": {
+      "ollama_name": "cr-qwen2.5-coder-7b-instruct-q4km",
+      "source": "huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct-GGUF : qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+      "chat_template": "the GGUF's own template (unchanged)"
+    },
+    "deepseek-coder-6.7b-instruct": {
+      "ollama_name": "cr-deepseek-coder-6.7b-instruct-q4km",
+      "source": "huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF : deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+      "chat_template": "the GGUF's own template (unchanged)"
+    }
+  },
+  "options": {
+    "_comment": "identical for both models; TO CONFIRM",
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "top_k": 40,
+    "repeat_penalty": 1.0,
+    "seed": 20240420,
+    "num_ctx": 12288,
+    "num_predict": 4096,
+    "num_thread": 4
+  },
+  "repetitions": 1,
+  "primary_extraction": "strict",
+  "_primary_extraction_comment": "strict or lenient (see src/cleanrepro/extract.py); both are always computed. TO CONFIRM",
+  "iterative_feedback_suite": "cumulative",
+  "_iterative_comment": "cumulative = all tests so far are shown as 'test case output'; alternative 'last' = only the previous reply. TO CONFIRM",
+  "max_iterations": 5,
+  "test_timeout_seconds": 300,
+  "generation_timeout_seconds": 7200
+}

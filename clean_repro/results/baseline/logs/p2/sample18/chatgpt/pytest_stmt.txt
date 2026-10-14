@@ -1,0 +1,58 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample18/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample18/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+.F.F.F.F.....                                                            [100%]
+=================================== FAILURES ===================================
+_____________________________ test_try_of_failure ______________________________
+
+    def test_try_of_failure():
+        value = Try.of(lambda: 1/0)
+>       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert <monad_try.Try object at 0x7f77e8f28e50> == <monad_try.Try object at 0x7f77e8f2a9b0>
+E        +  where <monad_try.Try object at 0x7f77e8f2a9b0> = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:10: AssertionError
+_____________________________ test_try_map_failure _____________________________
+
+    def test_try_map_failure():
+        value = Try.of(lambda: 1/0).map(lambda x: x * 2)
+>       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert <monad_try.Try object at 0x7f77e8fa3ee0> == <monad_try.Try object at 0x7f77e8fa3f70>
+E        +  where <monad_try.Try object at 0x7f77e8fa3f70> = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:18: AssertionError
+____________________________ test_try_bind_failure _____________________________
+
+    def test_try_bind_failure():
+        value = Try.of(lambda: 1/0).bind(lambda x: Try.of(lambda: x * 2))
+>       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert <monad_try.Try object at 0x7f77e8f2abf0> == <monad_try.Try object at 0x7f77e8f2ac50>
+E        +  where <monad_try.Try object at 0x7f77e8f2ac50> = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:26: AssertionError
+_______________________________ test_try_on_fail _______________________________
+
+    def test_try_on_fail():
+        fail_callback = []
+    
+        def callback(x):
+            fail_callback.append(x)
+    
+        value = Try.of(lambda: 1/0).on_fail(callback)
+>       assert value == Try(ZeroDivisionError('division by zero'), False)
+E       AssertionError: assert <monad_try.Try object at 0x7f77e8fc7af0> == <monad_try.Try object at 0x7f77e8fc78b0>
+E        +  where <monad_try.Try object at 0x7f77e8fc78b0> = Try(ZeroDivisionError('division by zero'), False)
+E        +    where ZeroDivisionError('division by zero') = ZeroDivisionError('division by zero')
+
+test_example.py:45: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample18/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_try_of_failure - AssertionError: assert <monad_t...
+FAILED test_example.py::test_try_map_failure - AssertionError: assert <monad_...
+FAILED test_example.py::test_try_bind_failure - AssertionError: assert <monad...
+FAILED test_example.py::test_try_on_fail - AssertionError: assert <monad_try....
+4 failed, 9 passed in 0.12s
+
+--- stderr ---

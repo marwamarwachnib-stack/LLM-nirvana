@@ -1,0 +1,376 @@
+{
+ "summary": {
+  "collected": 17,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 0,
+  "stmt_cover": 100.0,
+  "stmts": 50,
+  "missing_lines": [],
+  "branch_cover": 100.0,
+  "branches": 18,
+  "branch_only_cover": 100.0,
+  "fail_kinds": {},
+  "wall_seconds": 2.26
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.14,
+  "collected": 17,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 50,
+   "miss": 0,
+   "executed_lines": [
+    4,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    21,
+    33,
+    35,
+    36,
+    38,
+    41,
+    53,
+    54,
+    56,
+    57,
+    58,
+    60,
+    63,
+    78,
+    79,
+    81,
+    82,
+    83,
+    85,
+    88,
+    106,
+    107,
+    109,
+    110,
+    112,
+    113,
+    115,
+    116,
+    118,
+    119,
+    122,
+    123,
+    124,
+    127,
+    130,
+    131,
+    132,
+    135,
+    136,
+    137,
+    138,
+    140
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name                 Stmts   Miss  Cover   Missing\n--------------------------------------------------\n__init__.py              4      0   100%\n_regex.py               30      0   100%\nerrors.py                6      3    50%   15-17\ngeneration.py           50      0   100%\nmanipulation.py        201    122    39%   84, 89, 110-114, 118-156, 163-170, 174-193, 197-209, 214-217, 220, 223, 226-227, 230, 233, 236, 239, 242, 248, 252-277, 294-297, 315-321, 341-354, 369-379, 397-402, 429-430, 447-459, 485-497, 523-526, 551-558, 595, 608, 649\ntest_generation.py     124      0   100%\nvalidation.py          152    115    24%   44-47, 50-63, 66-78, 95, 113, 136, 172, 193-201, 220-244, 269-283, 305, 329-342, 359-365, 385-390, 407-415, 431, 448, 471-494, 510-513, 529, 547-552, 571-574, 595-598, 617-618, 637-638, 656-657\n--------------------------------------------------\nTOTAL                  567    240    58%\n",
+  "tests": [
+   {
+    "nodeid": "test_generation::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_7",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_11",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_13",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_16",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 1.12,
+  "collected": 17,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 50,
+   "miss": 0,
+   "executed_lines": [
+    4,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    21,
+    33,
+    35,
+    36,
+    38,
+    41,
+    53,
+    54,
+    56,
+    57,
+    58,
+    60,
+    63,
+    78,
+    79,
+    81,
+    82,
+    83,
+    85,
+    88,
+    106,
+    107,
+    109,
+    110,
+    112,
+    113,
+    115,
+    116,
+    118,
+    119,
+    122,
+    123,
+    124,
+    127,
+    130,
+    131,
+    132,
+    135,
+    136,
+    137,
+    138,
+    140
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0,
+   "branches": 18,
+   "partial": 0,
+   "covered_branches": 18,
+   "branch_only_cover": 100.0
+  },
+  "report_text": "Name                 Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------\n__init__.py              4      0      0      0   100%\n_regex.py               30      0      0      0   100%\nerrors.py                6      3      0      0    50%   15-17\ngeneration.py           50      0     18      0   100%\nmanipulation.py        201    122     76      2    34%   84, 89, 110-114, 118-156, 163-170, 174-193, 197-209, 214-217, 220, 223, 226-227, 230, 233, 236, 239, 242, 248, 252-277, 294-297, 315-321, 341-354, 369-379, 397-402, 429-430, 447-459, 485-497, 523-526, 551-558, 595, 608, 649\ntest_generation.py     124      0     16      0   100%\nvalidation.py          152    115     66      1    17%   44-47, 50-63, 66-78, 95, 113, 136, 172, 193-201, 220-244, 269-283, 305, 329-342, 359-365, 385-390, 407-415, 431, 448, 471-494, 510-513, 529, 547-552, 571-574, 595-598, 617-618, 637-638, 656-657\n----------------------------------------------------------------\nTOTAL                  567    240    176      3    51%\n",
+  "tests": [
+   {
+    "nodeid": "test_generation::test_case_0",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_1",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_2",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_4",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_5",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_6",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_7",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_10",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_11",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_12",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_13",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_15",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_generation::test_case_16",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "summary": {
+  "collected": 21,
+  "passed": 3,
+  "failed": 12,
+  "errors": 0,
+  "skipped": 6,
+  "collection_error": false,
+  "timed_out": false,
+  "returncode": 1,
+  "stmt_cover": 100.0,
+  "stmts": 57,
+  "missing_lines": [],
+  "branch_cover": 98.36,
+  "branches": 4,
+  "branch_only_cover": 75.0,
+  "fail_kinds": {
+   "runtime": 12
+  },
+  "wall_seconds": 2.46
+ },
+ "stmt": {
+  "mode": "stmt",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.28,
+  "collected": 21,
+  "passed": 3,
+  "failed": 12,
+  "errors": 0,
+  "skipped": 6,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 57,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    14,
+    15,
+    17,
+    18,
+    22,
+    33,
+    34,
+    35,
+    37,
+    46,
+    48,
+    55,
+    57,
+    59,
+    66,
+    68,
+    70,
+    77,
+    79,
+    81,
+    82,
+    85,
+    86,
+    88,
+    95,
+    97,
+    104,
+    106,
+    111,
+    113,
+    118,
+    120,
+    125,
+    127,
+    134,
+    136,
+    138,
+    145,
+    147,
+    150,
+    151,
+    153,
+    162,
+    164,
+    173,
+    175,
+    180,
+    182,
+    187,
+    189,
+    196,
+    198,
+    200,
+    207,
+    209
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 100.0
+  },
+  "report_text": "Name             Stmts   Miss  Cover   Missing\n----------------------------------------------\n__init__.py          0      0   100%\neither.py           57      0   100%\ntest_either.py     186      0   100%\n----------------------------------------------\nTOTAL              243      0   100%\n",
+  "tests": [
+   {
+    "nodeid": "test_either::test_case_0",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_5",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_6",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_7",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_10",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_12",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_13",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_16",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_17",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_18",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_19",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_20",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   }
+  ]
+ },
+ "branch": {
+  "mode": "branch",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 1.18,
+  "collected": 21,
+  "passed": 3,
+  "failed": 12,
+  "errors": 0,
+  "skipped": 6,
+  "collection_error": false,
+  "module_cover": {
+   "stmts": 57,
+   "miss": 0,
+   "executed_lines": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    14,
+    15,
+    17,
+    18,
+    22,
+    33,
+    34,
+    35,
+    37,
+    46,
+    48,
+    55,
+    57,
+    59,
+    66,
+    68,
+    70,
+    77,
+    79,
+    81,
+    82,
+    85,
+    86,
+    88,
+    95,
+    97,
+    104,
+    106,
+    111,
+    113,
+    118,
+    120,
+    125,
+    127,
+    134,
+    136,
+    138,
+    145,
+    147,
+    150,
+    151,
+    153,
+    162,
+    164,
+    173,
+    175,
+    180,
+    182,
+    187,
+    189,
+    196,
+    198,
+    200,
+    207,
+    209
+   ],
+   "missing_lines": [],
+   "stmt_cover": 100.0,
+   "cover_percent": 98.36065573770492,
+   "branches": 4,
+   "partial": 1,
+   "covered_branches": 3,
+   "branch_only_cover": 75.0
+  },
+  "report_text": "Name             Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------------\n__init__.py          0      0      0      0   100%\neither.py           57      0      4      1    98%   79->exit\ntest_either.py     186      0      0      0   100%\n------------------------------------------------------------\nTOTAL              243      0      4      1    99%\n",
+  "tests": [
+   {
+    "nodeid": "test_either::test_case_0",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_1",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_2",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_3",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_4",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_5",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_6",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_7",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_8",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_9",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_10",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_11",
+    "outcome": "passed",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_12",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_13",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_14",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_15",
+    "outcome": "skipped",
+    "kind": "",
+    "message": ""
+   },
+   {
+    "nodeid": "test_either::test_case_16",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_17",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_18",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_19",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   },
+   {
+    "nodeid": "test_either::test_case_20",
+    "outcome": "failed",
+    "kind": "runtime",
+    "message": "[XPASS(strict)] "
+   }
+  ]
+ }
+}

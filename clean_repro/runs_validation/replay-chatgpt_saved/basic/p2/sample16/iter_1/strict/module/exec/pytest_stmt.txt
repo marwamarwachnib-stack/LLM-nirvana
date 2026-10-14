@@ -1,0 +1,74 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample16/iter_1/strict/module/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample16/iter_1/strict/module/junit_stmt.xml test_generated.py
+# returncode=1 timed_out=False
+..FFFFF.F                                                                [100%]
+=================================== FAILURES ===================================
+______________________________ test_lazy_with_ap _______________________________
+
+    def test_lazy_with_ap():
+        lazy1 = Lazy.of(lambda x: x + 5)
+        lazy2 = Lazy.of(5)
+        lazy_ap = lazy1.ap(lazy2)
+>       assert lazy_ap.get() == 10
+E       assert <function test_lazy_with_ap.<locals>.<lambda> at 0x7f2f5d3464d0> == 10
+E        +  where <function test_lazy_with_ap.<locals>.<lambda> at 0x7f2f5d3464d0> = <bound method Lazy.get of <lazy.Lazy object at 0x7f2f5d1a3460>>()
+E        +    where <bound method Lazy.get of <lazy.Lazy object at 0x7f2f5d1a3460>> = <lazy.Lazy object at 0x7f2f5d1a3460>.get
+
+test_generated.py:18: AssertionError
+_____________________________ test_lazy_with_bind ______________________________
+
+    def test_lazy_with_bind():
+        lazy = Lazy.of(5)
+        lazy_bind = lazy.bind(lambda x: Lazy.of(x + 5))
+>       assert lazy_bind.get() == 10
+E       assert <function Lazy.of.<locals>.<lambda> at 0x7f2f5d1aff40> == 10
+E        +  where <function Lazy.of.<locals>.<lambda> at 0x7f2f5d1aff40> = <bound method Lazy.get of <lazy.Lazy object at 0x7f2f5d1637f0>>()
+E        +    where <bound method Lazy.get of <lazy.Lazy object at 0x7f2f5d1637f0>> = <lazy.Lazy object at 0x7f2f5d1637f0>.get
+
+test_generated.py:23: AssertionError
+____________________________ test_lazy_with_to_box _____________________________
+
+    def test_lazy_with_to_box():
+        lazy = Lazy.of(5)
+        box = lazy.to_box()
+>       assert box.get() == 5
+E       AttributeError: 'Box' object has no attribute 'get'
+
+test_generated.py:28: AttributeError
+___________________________ test_lazy_with_to_either ___________________________
+
+    def test_lazy_with_to_either():
+        lazy = Lazy.of(5)
+        either = lazy.to_either()
+>       assert either.get() == 5
+E       AttributeError: 'Right' object has no attribute 'get'
+
+test_generated.py:33: AttributeError
+___________________________ test_lazy_with_to_maybe ____________________________
+
+    def test_lazy_with_to_maybe():
+        lazy = Lazy.of(5)
+        maybe = lazy.to_maybe()
+>       assert maybe.get() == 5
+E       AttributeError: 'Maybe' object has no attribute 'get'
+
+test_generated.py:38: AttributeError
+_________________________ test_lazy_with_to_validation _________________________
+
+    def test_lazy_with_to_validation():
+        lazy = Lazy.of(5)
+        validation = lazy.to_validation()
+>       assert validation.get() == 5
+E       AttributeError: 'Validation' object has no attribute 'get'
+
+test_generated.py:48: AttributeError
+- generated xml file: /opt/clean_repro/work/runs/runs_validation/replay-chatgpt_saved/basic/p2/sample16/iter_1/strict/module/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_generated.py::test_lazy_with_ap - assert <function test_lazy_with...
+FAILED test_generated.py::test_lazy_with_bind - assert <function Lazy.of.<loc...
+FAILED test_generated.py::test_lazy_with_to_box - AttributeError: 'Box' objec...
+FAILED test_generated.py::test_lazy_with_to_either - AttributeError: 'Right' ...
+FAILED test_generated.py::test_lazy_with_to_maybe - AttributeError: 'Maybe' o...
+FAILED test_generated.py::test_lazy_with_to_validation - AttributeError: 'Val...
+6 failed, 3 passed in 0.12s
+
+--- stderr ---

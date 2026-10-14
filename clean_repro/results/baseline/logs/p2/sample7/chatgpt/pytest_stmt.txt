@@ -1,0 +1,22 @@
+$ /opt/clean_repro/conda/envs/p2/bin/python -m coverage run --data-file=/opt/clean_repro/work/baseline/p2/sample7/chatgpt/.coverage_stmt -m pytest -p no:cacheprovider -q --junitxml=/opt/clean_repro/work/baseline/p2/sample7/chatgpt/junit_stmt.xml test_example.py
+# returncode=1 timed_out=False
+........F                                                                [100%]
+=================================== FAILURES ===================================
+__________________________________ test_stdev __________________________________
+
+timers = {'timer1': 1.5}
+
+    def test_stdev(timers):
+        timers.add("timer1", 1.5)
+>       assert timers.stdev("timer1") == 0.0
+E       AssertionError: assert nan == 0.0
+E        +  where nan = <bound method Timers.stdev of {'timer1': 1.5}>('timer1')
+E        +    where <bound method Timers.stdev of {'timer1': 1.5}> = {'timer1': 1.5}.stdev
+
+test_example.py:51: AssertionError
+- generated xml file: /opt/clean_repro/work/baseline/p2/sample7/chatgpt/junit_stmt.xml -
+=========================== short test summary info ============================
+FAILED test_example.py::test_stdev - AssertionError: assert nan == 0.0
+1 failed, 8 passed in 0.13s
+
+--- stderr ---

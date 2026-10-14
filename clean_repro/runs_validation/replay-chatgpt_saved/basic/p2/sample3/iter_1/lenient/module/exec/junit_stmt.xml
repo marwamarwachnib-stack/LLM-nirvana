@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="7" time="0.216" timestamp="2026-10-14T00:44:33.366293" hostname="vm"><testcase classname="test_generated" name="test_bump_version_no_change" time="0.002"><failure message="AssertionError: assert '1.2.4' == '1.2.3'&#10;  - 1.2.3&#10;  ?     ^&#10;  + 1.2.4&#10;  ?     ^">def test_bump_version_no_change():
+        # No change in version when bumping patch position
+&gt;       assert bump_version('1.2.3') == '1.2.3'
+E       AssertionError: assert '1.2.4' == '1.2.3'
+E         - 1.2.3
+E         ?     ^
+E         + 1.2.4
+E         ?     ^
+
+test_generated.py:8: AssertionError</failure></testcase><testcase classname="test_generated" name="test_bump_version_patch_position" time="0.001" /><testcase classname="test_generated" name="test_bump_version_minor_position" time="0.001" /><testcase classname="test_generated" name="test_bump_version_major_position" time="0.001" /><testcase classname="test_generated" name="test_bump_version_alpha_pre_release" time="0.001"><failure message="AssertionError: assert '1.2.3a1' == '1.2.3a2'&#10;  - 1.2.3a2&#10;  ?       ^&#10;  + 1.2.3a1&#10;  ?       ^">def test_bump_version_alpha_pre_release():
+        # Increase minor pre-release version alpha by 1
+        assert bump_version('1.2.3a0', pre_release='a') == '1.2.3a1'
+        # Increase minor pre-release version alpha by 2
+&gt;       assert bump_version('1.2.3a0', pre_release='a') == '1.2.3a2'
+E       AssertionError: assert '1.2.3a1' == '1.2.3a2'
+E         - 1.2.3a2
+E         ?       ^
+E         + 1.2.3a1
+E         ?       ^
+
+test_generated.py:36: AssertionError</failure></testcase><testcase classname="test_generated" name="test_bump_version_beta_pre_release" time="0.001"><failure message="AssertionError: assert '1.2.3b1' == '1.2.3b2'&#10;  - 1.2.3b2&#10;  ?       ^&#10;  + 1.2.3b1&#10;  ?       ^">def test_bump_version_beta_pre_release():
+        # Increase minor pre-release version beta by 1
+        assert bump_version('1.2.3b0', pre_release='b') == '1.2.3b1'
+        # Increase minor pre-release version beta by 2
+&gt;       assert bump_version('1.2.3b0', pre_release='b') == '1.2.3b2'
+E       AssertionError: assert '1.2.3b1' == '1.2.3b2'
+E         - 1.2.3b2
+E         ?       ^
+E         + 1.2.3b1
+E         ?       ^
+
+test_generated.py:42: AssertionError</failure></testcase><testcase classname="test_generated" name="test_bump_version_alpha_pre_release_invalid_position" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">def test_bump_version_alpha_pre_release_invalid_position():
+        # Trying to bump major part to a pre-release version
+        with pytest.raises(ValueError):
+            bump_version('1.2.3', position=0, pre_release='alpha')
+        # Trying to bump patch part to a pre-release version
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+test_generated.py:49: Failed</failure></testcase></testsuite></testsuites>
