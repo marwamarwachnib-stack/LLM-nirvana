@@ -1,4 +1,4 @@
-# Methodology and limitations (living document; current to phase A7)
+# Methodology and limitations (living document; current to phase A8)
 
 This file states, in one place, what the clean-room pipeline does and what it cannot claim.
 Details and evidence: `reports/A1_A3_preparation.md`, `A4_execution_validation.md`,
@@ -37,8 +37,9 @@ Details and evidence: `reports/A1_A3_preparation.md`, `A4_execution_validation.m
 | Platform | Linux, whereas the authors' reports record macOS; Anaconda's CPython build; C libraries resolved to 2026 builds. |
 | Dependency versions | Chosen by the reconstruction policy above; may differ from the authors' versions (e.g. marshmallow 3.20.2, ipython 8.20.0). Behaviour that depends on library versions may differ from the authors' runs. |
 | p2 siblings | Where the snapshot lacks the authors' copy, siblings are release files (or with flattened imports); equality with the authors' copies is inferred, not verified. |
-| Optional dependencies | PyYAML / Jinja2 included for samples 30 / 29 as approved additions; versions are policy choices. With Jinja2 3.1.3, `jinja2.Markup` does not exist, so `Form.__html__` (sample29, line 109) always raises `AttributeError`; the source is not patched and no other version substituted (A7 §4). typesystem 0.2.4 ships no templates, so its rendering paths raise `TemplateNotFound` without a caller-supplied template directory; `Jinja2Forms(package='typesystem')` cannot import the package in the sample29 context. |
+| Optional dependencies | PyYAML / Jinja2 included for samples 30 / 29 as approved additions; versions are policy choices. With Jinja2 3.1.3, `jinja2.Markup` does not exist, so `Form.__html__` (sample29, line 109) always raises `AttributeError`; the source is not patched and no other version substituted (A7 §4); accepted as a documented limitation (A8), and the authors' Jinja2 version is not inferred without evidence. typesystem 0.2.4 ships no templates, so its rendering paths raise `TemplateNotFound` without a caller-supplied template directory; `Jinja2Forms(package='typesystem')` cannot import the package in the sample29 context. |
 | Unresolved programs | 5 httpie programs (GitHub branch archives); 21 Cat 1 scripts deferred. |
 | Developer-test oracle | `example.py` is an evidence-backed reference for Cat 2 only; Cat 3 relation inferred. |
 | Coverage tool | Authors' coverage.py version unknown; statement counts are not comparable across versions. |
 | Energy | Not measured in this environment (no hardware counters). |
+| Protocol | No protocol setting is verified from the paper; the snapshot is not established as the paper's benchmark. Known and unknown settings: `reports/A8_protocol_audit.md`. |

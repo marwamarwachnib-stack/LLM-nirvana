@@ -10,7 +10,7 @@ environment exists (outside the repository); 77/103 in-scope programs are execut
 (`reports/A5_eligibility_status.md`), 26 of them p2 programs with a project context reconstructed
 from verified PyPI releases (`reports/A5_p2_context.md`). No model has been downloaded, no test
 generated, no coverage or mutation run. Methodology and limitations:
-`reports/METHODOLOGY_AND_LIMITATIONS.md`; latest phase: `reports/A7_optional_dependencies.md`.
+`reports/METHODOLOGY_AND_LIMITATIONS.md`; protocol audit and open decisions: `reports/A8_protocol_audit.md`.
 The paper's full text has not been read, so no protocol detail is claimed as reproduced. See
 `config/snapshot.json` for approved and open decisions.
 

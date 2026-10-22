@@ -45,7 +45,8 @@
     "6_fault_localization": "deferred until a benchmark with verified faulty-line labels is approved",
     "7_dependency_versions": "Reconstruction policy (approved in A6): external dependencies of reconstructed contexts use the newest release first published before 2024-01-26. This is a reconstruction policy, NOT a claim about the original authors' environment, whose versions are not recorded.",
     "8_httpie": "samples 8-12 stay unresolved; no GitHub access, no clone, no guessed revision (A6)",
-    "9_optional_dependencies": "A7: option (a) \u2014 PyYAML 6.0.1 (sample30) and Jinja2 3.1.3 + MarkupSafe 2.1.4 (sample29) under the reconstruction policy, sample-scoped; deviation from release metadata justified by the authors' artifacts"
+    "9_optional_dependencies": "A7: option (a) \u2014 PyYAML 6.0.1 (sample30) and Jinja2 3.1.3 + MarkupSafe 2.1.4 (sample29) under the reconstruction policy, sample-scoped; deviation from release metadata justified by the authors' artifacts",
+    "10_markup_limitation": "A8: Form.__html__ (sample29, forms.py:109) failing under Jinja2 3.1.3 (jinja2.Markup absent) is a documented compatibility limitation; source unchanged; pin retained; the authors' Jinja2 version is not inferred or substituted without evidence"
   },
   "authorised_steps": [
     "A1 integrity inventory",
@@ -55,7 +56,8 @@
     "A4 execution validation of the 51 CANDIDATE programs in an isolated Python 3.10.12 environment",
     "A5 p2 project-context resolution from verified PyPI releases and re-validation",
     "A6 read-only audits: PyYAML/Jinja2 impact for samples 29-30; httpie evidence",
-    "A7 install sample-scoped PyYAML/Jinja2, offline validation and pre-registered probes"
+    "A7 install sample-scoped PyYAML/Jinja2, offline validation and pre-registered probes",
+    "A8 protocol-reconstruction audit (read-only)"
   ],
   "not_authorised_yet": [
     "test generation (Pynguin, LLMs)",
@@ -74,8 +76,7 @@
     "mutation tool, operators, timeout policy, score denominator",
     "energy instrument and execution hardware",
     "pin 2023-era C-library builds or accept current builds",
-    "httpie samples 8-12: whether to allow read access to the repository history (A6 \u00a72.3)",
-    "sample29 Form.__html__ fails under Jinja2 3.1.3 (jinja2.Markup absent): accept as documented limitation or provide evidence of the authors' Jinja2 version (A7 \u00a74)"
+    "httpie samples 8-12: whether to allow read access to the repository history (A6 \u00a72.3)"
   ],
   "environment": {
     "python": "CPython 3.10.12, Anaconda main channel build python-3.10.12-h955ad1f_0 (2023-07-05)",
@@ -120,5 +121,6 @@
     "context_run": "20261022T133552Z",
     "probes": "runs/probes/20261022T133620Z/probes.json",
     "execution_verified_in_scope": 77
-  }
+  },
+  "protocol_audit": "reports/A8_protocol_audit.md (decisions D1-D11)"
 }
