@@ -1,0 +1,109 @@
+{
+ "resolution": "20261022T131041Z",
+ "results": {
+  "typesystem==0.2.4@sample29": {
+   "release": "typesystem==0.2.4@sample29",
+   "approved_additions": [
+    "Jinja2==3.1.3"
+   ],
+   "pin_checks": [
+    {
+     "pin": "Jinja2==3.1.3",
+     "first_upload_utc": "2024-01-10T23:12:19",
+     "newest_before_cutoff": "3.1.3"
+    }
+   ],
+   "status": "INSTALLED",
+   "lock": [
+    {
+     "name": "Jinja2",
+     "version": "3.1.3",
+     "url": "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl",
+     "sha256": "7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa",
+     "first_upload_utc": "2024-01-10T23:12:19",
+     "requested": true
+    },
+    {
+     "name": "MarkupSafe",
+     "version": "2.1.4",
+     "url": "https://files.pythonhosted.org/packages/36/2a/fab302636634e1f770a26aac212e44cff25522ed3c9189bd8afc9ae2effd/MarkupSafe-2.1.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+     "sha256": "dac1ebf6983148b45b5fa48593950f90ed6d1d26300604f321c74a9ca1609f8e",
+     "first_upload_utc": "2024-01-19T22:48:20",
+     "requested": false
+    }
+   ],
+   "lock_file": "config/p2_locks/typesystem-0.2.4-sample29.txt",
+   "site": "/opt/cleanroom/context/site/typesystem==0.2.4@sample29",
+   "site_tree_sha256": "dd76d22102586d3921fcf5c59d1d1d270296498fbbfd81e37d93284487b65856",
+   "import_names_missing": [],
+   "requirements_installed": [
+    "Jinja2==3.1.3"
+   ],
+   "declared_not_needed": []
+  },
+  "typesystem==0.2.4@sample30": {
+   "release": "typesystem==0.2.4@sample30",
+   "approved_additions": [
+    "PyYAML==6.0.1"
+   ],
+   "pin_checks": [
+    {
+     "pin": "PyYAML==6.0.1",
+     "first_upload_utc": "2023-07-17T23:57:04",
+     "newest_before_cutoff": "6.0.1"
+    }
+   ],
+   "status": "INSTALLED",
+   "lock": [
+    {
+     "name": "PyYAML",
+     "version": "6.0.1",
+     "url": "https://files.pythonhosted.org/packages/29/61/bf33c6c85c55bc45a29eee3195848ff2d518d84735eb0e2d8cb42e0d285e/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+     "sha256": "ba336e390cd8e4d1739f42dfe9bb83a3cc2e80f567d8805e11b46f4a943f5515",
+     "first_upload_utc": "2023-07-17T23:57:04",
+     "requested": true
+    }
+   ],
+   "lock_file": "config/p2_locks/typesystem-0.2.4-sample30.txt",
+   "site": "/opt/cleanroom/context/site/typesystem==0.2.4@sample30",
+   "site_tree_sha256": "b785336d8d1b33792deb40911e30bcf7dbf7850b23582d68978bb6bc12277971",
+   "import_names_missing": [],
+   "requirements_installed": [
+    "PyYAML==6.0.1"
+   ],
+   "declared_not_needed": []
+  }
+ },
+ "log": [
+  {
+   "step": "resolve_0",
+   "constraints": [],
+   "returncode": 0,
+   "stderr_tail": ""
+  },
+  {
+   "step": "resolve_1",
+   "constraints": [
+    "MarkupSafe==2.1.4"
+   ],
+   "returncode": 0,
+   "stderr_tail": ""
+  },
+  {
+   "step": "install typesystem==0.2.4@sample29",
+   "returncode": 0,
+   "stderr_tail": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n"
+  },
+  {
+   "step": "resolve_0",
+   "constraints": [],
+   "returncode": 0,
+   "stderr_tail": ""
+  },
+  {
+   "step": "install typesystem==0.2.4@sample30",
+   "returncode": 0,
+   "stderr_tail": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n"
+  }
+ ]
+}

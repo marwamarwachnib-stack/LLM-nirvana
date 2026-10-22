@@ -1,0 +1,1220 @@
+{
+ "run_id": "20261022T133620Z",
+ "protocol": "probes-a7-1",
+ "environment": {
+  "version": "3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]",
+  "version_info": [
+   3,
+   10,
+   12
+  ],
+  "executable": "/opt/cleanroom/envs/py31012/bin/python",
+  "platform": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39",
+  "implementation": "CPython",
+  "pip_freeze": [
+   "exceptiongroup==1.1.3",
+   "iniconfig==2.0.0",
+   "packaging==23.1",
+   "pip==23.2.1",
+   "pluggy==1.3.0",
+   "pytest==7.4.0",
+   "setuptools==68.0.0",
+   "tomli==2.0.1",
+   "wheel==0.41.2"
+  ]
+ },
+ "resolution": "20261022T131041Z",
+ "externals_files": [
+  "runs/p2_externals/20261022T133428Z/externals.json"
+ ],
+ "repetitions": 3,
+ "network": "disabled (unshare -n)",
+ "integrity_before": true,
+ "programs": {
+  "p2/sample30": {
+   "site": "/opt/cleanroom/context/site/typesystem==0.2.4@sample30",
+   "context_integrity_problems": [],
+   "probes": [
+    {
+     "id": "30.1",
+     "description": "dependency importable, version",
+     "code": "import yaml\nresult = yaml.__version__",
+     "expected_outcome": "OK",
+     "expected_detail": "'6.0.1'",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "'6.0.1'"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'6.0.1'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.051,
+        "stdout_sha256": "4ba098e05f820df26645cb789e1ca52a439f1b60d95491c1447b88811724b992",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'6.0.1'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.049,
+        "stdout_sha256": "4ba098e05f820df26645cb789e1ca52a439f1b60d95491c1447b88811724b992",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'6.0.1'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.048,
+        "stdout_sha256": "4ba098e05f820df26645cb789e1ca52a439f1b60d95491c1447b88811724b992",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "30.2",
+     "description": "tokenize_yaml on a mapping with a list",
+     "code": "from tokenize_yaml import tokenize_yaml\nt = tokenize_yaml('a: 1\\nb: [1, 2]\\n')\nresult = (type(t).__name__, t.value)",
+     "expected_outcome": "OK",
+     "expected_detail": "('DictToken', {'a': 1, 'b': [1, 2]})",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "('DictToken', {'a': 1, 'b': [1, 2]})"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('DictToken', {'a': 1, 'b': [1, 2]})"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.079,
+        "stdout_sha256": "3f525d503e131f5e5706d6639315bf800674dea7af9b08d9724ed037bfcad9af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('DictToken', {'a': 1, 'b': [1, 2]})"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.079,
+        "stdout_sha256": "3f525d503e131f5e5706d6639315bf800674dea7af9b08d9724ed037bfcad9af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('DictToken', {'a': 1, 'b': [1, 2]})"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.079,
+        "stdout_sha256": "3f525d503e131f5e5706d6639315bf800674dea7af9b08d9724ed037bfcad9af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "30.3",
+     "description": "tokenize_yaml on bytes",
+     "code": "from tokenize_yaml import tokenize_yaml\nresult = tokenize_yaml(b'x: true').value",
+     "expected_outcome": "OK",
+     "expected_detail": "{'x': True}",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "{'x': True}"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "{'x': True}"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.079,
+        "stdout_sha256": "ad584b1b508e1f2e75afb9933e73f886541bf89acea65cd72c6e6c6d3a644f8d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "{'x': True}"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.065,
+        "stdout_sha256": "ad584b1b508e1f2e75afb9933e73f886541bf89acea65cd72c6e6c6d3a644f8d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "{'x': True}"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.061,
+        "stdout_sha256": "ad584b1b508e1f2e75afb9933e73f886541bf89acea65cd72c6e6c6d3a644f8d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "30.4",
+     "description": "tokenize_yaml on malformed YAML raises the module's ParseError",
+     "code": "from tokenize_yaml import tokenize_yaml\ntokenize_yaml('a: [1, 2')",
+     "expected_outcome": "PROGRAM_EXCEPTION",
+     "expected_detail": "ParseError",
+     "outcome": "PROGRAM_EXCEPTION",
+     "first_result": {
+      "outcome": "PROGRAM_EXCEPTION",
+      "exc_type": "base.ParseError",
+      "message": "expected ',' or ']', but got '<stream end>'.",
+      "innermost": [
+       "tokenize_yaml.py",
+       109,
+       "tokenize_yaml"
+      ],
+      "frames": [
+       [
+        "<string>",
+        9,
+        "<module>"
+       ],
+       [
+        "<probe>",
+        2,
+        "<module>"
+       ],
+       [
+        "tokenize_yaml.py",
+        109,
+        "tokenize_yaml"
+       ]
+      ]
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "PROGRAM_EXCEPTION",
+        "exc_type": "base.ParseError",
+        "message": "expected ',' or ']', but got '<stream end>'.",
+        "innermost": [
+         "tokenize_yaml.py",
+         109,
+         "tokenize_yaml"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          2,
+          "<module>"
+         ],
+         [
+          "tokenize_yaml.py",
+          109,
+          "tokenize_yaml"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.072,
+        "stdout_sha256": "0e1b2a64817774dc32dae86544cbb71b5b827ed32e729f01a187c64922d22a0f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "PROGRAM_EXCEPTION",
+        "exc_type": "base.ParseError",
+        "message": "expected ',' or ']', but got '<stream end>'.",
+        "innermost": [
+         "tokenize_yaml.py",
+         109,
+         "tokenize_yaml"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          2,
+          "<module>"
+         ],
+         [
+          "tokenize_yaml.py",
+          109,
+          "tokenize_yaml"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.072,
+        "stdout_sha256": "0e1b2a64817774dc32dae86544cbb71b5b827ed32e729f01a187c64922d22a0f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "PROGRAM_EXCEPTION",
+        "exc_type": "base.ParseError",
+        "message": "expected ',' or ']', but got '<stream end>'.",
+        "innermost": [
+         "tokenize_yaml.py",
+         109,
+         "tokenize_yaml"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          2,
+          "<module>"
+         ],
+         [
+          "tokenize_yaml.py",
+          109,
+          "tokenize_yaml"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.068,
+        "stdout_sha256": "0e1b2a64817774dc32dae86544cbb71b5b827ed32e729f01a187c64922d22a0f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "30.5",
+     "description": "validate_yaml with an Integer field",
+     "code": "from tokenize_yaml import validate_yaml\nfrom fields import Integer\nresult = validate_yaml('1', Integer())",
+     "expected_outcome": "OK",
+     "expected_detail": null,
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "1"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "1"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.088,
+        "stdout_sha256": "f0be842ec24d5677dc3e5b7d92303f3ed0957b42bbc18f46bd7d1cc119931e17",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "1"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.094,
+        "stdout_sha256": "f0be842ec24d5677dc3e5b7d92303f3ed0957b42bbc18f46bd7d1cc119931e17",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "1"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.054,
+        "stdout_sha256": "f0be842ec24d5677dc3e5b7d92303f3ed0957b42bbc18f46bd7d1cc119931e17",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    }
+   ],
+   "site_unchanged": true
+  },
+  "p2/sample29": {
+   "site": "/opt/cleanroom/context/site/typesystem==0.2.4@sample29",
+   "context_integrity_problems": [],
+   "probes": [
+    {
+     "id": "29.1",
+     "description": "dependency importable, versions, presence of jinja2.Markup",
+     "code": "import jinja2, markupsafe\nresult = (jinja2.__version__, markupsafe.__version__, hasattr(jinja2, 'Markup'))",
+     "expected_outcome": "OK",
+     "expected_detail": "('3.1.3', '2.1.4', False)",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "('3.1.3', '2.1.4', False)"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('3.1.3', '2.1.4', False)"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.068,
+        "stdout_sha256": "f85f1417613e6e06d14da3fa8904dec2b6342ad2b6ee0269e3e97ff2853abd28",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('3.1.3', '2.1.4', False)"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.068,
+        "stdout_sha256": "f85f1417613e6e06d14da3fa8904dec2b6342ad2b6ee0269e3e97ff2853abd28",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "('3.1.3', '2.1.4', False)"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.075,
+        "stdout_sha256": "f85f1417613e6e06d14da3fa8904dec2b6342ad2b6ee0269e3e97ff2853abd28",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "29.2",
+     "description": "Jinja2Forms(directory=...) builds a jinja2 Environment",
+     "code": "from forms import Jinja2Forms\nf = Jinja2Forms(directory='.')\nresult = type(f.env).__module__ + '.' + type(f.env).__qualname__",
+     "expected_outcome": "OK",
+     "expected_detail": "'jinja2.environment.Environment'",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "'jinja2.environment.Environment'"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'jinja2.environment.Environment'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.111,
+        "stdout_sha256": "4f96d7923fb163f7dffc6e2580a255215b5a207c74ad04ec2e0ce1a109f6f540",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'jinja2.environment.Environment'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.083,
+        "stdout_sha256": "4f96d7923fb163f7dffc6e2580a255215b5a207c74ad04ec2e0ce1a109f6f540",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'jinja2.environment.Environment'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.088,
+        "stdout_sha256": "4f96d7923fb163f7dffc6e2580a255215b5a207c74ad04ec2e0ce1a109f6f540",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "29.3",
+     "description": "Form.__html__ (uses jinja2.Markup, line 109)",
+     "code": "from forms import Jinja2Forms\nfrom schemas import Schema\nfrom fields import String\nclass S(Schema):\n    name = String()\nform = Jinja2Forms(directory='.').Form(S)\nform.__html__()",
+     "expected_outcome": "DEPENDENCY_API_MISSING",
+     "expected_detail": "module 'jinja2' has no attribute 'Markup'",
+     "outcome": "DEPENDENCY_API_MISSING",
+     "first_result": {
+      "outcome": "DEPENDENCY_API_MISSING",
+      "exc_type": "builtins.AttributeError",
+      "message": "module 'jinja2' has no attribute 'Markup'",
+      "innermost": [
+       "forms.py",
+       109,
+       "__html__"
+      ],
+      "frames": [
+       [
+        "<string>",
+        9,
+        "<module>"
+       ],
+       [
+        "<probe>",
+        7,
+        "<module>"
+       ],
+       [
+        "forms.py",
+        109,
+        "__html__"
+       ]
+      ]
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "DEPENDENCY_API_MISSING",
+        "exc_type": "builtins.AttributeError",
+        "message": "module 'jinja2' has no attribute 'Markup'",
+        "innermost": [
+         "forms.py",
+         109,
+         "__html__"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          7,
+          "<module>"
+         ],
+         [
+          "forms.py",
+          109,
+          "__html__"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.102,
+        "stdout_sha256": "b74ab6148fb514b01ea77ed7e5a0dcefadad8b51f0be76e1f5310210ece8b898",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "DEPENDENCY_API_MISSING",
+        "exc_type": "builtins.AttributeError",
+        "message": "module 'jinja2' has no attribute 'Markup'",
+        "innermost": [
+         "forms.py",
+         109,
+         "__html__"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          7,
+          "<module>"
+         ],
+         [
+          "forms.py",
+          109,
+          "__html__"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.09,
+        "stdout_sha256": "b74ab6148fb514b01ea77ed7e5a0dcefadad8b51f0be76e1f5310210ece8b898",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "DEPENDENCY_API_MISSING",
+        "exc_type": "builtins.AttributeError",
+        "message": "module 'jinja2' has no attribute 'Markup'",
+        "innermost": [
+         "forms.py",
+         109,
+         "__html__"
+        ],
+        "frames": [
+         [
+          "<string>",
+          9,
+          "<module>"
+         ],
+         [
+          "<probe>",
+          7,
+          "<module>"
+         ],
+         [
+          "forms.py",
+          109,
+          "__html__"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.102,
+        "stdout_sha256": "b74ab6148fb514b01ea77ed7e5a0dcefadad8b51f0be76e1f5310210ece8b898",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "29.4",
+     "description": "control: the Markup class exists in MarkupSafe",
+     "code": "import markupsafe\nresult = str(markupsafe.Markup('<b>x</b>'))",
+     "expected_outcome": "OK",
+     "expected_detail": "'<b>x</b>'",
+     "outcome": "OK",
+     "first_result": {
+      "outcome": "OK",
+      "result": "'<b>x</b>'"
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'<b>x</b>'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.033,
+        "stdout_sha256": "a0b76e656c787f080f7fc3ad1024a8567bc8928ac7ba9dbeae3442d5838c3592",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'<b>x</b>'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.032,
+        "stdout_sha256": "a0b76e656c787f080f7fc3ad1024a8567bc8928ac7ba9dbeae3442d5838c3592",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "OK",
+        "result": "'<b>x</b>'"
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.029,
+        "stdout_sha256": "a0b76e656c787f080f7fc3ad1024a8567bc8928ac7ba9dbeae3442d5838c3592",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "29.5",
+     "description": "Form.__str__ renders through the template environment (no templates exist)",
+     "code": "from forms import Jinja2Forms\nfrom schemas import Schema\nfrom fields import String\nclass S(Schema):\n    name = String()\nstr(Jinja2Forms(directory='.').Form(S))",
+     "expected_outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+     "expected_detail": "TemplateNotFound",
+     "outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+     "first_result": {
+      "outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+      "exc_type": "jinja2.exceptions.TemplateNotFound",
+      "message": "forms/input.html",
+      "innermost": [
+       "loaders.py",
+       204,
+       "get_source"
+      ],
+      "frames": [
+       [
+        "forms.py",
+        51,
+        "render_fields"
+       ],
+       [
+        "forms.py",
+        71,
+        "render_field"
+       ],
+       [
+        "environment.py",
+        1010,
+        "get_template"
+       ],
+       [
+        "environment.py",
+        969,
+        "_load_template"
+       ],
+       [
+        "loaders.py",
+        125,
+        "load"
+       ],
+       [
+        "loaders.py",
+        204,
+        "get_source"
+       ]
+      ]
+     },
+     "consistent": true,
+     "as_expected": true,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+        "exc_type": "jinja2.exceptions.TemplateNotFound",
+        "message": "forms/input.html",
+        "innermost": [
+         "loaders.py",
+         204,
+         "get_source"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          51,
+          "render_fields"
+         ],
+         [
+          "forms.py",
+          71,
+          "render_field"
+         ],
+         [
+          "environment.py",
+          1010,
+          "get_template"
+         ],
+         [
+          "environment.py",
+          969,
+          "_load_template"
+         ],
+         [
+          "loaders.py",
+          125,
+          "load"
+         ],
+         [
+          "loaders.py",
+          204,
+          "get_source"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.09,
+        "stdout_sha256": "a644f4bdeee2e56bd8683332f840b3ac9507667bb46e6f5e1362f22279532b27",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+        "exc_type": "jinja2.exceptions.TemplateNotFound",
+        "message": "forms/input.html",
+        "innermost": [
+         "loaders.py",
+         204,
+         "get_source"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          51,
+          "render_fields"
+         ],
+         [
+          "forms.py",
+          71,
+          "render_field"
+         ],
+         [
+          "environment.py",
+          1010,
+          "get_template"
+         ],
+         [
+          "environment.py",
+          969,
+          "_load_template"
+         ],
+         [
+          "loaders.py",
+          125,
+          "load"
+         ],
+         [
+          "loaders.py",
+          204,
+          "get_source"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.091,
+        "stdout_sha256": "a644f4bdeee2e56bd8683332f840b3ac9507667bb46e6f5e1362f22279532b27",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+        "exc_type": "jinja2.exceptions.TemplateNotFound",
+        "message": "forms/input.html",
+        "innermost": [
+         "loaders.py",
+         204,
+         "get_source"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          51,
+          "render_fields"
+         ],
+         [
+          "forms.py",
+          71,
+          "render_field"
+         ],
+         [
+          "environment.py",
+          1010,
+          "get_template"
+         ],
+         [
+          "environment.py",
+          969,
+          "_load_template"
+         ],
+         [
+          "loaders.py",
+          125,
+          "load"
+         ],
+         [
+          "loaders.py",
+          204,
+          "get_source"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.082,
+        "stdout_sha256": "a644f4bdeee2e56bd8683332f840b3ac9507667bb46e6f5e1362f22279532b27",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    },
+    {
+     "id": "29.6",
+     "description": "Jinja2Forms(package='typesystem') (release ships no templates directory)",
+     "code": "from forms import Jinja2Forms\nJinja2Forms(package='typesystem')",
+     "expected_outcome": "EXCEPTION_IN_DEPENDENCY_CODE",
+     "expected_detail": null,
+     "outcome": "CONTEXT_IMPORT_ERROR",
+     "first_result": {
+      "outcome": "CONTEXT_IMPORT_ERROR",
+      "exc_type": "builtins.ModuleNotFoundError",
+      "message": "No module named 'typesystem'",
+      "innermost": [
+       "<frozen importlib._bootstrap>",
+       1004,
+       "_find_and_load_unlocked"
+      ],
+      "frames": [
+       [
+        "forms.py",
+        126,
+        "load_template_env"
+       ],
+       [
+        "loaders.py",
+        291,
+        "__init__"
+       ],
+       [
+        "__init__.py",
+        126,
+        "import_module"
+       ],
+       [
+        "<frozen importlib._bootstrap>",
+        1050,
+        "_gcd_import"
+       ],
+       [
+        "<frozen importlib._bootstrap>",
+        1027,
+        "_find_and_load"
+       ],
+       [
+        "<frozen importlib._bootstrap>",
+        1004,
+        "_find_and_load_unlocked"
+       ]
+      ]
+     },
+     "consistent": true,
+     "as_expected": false,
+     "side_effect_files": [],
+     "repetitions": [
+      {
+       "result": {
+        "outcome": "CONTEXT_IMPORT_ERROR",
+        "exc_type": "builtins.ModuleNotFoundError",
+        "message": "No module named 'typesystem'",
+        "innermost": [
+         "<frozen importlib._bootstrap>",
+         1004,
+         "_find_and_load_unlocked"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          126,
+          "load_template_env"
+         ],
+         [
+          "loaders.py",
+          291,
+          "__init__"
+         ],
+         [
+          "__init__.py",
+          126,
+          "import_module"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1050,
+          "_gcd_import"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1027,
+          "_find_and_load"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1004,
+          "_find_and_load_unlocked"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.107,
+        "stdout_sha256": "4dc30ae7faee69ce8576a8b167b58bb2ec026db3bca35e60cd9a37405c7b0d76",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "CONTEXT_IMPORT_ERROR",
+        "exc_type": "builtins.ModuleNotFoundError",
+        "message": "No module named 'typesystem'",
+        "innermost": [
+         "<frozen importlib._bootstrap>",
+         1004,
+         "_find_and_load_unlocked"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          126,
+          "load_template_env"
+         ],
+         [
+          "loaders.py",
+          291,
+          "__init__"
+         ],
+         [
+          "__init__.py",
+          126,
+          "import_module"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1050,
+          "_gcd_import"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1027,
+          "_find_and_load"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1004,
+          "_find_and_load_unlocked"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.109,
+        "stdout_sha256": "4dc30ae7faee69ce8576a8b167b58bb2ec026db3bca35e60cd9a37405c7b0d76",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      },
+      {
+       "result": {
+        "outcome": "CONTEXT_IMPORT_ERROR",
+        "exc_type": "builtins.ModuleNotFoundError",
+        "message": "No module named 'typesystem'",
+        "innermost": [
+         "<frozen importlib._bootstrap>",
+         1004,
+         "_find_and_load_unlocked"
+        ],
+        "frames": [
+         [
+          "forms.py",
+          126,
+          "load_template_env"
+         ],
+         [
+          "loaders.py",
+          291,
+          "__init__"
+         ],
+         [
+          "__init__.py",
+          126,
+          "import_module"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1050,
+          "_gcd_import"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1027,
+          "_find_and_load"
+         ],
+         [
+          "<frozen importlib._bootstrap>",
+          1004,
+          "_find_and_load_unlocked"
+         ]
+        ]
+       },
+       "run": {
+        "returncode": 0,
+        "duration_s": 0.1,
+        "stdout_sha256": "4dc30ae7faee69ce8576a8b167b58bb2ec026db3bca35e60cd9a37405c7b0d76",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "files_created": [],
+        "files_modified": [],
+        "files_deleted": []
+       }
+      }
+     ]
+    }
+   ],
+   "site_unchanged": true
+  }
+ },
+ "integrity_after": true
+}

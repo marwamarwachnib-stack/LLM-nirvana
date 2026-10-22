@@ -250,7 +250,9 @@ class TestSandboxConstruction(Tmp):
 
 class TestSealedRuns(unittest.TestCase):
     def test_every_sealed_run_still_matches(self):
-        for seal in sorted(execval.RUNS_DIR.glob("*/SEALED.sha256")):
+        seals = sorted(execval.RUNS_DIR.glob("*/SEALED.sha256"))
+        seals += sorted((execval.RUNS_DIR.parent / "probes").glob("*/SEALED.sha256"))
+        for seal in seals:
             run_dir = seal.parent
             expected = dict(reversed(line.split("  ", 1)) for line in seal.read_text().splitlines() if line)
             actual = {p: h for p, h in execval.tree_hashes(run_dir).items() if p != "SEALED.sha256"}

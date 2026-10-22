@@ -1,0 +1,2 @@
+# typesystem==0.2.4@sample30: approved additions ['PyYAML==6.0.1'] (A7), resolved 2026-10-22 with cutoff 2024-01-26T16:51:11
+PyYAML==6.0.1 --hash=sha256:ba336e390cd8e4d1739f42dfe9bb83a3cc2e80f567d8805e11b46f4a943f5515

@@ -130,6 +130,8 @@ revision and was not created.
 
 ## 4. Decisions still requiring your approval
 
+(Decision 1 was taken in A7: option (a); see `reports/A7_optional_dependencies.md`.)
+
 1. **PyYAML / Jinja2 for samples 29 and 30**: (a) include, pinned under the approved cutoff policy
    (PyYAML 6.0.1, Jinja2 3.1.3 + MarkupSafe), installed in an isolated site directory for typesystem
    only, documented as a deviation from release metadata justified by the authors' artifacts;

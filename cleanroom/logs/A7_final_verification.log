@@ -1,0 +1,27 @@
+$ python3 -m unittest discover -s tests
+Ran 126 tests in 8.625s
+
+OK
+$ integrity verify --against-git
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+    "passed": true,
+$ sha256sum -c
+    993 OK
+$ inventory files unchanged vs HEAD
+$ originals: git status/diff (empty = untouched)
+$ previously committed sealed/raw artifacts unchanged vs HEAD
+$ sealed runs
+runs/execval/20261022T124436Z: OK
+runs/execval/20261022T124615Z: OK
+runs/execval/20261022T130857Z: OK
+runs/execval/20261022T131114Z: OK
+runs/execval/20261022T133552Z: OK
+runs/probes/20261022T133555Z: OK
+runs/probes/20261022T133620Z: OK
+$ A5 contexts unchanged
+contexts 26 problems []
+$ stray bytecode / sandboxes
+74
+0

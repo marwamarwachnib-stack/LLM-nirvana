@@ -52,11 +52,17 @@ def verify_context_files(context: dict) -> list[str]:
     return bad
 
 
-def site_for(project: str, decision: dict, externals: dict) -> str | None:
-    for key, res in externals.get("results", {}).items():
-        name, _, version = key.partition("==")
-        if name == project and version in decision["release_set"] and res.get("status") == "INSTALLED":
-            return res["site"]
+def site_for(project: str, decision: dict, externals: dict, sample: str = "") -> str | None:
+    """Site directory for a sample: a sample-scoped entry `<project>==<v>@<sample>` wins over a
+    release-wide entry `<project>==<v>`."""
+    results = externals.get("results", {})
+    for scoped in (True, False):
+        for key, res in results.items():
+            base, _, only = key.partition("@")
+            name, _, version = base.partition("==")
+            if (only == sample) if scoped else (only == ""):
+                if name == project and version in decision["release_set"] and res.get("status") == "INSTALLED":
+                    return res["site"]
     return None
 
 
@@ -108,7 +114,7 @@ def validate_sample(pid: str, target_name: str, decision: dict, site: str | None
     return result
 
 
-def run(stamp: str) -> Path:
+def run(stamp: str, externals_files: list[Path] | None = None, only: list[str] | None = None) -> Path:
     python = execval.ENV_PYTHON
     env = execval.environment_record(python)
     if env["version_info"] != [3, 10, 12]:
@@ -118,6 +124,12 @@ def run(stamp: str) -> Path:
     resolution = json.loads((res_dir / "resolution.json").read_text(encoding="utf-8"))
     ext_path = res_dir / "externals.json"
     externals = json.loads(ext_path.read_text(encoding="utf-8")) if ext_path.exists() else {}
+    externals.setdefault("results", {})
+    for f in externals_files or []:
+        extra = json.loads(Path(f).read_text(encoding="utf-8"))
+        if extra.get("resolution") not in (None, stamp):
+            raise RuntimeError(f"{f} belongs to resolution {extra.get('resolution')}")
+        externals["results"].update(extra["results"])
     rows = {r["program_id"]: r for r in manifest.read_manifest(paths.MANIFEST_CSV)}
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     run_dir = execval.RUNS_DIR / run_id
@@ -126,15 +138,16 @@ def run(stamp: str) -> Path:
     summary = []
     for project, pres in resolution.items():
         for s, d in pres["samples"].items():
-            if d.get("decision") != p2_context.RESOLVED:
+            if d.get("decision") != p2_context.RESOLVED or (only and d["program_id"] not in only):
                 continue
             pid = d["program_id"]
-            r = validate_sample(pid, Path(rows[pid]["target"]).name, d, site_for(project, d, externals),
+            r = validate_sample(pid, Path(rows[pid]["target"]).name, d, site_for(project, d, externals, s),
                                 run_dir, sandbox_base, python)
             print(f"{pid:12} {project:20} {r['outcome']}", flush=True)
             summary.append({k: r[k] for k in ("program_id", "execution_verified", "outcome", "outcome_reason")})
     after = integrity.assert_originals_intact()
     meta = {"run_id": run_id, "protocol": PROTOCOL, "environment": env, "resolution": stamp,
+            "externals_files": [str(Path(f)) for f in externals_files or []], "only": only,
             "manifest_sha256": pv.sha256(paths.MANIFEST_CSV.read_bytes()),
             "repetitions": execval.REPETITIONS, "import_timeout_s": execval.IMPORT_TIMEOUT_S,
             "network": "disabled (unshare -n)", "integrity_before": before.passed,
@@ -154,8 +167,10 @@ def run(stamp: str) -> Path:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="cleanroom.p2_validate")
     ap.add_argument("--resolution", required=True)
+    ap.add_argument("--externals", nargs="*", default=[], help="additional externals.json records")
+    ap.add_argument("--only", nargs="*", help="restrict to these program ids")
     args = ap.parse_args(argv)
-    print(f"run directory: {run(args.resolution).relative_to(paths.CLEANROOM)}")
+    print(f"run directory: {run(args.resolution, args.externals, args.only).relative_to(paths.CLEANROOM)}")
     return 0
 
 

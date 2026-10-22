@@ -1,0 +1,214 @@
+{
+  "program_id": "p2/sample29",
+  "protocol": "execval-ctx-1",
+  "release_set": [
+    "0.2.4"
+  ],
+  "artifact_used": "typesystem-0.2.4.tar.gz",
+  "context_files": [
+    {
+      "kind": "benchmark_module",
+      "path": "flat/forms.py",
+      "sha256": "2c367c6cf8ac8fd0a675fe672c814297b68d58e2982de21100ac8b315fc40341"
+    },
+    {
+      "benchmark_path": "100_300 LOC p2/pynguin coverage/sample25/base.py",
+      "kind": "benchmark_sibling",
+      "path": "flat/base.py",
+      "program_id": "p2/sample25",
+      "sha256": "8f42766ef4470772a16111d4129d913bef1a894c21e404011bbc40245c862119",
+      "source": "typesystem/base.py",
+      "source_sha256": "8f42766ef4470772a16111d4129d913bef1a894c21e404011bbc40245c862119"
+    },
+    {
+      "benchmark_path": "100_300 LOC p2/pynguin coverage/sample32/fields.py",
+      "kind": "benchmark_sibling",
+      "path": "flat/fields.py",
+      "program_id": "p2/sample32",
+      "sha256": "6ec1af1765e1fef70f008ad9b4fb90571ab73a8d17f7e1dce5cc9392336c7a5a",
+      "source": "typesystem/fields.py",
+      "source_sha256": "5ab4595ab6d48e4ecd24b17c2d1deadc30651a6d887a7c51a99f3622959c5418"
+    },
+    {
+      "benchmark_path": "100_300 LOC p2/pynguin coverage/sample26/formats.py",
+      "kind": "benchmark_sibling",
+      "path": "flat/formats.py",
+      "program_id": "p2/sample26",
+      "sha256": "f11ade145a80cb1a7928eb6deca68c1dcdba60e6ad274e4993b6fc24d9264b27",
+      "source": "typesystem/formats.py",
+      "source_sha256": "c9f958d24ef378f15217dcc97c47abe7f957db98999458167b3b6aad9a61afbd"
+    },
+    {
+      "benchmark_path": "100_300 LOC p2/pynguin coverage/sample28/schemas.py",
+      "kind": "benchmark_sibling",
+      "path": "flat/schemas.py",
+      "program_id": "p2/sample28",
+      "sha256": "8c9f3e05905b6bf464931ce648824819282508368af16612e8788d81d55db100",
+      "source": "typesystem/schemas.py",
+      "source_sha256": "c32ddc54c25d1924c908737eedc0a6889c79415e337971f6d83e96ad5c27df91"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/unique.py",
+      "rewritten_imports": [],
+      "sha256": "90378dbdc0447dff63a8301385bdb0e6453ec86ccfcc1972746d34af4fd76df9",
+      "source": "typesystem/unique.py",
+      "source_sha256": "90378dbdc0447dff63a8301385bdb0e6453ec86ccfcc1972746d34af4fd76df9"
+    }
+  ],
+  "sys_path_after_cwd": [
+    "<sandbox>/pkgroot",
+    "/opt/cleanroom/context/site/typesystem==0.2.4@sample29"
+  ],
+  "context_integrity_problems": [],
+  "v1_import": {
+    "module": "forms",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "forms",
+            "/opt/cleanroom/sandboxes/20261022T133552Z/p2__sample29/pkgroot",
+            "/opt/cleanroom/context/site/typesystem==0.2.4@sample29"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.092,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "forms",
+            "/opt/cleanroom/sandboxes/20261022T133552Z/p2__sample29/pkgroot",
+            "/opt/cleanroom/context/site/typesystem==0.2.4@sample29"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.092,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "forms",
+            "/opt/cleanroom/sandboxes/20261022T133552Z/p2__sample29/pkgroot",
+            "/opt/cleanroom/context/site/typesystem==0.2.4@sample29"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.084,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v3_context_imports": {
+    "base": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "fields": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "formats": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "schemas": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "unique": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    }
+  },
+  "site_unchanged": true,
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_WITH_CONTEXT",
+  "outcome_reason": "benchmark module and 5 context modules import consistently (network disabled)"
+}

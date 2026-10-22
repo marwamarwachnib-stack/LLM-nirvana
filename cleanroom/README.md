@@ -10,7 +10,7 @@ environment exists (outside the repository); 77/103 in-scope programs are execut
 (`reports/A5_eligibility_status.md`), 26 of them p2 programs with a project context reconstructed
 from verified PyPI releases (`reports/A5_p2_context.md`). No model has been downloaded, no test
 generated, no coverage or mutation run. Methodology and limitations:
-`reports/METHODOLOGY_AND_LIMITATIONS.md`; latest audit: `reports/A6_preparation_audit.md`.
+`reports/METHODOLOGY_AND_LIMITATIONS.md`; latest phase: `reports/A7_optional_dependencies.md`.
 The paper's full text has not been read, so no protocol detail is claimed as reproduced. See
 `config/snapshot.json` for approved and open decisions.
 
@@ -46,8 +46,9 @@ src/cleanroom/
   p2_externals.py     hash-pinned external requirements declared by resolved releases
   p2_validate.py      execution validation of reconstructed contexts
   a6_audit.py         read-only audits (optional-dependency impact, httpie evidence)
+  p2_probes.py        pre-registered validation probes of dependency paths (not tests; no metrics)
 tests/       unittest suite (standard library only)
-runs/        execval/<run_id>/ (sealed raw results), p2_evidence/<stamp>/, p2_context/<stamp>/,
+runs/        execval/<run_id>/ and probes/<run_id>/ (sealed), p2_evidence/, p2_context/, p2_externals/, a6_audit/,
              SUPERSEDED.md (runs kept as records but not used)
 reports/     A1_A3_preparation.md, A3_eligibility.md, A4_execution_validation.md, A4_eligibility_status.md,
              A5_p2_context.md, A5_eligibility_status.md, A5_provenance.md

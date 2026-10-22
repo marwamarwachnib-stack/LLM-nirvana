@@ -1,0 +1,3 @@
+# typesystem==0.2.4@sample29: approved additions ['Jinja2==3.1.3'] (A7), resolved 2026-10-22 with cutoff 2024-01-26T16:51:11
+Jinja2==3.1.3 --hash=sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa
+MarkupSafe==2.1.4 --hash=sha256:dac1ebf6983148b45b5fa48593950f90ed6d1d26300604f321c74a9ca1609f8e

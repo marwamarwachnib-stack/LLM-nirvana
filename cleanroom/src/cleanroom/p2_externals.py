@@ -11,7 +11,12 @@ Policy (config/p2_externals.json):
   * installed with `pip install --target <site> --no-deps --require-hashes` into
     /opt/cleanroom/context/site/<release>/ (never into the experiment environment).
 
-    python3 -m cleanroom.p2_externals --resolution RUN_STAMP
+  * entries keyed `<release>@<sample>` with `approved_additions` are explicitly approved
+    additions beyond the release metadata (A7: PyYAML / Jinja2 for typesystem samples 30 / 29);
+    each pin must be the newest release first published before the cutoff, and the site
+    directory is used by that sample only.
+
+    python3 -m cleanroom.p2_externals --resolution RUN_STAMP [--only KEY ...]
 """
 from __future__ import annotations
 
@@ -182,9 +187,54 @@ def install(key: str, spec: dict, needed_imports: set[str], cutoff: str, log: li
     return out
 
 
+def lock_path(key: str) -> Path:
+    return LOCK_DIR / f"{key.replace('==', '-').replace('@', '-')}.txt"
+
+
+def install_approved(key: str, spec: dict, cutoff: str, log: list) -> dict:
+    """Install explicitly approved pins (beyond release metadata) into a sample-scoped site."""
+    pins = spec["approved_additions"]
+    checks = []
+    for pin in pins:
+        name, _, version = pin.partition("==")
+        newest = newest_before(pypi_json(name), cutoff)
+        uploaded = first_upload(name, version)
+        checks.append({"pin": pin, "first_upload_utc": uploaded, "newest_before_cutoff": newest})
+        if newest != version or not uploaded or uploaded >= cutoff:
+            raise RuntimeError(f"{pin} is not the newest release before {cutoff} (newest: {newest})")
+    work = WORK_DIR / key
+    work.mkdir(parents=True, exist_ok=True)
+    lock = resolve_lock(pins, cutoff, work, log)
+    LOCK_DIR.mkdir(parents=True, exist_ok=True)
+    lf = lock_path(key)
+    lf.write_text(f"# {key}: approved additions {pins} (A7), resolved {datetime.now(timezone.utc).date()} "
+                  f"with cutoff {cutoff}\n"
+                  + "".join(f"{i['name']}=={i['version']} --hash=sha256:{i['sha256']}\n" for i in lock))
+    site = SITE_DIR / key
+    if site.exists():
+        import shutil
+        shutil.rmtree(site)
+    cmd = [str(PY), "-I", "-m", "pip", "install", "--target", str(site), "--no-deps", "--require-hashes",
+           "--no-cache-dir", "--only-binary=:all:", "-r", str(lf)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    log.append({"step": f"install {key}", "returncode": r.returncode, "stderr_tail": r.stderr[-1500:]})
+    if r.returncode != 0:
+        raise RuntimeError(f"install failed for {key}")
+    present = top_level_names(site)
+    missing = sorted(i for i in spec["import_names"] if i not in present)
+    return {"release": key, "approved_additions": pins, "pin_checks": checks,
+            "status": "INSTALLED" if not missing else "IMPORT_NAMES_MISSING", "lock": lock,
+            "lock_file": str(lf.relative_to(paths.CLEANROOM)), "site": str(site),
+            "site_tree_sha256": pv.sha256(json.dumps(sorted(execval.tree_hashes(site).items())).encode()),
+            "import_names_missing": missing, "requirements_installed": pins, "declared_not_needed": []}
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="cleanroom.p2_externals")
     ap.add_argument("--resolution", required=True, help="p2_context run stamp")
+    ap.add_argument("--only", nargs="*", help="restrict to these config keys")
+    ap.add_argument("--out", help="write externals.json to runs/p2_externals/<stamp>/ instead of the "
+                                  "resolution directory", action="store_true")
     args = ap.parse_args(argv)
     integrity.assert_originals_intact()
     run = p2_context.OUT_DIR / args.resolution
@@ -193,9 +243,17 @@ def main(argv: list[str] | None = None) -> int:
     cutoff = cfg["cutoff_utc"]
     results, log = {}, []
     for key, spec in cfg.items():
-        if key.startswith("_") or key == "cutoff_utc":
+        if key.startswith("_") or key == "cutoff_utc" or (args.only and key not in args.only):
             continue
-        project, _, version = key.partition("==")
+        base, _, scoped = key.partition("@")
+        project, _, version = base.partition("==")
+        if "approved_additions" in spec:
+            for s in spec["samples"]:
+                d = resolution[project]["samples"][s]
+                if d.get("decision") != p2_context.RESOLVED or version not in d["release_set"]:
+                    raise RuntimeError(f"{key}: {s} is not resolved to {version}")
+            results[key] = install_approved(key, spec, cutoff, log)
+            continue
         samples = resolution[project]["samples"]
         needed: set[str] = set()
         for s in spec["samples"]:
@@ -206,7 +264,15 @@ def main(argv: list[str] | None = None) -> int:
                 raise RuntimeError(f"{key} is not in the release set of {s}: {d['release_set']}")
             needed |= set(d["externals"])
         results[key] = install(key, spec, needed, cutoff, log)
-    (run / "externals.json").write_text(json.dumps({"results": results, "log": log}, indent=1), encoding="utf-8")
+    if args.out:
+        out_dir = paths.CLEANROOM / "runs" / "p2_externals" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        out_dir.mkdir(parents=True)
+        target = out_dir / "externals.json"
+    else:
+        target = run / "externals.json"
+    target.write_text(json.dumps({"resolution": args.resolution, "results": results, "log": log}, indent=1),
+                      encoding="utf-8")
+    print(f"externals record: {target.relative_to(paths.CLEANROOM)}")
     integrity.assert_originals_intact()
     for k, v in results.items():
         print(f"{k:28} {v['status']:20} installed={v['requirements_installed']} not_needed={v['declared_not_needed']}")
