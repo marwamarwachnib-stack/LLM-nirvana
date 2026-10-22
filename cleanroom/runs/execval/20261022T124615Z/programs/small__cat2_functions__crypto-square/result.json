@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/crypto-square",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/crypto-square/crypto_square.py",
+    "0_100 LOC/cat2_functions/crypto-square/crypto_square_test.py",
+    "0_100 LOC/cat2_functions/crypto-square/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "crypto_square.py": "e0e2dc305fcac537430c22c8bafb9ad2500123681bdd57569fbe0d529902605c",
+    "crypto_square_test.py": "4b8c183dc55fd53b524aba0eba6d5a2298bf73c4e5a9c53a5ffa2d3dfde367fb",
+    "example.py": "f9f0b348693146c2a56f1154e3ac15bf3664657109d65585d43b64c363322ad9"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.019,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.025,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "crypto_square.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "crypto_square_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 8,
+    "passed": 0,
+    "failed": 8,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "407d9b1897de9a0a73a921dee032899034c6f5eb5f83c22bba969620f0da2bcd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_1.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.209,
+          "stdout_sha256": "3a5b099dfee06e0c6b72699878a43464dde12c7c4960e2624fc96eeac6ffd559",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4965,
+          "stderr_bytes": 0,
+          "stdout_tail": "ith_a_trailing_space _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space>\n\n    def test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space(\n        self,\n    ):\n        value = \"Chill out.\"\n        expected = \"clu hlt io \"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'clu hlt io '\n\ncrypto_square_test.py:48: AssertionError\n_ CryptoSquareTest.test_9_character_plaintext_results_in_3_chunks_of_3_characters _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_9_character_plaintext_results_in_3_chunks_of_3_characters>\n\n    def test_9_character_plaintext_results_in_3_chunks_of_3_characters(self):\n        value = \"This is fun!\"\n        expected = \"tsf hiu isn\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'tsf hiu isn'\n\ncrypto_square_test.py:41: AssertionError\n_____ CryptoSquareTest.test_empty_plaintext_results_in_an_empty_ciphertext _____\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_empty_plaintext_results_in_an_empty_ciphertext>\n\n    def test_empty_plaintext_results_in_an_empty_ciphertext(self):\n        value = \"\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:16: AssertionError\n_______________________ CryptoSquareTest.test_lowercase ________________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_lowercase>\n\n    def test_lowercase(self):\n        value = \"A\"\n        expected = \"a\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'a'\n\ncrypto_square_test.py:26: AssertionError\n________ CryptoSquareTest.test_normalization_results_in_empty_plaintext ________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_normalization_results_in_empty_plaintext>\n\n    def test_normalization_results_in_empty_plaintext(self):\n        value = \"... --- ...\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:21: AssertionError\n___________________ CryptoSquareTest.test_remove_punctuation ___________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_punctuation>\n\n    def test_remove_punctuation(self):\n        value = \"@1,%!\"\n        expected = \"1\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != '1'\n\ncrypto_square_test.py:36: AssertionError\n_____________________ CryptoSquareTest.test_remove_spaces ______________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_spaces>\n\n    def test_remove_spaces(self):\n        value = \"  b \"\n        expected = \"b\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'b'\n\ncrypto_square_test.py:31: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nFAILED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nFAILED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nFAILED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nFAILED crypto_square_test.py::CryptoSquareTest::test_lowercase - AssertionErr...\nFAILED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation - Ass...\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_spaces - Assertio...\n8 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "407d9b1897de9a0a73a921dee032899034c6f5eb5f83c22bba969620f0da2bcd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_2.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.221,
+          "stdout_sha256": "73165759beec2886a7ebbda4f545572c4dfff843bdf17fa4be09b9969169aa14",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4965,
+          "stderr_bytes": 0,
+          "stdout_tail": "ith_a_trailing_space _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space>\n\n    def test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space(\n        self,\n    ):\n        value = \"Chill out.\"\n        expected = \"clu hlt io \"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'clu hlt io '\n\ncrypto_square_test.py:48: AssertionError\n_ CryptoSquareTest.test_9_character_plaintext_results_in_3_chunks_of_3_characters _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_9_character_plaintext_results_in_3_chunks_of_3_characters>\n\n    def test_9_character_plaintext_results_in_3_chunks_of_3_characters(self):\n        value = \"This is fun!\"\n        expected = \"tsf hiu isn\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'tsf hiu isn'\n\ncrypto_square_test.py:41: AssertionError\n_____ CryptoSquareTest.test_empty_plaintext_results_in_an_empty_ciphertext _____\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_empty_plaintext_results_in_an_empty_ciphertext>\n\n    def test_empty_plaintext_results_in_an_empty_ciphertext(self):\n        value = \"\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:16: AssertionError\n_______________________ CryptoSquareTest.test_lowercase ________________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_lowercase>\n\n    def test_lowercase(self):\n        value = \"A\"\n        expected = \"a\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'a'\n\ncrypto_square_test.py:26: AssertionError\n________ CryptoSquareTest.test_normalization_results_in_empty_plaintext ________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_normalization_results_in_empty_plaintext>\n\n    def test_normalization_results_in_empty_plaintext(self):\n        value = \"... --- ...\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:21: AssertionError\n___________________ CryptoSquareTest.test_remove_punctuation ___________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_punctuation>\n\n    def test_remove_punctuation(self):\n        value = \"@1,%!\"\n        expected = \"1\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != '1'\n\ncrypto_square_test.py:36: AssertionError\n_____________________ CryptoSquareTest.test_remove_spaces ______________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_spaces>\n\n    def test_remove_spaces(self):\n        value = \"  b \"\n        expected = \"b\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'b'\n\ncrypto_square_test.py:31: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nFAILED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nFAILED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nFAILED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nFAILED crypto_square_test.py::CryptoSquareTest::test_lowercase - AssertionErr...\nFAILED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation - Ass...\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_spaces - Assertio...\n8 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "407d9b1897de9a0a73a921dee032899034c6f5eb5f83c22bba969620f0da2bcd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_3.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.204,
+          "stdout_sha256": "eaca3dcd2f5089e99ade3b8cf14197bef2695377def9658a4dfae5f337a13904",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4965,
+          "stderr_bytes": 0,
+          "stdout_tail": "ith_a_trailing_space _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space>\n\n    def test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space(\n        self,\n    ):\n        value = \"Chill out.\"\n        expected = \"clu hlt io \"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'clu hlt io '\n\ncrypto_square_test.py:48: AssertionError\n_ CryptoSquareTest.test_9_character_plaintext_results_in_3_chunks_of_3_characters _\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_9_character_plaintext_results_in_3_chunks_of_3_characters>\n\n    def test_9_character_plaintext_results_in_3_chunks_of_3_characters(self):\n        value = \"This is fun!\"\n        expected = \"tsf hiu isn\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'tsf hiu isn'\n\ncrypto_square_test.py:41: AssertionError\n_____ CryptoSquareTest.test_empty_plaintext_results_in_an_empty_ciphertext _____\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_empty_plaintext_results_in_an_empty_ciphertext>\n\n    def test_empty_plaintext_results_in_an_empty_ciphertext(self):\n        value = \"\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:16: AssertionError\n_______________________ CryptoSquareTest.test_lowercase ________________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_lowercase>\n\n    def test_lowercase(self):\n        value = \"A\"\n        expected = \"a\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'a'\n\ncrypto_square_test.py:26: AssertionError\n________ CryptoSquareTest.test_normalization_results_in_empty_plaintext ________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_normalization_results_in_empty_plaintext>\n\n    def test_normalization_results_in_empty_plaintext(self):\n        value = \"... --- ...\"\n        expected = \"\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != ''\n\ncrypto_square_test.py:21: AssertionError\n___________________ CryptoSquareTest.test_remove_punctuation ___________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_punctuation>\n\n    def test_remove_punctuation(self):\n        value = \"@1,%!\"\n        expected = \"1\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != '1'\n\ncrypto_square_test.py:36: AssertionError\n_____________________ CryptoSquareTest.test_remove_spaces ______________________\n\nself = <crypto_square_test.CryptoSquareTest testMethod=test_remove_spaces>\n\n    def test_remove_spaces(self):\n        value = \"  b \"\n        expected = \"b\"\n>       self.assertEqual(cipher_text(value), expected)\nE       AssertionError: None != 'b'\n\ncrypto_square_test.py:31: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nFAILED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nFAILED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nFAILED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nFAILED crypto_square_test.py::CryptoSquareTest::test_lowercase - AssertionErr...\nFAILED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation - Ass...\nFAILED crypto_square_test.py::CryptoSquareTest::test_remove_spaces - Assertio...\n8 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "crypto_square.py",
+    "with_copy_of": "example.py",
+    "sha256": "f9f0b348693146c2a56f1154e3ac15bf3664657109d65585d43b64c363322ad9",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "crypto_square_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b1e17f3f6cec476dcc176049f13f463eee010c788f1c925335aaab092b0c6be4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_1.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.187,
+          "stdout_sha256": "4a1d6bac8b73215250f1c03feab5853c68f78bb2b4217ce48214a68abd4fa263",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1176,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nPASSED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nPASSED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nPASSED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nPASSED crypto_square_test.py::CryptoSquareTest::test_lowercase\nPASSED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_spaces\n8 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b1e17f3f6cec476dcc176049f13f463eee010c788f1c925335aaab092b0c6be4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_2.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.224,
+          "stdout_sha256": "db47c64a57fc3ab5f37ecae851ea3bbb82c7b980bfa1d17dcf668aa87eaf5137",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1176,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nPASSED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nPASSED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nPASSED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nPASSED crypto_square_test.py::CryptoSquareTest::test_lowercase\nPASSED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_spaces\n8 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b1e17f3f6cec476dcc176049f13f463eee010c788f1c925335aaab092b0c6be4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_3.xml",
+            "crypto_square_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.196,
+          "stdout_sha256": "3d49662977db36f33b26e45fa576957821659cf4bcf8b0621a13729c93655740",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1176,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__crypto-square/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED crypto_square_test.py::CryptoSquareTest::test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces\nPASSED crypto_square_test.py::CryptoSquareTest::test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space\nPASSED crypto_square_test.py::CryptoSquareTest::test_9_character_plaintext_results_in_3_chunks_of_3_characters\nPASSED crypto_square_test.py::CryptoSquareTest::test_empty_plaintext_results_in_an_empty_ciphertext\nPASSED crypto_square_test.py::CryptoSquareTest::test_lowercase\nPASSED crypto_square_test.py::CryptoSquareTest::test_normalization_results_in_empty_plaintext\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_punctuation\nPASSED crypto_square_test.py::CryptoSquareTest::test_remove_spaces\n8 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 8/8 passed, 0 failed, 0 errors (consistent)"
+}

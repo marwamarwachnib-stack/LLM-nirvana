@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="14" skipped="0" tests="14" time="0.079" timestamp="2026-10-22T12:46:35.236727" hostname="vm"><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_find_the_largest_product_of_2" time="0.001"><failure message="AssertionError: None != 48">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_find_the_largest_product_of_2&gt;
+
+    def test_can_find_the_largest_product_of_2(self):
+&gt;       self.assertEqual(largest_product("576802143", 2), 48)
+E       AssertionError: None != 48
+
+largest_series_product_test.py:20: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_find_the_largest_product_of_2_with_numbers_in_order" time="0.001"><failure message="AssertionError: None != 72">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_find_the_largest_product_of_2_with_numbers_in_order&gt;
+
+    def test_can_find_the_largest_product_of_2_with_numbers_in_order(self):
+&gt;       self.assertEqual(largest_product("0123456789", 2), 72)
+E       AssertionError: None != 72
+
+largest_series_product_test.py:17: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_find_the_largest_product_of_3" time="0.001"><failure message="AssertionError: None != 270">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_find_the_largest_product_of_3&gt;
+
+    def test_can_find_the_largest_product_of_3(self):
+&gt;       self.assertEqual(largest_product("1027839564", 3), 270)
+E       AssertionError: None != 270
+
+largest_series_product_test.py:26: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_find_the_largest_product_of_3_with_numbers_in_order" time="0.001"><failure message="AssertionError: None != 504">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_find_the_largest_product_of_3_with_numbers_in_order&gt;
+
+    def test_can_find_the_largest_product_of_3_with_numbers_in_order(self):
+&gt;       self.assertEqual(largest_product("0123456789", 3), 504)
+E       AssertionError: None != 504
+
+largest_series_product_test.py:23: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_find_the_largest_product_of_5_with_numbers_in_order" time="0.001"><failure message="AssertionError: None != 15120">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_find_the_largest_product_of_5_with_numbers_in_order&gt;
+
+    def test_can_find_the_largest_product_of_5_with_numbers_in_order(self):
+&gt;       self.assertEqual(largest_product("0123456789", 5), 15120)
+E       AssertionError: None != 15120
+
+largest_series_product_test.py:29: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_can_get_the_largest_product_of_a_big_number" time="0.001"><failure message="AssertionError: None != 23520">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_can_get_the_largest_product_of_a_big_number&gt;
+
+    def test_can_get_the_largest_product_of_a_big_number(self):
+&gt;       self.assertEqual(
+            largest_product("73167176531330624919225119674426574742355349194934", 6),
+            23520,
+        )
+E       AssertionError: None != 23520
+
+largest_series_product_test.py:32: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_euler_big_number" time="0.001"><failure message="AssertionError: None != 23514624000">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_euler_big_number&gt;
+
+    def test_euler_big_number(self):
+&gt;       self.assertEqual(
+            largest_product(
+                "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450",
+                13,
+            ),
+            23514624000,
+        )
+E       AssertionError: None != 23514624000
+
+largest_series_product_test.py:73: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_finds_the_largest_product_if_span_equals_length" time="0.001"><failure message="AssertionError: None != 18">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_finds_the_largest_product_if_span_equals_length&gt;
+
+    def test_finds_the_largest_product_if_span_equals_length(self):
+&gt;       self.assertEqual(largest_product("29", 2), 18)
+E       AssertionError: None != 18
+
+largest_series_product_test.py:14: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_rejects_empty_string_and_nonzero_span" time="0.001"><failure message="AssertionError: ValueError not raised">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_empty_string_and_nonzero_span&gt;
+
+    def test_rejects_empty_string_and_nonzero_span(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+largest_series_product_test.py:52: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_rejects_invalid_character_in_digits" time="0.001"><failure message="AssertionError: ValueError not raised">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_invalid_character_in_digits&gt;
+
+    def test_rejects_invalid_character_in_digits(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+largest_series_product_test.py:60: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_rejects_negative_span" time="0.001"><failure message="AssertionError: ValueError not raised">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_negative_span&gt;
+
+    def test_rejects_negative_span(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+largest_series_product_test.py:66: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_rejects_span_longer_than_string_length" time="0.001"><failure message="AssertionError: ValueError not raised">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_span_longer_than_string_length&gt;
+
+    def test_rejects_span_longer_than_string_length(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+largest_series_product_test.py:44: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_reports_zero_if_all_spans_include_zero" time="0.001"><failure message="AssertionError: None != 0">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_all_spans_include_zero&gt;
+
+    def test_reports_zero_if_all_spans_include_zero(self):
+&gt;       self.assertEqual(largest_product("99099", 3), 0)
+E       AssertionError: None != 0
+
+largest_series_product_test.py:41: AssertionError</failure></testcase><testcase classname="largest_series_product_test.LargestSeriesProductTest" name="test_reports_zero_if_the_only_digits_are_zero" time="0.001"><failure message="AssertionError: None != 0">self = &lt;largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_the_only_digits_are_zero&gt;
+
+    def test_reports_zero_if_the_only_digits_are_zero(self):
+&gt;       self.assertEqual(largest_product("0000", 2), 0)
+E       AssertionError: None != 0
+
+largest_series_product_test.py:38: AssertionError</failure></testcase></testsuite></testsuites>

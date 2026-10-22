@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="23" skipped="0" tests="23" time="0.097" timestamp="2026-10-22T12:47:05.793843" hostname="vm"><testcase classname="luhn_test.LuhnTest" name="test_a_simple_valid_sin_that_becomes_invalid_if_reversed" time="0.001"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_a_simple_valid_sin_that_becomes_invalid_if_reversed&gt;
+
+    def test_a_simple_valid_sin_that_becomes_invalid_if_reversed(self):
+&gt;       self.assertIs(Luhn("59").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:23: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_a_simple_valid_sin_that_remains_valid_if_reversed" time="0.000"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_a_simple_valid_sin_that_remains_valid_if_reversed&gt;
+
+    def test_a_simple_valid_sin_that_remains_valid_if_reversed(self):
+&gt;       self.assertIs(Luhn("059").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:20: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_a_single_zero_is_invalid" time="0.000"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_a_single_zero_is_invalid&gt;
+
+    def test_a_single_zero_is_invalid(self):
+&gt;       self.assertIs(Luhn("0").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:17: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_a_valid_canadian_sin" time="0.000"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_a_valid_canadian_sin&gt;
+
+    def test_a_valid_canadian_sin(self):
+&gt;       self.assertIs(Luhn("055 444 285").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:26: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_input_digit_9_is_correctly_converted_to_output_digit_9" time="0.002"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_input_digit_9_is_correctly_converted_to_output_digit_9&gt;
+
+    def test_input_digit_9_is_correctly_converted_to_output_digit_9(self):
+&gt;       self.assertIs(Luhn("091").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:62: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_invalid_canadian_sin" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_invalid_canadian_sin&gt;
+
+    def test_invalid_canadian_sin(self):
+&gt;       self.assertIs(Luhn("055 444 286").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:29: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_invalid_credit_card" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_invalid_credit_card&gt;
+
+    def test_invalid_credit_card(self):
+&gt;       self.assertIs(Luhn("8273 1232 7352 0569").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:32: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_invalid_long_number_with_a_remainder_divisible_by_5" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_invalid_long_number_with_a_remainder_divisible_by_5&gt;
+
+    def test_invalid_long_number_with_a_remainder_divisible_by_5(self):
+&gt;       self.assertIs(Luhn("1 2345 6789 1234 5678 9013").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:38: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_invalid_long_number_with_an_even_remainder" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_invalid_long_number_with_an_even_remainder&gt;
+
+    def test_invalid_long_number_with_an_even_remainder(self):
+&gt;       self.assertIs(Luhn("1 2345 6789 1234 5678 9012").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:35: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_is_valid_can_be_called_repeatedly" time="0.000"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_is_valid_can_be_called_repeatedly&gt;
+
+    def test_is_valid_can_be_called_repeatedly(self):
+        # This test was added, because we saw many implementations
+        # in which the first call to valid() worked, but the
+        # second call failed().
+        number = Luhn("055 444 285")
+&gt;       self.assertIs(number.valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:88: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_more_than_a_single_zero_is_valid" time="0.000"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_more_than_a_single_zero_is_valid&gt;
+
+    def test_more_than_a_single_zero_is_valid(self):
+&gt;       self.assertIs(Luhn("0000 0").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:59: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed&gt;
+
+    def test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed(
+        self,
+    ):
+&gt;       self.assertIs(Luhn("59%59").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:79: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_single_digit_strings_can_not_be_valid" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_single_digit_strings_can_not_be_valid&gt;
+
+    def test_single_digit_strings_can_not_be_valid(self):
+&gt;       self.assertIs(Luhn("1").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:14: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_single_zero_with_space_is_invalid" time="0.000"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_single_zero_with_space_is_invalid&gt;
+
+    def test_single_zero_with_space_is_invalid(self):
+&gt;       self.assertIs(Luhn(" 0").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:56: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_using_ascii_value_for_doubled_non_digit_isn_t_allowed" time="0.000"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_using_ascii_value_for_doubled_non_digit_isn_t_allowed&gt;
+
+    def test_using_ascii_value_for_doubled_non_digit_isn_t_allowed(self):
+&gt;       self.assertIs(Luhn(":9").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:74: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed&gt;
+
+    def test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed(self):
+&gt;       self.assertIs(Luhn("055b 444 285").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:71: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit" time="0.001"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit&gt;
+
+    def test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit(self):
+&gt;       self.assertIs(Luhn("109").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:68: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_number_with_an_even_number_of_digits" time="0.000"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_valid_number_with_an_even_number_of_digits&gt;
+
+    def test_valid_number_with_an_even_number_of_digits(self):
+&gt;       self.assertIs(Luhn("095 245 88").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:41: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_number_with_an_odd_number_of_spaces" time="0.001"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_valid_number_with_an_odd_number_of_spaces&gt;
+
+    def test_valid_number_with_an_odd_number_of_spaces(self):
+&gt;       self.assertIs(Luhn("234 567 891 234").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:44: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid" time="0.001"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid&gt;
+
+    def test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid(self):
+&gt;       self.assertIs(Luhn("059a").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:47: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_strings_with_punctuation_included_become_invalid" time="0.000"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_valid_strings_with_punctuation_included_become_invalid&gt;
+
+    def test_valid_strings_with_punctuation_included_become_invalid(self):
+&gt;       self.assertIs(Luhn("055-444-285").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:50: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_valid_strings_with_symbols_included_become_invalid" time="0.000"><failure message="AssertionError: None is not False">self = &lt;luhn_test.LuhnTest testMethod=test_valid_strings_with_symbols_included_become_invalid&gt;
+
+    def test_valid_strings_with_symbols_included_become_invalid(self):
+&gt;       self.assertIs(Luhn("055# 444$ 285").valid(), False)
+E       AssertionError: None is not False
+
+luhn_test.py:53: AssertionError</failure></testcase><testcase classname="luhn_test.LuhnTest" name="test_very_long_input_is_valid" time="0.002"><failure message="AssertionError: None is not True">self = &lt;luhn_test.LuhnTest testMethod=test_very_long_input_is_valid&gt;
+
+    def test_very_long_input_is_valid(self):
+&gt;       self.assertIs(Luhn("9999999999 9999999999 9999999999 9999999999").valid(), True)
+E       AssertionError: None is not True
+
+luhn_test.py:65: AssertionError</failure></testcase></testsuite></testsuites>

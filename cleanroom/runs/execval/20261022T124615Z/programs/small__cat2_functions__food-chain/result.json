@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/food-chain",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/food-chain/example.py",
+    "0_100 LOC/cat2_functions/food-chain/food_chain.py",
+    "0_100 LOC/cat2_functions/food-chain/food_chain_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "8eea5c1f75e15326ac221952e38c9289cacdabdd9dc1dcc4a5b52b4fb0682640",
+    "food_chain.py": "d7c1f854251ec4677ff36fdabbc87ef0ebcff8e8559fdee91b52fdeb8c3dc6b5",
+    "food_chain_test.py": "8ff5c6c45bbcdee64f0e3c9d879d2a08e97c90594d00d15ee0f228b4e7eac548"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "food_chain.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "food_chain_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 10,
+    "passed": 0,
+    "failed": 10,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f51879474c63bc5b183dfde957fbc2c12ff3bc9d0d407e0d09db69e28dba63d1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_1.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.263,
+          "stdout_sha256": "069fa308a06bdd911a4f52b760aa93f5f8d08de8a967db19945c512b0a2ac898",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11927,
+          "stderr_bytes": 0,
+          "stdout_tail": "wed a goat!\",\n                \"She swallowed the goat to catch the dog.\",\n                \"She swallowed the dog to catch the cat.\",\n                \"She swallowed the cat to catch the bird.\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a goat[382 chars]ie.\"]\n\nfood_chain_test.py:73: AssertionError\n___________________________ FoodChainTest.test_horse ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_horse>\n\n    def test_horse(self):\n>       self.assertEqual(\n            recite(8, 8),\n            [\"I know an old lady who swallowed a horse.\", \"She's dead, of course!\"],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a horse.', \"She's dead, of course!\"]\n\nfood_chain_test.py:104: AssertionError\n______________________ FoodChainTest.test_multiple_verses ______________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_multiple_verses>\n\n    def test_multiple_verses(self):\n>       self.assertEqual(\n            recite(1, 3),\n            [\n                \"I know an old lady who swallowed a fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a bird.\",\n                \"How absurd to swallow a bird!\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a fly.[556 chars]ie.\"]\n\nfood_chain_test.py:110: AssertionError\n__________________________ FoodChainTest.test_spider ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_spider>\n\n    def test_spider(self):\n>       self.assertEqual(\n            recite(2, 2),\n            [\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a spid[160 chars]ie.\"]\n\nfood_chain_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED food_chain_test.py::FoodChainTest::test_bird - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_cat - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_cow - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_dog - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_fly - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_full_song - AssertionError: No...\nFAILED food_chain_test.py::FoodChainTest::test_goat - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_horse - AssertionError: None !...\nFAILED food_chain_test.py::FoodChainTest::test_multiple_verses - AssertionErr...\nFAILED food_chain_test.py::FoodChainTest::test_spider - AssertionError: None ...\n10 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f51879474c63bc5b183dfde957fbc2c12ff3bc9d0d407e0d09db69e28dba63d1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_2.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "506671d096e31c0bdeda562faf4f831f1aea0484afe1ab44f3a245d1155da494",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11927,
+          "stderr_bytes": 0,
+          "stdout_tail": "wed a goat!\",\n                \"She swallowed the goat to catch the dog.\",\n                \"She swallowed the dog to catch the cat.\",\n                \"She swallowed the cat to catch the bird.\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a goat[382 chars]ie.\"]\n\nfood_chain_test.py:73: AssertionError\n___________________________ FoodChainTest.test_horse ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_horse>\n\n    def test_horse(self):\n>       self.assertEqual(\n            recite(8, 8),\n            [\"I know an old lady who swallowed a horse.\", \"She's dead, of course!\"],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a horse.', \"She's dead, of course!\"]\n\nfood_chain_test.py:104: AssertionError\n______________________ FoodChainTest.test_multiple_verses ______________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_multiple_verses>\n\n    def test_multiple_verses(self):\n>       self.assertEqual(\n            recite(1, 3),\n            [\n                \"I know an old lady who swallowed a fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a bird.\",\n                \"How absurd to swallow a bird!\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a fly.[556 chars]ie.\"]\n\nfood_chain_test.py:110: AssertionError\n__________________________ FoodChainTest.test_spider ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_spider>\n\n    def test_spider(self):\n>       self.assertEqual(\n            recite(2, 2),\n            [\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a spid[160 chars]ie.\"]\n\nfood_chain_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED food_chain_test.py::FoodChainTest::test_bird - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_cat - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_cow - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_dog - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_fly - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_full_song - AssertionError: No...\nFAILED food_chain_test.py::FoodChainTest::test_goat - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_horse - AssertionError: None !...\nFAILED food_chain_test.py::FoodChainTest::test_multiple_verses - AssertionErr...\nFAILED food_chain_test.py::FoodChainTest::test_spider - AssertionError: None ...\n10 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f51879474c63bc5b183dfde957fbc2c12ff3bc9d0d407e0d09db69e28dba63d1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_3.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.282,
+          "stdout_sha256": "80e8bc148f0485f5f127ccfd630ee53f4f7782cc5e0efd59e0cc10c4055d75a3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11927,
+          "stderr_bytes": 0,
+          "stdout_tail": "wed a goat!\",\n                \"She swallowed the goat to catch the dog.\",\n                \"She swallowed the dog to catch the cat.\",\n                \"She swallowed the cat to catch the bird.\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a goat[382 chars]ie.\"]\n\nfood_chain_test.py:73: AssertionError\n___________________________ FoodChainTest.test_horse ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_horse>\n\n    def test_horse(self):\n>       self.assertEqual(\n            recite(8, 8),\n            [\"I know an old lady who swallowed a horse.\", \"She's dead, of course!\"],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a horse.', \"She's dead, of course!\"]\n\nfood_chain_test.py:104: AssertionError\n______________________ FoodChainTest.test_multiple_verses ______________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_multiple_verses>\n\n    def test_multiple_verses(self):\n>       self.assertEqual(\n            recite(1, 3),\n            [\n                \"I know an old lady who swallowed a fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n                \"\",\n                \"I know an old lady who swallowed a bird.\",\n                \"How absurd to swallow a bird!\",\n                \"She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a fly.[556 chars]ie.\"]\n\nfood_chain_test.py:110: AssertionError\n__________________________ FoodChainTest.test_spider ___________________________\n\nself = <food_chain_test.FoodChainTest testMethod=test_spider>\n\n    def test_spider(self):\n>       self.assertEqual(\n            recite(2, 2),\n            [\n                \"I know an old lady who swallowed a spider.\",\n                \"It wriggled and jiggled and tickled inside her.\",\n                \"She swallowed the spider to catch the fly.\",\n                \"I don't know why she swallowed the fly. Perhaps she'll die.\",\n            ],\n        )\nE       AssertionError: None != ['I know an old lady who swallowed a spid[160 chars]ie.\"]\n\nfood_chain_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED food_chain_test.py::FoodChainTest::test_bird - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_cat - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_cow - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_dog - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_fly - AssertionError: None != ...\nFAILED food_chain_test.py::FoodChainTest::test_full_song - AssertionError: No...\nFAILED food_chain_test.py::FoodChainTest::test_goat - AssertionError: None !=...\nFAILED food_chain_test.py::FoodChainTest::test_horse - AssertionError: None !...\nFAILED food_chain_test.py::FoodChainTest::test_multiple_verses - AssertionErr...\nFAILED food_chain_test.py::FoodChainTest::test_spider - AssertionError: None ...\n10 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "food_chain.py",
+    "with_copy_of": "example.py",
+    "sha256": "8eea5c1f75e15326ac221952e38c9289cacdabdd9dc1dcc4a5b52b4fb0682640",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "food_chain_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "96a325b6995f3bedfc1282243a40adf10e4bea3c87071e9a4b5e155cc72b14bd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_1.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.249,
+          "stdout_sha256": "4f8f5c678ecdaa8a5967afee552bfa5110c8dab5189b4e503ac1e26631f5ead5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 942,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED food_chain_test.py::FoodChainTest::test_bird\nPASSED food_chain_test.py::FoodChainTest::test_cat\nPASSED food_chain_test.py::FoodChainTest::test_cow\nPASSED food_chain_test.py::FoodChainTest::test_dog\nPASSED food_chain_test.py::FoodChainTest::test_fly\nPASSED food_chain_test.py::FoodChainTest::test_full_song\nPASSED food_chain_test.py::FoodChainTest::test_goat\nPASSED food_chain_test.py::FoodChainTest::test_horse\nPASSED food_chain_test.py::FoodChainTest::test_multiple_verses\nPASSED food_chain_test.py::FoodChainTest::test_spider\n10 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "96a325b6995f3bedfc1282243a40adf10e4bea3c87071e9a4b5e155cc72b14bd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_2.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.191,
+          "stdout_sha256": "ec510c5b340caaa638a2b794021a368cd6fda6f612d8ffe182f5b7d64e795b79",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 942,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED food_chain_test.py::FoodChainTest::test_bird\nPASSED food_chain_test.py::FoodChainTest::test_cat\nPASSED food_chain_test.py::FoodChainTest::test_cow\nPASSED food_chain_test.py::FoodChainTest::test_dog\nPASSED food_chain_test.py::FoodChainTest::test_fly\nPASSED food_chain_test.py::FoodChainTest::test_full_song\nPASSED food_chain_test.py::FoodChainTest::test_goat\nPASSED food_chain_test.py::FoodChainTest::test_horse\nPASSED food_chain_test.py::FoodChainTest::test_multiple_verses\nPASSED food_chain_test.py::FoodChainTest::test_spider\n10 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "96a325b6995f3bedfc1282243a40adf10e4bea3c87071e9a4b5e155cc72b14bd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_3.xml",
+            "food_chain_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.209,
+          "stdout_sha256": "f7c0cdb799422471b8159e2f9920504067ce76fe9619d0a4298650c9448c35c5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 942,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED food_chain_test.py::FoodChainTest::test_bird\nPASSED food_chain_test.py::FoodChainTest::test_cat\nPASSED food_chain_test.py::FoodChainTest::test_cow\nPASSED food_chain_test.py::FoodChainTest::test_dog\nPASSED food_chain_test.py::FoodChainTest::test_fly\nPASSED food_chain_test.py::FoodChainTest::test_full_song\nPASSED food_chain_test.py::FoodChainTest::test_goat\nPASSED food_chain_test.py::FoodChainTest::test_horse\nPASSED food_chain_test.py::FoodChainTest::test_multiple_verses\nPASSED food_chain_test.py::FoodChainTest::test_spider\n10 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 10/10 passed, 0 failed, 0 errors (consistent)"
+}

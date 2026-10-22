@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="41" skipped="0" tests="43" time="0.193" timestamp="2026-10-22T12:46:49.838840" hostname="vm"><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_absolute_value_of_a_negative_purely_real_number" time="0.001"><failure message="AssertionError: None != 5">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_absolute_value_of_a_negative_purely_real_number&gt;
+
+    def test_absolute_value_of_a_negative_purely_real_number(self):
+&gt;       self.assertEqual(abs(ComplexNumber(-5, 0)), 5)
+E       AssertionError: None != 5
+
+complex_numbers_test.py:110: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_absolute_value_of_a_number_with_real_and_imaginary_part" time="0.000"><failure message="AssertionError: None != 5">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_absolute_value_of_a_number_with_real_and_imaginary_part&gt;
+
+    def test_absolute_value_of_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(abs(ComplexNumber(3, 4)), 5)
+E       AssertionError: None != 5
+
+complex_numbers_test.py:123: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_absolute_value_of_a_positive_purely_real_number" time="0.001"><failure message="AssertionError: None != 5">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_absolute_value_of_a_positive_purely_real_number&gt;
+
+    def test_absolute_value_of_a_positive_purely_real_number(self):
+&gt;       self.assertEqual(abs(ComplexNumber(5, 0)), 5)
+E       AssertionError: None != 5
+
+complex_numbers_test.py:107: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part" time="0.000"><failure message="AssertionError: None != 5">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part&gt;
+
+    def test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part(
+        self,
+    ):
+&gt;       self.assertEqual(abs(ComplexNumber(0, -5)), 5)
+E       AssertionError: None != 5
+
+complex_numbers_test.py:120: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part" time="0.000"><failure message="AssertionError: None != 5">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part&gt;
+
+    def test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part(
+        self,
+    ):
+&gt;       self.assertEqual(abs(ComplexNumber(0, 5)), 5)
+E       AssertionError: None != 5
+
+complex_numbers_test.py:115: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_add_complex_number_to_real_number" time="0.001"><failure message="TypeError: unsupported operand type(s) for +: 'int' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_add_complex_number_to_real_number&gt;
+
+    def test_add_complex_number_to_real_number(self):
+&gt;       self.assertEqual(5 + ComplexNumber(1, 2), ComplexNumber(6, 2))
+E       TypeError: unsupported operand type(s) for +: 'int' and 'ComplexNumber'
+
+complex_numbers_test.py:163: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_add_numbers_with_real_and_imaginary_part" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655990&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_add_numbers_with_real_and_imaginary_part&gt;
+
+    def test_add_numbers_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(ComplexNumber(1, 2) + ComplexNumber(3, 4), ComplexNumber(4, 6))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655990&gt;
+
+complex_numbers_test.py:53: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_add_purely_imaginary_numbers" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af164b9d0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_add_purely_imaginary_numbers&gt;
+
+    def test_add_purely_imaginary_numbers(self):
+&gt;       self.assertEqual(ComplexNumber(0, 1) + ComplexNumber(0, 2), ComplexNumber(0, 3))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af164b9d0&gt;
+
+complex_numbers_test.py:50: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_add_purely_real_numbers" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af163f6a0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_add_purely_real_numbers&gt;
+
+    def test_add_purely_real_numbers(self):
+&gt;       self.assertEqual(ComplexNumber(1, 0) + ComplexNumber(2, 0), ComplexNumber(3, 0))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af163f6a0&gt;
+
+complex_numbers_test.py:47: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_add_real_number_to_complex_number" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af15e2da0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_add_real_number_to_complex_number&gt;
+
+    def test_add_real_number_to_complex_number(self):
+&gt;       self.assertEqual(ComplexNumber(1, 2) + 5, ComplexNumber(6, 2))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af15e2da0&gt;
+
+complex_numbers_test.py:160: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_conjugate_a_number_with_real_and_imaginary_part" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655f00&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_conjugate_a_number_with_real_and_imaginary_part&gt;
+
+    def test_conjugate_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(ComplexNumber(1, 1).conjugate(), ComplexNumber(1, -1))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655f00&gt;
+
+complex_numbers_test.py:134: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_conjugate_a_purely_imaginary_number" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af164b040&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_conjugate_a_purely_imaginary_number&gt;
+
+    def test_conjugate_a_purely_imaginary_number(self):
+&gt;       self.assertEqual(ComplexNumber(0, 5).conjugate(), ComplexNumber(0, -5))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af164b040&gt;
+
+complex_numbers_test.py:131: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_conjugate_a_purely_real_number" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1656fb0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_conjugate_a_purely_real_number&gt;
+
+    def test_conjugate_a_purely_real_number(self):
+&gt;       self.assertEqual(ComplexNumber(5, 0).conjugate(), ComplexNumber(5, 0))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1656fb0&gt;
+
+complex_numbers_test.py:128: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_divide_complex_number_by_real_number" time="0.001"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_divide_complex_number_by_real_number&gt;
+
+    def test_divide_complex_number_by_real_number(self):
+&gt;       self.assertAlmostEqual(ComplexNumber(10, 100) / 10, ComplexNumber(1, 10))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:178: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_divide_numbers_with_real_and_imaginary_part" time="0.001"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_divide_numbers_with_real_and_imaginary_part&gt;
+
+    def test_divide_numbers_with_real_and_imaginary_part(self):
+&gt;       self.assertAlmostEqual(
+            ComplexNumber(1, 2) / ComplexNumber(3, 4), ComplexNumber(0.44, 0.08)
+        )
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:100: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_divide_purely_imaginary_numbers" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_divide_purely_imaginary_numbers&gt;
+
+    def test_divide_purely_imaginary_numbers(self):
+&gt;       self.assertAlmostEqual(
+            ComplexNumber(0, 1) / ComplexNumber(0, 2), ComplexNumber(0.5, 0)
+        )
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:95: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_divide_purely_real_numbers" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_divide_purely_real_numbers&gt;
+
+    def test_divide_purely_real_numbers(self):
+&gt;       self.assertAlmostEqual(
+            ComplexNumber(1, 0) / ComplexNumber(2, 0), ComplexNumber(0.5, 0)
+        )
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:90: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_divide_real_number_by_complex_number" time="0.000"><failure message="TypeError: unsupported operand type(s) for /: 'int' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_divide_real_number_by_complex_number&gt;
+
+    def test_divide_real_number_by_complex_number(self):
+&gt;       self.assertAlmostEqual(5 / ComplexNumber(1, 1), ComplexNumber(2.5, -2.5))
+E       TypeError: unsupported operand type(s) for /: 'int' and 'ComplexNumber'
+
+complex_numbers_test.py:181: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_equality_of_complex_numbers" time="0.001"><failure message="AssertionError: &lt;complex_numbers.ComplexNumber object at 0x7f9af15e3be0&gt; != &lt;complex_numbers.ComplexNumber object at 0x7f9af15e3490&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_equality_of_complex_numbers&gt;
+
+    def test_equality_of_complex_numbers(self):
+&gt;       self.assertEqual(ComplexNumber(1, 2), ComplexNumber(1, 2))
+E       AssertionError: &lt;complex_numbers.ComplexNumber object at 0x7f9af15e3be0&gt; != &lt;complex_numbers.ComplexNumber object at 0x7f9af15e3490&gt;
+
+complex_numbers_test.py:186: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_euler_s_identity_formula" time="0.001"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_euler_s_identity_formula&gt;
+
+    def test_euler_s_identity_formula(self):
+&gt;       self.assertAlmostEqual(ComplexNumber(0, math.pi).exp(), ComplexNumber(-1, 0))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:139: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_exponential_of_0" time="0.001"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_exponential_of_0&gt;
+
+    def test_exponential_of_0(self):
+&gt;       self.assertAlmostEqual(ComplexNumber(0, 0).exp(), ComplexNumber(1, 0))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:142: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_exponential_of_a_number_with_real_and_imaginary_part" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_exponential_of_a_number_with_real_and_imaginary_part&gt;
+
+    def test_exponential_of_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertAlmostEqual(
+            ComplexNumber(math.log(2), math.pi).exp(), ComplexNumber(-2, 0)
+        )
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:148: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_exponential_of_a_purely_real_number" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_exponential_of_a_purely_real_number&gt;
+
+    def test_exponential_of_a_purely_real_number(self):
+&gt;       self.assertAlmostEqual(ComplexNumber(1, 0).exp(), ComplexNumber(math.e, 0))
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:145: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_exponential_resulting_in_a_number_with_real_and_imaginary_part" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_exponential_resulting_in_a_number_with_real_and_imaginary_part&gt;
+
+    def test_exponential_resulting_in_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertAlmostEqual(
+            ComplexNumber(math.log(2) / 2, math.pi / 4).exp(), ComplexNumber(1, 1)
+        )
+E       TypeError: unsupported operand type(s) for -: 'NoneType' and 'ComplexNumber'
+
+complex_numbers_test.py:153: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_imaginary_part_of_a_number_with_real_and_imaginary_part" time="0.001"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'imaginary'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_imaginary_part_of_a_number_with_real_and_imaginary_part&gt;
+
+    def test_imaginary_part_of_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(ComplexNumber(1, 2).imaginary, 2)
+E       AttributeError: 'ComplexNumber' object has no attribute 'imaginary'
+
+complex_numbers_test.py:35: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_imaginary_part_of_a_purely_imaginary_number" time="0.000"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'imaginary'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_imaginary_part_of_a_purely_imaginary_number&gt;
+
+    def test_imaginary_part_of_a_purely_imaginary_number(self):
+&gt;       self.assertEqual(ComplexNumber(0, 1).imaginary, 1)
+E       AttributeError: 'ComplexNumber' object has no attribute 'imaginary'
+
+complex_numbers_test.py:32: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_imaginary_part_of_a_purely_real_number" time="0.000"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'imaginary'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_imaginary_part_of_a_purely_real_number&gt;
+
+    def test_imaginary_part_of_a_purely_real_number(self):
+&gt;       self.assertEqual(ComplexNumber(1, 0).imaginary, 0)
+E       AttributeError: 'ComplexNumber' object has no attribute 'imaginary'
+
+complex_numbers_test.py:29: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_imaginary_unit" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af163ca60&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_imaginary_unit&gt;
+
+    def test_imaginary_unit(self):
+&gt;       self.assertEqual(
+            ComplexNumber(0, 1) * ComplexNumber(0, 1), ComplexNumber(-1, 0)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af163ca60&gt;
+
+complex_numbers_test.py:38: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_inequality_of_imaginary_part" time="0.000" /><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_inequality_of_real_part" time="0.000" /><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_multiply_complex_number_by_real_number" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1460580&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_multiply_complex_number_by_real_number&gt;
+
+    def test_multiply_complex_number_by_real_number(self):
+&gt;       self.assertEqual(ComplexNumber(2, 5) * 5, ComplexNumber(10, 25))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1460580&gt;
+
+complex_numbers_test.py:172: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_multiply_numbers_with_real_and_imaginary_part" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a56c0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_multiply_numbers_with_real_and_imaginary_part&gt;
+
+    def test_multiply_numbers_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(
+            ComplexNumber(1, 2) * ComplexNumber(3, 4), ComplexNumber(-5, 10)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a56c0&gt;
+
+complex_numbers_test.py:83: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_multiply_purely_imaginary_numbers" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1643730&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_multiply_purely_imaginary_numbers&gt;
+
+    def test_multiply_purely_imaginary_numbers(self):
+&gt;       self.assertEqual(
+            ComplexNumber(0, 1) * ComplexNumber(0, 2), ComplexNumber(-2, 0)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1643730&gt;
+
+complex_numbers_test.py:78: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_multiply_purely_real_numbers" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a5c60&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_multiply_purely_real_numbers&gt;
+
+    def test_multiply_purely_real_numbers(self):
+&gt;       self.assertEqual(ComplexNumber(1, 0) * ComplexNumber(2, 0), ComplexNumber(2, 0))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a5c60&gt;
+
+complex_numbers_test.py:75: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_multiply_real_number_by_complex_number" time="0.000"><failure message="TypeError: unsupported operand type(s) for *: 'int' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_multiply_real_number_by_complex_number&gt;
+
+    def test_multiply_real_number_by_complex_number(self):
+&gt;       self.assertEqual(5 * ComplexNumber(2, 5), ComplexNumber(10, 25))
+E       TypeError: unsupported operand type(s) for *: 'int' and 'ComplexNumber'
+
+complex_numbers_test.py:175: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_real_part_of_a_number_with_real_and_imaginary_part" time="0.001"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'real'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_real_part_of_a_number_with_real_and_imaginary_part&gt;
+
+    def test_real_part_of_a_number_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(ComplexNumber(1, 2).real, 1)
+E       AttributeError: 'ComplexNumber' object has no attribute 'real'
+
+complex_numbers_test.py:24: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_real_part_of_a_purely_imaginary_number" time="0.001"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'real'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_real_part_of_a_purely_imaginary_number&gt;
+
+    def test_real_part_of_a_purely_imaginary_number(self):
+&gt;       self.assertEqual(ComplexNumber(0, 1).real, 0)
+E       AttributeError: 'ComplexNumber' object has no attribute 'real'
+
+complex_numbers_test.py:21: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_real_part_of_a_purely_real_number" time="0.001"><failure message="AttributeError: 'ComplexNumber' object has no attribute 'real'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_real_part_of_a_purely_real_number&gt;
+
+    def test_real_part_of_a_purely_real_number(self):
+&gt;       self.assertEqual(ComplexNumber(1, 0).real, 1)
+E       AttributeError: 'ComplexNumber' object has no attribute 'real'
+
+complex_numbers_test.py:18: AttributeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_subtract_complex_number_from_real_number" time="0.000"><failure message="TypeError: unsupported operand type(s) for -: 'int' and 'ComplexNumber'">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_subtract_complex_number_from_real_number&gt;
+
+    def test_subtract_complex_number_from_real_number(self):
+&gt;       self.assertEqual(4 - ComplexNumber(5, 7), ComplexNumber(-1, -7))
+E       TypeError: unsupported operand type(s) for -: 'int' and 'ComplexNumber'
+
+complex_numbers_test.py:169: TypeError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_subtract_numbers_with_real_and_imaginary_part" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a64d0&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_subtract_numbers_with_real_and_imaginary_part&gt;
+
+    def test_subtract_numbers_with_real_and_imaginary_part(self):
+&gt;       self.assertEqual(
+            ComplexNumber(1, 2) - ComplexNumber(3, 4), ComplexNumber(-2, -2)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af14a64d0&gt;
+
+complex_numbers_test.py:68: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_subtract_purely_imaginary_numbers" time="0.000"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1463880&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_subtract_purely_imaginary_numbers&gt;
+
+    def test_subtract_purely_imaginary_numbers(self):
+&gt;       self.assertEqual(
+            ComplexNumber(0, 1) - ComplexNumber(0, 2), ComplexNumber(0, -1)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1463880&gt;
+
+complex_numbers_test.py:63: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_subtract_purely_real_numbers" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655b40&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_subtract_purely_real_numbers&gt;
+
+    def test_subtract_purely_real_numbers(self):
+&gt;       self.assertEqual(
+            ComplexNumber(1, 0) - ComplexNumber(2, 0), ComplexNumber(-1, 0)
+        )
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1655b40&gt;
+
+complex_numbers_test.py:58: AssertionError</failure></testcase><testcase classname="complex_numbers_test.ComplexNumbersTest" name="test_subtract_real_number_from_complex_number" time="0.001"><failure message="AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1640820&gt;">self = &lt;complex_numbers_test.ComplexNumbersTest testMethod=test_subtract_real_number_from_complex_number&gt;
+
+    def test_subtract_real_number_from_complex_number(self):
+&gt;       self.assertEqual(ComplexNumber(5, 7) - 4, ComplexNumber(1, 7))
+E       AssertionError: None != &lt;complex_numbers.ComplexNumber object at 0x7f9af1640820&gt;
+
+complex_numbers_test.py:166: AssertionError</failure></testcase></testsuite></testsuites>

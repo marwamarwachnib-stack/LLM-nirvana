@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/affine-cipher",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/affine-cipher/affine_cipher.py",
+    "0_100 LOC/cat2_functions/affine-cipher/affine_cipher_test.py",
+    "0_100 LOC/cat2_functions/affine-cipher/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "affine_cipher.py": "d3164dc77d13a429fb14899cd5e74a81d848ed0c7b95b02db3247a75e0bbd72b",
+    "affine_cipher_test.py": "4d9dac99b726068707a37e36145d73f74a52704145fb95bb4acaccdd7cd3ef54",
+    "example.py": "6952153be60d7690e0bfad52c89c4647e9edb4bd068c77f1c15735e00d9216ba"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "affine_cipher.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "affine_cipher_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 16,
+    "passed": 0,
+    "failed": 16,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8bb700495ca398dcfc8805acf9db2b91e8aa941f0fe9597303666903dfc3d222"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_1.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.267,
+          "stdout_sha256": "0d3d716afc23ecc4cb3d68d0f436f132eaff875d7fa1336e40b701e836520a46",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7947,
+          "stderr_bytes": 0,
+          "stdout_tail": "her_test.py:35: AssertionError\n__________________ AffineCipherTest.test_encode_mindblowingly __________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\", 11, 15), \"rzcwa gnxzc dgt\")\nE       AssertionError: None != 'rzcwa gnxzc dgt'\n\naffine_cipher_test.py:27: AssertionError\n_______________________ AffineCipherTest.test_encode_no ________________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\", 15, 18), \"fu\")\nE       AssertionError: None != 'fu'\n\naffine_cipher_test.py:18: AssertionError\n_____________________ AffineCipherTest.test_encode_numbers _____________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(\n            encode(\"Testing,1 2 3, testing.\", 3, 4), \"jqgjc rw123 jqgjc rw\"\n        )\nE       AssertionError: None != 'jqgjc rw123 jqgjc rw'\n\naffine_cipher_test.py:30: AssertionError\n______________________ AffineCipherTest.test_encode_o_m_g ______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_o_m_g>\n\n    def test_encode_o_m_g(self):\n>       self.assertEqual(encode(\"O M G\", 25, 47), \"hjp\")\nE       AssertionError: None != 'hjp'\n\naffine_cipher_test.py:24: AssertionError\n_______________________ AffineCipherTest.test_encode_omg _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\", 21, 3), \"lvz\")\nE       AssertionError: None != 'lvz'\n\naffine_cipher_test.py:21: AssertionError\n_____________ AffineCipherTest.test_encode_with_a_not_coprime_to_m _____________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_with_a_not_coprime_to_m>\n\n    def test_encode_with_a_not_coprime_to_m(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\naffine_cipher_test.py:44: AssertionError\n_______________________ AffineCipherTest.test_encode_yes _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\", 5, 7), \"xbt\")\nE       AssertionError: None != 'xbt'\n\naffine_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence - Asse...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_exercism - Assert...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought - As...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly - A...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_no - AssertionErr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g - Assertion...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_omg - AssertionEr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_yes - AssertionEr...\n16 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8bb700495ca398dcfc8805acf9db2b91e8aa941f0fe9597303666903dfc3d222"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_2.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.253,
+          "stdout_sha256": "dd8e8e4d34bed65085286e91cc511c8504330e1ba50637e2ca51e9934b936b79",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7947,
+          "stderr_bytes": 0,
+          "stdout_tail": "her_test.py:35: AssertionError\n__________________ AffineCipherTest.test_encode_mindblowingly __________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\", 11, 15), \"rzcwa gnxzc dgt\")\nE       AssertionError: None != 'rzcwa gnxzc dgt'\n\naffine_cipher_test.py:27: AssertionError\n_______________________ AffineCipherTest.test_encode_no ________________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\", 15, 18), \"fu\")\nE       AssertionError: None != 'fu'\n\naffine_cipher_test.py:18: AssertionError\n_____________________ AffineCipherTest.test_encode_numbers _____________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(\n            encode(\"Testing,1 2 3, testing.\", 3, 4), \"jqgjc rw123 jqgjc rw\"\n        )\nE       AssertionError: None != 'jqgjc rw123 jqgjc rw'\n\naffine_cipher_test.py:30: AssertionError\n______________________ AffineCipherTest.test_encode_o_m_g ______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_o_m_g>\n\n    def test_encode_o_m_g(self):\n>       self.assertEqual(encode(\"O M G\", 25, 47), \"hjp\")\nE       AssertionError: None != 'hjp'\n\naffine_cipher_test.py:24: AssertionError\n_______________________ AffineCipherTest.test_encode_omg _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\", 21, 3), \"lvz\")\nE       AssertionError: None != 'lvz'\n\naffine_cipher_test.py:21: AssertionError\n_____________ AffineCipherTest.test_encode_with_a_not_coprime_to_m _____________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_with_a_not_coprime_to_m>\n\n    def test_encode_with_a_not_coprime_to_m(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\naffine_cipher_test.py:44: AssertionError\n_______________________ AffineCipherTest.test_encode_yes _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\", 5, 7), \"xbt\")\nE       AssertionError: None != 'xbt'\n\naffine_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence - Asse...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_exercism - Assert...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought - As...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly - A...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_no - AssertionErr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g - Assertion...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_omg - AssertionEr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_yes - AssertionEr...\n16 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8bb700495ca398dcfc8805acf9db2b91e8aa941f0fe9597303666903dfc3d222"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_3.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.254,
+          "stdout_sha256": "5d82d4f9f97ba9a44c1be5fa0ea805481ce962b3f4f307116b1250d43b847073",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7947,
+          "stderr_bytes": 0,
+          "stdout_tail": "her_test.py:35: AssertionError\n__________________ AffineCipherTest.test_encode_mindblowingly __________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\", 11, 15), \"rzcwa gnxzc dgt\")\nE       AssertionError: None != 'rzcwa gnxzc dgt'\n\naffine_cipher_test.py:27: AssertionError\n_______________________ AffineCipherTest.test_encode_no ________________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\", 15, 18), \"fu\")\nE       AssertionError: None != 'fu'\n\naffine_cipher_test.py:18: AssertionError\n_____________________ AffineCipherTest.test_encode_numbers _____________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(\n            encode(\"Testing,1 2 3, testing.\", 3, 4), \"jqgjc rw123 jqgjc rw\"\n        )\nE       AssertionError: None != 'jqgjc rw123 jqgjc rw'\n\naffine_cipher_test.py:30: AssertionError\n______________________ AffineCipherTest.test_encode_o_m_g ______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_o_m_g>\n\n    def test_encode_o_m_g(self):\n>       self.assertEqual(encode(\"O M G\", 25, 47), \"hjp\")\nE       AssertionError: None != 'hjp'\n\naffine_cipher_test.py:24: AssertionError\n_______________________ AffineCipherTest.test_encode_omg _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\", 21, 3), \"lvz\")\nE       AssertionError: None != 'lvz'\n\naffine_cipher_test.py:21: AssertionError\n_____________ AffineCipherTest.test_encode_with_a_not_coprime_to_m _____________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_with_a_not_coprime_to_m>\n\n    def test_encode_with_a_not_coprime_to_m(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\naffine_cipher_test.py:44: AssertionError\n_______________________ AffineCipherTest.test_encode_yes _______________________\n\nself = <affine_cipher_test.AffineCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\", 5, 7), \"xbt\")\nE       AssertionError: None != 'xbt'\n\naffine_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence - Asse...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_exercism - Assert...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nFAILED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought - As...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly - A...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_no - AssertionErr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_numbers - Asserti...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g - Assertion...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_omg - AssertionEr...\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nFAILED affine_cipher_test.py::AffineCipherTest::test_encode_yes - AssertionEr...\n16 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "affine_cipher.py",
+    "with_copy_of": "example.py",
+    "sha256": "6952153be60d7690e0bfad52c89c4647e9edb4bd068c77f1c15735e00d9216ba",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "affine_cipher_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8d44f1f21f1e0b830d6eca3f1543dcb33bcceb2a41c0121d235e8fffa90ddee6"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_1.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.214,
+          "stdout_sha256": "4dd7fe46194b8b203e463c4d4acdf3e621f7a4d0488a58759b9b71b581312e42",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1575,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_exercism\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_no\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_omg\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_yes\n16 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8d44f1f21f1e0b830d6eca3f1543dcb33bcceb2a41c0121d235e8fffa90ddee6"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_2.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.211,
+          "stdout_sha256": "64e99e843946b346a9f15cbc28811ee6f618a72faa1029588b14d382629bd663",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1575,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_exercism\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_no\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_omg\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_yes\n16 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "8d44f1f21f1e0b830d6eca3f1543dcb33bcceb2a41c0121d235e8fffa90ddee6"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_3.xml",
+            "affine_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "67a65baf2cc2b13769ee7a834d78594e2053023055fbaa34f49ca5212aaf0628",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1575,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_exercism\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input\nPASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_no\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_numbers\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_omg\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m\nPASSED affine_cipher_test.py::AffineCipherTest::test_encode_yes\n16 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 16/16 passed, 0 failed, 0 errors (consistent)"
+}

@@ -57,7 +57,10 @@ PIP_CONFIG_FILE=/dev/null "$ENV_PREFIX/bin/python" -I -m pip install --isolated 
   --no-deps --require-hashes --only-binary=:all: -r "$HERE/requirements-validation.txt"
 
 # 5. Record what was installed.
-"$CONDA" list -p "$ENV_PREFIX" --explicit --sha256 > "$HERE/conda-explicit.lock.txt"
+# (conda 23.5 supports only --md5 here; SHA-256 of each package file is recorded separately.)
+"$CONDA" list -p "$ENV_PREFIX" --explicit --md5 > "$HERE/conda-explicit.lock.txt"
+grep -E '^https://' "$HERE/conda-explicit.lock.txt" | sed -E 's#.*/([^/]+)\#.*#\1#' | sort \
+  | (cd "$CR_ROOT/pkgs" && xargs sha256sum) > "$HERE/conda-pkgs.sha256"
 "$ENV_PREFIX/bin/python" -I -m pip freeze --all > "$HERE/pip-freeze.lock.txt"
 "$ENV_PREFIX/bin/python" -I -m pip check
 "$ENV_PREFIX/bin/python" -I -c 'import sys; assert sys.version_info[:3] == (3, 10, 12), sys.version; print(sys.version)'

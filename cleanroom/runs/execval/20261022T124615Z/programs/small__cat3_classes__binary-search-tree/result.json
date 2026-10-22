@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/binary-search-tree",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/binary-search-tree/binary_search_tree.py",
+    "0_100 LOC/cat3_classes/binary-search-tree/binary_search_tree_test.py",
+    "0_100 LOC/cat3_classes/binary-search-tree/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "binary_search_tree.py": "4a45b68ab03ccd8cdfcd34fd8bf68c17dd7ecc8ae579f63a1ffd18e8ddbacfbf",
+    "binary_search_tree_test.py": "031fc58dcc791ea1a366877ad8182f978a80f6390478f1ecce7ae450258d4760",
+    "example.py": "a7cc3f6e9f3df46d18272459324cf9e9595ecdc953e3499e855c0a2f2182155f"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.025,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.027,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "binary_search_tree.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "binary_search_tree_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 10,
+    "passed": 0,
+    "failed": 10,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1d77ab08a24cf3b21a16d1298ed5d7d1ace6d80aac65c8343c1319d3ff0fd469"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_1.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.239,
+          "stdout_sha256": "49566d2097e5d8c3e0080af7fae66f817a3b73528fbe43905301e64a9044a0b1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9037,
+          "stderr_bytes": 0,
+          "stdout_tail": "e([\"4\", \"5\"]).data(), expected)\n\nbinary_search_tree_test.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_greater_number_at_right_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7f9fe6d09780>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n______________ BinarySearchTreeTest.test_same_number_at_left_node ______________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\n\n    def test_same_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"4\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"4\"]).data(), expected)\n\nbinary_search_tree_test.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7f9fe6d007f0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n____________ BinarySearchTreeTest.test_smaller_number_at_left_node _____________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\n\n    def test_smaller_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"2\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"2\"]).data(), expected)\n\nbinary_search_tree_test.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7f9fe6d080d0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1d77ab08a24cf3b21a16d1298ed5d7d1ace6d80aac65c8343c1319d3ff0fd469"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_2.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.247,
+          "stdout_sha256": "36cdd891c94e8fbf8f47854f10282701ae03012ee0fa2a61549ff0a480924a6b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9037,
+          "stderr_bytes": 0,
+          "stdout_tail": "e([\"4\", \"5\"]).data(), expected)\n\nbinary_search_tree_test.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_greater_number_at_right_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fc3d6d8d780>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n______________ BinarySearchTreeTest.test_same_number_at_left_node ______________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\n\n    def test_same_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"4\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"4\"]).data(), expected)\n\nbinary_search_tree_test.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fc3d6d847f0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n____________ BinarySearchTreeTest.test_smaller_number_at_left_node _____________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\n\n    def test_smaller_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"2\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"2\"]).data(), expected)\n\nbinary_search_tree_test.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fc3d6d8c0d0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 0,
+          "failed": 10,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1d77ab08a24cf3b21a16d1298ed5d7d1ace6d80aac65c8343c1319d3ff0fd469"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_3.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.254,
+          "stdout_sha256": "700f671931f585c10fecf4dd3c2230b7b5493b7f24734715e441ddd191477800",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9037,
+          "stderr_bytes": 0,
+          "stdout_tail": "e([\"4\", \"5\"]).data(), expected)\n\nbinary_search_tree_test.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_greater_number_at_right_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fa2dee21780>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n______________ BinarySearchTreeTest.test_same_number_at_left_node ______________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\n\n    def test_same_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"4\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"4\"]).data(), expected)\n\nbinary_search_tree_test.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fa2dee187f0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n____________ BinarySearchTreeTest.test_smaller_number_at_left_node _____________\n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\n\n    def test_smaller_number_at_left_node(self):\n        expected = TreeNode(\"4\", TreeNode(\"2\", None, None), None)\n>       self.assertTreeEqual(BinarySearchTree([\"4\", \"2\"]).data(), expected)\n\nbinary_search_tree_test.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nbinary_search_tree_test.py:65: in assertTreeEqual\n    self.compare_tree(tree_one, tree_two)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>\ntree_one = None\ntree_two = <binary_search_tree.TreeNode object at 0x7fa2dee200d0>\n\n    def compare_tree(self, tree_one, tree_two):\n>       self.assertEqual(tree_one.data, tree_two.data)\nE       AttributeError: 'NoneType' object has no attribute 'data'\n\nbinary_search_tree_test.py:70: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nFAILED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "binary_search_tree.py",
+    "with_copy_of": "example.py",
+    "sha256": "a7cc3f6e9f3df46d18272459324cf9e9595ecdc953e3499e855c0a2f2182155f",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "binary_search_tree_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3b9cb959792ffb253e8808eea372a42db807ad59debda2a7bf4c0a899c14315a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_1.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.223,
+          "stdout_sha256": "521b7a9ce46279bed66b8741b13cfb78ae07617a35390b2be4a00d254ff2e78a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1340,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3b9cb959792ffb253e8808eea372a42db807ad59debda2a7bf4c0a899c14315a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_2.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.173,
+          "stdout_sha256": "87089566760a9b98f153a1a98dca8573bbde9334d5bb3a19462d3e78cbc1fea5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1340,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3b9cb959792ffb253e8808eea372a42db807ad59debda2a7bf4c0a899c14315a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_3.xml",
+            "binary_search_tree_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.198,
+          "stdout_sha256": "8d61876651b1f1c6c16f87f313b593b3fe5c0ec06fa26699eeb8b42e0d71e82b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1340,
+          "stderr_bytes": 0,
+          "stdout_tail": "..........                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node\nPASSED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node\n10 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 10/10 passed, 0 failed, 0 errors (consistent)"
+}

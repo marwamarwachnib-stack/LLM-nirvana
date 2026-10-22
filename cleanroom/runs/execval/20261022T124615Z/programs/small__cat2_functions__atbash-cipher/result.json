@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/atbash-cipher",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/atbash-cipher/atbash_cipher.py",
+    "0_100 LOC/cat2_functions/atbash-cipher/atbash_cipher_test.py",
+    "0_100 LOC/cat2_functions/atbash-cipher/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "atbash_cipher.py": "cd6bf62d65b8186ca3f49f1a3fe5e42cc8f0b8500be9cb1c78cfd64da6cf74e6",
+    "atbash_cipher_test.py": "5b5d56b376620d3654710795208f18fa85dc14e022990c5a153cbd0809c8ddc8",
+    "example.py": "037b2e1eea480351d933b88c67758c58850448c86d6975d9adab1d9db493cfaa"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "atbash_cipher.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "atbash_cipher_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 14,
+    "passed": 0,
+    "failed": 14,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "d836cf8f92d4091ba70f004243e1a6348db4a0fb4e91a9305bafaa1ea7c8ebc5"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_1.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.246,
+          "stdout_sha256": "09d83e00abf6f0938764f963ef87040c91116500c26bcf12972a97629a7e4cac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6831,
+          "stderr_bytes": 0,
+          "stdout_tail": "qual(\n            encode(\"The quick brown fox jumps over the lazy dog.\"),\n            \"gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt\",\n        )\nE       AssertionError: None != 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'\n\natbash_cipher_test.py:36: AssertionError\n__________________ AtbashCipherTest.test_encode_deep_thought ___________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_deep_thought>\n\n    def test_encode_deep_thought(self):\n>       self.assertEqual(encode(\"Truth is fiction.\"), \"gifgs rhurx grlm\")\nE       AssertionError: None != 'gifgs rhurx grlm'\n\natbash_cipher_test.py:33: AssertionError\n__________________ AtbashCipherTest.test_encode_mindblowingly __________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\"), \"nrmwy oldrm tob\")\nE       AssertionError: None != 'nrmwy oldrm tob'\n\natbash_cipher_test.py:27: AssertionError\n_______________________ AtbashCipherTest.test_encode_no ________________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\"), \"ml\")\nE       AssertionError: None != 'ml'\n\natbash_cipher_test.py:18: AssertionError\n_____________________ AtbashCipherTest.test_encode_numbers _____________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(encode(\"Testing,1 2 3, testing.\"), \"gvhgr mt123 gvhgr mt\")\nE       AssertionError: None != 'gvhgr mt123 gvhgr mt'\n\natbash_cipher_test.py:30: AssertionError\n_______________________ AtbashCipherTest.test_encode_omg _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:21: AssertionError\n_____________________ AtbashCipherTest.test_encode_spaces ______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_spaces>\n\n    def test_encode_spaces(self):\n>       self.assertEqual(encode(\"O M G\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:24: AssertionError\n_______________________ AtbashCipherTest.test_encode_yes _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\"), \"bvh\")\nE       AssertionError: None != 'bvh'\n\natbash_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence - Asse...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism - Assert...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces - ...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought - As...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly - A...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_no - AssertionErr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg - AssertionEr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces - Assertio...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes - AssertionEr...\n14 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "d836cf8f92d4091ba70f004243e1a6348db4a0fb4e91a9305bafaa1ea7c8ebc5"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_2.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.29,
+          "stdout_sha256": "3bb56ea77d81424d90389c5a05f9f499039dd23cdbc5ef7723407f1bb678f7a9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6831,
+          "stderr_bytes": 0,
+          "stdout_tail": "qual(\n            encode(\"The quick brown fox jumps over the lazy dog.\"),\n            \"gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt\",\n        )\nE       AssertionError: None != 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'\n\natbash_cipher_test.py:36: AssertionError\n__________________ AtbashCipherTest.test_encode_deep_thought ___________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_deep_thought>\n\n    def test_encode_deep_thought(self):\n>       self.assertEqual(encode(\"Truth is fiction.\"), \"gifgs rhurx grlm\")\nE       AssertionError: None != 'gifgs rhurx grlm'\n\natbash_cipher_test.py:33: AssertionError\n__________________ AtbashCipherTest.test_encode_mindblowingly __________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\"), \"nrmwy oldrm tob\")\nE       AssertionError: None != 'nrmwy oldrm tob'\n\natbash_cipher_test.py:27: AssertionError\n_______________________ AtbashCipherTest.test_encode_no ________________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\"), \"ml\")\nE       AssertionError: None != 'ml'\n\natbash_cipher_test.py:18: AssertionError\n_____________________ AtbashCipherTest.test_encode_numbers _____________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(encode(\"Testing,1 2 3, testing.\"), \"gvhgr mt123 gvhgr mt\")\nE       AssertionError: None != 'gvhgr mt123 gvhgr mt'\n\natbash_cipher_test.py:30: AssertionError\n_______________________ AtbashCipherTest.test_encode_omg _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:21: AssertionError\n_____________________ AtbashCipherTest.test_encode_spaces ______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_spaces>\n\n    def test_encode_spaces(self):\n>       self.assertEqual(encode(\"O M G\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:24: AssertionError\n_______________________ AtbashCipherTest.test_encode_yes _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\"), \"bvh\")\nE       AssertionError: None != 'bvh'\n\natbash_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence - Asse...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism - Assert...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces - ...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought - As...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly - A...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_no - AssertionErr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg - AssertionEr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces - Assertio...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes - AssertionEr...\n14 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "d836cf8f92d4091ba70f004243e1a6348db4a0fb4e91a9305bafaa1ea7c8ebc5"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_3.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.224,
+          "stdout_sha256": "1e9773b09f879fcf19d56ba62061562f394c374701330f78b74d7a6604b318fe",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6831,
+          "stderr_bytes": 0,
+          "stdout_tail": "qual(\n            encode(\"The quick brown fox jumps over the lazy dog.\"),\n            \"gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt\",\n        )\nE       AssertionError: None != 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'\n\natbash_cipher_test.py:36: AssertionError\n__________________ AtbashCipherTest.test_encode_deep_thought ___________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_deep_thought>\n\n    def test_encode_deep_thought(self):\n>       self.assertEqual(encode(\"Truth is fiction.\"), \"gifgs rhurx grlm\")\nE       AssertionError: None != 'gifgs rhurx grlm'\n\natbash_cipher_test.py:33: AssertionError\n__________________ AtbashCipherTest.test_encode_mindblowingly __________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_mindblowingly>\n\n    def test_encode_mindblowingly(self):\n>       self.assertEqual(encode(\"mindblowingly\"), \"nrmwy oldrm tob\")\nE       AssertionError: None != 'nrmwy oldrm tob'\n\natbash_cipher_test.py:27: AssertionError\n_______________________ AtbashCipherTest.test_encode_no ________________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_no>\n\n    def test_encode_no(self):\n>       self.assertEqual(encode(\"no\"), \"ml\")\nE       AssertionError: None != 'ml'\n\natbash_cipher_test.py:18: AssertionError\n_____________________ AtbashCipherTest.test_encode_numbers _____________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_numbers>\n\n    def test_encode_numbers(self):\n>       self.assertEqual(encode(\"Testing,1 2 3, testing.\"), \"gvhgr mt123 gvhgr mt\")\nE       AssertionError: None != 'gvhgr mt123 gvhgr mt'\n\natbash_cipher_test.py:30: AssertionError\n_______________________ AtbashCipherTest.test_encode_omg _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_omg>\n\n    def test_encode_omg(self):\n>       self.assertEqual(encode(\"OMG\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:21: AssertionError\n_____________________ AtbashCipherTest.test_encode_spaces ______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_spaces>\n\n    def test_encode_spaces(self):\n>       self.assertEqual(encode(\"O M G\"), \"lnt\")\nE       AssertionError: None != 'lnt'\n\natbash_cipher_test.py:24: AssertionError\n_______________________ AtbashCipherTest.test_encode_yes _______________________\n\nself = <atbash_cipher_test.AtbashCipherTest testMethod=test_encode_yes>\n\n    def test_encode_yes(self):\n>       self.assertEqual(encode(\"yes\"), \"bvh\")\nE       AssertionError: None != 'bvh'\n\natbash_cipher_test.py:15: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence - Asse...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism - Assert...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces - ...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought - As...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly - A...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_no - AssertionErr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers - Asserti...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg - AssertionEr...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces - Assertio...\nFAILED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes - AssertionEr...\n14 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "atbash_cipher.py",
+    "with_copy_of": "example.py",
+    "sha256": "037b2e1eea480351d933b88c67758c58850448c86d6975d9adab1d9db493cfaa",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "atbash_cipher_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6d8d502e85555d6fe75c77bcf2a7c7a930de070ef2c8d23c8b1aea7369031b3f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_1.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.182,
+          "stdout_sha256": "6c450f2a4ca6c4c0a7da5e8a45d5d7f67d7f225360f8611fba9fd8d84f8dad73",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1399,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_no\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6d8d502e85555d6fe75c77bcf2a7c7a930de070ef2c8d23c8b1aea7369031b3f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_2.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.198,
+          "stdout_sha256": "2dfa5e09b5a3644d4b4de4df5ff335623c030aa0337df07528122d74cc377e63",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1399,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_no\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6d8d502e85555d6fe75c77bcf2a7c7a930de070ef2c8d23c8b1aea7369031b3f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_3.xml",
+            "atbash_cipher_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.22,
+          "stdout_sha256": "bcb0229d437f2065df4a821a02e929328ef948c42d183a5f133a39462c6cea43",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1399,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__atbash-cipher/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_a_sentence\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_exercism\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_no_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_decode_with_too_many_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_all_the_letters\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_deep_thought\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_mindblowingly\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_no\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_numbers\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_omg\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_spaces\nPASSED atbash_cipher_test.py::AtbashCipherTest::test_encode_yes\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 14/14 passed, 0 failed, 0 errors (consistent)"
+}

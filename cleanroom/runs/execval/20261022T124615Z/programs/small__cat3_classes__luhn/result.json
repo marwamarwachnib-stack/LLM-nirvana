@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/luhn",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/luhn/example.py",
+    "0_100 LOC/cat3_classes/luhn/luhn.py",
+    "0_100 LOC/cat3_classes/luhn/luhn_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "8c9b705167891902cc94605dd71668082cc7b8cd2b67cc1054e40755d38b5d23",
+    "luhn.py": "b6e0478001be928db7981864f123019011b818072dfb630ea42d6349fbb46f2b",
+    "luhn_test.py": "c82a2e5954f0de2b47b08c3c9ba0d1289b2d62645f98ea77e7b07fecca9130ec"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "luhn.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "luhn_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 23,
+    "passed": 0,
+    "failed": 23,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 0,
+          "failed": 23,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4218cef619bedf14bf64d936b70201ef9cfe18f35dc0c2d06ab311faa7f4c879"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_1.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.296,
+          "stdout_sha256": "031f631da1f1ac44504d52a7a165dcd54abae53cf41c6b292ed107ca35ceff34",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11084,
+          "stderr_bytes": 0,
+          "stdout_tail": "_an_odd_number_of_spaces>\n\n    def test_valid_number_with_an_odd_number_of_spaces(self):\n>       self.assertIs(Luhn(\"234 567 891 234\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:44: AssertionError\n_ LuhnTest.test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid _\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid>\n\n    def test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid(self):\n>       self.assertIs(Luhn(\"059a\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:47: AssertionError\n_____ LuhnTest.test_valid_strings_with_punctuation_included_become_invalid _____\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_punctuation_included_become_invalid>\n\n    def test_valid_strings_with_punctuation_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055-444-285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:50: AssertionError\n_______ LuhnTest.test_valid_strings_with_symbols_included_become_invalid _______\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_symbols_included_become_invalid>\n\n    def test_valid_strings_with_symbols_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055# 444$ 285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:53: AssertionError\n____________________ LuhnTest.test_very_long_input_is_valid ____________________\n\nself = <luhn_test.LuhnTest testMethod=test_very_long_input_is_valid>\n\n    def test_very_long_input_is_valid(self):\n>       self.assertIs(Luhn(\"9999999999 9999999999 9999999999 9999999999\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:65: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid - AssertionError...\nFAILED luhn_test.py::LuhnTest::test_a_valid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nFAILED luhn_test.py::LuhnTest::test_invalid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_invalid_credit_card - AssertionError: Non...\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nFAILED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly - Asser...\nFAILED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid - Assert...\nFAILED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid - A...\nFAILED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid - Asser...\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_very_long_input_is_valid - AssertionError...\n23 failed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 0,
+          "failed": 23,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4218cef619bedf14bf64d936b70201ef9cfe18f35dc0c2d06ab311faa7f4c879"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_2.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.304,
+          "stdout_sha256": "22d2c456f07e8afcf51166d992d74bb9bb7d531a535088fd1bcb0b771d8f9736",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11084,
+          "stderr_bytes": 0,
+          "stdout_tail": "_an_odd_number_of_spaces>\n\n    def test_valid_number_with_an_odd_number_of_spaces(self):\n>       self.assertIs(Luhn(\"234 567 891 234\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:44: AssertionError\n_ LuhnTest.test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid _\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid>\n\n    def test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid(self):\n>       self.assertIs(Luhn(\"059a\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:47: AssertionError\n_____ LuhnTest.test_valid_strings_with_punctuation_included_become_invalid _____\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_punctuation_included_become_invalid>\n\n    def test_valid_strings_with_punctuation_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055-444-285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:50: AssertionError\n_______ LuhnTest.test_valid_strings_with_symbols_included_become_invalid _______\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_symbols_included_become_invalid>\n\n    def test_valid_strings_with_symbols_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055# 444$ 285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:53: AssertionError\n____________________ LuhnTest.test_very_long_input_is_valid ____________________\n\nself = <luhn_test.LuhnTest testMethod=test_very_long_input_is_valid>\n\n    def test_very_long_input_is_valid(self):\n>       self.assertIs(Luhn(\"9999999999 9999999999 9999999999 9999999999\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:65: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid - AssertionError...\nFAILED luhn_test.py::LuhnTest::test_a_valid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nFAILED luhn_test.py::LuhnTest::test_invalid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_invalid_credit_card - AssertionError: Non...\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nFAILED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly - Asser...\nFAILED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid - Assert...\nFAILED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid - A...\nFAILED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid - Asser...\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_very_long_input_is_valid - AssertionError...\n23 failed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 0,
+          "failed": 23,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4218cef619bedf14bf64d936b70201ef9cfe18f35dc0c2d06ab311faa7f4c879"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_3.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.285,
+          "stdout_sha256": "dbbec7cd8da538c521ba5a388913394ee3b9dc540867e02f5c7efb93a504b7fc",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11084,
+          "stderr_bytes": 0,
+          "stdout_tail": "_an_odd_number_of_spaces>\n\n    def test_valid_number_with_an_odd_number_of_spaces(self):\n>       self.assertIs(Luhn(\"234 567 891 234\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:44: AssertionError\n_ LuhnTest.test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid _\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid>\n\n    def test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid(self):\n>       self.assertIs(Luhn(\"059a\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:47: AssertionError\n_____ LuhnTest.test_valid_strings_with_punctuation_included_become_invalid _____\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_punctuation_included_become_invalid>\n\n    def test_valid_strings_with_punctuation_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055-444-285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:50: AssertionError\n_______ LuhnTest.test_valid_strings_with_symbols_included_become_invalid _______\n\nself = <luhn_test.LuhnTest testMethod=test_valid_strings_with_symbols_included_become_invalid>\n\n    def test_valid_strings_with_symbols_included_become_invalid(self):\n>       self.assertIs(Luhn(\"055# 444$ 285\").valid(), False)\nE       AssertionError: None is not False\n\nluhn_test.py:53: AssertionError\n____________________ LuhnTest.test_very_long_input_is_valid ____________________\n\nself = <luhn_test.LuhnTest testMethod=test_very_long_input_is_valid>\n\n    def test_very_long_input_is_valid(self):\n>       self.assertIs(Luhn(\"9999999999 9999999999 9999999999 9999999999\").valid(), True)\nE       AssertionError: None is not True\n\nluhn_test.py:65: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nFAILED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid - AssertionError...\nFAILED luhn_test.py::LuhnTest::test_a_valid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nFAILED luhn_test.py::LuhnTest::test_invalid_canadian_sin - AssertionError: No...\nFAILED luhn_test.py::LuhnTest::test_invalid_credit_card - AssertionError: Non...\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nFAILED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nFAILED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly - Asser...\nFAILED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid - Assert...\nFAILED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid - A...\nFAILED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid - Asser...\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nFAILED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nFAILED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nFAILED luhn_test.py::LuhnTest::test_very_long_input_is_valid - AssertionError...\n23 failed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "luhn.py",
+    "with_copy_of": "example.py",
+    "sha256": "8c9b705167891902cc94605dd71668082cc7b8cd2b67cc1054e40755d38b5d23",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "luhn_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 23,
+    "passed": 23,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 23,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "209075b00ec4f66d756b9886cc836d0e6c097549982b4e78bf45025d493110a4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_1.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.23,
+          "stdout_sha256": "51b3980ce3b10b4df8019a42ade62e290f5b92d8f7a37c2da64e4e2d89fd6f18",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2250,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......................                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid\nPASSED luhn_test.py::LuhnTest::test_a_valid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nPASSED luhn_test.py::LuhnTest::test_invalid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_invalid_credit_card\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nPASSED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly\nPASSED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid\nPASSED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid\nPASSED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_very_long_input_is_valid\n23 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 23,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "209075b00ec4f66d756b9886cc836d0e6c097549982b4e78bf45025d493110a4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_2.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.186,
+          "stdout_sha256": "8ccab9a61a8ad64b18787537935afa93715eb7b1e56d98833e910ea053795dc5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2250,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......................                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid\nPASSED luhn_test.py::LuhnTest::test_a_valid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nPASSED luhn_test.py::LuhnTest::test_invalid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_invalid_credit_card\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nPASSED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly\nPASSED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid\nPASSED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid\nPASSED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_very_long_input_is_valid\n23 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 23,
+          "passed": 23,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "209075b00ec4f66d756b9886cc836d0e6c097549982b4e78bf45025d493110a4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_3.xml",
+            "luhn_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.205,
+          "stdout_sha256": "9af98791773e21adb21f18627cfd34b5cd08ee4bae2009da5b30956b5f5f1a01",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2250,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......................                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__luhn/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_becomes_invalid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_simple_valid_sin_that_remains_valid_if_reversed\nPASSED luhn_test.py::LuhnTest::test_a_single_zero_is_invalid\nPASSED luhn_test.py::LuhnTest::test_a_valid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_input_digit_9_is_correctly_converted_to_output_digit_9\nPASSED luhn_test.py::LuhnTest::test_invalid_canadian_sin\nPASSED luhn_test.py::LuhnTest::test_invalid_credit_card\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_a_remainder_divisible_by_5\nPASSED luhn_test.py::LuhnTest::test_invalid_long_number_with_an_even_remainder\nPASSED luhn_test.py::LuhnTest::test_is_valid_can_be_called_repeatedly\nPASSED luhn_test.py::LuhnTest::test_more_than_a_single_zero_is_valid\nPASSED luhn_test.py::LuhnTest::test_non_numeric_non_space_char_in_the_middle_with_a_sum_that_s_divisible_by_10_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_single_digit_strings_can_not_be_valid\nPASSED luhn_test.py::LuhnTest::test_single_zero_with_space_is_invalid\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_using_ascii_value_for_non_doubled_non_digit_isn_t_allowed\nPASSED luhn_test.py::LuhnTest::test_valid_luhn_with_an_odd_number_of_digits_and_non_zero_first_digit\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_even_number_of_digits\nPASSED luhn_test.py::LuhnTest::test_valid_number_with_an_odd_number_of_spaces\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_a_non_digit_added_at_the_end_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_punctuation_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_valid_strings_with_symbols_included_become_invalid\nPASSED luhn_test.py::LuhnTest::test_very_long_input_is_valid\n23 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 23/23 passed, 0 failed, 0 errors (consistent)"
+}

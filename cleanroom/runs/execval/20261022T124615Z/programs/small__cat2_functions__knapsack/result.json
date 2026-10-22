@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/knapsack",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/knapsack/example.py",
+    "0_100 LOC/cat2_functions/knapsack/knapsack.py",
+    "0_100 LOC/cat2_functions/knapsack/knapsack_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "a0ffb9f3689142e0955cf1db1be4a5dc864d83c2ea60068a63e11dddaca4d3ba",
+    "knapsack.py": "43eb380b103ac0b3f377a4e11532df5dae97f181a79bc757bccaf37d304883db",
+    "knapsack_test.py": "2c037de2e02d0528d1ac5ab21af71f35988726a69038378c0e321fc9319af74e"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "knapsack.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "knapsack_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 7,
+    "passed": 0,
+    "failed": 7,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 0,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f461eedb36ea0695f66c21b089d8bc0d77c0fabaae40c78aaed58ae10dfd43f9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_1.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.215,
+          "stdout_sha256": "c2cf2719afa8a2c054db119d18686c50ac49e86c70aa5cbea6bad4c6e4e33bd8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5540,
+          "stderr_bytes": 0,
+          "stdout_tail": "(\n                104,\n                [\n                    {\"weight\": 25, \"value\": 350},\n                    {\"weight\": 35, \"value\": 400},\n                    {\"weight\": 45, \"value\": 450},\n                    {\"weight\": 5, \"value\": 20},\n                    {\"weight\": 25, \"value\": 70},\n                    {\"weight\": 3, \"value\": 8},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                ],\n            ),\n            900,\n        )\nE       AssertionError: None != 900\n\nknapsack_test.py:64: AssertionError\n______________________ KnapsackTest.test_example_knapsack ______________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_example_knapsack>\n\n    def test_example_knapsack(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 5, \"value\": 10},\n                    {\"weight\": 4, \"value\": 40},\n                    {\"weight\": 6, \"value\": 30},\n                    {\"weight\": 4, \"value\": 50},\n                ],\n            ),\n            90,\n        )\nE       AssertionError: None != 90\n\nknapsack_test.py:50: AssertionError\n____________ KnapsackTest.test_five_items_cannot_be_greedy_by_value ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_value>\n\n    def test_five_items_cannot_be_greedy_by_value(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 10, \"value\": 50},\n                ],\n            ),\n            80,\n        )\nE       AssertionError: None != 80\n\nknapsack_test.py:35: AssertionError\n___________ KnapsackTest.test_five_items_cannot_be_greedy_by_weight ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_weight>\n\n    def test_five_items_cannot_be_greedy_by_weight(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 10, \"value\": 21},\n                ],\n            ),\n            21,\n        )\nE       AssertionError: None != 21\n\nknapsack_test.py:20: AssertionError\n__________________________ KnapsackTest.test_no_items __________________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_no_items>\n\n    def test_no_items(self):\n>       self.assertEqual(maximum_value(100, []), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:14: AssertionError\n_____________________ KnapsackTest.test_one_item_too_heavy _____________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_one_item_too_heavy>\n\n    def test_one_item_too_heavy(self):\n>       self.assertEqual(maximum_value(10, [{\"weight\": 100, \"value\": 1}]), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED knapsack_test.py::KnapsackTest::test_15_items - AssertionError: None !...\nFAILED knapsack_test.py::KnapsackTest::test_8_items - AssertionError: None !=...\nFAILED knapsack_test.py::KnapsackTest::test_example_knapsack - AssertionError...\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nFAILED knapsack_test.py::KnapsackTest::test_no_items - AssertionError: None != 0\nFAILED knapsack_test.py::KnapsackTest::test_one_item_too_heavy - AssertionErr...\n7 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 0,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f461eedb36ea0695f66c21b089d8bc0d77c0fabaae40c78aaed58ae10dfd43f9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_2.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.217,
+          "stdout_sha256": "294a009948439f5204a275d36d96fa6c26657e27fe4a9d61b581f29fdaa151cd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5540,
+          "stderr_bytes": 0,
+          "stdout_tail": "(\n                104,\n                [\n                    {\"weight\": 25, \"value\": 350},\n                    {\"weight\": 35, \"value\": 400},\n                    {\"weight\": 45, \"value\": 450},\n                    {\"weight\": 5, \"value\": 20},\n                    {\"weight\": 25, \"value\": 70},\n                    {\"weight\": 3, \"value\": 8},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                ],\n            ),\n            900,\n        )\nE       AssertionError: None != 900\n\nknapsack_test.py:64: AssertionError\n______________________ KnapsackTest.test_example_knapsack ______________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_example_knapsack>\n\n    def test_example_knapsack(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 5, \"value\": 10},\n                    {\"weight\": 4, \"value\": 40},\n                    {\"weight\": 6, \"value\": 30},\n                    {\"weight\": 4, \"value\": 50},\n                ],\n            ),\n            90,\n        )\nE       AssertionError: None != 90\n\nknapsack_test.py:50: AssertionError\n____________ KnapsackTest.test_five_items_cannot_be_greedy_by_value ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_value>\n\n    def test_five_items_cannot_be_greedy_by_value(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 10, \"value\": 50},\n                ],\n            ),\n            80,\n        )\nE       AssertionError: None != 80\n\nknapsack_test.py:35: AssertionError\n___________ KnapsackTest.test_five_items_cannot_be_greedy_by_weight ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_weight>\n\n    def test_five_items_cannot_be_greedy_by_weight(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 10, \"value\": 21},\n                ],\n            ),\n            21,\n        )\nE       AssertionError: None != 21\n\nknapsack_test.py:20: AssertionError\n__________________________ KnapsackTest.test_no_items __________________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_no_items>\n\n    def test_no_items(self):\n>       self.assertEqual(maximum_value(100, []), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:14: AssertionError\n_____________________ KnapsackTest.test_one_item_too_heavy _____________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_one_item_too_heavy>\n\n    def test_one_item_too_heavy(self):\n>       self.assertEqual(maximum_value(10, [{\"weight\": 100, \"value\": 1}]), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED knapsack_test.py::KnapsackTest::test_15_items - AssertionError: None !...\nFAILED knapsack_test.py::KnapsackTest::test_8_items - AssertionError: None !=...\nFAILED knapsack_test.py::KnapsackTest::test_example_knapsack - AssertionError...\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nFAILED knapsack_test.py::KnapsackTest::test_no_items - AssertionError: None != 0\nFAILED knapsack_test.py::KnapsackTest::test_one_item_too_heavy - AssertionErr...\n7 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 0,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f461eedb36ea0695f66c21b089d8bc0d77c0fabaae40c78aaed58ae10dfd43f9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_3.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.202,
+          "stdout_sha256": "7600aec26ed9cfc05a979da6be8a37e2f86d827530560146dbba688eaf79e480",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5540,
+          "stderr_bytes": 0,
+          "stdout_tail": "(\n                104,\n                [\n                    {\"weight\": 25, \"value\": 350},\n                    {\"weight\": 35, \"value\": 400},\n                    {\"weight\": 45, \"value\": 450},\n                    {\"weight\": 5, \"value\": 20},\n                    {\"weight\": 25, \"value\": 70},\n                    {\"weight\": 3, \"value\": 8},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                ],\n            ),\n            900,\n        )\nE       AssertionError: None != 900\n\nknapsack_test.py:64: AssertionError\n______________________ KnapsackTest.test_example_knapsack ______________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_example_knapsack>\n\n    def test_example_knapsack(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 5, \"value\": 10},\n                    {\"weight\": 4, \"value\": 40},\n                    {\"weight\": 6, \"value\": 30},\n                    {\"weight\": 4, \"value\": 50},\n                ],\n            ),\n            90,\n        )\nE       AssertionError: None != 90\n\nknapsack_test.py:50: AssertionError\n____________ KnapsackTest.test_five_items_cannot_be_greedy_by_value ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_value>\n\n    def test_five_items_cannot_be_greedy_by_value(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 2, \"value\": 20},\n                    {\"weight\": 10, \"value\": 50},\n                ],\n            ),\n            80,\n        )\nE       AssertionError: None != 80\n\nknapsack_test.py:35: AssertionError\n___________ KnapsackTest.test_five_items_cannot_be_greedy_by_weight ____________\n\nself = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_weight>\n\n    def test_five_items_cannot_be_greedy_by_weight(self):\n>       self.assertEqual(\n            maximum_value(\n                10,\n                [\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 2, \"value\": 5},\n                    {\"weight\": 10, \"value\": 21},\n                ],\n            ),\n            21,\n        )\nE       AssertionError: None != 21\n\nknapsack_test.py:20: AssertionError\n__________________________ KnapsackTest.test_no_items __________________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_no_items>\n\n    def test_no_items(self):\n>       self.assertEqual(maximum_value(100, []), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:14: AssertionError\n_____________________ KnapsackTest.test_one_item_too_heavy _____________________\n\nself = <knapsack_test.KnapsackTest testMethod=test_one_item_too_heavy>\n\n    def test_one_item_too_heavy(self):\n>       self.assertEqual(maximum_value(10, [{\"weight\": 100, \"value\": 1}]), 0)\nE       AssertionError: None != 0\n\nknapsack_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED knapsack_test.py::KnapsackTest::test_15_items - AssertionError: None !...\nFAILED knapsack_test.py::KnapsackTest::test_8_items - AssertionError: None !=...\nFAILED knapsack_test.py::KnapsackTest::test_example_knapsack - AssertionError...\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nFAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nFAILED knapsack_test.py::KnapsackTest::test_no_items - AssertionError: None != 0\nFAILED knapsack_test.py::KnapsackTest::test_one_item_too_heavy - AssertionErr...\n7 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "knapsack.py",
+    "with_copy_of": "example.py",
+    "sha256": "a0ffb9f3689142e0955cf1db1be4a5dc864d83c2ea60068a63e11dddaca4d3ba",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "knapsack_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9095029f1db80bcb4e13435efdcb801f6d7a0396e294ebef1a9c39e7b7a847bf"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_1.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.181,
+          "stdout_sha256": "11bca46edbebf36b34b1871b63ebdd37bce9336ae43523109096a95e6349e923",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 849,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......                                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED knapsack_test.py::KnapsackTest::test_15_items\nPASSED knapsack_test.py::KnapsackTest::test_8_items\nPASSED knapsack_test.py::KnapsackTest::test_example_knapsack\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nPASSED knapsack_test.py::KnapsackTest::test_no_items\nPASSED knapsack_test.py::KnapsackTest::test_one_item_too_heavy\n7 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9095029f1db80bcb4e13435efdcb801f6d7a0396e294ebef1a9c39e7b7a847bf"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_2.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.187,
+          "stdout_sha256": "554a64976e7026c09e7ea015e9d1280289a036e92922b897fc785ae790797bb4",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 849,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......                                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED knapsack_test.py::KnapsackTest::test_15_items\nPASSED knapsack_test.py::KnapsackTest::test_8_items\nPASSED knapsack_test.py::KnapsackTest::test_example_knapsack\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nPASSED knapsack_test.py::KnapsackTest::test_no_items\nPASSED knapsack_test.py::KnapsackTest::test_one_item_too_heavy\n7 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9095029f1db80bcb4e13435efdcb801f6d7a0396e294ebef1a9c39e7b7a847bf"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_3.xml",
+            "knapsack_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.183,
+          "stdout_sha256": "8db296ea2d02d15e6e323e580b48f8e80b07b1839d03faa74efc880cbe811bbd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 849,
+          "stderr_bytes": 0,
+          "stdout_tail": ".......                                                                  [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED knapsack_test.py::KnapsackTest::test_15_items\nPASSED knapsack_test.py::KnapsackTest::test_8_items\nPASSED knapsack_test.py::KnapsackTest::test_example_knapsack\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value\nPASSED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight\nPASSED knapsack_test.py::KnapsackTest::test_no_items\nPASSED knapsack_test.py::KnapsackTest::test_one_item_too_heavy\n7 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 7/7 passed, 0 failed, 0 errors (consistent)"
+}

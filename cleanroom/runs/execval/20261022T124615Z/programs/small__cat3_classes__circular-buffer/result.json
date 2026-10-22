@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/circular-buffer",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/circular-buffer/circular_buffer.py",
+    "0_100 LOC/cat3_classes/circular-buffer/circular_buffer_test.py",
+    "0_100 LOC/cat3_classes/circular-buffer/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "circular_buffer.py": "0ef8d60d8836c30c0c9e5c26f301d5e991263fe05affed3bc10151b881d79d1d",
+    "circular_buffer_test.py": "12c42720071f96b5b340c36c35f4ffce46c8745519feca56f92f2dd9afd38aef",
+    "example.py": "8a6057be363e6deb96df46b856863491d70d3ca8785fe0b36ddde0a55f108d65"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.034,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "circular_buffer.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "circular_buffer_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 14,
+    "passed": 0,
+    "failed": 14,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ef6c27d67a717678e92dbcb9913ce2a34e940da575e2aebe0873f5cf321849a9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_1.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.281,
+          "stdout_sha256": "6b237af8ca455f057b71b7a93f35c9d2f853c39c7369ffc4d80d322db2087f6d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8276,
+          "stderr_bytes": 0,
+          "stdout_tail": "ffer _____\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_acts_like_write_on_non_full_buffer>\n\n    def test_overwrite_acts_like_write_on_non_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.overwrite(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:97: AssertionError\n__ CircularBufferTest.test_overwrite_replaces_the_oldest_item_on_full_buffer ___\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_on_full_buffer>\n\n    def test_overwrite_replaces_the_oldest_item_on_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.overwrite(\"3\")\n>       self.assertEqual(buf.read(), \"2\")\nE       AssertionError: None != '2'\n\ncircular_buffer_test.py:105: AssertionError\n_ CircularBufferTest.test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read>\n\n    def test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read(\n        self,\n    ):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.write(\"3\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:115: AssertionError\n_ CircularBufferTest.test_read_position_is_maintained_even_across_multiple_writes _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_read_position_is_maintained_even_across_multiple_writes>\n\n    def test_read_position_is_maintained_even_across_multiple_writes(self):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:65: AssertionError\n___________ CircularBufferTest.test_reading_empty_buffer_should_fail ___________\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_reading_empty_buffer_should_fail>\n\n    def test_reading_empty_buffer_should_fail(self):\n        buf = CircularBuffer(1)\n>       with self.assertRaises(BufferError) as err:\nE       AssertionError: BufferError not raised\n\ncircular_buffer_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nFAILED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nFAILED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nFAILED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 failed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ef6c27d67a717678e92dbcb9913ce2a34e940da575e2aebe0873f5cf321849a9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_2.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.327,
+          "stdout_sha256": "7eaf5c0ba234878f75edb0a52f0f4bb2ccb24a66c4f24490ad61cd00bbc94b50",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8276,
+          "stderr_bytes": 0,
+          "stdout_tail": "ffer _____\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_acts_like_write_on_non_full_buffer>\n\n    def test_overwrite_acts_like_write_on_non_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.overwrite(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:97: AssertionError\n__ CircularBufferTest.test_overwrite_replaces_the_oldest_item_on_full_buffer ___\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_on_full_buffer>\n\n    def test_overwrite_replaces_the_oldest_item_on_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.overwrite(\"3\")\n>       self.assertEqual(buf.read(), \"2\")\nE       AssertionError: None != '2'\n\ncircular_buffer_test.py:105: AssertionError\n_ CircularBufferTest.test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read>\n\n    def test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read(\n        self,\n    ):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.write(\"3\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:115: AssertionError\n_ CircularBufferTest.test_read_position_is_maintained_even_across_multiple_writes _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_read_position_is_maintained_even_across_multiple_writes>\n\n    def test_read_position_is_maintained_even_across_multiple_writes(self):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:65: AssertionError\n___________ CircularBufferTest.test_reading_empty_buffer_should_fail ___________\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_reading_empty_buffer_should_fail>\n\n    def test_reading_empty_buffer_should_fail(self):\n        buf = CircularBuffer(1)\n>       with self.assertRaises(BufferError) as err:\nE       AssertionError: BufferError not raised\n\ncircular_buffer_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nFAILED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nFAILED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nFAILED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 failed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ef6c27d67a717678e92dbcb9913ce2a34e940da575e2aebe0873f5cf321849a9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_3.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.29,
+          "stdout_sha256": "65c3d88bfd26a2cc177a6c02486df4fc95396555418459915839848de1a17b32",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8276,
+          "stderr_bytes": 0,
+          "stdout_tail": "ffer _____\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_acts_like_write_on_non_full_buffer>\n\n    def test_overwrite_acts_like_write_on_non_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.overwrite(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:97: AssertionError\n__ CircularBufferTest.test_overwrite_replaces_the_oldest_item_on_full_buffer ___\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_on_full_buffer>\n\n    def test_overwrite_replaces_the_oldest_item_on_full_buffer(self):\n        buf = CircularBuffer(2)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.overwrite(\"3\")\n>       self.assertEqual(buf.read(), \"2\")\nE       AssertionError: None != '2'\n\ncircular_buffer_test.py:105: AssertionError\n_ CircularBufferTest.test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read>\n\n    def test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read(\n        self,\n    ):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n        buf.write(\"3\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:115: AssertionError\n_ CircularBufferTest.test_read_position_is_maintained_even_across_multiple_writes _\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_read_position_is_maintained_even_across_multiple_writes>\n\n    def test_read_position_is_maintained_even_across_multiple_writes(self):\n        buf = CircularBuffer(3)\n        buf.write(\"1\")\n        buf.write(\"2\")\n>       self.assertEqual(buf.read(), \"1\")\nE       AssertionError: None != '1'\n\ncircular_buffer_test.py:65: AssertionError\n___________ CircularBufferTest.test_reading_empty_buffer_should_fail ___________\n\nself = <circular_buffer_test.CircularBufferTest testMethod=test_reading_empty_buffer_should_fail>\n\n    def test_reading_empty_buffer_should_fail(self):\n        buf = CircularBuffer(1)\n>       with self.assertRaises(BufferError) as err:\nE       AssertionError: BufferError not raised\n\ncircular_buffer_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nFAILED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nFAILED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nFAILED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nFAILED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nFAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nFAILED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nFAILED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "circular_buffer.py",
+    "with_copy_of": "example.py",
+    "sha256": "8a6057be363e6deb96df46b856863491d70d3ca8785fe0b36ddde0a55f108d65",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "circular_buffer_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f085df831e73df49e80f74784c7bd454b1b225d801925b41aaff1291af641be1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_1.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.249,
+          "stdout_sha256": "1b68042114e639f519d567b7883b0a5fc0e1bf38bae9188f59aa5396fe858aea",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1811,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nPASSED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nPASSED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nPASSED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f085df831e73df49e80f74784c7bd454b1b225d801925b41aaff1291af641be1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_2.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.252,
+          "stdout_sha256": "df9055260b116137b5563f95309cde90edf9470605e30c79861bcabd15f1cbc8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1811,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nPASSED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nPASSED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nPASSED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f085df831e73df49e80f74784c7bd454b1b225d801925b41aaff1291af641be1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_3.xml",
+            "circular_buffer_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.231,
+          "stdout_sha256": "179c2ce85d7a13be38f1ac7485db251604ac5b936c593efbe2caeec9865e3e58",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1811,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write\nPASSED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once\nPASSED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to\nPASSED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written\nPASSED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer\nPASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\nPASSED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes\nPASSED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 14/14 passed, 0 failed, 0 errors (consistent)"
+}

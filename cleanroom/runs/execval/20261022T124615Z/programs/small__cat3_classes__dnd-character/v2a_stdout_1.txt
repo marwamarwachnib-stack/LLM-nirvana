@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting dnd_character_test.py ____________________
+ImportError while importing test module '/opt/cleanroom/sandboxes/20261022T124615Z/small__cat3_classes__dnd-character/v2a_as_shipped/dnd_character_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../envs/py31012/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+dnd_character_test.py:7: in <module>
+    from dnd_character import (
+E   ImportError: cannot import name 'modifier' from 'dnd_character' (/opt/cleanroom/sandboxes/20261022T124615Z/small__cat3_classes__dnd-character/v2a_as_shipped/dnd_character.py)
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__dnd-character/v2a_junit_1.xml -
+=========================== short test summary info ============================
+ERROR dnd_character_test.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.11s

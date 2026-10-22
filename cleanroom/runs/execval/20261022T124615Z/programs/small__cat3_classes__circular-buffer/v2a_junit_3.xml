@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="14" skipped="0" tests="14" time="0.076" timestamp="2026-10-22T12:46:46.580245" hostname="vm"><testcase classname="circular_buffer_test.CircularBufferTest" name="test_a_read_frees_up_capacity_for_another_write" time="0.001"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_a_read_frees_up_capacity_for_another_write&gt;
+
+    def test_a_read_frees_up_capacity_for_another_write(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:57: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_can_read_an_item_just_written" time="0.001"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_can_read_an_item_just_written&gt;
+
+    def test_can_read_an_item_just_written(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:26: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_clear_does_nothing_on_empty_buffer" time="0.001"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_clear_does_nothing_on_empty_buffer&gt;
+
+    def test_clear_does_nothing_on_empty_buffer(self):
+        buf = CircularBuffer(1)
+        buf.clear()
+        buf.write("1")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:91: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_clear_frees_up_capacity_for_another_write" time="0.001"><failure message="AssertionError: None != '2'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_clear_frees_up_capacity_for_another_write&gt;
+
+    def test_clear_frees_up_capacity_for_another_write(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+        buf.clear()
+        buf.write("2")
+&gt;       self.assertEqual(buf.read(), "2")
+E       AssertionError: None != '2'
+
+circular_buffer_test.py:85: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_each_item_may_only_be_read_once" time="0.001"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_each_item_may_only_be_read_once&gt;
+
+    def test_each_item_may_only_be_read_once(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:31: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_full_buffer_can_t_be_written_to" time="0.001"><failure message="AssertionError: BufferError not raised">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_full_buffer_can_t_be_written_to&gt;
+
+    def test_full_buffer_can_t_be_written_to(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+&gt;       with self.assertRaises(BufferError) as err:
+E       AssertionError: BufferError not raised
+
+circular_buffer_test.py:48: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_initial_clear_does_not_affect_wrapping_around" time="0.001"><failure message="AssertionError: None != '3'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_initial_clear_does_not_affect_wrapping_around&gt;
+
+    def test_initial_clear_does_not_affect_wrapping_around(self):
+        buf = CircularBuffer(2)
+        buf.clear()
+        buf.write("1")
+        buf.write("2")
+        buf.overwrite("3")
+        buf.overwrite("4")
+&gt;       self.assertEqual(buf.read(), "3")
+E       AssertionError: None != '3'
+
+circular_buffer_test.py:129: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_items_are_read_in_the_order_they_are_written" time="0.001"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_items_are_read_in_the_order_they_are_written&gt;
+
+    def test_items_are_read_in_the_order_they_are_written(self):
+        buf = CircularBuffer(2)
+        buf.write("1")
+        buf.write("2")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:42: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_items_cleared_out_of_buffer_can_t_be_read" time="0.001"><failure message="AssertionError: BufferError not raised">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_items_cleared_out_of_buffer_can_t_be_read&gt;
+
+    def test_items_cleared_out_of_buffer_can_t_be_read(self):
+        buf = CircularBuffer(1)
+        buf.write("1")
+        buf.clear()
+&gt;       with self.assertRaises(BufferError) as err:
+E       AssertionError: BufferError not raised
+
+circular_buffer_test.py:74: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_overwrite_acts_like_write_on_non_full_buffer" time="0.000"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_overwrite_acts_like_write_on_non_full_buffer&gt;
+
+    def test_overwrite_acts_like_write_on_non_full_buffer(self):
+        buf = CircularBuffer(2)
+        buf.write("1")
+        buf.overwrite("2")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:97: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_overwrite_replaces_the_oldest_item_on_full_buffer" time="0.000"><failure message="AssertionError: None != '2'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_on_full_buffer&gt;
+
+    def test_overwrite_replaces_the_oldest_item_on_full_buffer(self):
+        buf = CircularBuffer(2)
+        buf.write("1")
+        buf.write("2")
+        buf.overwrite("3")
+&gt;       self.assertEqual(buf.read(), "2")
+E       AssertionError: None != '2'
+
+circular_buffer_test.py:105: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read" time="0.000"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read&gt;
+
+    def test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read(
+        self,
+    ):
+        buf = CircularBuffer(3)
+        buf.write("1")
+        buf.write("2")
+        buf.write("3")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:115: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_read_position_is_maintained_even_across_multiple_writes" time="0.000"><failure message="AssertionError: None != '1'">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_read_position_is_maintained_even_across_multiple_writes&gt;
+
+    def test_read_position_is_maintained_even_across_multiple_writes(self):
+        buf = CircularBuffer(3)
+        buf.write("1")
+        buf.write("2")
+&gt;       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:65: AssertionError</failure></testcase><testcase classname="circular_buffer_test.CircularBufferTest" name="test_reading_empty_buffer_should_fail" time="0.001"><failure message="AssertionError: BufferError not raised">self = &lt;circular_buffer_test.CircularBufferTest testMethod=test_reading_empty_buffer_should_fail&gt;
+
+    def test_reading_empty_buffer_should_fail(self):
+        buf = CircularBuffer(1)
+&gt;       with self.assertRaises(BufferError) as err:
+E       AssertionError: BufferError not raised
+
+circular_buffer_test.py:17: AssertionError</failure></testcase></testsuite></testsuites>

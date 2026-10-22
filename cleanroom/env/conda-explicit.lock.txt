@@ -1,0 +1,33 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+@EXPLICIT
+https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.tar.bz2#013d3f22cd3b87f71224bd936765bcad
+https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-52_gnu.tar.bz2#9fc9aff1a9d85b7d0dd3bad20081f29c
+https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2026.10.20-h06a4308_0.tar.bz2#3b76c1986ad0aab60a98e1db130bed3e
+https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.44-h9e0c5a2_3.tar.bz2#f966e8da4e4b1aa50ffd96bae411599a
+https://repo.anaconda.com/pkgs/main/noarch/tzdata-2026c-he532380_0.tar.bz2#9d953c3a6c87f11a193eae5daf627fed
+https://repo.anaconda.com/pkgs/main/linux-64/libgcc-15.2.0-h69a1729_8.tar.bz2#293e5bf121d856a06b2883e278e5694f
+https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-15.2.0-h166f726_8.tar.bz2#c015bc2f069a4a753dce19576f08583c
+https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-15.2.0-h39759b7_8.tar.bz2#1a2f551d06f9919990adcf89a7a113b9
+https://repo.anaconda.com/pkgs/main/linux-64/libzlib-1.3.2-h47b2149_0.tar.bz2#e92f60b88461c1adeb1d1bfcc1fea383
+https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.5.9-h1b28b03_0.tar.bz2#c10c014db68861459479a6f9c73199ec
+https://repo.anaconda.com/pkgs/main/linux-64/pthread-stubs-0.3-h47b2149_2.tar.bz2#7cb88f6b0fc6584430cc87f0949952d6
+https://repo.anaconda.com/pkgs/main/linux-64/xorg-xorgproto-2025.1-h47b2149_0.tar.bz2#058d062336ae4d465abc31b25a6685bc
+https://repo.anaconda.com/pkgs/main/linux-64/xz-5.8.4-h140a991_0.tar.bz2#74c833f8e497fd033f50ec143586e729
+https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h5eee18b_6.tar.bz2#f5058c8d5b2994b7334f18e022105a14
+https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.8-h06d3fd0_3.tar.bz2#aed75450c234a5f9dbf15e26c913cb9a
+https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.tar.bz2#292768ec77416ae257cfdd44ea2071c8
+https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.6-hfaaeb4e_0.tar.bz2#131fb31a3ec50ef83e39328cd11281c1
+https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxau-1.0.12-h9b100fa_0.tar.bz2#962cde7b3951cf7244e2ed2d059900a6
+https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxdmcp-1.1.5-h9b100fa_0.tar.bz2#06a53975cfb6a6c46f7c60a0860a546c
+https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.3.2-h47b2149_0.tar.bz2#c9e7661c578bc42c239858035ddf4686
+https://repo.anaconda.com/pkgs/main/linux-64/libxcb-1.17.0-h9b100fa_0.tar.bz2#623e472cf0c02599f01c49879dab1bb6
+https://repo.anaconda.com/pkgs/main/linux-64/readline-8.3-hc2a1206_0.tar.bz2#7ae5a77a62d93f38e777a71b56c396cf
+https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.53.4-h795bf6d_0.tar.bz2#a13370b91d2a3af7d3c66934937d3473
+https://repo.anaconda.com/pkgs/main/linux-64/xorg-libx11-1.8.14-h65de747_0.tar.bz2#1572bc23d63a1a073be6b1d6327212e8
+https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.15-h54e0aa7_0.tar.bz2#2e94285aff074535a869ec785bb3bd27
+https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.12-h955ad1f_0.tar.bz2#dc5b970262ace405e742f38108a38a13
+https://repo.anaconda.com/pkgs/main/linux-64/setuptools-68.0.0-py310h06a4308_0.tar.bz2#8eb5d51a70ed92bc2bfb96a7a65605c4
+https://repo.anaconda.com/pkgs/main/linux-64/wheel-0.41.2-py310h06a4308_0.tar.bz2#17ad3bf81caf45682f2f905921246e84
+https://repo.anaconda.com/pkgs/main/linux-64/pip-23.2.1-py310h06a4308_0.tar.bz2#93967288222ca6e012f340873968a7fc

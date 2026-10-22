@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/poker",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/poker/example.py",
+    "0_100 LOC/cat2_functions/poker/poker.py",
+    "0_100 LOC/cat2_functions/poker/poker_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "9627361e2566290218239ed64ea4edf610f826e94ae7044d9eef9316d241ec43",
+    "poker.py": "6a4b5adab3ba9261fb4f9e2b09abc549b9ea37bf0774edc3c7759cec9a8b41fe",
+    "poker_test.py": "b39b33076a4fcaec440776837a7e4e491489ab0f984c79f1d3c5603294b702ca"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "poker.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "poker_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 35,
+    "passed": 0,
+    "failed": 35,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 0,
+          "failed": 35,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5f64310712ee457701eaccbb9c3d69b79a6f932f7ac4a2e0dc46ab1e457a3538"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_1.xml",
+            "poker_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.316,
+          "stdout_sha256": "c552fba5bd00d5149fa74f35157794145229bbda5a4b9d6a29078d47c0ccde57",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 20448,
+          "stderr_bytes": 0,
+          "stdout_tail": "es_go_to_highest_remaining_cards>\n\n    def test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards(\n        self,\n    ):\n>       self.assertEqual(\n            best_hands([\"4S AH AS 7C AD\", \"4S AH AS 8C AD\"]), [\"4S AH AS 8C AD\"]\n        )\nE       AssertionError: None != ['4S AH AS 8C AD']\n\npoker_test.py:101: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind - Asse...\nFAILED poker_test.py::PokerTest::test_a_tie_has_multiple_winners - AssertionE...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a - As...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5 - A...\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nFAILED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nFAILED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nFAILED poker_test.py::PokerTest::test_flush_beats_a_straight - AssertionError...\nFAILED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house - Ass...\nFAILED poker_test.py::PokerTest::test_full_house_beats_a_flush - AssertionErr...\nFAILED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins - As...\nFAILED poker_test.py::PokerTest::test_highest_pair_wins - AssertionError: Non...\nFAILED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nFAILED poker_test.py::PokerTest::test_one_pair_beats_high_card - AssertionErr...\nFAILED poker_test.py::PokerTest::test_single_hand_always_wins - AssertionErro...\nFAILED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind - A...\nFAILED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair - Assert...\nFAILED poker_test.py::PokerTest::test_two_pairs_beats_one_pair - AssertionErr...\nFAILED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 failed in 0.14s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 0,
+          "failed": 35,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5f64310712ee457701eaccbb9c3d69b79a6f932f7ac4a2e0dc46ab1e457a3538"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_2.xml",
+            "poker_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.357,
+          "stdout_sha256": "1aa4ba3d4ff0f9c3827dbb93aaf6361277a415cb7b15bcdf57e99d2567fb17af",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 20448,
+          "stderr_bytes": 0,
+          "stdout_tail": "es_go_to_highest_remaining_cards>\n\n    def test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards(\n        self,\n    ):\n>       self.assertEqual(\n            best_hands([\"4S AH AS 7C AD\", \"4S AH AS 8C AD\"]), [\"4S AH AS 8C AD\"]\n        )\nE       AssertionError: None != ['4S AH AS 8C AD']\n\npoker_test.py:101: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind - Asse...\nFAILED poker_test.py::PokerTest::test_a_tie_has_multiple_winners - AssertionE...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a - As...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5 - A...\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nFAILED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nFAILED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nFAILED poker_test.py::PokerTest::test_flush_beats_a_straight - AssertionError...\nFAILED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house - Ass...\nFAILED poker_test.py::PokerTest::test_full_house_beats_a_flush - AssertionErr...\nFAILED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins - As...\nFAILED poker_test.py::PokerTest::test_highest_pair_wins - AssertionError: Non...\nFAILED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nFAILED poker_test.py::PokerTest::test_one_pair_beats_high_card - AssertionErr...\nFAILED poker_test.py::PokerTest::test_single_hand_always_wins - AssertionErro...\nFAILED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind - A...\nFAILED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair - Assert...\nFAILED poker_test.py::PokerTest::test_two_pairs_beats_one_pair - AssertionErr...\nFAILED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 failed in 0.15s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 0,
+          "failed": 35,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5f64310712ee457701eaccbb9c3d69b79a6f932f7ac4a2e0dc46ab1e457a3538"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_3.xml",
+            "poker_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.361,
+          "stdout_sha256": "2e337e2dd670619b7b26ddcc64061f4ac4d0631c7451f52f80c6db74c87cab2c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 20448,
+          "stderr_bytes": 0,
+          "stdout_tail": "es_go_to_highest_remaining_cards>\n\n    def test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards(\n        self,\n    ):\n>       self.assertEqual(\n            best_hands([\"4S AH AS 7C AD\", \"4S AH AS 8C AD\"]), [\"4S AH AS 8C AD\"]\n        )\nE       AssertionError: None != ['4S AH AS 8C AD']\n\npoker_test.py:101: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind - Asse...\nFAILED poker_test.py::PokerTest::test_a_tie_has_multiple_winners - AssertionE...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a - As...\nFAILED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5 - A...\nFAILED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nFAILED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nFAILED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nFAILED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nFAILED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nFAILED poker_test.py::PokerTest::test_flush_beats_a_straight - AssertionError...\nFAILED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house - Ass...\nFAILED poker_test.py::PokerTest::test_full_house_beats_a_flush - AssertionErr...\nFAILED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins - As...\nFAILED poker_test.py::PokerTest::test_highest_pair_wins - AssertionError: Non...\nFAILED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nFAILED poker_test.py::PokerTest::test_one_pair_beats_high_card - AssertionErr...\nFAILED poker_test.py::PokerTest::test_single_hand_always_wins - AssertionErro...\nFAILED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind - A...\nFAILED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair - Assert...\nFAILED poker_test.py::PokerTest::test_two_pairs_beats_one_pair - AssertionErr...\nFAILED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nFAILED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 failed in 0.14s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "poker.py",
+    "with_copy_of": "example.py",
+    "sha256": "9627361e2566290218239ed64ea4edf610f826e94ae7044d9eef9316d241ec43",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "poker_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 35,
+    "passed": 35,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 35,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5a30f2c543c3cb31fd4bc18a739d9be9d12127cef4c0b4b3f88a6b78faa3f327"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_1.xml",
+            "poker_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.243,
+          "stdout_sha256": "d1a767eee09adeeb36f58cd474a0408df214b44a8421a78920b50d74ac65607b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3596,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................................                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind\nPASSED poker_test.py::PokerTest::test_a_tie_has_multiple_winners\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nPASSED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nPASSED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nPASSED poker_test.py::PokerTest::test_flush_beats_a_straight\nPASSED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house\nPASSED poker_test.py::PokerTest::test_full_house_beats_a_flush\nPASSED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins\nPASSED poker_test.py::PokerTest::test_highest_pair_wins\nPASSED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nPASSED poker_test.py::PokerTest::test_one_pair_beats_high_card\nPASSED poker_test.py::PokerTest::test_single_hand_always_wins\nPASSED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind\nPASSED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_beats_one_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 35,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5a30f2c543c3cb31fd4bc18a739d9be9d12127cef4c0b4b3f88a6b78faa3f327"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_2.xml",
+            "poker_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.234,
+          "stdout_sha256": "da52a4700c6e34c3894d44bf4df55a16db10b305f512261122907fab9a26abdd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3596,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................................                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind\nPASSED poker_test.py::PokerTest::test_a_tie_has_multiple_winners\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nPASSED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nPASSED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nPASSED poker_test.py::PokerTest::test_flush_beats_a_straight\nPASSED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house\nPASSED poker_test.py::PokerTest::test_full_house_beats_a_flush\nPASSED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins\nPASSED poker_test.py::PokerTest::test_highest_pair_wins\nPASSED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nPASSED poker_test.py::PokerTest::test_one_pair_beats_high_card\nPASSED poker_test.py::PokerTest::test_single_hand_always_wins\nPASSED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind\nPASSED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_beats_one_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 passed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 35,
+          "passed": 35,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "5a30f2c543c3cb31fd4bc18a739d9be9d12127cef4c0b4b3f88a6b78faa3f327"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_3.xml",
+            "poker_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.246,
+          "stdout_sha256": "c4d24646ae1f1045973904c4b423f24f52c6d5a43acd941a42c5d17b015d3d87",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3596,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................................                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__poker/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED poker_test.py::PokerTest::test_a_straight_beats_three_of_a_kind\nPASSED poker_test.py::PokerTest::test_a_tie_has_multiple_winners\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_end_a_straight_flush_10_j_q_k_a\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_can_start_a_straight_flush_a_2_3_4_5\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_flush_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_aces_cannot_be_in_the_middle_of_a_straight_q_k_a_2_3\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_flush_tie_goes_to_high_card_down_to_the_last_one_if_necessary\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_full_house_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_a_straight_flush_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_both_hands_have_four_of_a_kind_tie_goes_to_high_quad\nPASSED poker_test.py::PokerTest::test_both_hands_have_three_of_a_kind_tie_goes_to_highest_ranked_triplet\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_identically_ranked_pairs_tie_goes_to_remaining_card_kicker\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_highest_ranked_pair_wins\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_that_add_to_the_same_value_win_goes_to_highest_pair\nPASSED poker_test.py::PokerTest::test_both_hands_have_two_pairs_with_the_same_highest_ranked_pair_tie_goes_to_low_pair\nPASSED poker_test.py::PokerTest::test_both_hands_with_a_straight_tie_goes_to_highest_ranked_card\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush\nPASSED poker_test.py::PokerTest::test_even_though_an_ace_is_usually_high_a_5_high_straight_is_the_lowest_scoring_straight\nPASSED poker_test.py::PokerTest::test_flush_beats_a_straight\nPASSED poker_test.py::PokerTest::test_four_of_a_kind_beats_a_full_house\nPASSED poker_test.py::PokerTest::test_full_house_beats_a_flush\nPASSED poker_test.py::PokerTest::test_highest_card_out_of_all_hands_wins\nPASSED poker_test.py::PokerTest::test_highest_pair_wins\nPASSED poker_test.py::PokerTest::test_multiple_hands_with_the_same_high_cards_tie_compares_next_highest_ranked_down_to_last_card\nPASSED poker_test.py::PokerTest::test_one_pair_beats_high_card\nPASSED poker_test.py::PokerTest::test_single_hand_always_wins\nPASSED poker_test.py::PokerTest::test_straight_flush_beats_four_of_a_kind\nPASSED poker_test.py::PokerTest::test_three_of_a_kind_beats_two_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_beats_one_pair\nPASSED poker_test.py::PokerTest::test_two_pairs_first_ranked_by_largest_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_have_a_full_house_with_the_same_triplet_tie_goes_to_the_pair\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_both_hands_with_identical_four_of_a_kind_tie_determined_by_kicker\nPASSED poker_test.py::PokerTest::test_with_multiple_decks_two_players_can_have_same_three_of_a_kind_ties_go_to_highest_remaining_cards\n35 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 35/35 passed, 0 failed, 0 errors (consistent)"
+}

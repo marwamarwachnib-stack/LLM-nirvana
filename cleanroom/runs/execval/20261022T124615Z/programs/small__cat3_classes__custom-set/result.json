@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/custom-set",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/custom-set/custom_set.py",
+    "0_100 LOC/cat3_classes/custom-set/custom_set_test.py",
+    "0_100 LOC/cat3_classes/custom-set/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "custom_set.py": "6567d4284a47524eb7d4115bdad623198a3e937f27641122f6588451630be758",
+    "custom_set_test.py": "4f7d7965a4a7a27934f13770839d36d348ce53c8d4ffc7d83b4e338208ee9125",
+    "example.py": "1cad5ce97926dec38c63eaa7368c52c182f45acde2eeb22b0d5cc522c3aa577b"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.03,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.02,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "custom_set.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "custom_set_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 38,
+    "passed": 6,
+    "failed": 32,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 6,
+          "failed": 32,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "85c90b6c10144479a0dbd07abeb9b29bb3efbdc9006f4df1d846d1450055f65a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_1.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.405,
+          "stdout_sha256": "75367e79534cb638ad69ccd1541897627ff014059cc8b734b3b1b12d67ec28bf",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 19832,
+          "stderr_bytes": 0,
+          "stdout_tail": "et object at 0x7f0d66105780>\n\ncustom_set_test.py:27: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_1.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\nFAILED custom_set_test.py::CustomSetTest::test_add_to_empty_set - AssertionEr...\nFAILED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nFAILED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nFAILED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nFAILED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\n32 failed, 6 passed in 0.19s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 6,
+          "failed": 32,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "85c90b6c10144479a0dbd07abeb9b29bb3efbdc9006f4df1d846d1450055f65a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_2.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.366,
+          "stdout_sha256": "45e940fe8a43207c66c5a6132032dc26c283b2931ccb88b8704d1fb5ee15c196",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 19832,
+          "stderr_bytes": 0,
+          "stdout_tail": "et object at 0x7f33fd6a97e0>\n\ncustom_set_test.py:27: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_2.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\nFAILED custom_set_test.py::CustomSetTest::test_add_to_empty_set - AssertionEr...\nFAILED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nFAILED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nFAILED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nFAILED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\n32 failed, 6 passed in 0.18s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 6,
+          "failed": 32,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "85c90b6c10144479a0dbd07abeb9b29bb3efbdc9006f4df1d846d1450055f65a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_3.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.372,
+          "stdout_sha256": "b4d8e1955dfbe495674c70900e51c264360a79b84c152e4fd6ffcbf2f8865558",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 19832,
+          "stderr_bytes": 0,
+          "stdout_tail": "et object at 0x7f31d5df17e0>\n\ncustom_set_test.py:27: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2a_junit_3.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\nFAILED custom_set_test.py::CustomSetTest::test_add_to_empty_set - AssertionEr...\nFAILED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal - Asserti...\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nFAILED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nFAILED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nFAILED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nFAILED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nFAILED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nFAILED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nFAILED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\n32 failed, 6 passed in 0.20s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "custom_set.py",
+    "with_copy_of": "example.py",
+    "sha256": "1cad5ce97926dec38c63eaa7368c52c182f45acde2eeb22b0d5cc522c3aa577b",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "custom_set_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 38,
+    "passed": 38,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 38,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f28a4dc026edb54620b7681bb140f9063265741756feb59d7306f2eaced3a559"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_1.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.228,
+          "stdout_sha256": "f3fed529627c2e66b347e755f62bdf68687ea8fedac33331e2eac1140b2f2beb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3959,
+          "stderr_bytes": 0,
+          "stdout_tail": "......................................                                   [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_add_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nPASSED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\n38 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 38,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f28a4dc026edb54620b7681bb140f9063265741756feb59d7306f2eaced3a559"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_2.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.214,
+          "stdout_sha256": "63f64fbca05ede01489484a9cfeac6165e7f550d8a6f3d1892b39d04b29a8a3f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3959,
+          "stderr_bytes": 0,
+          "stdout_tail": "......................................                                   [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_add_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nPASSED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\n38 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 38,
+          "passed": 38,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f28a4dc026edb54620b7681bb140f9063265741756feb59d7306f2eaced3a559"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_3.xml",
+            "custom_set_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.221,
+          "stdout_sha256": "89909f8c802d84c25e30811b90a1e395261462d6ea4b7d9ccc50aff6e6dc0a8e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3959,
+          "stderr_bytes": 0,
+          "stdout_tail": "......................................                                   [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__custom-set/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED custom_set_test.py::CustomSetTest::test_add_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_add_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_adding_an_existing_element_does_not_change_the_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_another_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_a_subset_of_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_disjoint_with_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_set_is_not_equal_to_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_empty_sets_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_disjoint_with_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_a_subset_of_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_non_empty_set_is_not_equal_to_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_nothing_is_contained_in_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_a_subset_of_set_with_exact_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements\nPASSED custom_set_test.py::CustomSetTest::test_set_is_not_equal_to_larger_set_with_same_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_disjoint_if_they_share_no_elements\nPASSED custom_set_test.py::CustomSetTest::test_sets_are_not_disjoint_if_they_share_an_element\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_different_elements_are_not_equal\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_elements_are_not_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_no_elements_are_empty\nPASSED custom_set_test.py::CustomSetTest::test_sets_with_the_same_elements_are_equal\nPASSED custom_set_test.py::CustomSetTest::test_the_empty_set_is_disjoint_with_itself\nPASSED custom_set_test.py::CustomSetTest::test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_empty_sets_is_an_empty_set\nPASSED custom_set_test.py::CustomSetTest::test_union_of_non_empty_sets_contains_all_unique_elements\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_in_the_set\nPASSED custom_set_test.py::CustomSetTest::test_when_the_element_is_not_in_the_set\n38 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 38/38 passed, 0 failed, 0 errors (consistent)"
+}

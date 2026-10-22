@@ -1,0 +1,1 @@
+SUPERSEDED by a later run in this directory: the first-release-date rule (PyPI projects first released after the snapshot earliest commit are not evidence) was added after this run. Kept unmodified as a record.

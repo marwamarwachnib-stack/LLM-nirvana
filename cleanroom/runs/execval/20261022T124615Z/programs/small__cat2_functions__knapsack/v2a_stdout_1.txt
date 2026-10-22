@@ -1,0 +1,108 @@
+(
+                104,
+                [
+                    {"weight": 25, "value": 350},
+                    {"weight": 35, "value": 400},
+                    {"weight": 45, "value": 450},
+                    {"weight": 5, "value": 20},
+                    {"weight": 25, "value": 70},
+                    {"weight": 3, "value": 8},
+                    {"weight": 2, "value": 5},
+                    {"weight": 2, "value": 5},
+                ],
+            ),
+            900,
+        )
+E       AssertionError: None != 900
+
+knapsack_test.py:64: AssertionError
+______________________ KnapsackTest.test_example_knapsack ______________________
+
+self = <knapsack_test.KnapsackTest testMethod=test_example_knapsack>
+
+    def test_example_knapsack(self):
+>       self.assertEqual(
+            maximum_value(
+                10,
+                [
+                    {"weight": 5, "value": 10},
+                    {"weight": 4, "value": 40},
+                    {"weight": 6, "value": 30},
+                    {"weight": 4, "value": 50},
+                ],
+            ),
+            90,
+        )
+E       AssertionError: None != 90
+
+knapsack_test.py:50: AssertionError
+____________ KnapsackTest.test_five_items_cannot_be_greedy_by_value ____________
+
+self = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_value>
+
+    def test_five_items_cannot_be_greedy_by_value(self):
+>       self.assertEqual(
+            maximum_value(
+                10,
+                [
+                    {"weight": 2, "value": 20},
+                    {"weight": 2, "value": 20},
+                    {"weight": 2, "value": 20},
+                    {"weight": 2, "value": 20},
+                    {"weight": 10, "value": 50},
+                ],
+            ),
+            80,
+        )
+E       AssertionError: None != 80
+
+knapsack_test.py:35: AssertionError
+___________ KnapsackTest.test_five_items_cannot_be_greedy_by_weight ____________
+
+self = <knapsack_test.KnapsackTest testMethod=test_five_items_cannot_be_greedy_by_weight>
+
+    def test_five_items_cannot_be_greedy_by_weight(self):
+>       self.assertEqual(
+            maximum_value(
+                10,
+                [
+                    {"weight": 2, "value": 5},
+                    {"weight": 2, "value": 5},
+                    {"weight": 2, "value": 5},
+                    {"weight": 2, "value": 5},
+                    {"weight": 10, "value": 21},
+                ],
+            ),
+            21,
+        )
+E       AssertionError: None != 21
+
+knapsack_test.py:20: AssertionError
+__________________________ KnapsackTest.test_no_items __________________________
+
+self = <knapsack_test.KnapsackTest testMethod=test_no_items>
+
+    def test_no_items(self):
+>       self.assertEqual(maximum_value(100, []), 0)
+E       AssertionError: None != 0
+
+knapsack_test.py:14: AssertionError
+_____________________ KnapsackTest.test_one_item_too_heavy _____________________
+
+self = <knapsack_test.KnapsackTest testMethod=test_one_item_too_heavy>
+
+    def test_one_item_too_heavy(self):
+>       self.assertEqual(maximum_value(10, [{"weight": 100, "value": 1}]), 0)
+E       AssertionError: None != 0
+
+knapsack_test.py:17: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__knapsack/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED knapsack_test.py::KnapsackTest::test_15_items - AssertionError: None !...
+FAILED knapsack_test.py::KnapsackTest::test_8_items - AssertionError: None !=...
+FAILED knapsack_test.py::KnapsackTest::test_example_knapsack - AssertionError...
+FAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_value
+FAILED knapsack_test.py::KnapsackTest::test_five_items_cannot_be_greedy_by_weight
+FAILED knapsack_test.py::KnapsackTest::test_no_items - AssertionError: None != 0
+FAILED knapsack_test.py::KnapsackTest::test_one_item_too_heavy - AssertionErr...
+7 failed in 0.04s

@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/kindergarten-garden",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/kindergarten-garden/example.py",
+    "0_100 LOC/cat3_classes/kindergarten-garden/kindergarten_garden.py",
+    "0_100 LOC/cat3_classes/kindergarten-garden/kindergarten_garden_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "7f3e07aa5a5e0032676c2d4a35586895504b5ee8510e8a3e28b96f9884478f72",
+    "kindergarten_garden.py": "c30b096dda3805e1587f5e9dd158688e918190b2cbf278f5cba8e1e91d96b979",
+    "kindergarten_garden_test.py": "422a822d9bd4e4452c1eed13f52fe96ffd094140a49ec00f5620ce8dcc85d897"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "kindergarten_garden.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "kindergarten_garden_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 19,
+    "passed": 0,
+    "failed": 19,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 0,
+          "failed": 19,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f6de82fe3bba265fcdd17b3a917b8c317113a1b271b9f58ce3962097551aaae9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_1.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.336,
+          "stdout_sha256": "d9a56393d4b69abd286666c22f0db9ba4d2a3641f841bbae3f7f4d2001a0ae60",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11023,
+          "stderr_bytes": 0,
+          "stdout_tail": "ef test_partial_garden_second_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:32: TypeError\n______ KindergartenGardenTest.test_partial_garden_third_student_s_garden _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_third_student_s_garden>\n\n    def test_partial_garden_third_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:36: TypeError\n_______ KindergartenGardenTest.test_students_are_unordered_first_student _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_first_student>\n\n    def test_students_are_unordered_first_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Patricia\"), [\"Violets\", \"Clover\", \"Radishes\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:112: AttributeError\n_______ KindergartenGardenTest.test_students_are_unordered_last_student ________\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_last_student>\n\n    def test_students_are_unordered_last_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Xander\"), [\"Radishes\", \"Grass\", \"Clover\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:120: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 failed in 0.10s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 0,
+          "failed": 19,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f6de82fe3bba265fcdd17b3a917b8c317113a1b271b9f58ce3962097551aaae9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_2.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.217,
+          "stdout_sha256": "3d3e6186f457a619e75cac051639f68844dc81d8073afda0fac7c8a3c38abb2b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11023,
+          "stderr_bytes": 0,
+          "stdout_tail": "ef test_partial_garden_second_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:32: TypeError\n______ KindergartenGardenTest.test_partial_garden_third_student_s_garden _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_third_student_s_garden>\n\n    def test_partial_garden_third_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:36: TypeError\n_______ KindergartenGardenTest.test_students_are_unordered_first_student _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_first_student>\n\n    def test_students_are_unordered_first_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Patricia\"), [\"Violets\", \"Clover\", \"Radishes\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:112: AttributeError\n_______ KindergartenGardenTest.test_students_are_unordered_last_student ________\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_last_student>\n\n    def test_students_are_unordered_last_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Xander\"), [\"Radishes\", \"Grass\", \"Clover\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:120: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 0,
+          "failed": 19,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f6de82fe3bba265fcdd17b3a917b8c317113a1b271b9f58ce3962097551aaae9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_3.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.232,
+          "stdout_sha256": "96711edbbdc31ece9cd02e3a11b2914322733fe73940fce15611b57c32e54f26",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11023,
+          "stderr_bytes": 0,
+          "stdout_tail": "ef test_partial_garden_second_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:32: TypeError\n______ KindergartenGardenTest.test_partial_garden_third_student_s_garden _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_third_student_s_garden>\n\n    def test_partial_garden_third_student_s_garden(self):\n>       garden = Garden(\"VVCCGG\\nVVCCGG\")\nE       TypeError: Garden.__init__() missing 1 required positional argument: 'students'\n\nkindergarten_garden_test.py:36: TypeError\n_______ KindergartenGardenTest.test_students_are_unordered_first_student _______\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_first_student>\n\n    def test_students_are_unordered_first_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Patricia\"), [\"Violets\", \"Clover\", \"Radishes\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:112: AttributeError\n_______ KindergartenGardenTest.test_students_are_unordered_last_student ________\n\nself = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_last_student>\n\n    def test_students_are_unordered_last_student(self):\n        garden = Garden(\n            \"VCRRGVRG\\nRVGCCGCV\", students=[\"Samantha\", \"Patricia\", \"Xander\", \"Roger\"]\n        )\n        self.assertEqual(\n>           garden.plants(\"Xander\"), [\"Radishes\", \"Grass\", \"Clover\", \"Violets\"]\n        )\nE       AttributeError: 'Garden' object has no attribute 'plants'\n\nkindergarten_garden_test.py:120: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nFAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "kindergarten_garden.py",
+    "with_copy_of": "example.py",
+    "sha256": "7f3e07aa5a5e0032676c2d4a35586895504b5ee8510e8a3e28b96f9884478f72",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "kindergarten_garden_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 19,
+    "passed": 19,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7db07b718cd8018625e3cbd8e304e1f1456144bb93f1c7f8bf6cfa7b516acca1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_1.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.189,
+          "stdout_sha256": "32106d797dcf4e4844dde12705da0ac5a96d5f724e0a331f8acf33ca616f169a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2301,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................                                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7db07b718cd8018625e3cbd8e304e1f1456144bb93f1c7f8bf6cfa7b516acca1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_2.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.188,
+          "stdout_sha256": "6c029efdebb34ee060763ba6370174b14dc3fe029134cbc84e515385b4f2f089",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2301,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................                                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7db07b718cd8018625e3cbd8e304e1f1456144bb93f1c7f8bf6cfa7b516acca1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_3.xml",
+            "kindergarten_garden_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.176,
+          "stdout_sha256": "b01f75a7c16bb3d23433040dc31df27522830d79e45f9f3e3ee0df77ed250730",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2301,
+          "stderr_bytes": 0,
+          "stdout_tail": "...................                                                      [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student\nPASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student\n19 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 19/19 passed, 0 failed, 0 errors (consistent)"
+}

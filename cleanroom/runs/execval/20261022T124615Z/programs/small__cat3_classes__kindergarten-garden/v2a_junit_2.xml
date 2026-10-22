@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="19" skipped="0" tests="19" time="0.066" timestamp="2026-10-22T12:47:01.191555" hostname="vm"><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_alice_first_student_s_garden" time="0.001"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_alice_first_student_s_garden&gt;
+
+    def test_full_garden_for_alice_first_student_s_garden(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:40: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_bob_second_student_s_garden" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_bob_second_student_s_garden&gt;
+
+    def test_full_garden_for_bob_second_student_s_garden(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:46: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_charlie" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_charlie&gt;
+
+    def test_full_garden_for_charlie(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:50: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_david" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_david&gt;
+
+    def test_full_garden_for_david(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:56: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_eve" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_eve&gt;
+
+    def test_full_garden_for_eve(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:62: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_fred" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_fred&gt;
+
+    def test_full_garden_for_fred(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:66: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_ginny" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_ginny&gt;
+
+    def test_full_garden_for_ginny(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:72: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_harriet" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_harriet&gt;
+
+    def test_full_garden_for_harriet(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:76: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_ileana" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_ileana&gt;
+
+    def test_full_garden_for_ileana(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:82: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_joseph" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_joseph&gt;
+
+    def test_full_garden_for_joseph(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:88: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_kincaid_second_to_last_student_s_garden" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_kincaid_second_to_last_student_s_garden&gt;
+
+    def test_full_garden_for_kincaid_second_to_last_student_s_garden(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:94: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_full_garden_for_larry_last_student_s_garden" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_full_garden_for_larry_last_student_s_garden&gt;
+
+    def test_full_garden_for_larry_last_student_s_garden(self):
+&gt;       garden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:100: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_partial_garden_different_garden_with_single_student" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_different_garden_with_single_student&gt;
+
+    def test_partial_garden_different_garden_with_single_student(self):
+&gt;       garden = Garden("VC\nRC")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:20: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_partial_garden_garden_with_single_student" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_garden_with_single_student&gt;
+
+    def test_partial_garden_garden_with_single_student(self):
+&gt;       garden = Garden("RC\nGG")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:14: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_partial_garden_garden_with_two_students" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_garden_with_two_students&gt;
+
+    def test_partial_garden_garden_with_two_students(self):
+&gt;       garden = Garden("VVCG\nVVRC")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:26: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_partial_garden_second_student_s_garden" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_second_student_s_garden&gt;
+
+    def test_partial_garden_second_student_s_garden(self):
+&gt;       garden = Garden("VVCCGG\nVVCCGG")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:32: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_partial_garden_third_student_s_garden" time="0.000"><failure message="TypeError: Garden.__init__() missing 1 required positional argument: 'students'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_third_student_s_garden&gt;
+
+    def test_partial_garden_third_student_s_garden(self):
+&gt;       garden = Garden("VVCCGG\nVVCCGG")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:36: TypeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_students_are_unordered_first_student" time="0.000"><failure message="AttributeError: 'Garden' object has no attribute 'plants'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_first_student&gt;
+
+    def test_students_are_unordered_first_student(self):
+        garden = Garden(
+            "VCRRGVRG\nRVGCCGCV", students=["Samantha", "Patricia", "Xander", "Roger"]
+        )
+        self.assertEqual(
+&gt;           garden.plants("Patricia"), ["Violets", "Clover", "Radishes", "Violets"]
+        )
+E       AttributeError: 'Garden' object has no attribute 'plants'
+
+kindergarten_garden_test.py:112: AttributeError</failure></testcase><testcase classname="kindergarten_garden_test.KindergartenGardenTest" name="test_students_are_unordered_last_student" time="0.001"><failure message="AttributeError: 'Garden' object has no attribute 'plants'">self = &lt;kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_last_student&gt;
+
+    def test_students_are_unordered_last_student(self):
+        garden = Garden(
+            "VCRRGVRG\nRVGCCGCV", students=["Samantha", "Patricia", "Xander", "Roger"]
+        )
+        self.assertEqual(
+&gt;           garden.plants("Xander"), ["Radishes", "Grass", "Clover", "Violets"]
+        )
+E       AttributeError: 'Garden' object has no attribute 'plants'
+
+kindergarten_garden_test.py:120: AttributeError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,15 @@
+..........                                                               [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2b_junit_3.xml -
+=========================== short test summary info ============================
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node
+PASSED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node
+10 passed in 0.02s

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="8" time="0.040" timestamp="2026-10-22T12:46:25.908475" hostname="vm"><testcase classname="crypto_square_test.CryptoSquareTest" name="test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces" time="0.001"><failure message="AssertionError: None != 'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces&gt;
+
+    def test_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces(
+        self,
+    ):
+        value = "If man was meant to stay on the ground, god would have given us roots."
+        expected = "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != 'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
+
+crypto_square_test.py:55: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space" time="0.001"><failure message="AssertionError: None != 'clu hlt io '">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space&gt;
+
+    def test_8_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailing_space(
+        self,
+    ):
+        value = "Chill out."
+        expected = "clu hlt io "
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != 'clu hlt io '
+
+crypto_square_test.py:48: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_9_character_plaintext_results_in_3_chunks_of_3_characters" time="0.000"><failure message="AssertionError: None != 'tsf hiu isn'">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_9_character_plaintext_results_in_3_chunks_of_3_characters&gt;
+
+    def test_9_character_plaintext_results_in_3_chunks_of_3_characters(self):
+        value = "This is fun!"
+        expected = "tsf hiu isn"
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != 'tsf hiu isn'
+
+crypto_square_test.py:41: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_empty_plaintext_results_in_an_empty_ciphertext" time="0.000"><failure message="AssertionError: None != ''">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_empty_plaintext_results_in_an_empty_ciphertext&gt;
+
+    def test_empty_plaintext_results_in_an_empty_ciphertext(self):
+        value = ""
+        expected = ""
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != ''
+
+crypto_square_test.py:16: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_lowercase" time="0.000"><failure message="AssertionError: None != 'a'">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_lowercase&gt;
+
+    def test_lowercase(self):
+        value = "A"
+        expected = "a"
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != 'a'
+
+crypto_square_test.py:26: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_normalization_results_in_empty_plaintext" time="0.001"><failure message="AssertionError: None != ''">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_normalization_results_in_empty_plaintext&gt;
+
+    def test_normalization_results_in_empty_plaintext(self):
+        value = "... --- ..."
+        expected = ""
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != ''
+
+crypto_square_test.py:21: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_remove_punctuation" time="0.000"><failure message="AssertionError: None != '1'">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_remove_punctuation&gt;
+
+    def test_remove_punctuation(self):
+        value = "@1,%!"
+        expected = "1"
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != '1'
+
+crypto_square_test.py:36: AssertionError</failure></testcase><testcase classname="crypto_square_test.CryptoSquareTest" name="test_remove_spaces" time="0.001"><failure message="AssertionError: None != 'b'">self = &lt;crypto_square_test.CryptoSquareTest testMethod=test_remove_spaces&gt;
+
+    def test_remove_spaces(self):
+        value = "  b "
+        expected = "b"
+&gt;       self.assertEqual(cipher_text(value), expected)
+E       AssertionError: None != 'b'
+
+crypto_square_test.py:31: AssertionError</failure></testcase></testsuite></testsuites>

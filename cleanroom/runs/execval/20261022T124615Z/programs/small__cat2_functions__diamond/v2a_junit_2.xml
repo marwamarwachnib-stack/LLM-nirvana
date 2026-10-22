@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="0.034" timestamp="2026-10-22T12:46:27.458505" hostname="vm"><testcase classname="diamond_test.DiamondTest" name="test_degenerate_case_with_a_single_a_row" time="0.001"><failure message="AssertionError: None != ['A']">self = &lt;diamond_test.DiamondTest testMethod=test_degenerate_case_with_a_single_a_row&gt;
+
+    def test_degenerate_case_with_a_single_a_row(self):
+        result = ["A"]
+&gt;       self.assertEqual(rows("A"), result)
+E       AssertionError: None != ['A']
+
+diamond_test.py:15: AssertionError</failure></testcase><testcase classname="diamond_test.DiamondTest" name="test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces" time="0.001"><failure message="AssertionError: None != [' A ', 'B B', ' A ']">self = &lt;diamond_test.DiamondTest testMethod=test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces&gt;
+
+    def test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces(self):
+        result = [" A ", "B B", " A "]
+&gt;       self.assertEqual(rows("B"), result)
+E       AssertionError: None != [' A ', 'B B', ' A ']
+
+diamond_test.py:19: AssertionError</failure></testcase><testcase classname="diamond_test.DiamondTest" name="test_largest_possible_diamond" time="0.000"><failure message="AssertionError: None != ['                         A             [2759 chars]   ']">self = &lt;diamond_test.DiamondTest testMethod=test_largest_possible_diamond&gt;
+
+    def test_largest_possible_diamond(self):
+        result = [
+            "                         A                         ",
+            "                        B B                        ",
+            "                       C   C                       ",
+            "                      D     D                      ",
+            "                     E       E                     ",
+            "                    F         F                    ",
+            "                   G           G                   ",
+            "                  H             H                  ",
+            "                 I               I                 ",
+            "                J                 J                ",
+            "               K                   K               ",
+            "              L                     L              ",
+            "             M                       M             ",
+            "            N                         N            ",
+            "           O                           O           ",
+            "          P                             P          ",
+            "         Q                               Q         ",
+            "        R                                 R        ",
+            "       S                                   S       ",
+            "      T                                     T      ",
+            "     U                                       U     ",
+            "    V                                         V    ",
+            "   W                                           W   ",
+            "  X                                             X  ",
+            " Y                                               Y ",
+            "Z                                                 Z",
+            " Y                                               Y ",
+            "  X                                             X  ",
+            "   W                                           W   ",
+            "    V                                         V    ",
+            "     U                                       U     ",
+            "      T                                     T      ",
+            "       S                                   S       ",
+            "        R                                 R        ",
+            "         Q                               Q         ",
+            "          P                             P          ",
+            "           O                           O           ",
+            "            N                         N            ",
+            "             M                       M             ",
+            "              L                     L              ",
+            "               K                   K               ",
+            "                J                 J                ",
+            "                 I               I                 ",
+            "                  H             H                  ",
+            "                   G           G                   ",
+            "                    F         F                    ",
+            "                     E       E                     ",
+            "                      D     D                      ",
+            "                       C   C                       ",
+            "                        B B                        ",
+            "                         A                         ",
+        ]
+&gt;       self.assertEqual(rows("Z"), result)
+E       AssertionError: None != ['                         A             [2759 chars]   ']
+
+diamond_test.py:91: AssertionError</failure></testcase><testcase classname="diamond_test.DiamondTest" name="test_smallest_non_degenerate_case_with_even_diamond_side_length" time="0.000"><failure message="AssertionError: None != ['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']">self = &lt;diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_even_diamond_side_length&gt;
+
+    def test_smallest_non_degenerate_case_with_even_diamond_side_length(self):
+        result = [
+            "   A   ",
+            "  B B  ",
+            " C   C ",
+            "D     D",
+            " C   C ",
+            "  B B  ",
+            "   A   ",
+        ]
+&gt;       self.assertEqual(rows("D"), result)
+E       AssertionError: None != ['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']
+
+diamond_test.py:35: AssertionError</failure></testcase><testcase classname="diamond_test.DiamondTest" name="test_smallest_non_degenerate_case_with_odd_diamond_side_length" time="0.001"><failure message="AssertionError: None != ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']">self = &lt;diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_odd_diamond_side_length&gt;
+
+    def test_smallest_non_degenerate_case_with_odd_diamond_side_length(self):
+        result = ["  A  ", " B B ", "C   C", " B B ", "  A  "]
+&gt;       self.assertEqual(rows("C"), result)
+E       AssertionError: None != ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']
+
+diamond_test.py:23: AssertionError</failure></testcase></testsuite></testsuites>

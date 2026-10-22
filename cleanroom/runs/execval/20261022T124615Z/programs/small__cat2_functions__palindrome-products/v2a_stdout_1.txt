@@ -1,0 +1,61 @@
+ _
+
+self = <palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_double_digit_factors>
+
+    def test_find_the_smallest_palindrome_from_double_digit_factors(self):
+>       value, factors = smallest(min_factor=10, max_factor=99)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:25: TypeError
+_ PalindromeProductsTest.test_find_the_smallest_palindrome_from_four_digit_factors _
+
+self = <palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_four_digit_factors>
+
+    def test_find_the_smallest_palindrome_from_four_digit_factors(self):
+>       value, factors = smallest(min_factor=1000, max_factor=9999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:45: TypeError
+_ PalindromeProductsTest.test_find_the_smallest_palindrome_from_single_digit_factors _
+
+self = <palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_single_digit_factors>
+
+    def test_find_the_smallest_palindrome_from_single_digit_factors(self):
+>       value, factors = smallest(min_factor=1, max_factor=9)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:15: TypeError
+_ PalindromeProductsTest.test_find_the_smallest_palindrome_from_triple_digit_factors _
+
+self = <palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_triple_digit_factors>
+
+    def test_find_the_smallest_palindrome_from_triple_digit_factors(self):
+>       value, factors = smallest(min_factor=100, max_factor=999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:35: TypeError
+_ PalindromeProductsTest.test_smallest_product_does_not_use_the_smallest_factor _
+
+self = <palindrome_products_test.PalindromeProductsTest testMethod=test_smallest_product_does_not_use_the_smallest_factor>
+
+    def test_smallest_product_does_not_use_the_smallest_factor(self):
+>       value, factors = smallest(min_factor=3215, max_factor=4000)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:77: TypeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__palindrome-products/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_empty_result_for_largest_if_no_palindrome_in_the_range
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_empty_result_for_smallest_if_no_palindrome_in_the_range
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_error_result_for_largest_if_min_is_more_than_max
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_error_result_for_smallest_if_min_is_more_than_max
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_largest_palindrome_from_double_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_largest_palindrome_from_four_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_largest_palindrome_from_single_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_largest_palindrome_from_triple_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_smallest_palindrome_from_double_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_smallest_palindrome_from_four_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_smallest_palindrome_from_single_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_find_the_smallest_palindrome_from_triple_digit_factors
+FAILED palindrome_products_test.py::PalindromeProductsTest::test_smallest_product_does_not_use_the_smallest_factor
+13 failed in 0.05s

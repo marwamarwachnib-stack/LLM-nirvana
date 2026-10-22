@@ -1,0 +1,76 @@
+e(["4", "5"]).data(), expected)
+
+binary_search_tree_test.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+binary_search_tree_test.py:65: in assertTreeEqual
+    self.compare_tree(tree_one, tree_two)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_greater_number_at_right_node>
+tree_one = None
+tree_two = <binary_search_tree.TreeNode object at 0x7fa2dee21780>
+
+    def compare_tree(self, tree_one, tree_two):
+>       self.assertEqual(tree_one.data, tree_two.data)
+E       AttributeError: 'NoneType' object has no attribute 'data'
+
+binary_search_tree_test.py:70: AttributeError
+______________ BinarySearchTreeTest.test_same_number_at_left_node ______________
+
+self = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>
+
+    def test_same_number_at_left_node(self):
+        expected = TreeNode("4", TreeNode("4", None, None), None)
+>       self.assertTreeEqual(BinarySearchTree(["4", "4"]).data(), expected)
+
+binary_search_tree_test.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+binary_search_tree_test.py:65: in assertTreeEqual
+    self.compare_tree(tree_one, tree_two)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_same_number_at_left_node>
+tree_one = None
+tree_two = <binary_search_tree.TreeNode object at 0x7fa2dee187f0>
+
+    def compare_tree(self, tree_one, tree_two):
+>       self.assertEqual(tree_one.data, tree_two.data)
+E       AttributeError: 'NoneType' object has no attribute 'data'
+
+binary_search_tree_test.py:70: AttributeError
+____________ BinarySearchTreeTest.test_smaller_number_at_left_node _____________
+
+self = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>
+
+    def test_smaller_number_at_left_node(self):
+        expected = TreeNode("4", TreeNode("2", None, None), None)
+>       self.assertTreeEqual(BinarySearchTree(["4", "2"]).data(), expected)
+
+binary_search_tree_test.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+binary_search_tree_test.py:65: in assertTreeEqual
+    self.compare_tree(tree_one, tree_two)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <binary_search_tree_test.BinarySearchTreeTest testMethod=test_smaller_number_at_left_node>
+tree_one = None
+tree_two = <binary_search_tree.TreeNode object at 0x7fa2dee200d0>
+
+    def compare_tree(self, tree_one, tree_two):
+>       self.assertEqual(tree_one.data, tree_two.data)
+E       AttributeError: 'NoneType' object has no attribute 'data'
+
+binary_search_tree_test.py:70: AttributeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__binary-search-tree/v2a_junit_3.xml -
+=========================== short test summary info ============================
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_create_complex_tree
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_complex_tree
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_greater_than_first
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_same_as_first
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_if_second_number_is_smaller_than_first
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_can_sort_single_number
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_data_is_retained
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_greater_number_at_right_node
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_same_number_at_left_node
+FAILED binary_search_tree_test.py::BinarySearchTreeTest::test_smaller_number_at_left_node
+10 failed in 0.06s

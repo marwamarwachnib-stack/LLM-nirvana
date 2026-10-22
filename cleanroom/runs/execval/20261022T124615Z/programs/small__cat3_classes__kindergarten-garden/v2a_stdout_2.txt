@@ -1,0 +1,64 @@
+ef test_partial_garden_second_student_s_garden(self):
+>       garden = Garden("VVCCGG\nVVCCGG")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:32: TypeError
+______ KindergartenGardenTest.test_partial_garden_third_student_s_garden _______
+
+self = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_partial_garden_third_student_s_garden>
+
+    def test_partial_garden_third_student_s_garden(self):
+>       garden = Garden("VVCCGG\nVVCCGG")
+E       TypeError: Garden.__init__() missing 1 required positional argument: 'students'
+
+kindergarten_garden_test.py:36: TypeError
+_______ KindergartenGardenTest.test_students_are_unordered_first_student _______
+
+self = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_first_student>
+
+    def test_students_are_unordered_first_student(self):
+        garden = Garden(
+            "VCRRGVRG\nRVGCCGCV", students=["Samantha", "Patricia", "Xander", "Roger"]
+        )
+        self.assertEqual(
+>           garden.plants("Patricia"), ["Violets", "Clover", "Radishes", "Violets"]
+        )
+E       AttributeError: 'Garden' object has no attribute 'plants'
+
+kindergarten_garden_test.py:112: AttributeError
+_______ KindergartenGardenTest.test_students_are_unordered_last_student ________
+
+self = <kindergarten_garden_test.KindergartenGardenTest testMethod=test_students_are_unordered_last_student>
+
+    def test_students_are_unordered_last_student(self):
+        garden = Garden(
+            "VCRRGVRG\nRVGCCGCV", students=["Samantha", "Patricia", "Xander", "Roger"]
+        )
+        self.assertEqual(
+>           garden.plants("Xander"), ["Radishes", "Grass", "Clover", "Violets"]
+        )
+E       AttributeError: 'Garden' object has no attribute 'plants'
+
+kindergarten_garden_test.py:120: AttributeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2a_junit_2.xml -
+=========================== short test summary info ============================
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student
+FAILED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student
+19 failed in 0.06s

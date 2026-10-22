@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/forth",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/forth/example.py",
+    "0_100 LOC/cat3_classes/forth/forth.py",
+    "0_100 LOC/cat3_classes/forth/forth_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "a90f6134d4f24b5abee77880c8eb4f8adf7a88d925c0cd3d9bbfcfba895a320b",
+    "forth.py": "9acd281e02feff4fc5ae766063a1ce1290b625bb930cc8f54c15a0109610e562",
+    "forth_test.py": "41ac975fe9255ed371510aa77e8400d8f3288577cf96fca8cf772aa63a81e3fc"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.033,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.027,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "forth.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "forth_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 48,
+    "passed": 0,
+    "failed": 48,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 0,
+          "failed": 48,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b162bbf6d3f18f88009755172a0d9ee43d9f3da9d8426a63c1899a13209d8df"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2a_junit_1.xml",
+            "forth_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.489,
+          "stdout_sha256": "decf2554020b98c236fa95d43a60ba0cdaaae475a1c368229870cf6ccea2a602",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23721,
+          "stderr_bytes": 0,
+          "stdout_tail": "ions_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nFAILED forth_test.py::ForthTest::test_division_can_divide_two_numbers - Asser...\nFAILED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero - A...\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_performs_integer_division - As...\nFAILED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nFAILED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack - Asser...\nFAILED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers - ...\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nFAILED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 failed in 0.31s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 0,
+          "failed": 48,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b162bbf6d3f18f88009755172a0d9ee43d9f3da9d8426a63c1899a13209d8df"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2a_junit_2.xml",
+            "forth_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.494,
+          "stdout_sha256": "1129e112f108c12e2fb757749e008a6c408dd6ebe2658f9924f0c88db6daee2d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23721,
+          "stderr_bytes": 0,
+          "stdout_tail": "ions_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nFAILED forth_test.py::ForthTest::test_division_can_divide_two_numbers - Asser...\nFAILED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero - A...\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_performs_integer_division - As...\nFAILED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nFAILED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack - Asser...\nFAILED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers - ...\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nFAILED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 failed in 0.31s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 0,
+          "failed": 48,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b162bbf6d3f18f88009755172a0d9ee43d9f3da9d8426a63c1899a13209d8df"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2a_junit_3.xml",
+            "forth_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.472,
+          "stdout_sha256": "38440a2cf7ba094dd78684efef5b5b108e056ac78b26eb18e3a5c9fa3d924408",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23721,
+          "stderr_bytes": 0,
+          "stdout_tail": "ions_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nFAILED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nFAILED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nFAILED forth_test.py::ForthTest::test_division_can_divide_two_numbers - Asser...\nFAILED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero - A...\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_division_performs_integer_division - As...\nFAILED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nFAILED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nFAILED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack - Asser...\nFAILED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nFAILED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nFAILED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers - ...\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nFAILED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nFAILED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nFAILED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nFAILED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 failed in 0.29s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "forth.py",
+    "with_copy_of": "example.py",
+    "sha256": "a90f6134d4f24b5abee77880c8eb4f8adf7a88d925c0cd3d9bbfcfba895a320b",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "forth_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 48,
+    "passed": 48,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 48,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e959a7fd901a86ecdec7aedb5935dd790b70075596ae2ca3efacdb992aec6372"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2b_junit_1.xml",
+            "forth_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.265,
+          "stdout_sha256": "8ae62f5dd62f6f1be27f8963bbd6d907c66205f19d165026d821fec784f57a75",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4650,
+          "stderr_bytes": 0,
+          "stdout_tail": ":ForthTest::test_case_insensitivity_definitions_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nPASSED forth_test.py::ForthTest::test_division_can_divide_two_numbers\nPASSED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_performs_integer_division\nPASSED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nPASSED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nPASSED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 passed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 48,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e959a7fd901a86ecdec7aedb5935dd790b70075596ae2ca3efacdb992aec6372"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2b_junit_2.xml",
+            "forth_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.255,
+          "stdout_sha256": "bcc2f2002867538b82be3fd260db5678801876eb3c2f719bd7598487cebbbb5d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4650,
+          "stderr_bytes": 0,
+          "stdout_tail": ":ForthTest::test_case_insensitivity_definitions_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nPASSED forth_test.py::ForthTest::test_division_can_divide_two_numbers\nPASSED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_performs_integer_division\nPASSED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nPASSED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nPASSED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 passed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 48,
+          "passed": 48,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e959a7fd901a86ecdec7aedb5935dd790b70075596ae2ca3efacdb992aec6372"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__forth/v2b_junit_3.xml",
+            "forth_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.223,
+          "stdout_sha256": "982d500293bcea655d459be73c1a2e8a9761243c68ebcdb0553b0a0a338d6866",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4650,
+          "stderr_bytes": 0,
+          "stdout_tail": ":ForthTest::test_case_insensitivity_definitions_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_drop_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_dup_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_over_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_swap_is_case_insensitive\nPASSED forth_test.py::ForthTest::test_case_insensitivity_user_defined_words_are_case_insensitive\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_addition_and_subtraction\nPASSED forth_test.py::ForthTest::test_combined_arithmetic_multiplication_and_division\nPASSED forth_test.py::ForthTest::test_division_can_divide_two_numbers\nPASSED forth_test.py::ForthTest::test_division_errors_if_dividing_by_zero\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_division_performs_integer_division\nPASSED forth_test.py::ForthTest::test_drop_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one\nPASSED forth_test.py::ForthTest::test_drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one\nPASSED forth_test.py::ForthTest::test_dup_copies_a_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_copies_the_top_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_dup_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_can_multiply_two_numbers\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_multiplication_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_more_than_two\nPASSED forth_test.py::ForthTest::test_over_copies_the_second_element_if_there_are_only_two\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_over_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_numbers_just_get_pushed_onto_the_stack\nPASSED forth_test.py::ForthTest::test_parsing_and_numbers_pushes_negative_numbers_onto_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_can_subtract_two_numbers\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_subtraction_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_nothing_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_errors_if_there_is_only_one_value_on_the_stack\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones\nPASSED forth_test.py::ForthTest::test_swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_consist_of_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_define_word_that_uses_word_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_operators\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_built_in_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_override_other_user_defined_words\nPASSED forth_test.py::ForthTest::test_user_defined_words_can_use_different_words_with_the_same_name\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_cannot_redefine_non_negative_numbers\nPASSED forth_test.py::ForthTest::test_user_defined_words_errors_if_executing_a_non_existent_word\nPASSED forth_test.py::ForthTest::test_user_defined_words_execute_in_the_right_order\n48 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 48/48 passed, 0 failed, 0 errors (consistent)"
+}

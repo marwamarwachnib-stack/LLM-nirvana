@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="103" skipped="0" tests="103" time="0.835" timestamp="2026-10-22T12:47:08.039677" hostname="vm"><testcase classname="meetup_test.MeetupTest" name="test_fifth_monday_of_march_2015" time="0.001"><failure message="AssertionError: None != datetime.date(2015, 3, 30)">self = &lt;meetup_test.MeetupTest testMethod=test_fifth_monday_of_march_2015&gt;
+
+    def test_fifth_monday_of_march_2015(self):
+&gt;       self.assertEqual(meetup(2015, 3, "fifth", "Monday"), date(2015, 3, 30))
+E       AssertionError: None != datetime.date(2015, 3, 30)
+
+meetup_test.py:303: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_fifth_saturday_of_february_2020" time="0.001"><failure message="AssertionError: None != datetime.date(2020, 2, 29)">self = &lt;meetup_test.MeetupTest testMethod=test_fifth_saturday_of_february_2020&gt;
+
+    def test_fifth_saturday_of_february_2020(self):
+&gt;       self.assertEqual(meetup(2020, 2, "fifth", "Saturday"), date(2020, 2, 29))
+E       AssertionError: None != datetime.date(2020, 2, 29)
+
+meetup_test.py:309: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_fifth_thursday_of_february_2024" time="0.000"><failure message="AssertionError: None != datetime.date(2024, 2, 29)">self = &lt;meetup_test.MeetupTest testMethod=test_fifth_thursday_of_february_2024&gt;
+
+    def test_fifth_thursday_of_february_2024(self):
+&gt;       self.assertEqual(meetup(2024, 2, "fifth", "Thursday"), date(2024, 2, 29))
+E       AssertionError: None != datetime.date(2024, 2, 29)
+
+meetup_test.py:306: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_friday_in_a_month_with_five_fridays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 11, 29)">self = &lt;meetup_test.MeetupTest testMethod=test_last_friday_in_a_month_with_five_fridays&gt;
+
+    def test_last_friday_in_a_month_with_five_fridays(self):
+&gt;       self.assertEqual(meetup(2013, 11, "last", "Friday"), date(2013, 11, 29))
+E       AssertionError: None != datetime.date(2013, 11, 29)
+
+meetup_test.py:271: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_friday_in_a_month_with_four_fridays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 12, 27)">self = &lt;meetup_test.MeetupTest testMethod=test_last_friday_in_a_month_with_four_fridays&gt;
+
+    def test_last_friday_in_a_month_with_four_fridays(self):
+&gt;       self.assertEqual(meetup(2013, 12, "last", "Friday"), date(2013, 12, 27))
+E       AssertionError: None != datetime.date(2013, 12, 27)
+
+meetup_test.py:274: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_monday_in_a_month_with_five_mondays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 29)">self = &lt;meetup_test.MeetupTest testMethod=test_last_monday_in_a_month_with_five_mondays&gt;
+
+    def test_last_monday_in_a_month_with_five_mondays(self):
+&gt;       self.assertEqual(meetup(2013, 4, "last", "Monday"), date(2013, 4, 29))
+E       AssertionError: None != datetime.date(2013, 4, 29)
+
+meetup_test.py:250: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_monday_in_a_month_with_four_mondays" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 3, 25)">self = &lt;meetup_test.MeetupTest testMethod=test_last_monday_in_a_month_with_four_mondays&gt;
+
+    def test_last_monday_in_a_month_with_four_mondays(self):
+&gt;       self.assertEqual(meetup(2013, 3, "last", "Monday"), date(2013, 3, 25))
+E       AssertionError: None != datetime.date(2013, 3, 25)
+
+meetup_test.py:247: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_saturday_in_a_month_with_four_saturdays" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 1, 26)">self = &lt;meetup_test.MeetupTest testMethod=test_last_saturday_in_a_month_with_four_saturdays&gt;
+
+    def test_last_saturday_in_a_month_with_four_saturdays(self):
+&gt;       self.assertEqual(meetup(2013, 1, "last", "Saturday"), date(2013, 1, 26))
+E       AssertionError: None != datetime.date(2013, 1, 26)
+
+meetup_test.py:277: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_saturday_in_another_month_with_four_saturdays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 2, 23)">self = &lt;meetup_test.MeetupTest testMethod=test_last_saturday_in_another_month_with_four_saturdays&gt;
+
+    def test_last_saturday_in_another_month_with_four_saturdays(self):
+&gt;       self.assertEqual(meetup(2013, 2, "last", "Saturday"), date(2013, 2, 23))
+E       AssertionError: None != datetime.date(2013, 2, 23)
+
+meetup_test.py:280: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_sunday_in_a_month_with_five_sundays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 31)">self = &lt;meetup_test.MeetupTest testMethod=test_last_sunday_in_a_month_with_five_sundays&gt;
+
+    def test_last_sunday_in_a_month_with_five_sundays(self):
+&gt;       self.assertEqual(meetup(2013, 3, "last", "Sunday"), date(2013, 3, 31))
+E       AssertionError: None != datetime.date(2013, 3, 31)
+
+meetup_test.py:283: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_sunday_in_a_month_with_four_sundays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_last_sunday_in_a_month_with_four_sundays&gt;
+
+    def test_last_sunday_in_a_month_with_four_sundays(self):
+&gt;       self.assertEqual(meetup(2013, 4, "last", "Sunday"), date(2013, 4, 28))
+E       AssertionError: None != datetime.date(2013, 4, 28)
+
+meetup_test.py:286: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_sunday_of_june_2024" time="0.000"><failure message="AssertionError: None != datetime.date(2024, 6, 30)">self = &lt;meetup_test.MeetupTest testMethod=test_last_sunday_of_june_2024&gt;
+
+    def test_last_sunday_of_june_2024(self):
+&gt;       self.assertEqual(meetup(2024, 6, "last", "Sunday"), date(2024, 6, 30))
+E       AssertionError: None != datetime.date(2024, 6, 30)
+
+meetup_test.py:312: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_thursday_in_a_month_with_five_thursdays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 10, 31)">self = &lt;meetup_test.MeetupTest testMethod=test_last_thursday_in_a_month_with_five_thursdays&gt;
+
+    def test_last_thursday_in_a_month_with_five_thursdays(self):
+&gt;       self.assertEqual(meetup(2013, 10, "last", "Thursday"), date(2013, 10, 31))
+E       AssertionError: None != datetime.date(2013, 10, 31)
+
+meetup_test.py:268: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_thursday_in_a_month_with_four_thursdays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 26)">self = &lt;meetup_test.MeetupTest testMethod=test_last_thursday_in_a_month_with_four_thursdays&gt;
+
+    def test_last_thursday_in_a_month_with_four_thursdays(self):
+&gt;       self.assertEqual(meetup(2013, 9, "last", "Thursday"), date(2013, 9, 26))
+E       AssertionError: None != datetime.date(2013, 9, 26)
+
+meetup_test.py:265: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_tuesday_in_a_month_with_four_tuesdays" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 5, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_last_tuesday_in_a_month_with_four_tuesdays&gt;
+
+    def test_last_tuesday_in_a_month_with_four_tuesdays(self):
+&gt;       self.assertEqual(meetup(2013, 5, "last", "Tuesday"), date(2013, 5, 28))
+E       AssertionError: None != datetime.date(2013, 5, 28)
+
+meetup_test.py:253: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_tuesday_in_another_month_with_four_tuesdays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 6, 25)">self = &lt;meetup_test.MeetupTest testMethod=test_last_tuesday_in_another_month_with_four_tuesdays&gt;
+
+    def test_last_tuesday_in_another_month_with_four_tuesdays(self):
+&gt;       self.assertEqual(meetup(2013, 6, "last", "Tuesday"), date(2013, 6, 25))
+E       AssertionError: None != datetime.date(2013, 6, 25)
+
+meetup_test.py:256: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_wednesday_in_a_month_with_five_wednesdays" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 7, 31)">self = &lt;meetup_test.MeetupTest testMethod=test_last_wednesday_in_a_month_with_five_wednesdays&gt;
+
+    def test_last_wednesday_in_a_month_with_five_wednesdays(self):
+&gt;       self.assertEqual(meetup(2013, 7, "last", "Wednesday"), date(2013, 7, 31))
+E       AssertionError: None != datetime.date(2013, 7, 31)
+
+meetup_test.py:259: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_wednesday_in_a_month_with_four_wednesdays" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 8, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_last_wednesday_in_a_month_with_four_wednesdays&gt;
+
+    def test_last_wednesday_in_a_month_with_four_wednesdays(self):
+&gt;       self.assertEqual(meetup(2013, 8, "last", "Wednesday"), date(2013, 8, 28))
+E       AssertionError: None != datetime.date(2013, 8, 28)
+
+meetup_test.py:262: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_last_wednesday_in_december_that_is_also_the_last_day_of_the_year" time="0.000"><failure message="AssertionError: None != datetime.date(2014, 12, 31)">self = &lt;meetup_test.MeetupTest testMethod=test_last_wednesday_in_december_that_is_also_the_last_day_of_the_year&gt;
+
+    def test_last_wednesday_in_december_that_is_also_the_last_day_of_the_year(self):
+&gt;       self.assertEqual(meetup(2014, 12, "last", "Wednesday"), date(2014, 12, 31))
+E       AssertionError: None != datetime.date(2014, 12, 31)
+
+meetup_test.py:292: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_nonexistent_fifth_friday_of_august_2022" time="0.000"><failure message="AssertionError: MeetupDayException not raised">self = &lt;meetup_test.MeetupTest testMethod=test_nonexistent_fifth_friday_of_august_2022&gt;
+
+    def test_nonexistent_fifth_friday_of_august_2022(self):
+&gt;       with self.assertRaises(MeetupDayException) as err:
+E       AssertionError: MeetupDayException not raised
+
+meetup_test.py:324: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_nonexistent_fifth_monday_of_february_2022" time="0.001"><failure message="AssertionError: MeetupDayException not raised">self = &lt;meetup_test.MeetupTest testMethod=test_nonexistent_fifth_monday_of_february_2022&gt;
+
+    def test_nonexistent_fifth_monday_of_february_2022(self):
+&gt;       with self.assertRaises(MeetupDayException) as err:
+E       AssertionError: MeetupDayException not raised
+
+meetup_test.py:318: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_nonexistent_fifth_thursday_of_may_2023" time="0.001"><failure message="AssertionError: MeetupDayException not raised">self = &lt;meetup_test.MeetupTest testMethod=test_nonexistent_fifth_thursday_of_may_2023&gt;
+
+    def test_nonexistent_fifth_thursday_of_may_2023(self):
+&gt;       with self.assertRaises(MeetupDayException) as err:
+E       AssertionError: MeetupDayException not raised
+
+meetup_test.py:330: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_teenth_friday_of_may_2022" time="0.001"><failure message="AssertionError: None != datetime.date(2022, 5, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_teenth_friday_of_may_2022&gt;
+
+    def test_teenth_friday_of_may_2022(self):
+&gt;       self.assertEqual(meetup(2022, 5, "teenth", "Friday"), date(2022, 5, 13))
+E       AssertionError: None != datetime.date(2022, 5, 13)
+
+meetup_test.py:315: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_friday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 12, 6)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_friday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_friday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 12, "first", "Friday"), date(2013, 12, 6))
+E       AssertionError: None != datetime.date(2013, 12, 6)
+
+meetup_test.py:106: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_friday_is_the_1st_the_first_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 11, 1)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_friday_is_the_1st_the_first_day_of_the_first_week&gt;
+
+    def test_when_first_friday_is_the_1st_the_first_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 11, "first", "Friday"), date(2013, 11, 1))
+E       AssertionError: None != datetime.date(2013, 11, 1)
+
+meetup_test.py:103: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_friday_is_the_7th_the_last_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2012, 12, 7)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_friday_is_the_7th_the_last_day_of_the_first_week&gt;
+
+    def test_when_first_friday_is_the_7th_the_last_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2012, 12, "first", "Friday"), date(2012, 12, 7))
+E       AssertionError: None != datetime.date(2012, 12, 7)
+
+meetup_test.py:298: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_monday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 3, 4)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_monday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_monday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "first", "Monday"), date(2013, 3, 4))
+E       AssertionError: None != datetime.date(2013, 3, 4)
+
+meetup_test.py:79: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_monday_is_the_1st_the_first_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 4, 1)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_monday_is_the_1st_the_first_day_of_the_first_week&gt;
+
+    def test_when_first_monday_is_the_1st_the_first_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "first", "Monday"), date(2013, 4, 1))
+E       AssertionError: None != datetime.date(2013, 4, 1)
+
+meetup_test.py:82: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_saturday_is_another_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 2, 2)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_saturday_is_another_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_saturday_is_another_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "first", "Saturday"), date(2013, 2, 2))
+E       AssertionError: None != datetime.date(2013, 2, 2)
+
+meetup_test.py:112: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_saturday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 1, 5)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_saturday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_saturday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 1, "first", "Saturday"), date(2013, 1, 5))
+E       AssertionError: None != datetime.date(2013, 1, 5)
+
+meetup_test.py:109: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_sunday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 3, 3)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_sunday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_sunday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "first", "Sunday"), date(2013, 3, 3))
+E       AssertionError: None != datetime.date(2013, 3, 3)
+
+meetup_test.py:115: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_sunday_is_the_7th_the_last_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 4, 7)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_sunday_is_the_7th_the_last_day_of_the_first_week&gt;
+
+    def test_when_first_sunday_is_the_7th_the_last_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "first", "Sunday"), date(2013, 4, 7))
+E       AssertionError: None != datetime.date(2013, 4, 7)
+
+meetup_test.py:118: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_thursday_is_another_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 10, 3)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_thursday_is_another_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_thursday_is_another_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "first", "Thursday"), date(2013, 10, 3))
+E       AssertionError: None != datetime.date(2013, 10, 3)
+
+meetup_test.py:100: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_thursday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 9, 5)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_thursday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_thursday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "first", "Thursday"), date(2013, 9, 5))
+E       AssertionError: None != datetime.date(2013, 9, 5)
+
+meetup_test.py:97: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_tuesday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 6, 4)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_tuesday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_tuesday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "first", "Tuesday"), date(2013, 6, 4))
+E       AssertionError: None != datetime.date(2013, 6, 4)
+
+meetup_test.py:88: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_tuesday_is_the_7th_the_last_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 5, 7)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_tuesday_is_the_7th_the_last_day_of_the_first_week&gt;
+
+    def test_when_first_tuesday_is_the_7th_the_last_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "first", "Tuesday"), date(2013, 5, 7))
+E       AssertionError: None != datetime.date(2013, 5, 7)
+
+meetup_test.py:85: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_wednesday_is_some_day_in_the_middle_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 7, 3)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_wednesday_is_some_day_in_the_middle_of_the_first_week&gt;
+
+    def test_when_first_wednesday_is_some_day_in_the_middle_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 7, "first", "Wednesday"), date(2013, 7, 3))
+E       AssertionError: None != datetime.date(2013, 7, 3)
+
+meetup_test.py:91: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_first_wednesday_is_the_7th_the_last_day_of_the_first_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 8, 7)">self = &lt;meetup_test.MeetupTest testMethod=test_when_first_wednesday_is_the_7th_the_last_day_of_the_first_week&gt;
+
+    def test_when_first_wednesday_is_the_7th_the_last_day_of_the_first_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "first", "Wednesday"), date(2013, 8, 7))
+E       AssertionError: None != datetime.date(2013, 8, 7)
+
+meetup_test.py:94: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_friday_is_some_day_in_the_middle_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 12, 27)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_friday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_friday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 12, "fourth", "Friday"), date(2013, 12, 27))
+E       AssertionError: None != datetime.date(2013, 12, 27)
+
+meetup_test.py:232: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_friday_is_the_22nd_the_first_day_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 11, 22)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_friday_is_the_22nd_the_first_day_of_the_fourth_week&gt;
+
+    def test_when_fourth_friday_is_the_22nd_the_first_day_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 11, "fourth", "Friday"), date(2013, 11, 22))
+E       AssertionError: None != datetime.date(2013, 11, 22)
+
+meetup_test.py:229: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_monday_is_some_day_in_the_middle_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 25)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_monday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_monday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "fourth", "Monday"), date(2013, 3, 25))
+E       AssertionError: None != datetime.date(2013, 3, 25)
+
+meetup_test.py:205: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_monday_is_the_22nd_the_first_day_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 22)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_monday_is_the_22nd_the_first_day_of_the_fourth_week&gt;
+
+    def test_when_fourth_monday_is_the_22nd_the_first_day_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "fourth", "Monday"), date(2013, 4, 22))
+E       AssertionError: None != datetime.date(2013, 4, 22)
+
+meetup_test.py:208: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_saturday_is_another_day_in_the_middle_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 2, 23)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_saturday_is_another_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_saturday_is_another_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "fourth", "Saturday"), date(2013, 2, 23))
+E       AssertionError: None != datetime.date(2013, 2, 23)
+
+meetup_test.py:238: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_saturday_is_some_day_in_the_middle_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 1, 26)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_saturday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_saturday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 1, "fourth", "Saturday"), date(2013, 1, 26))
+E       AssertionError: None != datetime.date(2013, 1, 26)
+
+meetup_test.py:235: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_sunday_is_some_day_in_the_middle_of_the_fourth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 24)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_sunday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_sunday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "fourth", "Sunday"), date(2013, 3, 24))
+E       AssertionError: None != datetime.date(2013, 3, 24)
+
+meetup_test.py:241: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_sunday_is_the_28th_the_last_day_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 4, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_sunday_is_the_28th_the_last_day_of_the_fourth_week&gt;
+
+    def test_when_fourth_sunday_is_the_28th_the_last_day_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "fourth", "Sunday"), date(2013, 4, 28))
+E       AssertionError: None != datetime.date(2013, 4, 28)
+
+meetup_test.py:244: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_thursday_is_another_day_in_the_middle_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 10, 24)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_thursday_is_another_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_thursday_is_another_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "fourth", "Thursday"), date(2013, 10, 24))
+E       AssertionError: None != datetime.date(2013, 10, 24)
+
+meetup_test.py:226: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_thursday_is_some_day_in_the_middle_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 9, 26)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_thursday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_thursday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "fourth", "Thursday"), date(2013, 9, 26))
+E       AssertionError: None != datetime.date(2013, 9, 26)
+
+meetup_test.py:223: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_tuesday_is_some_day_in_the_middle_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 6, 25)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_tuesday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_tuesday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "fourth", "Tuesday"), date(2013, 6, 25))
+E       AssertionError: None != datetime.date(2013, 6, 25)
+
+meetup_test.py:214: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_tuesday_is_the_28th_the_last_day_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 5, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_tuesday_is_the_28th_the_last_day_of_the_fourth_week&gt;
+
+    def test_when_fourth_tuesday_is_the_28th_the_last_day_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "fourth", "Tuesday"), date(2013, 5, 28))
+E       AssertionError: None != datetime.date(2013, 5, 28)
+
+meetup_test.py:211: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_wednesday_is_some_day_in_the_middle_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 7, 24)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_wednesday_is_some_day_in_the_middle_of_the_fourth_week&gt;
+
+    def test_when_fourth_wednesday_is_some_day_in_the_middle_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 7, "fourth", "Wednesday"), date(2013, 7, 24))
+E       AssertionError: None != datetime.date(2013, 7, 24)
+
+meetup_test.py:217: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_fourth_wednesday_is_the_28th_the_last_day_of_the_fourth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 8, 28)">self = &lt;meetup_test.MeetupTest testMethod=test_when_fourth_wednesday_is_the_28th_the_last_day_of_the_fourth_week&gt;
+
+    def test_when_fourth_wednesday_is_the_28th_the_last_day_of_the_fourth_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "fourth", "Wednesday"), date(2013, 8, 28))
+E       AssertionError: None != datetime.date(2013, 8, 28)
+
+meetup_test.py:220: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_last_sunday_in_february_in_a_non_leap_year_is_not_the_29th" time="0.001"><failure message="AssertionError: None != datetime.date(2015, 2, 22)">self = &lt;meetup_test.MeetupTest testMethod=test_when_last_sunday_in_february_in_a_non_leap_year_is_not_the_29th&gt;
+
+    def test_when_last_sunday_in_february_in_a_non_leap_year_is_not_the_29th(self):
+&gt;       self.assertEqual(meetup(2015, 2, "last", "Sunday"), date(2015, 2, 22))
+E       AssertionError: None != datetime.date(2015, 2, 22)
+
+meetup_test.py:295: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_last_wednesday_in_february_in_a_leap_year_is_the_29th" time="0.000"><failure message="AssertionError: None != datetime.date(2012, 2, 29)">self = &lt;meetup_test.MeetupTest testMethod=test_when_last_wednesday_in_february_in_a_leap_year_is_the_29th&gt;
+
+    def test_when_last_wednesday_in_february_in_a_leap_year_is_the_29th(self):
+&gt;       self.assertEqual(meetup(2012, 2, "last", "Wednesday"), date(2012, 2, 29))
+E       AssertionError: None != datetime.date(2012, 2, 29)
+
+meetup_test.py:289: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_friday_is_some_day_in_the_middle_of_the_second_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 12, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_friday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_friday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 12, "second", "Friday"), date(2013, 12, 13))
+E       AssertionError: None != datetime.date(2013, 12, 13)
+
+meetup_test.py:148: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_friday_is_the_8th_the_first_day_of_the_second_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 11, 8)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_friday_is_the_8th_the_first_day_of_the_second_week&gt;
+
+    def test_when_second_friday_is_the_8th_the_first_day_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 11, "second", "Friday"), date(2013, 11, 8))
+E       AssertionError: None != datetime.date(2013, 11, 8)
+
+meetup_test.py:145: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_monday_is_some_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 11)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_monday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_monday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "second", "Monday"), date(2013, 3, 11))
+E       AssertionError: None != datetime.date(2013, 3, 11)
+
+meetup_test.py:121: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_monday_is_the_8th_the_first_day_of_the_second_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 4, 8)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_monday_is_the_8th_the_first_day_of_the_second_week&gt;
+
+    def test_when_second_monday_is_the_8th_the_first_day_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "second", "Monday"), date(2013, 4, 8))
+E       AssertionError: None != datetime.date(2013, 4, 8)
+
+meetup_test.py:124: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_saturday_is_another_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 2, 9)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_saturday_is_another_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_saturday_is_another_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "second", "Saturday"), date(2013, 2, 9))
+E       AssertionError: None != datetime.date(2013, 2, 9)
+
+meetup_test.py:154: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_saturday_is_some_day_in_the_middle_of_the_second_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 1, 12)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_saturday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_saturday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 1, "second", "Saturday"), date(2013, 1, 12))
+E       AssertionError: None != datetime.date(2013, 1, 12)
+
+meetup_test.py:151: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_sunday_is_some_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 10)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_sunday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_sunday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "second", "Sunday"), date(2013, 3, 10))
+E       AssertionError: None != datetime.date(2013, 3, 10)
+
+meetup_test.py:157: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_sunday_is_the_14th_the_last_day_of_the_second_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 4, 14)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_sunday_is_the_14th_the_last_day_of_the_second_week&gt;
+
+    def test_when_second_sunday_is_the_14th_the_last_day_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "second", "Sunday"), date(2013, 4, 14))
+E       AssertionError: None != datetime.date(2013, 4, 14)
+
+meetup_test.py:160: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_thursday_is_another_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 10, 10)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_thursday_is_another_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_thursday_is_another_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "second", "Thursday"), date(2013, 10, 10))
+E       AssertionError: None != datetime.date(2013, 10, 10)
+
+meetup_test.py:142: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_thursday_is_some_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 12)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_thursday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_thursday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "second", "Thursday"), date(2013, 9, 12))
+E       AssertionError: None != datetime.date(2013, 9, 12)
+
+meetup_test.py:139: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_tuesday_is_some_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 6, 11)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_tuesday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_tuesday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "second", "Tuesday"), date(2013, 6, 11))
+E       AssertionError: None != datetime.date(2013, 6, 11)
+
+meetup_test.py:130: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 5, 14)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week&gt;
+
+    def test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "second", "Tuesday"), date(2013, 5, 14))
+E       AssertionError: None != datetime.date(2013, 5, 14)
+
+meetup_test.py:127: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 7, 10)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week&gt;
+
+    def test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 7, "second", "Wednesday"), date(2013, 7, 10))
+E       AssertionError: None != datetime.date(2013, 7, 10)
+
+meetup_test.py:133: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 8, 14)">self = &lt;meetup_test.MeetupTest testMethod=test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week&gt;
+
+    def test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "second", "Wednesday"), date(2013, 8, 14))
+E       AssertionError: None != datetime.date(2013, 8, 14)
+
+meetup_test.py:136: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 8, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "teenth", "Friday"), date(2013, 8, 16))
+E       AssertionError: None != datetime.date(2013, 8, 16)
+
+meetup_test.py:55: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "teenth", "Friday"), date(2013, 9, 13))
+E       AssertionError: None != datetime.date(2013, 9, 13)
+
+meetup_test.py:58: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "teenth", "Friday"), date(2013, 4, 19))
+E       AssertionError: None != datetime.date(2013, 4, 19)
+
+meetup_test.py:52: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "teenth", "Monday"), date(2013, 9, 16))
+E       AssertionError: None != datetime.date(2013, 9, 16)
+
+meetup_test.py:22: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 5, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "teenth", "Monday"), date(2013, 5, 13))
+E       AssertionError: None != datetime.date(2013, 5, 13)
+
+meetup_test.py:16: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 8, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "teenth", "Monday"), date(2013, 8, 19))
+E       AssertionError: None != datetime.date(2013, 8, 19)
+
+meetup_test.py:19: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 2, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "teenth", "Saturday"), date(2013, 2, 16))
+E       AssertionError: None != datetime.date(2013, 2, 16)
+
+meetup_test.py:61: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "teenth", "Saturday"), date(2013, 4, 13))
+E       AssertionError: None != datetime.date(2013, 4, 13)
+
+meetup_test.py:64: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 10, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "teenth", "Saturday"), date(2013, 10, 19))
+E       AssertionError: None != datetime.date(2013, 10, 19)
+
+meetup_test.py:67: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 6, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "teenth", "Sunday"), date(2013, 6, 16))
+E       AssertionError: None != datetime.date(2013, 6, 16)
+
+meetup_test.py:73: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 10, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "teenth", "Sunday"), date(2013, 10, 13))
+E       AssertionError: None != datetime.date(2013, 10, 13)
+
+meetup_test.py:76: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 5, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "teenth", "Sunday"), date(2013, 5, 19))
+E       AssertionError: None != datetime.date(2013, 5, 19)
+
+meetup_test.py:70: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 5, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "teenth", "Thursday"), date(2013, 5, 16))
+E       AssertionError: None != datetime.date(2013, 5, 16)
+
+meetup_test.py:43: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 6, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "teenth", "Thursday"), date(2013, 6, 13))
+E       AssertionError: None != datetime.date(2013, 6, 13)
+
+meetup_test.py:46: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "teenth", "Thursday"), date(2013, 9, 19))
+E       AssertionError: None != datetime.date(2013, 9, 19)
+
+meetup_test.py:49: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "teenth", "Tuesday"), date(2013, 4, 16))
+E       AssertionError: None != datetime.date(2013, 4, 16)
+
+meetup_test.py:28: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 8, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "teenth", "Tuesday"), date(2013, 8, 13))
+E       AssertionError: None != datetime.date(2013, 8, 13)
+
+meetup_test.py:31: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "teenth", "Tuesday"), date(2013, 3, 19))
+E       AssertionError: None != datetime.date(2013, 3, 19)
+
+meetup_test.py:25: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 1, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week&gt;
+
+    def test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 1, "teenth", "Wednesday"), date(2013, 1, 16))
+E       AssertionError: None != datetime.date(2013, 1, 16)
+
+meetup_test.py:34: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 2, 13)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "teenth", "Wednesday"), date(2013, 2, 13))
+E       AssertionError: None != datetime.date(2013, 2, 13)
+
+meetup_test.py:37: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 6, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week&gt;
+
+    def test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "teenth", "Wednesday"), date(2013, 6, 19))
+E       AssertionError: None != datetime.date(2013, 6, 19)
+
+meetup_test.py:40: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_friday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 12, 20)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_friday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_friday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 12, "third", "Friday"), date(2013, 12, 20))
+E       AssertionError: None != datetime.date(2013, 12, 20)
+
+meetup_test.py:190: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_friday_is_the_15th_the_first_day_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 11, 15)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_friday_is_the_15th_the_first_day_of_the_third_week&gt;
+
+    def test_when_third_friday_is_the_15th_the_first_day_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 11, "third", "Friday"), date(2013, 11, 15))
+E       AssertionError: None != datetime.date(2013, 11, 15)
+
+meetup_test.py:187: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_monday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 18)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_monday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_monday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "third", "Monday"), date(2013, 3, 18))
+E       AssertionError: None != datetime.date(2013, 3, 18)
+
+meetup_test.py:163: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_monday_is_the_15th_the_first_day_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 15)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_monday_is_the_15th_the_first_day_of_the_third_week&gt;
+
+    def test_when_third_monday_is_the_15th_the_first_day_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "third", "Monday"), date(2013, 4, 15))
+E       AssertionError: None != datetime.date(2013, 4, 15)
+
+meetup_test.py:166: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 2, 16)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 2, "third", "Saturday"), date(2013, 2, 16))
+E       AssertionError: None != datetime.date(2013, 2, 16)
+
+meetup_test.py:196: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 1, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 1, "third", "Saturday"), date(2013, 1, 19))
+E       AssertionError: None != datetime.date(2013, 1, 19)
+
+meetup_test.py:193: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 3, 17)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 3, "third", "Sunday"), date(2013, 3, 17))
+E       AssertionError: None != datetime.date(2013, 3, 17)
+
+meetup_test.py:199: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 4, 21)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week&gt;
+
+    def test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 4, "third", "Sunday"), date(2013, 4, 21))
+E       AssertionError: None != datetime.date(2013, 4, 21)
+
+meetup_test.py:202: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 10, 17)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 10, "third", "Thursday"), date(2013, 10, 17))
+E       AssertionError: None != datetime.date(2013, 10, 17)
+
+meetup_test.py:184: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 9, 19)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 9, "third", "Thursday"), date(2013, 9, 19))
+E       AssertionError: None != datetime.date(2013, 9, 19)
+
+meetup_test.py:181: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 6, 18)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 6, "third", "Tuesday"), date(2013, 6, 18))
+E       AssertionError: None != datetime.date(2013, 6, 18)
+
+meetup_test.py:172: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 5, 21)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week&gt;
+
+    def test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 5, "third", "Tuesday"), date(2013, 5, 21))
+E       AssertionError: None != datetime.date(2013, 5, 21)
+
+meetup_test.py:169: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week" time="0.000"><failure message="AssertionError: None != datetime.date(2013, 7, 17)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week&gt;
+
+    def test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 7, "third", "Wednesday"), date(2013, 7, 17))
+E       AssertionError: None != datetime.date(2013, 7, 17)
+
+meetup_test.py:175: AssertionError</failure></testcase><testcase classname="meetup_test.MeetupTest" name="test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week" time="0.001"><failure message="AssertionError: None != datetime.date(2013, 8, 21)">self = &lt;meetup_test.MeetupTest testMethod=test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week&gt;
+
+    def test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week(self):
+&gt;       self.assertEqual(meetup(2013, 8, "third", "Wednesday"), date(2013, 8, 21))
+E       AssertionError: None != datetime.date(2013, 8, 21)
+
+meetup_test.py:178: AssertionError</failure></testcase></testsuite></testsuites>

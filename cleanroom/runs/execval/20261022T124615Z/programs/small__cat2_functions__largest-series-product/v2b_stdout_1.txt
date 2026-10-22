@@ -1,0 +1,19 @@
+..............                                                           [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_1.xml -
+=========================== short test summary info ============================
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero
+PASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero
+14 passed in 0.02s

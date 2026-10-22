@@ -1,0 +1,79 @@
+ffer _____
+
+self = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_acts_like_write_on_non_full_buffer>
+
+    def test_overwrite_acts_like_write_on_non_full_buffer(self):
+        buf = CircularBuffer(2)
+        buf.write("1")
+        buf.overwrite("2")
+>       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:97: AssertionError
+__ CircularBufferTest.test_overwrite_replaces_the_oldest_item_on_full_buffer ___
+
+self = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_on_full_buffer>
+
+    def test_overwrite_replaces_the_oldest_item_on_full_buffer(self):
+        buf = CircularBuffer(2)
+        buf.write("1")
+        buf.write("2")
+        buf.overwrite("3")
+>       self.assertEqual(buf.read(), "2")
+E       AssertionError: None != '2'
+
+circular_buffer_test.py:105: AssertionError
+_ CircularBufferTest.test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read _
+
+self = <circular_buffer_test.CircularBufferTest testMethod=test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read>
+
+    def test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read(
+        self,
+    ):
+        buf = CircularBuffer(3)
+        buf.write("1")
+        buf.write("2")
+        buf.write("3")
+>       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:115: AssertionError
+_ CircularBufferTest.test_read_position_is_maintained_even_across_multiple_writes _
+
+self = <circular_buffer_test.CircularBufferTest testMethod=test_read_position_is_maintained_even_across_multiple_writes>
+
+    def test_read_position_is_maintained_even_across_multiple_writes(self):
+        buf = CircularBuffer(3)
+        buf.write("1")
+        buf.write("2")
+>       self.assertEqual(buf.read(), "1")
+E       AssertionError: None != '1'
+
+circular_buffer_test.py:65: AssertionError
+___________ CircularBufferTest.test_reading_empty_buffer_should_fail ___________
+
+self = <circular_buffer_test.CircularBufferTest testMethod=test_reading_empty_buffer_should_fail>
+
+    def test_reading_empty_buffer_should_fail(self):
+        buf = CircularBuffer(1)
+>       with self.assertRaises(BufferError) as err:
+E       AssertionError: BufferError not raised
+
+circular_buffer_test.py:17: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write
+FAILED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written
+FAILED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer
+FAILED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write
+FAILED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once
+FAILED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to
+FAILED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around
+FAILED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written
+FAILED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read
+FAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer
+FAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer
+FAILED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read
+FAILED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes
+FAILED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail
+14 failed in 0.08s

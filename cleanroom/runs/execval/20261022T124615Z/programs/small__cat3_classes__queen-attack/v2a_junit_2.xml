@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="14" time="0.056" timestamp="2026-10-22T12:48:40.315229" hostname="vm"><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_first_diagonal" time="0.001"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_first_diagonal&gt;
+
+    def test_can_attack_on_first_diagonal(self):
+&gt;       self.assertIs(Queen(2, 2).can_attack(Queen(0, 4)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:52: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_fourth_diagonal" time="0.000"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_fourth_diagonal&gt;
+
+    def test_can_attack_on_fourth_diagonal(self):
+&gt;       self.assertIs(Queen(1, 7).can_attack(Queen(0, 6)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:61: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_same_column" time="0.000"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_same_column&gt;
+
+    def test_can_attack_on_same_column(self):
+&gt;       self.assertIs(Queen(4, 5).can_attack(Queen(2, 5)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:49: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_same_row" time="0.000"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_same_row&gt;
+
+    def test_can_attack_on_same_row(self):
+&gt;       self.assertIs(Queen(2, 4).can_attack(Queen(2, 6)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:46: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_second_diagonal" time="0.000"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_second_diagonal&gt;
+
+    def test_can_attack_on_second_diagonal(self):
+&gt;       self.assertIs(Queen(2, 2).can_attack(Queen(3, 1)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:55: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_can_attack_on_third_diagonal" time="0.000"><failure message="AssertionError: None is not True">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_can_attack_on_third_diagonal&gt;
+
+    def test_can_attack_on_third_diagonal(self):
+&gt;       self.assertIs(Queen(2, 2).can_attack(Queen(1, 1)), True)
+E       AssertionError: None is not True
+
+queen_attack_test.py:58: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_cannot_attack" time="0.000"><failure message="AssertionError: None is not False">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_cannot_attack&gt;
+
+    def test_cannot_attack(self):
+&gt;       self.assertIs(Queen(2, 4).can_attack(Queen(6, 6)), False)
+E       AssertionError: None is not False
+
+queen_attack_test.py:43: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal" time="0.000"><failure message="AssertionError: None is not False">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal&gt;
+
+    def test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal(
+        self,
+    ):
+&gt;       self.assertIs(Queen(4, 1).can_attack(Queen(2, 5)), False)
+E       AssertionError: None is not False
+
+queen_attack_test.py:66: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_queen_must_have_column_on_board" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_column_on_board&gt;
+
+    def test_queen_must_have_column_on_board(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:36: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_queen_must_have_positive_column" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_positive_column&gt;
+
+    def test_queen_must_have_positive_column(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:30: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_queen_must_have_positive_row" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_positive_row&gt;
+
+    def test_queen_must_have_positive_row(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:18: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_queen_must_have_row_on_board" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_row_on_board&gt;
+
+    def test_queen_must_have_row_on_board(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:24: AssertionError</failure></testcase><testcase classname="queen_attack_test.QueenAttackTest" name="test_queen_with_a_valid_position" time="0.000" /><testcase classname="queen_attack_test.QueenAttackTest" name="test_queens_same_position_can_attack" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;queen_attack_test.QueenAttackTest testMethod=test_queens_same_position_can_attack&gt;
+
+    def test_queens_same_position_can_attack(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:70: AssertionError</failure></testcase></testsuite></testsuites>

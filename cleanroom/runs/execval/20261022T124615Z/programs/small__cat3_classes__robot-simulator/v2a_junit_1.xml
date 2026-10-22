@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="18" skipped="0" tests="18" time="0.096" timestamp="2026-10-22T12:48:42.885907" hostname="vm"><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_at_negative_position_facing_south" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'coordinates'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_at_negative_position_facing_south&gt;
+
+    def test_at_negative_position_facing_south(self):
+        robot = Robot(SOUTH, -1, -1)
+    
+&gt;       self.assertEqual(robot.coordinates, (-1, -1))
+E       AttributeError: 'Robot' object has no attribute 'coordinates'
+
+robot_simulator_test.py:28: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_at_origin_facing_north" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'coordinates'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_at_origin_facing_north&gt;
+
+    def test_at_origin_facing_north(self):
+        robot = Robot(NORTH, 0, 0)
+    
+&gt;       self.assertEqual(robot.coordinates, (0, 0))
+E       AttributeError: 'Robot' object has no attribute 'coordinates'
+
+robot_simulator_test.py:22: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_east_to_north" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_east_to_north&gt;
+
+    def test_changes_east_to_north(self):
+        robot = Robot(EAST, 0, 0)
+&gt;       robot.move("L")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:84: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_east_to_south" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_east_to_south&gt;
+
+    def test_changes_east_to_south(self):
+        robot = Robot(EAST, 0, 0)
+&gt;       robot.move("R")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:41: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_north_to_east" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_north_to_east&gt;
+
+    def test_changes_north_to_east(self):
+        robot = Robot(NORTH, 0, 0)
+&gt;       robot.move("R")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:34: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_north_to_west" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_north_to_west&gt;
+
+    def test_changes_north_to_west(self):
+        robot = Robot(NORTH, 0, 0)
+&gt;       robot.move("L")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:63: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_south_to_east" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_south_to_east&gt;
+
+    def test_changes_south_to_east(self):
+        robot = Robot(SOUTH, 0, 0)
+&gt;       robot.move("L")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:77: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_south_to_west" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_south_to_west&gt;
+
+    def test_changes_south_to_west(self):
+        robot = Robot(SOUTH, 0, 0)
+&gt;       robot.move("R")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:48: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_west_to_north" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_west_to_north&gt;
+
+    def test_changes_west_to_north(self):
+        robot = Robot(WEST, 0, 0)
+&gt;       robot.move("R")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:55: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_changes_west_to_south" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_changes_west_to_south&gt;
+
+    def test_changes_west_to_south(self):
+        robot = Robot(WEST, 0, 0)
+&gt;       robot.move("L")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:70: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_facing_east_increments_x" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_facing_east_increments_x&gt;
+
+    def test_facing_east_increments_x(self):
+        robot = Robot(EAST, 0, 0)
+&gt;       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:106: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_facing_north_increments_y" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_facing_north_increments_y&gt;
+
+    def test_facing_north_increments_y(self):
+        robot = Robot(NORTH, 0, 0)
+&gt;       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:92: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_facing_south_decrements_y" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_facing_south_decrements_y&gt;
+
+    def test_facing_south_decrements_y(self):
+        robot = Robot(SOUTH, 0, 0)
+&gt;       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:99: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_facing_west_decrements_x" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_facing_west_decrements_x&gt;
+
+    def test_facing_west_decrements_x(self):
+        robot = Robot(WEST, 0, 0)
+&gt;       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:113: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_moving_east_and_north" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_moving_east_and_north&gt;
+
+    def test_moving_east_and_north(self):
+        robot = Robot(SOUTH, 8, 4)
+&gt;       robot.move("LAAARRRALLLL")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:142: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_moving_east_and_north_from_readme" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_moving_east_and_north_from_readme&gt;
+
+    def test_moving_east_and_north_from_readme(self):
+        robot = Robot(NORTH, 7, 3)
+&gt;       robot.move("RAALAL")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:121: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_moving_west_and_north" time="0.000"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_moving_west_and_north&gt;
+
+    def test_moving_west_and_north(self):
+        robot = Robot(NORTH, 0, 0)
+&gt;       robot.move("LAAARALA")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:128: AttributeError</failure></testcase><testcase classname="robot_simulator_test.RobotSimulatorTest" name="test_moving_west_and_south" time="0.001"><failure message="AttributeError: 'Robot' object has no attribute 'move'">self = &lt;robot_simulator_test.RobotSimulatorTest testMethod=test_moving_west_and_south&gt;
+
+    def test_moving_west_and_south(self):
+        robot = Robot(EAST, 2, -7)
+&gt;       robot.move("RRAAAAALA")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:135: AttributeError</failure></testcase></testsuite></testsuites>

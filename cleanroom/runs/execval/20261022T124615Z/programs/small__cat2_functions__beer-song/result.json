@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/beer-song",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/beer-song/beer_song.py",
+    "0_100 LOC/cat2_functions/beer-song/beer_song_test.py",
+    "0_100 LOC/cat2_functions/beer-song/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "beer_song.py": "942234e1d907d3867f9eee8102573a8c398520a28ad1ca10cd23a0d9247134bc",
+    "beer_song_test.py": "91c87daae769e12821ba3526858ca3fd45c3501033669edb6101e486d74eff1f",
+    "example.py": "b799738d63ff7e375f9bedfb76552eeee9b328ee8c3581f6f48a05ff71690fef"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.031,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.02,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "beer_song.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "beer_song_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 8,
+    "passed": 0,
+    "failed": 8,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ad1fd8266e5093d8aa75a7630265e01b4f9f5b3f3dfbe4c8a82dc01345613134"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_1.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.24,
+          "stdout_sha256": "a81ac7ce55ee2127b2e98a8fed2819edb45a9714941e7c8a0a4d556736178d0f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 22218,
+          "stderr_bytes": 0,
+          "stdout_tail": "_____________ BeerSongTest.test_last_generic_verse _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_generic_verse>\n\n    def test_last_generic_verse(self):\n        expected = [\n            \"3 bottles of beer on the wall, 3 bottles of beer.\",\n            \"Take one down and pass it around, 2 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=3), expected)\nE       AssertionError: None != ['3 bottles of beer on the wall, 3 bottle[75 chars]ll.']\n\nbeer_song_test.py:25: AssertionError\n_____________________ BeerSongTest.test_last_three_verses ______________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_three_verses>\n\n    def test_last_three_verses(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n            \"\",\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n            \"\",\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2, take=3), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[341 chars]ll.']\n\nbeer_song_test.py:69: AssertionError\n____________________ BeerSongTest.test_verse_with_0_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_0_bottles>\n\n    def test_verse_with_0_bottles(self):\n        expected = [\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=0), expected)\nE       AssertionError: None != ['No more bottles of beer on the wall, no[89 chars]ll.']\n\nbeer_song_test.py:46: AssertionError\n____________________ BeerSongTest.test_verse_with_1_bottle _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_1_bottle>\n\n    def test_verse_with_1_bottle(self):\n        expected = [\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=1), expected)\nE       AssertionError: None != ['1 bottle of beer on the wall, 1 bottle [78 chars]ll.']\n\nbeer_song_test.py:39: AssertionError\n____________________ BeerSongTest.test_verse_with_2_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_2_bottles>\n\n    def test_verse_with_2_bottles(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[74 chars]ll.']\n\nbeer_song_test.py:32: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED beer_song_test.py::BeerSongTest::test_all_verses - AssertionError: Non...\nFAILED beer_song_test.py::BeerSongTest::test_first_generic_verse - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_first_two_verses - AssertionErro...\nFAILED beer_song_test.py::BeerSongTest::test_last_generic_verse - AssertionEr...\nFAILED beer_song_test.py::BeerSongTest::test_last_three_verses - AssertionErr...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles - Assertion...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles - Assertion...\n8 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ad1fd8266e5093d8aa75a7630265e01b4f9f5b3f3dfbe4c8a82dc01345613134"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_2.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.236,
+          "stdout_sha256": "11653572dea59f7cf1febf6799b3354e7068500acbcda2d714c33e9c6aaa48a9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 22218,
+          "stderr_bytes": 0,
+          "stdout_tail": "_____________ BeerSongTest.test_last_generic_verse _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_generic_verse>\n\n    def test_last_generic_verse(self):\n        expected = [\n            \"3 bottles of beer on the wall, 3 bottles of beer.\",\n            \"Take one down and pass it around, 2 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=3), expected)\nE       AssertionError: None != ['3 bottles of beer on the wall, 3 bottle[75 chars]ll.']\n\nbeer_song_test.py:25: AssertionError\n_____________________ BeerSongTest.test_last_three_verses ______________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_three_verses>\n\n    def test_last_three_verses(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n            \"\",\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n            \"\",\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2, take=3), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[341 chars]ll.']\n\nbeer_song_test.py:69: AssertionError\n____________________ BeerSongTest.test_verse_with_0_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_0_bottles>\n\n    def test_verse_with_0_bottles(self):\n        expected = [\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=0), expected)\nE       AssertionError: None != ['No more bottles of beer on the wall, no[89 chars]ll.']\n\nbeer_song_test.py:46: AssertionError\n____________________ BeerSongTest.test_verse_with_1_bottle _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_1_bottle>\n\n    def test_verse_with_1_bottle(self):\n        expected = [\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=1), expected)\nE       AssertionError: None != ['1 bottle of beer on the wall, 1 bottle [78 chars]ll.']\n\nbeer_song_test.py:39: AssertionError\n____________________ BeerSongTest.test_verse_with_2_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_2_bottles>\n\n    def test_verse_with_2_bottles(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[74 chars]ll.']\n\nbeer_song_test.py:32: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED beer_song_test.py::BeerSongTest::test_all_verses - AssertionError: Non...\nFAILED beer_song_test.py::BeerSongTest::test_first_generic_verse - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_first_two_verses - AssertionErro...\nFAILED beer_song_test.py::BeerSongTest::test_last_generic_verse - AssertionEr...\nFAILED beer_song_test.py::BeerSongTest::test_last_three_verses - AssertionErr...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles - Assertion...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles - Assertion...\n8 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 0,
+          "failed": 8,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "ad1fd8266e5093d8aa75a7630265e01b4f9f5b3f3dfbe4c8a82dc01345613134"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_3.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.259,
+          "stdout_sha256": "f53e1cd0bf85275bbeb4bdf50aa7297ad7576b88849f602134244984e525621c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 22218,
+          "stderr_bytes": 0,
+          "stdout_tail": "_____________ BeerSongTest.test_last_generic_verse _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_generic_verse>\n\n    def test_last_generic_verse(self):\n        expected = [\n            \"3 bottles of beer on the wall, 3 bottles of beer.\",\n            \"Take one down and pass it around, 2 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=3), expected)\nE       AssertionError: None != ['3 bottles of beer on the wall, 3 bottle[75 chars]ll.']\n\nbeer_song_test.py:25: AssertionError\n_____________________ BeerSongTest.test_last_three_verses ______________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_last_three_verses>\n\n    def test_last_three_verses(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n            \"\",\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n            \"\",\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2, take=3), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[341 chars]ll.']\n\nbeer_song_test.py:69: AssertionError\n____________________ BeerSongTest.test_verse_with_0_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_0_bottles>\n\n    def test_verse_with_0_bottles(self):\n        expected = [\n            \"No more bottles of beer on the wall, no more bottles of beer.\",\n            \"Go to the store and buy some more, 99 bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=0), expected)\nE       AssertionError: None != ['No more bottles of beer on the wall, no[89 chars]ll.']\n\nbeer_song_test.py:46: AssertionError\n____________________ BeerSongTest.test_verse_with_1_bottle _____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_1_bottle>\n\n    def test_verse_with_1_bottle(self):\n        expected = [\n            \"1 bottle of beer on the wall, 1 bottle of beer.\",\n            \"Take it down and pass it around, no more bottles of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=1), expected)\nE       AssertionError: None != ['1 bottle of beer on the wall, 1 bottle [78 chars]ll.']\n\nbeer_song_test.py:39: AssertionError\n____________________ BeerSongTest.test_verse_with_2_bottles ____________________\n\nself = <beer_song_test.BeerSongTest testMethod=test_verse_with_2_bottles>\n\n    def test_verse_with_2_bottles(self):\n        expected = [\n            \"2 bottles of beer on the wall, 2 bottles of beer.\",\n            \"Take one down and pass it around, 1 bottle of beer on the wall.\",\n        ]\n>       self.assertEqual(recite(start=2), expected)\nE       AssertionError: None != ['2 bottles of beer on the wall, 2 bottle[74 chars]ll.']\n\nbeer_song_test.py:32: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED beer_song_test.py::BeerSongTest::test_all_verses - AssertionError: Non...\nFAILED beer_song_test.py::BeerSongTest::test_first_generic_verse - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_first_two_verses - AssertionErro...\nFAILED beer_song_test.py::BeerSongTest::test_last_generic_verse - AssertionEr...\nFAILED beer_song_test.py::BeerSongTest::test_last_three_verses - AssertionErr...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles - Assertion...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle - AssertionE...\nFAILED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles - Assertion...\n8 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "beer_song.py",
+    "with_copy_of": "example.py",
+    "sha256": "b799738d63ff7e375f9bedfb76552eeee9b328ee8c3581f6f48a05ff71690fef",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "beer_song_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "220c1e809408830e9b08751bb5ab0c68a29f4c55a262cdd08ed143c47010e549"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_1.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.189,
+          "stdout_sha256": "11eacfc3ffe8fcc477f379ae258b4f9039a324ff74363da8b018598c6975a399",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 912,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED beer_song_test.py::BeerSongTest::test_all_verses\nPASSED beer_song_test.py::BeerSongTest::test_first_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_first_two_verses\nPASSED beer_song_test.py::BeerSongTest::test_last_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_last_three_verses\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles\n8 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "220c1e809408830e9b08751bb5ab0c68a29f4c55a262cdd08ed143c47010e549"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_2.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.176,
+          "stdout_sha256": "d753d1bb0858abe76e3b6e3acaeed3eed3acac973a1889cc2a74f169131ee500",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 912,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED beer_song_test.py::BeerSongTest::test_all_verses\nPASSED beer_song_test.py::BeerSongTest::test_first_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_first_two_verses\nPASSED beer_song_test.py::BeerSongTest::test_last_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_last_three_verses\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles\n8 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "220c1e809408830e9b08751bb5ab0c68a29f4c55a262cdd08ed143c47010e549"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_3.xml",
+            "beer_song_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.189,
+          "stdout_sha256": "4749c012fc2a7d71c372fd14b28c7d35d2d6b31cc67c6c7ac433dc4c1f4a1aa5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 912,
+          "stderr_bytes": 0,
+          "stdout_tail": "........                                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__beer-song/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED beer_song_test.py::BeerSongTest::test_all_verses\nPASSED beer_song_test.py::BeerSongTest::test_first_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_first_two_verses\nPASSED beer_song_test.py::BeerSongTest::test_last_generic_verse\nPASSED beer_song_test.py::BeerSongTest::test_last_three_verses\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_0_bottles\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_1_bottle\nPASSED beer_song_test.py::BeerSongTest::test_verse_with_2_bottles\n8 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 8/8 passed, 0 failed, 0 errors (consistent)"
+}

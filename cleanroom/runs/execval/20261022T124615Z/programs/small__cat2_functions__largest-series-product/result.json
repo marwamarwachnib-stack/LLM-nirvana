@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/largest-series-product",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/largest-series-product/example.py",
+    "0_100 LOC/cat2_functions/largest-series-product/largest_series_product.py",
+    "0_100 LOC/cat2_functions/largest-series-product/largest_series_product_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "91cb8b260452598f24b71fed2554beab7053c2db7283244d0bbeffd4ad275df2",
+    "largest_series_product.py": "7adb51ea48fb676a351409815f9b5cfce831fcf3d8de693cfadbaa7c004c6638",
+    "largest_series_product_test.py": "bcac26c429b35d6f402e1e7805602a3893fc355a977b2cc56c3ac890ab1c2a1c"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.02,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.02,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "largest_series_product.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "largest_series_product_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 14,
+    "passed": 0,
+    "failed": 14,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "0187f30d7686750e82d3002d3b7e21460ed0858c28d995d15e405c3785a9d5a1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_1.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.299,
+          "stdout_sha256": "236c669eb0f0d71403cded486aa7397095d420880ecb9c7d584744794ab3af7d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8881,
+          "stderr_bytes": 0,
+          "stdout_tail": "ro_span>\n\n    def test_rejects_empty_string_and_nonzero_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:52: AssertionError\n______ LargestSeriesProductTest.test_rejects_invalid_character_in_digits _______\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_invalid_character_in_digits>\n\n    def test_rejects_invalid_character_in_digits(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:60: AssertionError\n_____________ LargestSeriesProductTest.test_rejects_negative_span ______________\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_negative_span>\n\n    def test_rejects_negative_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:66: AssertionError\n_____ LargestSeriesProductTest.test_rejects_span_longer_than_string_length _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_span_longer_than_string_length>\n\n    def test_rejects_span_longer_than_string_length(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:44: AssertionError\n_____ LargestSeriesProductTest.test_reports_zero_if_all_spans_include_zero _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_all_spans_include_zero>\n\n    def test_reports_zero_if_all_spans_include_zero(self):\n>       self.assertEqual(largest_product(\"99099\", 3), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:41: AssertionError\n____ LargestSeriesProductTest.test_reports_zero_if_the_only_digits_are_zero ____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_the_only_digits_are_zero>\n\n    def test_reports_zero_if_the_only_digits_are_zero(self):\n>       self.assertEqual(largest_product(\"0000\", 2), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:38: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "0187f30d7686750e82d3002d3b7e21460ed0858c28d995d15e405c3785a9d5a1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_2.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.254,
+          "stdout_sha256": "13cef99115325aa1f29f18bd8382e74d9396b2cd55e33c0300214707af47abb6",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8881,
+          "stderr_bytes": 0,
+          "stdout_tail": "ro_span>\n\n    def test_rejects_empty_string_and_nonzero_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:52: AssertionError\n______ LargestSeriesProductTest.test_rejects_invalid_character_in_digits _______\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_invalid_character_in_digits>\n\n    def test_rejects_invalid_character_in_digits(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:60: AssertionError\n_____________ LargestSeriesProductTest.test_rejects_negative_span ______________\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_negative_span>\n\n    def test_rejects_negative_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:66: AssertionError\n_____ LargestSeriesProductTest.test_rejects_span_longer_than_string_length _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_span_longer_than_string_length>\n\n    def test_rejects_span_longer_than_string_length(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:44: AssertionError\n_____ LargestSeriesProductTest.test_reports_zero_if_all_spans_include_zero _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_all_spans_include_zero>\n\n    def test_reports_zero_if_all_spans_include_zero(self):\n>       self.assertEqual(largest_product(\"99099\", 3), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:41: AssertionError\n____ LargestSeriesProductTest.test_reports_zero_if_the_only_digits_are_zero ____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_the_only_digits_are_zero>\n\n    def test_reports_zero_if_the_only_digits_are_zero(self):\n>       self.assertEqual(largest_product(\"0000\", 2), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:38: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 0,
+          "failed": 14,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "0187f30d7686750e82d3002d3b7e21460ed0858c28d995d15e405c3785a9d5a1"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_3.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.258,
+          "stdout_sha256": "a6f24593f8c06fdbe92e895fd988035d1855b57d6bfd073a8119fc35fba7db26",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8881,
+          "stderr_bytes": 0,
+          "stdout_tail": "ro_span>\n\n    def test_rejects_empty_string_and_nonzero_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:52: AssertionError\n______ LargestSeriesProductTest.test_rejects_invalid_character_in_digits _______\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_invalid_character_in_digits>\n\n    def test_rejects_invalid_character_in_digits(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:60: AssertionError\n_____________ LargestSeriesProductTest.test_rejects_negative_span ______________\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_negative_span>\n\n    def test_rejects_negative_span(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:66: AssertionError\n_____ LargestSeriesProductTest.test_rejects_span_longer_than_string_length _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_rejects_span_longer_than_string_length>\n\n    def test_rejects_span_longer_than_string_length(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nlargest_series_product_test.py:44: AssertionError\n_____ LargestSeriesProductTest.test_reports_zero_if_all_spans_include_zero _____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_all_spans_include_zero>\n\n    def test_reports_zero_if_all_spans_include_zero(self):\n>       self.assertEqual(largest_product(\"99099\", 3), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:41: AssertionError\n____ LargestSeriesProductTest.test_reports_zero_if_the_only_digits_are_zero ____\n\nself = <largest_series_product_test.LargestSeriesProductTest testMethod=test_reports_zero_if_the_only_digits_are_zero>\n\n    def test_reports_zero_if_the_only_digits_are_zero(self):\n>       self.assertEqual(largest_product(\"0000\", 2), 0)\nE       AssertionError: None != 0\n\nlargest_series_product_test.py:38: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nFAILED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "largest_series_product.py",
+    "with_copy_of": "example.py",
+    "sha256": "91cb8b260452598f24b71fed2554beab7053c2db7283244d0bbeffd4ad275df2",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "largest_series_product_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a8142458bfb7c41ec11b2a401e4b0b212b7ddf8d1d47936ec36d9e6d380f8cc4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_1.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.199,
+          "stdout_sha256": "9cbef47f8cf75c290b92ba735c4fb2ba1baf51ef5ad1dd3b22c405c2df0e9c3d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1959,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a8142458bfb7c41ec11b2a401e4b0b212b7ddf8d1d47936ec36d9e6d380f8cc4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_2.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.197,
+          "stdout_sha256": "bb0a16a3d5ea1e56d69a37da773abc05719cab5b92bad8923156e29ca7ccad1b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1959,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a8142458bfb7c41ec11b2a401e4b0b212b7ddf8d1d47936ec36d9e6d380f8cc4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_3.xml",
+            "largest_series_product_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.194,
+          "stdout_sha256": "47779a0d9c17b07daa38380f9fc1b99e1164e19c0915866b94a1b43a568454a3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1959,
+          "stderr_bytes": 0,
+          "stdout_tail": "..............                                                           [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__largest-series-product/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_2_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_3_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_find_the_largest_product_of_5_with_numbers_in_order\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_can_get_the_largest_product_of_a_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_euler_big_number\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_finds_the_largest_product_if_span_equals_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_empty_string_and_nonzero_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_invalid_character_in_digits\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_negative_span\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_rejects_span_longer_than_string_length\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_all_spans_include_zero\nPASSED largest_series_product_test.py::LargestSeriesProductTest::test_reports_zero_if_the_only_digits_are_zero\n14 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 14/14 passed, 0 failed, 0 errors (consistent)"
+}

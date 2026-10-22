@@ -1,0 +1,18 @@
+.............                                                            [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_1.xml -
+=========================== short test summary info ============================
+PASSED dominoes_test.py::DominoesTest::test_can_reverse_dominoes
+PASSED dominoes_test.py::DominoesTest::test_can_t_be_chained
+PASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop
+PASSED dominoes_test.py::DominoesTest::test_disconnected_simple
+PASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated
+PASSED dominoes_test.py::DominoesTest::test_empty_input_empty_output
+PASSED dominoes_test.py::DominoesTest::test_need_backtrack
+PASSED dominoes_test.py::DominoesTest::test_nine_elements
+PASSED dominoes_test.py::DominoesTest::test_separate_loops
+PASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops
+PASSED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output
+PASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained
+PASSED dominoes_test.py::DominoesTest::test_three_elements
+13 passed in 0.02s

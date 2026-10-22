@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="15" skipped="0" tests="15" time="0.066" timestamp="2026-10-22T12:46:38.091946" hostname="vm"><testcase classname="minesweeper_test.MinesweeperTest" name="test_annotate_9" time="0.001"><failure message="AssertionError: None != ['  111', '  1*1', '  111', '111  ', '1*1  ']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_annotate_9&gt;
+
+    def test_annotate_9(self):
+&gt;       self.assertEqual(
+            annotate(["     ", "   * ", "     ", "     ", " *   "]),
+            ["  111", "  1*1", "  111", "111  ", "1*1  "],
+        )
+E       AssertionError: None != ['  111', '  1*1', '  111', '111  ', '1*1  ']
+
+minesweeper_test.py:57: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_cross" time="0.000"><failure message="AssertionError: None != [' 2*2 ', '25*52', '*****', '25*52', ' 2*2 ']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_cross&gt;
+
+    def test_cross(self):
+&gt;       self.assertEqual(
+            annotate(["  *  ", "  *  ", "*****", "  *  ", "  *  "]),
+            [" 2*2 ", "25*52", "*****", "25*52", " 2*2 "],
+        )
+E       AssertionError: None != [' 2*2 ', '25*52', '*****', '25*52', ' 2*2 ']
+
+minesweeper_test.py:44: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_different_len" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_different_len&gt;
+
+    def test_different_len(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+minesweeper_test.py:63: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_horizontal_line" time="0.000"><failure message="AssertionError: None != ['1*2*1']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_horizontal_line&gt;
+
+    def test_horizontal_line(self):
+&gt;       self.assertEqual(annotate([" * * "]), ["1*2*1"])
+E       AssertionError: None != ['1*2*1']
+
+minesweeper_test.py:32: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_horizontal_line_mines_at_edges" time="0.000"><failure message="AssertionError: None != ['*1 1*']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_horizontal_line_mines_at_edges&gt;
+
+    def test_horizontal_line_mines_at_edges(self):
+&gt;       self.assertEqual(annotate(["*   *"]), ["*1 1*"])
+E       AssertionError: None != ['*1 1*']
+
+minesweeper_test.py:35: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_invalid_char" time="0.001"><failure message="AssertionError: ValueError not raised">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_invalid_char&gt;
+
+    def test_invalid_char(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+minesweeper_test.py:71: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_large_minefield" time="0.001"><failure message="AssertionError: None != ['1*22*1', '12*322', ' 123*2', '112*4*', '1*22*2', '111111']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_large_minefield&gt;
+
+    def test_large_minefield(self):
+&gt;       self.assertEqual(
+            annotate([" *  * ", "  *   ", "    * ", "   * *", " *  * ", "      "]),
+            ["1*22*1", "12*322", " 123*2", "112*4*", "1*22*2", "111111"],
+        )
+E       AssertionError: None != ['1*22*1', '12*322', ' 123*2', '112*4*', '1*22*2', '111111']
+
+minesweeper_test.py:50: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_mine_surrounded_by_spaces" time="0.000"><failure message="AssertionError: None != ['111', '1*1', '111']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_mine_surrounded_by_spaces&gt;
+
+    def test_mine_surrounded_by_spaces(self):
+&gt;       self.assertEqual(annotate(["   ", " * ", "   "]), ["111", "1*1", "111"])
+E       AssertionError: None != ['111', '1*1', '111']
+
+minesweeper_test.py:26: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_minefield_with_only_mines" time="0.000"><failure message="AssertionError: None != ['***', '***', '***']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_minefield_with_only_mines&gt;
+
+    def test_minefield_with_only_mines(self):
+&gt;       self.assertEqual(annotate(["***", "***", "***"]), ["***", "***", "***"])
+E       AssertionError: None != ['***', '***', '***']
+
+minesweeper_test.py:23: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_no_columns" time="0.001"><failure message="AssertionError: None != ['']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_no_columns&gt;
+
+    def test_no_columns(self):
+&gt;       self.assertEqual(annotate([""]), [""])
+E       AssertionError: None != ['']
+
+minesweeper_test.py:17: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_no_mines" time="0.000"><failure message="AssertionError: None != ['   ', '   ', '   ']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_no_mines&gt;
+
+    def test_no_mines(self):
+&gt;       self.assertEqual(annotate(["   ", "   ", "   "]), ["   ", "   ", "   "])
+E       AssertionError: None != ['   ', '   ', '   ']
+
+minesweeper_test.py:20: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_no_rows" time="0.000"><failure message="AssertionError: None != []">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_no_rows&gt;
+
+    def test_no_rows(self):
+&gt;       self.assertEqual(annotate([]), [])
+E       AssertionError: None != []
+
+minesweeper_test.py:14: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_space_surrounded_by_mines" time="0.000"><failure message="AssertionError: None != ['***', '*8*', '***']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_space_surrounded_by_mines&gt;
+
+    def test_space_surrounded_by_mines(self):
+&gt;       self.assertEqual(annotate(["***", "* *", "***"]), ["***", "*8*", "***"])
+E       AssertionError: None != ['***', '*8*', '***']
+
+minesweeper_test.py:29: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_vertical_line" time="0.000"><failure message="AssertionError: None != ['1', '*', '2', '*', '1']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_vertical_line&gt;
+
+    def test_vertical_line(self):
+&gt;       self.assertEqual(annotate([" ", "*", " ", "*", " "]), ["1", "*", "2", "*", "1"])
+E       AssertionError: None != ['1', '*', '2', '*', '1']
+
+minesweeper_test.py:38: AssertionError</failure></testcase><testcase classname="minesweeper_test.MinesweeperTest" name="test_vertical_line_mines_at_edges" time="0.001"><failure message="AssertionError: None != ['*', '1', ' ', '1', '*']">self = &lt;minesweeper_test.MinesweeperTest testMethod=test_vertical_line_mines_at_edges&gt;
+
+    def test_vertical_line_mines_at_edges(self):
+&gt;       self.assertEqual(annotate(["*", " ", " ", " ", "*"]), ["*", "1", " ", "1", "*"])
+E       AssertionError: None != ['*', '1', ' ', '1', '*']
+
+minesweeper_test.py:41: AssertionError</failure></testcase></testsuite></testsuites>

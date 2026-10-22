@@ -1,0 +1,19 @@
+..............                                                           [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__queen-attack/v2b_junit_2.xml -
+=========================== short test summary info ============================
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_first_diagonal
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_fourth_diagonal
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_same_column
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_same_row
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_second_diagonal
+PASSED queen_attack_test.py::QueenAttackTest::test_can_attack_on_third_diagonal
+PASSED queen_attack_test.py::QueenAttackTest::test_cannot_attack
+PASSED queen_attack_test.py::QueenAttackTest::test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_must_have_column_on_board
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_must_have_positive_column
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_must_have_positive_row
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_must_have_row_on_board
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_with_a_valid_position
+PASSED queen_attack_test.py::QueenAttackTest::test_queens_same_position_can_attack
+14 passed in 0.03s

@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/clock",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/clock/clock.py",
+    "0_100 LOC/cat3_classes/clock/clock_test.py",
+    "0_100 LOC/cat3_classes/clock/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "clock.py": "100e038269d235a1dd22a94d00163486c3071d2d4bb6e3dd599f6402881a387e",
+    "clock_test.py": "e8715c05f5ea9d9c50922581a72ad2d70985c89b359885fdbd32ddde4dc83d0f",
+    "example.py": "91f83a5bfbdda1a953599b8c04d699a310a4ec32a6a65bb42649237e452cb6aa"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.029,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "clock.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "clock_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 55,
+    "passed": 2,
+    "failed": 53,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 2,
+          "failed": 53,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b923b6eb19761af2ab124eba569acebd8a72bbc74e147ac5319c2248c95a4c2"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2a_junit_1.xml",
+            "clock_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.436,
+          "stdout_sha256": "4b8204b49a87f63b3093d406e3bbadd3ca82fe04245dd9bf49bb7298858e4de3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 24694,
+          "stderr_bytes": 0,
+          "stdout_tail": "test.py::ClockTest::test_add_more_than_two_days - AssertionError...\nFAILED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry - As...\nFAILED clock_test.py::ClockTest::test_add_no_minutes - AssertionError: 'None'...\nFAILED clock_test.py::ClockTest::test_add_to_next_hour - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_breakfast_time - TypeError: __repr__ re...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps - ...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_same_time - AssertionError:...\nFAILED clock_test.py::ClockTest::test_dinner_time - TypeError: __repr__ retur...\nFAILED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock - Assertion...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nFAILED clock_test.py::ClockTest::test_hour_rolls_over - TypeError: __str__ re...\nFAILED clock_test.py::ClockTest::test_hour_rolls_over_continuously - TypeErro...\nFAILED clock_test.py::ClockTest::test_lunch_time - TypeError: __repr__ return...\nFAILED clock_test.py::ClockTest::test_midnight_is_zero_hours - TypeError: __s...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over - TypeError: __str__ ...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over_continuously - TypeEr...\nFAILED clock_test.py::ClockTest::test_negative_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over - TypeError: _...\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_minutes - TypeError: __str__ r...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nFAILED clock_test.py::ClockTest::test_on_the_hour - TypeError: __str__ return...\nFAILED clock_test.py::ClockTest::test_past_the_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour - TypeError:...\nFAILED clock_test.py::ClockTest::test_subtract_across_midnight - AssertionErr...\nFAILED clock_test.py::ClockTest::test_subtract_minutes - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_an_hour - AssertionE...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_days - Assertion...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours - Assertio...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nFAILED clock_test.py::ClockTest::test_subtract_to_previous_hour - AssertionEr...\n53 failed, 2 passed in 0.24s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 2,
+          "failed": 53,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b923b6eb19761af2ab124eba569acebd8a72bbc74e147ac5319c2248c95a4c2"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2a_junit_2.xml",
+            "clock_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.506,
+          "stdout_sha256": "c89f4fb578440497eec0c5147a936ac1cd811a204743aba8db5a7ba140dd4c28",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 24694,
+          "stderr_bytes": 0,
+          "stdout_tail": "test.py::ClockTest::test_add_more_than_two_days - AssertionError...\nFAILED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry - As...\nFAILED clock_test.py::ClockTest::test_add_no_minutes - AssertionError: 'None'...\nFAILED clock_test.py::ClockTest::test_add_to_next_hour - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_breakfast_time - TypeError: __repr__ re...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps - ...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_same_time - AssertionError:...\nFAILED clock_test.py::ClockTest::test_dinner_time - TypeError: __repr__ retur...\nFAILED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock - Assertion...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nFAILED clock_test.py::ClockTest::test_hour_rolls_over - TypeError: __str__ re...\nFAILED clock_test.py::ClockTest::test_hour_rolls_over_continuously - TypeErro...\nFAILED clock_test.py::ClockTest::test_lunch_time - TypeError: __repr__ return...\nFAILED clock_test.py::ClockTest::test_midnight_is_zero_hours - TypeError: __s...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over - TypeError: __str__ ...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over_continuously - TypeEr...\nFAILED clock_test.py::ClockTest::test_negative_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over - TypeError: _...\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_minutes - TypeError: __str__ r...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nFAILED clock_test.py::ClockTest::test_on_the_hour - TypeError: __str__ return...\nFAILED clock_test.py::ClockTest::test_past_the_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour - TypeError:...\nFAILED clock_test.py::ClockTest::test_subtract_across_midnight - AssertionErr...\nFAILED clock_test.py::ClockTest::test_subtract_minutes - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_an_hour - AssertionE...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_days - Assertion...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours - Assertio...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nFAILED clock_test.py::ClockTest::test_subtract_to_previous_hour - AssertionEr...\n53 failed, 2 passed in 0.30s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 2,
+          "failed": 53,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9b923b6eb19761af2ab124eba569acebd8a72bbc74e147ac5319c2248c95a4c2"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2a_junit_3.xml",
+            "clock_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.443,
+          "stdout_sha256": "ad19ad06a48f6cebcd13e45313a24e7c159c2e01532553dde040a1cd8433a301",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 24694,
+          "stderr_bytes": 0,
+          "stdout_tail": "test.py::ClockTest::test_add_more_than_two_days - AssertionError...\nFAILED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry - As...\nFAILED clock_test.py::ClockTest::test_add_no_minutes - AssertionError: 'None'...\nFAILED clock_test.py::ClockTest::test_add_to_next_hour - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_breakfast_time - TypeError: __repr__ re...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour - AssertionEr...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps - ...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute - Assertion...\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nFAILED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nFAILED clock_test.py::ClockTest::test_clocks_with_same_time - AssertionError:...\nFAILED clock_test.py::ClockTest::test_dinner_time - TypeError: __repr__ retur...\nFAILED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock - Assertion...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nFAILED clock_test.py::ClockTest::test_hour_rolls_over - TypeError: __str__ re...\nFAILED clock_test.py::ClockTest::test_hour_rolls_over_continuously - TypeErro...\nFAILED clock_test.py::ClockTest::test_lunch_time - TypeError: __repr__ return...\nFAILED clock_test.py::ClockTest::test_midnight_is_zero_hours - TypeError: __s...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over - TypeError: __str__ ...\nFAILED clock_test.py::ClockTest::test_minutes_roll_over_continuously - TypeEr...\nFAILED clock_test.py::ClockTest::test_negative_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nFAILED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over - TypeError: _...\nFAILED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_minutes - TypeError: __str__ r...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over - TypeError:...\nFAILED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nFAILED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nFAILED clock_test.py::ClockTest::test_on_the_hour - TypeError: __str__ return...\nFAILED clock_test.py::ClockTest::test_past_the_hour - TypeError: __str__ retu...\nFAILED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour - TypeError:...\nFAILED clock_test.py::ClockTest::test_subtract_across_midnight - AssertionErr...\nFAILED clock_test.py::ClockTest::test_subtract_minutes - AssertionError: 'Non...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_an_hour - AssertionE...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_days - Assertion...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours - Assertio...\nFAILED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nFAILED clock_test.py::ClockTest::test_subtract_to_previous_hour - AssertionEr...\n53 failed, 2 passed in 0.26s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "clock.py",
+    "with_copy_of": "example.py",
+    "sha256": "91f83a5bfbdda1a953599b8c04d699a310a4ec32a6a65bb42649237e452cb6aa",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "clock_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 55,
+    "passed": 55,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 55,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "52b96f2eef96bbb60be4e5b73d6249f541cd16441645002adf331d7f9260b322"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_1.xml",
+            "clock_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.207,
+          "stdout_sha256": "b6a6fa50de95dbe7dc36b933b5b2d36dbebdc140b470c5b0d1bfb91c98909d68",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4084,
+          "stderr_bytes": 0,
+          "stdout_tail": "================================ PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED clock_test.py::ClockTest::test_add_across_midnight\nPASSED clock_test.py::ClockTest::test_add_minutes\nPASSED clock_test.py::ClockTest::test_add_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_add_more_than_one_hour\nPASSED clock_test.py::ClockTest::test_add_more_than_two_days\nPASSED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry\nPASSED clock_test.py::ClockTest::test_add_no_minutes\nPASSED clock_test.py::ClockTest::test_add_to_next_hour\nPASSED clock_test.py::ClockTest::test_breakfast_time\nPASSED clock_test.py::ClockTest::test_clocks_a_minute_apart\nPASSED clock_test.py::ClockTest::test_clocks_an_hour_apart\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_same_time\nPASSED clock_test.py::ClockTest::test_dinner_time\nPASSED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nPASSED clock_test.py::ClockTest::test_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_lunch_time\nPASSED clock_test.py::ClockTest::test_midnight_is_zero_hours\nPASSED clock_test.py::ClockTest::test_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_minutes\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nPASSED clock_test.py::ClockTest::test_on_the_hour\nPASSED clock_test.py::ClockTest::test_past_the_hour\nPASSED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour\nPASSED clock_test.py::ClockTest::test_subtract_across_midnight\nPASSED clock_test.py::ClockTest::test_subtract_minutes\nPASSED clock_test.py::ClockTest::test_subtract_more_than_an_hour\nPASSED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_days\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nPASSED clock_test.py::ClockTest::test_subtract_to_previous_hour\n55 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 55,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "52b96f2eef96bbb60be4e5b73d6249f541cd16441645002adf331d7f9260b322"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_2.xml",
+            "clock_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.246,
+          "stdout_sha256": "c807f9fdb4e73fa2f484eced1d2d6cc28147178c502d0b528923ba9bfa94921c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4084,
+          "stderr_bytes": 0,
+          "stdout_tail": "================================ PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED clock_test.py::ClockTest::test_add_across_midnight\nPASSED clock_test.py::ClockTest::test_add_minutes\nPASSED clock_test.py::ClockTest::test_add_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_add_more_than_one_hour\nPASSED clock_test.py::ClockTest::test_add_more_than_two_days\nPASSED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry\nPASSED clock_test.py::ClockTest::test_add_no_minutes\nPASSED clock_test.py::ClockTest::test_add_to_next_hour\nPASSED clock_test.py::ClockTest::test_breakfast_time\nPASSED clock_test.py::ClockTest::test_clocks_a_minute_apart\nPASSED clock_test.py::ClockTest::test_clocks_an_hour_apart\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_same_time\nPASSED clock_test.py::ClockTest::test_dinner_time\nPASSED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nPASSED clock_test.py::ClockTest::test_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_lunch_time\nPASSED clock_test.py::ClockTest::test_midnight_is_zero_hours\nPASSED clock_test.py::ClockTest::test_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_minutes\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nPASSED clock_test.py::ClockTest::test_on_the_hour\nPASSED clock_test.py::ClockTest::test_past_the_hour\nPASSED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour\nPASSED clock_test.py::ClockTest::test_subtract_across_midnight\nPASSED clock_test.py::ClockTest::test_subtract_minutes\nPASSED clock_test.py::ClockTest::test_subtract_more_than_an_hour\nPASSED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_days\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nPASSED clock_test.py::ClockTest::test_subtract_to_previous_hour\n55 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 55,
+          "passed": 55,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "52b96f2eef96bbb60be4e5b73d6249f541cd16441645002adf331d7f9260b322"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_3.xml",
+            "clock_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.229,
+          "stdout_sha256": "5e3326bdb69d10b16fe65dd33ca816afdb756bd1d2b4da68401e48100526c8d2",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4084,
+          "stderr_bytes": 0,
+          "stdout_tail": "================================ PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__clock/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED clock_test.py::ClockTest::test_add_across_midnight\nPASSED clock_test.py::ClockTest::test_add_minutes\nPASSED clock_test.py::ClockTest::test_add_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_add_more_than_one_hour\nPASSED clock_test.py::ClockTest::test_add_more_than_two_days\nPASSED clock_test.py::ClockTest::test_add_more_than_two_hours_with_carry\nPASSED clock_test.py::ClockTest::test_add_no_minutes\nPASSED clock_test.py::ClockTest::test_add_to_next_hour\nPASSED clock_test.py::ClockTest::test_breakfast_time\nPASSED clock_test.py::ClockTest::test_clocks_a_minute_apart\nPASSED clock_test.py::ClockTest::test_clocks_an_hour_apart\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_hour_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow\nPASSED clock_test.py::ClockTest::test_clocks_with_minute_overflow_by_several_days\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hour_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_hours_and_minutes_that_wrap\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps\nPASSED clock_test.py::ClockTest::test_clocks_with_negative_minute_that_wraps_multiple_times\nPASSED clock_test.py::ClockTest::test_clocks_with_same_time\nPASSED clock_test.py::ClockTest::test_dinner_time\nPASSED clock_test.py::ClockTest::test_full_clock_and_zeroed_clock\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_hour_and_minutes_roll_over_to_exactly_midnight\nPASSED clock_test.py::ClockTest::test_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_lunch_time\nPASSED clock_test.py::ClockTest::test_midnight_is_zero_hours\nPASSED clock_test.py::ClockTest::test_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over\nPASSED clock_test.py::ClockTest::test_negative_hour_and_minutes_both_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over\nPASSED clock_test.py::ClockTest::test_negative_hour_rolls_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_minutes\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over\nPASSED clock_test.py::ClockTest::test_negative_minutes_roll_over_continuously\nPASSED clock_test.py::ClockTest::test_negative_sixty_minutes_is_previous_hour\nPASSED clock_test.py::ClockTest::test_on_the_hour\nPASSED clock_test.py::ClockTest::test_past_the_hour\nPASSED clock_test.py::ClockTest::test_sixty_minutes_is_next_hour\nPASSED clock_test.py::ClockTest::test_subtract_across_midnight\nPASSED clock_test.py::ClockTest::test_subtract_minutes\nPASSED clock_test.py::ClockTest::test_subtract_more_than_an_hour\nPASSED clock_test.py::ClockTest::test_subtract_more_than_one_day_1500_min_25_hrs\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_days\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours\nPASSED clock_test.py::ClockTest::test_subtract_more_than_two_hours_with_borrow\nPASSED clock_test.py::ClockTest::test_subtract_to_previous_hour\n55 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 55/55 passed, 0 failed, 0 errors (consistent)"
+}

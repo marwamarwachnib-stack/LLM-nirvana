@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/alphametics",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/alphametics/alphametics.py",
+    "0_100 LOC/cat2_functions/alphametics/alphametics_test.py",
+    "0_100 LOC/cat2_functions/alphametics/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "alphametics.py": "2d83880e39e4383aa668bbd1b939a4de53be82c66aa2f54c2dba631bb2ea4d0a",
+    "alphametics_test.py": "cb3ee99d21cb10c28bab5ef988c940faf00f29ad2a5c12dc1aae4fbd83218fbc",
+    "example.py": "15926d6b24ca7a49977b5bd06811a20575730d92a3764ce3cb714bc091009283"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "alphametics.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "alphametics_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 10,
+    "passed": 2,
+    "failed": 7,
+    "error": 0,
+    "skipped": 1,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 2,
+          "failed": 7,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "f73c8fd9b2eeb14259d962946fb17c5bf7a9f0eaf2298009175f0c4a455b4cbd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_1.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.264,
+          "stdout_sha256": "c7a91e6c7204acdb15d591ed80491c574f5c212fd0081a670bb419a5130ca4d8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4773,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.AlphameticsTest testMethod=test_puzzle_with_four_letters>\n\n    def test_puzzle_with_four_letters(self):\n>       self.assertEqual(solve(\"AS + A == MOM\"), {\"A\": 9, \"S\": 2, \"M\": 1, \"O\": 0})\nE       AssertionError: None != {'A': 9, 'S': 2, 'M': 1, 'O': 0}\n\nalphametics_test.py:29: AssertionError\n________________ AlphameticsTest.test_puzzle_with_seven_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_seven_letters>\n\n    def test_puzzle_with_seven_letters(self):\n>       self.assertEqual(\n            solve(\"HE + SEES + THE == LIGHT\"),\n            {\"E\": 4, \"G\": 2, \"H\": 5, \"I\": 0, \"L\": 1, \"S\": 9, \"T\": 7},\n        )\nE       AssertionError: None != {'E': 4, 'G': 2, 'H': 5, 'I': 0, 'L': 1, 'S': 9, 'T': 7}\n\nalphametics_test.py:38: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_six_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_six_letters>\n\n    def test_puzzle_with_six_letters(self):\n>       self.assertEqual(\n            solve(\"NO + NO + TOO == LATE\"),\n            {\"N\": 7, \"O\": 4, \"T\": 9, \"L\": 1, \"A\": 0, \"E\": 2},\n        )\nE       AssertionError: None != {'N': 7, 'O': 4, 'T': 9, 'L': 1, 'A': 0, 'E': 2}\n\nalphametics_test.py:32: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_ten_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_ten_letters>\n\n    def test_puzzle_with_ten_letters(self):\n>       self.assertEqual(\n            solve(\"AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE\"),\n            {\n                \"A\": 5,\n                \"D\": 3,\n                \"E\": 4,\n                \"F\": 7,\n                \"G\": 8,\n                \"N\": 0,\n                \"O\": 2,\n                \"R\": 1,\n                \"S\": 6,\n                \"T\": 9,\n            },\n        )\nE       AssertionError: None != {'A': 5, 'D': 3, 'E': 4, 'F': 7, 'G': 8, 'N': 0, 'O': 2, 'R': 1, 'S': 6, 'T': 9}\n\nalphametics_test.py:50: AssertionError\n________________ AlphameticsTest.test_puzzle_with_three_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_three_letters>\n\n    def test_puzzle_with_three_letters(self):\n>       self.assertEqual(solve(\"I + BB == ILL\"), {\"I\": 1, \"B\": 9, \"L\": 0})\nE       AssertionError: None != {'I': 1, 'B': 9, 'L': 0}\n\nalphametics_test.py:14: AssertionError\n___________ AlphameticsTest.test_puzzle_with_two_digits_final_carry ____________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_two_digits_final_carry>\n\n    def test_puzzle_with_two_digits_final_carry(self):\n>       self.assertEqual(\n            solve(\"A + A + A + A + A + A + A + A + A + A + A + B == BCC\"),\n            {\"A\": 9, \"B\": 1, \"C\": 0},\n        )\nE       AssertionError: None != {'A': 9, 'B': 1, 'C': 0}\n\nalphametics_test.py:23: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_1.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters - ...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\n7 failed, 2 passed, 1 skipped in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 2,
+          "failed": 7,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "f73c8fd9b2eeb14259d962946fb17c5bf7a9f0eaf2298009175f0c4a455b4cbd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_2.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.219,
+          "stdout_sha256": "5633a15bc7debbc144a79820521d31c20825b901f3463e5193252519d2615ce0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4773,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.AlphameticsTest testMethod=test_puzzle_with_four_letters>\n\n    def test_puzzle_with_four_letters(self):\n>       self.assertEqual(solve(\"AS + A == MOM\"), {\"A\": 9, \"S\": 2, \"M\": 1, \"O\": 0})\nE       AssertionError: None != {'A': 9, 'S': 2, 'M': 1, 'O': 0}\n\nalphametics_test.py:29: AssertionError\n________________ AlphameticsTest.test_puzzle_with_seven_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_seven_letters>\n\n    def test_puzzle_with_seven_letters(self):\n>       self.assertEqual(\n            solve(\"HE + SEES + THE == LIGHT\"),\n            {\"E\": 4, \"G\": 2, \"H\": 5, \"I\": 0, \"L\": 1, \"S\": 9, \"T\": 7},\n        )\nE       AssertionError: None != {'E': 4, 'G': 2, 'H': 5, 'I': 0, 'L': 1, 'S': 9, 'T': 7}\n\nalphametics_test.py:38: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_six_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_six_letters>\n\n    def test_puzzle_with_six_letters(self):\n>       self.assertEqual(\n            solve(\"NO + NO + TOO == LATE\"),\n            {\"N\": 7, \"O\": 4, \"T\": 9, \"L\": 1, \"A\": 0, \"E\": 2},\n        )\nE       AssertionError: None != {'N': 7, 'O': 4, 'T': 9, 'L': 1, 'A': 0, 'E': 2}\n\nalphametics_test.py:32: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_ten_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_ten_letters>\n\n    def test_puzzle_with_ten_letters(self):\n>       self.assertEqual(\n            solve(\"AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE\"),\n            {\n                \"A\": 5,\n                \"D\": 3,\n                \"E\": 4,\n                \"F\": 7,\n                \"G\": 8,\n                \"N\": 0,\n                \"O\": 2,\n                \"R\": 1,\n                \"S\": 6,\n                \"T\": 9,\n            },\n        )\nE       AssertionError: None != {'A': 5, 'D': 3, 'E': 4, 'F': 7, 'G': 8, 'N': 0, 'O': 2, 'R': 1, 'S': 6, 'T': 9}\n\nalphametics_test.py:50: AssertionError\n________________ AlphameticsTest.test_puzzle_with_three_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_three_letters>\n\n    def test_puzzle_with_three_letters(self):\n>       self.assertEqual(solve(\"I + BB == ILL\"), {\"I\": 1, \"B\": 9, \"L\": 0})\nE       AssertionError: None != {'I': 1, 'B': 9, 'L': 0}\n\nalphametics_test.py:14: AssertionError\n___________ AlphameticsTest.test_puzzle_with_two_digits_final_carry ____________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_two_digits_final_carry>\n\n    def test_puzzle_with_two_digits_final_carry(self):\n>       self.assertEqual(\n            solve(\"A + A + A + A + A + A + A + A + A + A + A + B == BCC\"),\n            {\"A\": 9, \"B\": 1, \"C\": 0},\n        )\nE       AssertionError: None != {'A': 9, 'B': 1, 'C': 0}\n\nalphametics_test.py:23: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_2.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters - ...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\n7 failed, 2 passed, 1 skipped in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 2,
+          "failed": 7,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "f73c8fd9b2eeb14259d962946fb17c5bf7a9f0eaf2298009175f0c4a455b4cbd"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_3.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.249,
+          "stdout_sha256": "b12074e6677df4b4ab75ad69ce9a53d51149af8e98dc182f77b20ea99cca9680",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4773,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.AlphameticsTest testMethod=test_puzzle_with_four_letters>\n\n    def test_puzzle_with_four_letters(self):\n>       self.assertEqual(solve(\"AS + A == MOM\"), {\"A\": 9, \"S\": 2, \"M\": 1, \"O\": 0})\nE       AssertionError: None != {'A': 9, 'S': 2, 'M': 1, 'O': 0}\n\nalphametics_test.py:29: AssertionError\n________________ AlphameticsTest.test_puzzle_with_seven_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_seven_letters>\n\n    def test_puzzle_with_seven_letters(self):\n>       self.assertEqual(\n            solve(\"HE + SEES + THE == LIGHT\"),\n            {\"E\": 4, \"G\": 2, \"H\": 5, \"I\": 0, \"L\": 1, \"S\": 9, \"T\": 7},\n        )\nE       AssertionError: None != {'E': 4, 'G': 2, 'H': 5, 'I': 0, 'L': 1, 'S': 9, 'T': 7}\n\nalphametics_test.py:38: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_six_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_six_letters>\n\n    def test_puzzle_with_six_letters(self):\n>       self.assertEqual(\n            solve(\"NO + NO + TOO == LATE\"),\n            {\"N\": 7, \"O\": 4, \"T\": 9, \"L\": 1, \"A\": 0, \"E\": 2},\n        )\nE       AssertionError: None != {'N': 7, 'O': 4, 'T': 9, 'L': 1, 'A': 0, 'E': 2}\n\nalphametics_test.py:32: AssertionError\n_________________ AlphameticsTest.test_puzzle_with_ten_letters _________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_ten_letters>\n\n    def test_puzzle_with_ten_letters(self):\n>       self.assertEqual(\n            solve(\"AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE\"),\n            {\n                \"A\": 5,\n                \"D\": 3,\n                \"E\": 4,\n                \"F\": 7,\n                \"G\": 8,\n                \"N\": 0,\n                \"O\": 2,\n                \"R\": 1,\n                \"S\": 6,\n                \"T\": 9,\n            },\n        )\nE       AssertionError: None != {'A': 5, 'D': 3, 'E': 4, 'F': 7, 'G': 8, 'N': 0, 'O': 2, 'R': 1, 'S': 6, 'T': 9}\n\nalphametics_test.py:50: AssertionError\n________________ AlphameticsTest.test_puzzle_with_three_letters ________________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_three_letters>\n\n    def test_puzzle_with_three_letters(self):\n>       self.assertEqual(solve(\"I + BB == ILL\"), {\"I\": 1, \"B\": 9, \"L\": 0})\nE       AssertionError: None != {'I': 1, 'B': 9, 'L': 0}\n\nalphametics_test.py:14: AssertionError\n___________ AlphameticsTest.test_puzzle_with_two_digits_final_carry ____________\n\nself = <alphametics_test.AlphameticsTest testMethod=test_puzzle_with_two_digits_final_carry>\n\n    def test_puzzle_with_two_digits_final_carry(self):\n>       self.assertEqual(\n            solve(\"A + A + A + A + A + A + A + A + A + A + A + B == BCC\"),\n            {\"A\": 9, \"B\": 1, \"C\": 0},\n        )\nE       AssertionError: None != {'A': 9, 'B': 1, 'C': 0}\n\nalphametics_test.py:23: AssertionError\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2a_junit_3.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters - ...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters - A...\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nFAILED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\n7 failed, 2 passed, 1 skipped in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "alphametics.py",
+    "with_copy_of": "example.py",
+    "sha256": "15926d6b24ca7a49977b5bd06811a20575730d92a3764ce3cb714bc091009283",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "alphametics_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 10,
+    "passed": 9,
+    "failed": 0,
+    "error": 0,
+    "skipped": 1,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 9,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "a01f0936ba99637309379a9de1176c192fc77146d54c489d3583f353a2cf8459"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_1.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "54745b565097a6fb624d15b9d9f47ced69f71606ba36967f761f38e1a5304a13",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1184,
+          "stderr_bytes": 0,
+          "stdout_tail": "......s...                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\n9 passed, 1 skipped in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 9,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "a01f0936ba99637309379a9de1176c192fc77146d54c489d3583f353a2cf8459"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_2.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "1909b3273532d1821f0f3887433b7bcd459b361863e9fae3c5ff9aecbf29552e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1184,
+          "stderr_bytes": 0,
+          "stdout_tail": "......s...                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\n9 passed, 1 skipped in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 10,
+          "passed": 9,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1,
+          "outcomes_sha256": "a01f0936ba99637309379a9de1176c192fc77146d54c489d3583f353a2cf8459"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_3.xml",
+            "alphametics_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.212,
+          "stdout_sha256": "e8a817406600e2e55177f72e9e8bc0a431b862da7b5fbec003f9b664f40bceec",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1184,
+          "stderr_bytes": 0,
+          "stdout_tail": "......s...                                                               [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters\nPASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry\nPASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter\nSKIPPED [1] alphametics_test.py:67: extra-credit\n9 passed, 1 skipped in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 9/10 passed, 0 failed, 0 errors (consistent)"
+}

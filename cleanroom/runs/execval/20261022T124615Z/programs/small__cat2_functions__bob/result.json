@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/bob",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/bob/bob.py",
+    "0_100 LOC/cat2_functions/bob/bob_test.py",
+    "0_100 LOC/cat2_functions/bob/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "bob.py": "6a18e5f01a7ce738ca0d82f9c79ce0821f72462adff7ab08f8f1e7dc3738ec50",
+    "bob_test.py": "4a86754456027c3b6523bde3f19ffd2d3e7587f630d830f6e898e7489a6f1187",
+    "example.py": "f9162a6932c526d8ce23a710ddd488fb3c8e02115ba3bd9702a8da316b19242b"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.027,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "bob.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "bob_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 25,
+    "passed": 0,
+    "failed": 25,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 0,
+          "failed": 25,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "fd082659484fc40056689a2a839b2d8c54df7219b9071cef8933b760a4b4041e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_1.xml",
+            "bob_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.276,
+          "stdout_sha256": "1011932395083547ec6807c880a339edb10415905e1f2a0e55c78727b513c994",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11192,
+          "stderr_bytes": 0,
+          "stdout_tail": "g_with_whitespace _____________________\n\nself = <bob_test.BobTest testMethod=test_starting_with_whitespace>\n\n    def test_starting_with_whitespace(self):\n>       self.assertEqual(response(\"         hmmmmmmm...\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:89: AssertionError\n_______________ BobTest.test_statement_containing_question_mark ________________\n\nself = <bob_test.BobTest testMethod=test_statement_containing_question_mark>\n\n    def test_statement_containing_question_mark(self):\n>       self.assertEqual(response(\"Ending with ? means a question.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:65: AssertionError\n________________________ BobTest.test_stating_something ________________________\n\nself = <bob_test.BobTest testMethod=test_stating_something>\n\n    def test_stating_something(self):\n>       self.assertEqual(response(\"Tom-ay-to, tom-aaaah-to.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:14: AssertionError\n_______________________ BobTest.test_talking_forcefully ________________________\n\nself = <bob_test.BobTest testMethod=test_talking_forcefully>\n\n    def test_talking_forcefully(self):\n>       self.assertEqual(response(\"Hi there!\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:34: AssertionError\n________________ BobTest.test_using_acronyms_in_regular_speech _________________\n\nself = <bob_test.BobTest testMethod=test_using_acronyms_in_regular_speech>\n\n    def test_using_acronyms_in_regular_speech(self):\n>       self.assertEqual(\n            response(\"It's OK if you don't want to go work for NASA.\"), \"Whatever.\"\n        )\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:37: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED bob_test.py::BobTest::test_alternate_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_a_numeric_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_asking_a_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_gibberish - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_ending_with_whitespace - AssertionError: No...\nFAILED bob_test.py::BobTest::test_forceful_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_multiple_line_question - AssertionError: No...\nFAILED bob_test.py::BobTest::test_no_letters - AssertionError: None != 'Whate...\nFAILED bob_test.py::BobTest::test_non_letters_with_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_non_question_ending_with_whitespace - Asser...\nFAILED bob_test.py::BobTest::test_other_whitespace - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_prattling_on - AssertionError: None != 'Sure.'\nFAILED bob_test.py::BobTest::test_prolonged_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_question_with_no_letters - AssertionError: ...\nFAILED bob_test.py::BobTest::test_shouting - AssertionError: None != 'Whoa, c...\nFAILED bob_test.py::BobTest::test_shouting_gibberish - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_shouting_numbers - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark - Asserti...\nFAILED bob_test.py::BobTest::test_shouting_with_special_characters - Assertio...\nFAILED bob_test.py::BobTest::test_silence - AssertionError: None != 'Fine. Be...\nFAILED bob_test.py::BobTest::test_starting_with_whitespace - AssertionError: ...\nFAILED bob_test.py::BobTest::test_statement_containing_question_mark - Assert...\nFAILED bob_test.py::BobTest::test_stating_something - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_talking_forcefully - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_using_acronyms_in_regular_speech - Assertio...\n25 failed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 0,
+          "failed": 25,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "fd082659484fc40056689a2a839b2d8c54df7219b9071cef8933b760a4b4041e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_2.xml",
+            "bob_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.253,
+          "stdout_sha256": "a8440fded79380e4b752385d223bb171f468c9367b88d7f29a7796c1dec31178",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11192,
+          "stderr_bytes": 0,
+          "stdout_tail": "g_with_whitespace _____________________\n\nself = <bob_test.BobTest testMethod=test_starting_with_whitespace>\n\n    def test_starting_with_whitespace(self):\n>       self.assertEqual(response(\"         hmmmmmmm...\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:89: AssertionError\n_______________ BobTest.test_statement_containing_question_mark ________________\n\nself = <bob_test.BobTest testMethod=test_statement_containing_question_mark>\n\n    def test_statement_containing_question_mark(self):\n>       self.assertEqual(response(\"Ending with ? means a question.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:65: AssertionError\n________________________ BobTest.test_stating_something ________________________\n\nself = <bob_test.BobTest testMethod=test_stating_something>\n\n    def test_stating_something(self):\n>       self.assertEqual(response(\"Tom-ay-to, tom-aaaah-to.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:14: AssertionError\n_______________________ BobTest.test_talking_forcefully ________________________\n\nself = <bob_test.BobTest testMethod=test_talking_forcefully>\n\n    def test_talking_forcefully(self):\n>       self.assertEqual(response(\"Hi there!\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:34: AssertionError\n________________ BobTest.test_using_acronyms_in_regular_speech _________________\n\nself = <bob_test.BobTest testMethod=test_using_acronyms_in_regular_speech>\n\n    def test_using_acronyms_in_regular_speech(self):\n>       self.assertEqual(\n            response(\"It's OK if you don't want to go work for NASA.\"), \"Whatever.\"\n        )\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:37: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED bob_test.py::BobTest::test_alternate_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_a_numeric_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_asking_a_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_gibberish - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_ending_with_whitespace - AssertionError: No...\nFAILED bob_test.py::BobTest::test_forceful_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_multiple_line_question - AssertionError: No...\nFAILED bob_test.py::BobTest::test_no_letters - AssertionError: None != 'Whate...\nFAILED bob_test.py::BobTest::test_non_letters_with_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_non_question_ending_with_whitespace - Asser...\nFAILED bob_test.py::BobTest::test_other_whitespace - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_prattling_on - AssertionError: None != 'Sure.'\nFAILED bob_test.py::BobTest::test_prolonged_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_question_with_no_letters - AssertionError: ...\nFAILED bob_test.py::BobTest::test_shouting - AssertionError: None != 'Whoa, c...\nFAILED bob_test.py::BobTest::test_shouting_gibberish - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_shouting_numbers - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark - Asserti...\nFAILED bob_test.py::BobTest::test_shouting_with_special_characters - Assertio...\nFAILED bob_test.py::BobTest::test_silence - AssertionError: None != 'Fine. Be...\nFAILED bob_test.py::BobTest::test_starting_with_whitespace - AssertionError: ...\nFAILED bob_test.py::BobTest::test_statement_containing_question_mark - Assert...\nFAILED bob_test.py::BobTest::test_stating_something - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_talking_forcefully - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_using_acronyms_in_regular_speech - Assertio...\n25 failed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 0,
+          "failed": 25,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "fd082659484fc40056689a2a839b2d8c54df7219b9071cef8933b760a4b4041e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_3.xml",
+            "bob_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.322,
+          "stdout_sha256": "9bd6f91f816489e48af5780a52587e126f2570476def8f3ec47adadece6c3acd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 11192,
+          "stderr_bytes": 0,
+          "stdout_tail": "g_with_whitespace _____________________\n\nself = <bob_test.BobTest testMethod=test_starting_with_whitespace>\n\n    def test_starting_with_whitespace(self):\n>       self.assertEqual(response(\"         hmmmmmmm...\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:89: AssertionError\n_______________ BobTest.test_statement_containing_question_mark ________________\n\nself = <bob_test.BobTest testMethod=test_statement_containing_question_mark>\n\n    def test_statement_containing_question_mark(self):\n>       self.assertEqual(response(\"Ending with ? means a question.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:65: AssertionError\n________________________ BobTest.test_stating_something ________________________\n\nself = <bob_test.BobTest testMethod=test_stating_something>\n\n    def test_stating_something(self):\n>       self.assertEqual(response(\"Tom-ay-to, tom-aaaah-to.\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:14: AssertionError\n_______________________ BobTest.test_talking_forcefully ________________________\n\nself = <bob_test.BobTest testMethod=test_talking_forcefully>\n\n    def test_talking_forcefully(self):\n>       self.assertEqual(response(\"Hi there!\"), \"Whatever.\")\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:34: AssertionError\n________________ BobTest.test_using_acronyms_in_regular_speech _________________\n\nself = <bob_test.BobTest testMethod=test_using_acronyms_in_regular_speech>\n\n    def test_using_acronyms_in_regular_speech(self):\n>       self.assertEqual(\n            response(\"It's OK if you don't want to go work for NASA.\"), \"Whatever.\"\n        )\nE       AssertionError: None != 'Whatever.'\n\nbob_test.py:37: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED bob_test.py::BobTest::test_alternate_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_a_numeric_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_asking_a_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_asking_gibberish - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_ending_with_whitespace - AssertionError: No...\nFAILED bob_test.py::BobTest::test_forceful_question - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_multiple_line_question - AssertionError: No...\nFAILED bob_test.py::BobTest::test_no_letters - AssertionError: None != 'Whate...\nFAILED bob_test.py::BobTest::test_non_letters_with_question - AssertionError:...\nFAILED bob_test.py::BobTest::test_non_question_ending_with_whitespace - Asser...\nFAILED bob_test.py::BobTest::test_other_whitespace - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_prattling_on - AssertionError: None != 'Sure.'\nFAILED bob_test.py::BobTest::test_prolonged_silence - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_question_with_no_letters - AssertionError: ...\nFAILED bob_test.py::BobTest::test_shouting - AssertionError: None != 'Whoa, c...\nFAILED bob_test.py::BobTest::test_shouting_gibberish - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_shouting_numbers - AssertionError: None != ...\nFAILED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark - Asserti...\nFAILED bob_test.py::BobTest::test_shouting_with_special_characters - Assertio...\nFAILED bob_test.py::BobTest::test_silence - AssertionError: None != 'Fine. Be...\nFAILED bob_test.py::BobTest::test_starting_with_whitespace - AssertionError: ...\nFAILED bob_test.py::BobTest::test_statement_containing_question_mark - Assert...\nFAILED bob_test.py::BobTest::test_stating_something - AssertionError: None !=...\nFAILED bob_test.py::BobTest::test_talking_forcefully - AssertionError: None !...\nFAILED bob_test.py::BobTest::test_using_acronyms_in_regular_speech - Assertio...\n25 failed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "bob.py",
+    "with_copy_of": "example.py",
+    "sha256": "f9162a6932c526d8ce23a710ddd488fb3c8e02115ba3bd9702a8da316b19242b",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "bob_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 25,
+    "passed": 25,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 25,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "576e17c78ccd9023a57a4c355d5dbec39cabf786b8ad62a8f2079167ca13a232"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_1.xml",
+            "bob_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.201,
+          "stdout_sha256": "56aa1e39307286d3bfcd8743185fd5ca03e590e4e065a0bebc6a395c1622fd0b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1789,
+          "stderr_bytes": 0,
+          "stdout_tail": ".........................                                                [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED bob_test.py::BobTest::test_alternate_silence\nPASSED bob_test.py::BobTest::test_asking_a_numeric_question\nPASSED bob_test.py::BobTest::test_asking_a_question\nPASSED bob_test.py::BobTest::test_asking_gibberish\nPASSED bob_test.py::BobTest::test_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_forceful_question\nPASSED bob_test.py::BobTest::test_multiple_line_question\nPASSED bob_test.py::BobTest::test_no_letters\nPASSED bob_test.py::BobTest::test_non_letters_with_question\nPASSED bob_test.py::BobTest::test_non_question_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_other_whitespace\nPASSED bob_test.py::BobTest::test_prattling_on\nPASSED bob_test.py::BobTest::test_prolonged_silence\nPASSED bob_test.py::BobTest::test_question_with_no_letters\nPASSED bob_test.py::BobTest::test_shouting\nPASSED bob_test.py::BobTest::test_shouting_gibberish\nPASSED bob_test.py::BobTest::test_shouting_numbers\nPASSED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark\nPASSED bob_test.py::BobTest::test_shouting_with_special_characters\nPASSED bob_test.py::BobTest::test_silence\nPASSED bob_test.py::BobTest::test_starting_with_whitespace\nPASSED bob_test.py::BobTest::test_statement_containing_question_mark\nPASSED bob_test.py::BobTest::test_stating_something\nPASSED bob_test.py::BobTest::test_talking_forcefully\nPASSED bob_test.py::BobTest::test_using_acronyms_in_regular_speech\n25 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 25,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "576e17c78ccd9023a57a4c355d5dbec39cabf786b8ad62a8f2079167ca13a232"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_2.xml",
+            "bob_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.186,
+          "stdout_sha256": "7e1b40bbde054677c195690d7c37213a0f8271c14412404b9e1bf8ec8b43b703",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1789,
+          "stderr_bytes": 0,
+          "stdout_tail": ".........................                                                [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED bob_test.py::BobTest::test_alternate_silence\nPASSED bob_test.py::BobTest::test_asking_a_numeric_question\nPASSED bob_test.py::BobTest::test_asking_a_question\nPASSED bob_test.py::BobTest::test_asking_gibberish\nPASSED bob_test.py::BobTest::test_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_forceful_question\nPASSED bob_test.py::BobTest::test_multiple_line_question\nPASSED bob_test.py::BobTest::test_no_letters\nPASSED bob_test.py::BobTest::test_non_letters_with_question\nPASSED bob_test.py::BobTest::test_non_question_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_other_whitespace\nPASSED bob_test.py::BobTest::test_prattling_on\nPASSED bob_test.py::BobTest::test_prolonged_silence\nPASSED bob_test.py::BobTest::test_question_with_no_letters\nPASSED bob_test.py::BobTest::test_shouting\nPASSED bob_test.py::BobTest::test_shouting_gibberish\nPASSED bob_test.py::BobTest::test_shouting_numbers\nPASSED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark\nPASSED bob_test.py::BobTest::test_shouting_with_special_characters\nPASSED bob_test.py::BobTest::test_silence\nPASSED bob_test.py::BobTest::test_starting_with_whitespace\nPASSED bob_test.py::BobTest::test_statement_containing_question_mark\nPASSED bob_test.py::BobTest::test_stating_something\nPASSED bob_test.py::BobTest::test_talking_forcefully\nPASSED bob_test.py::BobTest::test_using_acronyms_in_regular_speech\n25 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 25,
+          "passed": 25,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "576e17c78ccd9023a57a4c355d5dbec39cabf786b8ad62a8f2079167ca13a232"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_3.xml",
+            "bob_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.194,
+          "stdout_sha256": "0e71043a455e288834d408ddb237685002703dfc8d8b8593647203f0688d1b08",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1789,
+          "stderr_bytes": 0,
+          "stdout_tail": ".........................                                                [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__bob/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED bob_test.py::BobTest::test_alternate_silence\nPASSED bob_test.py::BobTest::test_asking_a_numeric_question\nPASSED bob_test.py::BobTest::test_asking_a_question\nPASSED bob_test.py::BobTest::test_asking_gibberish\nPASSED bob_test.py::BobTest::test_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_forceful_question\nPASSED bob_test.py::BobTest::test_multiple_line_question\nPASSED bob_test.py::BobTest::test_no_letters\nPASSED bob_test.py::BobTest::test_non_letters_with_question\nPASSED bob_test.py::BobTest::test_non_question_ending_with_whitespace\nPASSED bob_test.py::BobTest::test_other_whitespace\nPASSED bob_test.py::BobTest::test_prattling_on\nPASSED bob_test.py::BobTest::test_prolonged_silence\nPASSED bob_test.py::BobTest::test_question_with_no_letters\nPASSED bob_test.py::BobTest::test_shouting\nPASSED bob_test.py::BobTest::test_shouting_gibberish\nPASSED bob_test.py::BobTest::test_shouting_numbers\nPASSED bob_test.py::BobTest::test_shouting_with_no_exclamation_mark\nPASSED bob_test.py::BobTest::test_shouting_with_special_characters\nPASSED bob_test.py::BobTest::test_silence\nPASSED bob_test.py::BobTest::test_starting_with_whitespace\nPASSED bob_test.py::BobTest::test_statement_containing_question_mark\nPASSED bob_test.py::BobTest::test_stating_something\nPASSED bob_test.py::BobTest::test_talking_forcefully\nPASSED bob_test.py::BobTest::test_using_acronyms_in_regular_speech\n25 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 25/25 passed, 0 failed, 0 errors (consistent)"
+}

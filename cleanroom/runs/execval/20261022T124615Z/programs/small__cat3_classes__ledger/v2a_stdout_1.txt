@@ -1,0 +1,16 @@
+...........                                                              [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_1.xml -
+=========================== short test summary info ============================
+PASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point
+PASSED ledger_test.py::LedgerTest::test_credit_and_debit
+PASSED ledger_test.py::LedgerTest::test_dutch_locale
+PASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros
+PASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point
+PASSED ledger_test.py::LedgerTest::test_empty_ledger
+PASSED ledger_test.py::LedgerTest::test_euros
+PASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change
+PASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description
+PASSED ledger_test.py::LedgerTest::test_one_entry
+PASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated
+11 passed in 0.02s

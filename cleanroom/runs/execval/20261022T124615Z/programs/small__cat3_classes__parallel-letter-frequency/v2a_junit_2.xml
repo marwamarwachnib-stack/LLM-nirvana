@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="7" time="0.040" timestamp="2026-10-22T12:47:11.176963" hostname="vm"><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_case_insensitivity" time="0.001"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_case_insensitivity&gt;
+
+    def test_case_insensitivity(self):
+        actual = calculate(['aA'])
+        expected = {'a': 2}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:17: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_multiline_text" time="0.001"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_multiline_text&gt;
+
+    def test_multiline_text(self):
+        text_input = "3 Quotes from Excerism Homepage:\n" + \
+                     "\tOne moment you feel like you're\n" + \
+                     "getting it. The next moment you're\n" + \
+                     "stuck.\n" + \
+                     "\tYou know what it’s like to be fluent.\n" + \
+                     "Suddenly you’re feeling incompetent\n" + \
+                     "and clumsy.\n" + \
+                     "\tHaphazard, convoluted code is\n" + \
+                     "infuriating, not to mention costly. That\n" + \
+                     "slapdash explosion of complexity is an\n" + \
+                     "expensive yak shave waiting to\n" + \
+                     "happen."
+        actual = calculate(text_input.split('\n'))
+        expected = Counter([x for x in text_input.lower() if x.isalpha()])
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:57: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_numbers" time="0.000"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_numbers&gt;
+
+    def test_numbers(self):
+        actual = calculate(['012', '345', '6789'])
+        expected = {}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:22: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_one_letter" time="0.000"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_one_letter&gt;
+
+    def test_one_letter(self):
+        actual = calculate(['a'])
+        expected = {'a': 1}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:12: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_punctuations" time="0.000"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_punctuations&gt;
+
+    def test_punctuations(self):
+        actual = calculate([r'[]\;,', './{}|', ':"&lt;&gt;?'])
+        expected = {}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:27: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_repeated_string_with_known_frequencies" time="0.001"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_repeated_string_with_known_frequencies&gt;
+
+    def test_repeated_string_with_known_frequencies(self):
+        letter_frequency = 3
+        text_input = 'abc\n' * letter_frequency
+        actual = calculate(text_input.split('\n'))
+        expected = {'a': letter_frequency, 'b': letter_frequency,
+                    'c': letter_frequency}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:40: AssertionError</failure></testcase><testcase classname="parallel_letter_frequency_test.ParallelLetterFrequencyTest" name="test_whitespaces" time="0.001"><failure message="AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary">self = &lt;parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_whitespaces&gt;
+
+    def test_whitespaces(self):
+        actual = calculate(['  ', '\t ', '\n\n'])
+        expected = {}
+&gt;       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of &lt;class 'dict'&gt; : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:32: AssertionError</failure></testcase></testsuite></testsuites>

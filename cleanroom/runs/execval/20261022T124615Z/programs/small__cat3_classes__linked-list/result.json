@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/linked-list",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/linked-list/example.py",
+    "0_100 LOC/cat3_classes/linked-list/linked_list.py",
+    "0_100 LOC/cat3_classes/linked-list/linked_list_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "1b935d64b49c20e9102f79f5f5df45cbe74472e62acb78bb12b7794c0385f018",
+    "linked_list.py": "781a9f82bed643856bd2e6309f570187dd443a3a1e238459e1d4ba5d30561e47",
+    "linked_list_test.py": "a4ededae0ba31f032d01fec225a9683a1c3eadfd33af16305146b4863e97793c"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.032,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "linked_list.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "linked_list_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 24,
+    "passed": 0,
+    "failed": 24,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 0,
+          "failed": 24,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7cb433344fab1e0925c48cea78a943a148ca635dc99286121fbb5dbb2ae892b4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_1.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.402,
+          "stdout_sha256": "7a3b694427c805d18e68b84400277c987d66d32a96d2211fe0d1a865d4427042",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 12632,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.delete(0)\nE           AttributeError: 'LinkedList' object has no attribute 'delete'\n\nlinked_list_test.py:206: AttributeError\n__ LinkedListTest.test_using_delete_raises_an_error_if_the_value_is_not_found __\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_value_is_not_found>\n\n    def test_using_delete_raises_an_error_if_the_value_is_not_found(self):\n        lst = LinkedList()\n>       lst.push(5)\nE       AttributeError: 'LinkedList' object has no attribute 'push'\n\nlinked_list_test.py:212: AttributeError\n______ LinkedListTest.test_using_pop_raises_an_error_if_the_list_is_empty ______\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_pop_raises_an_error_if_the_list_is_empty>\n\n    def test_using_pop_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.pop()\nE           AttributeError: 'LinkedList' object has no attribute 'pop'\n\nlinked_list_test.py:170: AttributeError\n_____ LinkedListTest.test_using_shift_raises_an_error_if_the_list_is_empty _____\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_shift_raises_an_error_if_the_list_is_empty>\n\n    def test_using_shift_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.shift()\nE           AttributeError: 'LinkedList' object has no attribute 'shift'\n\nlinked_list_test.py:188: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_count_a_list_with_items - At...\nFAILED linked_list_test.py::LinkedListTest::test_count_an_empty_list - TypeEr...\nFAILED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nFAILED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_only_element - A...\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nFAILED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nFAILED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 failed in 0.18s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 0,
+          "failed": 24,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7cb433344fab1e0925c48cea78a943a148ca635dc99286121fbb5dbb2ae892b4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_2.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.322,
+          "stdout_sha256": "7bd938558caec09e6b02e726fd6d88e992f024934d6388c52d26bc36e0ee44d9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 12632,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.delete(0)\nE           AttributeError: 'LinkedList' object has no attribute 'delete'\n\nlinked_list_test.py:206: AttributeError\n__ LinkedListTest.test_using_delete_raises_an_error_if_the_value_is_not_found __\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_value_is_not_found>\n\n    def test_using_delete_raises_an_error_if_the_value_is_not_found(self):\n        lst = LinkedList()\n>       lst.push(5)\nE       AttributeError: 'LinkedList' object has no attribute 'push'\n\nlinked_list_test.py:212: AttributeError\n______ LinkedListTest.test_using_pop_raises_an_error_if_the_list_is_empty ______\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_pop_raises_an_error_if_the_list_is_empty>\n\n    def test_using_pop_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.pop()\nE           AttributeError: 'LinkedList' object has no attribute 'pop'\n\nlinked_list_test.py:170: AttributeError\n_____ LinkedListTest.test_using_shift_raises_an_error_if_the_list_is_empty _____\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_shift_raises_an_error_if_the_list_is_empty>\n\n    def test_using_shift_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.shift()\nE           AttributeError: 'LinkedList' object has no attribute 'shift'\n\nlinked_list_test.py:188: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_count_a_list_with_items - At...\nFAILED linked_list_test.py::LinkedListTest::test_count_an_empty_list - TypeEr...\nFAILED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nFAILED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_only_element - A...\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nFAILED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nFAILED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 failed in 0.13s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 0,
+          "failed": 24,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7cb433344fab1e0925c48cea78a943a148ca635dc99286121fbb5dbb2ae892b4"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_3.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.352,
+          "stdout_sha256": "cd274f688fdd71ae0b56416b5a15dbdf9e2380927107304dd145a35a9b89c042",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 12632,
+          "stderr_bytes": 0,
+          "stdout_tail": "t.delete(0)\nE           AttributeError: 'LinkedList' object has no attribute 'delete'\n\nlinked_list_test.py:206: AttributeError\n__ LinkedListTest.test_using_delete_raises_an_error_if_the_value_is_not_found __\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_value_is_not_found>\n\n    def test_using_delete_raises_an_error_if_the_value_is_not_found(self):\n        lst = LinkedList()\n>       lst.push(5)\nE       AttributeError: 'LinkedList' object has no attribute 'push'\n\nlinked_list_test.py:212: AttributeError\n______ LinkedListTest.test_using_pop_raises_an_error_if_the_list_is_empty ______\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_pop_raises_an_error_if_the_list_is_empty>\n\n    def test_using_pop_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.pop()\nE           AttributeError: 'LinkedList' object has no attribute 'pop'\n\nlinked_list_test.py:170: AttributeError\n_____ LinkedListTest.test_using_shift_raises_an_error_if_the_list_is_empty _____\n\nself = <linked_list_test.LinkedListTest testMethod=test_using_shift_raises_an_error_if_the_list_is_empty>\n\n    def test_using_shift_raises_an_error_if_the_list_is_empty(self):\n        lst = LinkedList()\n        with self.assertRaises(IndexError) as err:\n>           lst.shift()\nE           AttributeError: 'LinkedList' object has no attribute 'shift'\n\nlinked_list_test.py:188: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nFAILED linked_list_test.py::LinkedListTest::test_count_a_list_with_items - At...\nFAILED linked_list_test.py::LinkedListTest::test_count_an_empty_list - TypeEr...\nFAILED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nFAILED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_only_element - A...\nFAILED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nFAILED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nFAILED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nFAILED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nFAILED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nFAILED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nFAILED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 failed in 0.14s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "linked_list.py",
+    "with_copy_of": "example.py",
+    "sha256": "1b935d64b49c20e9102f79f5f5df45cbe74472e62acb78bb12b7794c0385f018",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "linked_list_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 24,
+    "passed": 24,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 24,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49dabfd98d5eecb469164f52c1ea6d7d9b13de69a3a4004705c14d5f58d0295a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_1.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.221,
+          "stdout_sha256": "53aa2957e78242a87afddb6088fb753615a24734111e2111758059b4567f2dad",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2641,
+          "stderr_bytes": 0,
+          "stdout_tail": "........................                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_count_a_list_with_items\nPASSED linked_list_test.py::LinkedListTest::test_count_an_empty_list\nPASSED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nPASSED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_only_element\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nPASSED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nPASSED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 24,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49dabfd98d5eecb469164f52c1ea6d7d9b13de69a3a4004705c14d5f58d0295a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_2.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.243,
+          "stdout_sha256": "d0c86739397dbc43f8b0a56e8b840cc12d348d389350585ea34c85f69140ad4a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2641,
+          "stderr_bytes": 0,
+          "stdout_tail": "........................                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_count_a_list_with_items\nPASSED linked_list_test.py::LinkedListTest::test_count_an_empty_list\nPASSED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nPASSED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_only_element\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nPASSED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nPASSED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 24,
+          "passed": 24,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49dabfd98d5eecb469164f52c1ea6d7d9b13de69a3a4004705c14d5f58d0295a"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_3.xml",
+            "linked_list_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.2,
+          "stdout_sha256": "97b13c0f56a8318b0de201b2292a69851f6e1c3de00c2c75afbf429107b53ad9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2641,
+          "stderr_bytes": 0,
+          "stdout_tail": "........................                                                 [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty\nPASSED linked_list_test.py::LinkedListTest::test_count_a_list_with_items\nPASSED linked_list_test.py::LinkedListTest::test_count_an_empty_list\nPASSED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation\nPASSED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_only_element\nPASSED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements\nPASSED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order\nPASSED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list\nPASSED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list\nPASSED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found\nPASSED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty\nPASSED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty\n24 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 24/24 passed, 0 failed, 0 errors (consistent)"
+}

@@ -1,0 +1,66 @@
+as err:
+E       AssertionError: ValueError not raised
+
+phone_number_test.py:58: AssertionError
+______________________ PhoneNumberTest.test_pretty_print _______________________
+
+self = <phone_number_test.PhoneNumberTest testMethod=test_pretty_print>
+
+    def test_pretty_print(self):
+        number = PhoneNumber("2234567890")
+>       self.assertEqual(number.pretty(), "(223)-456-7890")
+E       AttributeError: 'PhoneNumber' object has no attribute 'pretty'
+
+phone_number_test.py:118: AttributeError
+_________ PhoneNumberTest.test_pretty_print_with_full_us_phone_number __________
+
+self = <phone_number_test.PhoneNumberTest testMethod=test_pretty_print_with_full_us_phone_number>
+
+    def test_pretty_print_with_full_us_phone_number(self):
+        number = PhoneNumber("12234567890")
+>       self.assertEqual(number.pretty(), "(223)-456-7890")
+E       AttributeError: 'PhoneNumber' object has no attribute 'pretty'
+
+phone_number_test.py:122: AttributeError
+________ PhoneNumberTest.test_valid_when_11_digits_and_starting_with_1 _________
+
+self = <phone_number_test.PhoneNumberTest testMethod=test_valid_when_11_digits_and_starting_with_1>
+
+    def test_valid_when_11_digits_and_starting_with_1(self):
+>       number = PhoneNumber("12234567890").number
+E       AttributeError: 'PhoneNumber' object has no attribute 'number'
+
+phone_number_test.py:38: AttributeError
+_ PhoneNumberTest.test_valid_when_11_digits_and_starting_with_1_even_with_punctuation _
+
+self = <phone_number_test.PhoneNumberTest testMethod=test_valid_when_11_digits_and_starting_with_1_even_with_punctuation>
+
+    def test_valid_when_11_digits_and_starting_with_1_even_with_punctuation(self):
+>       number = PhoneNumber("+1 (223) 456-7890").number
+E       AttributeError: 'PhoneNumber' object has no attribute 'number'
+
+phone_number_test.py:42: AttributeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__phone-number/v2a_junit_2.xml -
+=========================== short test summary info ============================
+FAILED phone_number_test.py::PhoneNumberTest::test_area_code - AttributeError...
+FAILED phone_number_test.py::PhoneNumberTest::test_cleans_numbers_with_dots
+FAILED phone_number_test.py::PhoneNumberTest::test_cleans_numbers_with_multiple_spaces
+FAILED phone_number_test.py::PhoneNumberTest::test_cleans_the_number - Attrib...
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_area_code_starts_with_0
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_area_code_starts_with_0_on_valid_11_digit_number
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_area_code_starts_with_1
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_area_code_starts_with_1_on_valid_11_digit_number
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_exchange_code_starts_with_0_on_valid_11_digit_number
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_if_exchange_code_starts_with_1_on_valid_11_digit_number
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_when_11_digits_does_not_start_with_a_1
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_when_9_digits - As...
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_when_more_than_11_digits
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_with_letters - Ass...
+FAILED phone_number_test.py::PhoneNumberTest::test_invalid_with_punctuations
+FAILED phone_number_test.py::PhoneNumberTest::test_pretty_print - AttributeEr...
+FAILED phone_number_test.py::PhoneNumberTest::test_pretty_print_with_full_us_phone_number
+FAILED phone_number_test.py::PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1
+FAILED phone_number_test.py::PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1_even_with_punctuation
+21 failed in 0.09s

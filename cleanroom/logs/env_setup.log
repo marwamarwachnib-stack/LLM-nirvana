@@ -1,0 +1,1198 @@
+/opt/cleanroom/downloads/Miniconda3-py310_23.5.2-0-Linux-x86_64.sh: OK
+PREFIX=/opt/cleanroom/miniconda3
+Unpacking payload ...
+  0%|          | 0/71 [00:00<?, ?it/s]Extracting : c-ares-1.19.0-h5eee18b_0.conda:   0%|          | 0/71 [00:00<?, ?it/s]Extracting : packaging-23.0-py310h06a4308_0.conda:   1%|▏         | 1/71 [00:00<00:03, 22.77it/s]Extracting : conda-content-trust-0.1.3-py310h06a4308_0.conda:   3%|▎         | 2/71 [00:00<00:01, 45.44it/s]Extracting : sqlite-3.41.2-h5eee18b_0.conda:   4%|▍         | 3/71 [00:00<00:02, 31.23it/s]                 Extracting : pycosat-0.6.4-py310h5eee18b_0.conda:   6%|▌         | 4/71 [00:00<00:01, 41.55it/s]Extracting : libgomp-11.2.0-h1234567_1.conda:   7%|▋         | 5/71 [00:00<00:01, 51.90it/s]    Extracting : pyopenssl-23.0.0-py310h06a4308_0.conda:   8%|▊         | 6/71 [00:00<00:01, 62.25it/s]Extracting : charset-normalizer-2.0.4-pyhd3eb1b0_0.conda:  10%|▉         | 7/71 [00:00<00:00, 72.59it/s]Extracting : _libgcc_mutex-0.1-main.conda:  11%|█▏        | 8/71 [00:00<00:00, 82.93it/s]               Extracting : requests-2.29.0-py310h06a4308_0.conda:  13%|█▎        | 9/71 [00:00<00:00, 93.24it/s]Extracting : pip-23.1.2-py310h06a4308_0.conda:  14%|█▍        | 10/71 [00:00<00:03, 16.47it/s]    Extracting : pip-23.1.2-py310h06a4308_0.conda:  15%|█▌        | 11/71 [00:00<00:03, 18.11it/s]Extracting : ruamel.yaml-0.17.21-py310h5eee18b_0.conda:  15%|█▌        | 11/71 [00:00<00:03, 18.11it/s]Extracting : jsonpointer-2.1-pyhd3eb1b0_0.conda:  17%|█▋        | 12/71 [00:00<00:03, 18.11it/s]       Extracting : libxml2-2.10.3-hcbfbd50_0.conda:  18%|█▊        | 13/71 [00:00<00:03, 18.11it/s]   Extracting : tqdm-4.65.0-py310h2f386ee_0.conda:  20%|█▉        | 14/71 [00:00<00:03, 18.11it/s]Extracting : _openmp_mutex-5.1-1_gnu.conda:  21%|██        | 15/71 [00:00<00:03, 18.11it/s]    Extracting : libmamba-1.4.1-h2dafd23_1.conda:  23%|██▎       | 16/71 [00:00<00:03, 18.11it/s]Extracting : idna-3.4-py310h06a4308_0.conda:  24%|██▍       | 17/71 [00:00<00:02, 18.11it/s] Extracting : libmambapy-1.4.1-py310h2dafd23_1.conda:  25%|██▌       | 18/71 [00:00<00:02, 18.11it/s]Extracting : six-1.16.0-pyhd3eb1b0_1.conda:  27%|██▋       | 19/71 [00:00<00:02, 18.11it/s]         Extracting : readline-8.2-h5eee18b_0.conda:  28%|██▊       | 20/71 [00:00<00:02, 18.11it/s]Extracting : libev-4.33-h7f8727e_1.conda:  30%|██▉       | 21/71 [00:00<00:02, 18.11it/s]  Extracting : conda-package-handling-2.1.0-py310h06a4308_0.conda:  31%|███       | 22/71 [00:00<00:02, 18.11it/s]Extracting : pysocks-1.7.1-py310h06a4308_0.conda:  32%|███▏      | 23/71 [00:00<00:02, 18.11it/s]               Extracting : pybind11-abi-4-hd3eb1b0_1.conda:  34%|███▍      | 24/71 [00:00<00:02, 18.11it/s]    Extracting : xz-5.4.2-h5eee18b_0.conda:  35%|███▌      | 25/71 [00:00<00:02, 18.11it/s]      Extracting : krb5-1.20.1-h143b758_1.conda:  37%|███▋      | 26/71 [00:00<00:02, 18.11it/s]Extracting : conda-23.5.2-py310h06a4308_0.conda:  38%|███▊      | 27/71 [00:00<00:02, 18.11it/s]Extracting : cryptography-39.0.1-py310h9ce1e76_2.conda:  39%|███▉      | 28/71 [00:00<00:02, 18.11it/s]Extracting : pycparser-2.21-pyhd3eb1b0_0.conda:  41%|████      | 29/71 [00:00<00:02, 18.11it/s]        Extracting : openssl-3.0.9-h7f8727e_0.conda:  42%|████▏     | 30/71 [00:00<00:02, 18.11it/s]   Extracting : boltons-23.0.0-py310h06a4308_0.conda:  44%|████▎     | 31/71 [00:00<00:02, 18.11it/s]Extracting : pcre2-10.37-he7ceb23_1.conda:  45%|████▌     | 32/71 [00:00<00:02, 18.11it/s]        Extracting : ncurses-6.4-h6a678d5_0.conda:  46%|████▋     | 33/71 [00:01<00:02, 18.11it/s]Extracting : ncurses-6.4-h6a678d5_0.conda:  48%|████▊     | 34/71 [00:01<00:01, 33.92it/s]Extracting : conda-libmamba-solver-23.5.0-py310h06a4308_0.conda:  48%|████▊     | 34/71 [00:01<00:01, 33.92it/s]Extracting : ca-certificates-2023.05.30-h06a4308_0.conda:  49%|████▉     | 35/71 [00:01<00:01, 33.92it/s]       Extracting : pluggy-1.0.0-py310h06a4308_1.conda:  51%|█████     | 36/71 [00:01<00:01, 33.92it/s]         Extracting : setuptools-67.8.0-py310h06a4308_0.conda:  52%|█████▏    | 37/71 [00:01<00:01, 33.92it/s]Extracting : yaml-cpp-0.7.0-h295c915_1.conda:  54%|█████▎    | 38/71 [00:01<00:00, 33.92it/s]        Extracting : certifi-2023.5.7-py310h06a4308_0.conda:  55%|█████▍    | 39/71 [00:01<00:00, 33.92it/s]Extracting : jsonpatch-1.32-pyhd3eb1b0_0.conda:  56%|█████▋    | 40/71 [00:01<00:00, 33.92it/s]     Extracting : zstd-1.5.5-hc292b87_0.conda:  58%|█████▊    | 41/71 [00:01<00:00, 33.92it/s]      Extracting : python-3.10.12-h955ad1f_0.conda:  59%|█████▉    | 42/71 [00:01<00:00, 33.92it/s]Extracting : python-3.10.12-h955ad1f_0.conda:  61%|██████    | 43/71 [00:01<00:01, 22.56it/s]Extracting : cffi-1.15.1-py310h5eee18b_3.conda:  61%|██████    | 43/71 [00:01<00:01, 22.56it/s]Extracting : tzdata-2023c-h04d1e81_0.conda:  62%|██████▏   | 44/71 [00:01<00:01, 22.56it/s]    Extracting : libuuid-1.41.5-h5eee18b_0.conda:  63%|██████▎   | 45/71 [00:01<00:01, 22.56it/s]Extracting : lz4-c-1.9.4-h6a678d5_0.conda:  65%|██████▍   | 46/71 [00:01<00:01, 22.56it/s]   Extracting : libstdcxx-ng-11.2.0-h1234567_1.conda:  66%|██████▌   | 47/71 [00:01<00:01, 22.56it/s]Extracting : zstandard-0.19.0-py310h5eee18b_0.conda:  68%|██████▊   | 48/71 [00:01<00:01, 22.56it/s]Extracting : libnghttp2-1.52.0-h2d74bed_1.conda:  69%|██████▉   | 49/71 [00:01<00:00, 22.56it/s]    Extracting : bzip2-1.0.8-h7b6447c_0.conda:  70%|███████   | 50/71 [00:01<00:00, 22.56it/s]      Extracting : libcurl-8.1.1-h251f7ec_1.conda:  72%|███████▏  | 51/71 [00:01<00:00, 22.56it/s]Extracting : ld_impl_linux-64-2.38-h1181459_1.conda:  73%|███████▎  | 52/71 [00:01<00:00, 22.56it/s]Extracting : icu-58.2-he6710b0_3.conda:  75%|███████▍  | 53/71 [00:01<00:00, 22.56it/s]             Extracting : brotlipy-0.7.0-py310h7f8727e_1002.conda:  76%|███████▌  | 54/71 [00:01<00:00, 22.56it/s]Extracting : reproc-14.2.4-h295c915_1.conda:  77%|███████▋  | 55/71 [00:01<00:00, 22.56it/s]         Extracting : urllib3-1.26.16-py310h06a4308_0.conda:  79%|███████▉  | 56/71 [00:01<00:00, 22.56it/s]Extracting : libedit-3.1.20221030-h5eee18b_0.conda:  80%|████████  | 57/71 [00:01<00:00, 22.56it/s]Extracting : libsolv-0.7.22-he621ea3_0.conda:  82%|████████▏ | 58/71 [00:01<00:00, 22.56it/s]      Extracting : libssh2-1.10.0-hdbd6064_2.conda:  83%|████████▎ | 59/71 [00:01<00:00, 22.56it/s]Extracting : wheel-0.38.4-py310h06a4308_0.conda:  85%|████████▍ | 60/71 [00:01<00:00, 22.56it/s]Extracting : conda-package-streaming-0.8.0-py310h06a4308_0.conda:  86%|████████▌ | 61/71 [00:01<00:00, 22.56it/s]Extracting : reproc-cpp-14.2.4-h295c915_1.conda:  87%|████████▋ | 62/71 [00:01<00:00, 22.56it/s]                 Extracting : libarchive-3.6.2-h6ac8c49_2.conda:  89%|████████▊ | 63/71 [00:01<00:00, 22.56it/s] Extracting : libffi-3.4.4-h6a678d5_0.conda:  90%|█████████ | 64/71 [00:01<00:00, 22.56it/s]    Extracting : toolz-0.12.0-py310h06a4308_0.conda:  92%|█████████▏| 65/71 [00:01<00:00, 22.56it/s]Extracting : ruamel.yaml.clib-0.2.6-py310h5eee18b_1.conda:  93%|█████████▎| 66/71 [00:01<00:00, 22.56it/s]Extracting : fmt-9.1.0-hdb19cb5_0.conda:  94%|█████████▍| 67/71 [00:01<00:00, 22.56it/s]                  Extracting : zlib-1.2.13-h5eee18b_0.conda:  96%|█████████▌| 68/71 [00:01<00:00, 22.56it/s]Extracting : tk-8.6.12-h1ccaba5_0.conda:  97%|█████████▋| 69/71 [00:01<00:00, 22.56it/s]  Extracting : libgcc-ng-11.2.0-h1234567_1.conda:  99%|█████████▊| 70/71 [00:01<00:00, 22.56it/s]                                                                                               
+Installing base environment...
+
+
+Downloading and Extracting Packages
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: ...working... done
+Executing transaction: ...working... done
+installation finished.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.5.2
+  latest version: 26.9.4
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=26.9.4
+
+
+
+## Package Plan ##
+
+  environment location: /opt/cleanroom/envs/py31012
+
+  added / updated specs:
+    - pip=23.2.1
+    - python==3.10.12=h955ad1f_0
+    - setuptools=68.0.0
+    - wheel=0.41.2
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |             main           3 KB
+    _openmp_mutex-5.1          |           52_gnu           5 KB
+    bzip2-1.0.8                |       h5eee18b_6         418 KB
+    ca-certificates-2026.10.20 |       h06a4308_0         117 KB
+    ld_impl_linux-64-2.44      |       h9e0c5a2_3         819 KB
+    libffi-3.4.8               |       h06d3fd0_3         156 KB
+    libgcc-15.2.0              |       h69a1729_8         1.0 MB
+    libgcc-ng-15.2.0           |       h166f726_8          27 KB
+    libstdcxx-15.2.0           |       h39759b7_8         4.9 MB
+    libuuid-1.41.5             |       h5eee18b_0          29 KB
+    libxcb-1.17.0              |       h9b100fa_0         407 KB
+    libzlib-1.3.2              |       h47b2149_0          66 KB
+    ncurses-6.6                |       hfaaeb4e_0         1.3 MB
+    openssl-3.5.9              |       h1b28b03_0         6.5 MB
+    pip-23.2.1                 |  py310h06a4308_0         2.6 MB
+    pthread-stubs-0.3          |       h47b2149_2           7 KB
+    python-3.10.12             |       h955ad1f_0        27.7 MB
+    readline-8.3               |       hc2a1206_0         573 KB
+    setuptools-68.0.0          |  py310h06a4308_0         1.0 MB
+    sqlite-3.53.4              |       h795bf6d_0         1.7 MB
+    tk-8.6.15                  |       h54e0aa7_0         3.4 MB
+    tzdata-2026c               |       he532380_0         125 KB
+    wheel-0.41.2               |  py310h06a4308_0         100 KB
+    xorg-libx11-1.8.14         |       h65de747_0         973 KB
+    xorg-libxau-1.0.12         |       h9b100fa_0          14 KB
+    xorg-libxdmcp-1.1.5        |       h9b100fa_0          20 KB
+    xorg-xorgproto-2025.1      |       h47b2149_0         606 KB
+    xz-5.8.4                   |       h140a991_0         753 KB
+    zlib-1.3.2                 |       h47b2149_0          95 KB
+    ------------------------------------------------------------
+                                           Total:        55.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-52_gnu 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2026.10.20-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h9e0c5a2_3 
+  libffi             pkgs/main/linux-64::libffi-3.4.8-h06d3fd0_3 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_8 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_8 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_8 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.2-h47b2149_0 
+  ncurses            pkgs/main/linux-64::ncurses-6.6-hfaaeb4e_0 
+  openssl            pkgs/main/linux-64::openssl-3.5.9-h1b28b03_0 
+  pip                pkgs/main/linux-64::pip-23.2.1-py310h06a4308_0 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h47b2149_2 
+  python             pkgs/main/linux-64::python-3.10.12-h955ad1f_0 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-68.0.0-py310h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.53.4-h795bf6d_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2026c-he532380_0 
+  wheel              pkgs/main/linux-64::wheel-0.41.2-py310h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.14-h65de747_0 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2025.1-h47b2149_0 
+  xz                 pkgs/main/linux-64::xz-5.8.4-h140a991_0 
+  zlib               pkgs/main/linux-64::zlib-1.3.2-h47b2149_0 
+
+
+
+Downloading and Extracting Packages
+libuuid-1.41.5       | 29 KB     |            |   0% 
+pip-23.2.1           | 2.6 MB    |            |   0% [A
+
+_openmp_mutex-5.1    | 5 KB      |            |   0% [A[A
+
+
+bzip2-1.0.8          | 418 KB    |            |   0% [A[A[A
+
+
+
+_libgcc_mutex-0.1    | 3 KB      |            |   0% [A[A[A[A
+
+
+
+
+pthread-stubs-0.3    | 7 KB      |            |   0% [A[A[A[A[A
+
+
+
+
+
+xorg-libx11-1.8.14   | 973 KB    |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxdmcp-1.1.5  | 20 KB     |            |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ncurses-6.6          | 1.3 MB    |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxau-1.0.12   | 14 KB     |            |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-xorgproto-2025. | 606 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+libffi-3.4.8         | 156 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 117 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+libzlib-1.3.2        | 66 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 27 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 819 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026c         | 125 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+pip-23.2.1           | 2.6 MB    |            |   1% [A
+
+
+
+_libgcc_mutex-0.1    | 3 KB      | ########## | 100% [A[A[A[A
+
+
+
+_libgcc_mutex-0.1    | 3 KB      | ########## | 100% [A[A[A[A
+
+_openmp_mutex-5.1    | 5 KB      | ########## | 100% [A[Alibuuid-1.41.5       | 29 KB     | #####6     |  56% 
+pip-23.2.1           | 2.6 MB    | ######3    |  64% [A
+
+_openmp_mutex-5.1    | 5 KB      | ########## | 100% [A[Alibuuid-1.41.5       | 29 KB     | ########## | 100% 
+
+
+bzip2-1.0.8          | 418 KB    | 3          |   4% [A[A[A
+
+
+
+
+pthread-stubs-0.3    | 7 KB      | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+
+xorg-libxdmcp-1.1.5  | 20 KB     | ########1  |  81% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ncurses-6.6          | 1.3 MB    | 1          |   1% [A[A[A[A[A[A[A[A
+
+
+
+
+
+xorg-libx11-1.8.14   | 973 KB    | 1          |   2% [A[A[A[A[A[A
+
+
+
+
+pthread-stubs-0.3    | 7 KB      | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+
+xorg-libxdmcp-1.1.5  | 20 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxau-1.0.12   | 14 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-xorgproto-2025. | 606 KB    | 2          |   3% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+libffi-3.4.8         | 156 KB    | #          |  10% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+xorg-libx11-1.8.14   | 973 KB    | ########7  |  87% [A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 117 KB    | #3         |  14% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+libzlib-1.3.2        | 66 KB     | ##4        |  24% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 27 KB     | #####9     |  59% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 819 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+bzip2-1.0.8          | 418 KB    | ########## | 100% [A[A[A
+
+
+bzip2-1.0.8          | 418 KB    | ########## | 100% [A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026c         | 125 KB    | #2         |  13% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxau-1.0.12   | 14 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    | ##1        |  22% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    | ###1       |  31% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    | ####3      |  43% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    | #####8     |  58% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    | ######     |  61% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    | ########1  |  81% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    | ########2  |  83% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+libffi-3.4.8         | 156 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+libffi-3.4.8         | 156 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+xorg-libx11-1.8.14   | 973 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-xorgproto-2025. | 606 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-xorgproto-2025. | 606 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 117 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 117 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 27 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 27 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+libzlib-1.3.2        | 66 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+libzlib-1.3.2        | 66 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 819 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 819 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+pip-23.2.1           | 2.6 MB    | ########## | 100% [A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026c         | 125 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026c         | 125 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ncurses-6.6          | 1.3 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ncurses-6.6          | 1.3 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libstdcxx-15.2.0     | 4.9 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openssl-3.5.9        | 6.5 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A                                                     
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+[A
+
+[A[A
+
+
+[A[A[A
+
+
+
+[A[A[A[A
+
+
+
+
+[A[A[A[A[A
+
+
+
+
+
+[A[A[A[A[A[A
+
+
+
+
+
+
+[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate /opt/cleanroom/envs/py31012
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+/opt/cleanroom/pkgs/python-3.10.12-h955ad1f_0.tar.bz2: OK
+Collecting pytest==7.4.0 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 7))
+  Downloading pytest-7.4.0-py3-none-any.whl (323 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.6/323.6 kB 86.1 MB/s eta 0:00:00
+Collecting pluggy==1.3.0 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 8))
+  Downloading pluggy-1.3.0-py3-none-any.whl (18 kB)
+Collecting iniconfig==2.0.0 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 9))
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting packaging==23.1 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 10))
+  Downloading packaging-23.1-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 146.2 MB/s eta 0:00:00
+Collecting exceptiongroup==1.1.3 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 11))
+  Downloading exceptiongroup-1.1.3-py3-none-any.whl (14 kB)
+Collecting tomli==2.0.1 (from -r /home/user/LLM-nirvana/cleanroom/env/requirements-validation.txt (line 12))
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Installing collected packages: tomli, pytest, pluggy, packaging, iniconfig, exceptiongroup
+Successfully installed exceptiongroup-1.1.3 iniconfig-2.0.0 packaging-23.1 pluggy-1.3.0 pytest-7.4.0 tomli-2.0.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+usage: conda [-h] [-V] command ...
+conda: error: unrecognized arguments: --sha256

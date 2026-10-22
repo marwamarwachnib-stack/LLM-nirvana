@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="14" skipped="0" tests="14" time="0.077" timestamp="2026-10-22T12:46:20.515404" hostname="vm"><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_a_sentence" time="0.001"><failure message="AssertionError: None != 'anobstacleisoftenasteppingstone'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_a_sentence&gt;
+
+    def test_decode_a_sentence(self):
+&gt;       self.assertEqual(
+            decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v"),
+            "anobstacleisoftenasteppingstone",
+        )
+E       AssertionError: None != 'anobstacleisoftenasteppingstone'
+
+atbash_cipher_test.py:45: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_all_the_letters" time="0.001"><failure message="AssertionError: None != 'thequickbrownfoxjumpsoverthelazydog'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_all_the_letters&gt;
+
+    def test_decode_all_the_letters(self):
+&gt;       self.assertEqual(
+            decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"),
+            "thequickbrownfoxjumpsoverthelazydog",
+        )
+E       AssertionError: None != 'thequickbrownfoxjumpsoverthelazydog'
+
+atbash_cipher_test.py:54: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_exercism" time="0.001"><failure message="AssertionError: None != 'exercism'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_exercism&gt;
+
+    def test_decode_exercism(self):
+&gt;       self.assertEqual(decode("vcvix rhn"), "exercism")
+E       AssertionError: None != 'exercism'
+
+atbash_cipher_test.py:42: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_numbers" time="0.001"><failure message="AssertionError: None != 'testing123testing'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_numbers&gt;
+
+    def test_decode_numbers(self):
+&gt;       self.assertEqual(decode("gvhgr mt123 gvhgr mt"), "testing123testing")
+E       AssertionError: None != 'testing123testing'
+
+atbash_cipher_test.py:51: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_with_no_spaces" time="0.001"><failure message="AssertionError: None != 'anobstacleisoftenasteppingstone'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_with_no_spaces&gt;
+
+    def test_decode_with_no_spaces(self):
+&gt;       self.assertEqual(
+            decode("zmlyhgzxovrhlugvmzhgvkkrmthglmv"), "anobstacleisoftenasteppingstone"
+        )
+E       AssertionError: None != 'anobstacleisoftenasteppingstone'
+
+atbash_cipher_test.py:63: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_decode_with_too_many_spaces" time="0.001"><failure message="AssertionError: None != 'exercism'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_decode_with_too_many_spaces&gt;
+
+    def test_decode_with_too_many_spaces(self):
+&gt;       self.assertEqual(decode("vc vix    r hn"), "exercism")
+E       AssertionError: None != 'exercism'
+
+atbash_cipher_test.py:60: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_all_the_letters" time="0.001"><failure message="AssertionError: None != 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_all_the_letters&gt;
+
+    def test_encode_all_the_letters(self):
+&gt;       self.assertEqual(
+            encode("The quick brown fox jumps over the lazy dog."),
+            "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt",
+        )
+E       AssertionError: None != 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'
+
+atbash_cipher_test.py:36: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_deep_thought" time="0.001"><failure message="AssertionError: None != 'gifgs rhurx grlm'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_deep_thought&gt;
+
+    def test_encode_deep_thought(self):
+&gt;       self.assertEqual(encode("Truth is fiction."), "gifgs rhurx grlm")
+E       AssertionError: None != 'gifgs rhurx grlm'
+
+atbash_cipher_test.py:33: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_mindblowingly" time="0.001"><failure message="AssertionError: None != 'nrmwy oldrm tob'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_mindblowingly&gt;
+
+    def test_encode_mindblowingly(self):
+&gt;       self.assertEqual(encode("mindblowingly"), "nrmwy oldrm tob")
+E       AssertionError: None != 'nrmwy oldrm tob'
+
+atbash_cipher_test.py:27: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_no" time="0.001"><failure message="AssertionError: None != 'ml'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_no&gt;
+
+    def test_encode_no(self):
+&gt;       self.assertEqual(encode("no"), "ml")
+E       AssertionError: None != 'ml'
+
+atbash_cipher_test.py:18: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_numbers" time="0.001"><failure message="AssertionError: None != 'gvhgr mt123 gvhgr mt'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_numbers&gt;
+
+    def test_encode_numbers(self):
+&gt;       self.assertEqual(encode("Testing,1 2 3, testing."), "gvhgr mt123 gvhgr mt")
+E       AssertionError: None != 'gvhgr mt123 gvhgr mt'
+
+atbash_cipher_test.py:30: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_omg" time="0.001"><failure message="AssertionError: None != 'lnt'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_omg&gt;
+
+    def test_encode_omg(self):
+&gt;       self.assertEqual(encode("OMG"), "lnt")
+E       AssertionError: None != 'lnt'
+
+atbash_cipher_test.py:21: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_spaces" time="0.001"><failure message="AssertionError: None != 'lnt'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_spaces&gt;
+
+    def test_encode_spaces(self):
+&gt;       self.assertEqual(encode("O M G"), "lnt")
+E       AssertionError: None != 'lnt'
+
+atbash_cipher_test.py:24: AssertionError</failure></testcase><testcase classname="atbash_cipher_test.AtbashCipherTest" name="test_encode_yes" time="0.001"><failure message="AssertionError: None != 'bvh'">self = &lt;atbash_cipher_test.AtbashCipherTest testMethod=test_encode_yes&gt;
+
+    def test_encode_yes(self):
+&gt;       self.assertEqual(encode("yes"), "bvh")
+E       AssertionError: None != 'bvh'
+
+atbash_cipher_test.py:15: AssertionError</failure></testcase></testsuite></testsuites>

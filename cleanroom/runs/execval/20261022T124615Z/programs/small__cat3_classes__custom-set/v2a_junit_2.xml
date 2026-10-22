@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="32" skipped="0" tests="38" time="0.180" timestamp="2026-10-22T12:46:52.188990" hostname="vm"><testcase classname="custom_set_test.CustomSetTest" name="test_add_to_empty_set" time="0.001"><failure message="AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd832200&gt; != &lt;custom_set.CustomSet object at 0x7f33fd8320e0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_add_to_empty_set&gt;
+
+    def test_add_to_empty_set(self):
+        sut = CustomSet()
+        expected = CustomSet([3])
+        sut.add(3)
+&gt;       self.assertEqual(sut, expected)
+E       AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd832200&gt; != &lt;custom_set.CustomSet object at 0x7f33fd8320e0&gt;
+
+custom_set_test.py:122: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_add_to_non_empty_set" time="0.001"><failure message="AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd7db970&gt; != &lt;custom_set.CustomSet object at 0x7f33fd7db940&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_add_to_non_empty_set&gt;
+
+    def test_add_to_non_empty_set(self):
+        sut = CustomSet([1, 2, 4])
+        expected = CustomSet([1, 2, 3, 4])
+        sut.add(3)
+&gt;       self.assertEqual(sut, expected)
+E       AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd7db970&gt; != &lt;custom_set.CustomSet object at 0x7f33fd7db940&gt;
+
+custom_set_test.py:128: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_adding_an_existing_element_does_not_change_the_set" time="0.000"><failure message="AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd8339a0&gt; != &lt;custom_set.CustomSet object at 0x7f33fd833b80&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_adding_an_existing_element_does_not_change_the_set&gt;
+
+    def test_adding_an_existing_element_does_not_change_the_set(self):
+        sut = CustomSet([1, 2, 3])
+        expected = CustomSet([1, 2, 3])
+        sut.add(3)
+&gt;       self.assertEqual(sut, expected)
+E       AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd8339a0&gt; != &lt;custom_set.CustomSet object at 0x7f33fd833b80&gt;
+
+custom_set_test.py:134: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7da9e0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set&gt;
+
+    def test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set(self):
+        set1 = CustomSet([1, 2, 3, 4])
+        set2 = CustomSet()
+        expected = CustomSet([1, 2, 3, 4])
+&gt;       self.assertEqual(set1 - set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7da9e0&gt;
+
+custom_set_test.py:184: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_difference_of_empty_set_and_non_empty_set_is_an_empty_set" time="0.000"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd832c80&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_difference_of_empty_set_and_non_empty_set_is_an_empty_set&gt;
+
+    def test_difference_of_empty_set_and_non_empty_set_is_an_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet([3, 2, 5])
+        expected = CustomSet()
+&gt;       self.assertEqual(set1 - set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd832c80&gt;
+
+custom_set_test.py:178: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_difference_of_two_empty_sets_is_an_empty_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd8333a0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_difference_of_two_empty_sets_is_an_empty_set&gt;
+
+    def test_difference_of_two_empty_sets_is_an_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+        expected = CustomSet()
+&gt;       self.assertEqual(set1 - set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd8333a0&gt;
+
+custom_set_test.py:172: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd644e80&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set&gt;
+
+    def test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set(
+        self,
+    ):
+        set1 = CustomSet([3, 2, 1])
+        set2 = CustomSet([2, 4])
+        expected = CustomSet([1, 3])
+&gt;       self.assertEqual(set1 - set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd644e80&gt;
+
+custom_set_test.py:192: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_empty_set_is_a_subset_of_another_empty_set" time="0.000"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_empty_set_is_a_subset_of_another_empty_set&gt;
+
+    def test_empty_set_is_a_subset_of_another_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+&gt;       self.assertIs(set1.issubset(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:36: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_empty_set_is_a_subset_of_non_empty_set" time="0.001"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_empty_set_is_a_subset_of_non_empty_set&gt;
+
+    def test_empty_set_is_a_subset_of_non_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet([1])
+&gt;       self.assertIs(set1.issubset(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:41: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_empty_set_is_disjoint_with_non_empty_set" time="0.001"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_empty_set_is_disjoint_with_non_empty_set&gt;
+
+    def test_empty_set_is_disjoint_with_non_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet([1])
+&gt;       self.assertIs(set1.isdisjoint(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:71: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_empty_set_is_not_equal_to_non_empty_set" time="0.000" /><testcase classname="custom_set_test.CustomSetTest" name="test_empty_sets_are_equal" time="0.000"><failure message="AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd644340&gt; != &lt;custom_set.CustomSet object at 0x7f33fd6445b0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_empty_sets_are_equal&gt;
+
+    def test_empty_sets_are_equal(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+&gt;       self.assertEqual(set1, set2)
+E       AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd644340&gt; != &lt;custom_set.CustomSet object at 0x7f33fd6445b0&gt;
+
+custom_set_test.py:91: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7dbf10&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set&gt;
+
+    def test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set(self):
+        set1 = CustomSet([1, 2, 3, 4])
+        set2 = CustomSet()
+        expected = CustomSet()
+&gt;       self.assertEqual(set1.intersection(set2), expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7dbf10&gt;
+
+custom_set_test.py:152: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set" time="0.000"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd646590&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set&gt;
+
+    def test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet([3, 2, 5])
+        expected = CustomSet()
+&gt;       self.assertEqual(set1.intersection(set2), expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd646590&gt;
+
+custom_set_test.py:146: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_intersection_of_two_empty_sets_is_an_empty_set" time="0.000"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7db6a0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_intersection_of_two_empty_sets_is_an_empty_set&gt;
+
+    def test_intersection_of_two_empty_sets_is_an_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+        expected = CustomSet()
+&gt;       self.assertEqual(set1.intersection(set2), expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd7db6a0&gt;
+
+custom_set_test.py:140: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd646e90&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set&gt;
+
+    def test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set(self):
+        set1 = CustomSet([1, 2, 3])
+        set2 = CustomSet([4, 5, 6])
+        expected = CustomSet()
+&gt;       self.assertEqual(set1.intersection(set2), expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd646e90&gt;
+
+custom_set_test.py:158: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd64edd0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements&gt;
+
+    def test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements(
+        self,
+    ):
+        set1 = CustomSet([1, 2, 3, 4])
+        set2 = CustomSet([3, 2, 5])
+        expected = CustomSet([2, 3])
+&gt;       self.assertEqual(set1.intersection(set2), expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd64edd0&gt;
+
+custom_set_test.py:166: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_non_empty_set_is_disjoint_with_empty_set" time="0.000"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_non_empty_set_is_disjoint_with_empty_set&gt;
+
+    def test_non_empty_set_is_disjoint_with_empty_set(self):
+        set1 = CustomSet([1])
+        set2 = CustomSet()
+&gt;       self.assertIs(set1.isdisjoint(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:76: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_non_empty_set_is_not_a_subset_of_empty_set" time="0.001"><failure message="AssertionError: None is not False">self = &lt;custom_set_test.CustomSetTest testMethod=test_non_empty_set_is_not_a_subset_of_empty_set&gt;
+
+    def test_non_empty_set_is_not_a_subset_of_empty_set(self):
+        set1 = CustomSet([1])
+        set2 = CustomSet()
+&gt;       self.assertIs(set1.issubset(set2), False)
+E       AssertionError: None is not False
+
+custom_set_test.py:46: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_non_empty_set_is_not_equal_to_empty_set" time="0.000" /><testcase classname="custom_set_test.CustomSetTest" name="test_nothing_is_contained_in_an_empty_set" time="0.000" /><testcase classname="custom_set_test.CustomSetTest" name="test_set_is_a_subset_of_larger_set_with_same_elements" time="0.001"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_set_is_a_subset_of_larger_set_with_same_elements&gt;
+
+    def test_set_is_a_subset_of_larger_set_with_same_elements(self):
+        set1 = CustomSet([1, 2, 3])
+        set2 = CustomSet([4, 1, 2, 3])
+&gt;       self.assertIs(set1.issubset(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:56: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_set_is_a_subset_of_set_with_exact_same_elements" time="0.000"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_set_is_a_subset_of_set_with_exact_same_elements&gt;
+
+    def test_set_is_a_subset_of_set_with_exact_same_elements(self):
+        set1 = CustomSet([1, 2, 3])
+        set2 = CustomSet([1, 2, 3])
+&gt;       self.assertIs(set1.issubset(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:51: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements" time="0.000"><failure message="AssertionError: None is not False">self = &lt;custom_set_test.CustomSetTest testMethod=test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements&gt;
+
+    def test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements(self):
+        set1 = CustomSet([1, 2, 3])
+        set2 = CustomSet([4, 1, 3])
+&gt;       self.assertIs(set1.issubset(set2), False)
+E       AssertionError: None is not False
+
+custom_set_test.py:61: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_set_is_not_equal_to_larger_set_with_same_elements" time="0.000" /><testcase classname="custom_set_test.CustomSetTest" name="test_sets_are_disjoint_if_they_share_no_elements" time="0.000"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_sets_are_disjoint_if_they_share_no_elements&gt;
+
+    def test_sets_are_disjoint_if_they_share_no_elements(self):
+        set1 = CustomSet([1, 2])
+        set2 = CustomSet([3, 4])
+&gt;       self.assertIs(set1.isdisjoint(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:86: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_sets_are_not_disjoint_if_they_share_an_element" time="0.000"><failure message="AssertionError: None is not False">self = &lt;custom_set_test.CustomSetTest testMethod=test_sets_are_not_disjoint_if_they_share_an_element&gt;
+
+    def test_sets_are_not_disjoint_if_they_share_an_element(self):
+        set1 = CustomSet([1, 2])
+        set2 = CustomSet([2, 3])
+&gt;       self.assertIs(set1.isdisjoint(set2), False)
+E       AssertionError: None is not False
+
+custom_set_test.py:81: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_sets_with_different_elements_are_not_equal" time="0.000" /><testcase classname="custom_set_test.CustomSetTest" name="test_sets_with_elements_are_not_empty" time="0.000"><failure message="AssertionError: None is not False">self = &lt;custom_set_test.CustomSetTest testMethod=test_sets_with_elements_are_not_empty&gt;
+
+    def test_sets_with_elements_are_not_empty(self):
+        sut = CustomSet([1])
+&gt;       self.assertIs(sut.isempty(), False)
+E       AssertionError: None is not False
+
+custom_set_test.py:19: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_sets_with_no_elements_are_empty" time="0.001"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_sets_with_no_elements_are_empty&gt;
+
+    def test_sets_with_no_elements_are_empty(self):
+        sut = CustomSet()
+&gt;       self.assertIs(sut.isempty(), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:15: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_sets_with_the_same_elements_are_equal" time="0.000"><failure message="AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd64d4b0&gt; != &lt;custom_set.CustomSet object at 0x7f33fd64e2c0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_sets_with_the_same_elements_are_equal&gt;
+
+    def test_sets_with_the_same_elements_are_equal(self):
+        set1 = CustomSet([1, 2])
+        set2 = CustomSet([2, 1])
+&gt;       self.assertEqual(set1, set2)
+E       AssertionError: &lt;custom_set.CustomSet object at 0x7f33fd64d4b0&gt; != &lt;custom_set.CustomSet object at 0x7f33fd64e2c0&gt;
+
+custom_set_test.py:106: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_the_empty_set_is_disjoint_with_itself" time="0.000"><failure message="AssertionError: None is not True">self = &lt;custom_set_test.CustomSetTest testMethod=test_the_empty_set_is_disjoint_with_itself&gt;
+
+    def test_the_empty_set_is_disjoint_with_itself(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+&gt;       self.assertIs(set1.isdisjoint(set2), True)
+E       AssertionError: None is not True
+
+custom_set_test.py:66: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set" time="0.000"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd6a8a60&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set&gt;
+
+    def test_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set(self):
+        set1 = CustomSet([1, 3])
+        set2 = CustomSet()
+        expected = CustomSet([1, 3])
+&gt;       self.assertEqual(set1 + set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd6a8a60&gt;
+
+custom_set_test.py:210: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set" time="0.000"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd644fd0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set&gt;
+
+    def test_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet([2])
+        expected = CustomSet([2])
+&gt;       self.assertEqual(set1 + set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd644fd0&gt;
+
+custom_set_test.py:204: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_union_of_empty_sets_is_an_empty_set" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd6ab880&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_union_of_empty_sets_is_an_empty_set&gt;
+
+    def test_union_of_empty_sets_is_an_empty_set(self):
+        set1 = CustomSet()
+        set2 = CustomSet()
+        expected = CustomSet()
+&gt;       self.assertEqual(set1 + set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd6ab880&gt;
+
+custom_set_test.py:198: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_union_of_non_empty_sets_contains_all_unique_elements" time="0.001"><failure message="AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd647430&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_union_of_non_empty_sets_contains_all_unique_elements&gt;
+
+    def test_union_of_non_empty_sets_contains_all_unique_elements(self):
+        set1 = CustomSet([1, 3])
+        set2 = CustomSet([2, 3])
+        expected = CustomSet([3, 2, 1])
+&gt;       self.assertEqual(set1 + set2, expected)
+E       AssertionError: None != &lt;custom_set.CustomSet object at 0x7f33fd647430&gt;
+
+custom_set_test.py:216: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_when_the_element_is_in_the_set" time="0.001"><failure message="AssertionError: 1 not found in &lt;custom_set.CustomSet object at 0x7f33fd6a97e0&gt;">self = &lt;custom_set_test.CustomSetTest testMethod=test_when_the_element_is_in_the_set&gt;
+
+    def test_when_the_element_is_in_the_set(self):
+        sut = CustomSet([1, 2, 3])
+&gt;       self.assertIn(1, sut)
+E       AssertionError: 1 not found in &lt;custom_set.CustomSet object at 0x7f33fd6a97e0&gt;
+
+custom_set_test.py:27: AssertionError</failure></testcase><testcase classname="custom_set_test.CustomSetTest" name="test_when_the_element_is_not_in_the_set" time="0.001" /></testsuite></testsuites>

@@ -1,0 +1,77 @@
+ionError: None is not False
+
+queen_attack_test.py:43: AssertionError
+_ QueenAttackTest.test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal _
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal>
+
+    def test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal(
+        self,
+    ):
+>       self.assertIs(Queen(4, 1).can_attack(Queen(2, 5)), False)
+E       AssertionError: None is not False
+
+queen_attack_test.py:66: AssertionError
+_____________ QueenAttackTest.test_queen_must_have_column_on_board _____________
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_column_on_board>
+
+    def test_queen_must_have_column_on_board(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:36: AssertionError
+_____________ QueenAttackTest.test_queen_must_have_positive_column _____________
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_positive_column>
+
+    def test_queen_must_have_positive_column(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:30: AssertionError
+______________ QueenAttackTest.test_queen_must_have_positive_row _______________
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_positive_row>
+
+    def test_queen_must_have_positive_row(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:18: AssertionError
+______________ QueenAttackTest.test_queen_must_have_row_on_board _______________
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_queen_must_have_row_on_board>
+
+    def test_queen_must_have_row_on_board(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:24: AssertionError
+_____________ QueenAttackTest.test_queens_same_position_can_attack _____________
+
+self = <queen_attack_test.QueenAttackTest testMethod=test_queens_same_position_can_attack>
+
+    def test_queens_same_position_can_attack(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+queen_attack_test.py:70: AssertionError
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__queen-attack/v2a_junit_2.xml -
+=========================== short test summary info ============================
+PASSED queen_attack_test.py::QueenAttackTest::test_queen_with_a_valid_position
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_first_diagonal
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_fourth_diagonal
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_same_column
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_same_row - A...
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_second_diagonal
+FAILED queen_attack_test.py::QueenAttackTest::test_can_attack_on_third_diagonal
+FAILED queen_attack_test.py::QueenAttackTest::test_cannot_attack - AssertionE...
+FAILED queen_attack_test.py::QueenAttackTest::test_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal
+FAILED queen_attack_test.py::QueenAttackTest::test_queen_must_have_column_on_board
+FAILED queen_attack_test.py::QueenAttackTest::test_queen_must_have_positive_column
+FAILED queen_attack_test.py::QueenAttackTest::test_queen_must_have_positive_row
+FAILED queen_attack_test.py::QueenAttackTest::test_queen_must_have_row_on_board
+FAILED queen_attack_test.py::QueenAttackTest::test_queens_same_position_can_attack
+13 failed, 1 passed in 0.05s

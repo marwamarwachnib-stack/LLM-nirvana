@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="24" skipped="0" tests="24" time="0.141" timestamp="2026-10-22T12:47:04.407511" hostname="vm"><testcase classname="linked_list_test.LinkedListTest" name="test_can_return_with_pop_and_then_raise_an_error_if_empty" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_can_return_with_pop_and_then_raise_an_error_if_empty&gt;
+
+    def test_can_return_with_pop_and_then_raise_an_error_if_empty(self):
+        lst = LinkedList()
+&gt;       lst.push(1)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:176: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_can_return_with_shift_and_then_raise_an_error_if_empty" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_can_return_with_shift_and_then_raise_an_error_if_empty&gt;
+
+    def test_can_return_with_shift_and_then_raise_an_error_if_empty(self):
+        lst = LinkedList()
+&gt;       lst.push(1)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:194: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_count_a_list_with_items" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_count_a_list_with_items&gt;
+
+    def test_count_a_list_with_items(self):
+        lst = LinkedList()
+&gt;       lst.push(37)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:63: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_count_an_empty_list" time="0.002"><failure message="TypeError: object of type 'LinkedList' has no len()">self = &lt;linked_list_test.LinkedListTest testMethod=test_count_an_empty_list&gt;
+
+    def test_count_an_empty_list(self):
+        lst = LinkedList()
+&gt;       self.assertEqual(len(lst), 0)
+E       TypeError: object of type 'LinkedList' has no len()
+
+linked_list_test.py:59: TypeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_count_is_correct_after_mutation" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_count_is_correct_after_mutation&gt;
+
+    def test_count_is_correct_after_mutation(self):
+        lst = LinkedList()
+&gt;       lst.push(31)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:69: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_only_the_first_occurrence" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_only_the_first_occurrence&gt;
+
+    def test_deletes_only_the_first_occurrence(self):
+        lst = LinkedList()
+&gt;       lst.push(73)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:156: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_element_with_the_specified_value_from_the_list" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_element_with_the_specified_value_from_the_list&gt;
+
+    def test_deletes_the_element_with_the_specified_value_from_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(71)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:106: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head&gt;
+
+    def test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head(
+        self,
+    ):
+        lst = LinkedList()
+&gt;       lst.push(71)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:130: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail&gt;
+
+    def test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail(
+        self,
+    ):
+        lst = LinkedList()
+&gt;       lst.push(71)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:118: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_first_of_two_elements" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_first_of_two_elements&gt;
+
+    def test_deletes_the_first_of_two_elements(self):
+        lst = LinkedList()
+&gt;       lst.push(97)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:140: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_only_element" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_only_element&gt;
+
+    def test_deletes_the_only_element(self):
+        lst = LinkedList()
+&gt;       lst.push(61)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:100: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_deletes_the_second_of_two_elements" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_deletes_the_second_of_two_elements&gt;
+
+    def test_deletes_the_second_of_two_elements(self):
+        lst = LinkedList()
+&gt;       lst.push(97)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:148: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_pop_gets_element_from_the_list" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_pop_gets_element_from_the_list&gt;
+
+    def test_pop_gets_element_from_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(7)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:15: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_pop_push_shift_and_unshift_can_be_used_in_any_order" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_pop_push_shift_and_unshift_can_be_used_in_any_order&gt;
+
+    def test_pop_push_shift_and_unshift_can_be_used_in_any_order(self):
+        lst = LinkedList()
+&gt;       lst.push(1)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:46: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_popping_to_empty_doesn_t_break_the_list" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_popping_to_empty_doesn_t_break_the_list&gt;
+
+    def test_popping_to_empty_doesn_t_break_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(41)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:80: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_push_pop_respectively_add_remove_at_the_end_of_the_list" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_push_pop_respectively_add_remove_at_the_end_of_the_list&gt;
+
+    def test_push_pop_respectively_add_remove_at_the_end_of_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(11)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:20: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_shift_gets_an_element_from_the_list" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_shift_gets_an_element_from_the_list&gt;
+
+    def test_shift_gets_an_element_from_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(17)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:27: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_shift_gets_first_element_from_the_list" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_shift_gets_first_element_from_the_list&gt;
+
+    def test_shift_gets_first_element_from_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(23)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:32: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_shifting_to_empty_doesn_t_break_the_list" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_shifting_to_empty_doesn_t_break_the_list&gt;
+
+    def test_shifting_to_empty_doesn_t_break_the_list(self):
+        lst = LinkedList()
+&gt;       lst.push(41)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:90: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_unshift_adds_element_at_start_of_the_list" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'unshift'">self = &lt;linked_list_test.LinkedListTest testMethod=test_unshift_adds_element_at_start_of_the_list&gt;
+
+    def test_unshift_adds_element_at_start_of_the_list(self):
+        lst = LinkedList()
+&gt;       lst.unshift(23)
+E       AttributeError: 'LinkedList' object has no attribute 'unshift'
+
+linked_list_test.py:39: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_using_delete_raises_an_error_if_the_list_is_empty" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'delete'">self = &lt;linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_list_is_empty&gt;
+
+    def test_using_delete_raises_an_error_if_the_list_is_empty(self):
+        lst = LinkedList()
+        with self.assertRaises(ValueError) as err:
+&gt;           lst.delete(0)
+E           AttributeError: 'LinkedList' object has no attribute 'delete'
+
+linked_list_test.py:206: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_using_delete_raises_an_error_if_the_value_is_not_found" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'push'">self = &lt;linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_value_is_not_found&gt;
+
+    def test_using_delete_raises_an_error_if_the_value_is_not_found(self):
+        lst = LinkedList()
+&gt;       lst.push(5)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:212: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_using_pop_raises_an_error_if_the_list_is_empty" time="0.000"><failure message="AttributeError: 'LinkedList' object has no attribute 'pop'">self = &lt;linked_list_test.LinkedListTest testMethod=test_using_pop_raises_an_error_if_the_list_is_empty&gt;
+
+    def test_using_pop_raises_an_error_if_the_list_is_empty(self):
+        lst = LinkedList()
+        with self.assertRaises(IndexError) as err:
+&gt;           lst.pop()
+E           AttributeError: 'LinkedList' object has no attribute 'pop'
+
+linked_list_test.py:170: AttributeError</failure></testcase><testcase classname="linked_list_test.LinkedListTest" name="test_using_shift_raises_an_error_if_the_list_is_empty" time="0.001"><failure message="AttributeError: 'LinkedList' object has no attribute 'shift'">self = &lt;linked_list_test.LinkedListTest testMethod=test_using_shift_raises_an_error_if_the_list_is_empty&gt;
+
+    def test_using_shift_raises_an_error_if_the_list_is_empty(self):
+        lst = LinkedList()
+        with self.assertRaises(IndexError) as err:
+&gt;           lst.shift()
+E           AttributeError: 'LinkedList' object has no attribute 'shift'
+
+linked_list_test.py:188: AttributeError</failure></testcase></testsuite></testsuites>

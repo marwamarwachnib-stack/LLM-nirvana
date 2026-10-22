@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="12" skipped="0" tests="12" time="0.053" timestamp="2026-10-22T12:46:24.787341" hostname="vm"><testcase classname="change_test.ChangeTest" name="test_another_possible_change_without_unit_coins_available" time="0.001"><failure message="AssertionError: None != [4, 4, 4, 5, 5, 5]">self = &lt;change_test.ChangeTest testMethod=test_another_possible_change_without_unit_coins_available&gt;
+
+    def test_another_possible_change_without_unit_coins_available(self):
+&gt;       self.assertEqual(find_fewest_coins([4, 5], 27), [4, 4, 4, 5, 5, 5])
+E       AssertionError: None != [4, 4, 4, 5, 5, 5]
+
+change_test.py:38: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_cannot_find_negative_change_values" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;change_test.ChangeTest testMethod=test_cannot_find_negative_change_values&gt;
+
+    def test_cannot_find_negative_change_values(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+change_test.py:56: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_change_for_1_cent" time="0.001"><failure message="AssertionError: None != [1]">self = &lt;change_test.ChangeTest testMethod=test_change_for_1_cent&gt;
+
+    def test_change_for_1_cent(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 5, 10, 25], 1), [1])
+E       AssertionError: None != [1]
+
+change_test.py:14: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_change_with_lilliputian_coins" time="0.000"><failure message="AssertionError: None != [4, 4, 15]">self = &lt;change_test.ChangeTest testMethod=test_change_with_lilliputian_coins&gt;
+
+    def test_change_with_lilliputian_coins(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 4, 15, 20, 50], 23), [4, 4, 15])
+E       AssertionError: None != [4, 4, 15]
+
+change_test.py:23: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_change_with_lower_elbonia_coins" time="0.000"><failure message="AssertionError: None != [21, 21, 21]">self = &lt;change_test.ChangeTest testMethod=test_change_with_lower_elbonia_coins&gt;
+
+    def test_change_with_lower_elbonia_coins(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 5, 10, 21, 25], 63), [21, 21, 21])
+E       AssertionError: None != [21, 21, 21]
+
+change_test.py:26: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_error_if_no_combination_can_add_up_to_target" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;change_test.ChangeTest testMethod=test_error_if_no_combination_can_add_up_to_target&gt;
+
+    def test_error_if_no_combination_can_add_up_to_target(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+change_test.py:50: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_error_testing_for_change_smaller_than_the_smallest_of_coins" time="0.000"><failure message="AssertionError: ValueError not raised">self = &lt;change_test.ChangeTest testMethod=test_error_testing_for_change_smaller_than_the_smallest_of_coins&gt;
+
+    def test_error_testing_for_change_smaller_than_the_smallest_of_coins(self):
+&gt;       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+change_test.py:44: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_large_target_values" time="0.001"><failure message="AssertionError: None != [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]">self = &lt;change_test.ChangeTest testMethod=test_large_target_values&gt;
+
+    def test_large_target_values(self):
+&gt;       self.assertEqual(
+            find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999),
+            [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+        )
+E       AssertionError: None != [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+
+change_test.py:29: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_multiple_coin_change" time="0.000"><failure message="AssertionError: None != [5, 10]">self = &lt;change_test.ChangeTest testMethod=test_multiple_coin_change&gt;
+
+    def test_multiple_coin_change(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 15), [5, 10])
+E       AssertionError: None != [5, 10]
+
+change_test.py:20: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_no_coins_make_0_change" time="0.000"><failure message="AssertionError: None != []">self = &lt;change_test.ChangeTest testMethod=test_no_coins_make_0_change&gt;
+
+    def test_no_coins_make_0_change(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 5, 10, 21, 25], 0), [])
+E       AssertionError: None != []
+
+change_test.py:41: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_possible_change_without_unit_coins_available" time="0.001"><failure message="AssertionError: None != [2, 2, 2, 5, 10]">self = &lt;change_test.ChangeTest testMethod=test_possible_change_without_unit_coins_available&gt;
+
+    def test_possible_change_without_unit_coins_available(self):
+&gt;       self.assertEqual(find_fewest_coins([2, 5, 10, 20, 50], 21), [2, 2, 2, 5, 10])
+E       AssertionError: None != [2, 2, 2, 5, 10]
+
+change_test.py:35: AssertionError</failure></testcase><testcase classname="change_test.ChangeTest" name="test_single_coin_change" time="0.001"><failure message="AssertionError: None != [25]">self = &lt;change_test.ChangeTest testMethod=test_single_coin_change&gt;
+
+    def test_single_coin_change(self):
+&gt;       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 25), [25])
+E       AssertionError: None != [25]
+
+change_test.py:17: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,19 @@
+..............                                                           [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__circular-buffer/v2b_junit_3.xml -
+=========================== short test summary info ============================
+PASSED circular_buffer_test.py::CircularBufferTest::test_a_read_frees_up_capacity_for_another_write
+PASSED circular_buffer_test.py::CircularBufferTest::test_can_read_an_item_just_written
+PASSED circular_buffer_test.py::CircularBufferTest::test_clear_does_nothing_on_empty_buffer
+PASSED circular_buffer_test.py::CircularBufferTest::test_clear_frees_up_capacity_for_another_write
+PASSED circular_buffer_test.py::CircularBufferTest::test_each_item_may_only_be_read_once
+PASSED circular_buffer_test.py::CircularBufferTest::test_full_buffer_can_t_be_written_to
+PASSED circular_buffer_test.py::CircularBufferTest::test_initial_clear_does_not_affect_wrapping_around
+PASSED circular_buffer_test.py::CircularBufferTest::test_items_are_read_in_the_order_they_are_written
+PASSED circular_buffer_test.py::CircularBufferTest::test_items_cleared_out_of_buffer_can_t_be_read
+PASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_acts_like_write_on_non_full_buffer
+PASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_on_full_buffer
+PASSED circular_buffer_test.py::CircularBufferTest::test_overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read
+PASSED circular_buffer_test.py::CircularBufferTest::test_read_position_is_maintained_even_across_multiple_writes
+PASSED circular_buffer_test.py::CircularBufferTest::test_reading_empty_buffer_should_fail
+14 passed in 0.02s

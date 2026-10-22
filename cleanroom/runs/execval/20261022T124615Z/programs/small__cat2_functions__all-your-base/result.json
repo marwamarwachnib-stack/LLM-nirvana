@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/all-your-base",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/all-your-base/all_your_base.py",
+    "0_100 LOC/cat2_functions/all-your-base/all_your_base_test.py",
+    "0_100 LOC/cat2_functions/all-your-base/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "all_your_base.py": "2e56b09b73834a546742ccc53b71d507fcef76dc9d2a7dd4e5809ccf0e4b1bfc",
+    "all_your_base_test.py": "19bdd1173d47dc4e24db251e8fc80258c77c9ea5dbc895e01f20c0fb055b46bf",
+    "example.py": "73d36e4fad7424d9725eb32b73a628c1927b8b6c8c48c3e472ae36acd55332e1"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.033,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.031,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "all_your_base.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "all_your_base_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 21,
+    "passed": 0,
+    "failed": 21,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 0,
+          "failed": 21,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "39a1676b6e8f1b2d74b7e10ea40b3b023281d82a282be5c5cd32f98351e9a36e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_1.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.306,
+          "stdout_sha256": "f3bf327e9ccd06c6e564b8c19b715d6ee90eea053260a77b3b3db564c7791dfb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9290,
+          "stderr_bytes": 0,
+          "stdout_tail": "est.py:96: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_one ____________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_one>\n\n    def test_output_base_is_one(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:84: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_zero ___________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_zero>\n\n    def test_output_base_is_zero(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:90: AssertionError\n________________ AllYourBaseTest.test_single_bit_one_to_decimal ________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_bit_one_to_decimal>\n\n    def test_single_bit_one_to_decimal(self):\n>       self.assertEqual(rebase(2, [1], 10), [1])\nE       AssertionError: None != [1]\n\nall_your_base_test.py:14: AssertionError\n________________ AllYourBaseTest.test_single_decimal_to_binary _________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_decimal_to_binary>\n\n    def test_single_decimal_to_binary(self):\n>       self.assertEqual(rebase(10, [5], 2), [1, 0, 1])\nE       AssertionError: None != [1, 0, 1]\n\nall_your_base_test.py:20: AssertionError\n_______________________ AllYourBaseTest.test_single_zero _______________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_zero>\n\n    def test_single_zero(self):\n>       self.assertEqual(rebase(10, [0], 2), [0])\nE       AssertionError: None != [0]\n\nall_your_base_test.py:41: AssertionError\n_________________ AllYourBaseTest.test_trinary_to_hexadecimal __________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_trinary_to_hexadecimal>\n\n    def test_trinary_to_hexadecimal(self):\n>       self.assertEqual(rebase(3, [1, 1, 2, 0], 16), [2, 10])\nE       AssertionError: None != [2, 10]\n\nall_your_base_test.py:29: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_empty_list - AssertionErr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_leading_zeros - Assertion...\nFAILED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_negative_digit - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero - Ass...\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_zero - AssertionEr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal - ...\n21 failed in 0.11s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 0,
+          "failed": 21,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "39a1676b6e8f1b2d74b7e10ea40b3b023281d82a282be5c5cd32f98351e9a36e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_2.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.278,
+          "stdout_sha256": "2fe0411363aa9c6eac827a46ca0fc23e0a9001a35404c3d44687631b3fc3bcbd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9290,
+          "stderr_bytes": 0,
+          "stdout_tail": "est.py:96: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_one ____________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_one>\n\n    def test_output_base_is_one(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:84: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_zero ___________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_zero>\n\n    def test_output_base_is_zero(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:90: AssertionError\n________________ AllYourBaseTest.test_single_bit_one_to_decimal ________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_bit_one_to_decimal>\n\n    def test_single_bit_one_to_decimal(self):\n>       self.assertEqual(rebase(2, [1], 10), [1])\nE       AssertionError: None != [1]\n\nall_your_base_test.py:14: AssertionError\n________________ AllYourBaseTest.test_single_decimal_to_binary _________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_decimal_to_binary>\n\n    def test_single_decimal_to_binary(self):\n>       self.assertEqual(rebase(10, [5], 2), [1, 0, 1])\nE       AssertionError: None != [1, 0, 1]\n\nall_your_base_test.py:20: AssertionError\n_______________________ AllYourBaseTest.test_single_zero _______________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_zero>\n\n    def test_single_zero(self):\n>       self.assertEqual(rebase(10, [0], 2), [0])\nE       AssertionError: None != [0]\n\nall_your_base_test.py:41: AssertionError\n_________________ AllYourBaseTest.test_trinary_to_hexadecimal __________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_trinary_to_hexadecimal>\n\n    def test_trinary_to_hexadecimal(self):\n>       self.assertEqual(rebase(3, [1, 1, 2, 0], 16), [2, 10])\nE       AssertionError: None != [2, 10]\n\nall_your_base_test.py:29: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_empty_list - AssertionErr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_leading_zeros - Assertion...\nFAILED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_negative_digit - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero - Ass...\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_zero - AssertionEr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal - ...\n21 failed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 0,
+          "failed": 21,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "39a1676b6e8f1b2d74b7e10ea40b3b023281d82a282be5c5cd32f98351e9a36e"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_3.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.311,
+          "stdout_sha256": "818f4c24a3e10d15bd03a7647f57d850e32311b08b45e812efa0b58c01845516",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9290,
+          "stderr_bytes": 0,
+          "stdout_tail": "est.py:96: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_one ____________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_one>\n\n    def test_output_base_is_one(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:84: AssertionError\n___________________ AllYourBaseTest.test_output_base_is_zero ___________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_zero>\n\n    def test_output_base_is_zero(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nall_your_base_test.py:90: AssertionError\n________________ AllYourBaseTest.test_single_bit_one_to_decimal ________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_bit_one_to_decimal>\n\n    def test_single_bit_one_to_decimal(self):\n>       self.assertEqual(rebase(2, [1], 10), [1])\nE       AssertionError: None != [1]\n\nall_your_base_test.py:14: AssertionError\n________________ AllYourBaseTest.test_single_decimal_to_binary _________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_decimal_to_binary>\n\n    def test_single_decimal_to_binary(self):\n>       self.assertEqual(rebase(10, [5], 2), [1, 0, 1])\nE       AssertionError: None != [1, 0, 1]\n\nall_your_base_test.py:20: AssertionError\n_______________________ AllYourBaseTest.test_single_zero _______________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_single_zero>\n\n    def test_single_zero(self):\n>       self.assertEqual(rebase(10, [0], 2), [0])\nE       AssertionError: None != [0]\n\nall_your_base_test.py:41: AssertionError\n_________________ AllYourBaseTest.test_trinary_to_hexadecimal __________________\n\nself = <all_your_base_test.AllYourBaseTest testMethod=test_trinary_to_hexadecimal>\n\n    def test_trinary_to_hexadecimal(self):\n>       self.assertEqual(rebase(3, [1, 1, 2, 0], 16), [2, 10])\nE       AssertionError: None != [2, 10]\n\nall_your_base_test.py:29: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_empty_list - AssertionErr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one - Asser...\nFAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit - ...\nFAILED all_your_base_test.py::AllYourBaseTest::test_leading_zeros - Assertion...\nFAILED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_negative_digit - Assertio...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one - Asse...\nFAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero - Ass...\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nFAILED all_your_base_test.py::AllYourBaseTest::test_single_zero - AssertionEr...\nFAILED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal - ...\n21 failed in 0.10s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "all_your_base.py",
+    "with_copy_of": "example.py",
+    "sha256": "73d36e4fad7424d9725eb32b73a628c1927b8b6c8c48c3e472ae36acd55332e1",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "all_your_base_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 21,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "67c61ff22ebc7fb180d7312fa5ff4df78203591241f1a1bb20f9d75dd8b97c94"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_1.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.205,
+          "stdout_sha256": "fcaa9c4aeca190be7852734d03cb38192ede533f72219fe86010bac8a2573f4c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1921,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....................                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_empty_list\nPASSED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_leading_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_negative_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal\n21 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 21,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "67c61ff22ebc7fb180d7312fa5ff4df78203591241f1a1bb20f9d75dd8b97c94"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_2.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.275,
+          "stdout_sha256": "984e16cd88dba481b0c42d9ed85eeff64d584fc15331061e094925098f0e0c98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1921,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....................                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_empty_list\nPASSED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_leading_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_negative_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal\n21 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 21,
+          "passed": 21,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "67c61ff22ebc7fb180d7312fa5ff4df78203591241f1a1bb20f9d75dd8b97c94"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_3.xml",
+            "all_your_base_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.248,
+          "stdout_sha256": "e93d8f214cdd221636a40e09980a5fdfd13c4235d09a39d3989fdcf7a823f93e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1921,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....................                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_empty_list\nPASSED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_leading_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros\nPASSED all_your_base_test.py::AllYourBaseTest::test_negative_digit\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one\nPASSED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary\nPASSED all_your_base_test.py::AllYourBaseTest::test_single_zero\nPASSED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal\n21 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 21/21 passed, 0 failed, 0 errors (consistent)"
+}

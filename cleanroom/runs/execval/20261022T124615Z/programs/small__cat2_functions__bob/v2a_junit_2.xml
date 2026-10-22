@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="25" skipped="0" tests="25" time="0.080" timestamp="2026-10-22T12:46:23.338774" hostname="vm"><testcase classname="bob_test.BobTest" name="test_alternate_silence" time="0.001"><failure message="AssertionError: None != 'Fine. Be that way!'">self = &lt;bob_test.BobTest testMethod=test_alternate_silence&gt;
+
+    def test_alternate_silence(self):
+&gt;       self.assertEqual(response("\t\t\t\t\t\t\t\t\t\t"), "Fine. Be that way!")
+E       AssertionError: None != 'Fine. Be that way!'
+
+bob_test.py:80: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_asking_a_numeric_question" time="0.001"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_asking_a_numeric_question&gt;
+
+    def test_asking_a_numeric_question(self):
+&gt;       self.assertEqual(response("You are, what, like 15?"), "Sure.")
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:28: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_asking_a_question" time="0.000"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_asking_a_question&gt;
+
+    def test_asking_a_question(self):
+&gt;       self.assertEqual(
+            response("Does this cryogenic chamber make me look fat?"), "Sure."
+        )
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:23: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_asking_gibberish" time="0.000"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_asking_gibberish&gt;
+
+    def test_asking_gibberish(self):
+&gt;       self.assertEqual(response("fffbbcbeab?"), "Sure.")
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:31: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_ending_with_whitespace" time="0.000"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_ending_with_whitespace&gt;
+
+    def test_ending_with_whitespace(self):
+&gt;       self.assertEqual(
+            response("Okay if like my  spacebar  quite a bit?   "), "Sure."
+        )
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:92: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_forceful_question" time="0.000"><failure message="AssertionError: None != &quot;Calm down, I know what I'm doing!&quot;">self = &lt;bob_test.BobTest testMethod=test_forceful_question&gt;
+
+    def test_forceful_question(self):
+&gt;       self.assertEqual(
+            response("WHAT'S GOING ON?"), "Calm down, I know what I'm doing!"
+        )
+E       AssertionError: None != "Calm down, I know what I'm doing!"
+
+bob_test.py:42: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_multiple_line_question" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_multiple_line_question&gt;
+
+    def test_multiple_line_question(self):
+&gt;       self.assertEqual(
+            response("\nDoes this cryogenic chamber make me look fat?\nNo."),
+            "Whatever.",
+        )
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:83: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_no_letters" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_no_letters&gt;
+
+    def test_no_letters(self):
+&gt;       self.assertEqual(response("1, 2, 3"), "Whatever.")
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:50: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_non_letters_with_question" time="0.001"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_non_letters_with_question&gt;
+
+    def test_non_letters_with_question(self):
+&gt;       self.assertEqual(response(":) ?"), "Sure.")
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:68: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_non_question_ending_with_whitespace" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_non_question_ending_with_whitespace&gt;
+
+    def test_non_question_ending_with_whitespace(self):
+&gt;       self.assertEqual(
+            response("This is a statement ending with whitespace      "), "Whatever."
+        )
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:100: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_other_whitespace" time="0.000"><failure message="AssertionError: None != 'Fine. Be that way!'">self = &lt;bob_test.BobTest testMethod=test_other_whitespace&gt;
+
+    def test_other_whitespace(self):
+&gt;       self.assertEqual(response("\n\r \t"), "Fine. Be that way!")
+E       AssertionError: None != 'Fine. Be that way!'
+
+bob_test.py:97: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_prattling_on" time="0.000"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_prattling_on&gt;
+
+    def test_prattling_on(self):
+&gt;       self.assertEqual(response("Wait! Hang on. Are you going to be OK?"), "Sure.")
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:71: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_prolonged_silence" time="0.000"><failure message="AssertionError: None != 'Fine. Be that way!'">self = &lt;bob_test.BobTest testMethod=test_prolonged_silence&gt;
+
+    def test_prolonged_silence(self):
+&gt;       self.assertEqual(response("          "), "Fine. Be that way!")
+E       AssertionError: None != 'Fine. Be that way!'
+
+bob_test.py:77: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_question_with_no_letters" time="0.000"><failure message="AssertionError: None != 'Sure.'">self = &lt;bob_test.BobTest testMethod=test_question_with_no_letters&gt;
+
+    def test_question_with_no_letters(self):
+&gt;       self.assertEqual(response("4?"), "Sure.")
+E       AssertionError: None != 'Sure.'
+
+bob_test.py:53: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_shouting" time="0.001"><failure message="AssertionError: None != 'Whoa, chill out!'">self = &lt;bob_test.BobTest testMethod=test_shouting&gt;
+
+    def test_shouting(self):
+&gt;       self.assertEqual(response("WATCH OUT!"), "Whoa, chill out!")
+E       AssertionError: None != 'Whoa, chill out!'
+
+bob_test.py:17: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_shouting_gibberish" time="0.001"><failure message="AssertionError: None != 'Whoa, chill out!'">self = &lt;bob_test.BobTest testMethod=test_shouting_gibberish&gt;
+
+    def test_shouting_gibberish(self):
+&gt;       self.assertEqual(response("FCECDFCAAB"), "Whoa, chill out!")
+E       AssertionError: None != 'Whoa, chill out!'
+
+bob_test.py:20: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_shouting_numbers" time="0.000"><failure message="AssertionError: None != 'Whoa, chill out!'">self = &lt;bob_test.BobTest testMethod=test_shouting_numbers&gt;
+
+    def test_shouting_numbers(self):
+&gt;       self.assertEqual(response("1, 2, 3 GO!"), "Whoa, chill out!")
+E       AssertionError: None != 'Whoa, chill out!'
+
+bob_test.py:47: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_shouting_with_no_exclamation_mark" time="0.000"><failure message="AssertionError: None != 'Whoa, chill out!'">self = &lt;bob_test.BobTest testMethod=test_shouting_with_no_exclamation_mark&gt;
+
+    def test_shouting_with_no_exclamation_mark(self):
+&gt;       self.assertEqual(response("I HATE THE DENTIST"), "Whoa, chill out!")
+E       AssertionError: None != 'Whoa, chill out!'
+
+bob_test.py:62: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_shouting_with_special_characters" time="0.000"><failure message="AssertionError: None != 'Whoa, chill out!'">self = &lt;bob_test.BobTest testMethod=test_shouting_with_special_characters&gt;
+
+    def test_shouting_with_special_characters(self):
+&gt;       self.assertEqual(
+            response("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"),
+            "Whoa, chill out!",
+        )
+E       AssertionError: None != 'Whoa, chill out!'
+
+bob_test.py:56: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_silence" time="0.000"><failure message="AssertionError: None != 'Fine. Be that way!'">self = &lt;bob_test.BobTest testMethod=test_silence&gt;
+
+    def test_silence(self):
+&gt;       self.assertEqual(response(""), "Fine. Be that way!")
+E       AssertionError: None != 'Fine. Be that way!'
+
+bob_test.py:74: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_starting_with_whitespace" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_starting_with_whitespace&gt;
+
+    def test_starting_with_whitespace(self):
+&gt;       self.assertEqual(response("         hmmmmmmm..."), "Whatever.")
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:89: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_statement_containing_question_mark" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_statement_containing_question_mark&gt;
+
+    def test_statement_containing_question_mark(self):
+&gt;       self.assertEqual(response("Ending with ? means a question."), "Whatever.")
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:65: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_stating_something" time="0.000"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_stating_something&gt;
+
+    def test_stating_something(self):
+&gt;       self.assertEqual(response("Tom-ay-to, tom-aaaah-to."), "Whatever.")
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:14: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_talking_forcefully" time="0.001"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_talking_forcefully&gt;
+
+    def test_talking_forcefully(self):
+&gt;       self.assertEqual(response("Hi there!"), "Whatever.")
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:34: AssertionError</failure></testcase><testcase classname="bob_test.BobTest" name="test_using_acronyms_in_regular_speech" time="0.001"><failure message="AssertionError: None != 'Whatever.'">self = &lt;bob_test.BobTest testMethod=test_using_acronyms_in_regular_speech&gt;
+
+    def test_using_acronyms_in_regular_speech(self):
+&gt;       self.assertEqual(
+            response("It's OK if you don't want to go work for NASA."), "Whatever."
+        )
+E       AssertionError: None != 'Whatever.'
+
+bob_test.py:37: AssertionError</failure></testcase></testsuite></testsuites>

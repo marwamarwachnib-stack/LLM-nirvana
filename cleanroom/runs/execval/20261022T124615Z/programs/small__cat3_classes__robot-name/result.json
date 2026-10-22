@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/robot-name",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/robot-name/example.py",
+    "0_100 LOC/cat3_classes/robot-name/robot_name.py",
+    "0_100 LOC/cat3_classes/robot-name/robot_name_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "d5c2eecdf7738305ce15bf6f6e5b410835179ca0125450baf43643263e2b7c1c",
+    "robot_name.py": "cc89225ac6cb0b5dae3133d02620f6f7ca5831274afa8ea9e462eb5d6b66f21d",
+    "robot_name_test.py": "c9d7b8ad737fe2d13d3053fe8859ac7d8a4493689b26e788ca99374438b91f9a"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.025,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.031,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "robot_name.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "robot_name_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 4,
+    "passed": 0,
+    "failed": 4,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 0,
+          "failed": 4,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3d62656bcb0af18a9e8861ba29d3da211d716815a0737598a6df06a7671f4178"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_1.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.196,
+          "stdout_sha256": "24ed83062ff86a47e0dae8610d2f48cd5aae039277b65d9dce2038d54c6dfff0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2307,
+          "stderr_bytes": 0,
+          "stdout_tail": "FFFF                                                                     [100%]\n=================================== FAILURES ===================================\n___________ RobotNameTest.test_different_robots_have_different_names ___________\n\nself = <robot_name_test.RobotNameTest testMethod=test_different_robots_have_different_names>\n\n    def test_different_robots_have_different_names(self):\n        self.assertNotEqual(\n>           Robot().name,\n            Robot().name\n        )\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:25: AttributeError\n_________________________ RobotNameTest.test_has_name __________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_has_name>\n\n    def test_has_name(self):\n>       self.assertRegex(Robot().name, self.name_re)\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:16: AttributeError\n________________________ RobotNameTest.test_name_sticks ________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_name_sticks>\n\n    def test_name_sticks(self):\n        robot = Robot()\n>       robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:20: AttributeError\n________________________ RobotNameTest.test_reset_name _________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_reset_name>\n\n    def test_reset_name(self):\n        # Set a seed\n        seed = \"Totally random.\"\n    \n        # Initialize RNG using the seed\n        random.seed(seed)\n    \n        # Call the generator\n        robot = Robot()\n>       name = robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:38: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nFAILED robot_name_test.py::RobotNameTest::test_has_name - AttributeError: 'Ro...\nFAILED robot_name_test.py::RobotNameTest::test_name_sticks - AttributeError: ...\nFAILED robot_name_test.py::RobotNameTest::test_reset_name - AttributeError: '...\n4 failed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 0,
+          "failed": 4,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3d62656bcb0af18a9e8861ba29d3da211d716815a0737598a6df06a7671f4178"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_2.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.187,
+          "stdout_sha256": "ec0f7450a0d82aacc6bc019b2871172781a10effd0bd42e6e2f294dd92db2100",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2307,
+          "stderr_bytes": 0,
+          "stdout_tail": "FFFF                                                                     [100%]\n=================================== FAILURES ===================================\n___________ RobotNameTest.test_different_robots_have_different_names ___________\n\nself = <robot_name_test.RobotNameTest testMethod=test_different_robots_have_different_names>\n\n    def test_different_robots_have_different_names(self):\n        self.assertNotEqual(\n>           Robot().name,\n            Robot().name\n        )\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:25: AttributeError\n_________________________ RobotNameTest.test_has_name __________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_has_name>\n\n    def test_has_name(self):\n>       self.assertRegex(Robot().name, self.name_re)\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:16: AttributeError\n________________________ RobotNameTest.test_name_sticks ________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_name_sticks>\n\n    def test_name_sticks(self):\n        robot = Robot()\n>       robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:20: AttributeError\n________________________ RobotNameTest.test_reset_name _________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_reset_name>\n\n    def test_reset_name(self):\n        # Set a seed\n        seed = \"Totally random.\"\n    \n        # Initialize RNG using the seed\n        random.seed(seed)\n    \n        # Call the generator\n        robot = Robot()\n>       name = robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:38: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nFAILED robot_name_test.py::RobotNameTest::test_has_name - AttributeError: 'Ro...\nFAILED robot_name_test.py::RobotNameTest::test_name_sticks - AttributeError: ...\nFAILED robot_name_test.py::RobotNameTest::test_reset_name - AttributeError: '...\n4 failed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 0,
+          "failed": 4,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "3d62656bcb0af18a9e8861ba29d3da211d716815a0737598a6df06a7671f4178"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_3.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.242,
+          "stdout_sha256": "addfef68392bab4ef12748f29e28b0a545dcce0f686c0a8078fed6445bdd29f4",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2307,
+          "stderr_bytes": 0,
+          "stdout_tail": "FFFF                                                                     [100%]\n=================================== FAILURES ===================================\n___________ RobotNameTest.test_different_robots_have_different_names ___________\n\nself = <robot_name_test.RobotNameTest testMethod=test_different_robots_have_different_names>\n\n    def test_different_robots_have_different_names(self):\n        self.assertNotEqual(\n>           Robot().name,\n            Robot().name\n        )\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:25: AttributeError\n_________________________ RobotNameTest.test_has_name __________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_has_name>\n\n    def test_has_name(self):\n>       self.assertRegex(Robot().name, self.name_re)\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:16: AttributeError\n________________________ RobotNameTest.test_name_sticks ________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_name_sticks>\n\n    def test_name_sticks(self):\n        robot = Robot()\n>       robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:20: AttributeError\n________________________ RobotNameTest.test_reset_name _________________________\n\nself = <robot_name_test.RobotNameTest testMethod=test_reset_name>\n\n    def test_reset_name(self):\n        # Set a seed\n        seed = \"Totally random.\"\n    \n        # Initialize RNG using the seed\n        random.seed(seed)\n    \n        # Call the generator\n        robot = Robot()\n>       name = robot.name\nE       AttributeError: 'Robot' object has no attribute 'name'\n\nrobot_name_test.py:38: AttributeError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nFAILED robot_name_test.py::RobotNameTest::test_has_name - AttributeError: 'Ro...\nFAILED robot_name_test.py::RobotNameTest::test_name_sticks - AttributeError: ...\nFAILED robot_name_test.py::RobotNameTest::test_reset_name - AttributeError: '...\n4 failed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "robot_name.py",
+    "with_copy_of": "example.py",
+    "sha256": "d5c2eecdf7738305ce15bf6f6e5b410835179ca0125450baf43643263e2b7c1c",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "robot_name_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a9a6b21ee7fa0d62f097dfeedc2e81e6b50ab93d386bb7bf9f5f850a6d2a635d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_1.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.219,
+          "stdout_sha256": "aea0d1e206e7afb519fc5a91a5da11193348ee2f2c9fea621c2e92b3a5957435",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 662,
+          "stderr_bytes": 0,
+          "stdout_tail": "....                                                                     [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nPASSED robot_name_test.py::RobotNameTest::test_has_name\nPASSED robot_name_test.py::RobotNameTest::test_name_sticks\nPASSED robot_name_test.py::RobotNameTest::test_reset_name\n4 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a9a6b21ee7fa0d62f097dfeedc2e81e6b50ab93d386bb7bf9f5f850a6d2a635d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_2.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.216,
+          "stdout_sha256": "1236c7e7fce766bd2cc46e75b6f8df024a71444be7f9a1e27b90875b390da3a1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 662,
+          "stderr_bytes": 0,
+          "stdout_tail": "....                                                                     [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nPASSED robot_name_test.py::RobotNameTest::test_has_name\nPASSED robot_name_test.py::RobotNameTest::test_name_sticks\nPASSED robot_name_test.py::RobotNameTest::test_reset_name\n4 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "a9a6b21ee7fa0d62f097dfeedc2e81e6b50ab93d386bb7bf9f5f850a6d2a635d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_3.xml",
+            "robot_name_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.203,
+          "stdout_sha256": "12db689f5f585e9259e1d69e9a5bdd63e24bae9cc613c0622dcc3a82c07b5833",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 662,
+          "stderr_bytes": 0,
+          "stdout_tail": "....                                                                     [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-name/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED robot_name_test.py::RobotNameTest::test_different_robots_have_different_names\nPASSED robot_name_test.py::RobotNameTest::test_has_name\nPASSED robot_name_test.py::RobotNameTest::test_name_sticks\nPASSED robot_name_test.py::RobotNameTest::test_reset_name\n4 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 4/4 passed, 0 failed, 0 errors (consistent)"
+}

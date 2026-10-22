@@ -1,0 +1,84 @@
+
+
+minesweeper_test.py:26: AssertionError
+________________ MinesweeperTest.test_minefield_with_only_mines ________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_minefield_with_only_mines>
+
+    def test_minefield_with_only_mines(self):
+>       self.assertEqual(annotate(["***", "***", "***"]), ["***", "***", "***"])
+E       AssertionError: None != ['***', '***', '***']
+
+minesweeper_test.py:23: AssertionError
+_______________________ MinesweeperTest.test_no_columns ________________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_no_columns>
+
+    def test_no_columns(self):
+>       self.assertEqual(annotate([""]), [""])
+E       AssertionError: None != ['']
+
+minesweeper_test.py:17: AssertionError
+________________________ MinesweeperTest.test_no_mines _________________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_no_mines>
+
+    def test_no_mines(self):
+>       self.assertEqual(annotate(["   ", "   ", "   "]), ["   ", "   ", "   "])
+E       AssertionError: None != ['   ', '   ', '   ']
+
+minesweeper_test.py:20: AssertionError
+_________________________ MinesweeperTest.test_no_rows _________________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_no_rows>
+
+    def test_no_rows(self):
+>       self.assertEqual(annotate([]), [])
+E       AssertionError: None != []
+
+minesweeper_test.py:14: AssertionError
+________________ MinesweeperTest.test_space_surrounded_by_mines ________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_space_surrounded_by_mines>
+
+    def test_space_surrounded_by_mines(self):
+>       self.assertEqual(annotate(["***", "* *", "***"]), ["***", "*8*", "***"])
+E       AssertionError: None != ['***', '*8*', '***']
+
+minesweeper_test.py:29: AssertionError
+______________________ MinesweeperTest.test_vertical_line ______________________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line>
+
+    def test_vertical_line(self):
+>       self.assertEqual(annotate([" ", "*", " ", "*", " "]), ["1", "*", "2", "*", "1"])
+E       AssertionError: None != ['1', '*', '2', '*', '1']
+
+minesweeper_test.py:38: AssertionError
+______________ MinesweeperTest.test_vertical_line_mines_at_edges _______________
+
+self = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line_mines_at_edges>
+
+    def test_vertical_line_mines_at_edges(self):
+>       self.assertEqual(annotate(["*", " ", " ", " ", "*"]), ["*", "1", " ", "1", "*"])
+E       AssertionError: None != ['*', '1', ' ', '1', '*']
+
+minesweeper_test.py:41: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED minesweeper_test.py::MinesweeperTest::test_annotate_9 - AssertionError...
+FAILED minesweeper_test.py::MinesweeperTest::test_cross - AssertionError: Non...
+FAILED minesweeper_test.py::MinesweeperTest::test_different_len - AssertionEr...
+FAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line - Assertion...
+FAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges
+FAILED minesweeper_test.py::MinesweeperTest::test_invalid_char - AssertionErr...
+FAILED minesweeper_test.py::MinesweeperTest::test_large_minefield - Assertion...
+FAILED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces
+FAILED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines
+FAILED minesweeper_test.py::MinesweeperTest::test_no_columns - AssertionError...
+FAILED minesweeper_test.py::MinesweeperTest::test_no_mines - AssertionError: ...
+FAILED minesweeper_test.py::MinesweeperTest::test_no_rows - AssertionError: N...
+FAILED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines
+FAILED minesweeper_test.py::MinesweeperTest::test_vertical_line - AssertionEr...
+FAILED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges
+15 failed in 0.06s

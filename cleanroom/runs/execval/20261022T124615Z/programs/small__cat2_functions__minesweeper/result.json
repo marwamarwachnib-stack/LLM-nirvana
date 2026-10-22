@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/minesweeper",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/minesweeper/example.py",
+    "0_100 LOC/cat2_functions/minesweeper/minesweeper.py",
+    "0_100 LOC/cat2_functions/minesweeper/minesweeper_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "ce990e898785e3173048d9605d4137adf392bfd4b002b75ed05ba76cd5b5ab73",
+    "minesweeper.py": "82805e268e4ace4e59986832c7ae6c2d8f79bfdc832453cef168c77d2f0151fe",
+    "minesweeper_test.py": "00989fc1269cb86216830db44c30a56873c15fc4aef1023392bf8a199ea611ac"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "minesweeper.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "minesweeper_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 15,
+    "passed": 0,
+    "failed": 15,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 0,
+          "failed": 15,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7617c74acb00c959a4968a0b4e28364bf461a378fe102972565c8dc07d802577"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_1.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.239,
+          "stdout_sha256": "d321475e20ea6df760321b99e59dde0451b0d6ec3396f1c61f81a8446bde49de",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7292,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n\nminesweeper_test.py:26: AssertionError\n________________ MinesweeperTest.test_minefield_with_only_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_minefield_with_only_mines>\n\n    def test_minefield_with_only_mines(self):\n>       self.assertEqual(annotate([\"***\", \"***\", \"***\"]), [\"***\", \"***\", \"***\"])\nE       AssertionError: None != ['***', '***', '***']\n\nminesweeper_test.py:23: AssertionError\n_______________________ MinesweeperTest.test_no_columns ________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_columns>\n\n    def test_no_columns(self):\n>       self.assertEqual(annotate([\"\"]), [\"\"])\nE       AssertionError: None != ['']\n\nminesweeper_test.py:17: AssertionError\n________________________ MinesweeperTest.test_no_mines _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_mines>\n\n    def test_no_mines(self):\n>       self.assertEqual(annotate([\"   \", \"   \", \"   \"]), [\"   \", \"   \", \"   \"])\nE       AssertionError: None != ['   ', '   ', '   ']\n\nminesweeper_test.py:20: AssertionError\n_________________________ MinesweeperTest.test_no_rows _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_rows>\n\n    def test_no_rows(self):\n>       self.assertEqual(annotate([]), [])\nE       AssertionError: None != []\n\nminesweeper_test.py:14: AssertionError\n________________ MinesweeperTest.test_space_surrounded_by_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_space_surrounded_by_mines>\n\n    def test_space_surrounded_by_mines(self):\n>       self.assertEqual(annotate([\"***\", \"* *\", \"***\"]), [\"***\", \"*8*\", \"***\"])\nE       AssertionError: None != ['***', '*8*', '***']\n\nminesweeper_test.py:29: AssertionError\n______________________ MinesweeperTest.test_vertical_line ______________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line>\n\n    def test_vertical_line(self):\n>       self.assertEqual(annotate([\" \", \"*\", \" \", \"*\", \" \"]), [\"1\", \"*\", \"2\", \"*\", \"1\"])\nE       AssertionError: None != ['1', '*', '2', '*', '1']\n\nminesweeper_test.py:38: AssertionError\n______________ MinesweeperTest.test_vertical_line_mines_at_edges _______________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line_mines_at_edges>\n\n    def test_vertical_line_mines_at_edges(self):\n>       self.assertEqual(annotate([\"*\", \" \", \" \", \" \", \"*\"]), [\"*\", \"1\", \" \", \"1\", \"*\"])\nE       AssertionError: None != ['*', '1', ' ', '1', '*']\n\nminesweeper_test.py:41: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED minesweeper_test.py::MinesweeperTest::test_annotate_9 - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_cross - AssertionError: Non...\nFAILED minesweeper_test.py::MinesweeperTest::test_different_len - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nFAILED minesweeper_test.py::MinesweeperTest::test_invalid_char - AssertionErr...\nFAILED minesweeper_test.py::MinesweeperTest::test_large_minefield - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nFAILED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_no_columns - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_mines - AssertionError: ...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_rows - AssertionError: N...\nFAILED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 failed in 0.06s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 0,
+          "failed": 15,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7617c74acb00c959a4968a0b4e28364bf461a378fe102972565c8dc07d802577"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_2.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.221,
+          "stdout_sha256": "838d2477f23a43273d851d3afbb434d00ebadae6ed4f4585ec2525a35d6604c9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7292,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n\nminesweeper_test.py:26: AssertionError\n________________ MinesweeperTest.test_minefield_with_only_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_minefield_with_only_mines>\n\n    def test_minefield_with_only_mines(self):\n>       self.assertEqual(annotate([\"***\", \"***\", \"***\"]), [\"***\", \"***\", \"***\"])\nE       AssertionError: None != ['***', '***', '***']\n\nminesweeper_test.py:23: AssertionError\n_______________________ MinesweeperTest.test_no_columns ________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_columns>\n\n    def test_no_columns(self):\n>       self.assertEqual(annotate([\"\"]), [\"\"])\nE       AssertionError: None != ['']\n\nminesweeper_test.py:17: AssertionError\n________________________ MinesweeperTest.test_no_mines _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_mines>\n\n    def test_no_mines(self):\n>       self.assertEqual(annotate([\"   \", \"   \", \"   \"]), [\"   \", \"   \", \"   \"])\nE       AssertionError: None != ['   ', '   ', '   ']\n\nminesweeper_test.py:20: AssertionError\n_________________________ MinesweeperTest.test_no_rows _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_rows>\n\n    def test_no_rows(self):\n>       self.assertEqual(annotate([]), [])\nE       AssertionError: None != []\n\nminesweeper_test.py:14: AssertionError\n________________ MinesweeperTest.test_space_surrounded_by_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_space_surrounded_by_mines>\n\n    def test_space_surrounded_by_mines(self):\n>       self.assertEqual(annotate([\"***\", \"* *\", \"***\"]), [\"***\", \"*8*\", \"***\"])\nE       AssertionError: None != ['***', '*8*', '***']\n\nminesweeper_test.py:29: AssertionError\n______________________ MinesweeperTest.test_vertical_line ______________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line>\n\n    def test_vertical_line(self):\n>       self.assertEqual(annotate([\" \", \"*\", \" \", \"*\", \" \"]), [\"1\", \"*\", \"2\", \"*\", \"1\"])\nE       AssertionError: None != ['1', '*', '2', '*', '1']\n\nminesweeper_test.py:38: AssertionError\n______________ MinesweeperTest.test_vertical_line_mines_at_edges _______________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line_mines_at_edges>\n\n    def test_vertical_line_mines_at_edges(self):\n>       self.assertEqual(annotate([\"*\", \" \", \" \", \" \", \"*\"]), [\"*\", \"1\", \" \", \"1\", \"*\"])\nE       AssertionError: None != ['*', '1', ' ', '1', '*']\n\nminesweeper_test.py:41: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED minesweeper_test.py::MinesweeperTest::test_annotate_9 - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_cross - AssertionError: Non...\nFAILED minesweeper_test.py::MinesweeperTest::test_different_len - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nFAILED minesweeper_test.py::MinesweeperTest::test_invalid_char - AssertionErr...\nFAILED minesweeper_test.py::MinesweeperTest::test_large_minefield - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nFAILED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_no_columns - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_mines - AssertionError: ...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_rows - AssertionError: N...\nFAILED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 0,
+          "failed": 15,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "7617c74acb00c959a4968a0b4e28364bf461a378fe102972565c8dc07d802577"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_3.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.209,
+          "stdout_sha256": "e4caebe5129f7428e673f470f0ab55f79ee03aff325d3c324ea60ca3b7b5ec9a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7292,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n\nminesweeper_test.py:26: AssertionError\n________________ MinesweeperTest.test_minefield_with_only_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_minefield_with_only_mines>\n\n    def test_minefield_with_only_mines(self):\n>       self.assertEqual(annotate([\"***\", \"***\", \"***\"]), [\"***\", \"***\", \"***\"])\nE       AssertionError: None != ['***', '***', '***']\n\nminesweeper_test.py:23: AssertionError\n_______________________ MinesweeperTest.test_no_columns ________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_columns>\n\n    def test_no_columns(self):\n>       self.assertEqual(annotate([\"\"]), [\"\"])\nE       AssertionError: None != ['']\n\nminesweeper_test.py:17: AssertionError\n________________________ MinesweeperTest.test_no_mines _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_mines>\n\n    def test_no_mines(self):\n>       self.assertEqual(annotate([\"   \", \"   \", \"   \"]), [\"   \", \"   \", \"   \"])\nE       AssertionError: None != ['   ', '   ', '   ']\n\nminesweeper_test.py:20: AssertionError\n_________________________ MinesweeperTest.test_no_rows _________________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_no_rows>\n\n    def test_no_rows(self):\n>       self.assertEqual(annotate([]), [])\nE       AssertionError: None != []\n\nminesweeper_test.py:14: AssertionError\n________________ MinesweeperTest.test_space_surrounded_by_mines ________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_space_surrounded_by_mines>\n\n    def test_space_surrounded_by_mines(self):\n>       self.assertEqual(annotate([\"***\", \"* *\", \"***\"]), [\"***\", \"*8*\", \"***\"])\nE       AssertionError: None != ['***', '*8*', '***']\n\nminesweeper_test.py:29: AssertionError\n______________________ MinesweeperTest.test_vertical_line ______________________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line>\n\n    def test_vertical_line(self):\n>       self.assertEqual(annotate([\" \", \"*\", \" \", \"*\", \" \"]), [\"1\", \"*\", \"2\", \"*\", \"1\"])\nE       AssertionError: None != ['1', '*', '2', '*', '1']\n\nminesweeper_test.py:38: AssertionError\n______________ MinesweeperTest.test_vertical_line_mines_at_edges _______________\n\nself = <minesweeper_test.MinesweeperTest testMethod=test_vertical_line_mines_at_edges>\n\n    def test_vertical_line_mines_at_edges(self):\n>       self.assertEqual(annotate([\"*\", \" \", \" \", \" \", \"*\"]), [\"*\", \"1\", \" \", \"1\", \"*\"])\nE       AssertionError: None != ['*', '1', ' ', '1', '*']\n\nminesweeper_test.py:41: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED minesweeper_test.py::MinesweeperTest::test_annotate_9 - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_cross - AssertionError: Non...\nFAILED minesweeper_test.py::MinesweeperTest::test_different_len - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nFAILED minesweeper_test.py::MinesweeperTest::test_invalid_char - AssertionErr...\nFAILED minesweeper_test.py::MinesweeperTest::test_large_minefield - Assertion...\nFAILED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nFAILED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_no_columns - AssertionError...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_mines - AssertionError: ...\nFAILED minesweeper_test.py::MinesweeperTest::test_no_rows - AssertionError: N...\nFAILED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line - AssertionEr...\nFAILED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "minesweeper.py",
+    "with_copy_of": "example.py",
+    "sha256": "ce990e898785e3173048d9605d4137adf392bfd4b002b75ed05ba76cd5b5ab73",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "minesweeper_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 15,
+    "passed": 15,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4636b4d4def7f7e0b74253f93140747137121d4c641e51831b319b7690b40c7d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_1.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.193,
+          "stdout_sha256": "4820c0547e9897a2e3701983fb7dd35f04f08e7345c7cb545d5d90812212ae39",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1414,
+          "stderr_bytes": 0,
+          "stdout_tail": "...............                                                          [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED minesweeper_test.py::MinesweeperTest::test_annotate_9\nPASSED minesweeper_test.py::MinesweeperTest::test_cross\nPASSED minesweeper_test.py::MinesweeperTest::test_different_len\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nPASSED minesweeper_test.py::MinesweeperTest::test_invalid_char\nPASSED minesweeper_test.py::MinesweeperTest::test_large_minefield\nPASSED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nPASSED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_columns\nPASSED minesweeper_test.py::MinesweeperTest::test_no_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_rows\nPASSED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4636b4d4def7f7e0b74253f93140747137121d4c641e51831b319b7690b40c7d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_2.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.221,
+          "stdout_sha256": "9b87e0152b1148256583201e366bf48a77ffa758b7ddbb9c197f70a2ded7d7eb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1414,
+          "stderr_bytes": 0,
+          "stdout_tail": "...............                                                          [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED minesweeper_test.py::MinesweeperTest::test_annotate_9\nPASSED minesweeper_test.py::MinesweeperTest::test_cross\nPASSED minesweeper_test.py::MinesweeperTest::test_different_len\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nPASSED minesweeper_test.py::MinesweeperTest::test_invalid_char\nPASSED minesweeper_test.py::MinesweeperTest::test_large_minefield\nPASSED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nPASSED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_columns\nPASSED minesweeper_test.py::MinesweeperTest::test_no_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_rows\nPASSED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "4636b4d4def7f7e0b74253f93140747137121d4c641e51831b319b7690b40c7d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_3.xml",
+            "minesweeper_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.199,
+          "stdout_sha256": "1d2bc1b73db6d82a96497ff07b8589d36e7e50e45753b59df31997dd0f6eb9c5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1414,
+          "stderr_bytes": 0,
+          "stdout_tail": "...............                                                          [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED minesweeper_test.py::MinesweeperTest::test_annotate_9\nPASSED minesweeper_test.py::MinesweeperTest::test_cross\nPASSED minesweeper_test.py::MinesweeperTest::test_different_len\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line\nPASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges\nPASSED minesweeper_test.py::MinesweeperTest::test_invalid_char\nPASSED minesweeper_test.py::MinesweeperTest::test_large_minefield\nPASSED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces\nPASSED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_columns\nPASSED minesweeper_test.py::MinesweeperTest::test_no_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_no_rows\nPASSED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line\nPASSED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges\n15 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 15/15 passed, 0 failed, 0 errors (consistent)"
+}

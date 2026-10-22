@@ -5,9 +5,11 @@ Bhatia, Gandhi, Kumar, Jalote, *Unit Test Generation using Generative AI: A Comp
 Analysis of Autogeneration Tools* (LLM4Code @ ICSE 2024; arXiv:2312.10622). Nothing here reuses
 code or results from earlier implementations (`repro/`, `clean_repro/` on other branches).
 
-**Status: preparation only.** No model has been downloaded, no dependency installed, no test
-generated, no mutation run. The paper's full text has not been read, so no protocol detail is
-claimed as reproduced. See `config/snapshot.json` for approved and open decisions.
+**Status: preparation and execution validation.** A Python 3.10.12 environment exists (outside the
+repository); 51 programs are execution-verified (`reports/A4_eligibility_status.md`). No model has
+been downloaded, no test generated, no coverage or mutation run, no benchmark dependency installed.
+The paper's full text has not been read, so no protocol detail is claimed as reproduced. See
+`config/snapshot.json` for approved and open decisions.
 
 ## Isolation rules
 
@@ -22,20 +24,26 @@ Upstream equivalence of the snapshot with `Shreya20542/LLM-nirvana` is **not ver
 
 ```
 config/      snapshot.json (snapshot, paper identification status, decisions)
-benchmark/   originals_sha256.tsv, originals.SHA256SUMS, originals_inventory_meta.json, manifest.csv
+env/         ENV_PROPOSAL.md, setup_env.sh, requirements-validation.txt, conda/pip lock files
+benchmark/   originals_sha256.tsv, originals.SHA256SUMS, originals_inventory_meta.json, manifest.csv,
+             eligibility.csv (static status + execution outcome for every manifest row)
 src/cleanroom/
   paths.py            fixed locations, snapshot commit
   integrity.py        build / verify the SHA-256 inventory (also against the git commit)
   stdlib310.py        CPython 3.10 standard-library module names
   static_analysis.py  parse-only facts: LOC, imports, stdin at import time, stubs
   manifest.py         program discovery and pre-execution eligibility status
-  report.py           eligibility report generated from manifest.csv
+  report.py           static eligibility report generated from manifest.csv
+  execval.py          execution validation in network-less sandbox copies (Python 3.10.12)
+  p2_evidence.py      evidence for unresolved p2 imports (saved reports, PyPI metadata; no install)
+  eligibility.py      eligibility.csv + A4 status report from manifest, run and evidence
 tests/       unittest suite (standard library only)
-reports/     A1_A3_preparation.md (evidence), A3_eligibility.md (generated)
+runs/        execval/<run_id>/ (sealed raw results), p2_evidence/<stamp>/
+reports/     A1_A3_preparation.md, A3_eligibility.md, A4_execution_validation.md, A4_eligibility_status.md
 logs/        command outputs
 ```
 
-Planned later (not created yet): `env/`, `runs/` (immutable raw outputs), `processed/`.
+Planned later (not created yet): `processed/`.
 
 ## Commands
 
@@ -49,8 +57,14 @@ python3 -m cleanroom.integrity verify --against-git
 python3 -m cleanroom.manifest
 python3 -m cleanroom.report
 python3 -m unittest discover -s tests -v
+
+# execution validation (needs the environment: bash env/setup_env.sh -> /opt/cleanroom)
+python3 -m cleanroom.execval run
+python3 -m cleanroom.p2_evidence
+python3 -m cleanroom.eligibility --run <RUN_ID> --evidence <STAMP>
 ```
 
 `PYTHONDONTWRITEBYTECODE=1` matters: nothing must create `__pycache__` inside the original
-directories (the verifier reports such files as `extra`). Benchmark code is never imported by
-these steps; it is only parsed.
+directories (the verifier reports such files as `extra`). The static steps only parse benchmark
+code; `execval` imports and runs it, but only in sandbox copies under `/opt/cleanroom/sandboxes`,
+without network, and checks the inventory before and after.

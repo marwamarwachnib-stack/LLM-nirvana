@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/complex-numbers",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/complex-numbers/complex_numbers.py",
+    "0_100 LOC/cat3_classes/complex-numbers/complex_numbers_test.py",
+    "0_100 LOC/cat3_classes/complex-numbers/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "complex_numbers.py": "dfe924fe11fa4b184923c1f7c1aa684ca7dcd7515311fa828cb03170df358b46",
+    "complex_numbers_test.py": "99bd8bdde2dead4413009c456724569bf8a8039f10f2bb84c709515a82ff828c",
+    "example.py": "30806b1f99b2fda21645647c2a24abd3d3d600090c3f3b5597ee4508a31b3fd0"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.03,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.027,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "complex_numbers.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "complex_numbers_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 43,
+    "passed": 2,
+    "failed": 41,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 2,
+          "failed": 41,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "bf0dbd638c61cfd55af9ee86b7a05a8ceedc6be203090ff711f1fdf8b66a0e43"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2a_junit_1.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.385,
+          "stdout_sha256": "8825749940141c181f7157199493c5a71a4331cbacd14c1d244d15db8a25acc5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23304,
+          "stderr_bytes": 0,
+          "stdout_tail": "ex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_negative_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0 - T...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit - Ass...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n41 failed, 2 passed in 0.19s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 2,
+          "failed": 41,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "bf0dbd638c61cfd55af9ee86b7a05a8ceedc6be203090ff711f1fdf8b66a0e43"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2a_junit_2.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.363,
+          "stdout_sha256": "495f1e9618fec94b20a473baf16b1da52c7d6b5f9a39609647a9a6277145dd74",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23304,
+          "stderr_bytes": 0,
+          "stdout_tail": "ex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_negative_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0 - T...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit - Ass...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n41 failed, 2 passed in 0.18s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 2,
+          "failed": 41,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "bf0dbd638c61cfd55af9ee86b7a05a8ceedc6be203090ff711f1fdf8b66a0e43"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2a_junit_3.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.38,
+          "stdout_sha256": "307500d74c905171188cb291dab20edb57c6d83f89751787aceaeed6d80f5220",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 23304,
+          "stderr_bytes": 0,
+          "stdout_tail": "ex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_negative_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0 - T...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit - Ass...\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nFAILED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n41 failed, 2 passed in 0.20s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "complex_numbers.py",
+    "with_copy_of": "example.py",
+    "sha256": "30806b1f99b2fda21645647c2a24abd3d3d600090c3f3b5597ee4508a31b3fd0",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "complex_numbers_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 43,
+    "passed": 43,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 43,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e708cec5e210f4063c2647e3105c06b700eb7b5307b3a427dde4d6ac383d4951"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2b_junit_1.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.219,
+          "stdout_sha256": "ad509cec4f108e1373b47f210c6258d6cc5e3943e556b164e8e44a26bef9e724",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4544,
+          "stderr_bytes": 0,
+          "stdout_tail": "st::test_absolute_value_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_real_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n43 passed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 43,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e708cec5e210f4063c2647e3105c06b700eb7b5307b3a427dde4d6ac383d4951"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2b_junit_2.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.28,
+          "stdout_sha256": "b05c67f22ea76a1986c2987a82cb2e2a5f61bfaabae4d39aae67a805c37462b9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4544,
+          "stderr_bytes": 0,
+          "stdout_tail": "st::test_absolute_value_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_real_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n43 passed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 43,
+          "passed": 43,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "e708cec5e210f4063c2647e3105c06b700eb7b5307b3a427dde4d6ac383d4951"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__complex-numbers/v2b_junit_3.xml",
+            "complex_numbers_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.242,
+          "stdout_sha256": "df8f14ea8f32c1eee0641460fbcb235efd2a7db21adeef775b6e768f37c2afcc",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4544,
+          "stderr_bytes": 0,
+          "stdout_tail": "st::test_absolute_value_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_positive_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_complex_number_to_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_add_real_number_to_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_conjugate_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_divide_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_equality_of_complex_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_euler_s_identity_formula\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_0\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_exponential_resulting_in_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_imaginary_unit\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_inequality_of_real_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_complex_number_by_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_multiply_real_number_by_complex_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_number_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_imaginary_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_real_part_of_a_purely_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_complex_number_from_real_number\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_numbers_with_real_and_imaginary_part\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_imaginary_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_purely_real_numbers\nPASSED complex_numbers_test.py::ComplexNumbersTest::test_subtract_real_number_from_complex_number\n43 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 43/43 passed, 0 failed, 0 errors (consistent)"
+}

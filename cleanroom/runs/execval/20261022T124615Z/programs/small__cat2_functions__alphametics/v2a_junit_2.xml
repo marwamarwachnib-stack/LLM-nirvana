@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="1" tests="10" time="0.042" timestamp="2026-10-22T12:46:19.044044" hostname="vm"><testcase classname="alphametics_test.AlphameticsTest" name="test_leading_zero_solution_is_invalid" time="0.001" /><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_eight_letters" time="0.001"><failure message="AssertionError: None != {'S': 9, 'E': 5, 'N': 6, 'D': 7, 'M': 1, 'O': 0, 'R': 8, 'Y': 2}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_eight_letters&gt;
+
+    def test_puzzle_with_eight_letters(self):
+&gt;       self.assertEqual(
+            solve("SEND + MORE == MONEY"),
+            {"S": 9, "E": 5, "N": 6, "D": 7, "M": 1, "O": 0, "R": 8, "Y": 2},
+        )
+E       AssertionError: None != {'S': 9, 'E': 5, 'N': 6, 'D': 7, 'M': 1, 'O': 0, 'R': 8, 'Y': 2}
+
+alphametics_test.py:44: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_four_letters" time="0.001"><failure message="AssertionError: None != {'A': 9, 'S': 2, 'M': 1, 'O': 0}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_four_letters&gt;
+
+    def test_puzzle_with_four_letters(self):
+&gt;       self.assertEqual(solve("AS + A == MOM"), {"A": 9, "S": 2, "M": 1, "O": 0})
+E       AssertionError: None != {'A': 9, 'S': 2, 'M': 1, 'O': 0}
+
+alphametics_test.py:29: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_seven_letters" time="0.000"><failure message="AssertionError: None != {'E': 4, 'G': 2, 'H': 5, 'I': 0, 'L': 1, 'S': 9, 'T': 7}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_seven_letters&gt;
+
+    def test_puzzle_with_seven_letters(self):
+&gt;       self.assertEqual(
+            solve("HE + SEES + THE == LIGHT"),
+            {"E": 4, "G": 2, "H": 5, "I": 0, "L": 1, "S": 9, "T": 7},
+        )
+E       AssertionError: None != {'E': 4, 'G': 2, 'H': 5, 'I': 0, 'L': 1, 'S': 9, 'T': 7}
+
+alphametics_test.py:38: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_six_letters" time="0.000"><failure message="AssertionError: None != {'N': 7, 'O': 4, 'T': 9, 'L': 1, 'A': 0, 'E': 2}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_six_letters&gt;
+
+    def test_puzzle_with_six_letters(self):
+&gt;       self.assertEqual(
+            solve("NO + NO + TOO == LATE"),
+            {"N": 7, "O": 4, "T": 9, "L": 1, "A": 0, "E": 2},
+        )
+E       AssertionError: None != {'N': 7, 'O': 4, 'T': 9, 'L': 1, 'A': 0, 'E': 2}
+
+alphametics_test.py:32: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_ten_letters" time="0.001"><failure message="AssertionError: None != {'A': 5, 'D': 3, 'E': 4, 'F': 7, 'G': 8, 'N': 0, 'O': 2, 'R': 1, 'S': 6, 'T': 9}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_ten_letters&gt;
+
+    def test_puzzle_with_ten_letters(self):
+&gt;       self.assertEqual(
+            solve("AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE"),
+            {
+                "A": 5,
+                "D": 3,
+                "E": 4,
+                "F": 7,
+                "G": 8,
+                "N": 0,
+                "O": 2,
+                "R": 1,
+                "S": 6,
+                "T": 9,
+            },
+        )
+E       AssertionError: None != {'A': 5, 'D': 3, 'E': 4, 'F': 7, 'G': 8, 'N': 0, 'O': 2, 'R': 1, 'S': 6, 'T': 9}
+
+alphametics_test.py:50: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_ten_letters_and_199_addends" time="0.000"><skipped type="pytest.skip" message="extra-credit">/opt/cleanroom/sandboxes/20261022T124615Z/small__cat2_functions__alphametics/v2a_as_shipped/alphametics_test.py:67: extra-credit</skipped></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_three_letters" time="0.000"><failure message="AssertionError: None != {'I': 1, 'B': 9, 'L': 0}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_three_letters&gt;
+
+    def test_puzzle_with_three_letters(self):
+&gt;       self.assertEqual(solve("I + BB == ILL"), {"I": 1, "B": 9, "L": 0})
+E       AssertionError: None != {'I': 1, 'B': 9, 'L': 0}
+
+alphametics_test.py:14: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_puzzle_with_two_digits_final_carry" time="0.000"><failure message="AssertionError: None != {'A': 9, 'B': 1, 'C': 0}">self = &lt;alphametics_test.AlphameticsTest testMethod=test_puzzle_with_two_digits_final_carry&gt;
+
+    def test_puzzle_with_two_digits_final_carry(self):
+&gt;       self.assertEqual(
+            solve("A + A + A + A + A + A + A + A + A + A + A + B == BCC"),
+            {"A": 9, "B": 1, "C": 0},
+        )
+E       AssertionError: None != {'A': 9, 'B': 1, 'C': 0}
+
+alphametics_test.py:23: AssertionError</failure></testcase><testcase classname="alphametics_test.AlphameticsTest" name="test_solution_must_have_unique_value_for_each_letter" time="0.000" /></testsuite></testsuites>

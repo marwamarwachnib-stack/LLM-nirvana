@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/diamond",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/diamond/diamond.py",
+    "0_100 LOC/cat2_functions/diamond/diamond_test.py",
+    "0_100 LOC/cat2_functions/diamond/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "diamond.py": "3de50deaddcf501bbe914dfc839a924eb921bf7220c691f71951e419e38e526e",
+    "diamond_test.py": "d18676caff4b9924363edfbb5b897bab31dc0eee520c8733a037d7f419c6fc1e",
+    "example.py": "ac5663df10f9a1db21e0fa5fd626bd3cbb620f1bc15a73869a62d009418395c7"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.024,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "diamond.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "diamond_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 5,
+    "passed": 0,
+    "failed": 5,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 0,
+          "failed": 5,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b181c7db399aa1f18d72d9dd4667b503b9762dbd08ec6741c48b3b8ed58992e9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_1.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.224,
+          "stdout_sha256": "1e2181c94c3e3fd8dd9ae7118249fbd4a92e180993f6f5f46cc1c1aab2c05f3d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6666,
+          "stderr_bytes": 0,
+          "stdout_tail": "                V    \",\n            \"   W                                           W   \",\n            \"  X                                             X  \",\n            \" Y                                               Y \",\n            \"Z                                                 Z\",\n            \" Y                                               Y \",\n            \"  X                                             X  \",\n            \"   W                                           W   \",\n            \"    V                                         V    \",\n            \"     U                                       U     \",\n            \"      T                                     T      \",\n            \"       S                                   S       \",\n            \"        R                                 R        \",\n            \"         Q                               Q         \",\n            \"          P                             P          \",\n            \"           O                           O           \",\n            \"            N                         N            \",\n            \"             M                       M             \",\n            \"              L                     L              \",\n            \"               K                   K               \",\n            \"                J                 J                \",\n            \"                 I               I                 \",\n            \"                  H             H                  \",\n            \"                   G           G                   \",\n            \"                    F         F                    \",\n            \"                     E       E                     \",\n            \"                      D     D                      \",\n            \"                       C   C                       \",\n            \"                        B B                        \",\n            \"                         A                         \",\n        ]\n>       self.assertEqual(rows(\"Z\"), result)\nE       AssertionError: None != ['                         A             [2759 chars]   ']\n\ndiamond_test.py:91: AssertionError\n_ DiamondTest.test_smallest_non_degenerate_case_with_even_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_even_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_even_diamond_side_length(self):\n        result = [\n            \"   A   \",\n            \"  B B  \",\n            \" C   C \",\n            \"D     D\",\n            \" C   C \",\n            \"  B B  \",\n            \"   A   \",\n        ]\n>       self.assertEqual(rows(\"D\"), result)\nE       AssertionError: None != ['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']\n\ndiamond_test.py:35: AssertionError\n__ DiamondTest.test_smallest_non_degenerate_case_with_odd_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_odd_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_odd_diamond_side_length(self):\n        result = [\"  A  \", \" B B \", \"C   C\", \" B B \", \"  A  \"]\n>       self.assertEqual(rows(\"C\"), result)\nE       AssertionError: None != ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']\n\ndiamond_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nFAILED diamond_test.py::DiamondTest::test_largest_possible_diamond - Assertio...\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 failed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 0,
+          "failed": 5,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b181c7db399aa1f18d72d9dd4667b503b9762dbd08ec6741c48b3b8ed58992e9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_2.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.204,
+          "stdout_sha256": "c62ba3f4717f4c4825b4fe50b5a87629c07cad7bd24efc2909d454f9a0231891",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6666,
+          "stderr_bytes": 0,
+          "stdout_tail": "                V    \",\n            \"   W                                           W   \",\n            \"  X                                             X  \",\n            \" Y                                               Y \",\n            \"Z                                                 Z\",\n            \" Y                                               Y \",\n            \"  X                                             X  \",\n            \"   W                                           W   \",\n            \"    V                                         V    \",\n            \"     U                                       U     \",\n            \"      T                                     T      \",\n            \"       S                                   S       \",\n            \"        R                                 R        \",\n            \"         Q                               Q         \",\n            \"          P                             P          \",\n            \"           O                           O           \",\n            \"            N                         N            \",\n            \"             M                       M             \",\n            \"              L                     L              \",\n            \"               K                   K               \",\n            \"                J                 J                \",\n            \"                 I               I                 \",\n            \"                  H             H                  \",\n            \"                   G           G                   \",\n            \"                    F         F                    \",\n            \"                     E       E                     \",\n            \"                      D     D                      \",\n            \"                       C   C                       \",\n            \"                        B B                        \",\n            \"                         A                         \",\n        ]\n>       self.assertEqual(rows(\"Z\"), result)\nE       AssertionError: None != ['                         A             [2759 chars]   ']\n\ndiamond_test.py:91: AssertionError\n_ DiamondTest.test_smallest_non_degenerate_case_with_even_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_even_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_even_diamond_side_length(self):\n        result = [\n            \"   A   \",\n            \"  B B  \",\n            \" C   C \",\n            \"D     D\",\n            \" C   C \",\n            \"  B B  \",\n            \"   A   \",\n        ]\n>       self.assertEqual(rows(\"D\"), result)\nE       AssertionError: None != ['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']\n\ndiamond_test.py:35: AssertionError\n__ DiamondTest.test_smallest_non_degenerate_case_with_odd_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_odd_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_odd_diamond_side_length(self):\n        result = [\"  A  \", \" B B \", \"C   C\", \" B B \", \"  A  \"]\n>       self.assertEqual(rows(\"C\"), result)\nE       AssertionError: None != ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']\n\ndiamond_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nFAILED diamond_test.py::DiamondTest::test_largest_possible_diamond - Assertio...\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 failed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 0,
+          "failed": 5,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "b181c7db399aa1f18d72d9dd4667b503b9762dbd08ec6741c48b3b8ed58992e9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_3.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.222,
+          "stdout_sha256": "705545038c644ba02109a6f8d60dc92f60b8e3e82c6683c7b8d23d0bd783605f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6666,
+          "stderr_bytes": 0,
+          "stdout_tail": "                V    \",\n            \"   W                                           W   \",\n            \"  X                                             X  \",\n            \" Y                                               Y \",\n            \"Z                                                 Z\",\n            \" Y                                               Y \",\n            \"  X                                             X  \",\n            \"   W                                           W   \",\n            \"    V                                         V    \",\n            \"     U                                       U     \",\n            \"      T                                     T      \",\n            \"       S                                   S       \",\n            \"        R                                 R        \",\n            \"         Q                               Q         \",\n            \"          P                             P          \",\n            \"           O                           O           \",\n            \"            N                         N            \",\n            \"             M                       M             \",\n            \"              L                     L              \",\n            \"               K                   K               \",\n            \"                J                 J                \",\n            \"                 I               I                 \",\n            \"                  H             H                  \",\n            \"                   G           G                   \",\n            \"                    F         F                    \",\n            \"                     E       E                     \",\n            \"                      D     D                      \",\n            \"                       C   C                       \",\n            \"                        B B                        \",\n            \"                         A                         \",\n        ]\n>       self.assertEqual(rows(\"Z\"), result)\nE       AssertionError: None != ['                         A             [2759 chars]   ']\n\ndiamond_test.py:91: AssertionError\n_ DiamondTest.test_smallest_non_degenerate_case_with_even_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_even_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_even_diamond_side_length(self):\n        result = [\n            \"   A   \",\n            \"  B B  \",\n            \" C   C \",\n            \"D     D\",\n            \" C   C \",\n            \"  B B  \",\n            \"   A   \",\n        ]\n>       self.assertEqual(rows(\"D\"), result)\nE       AssertionError: None != ['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']\n\ndiamond_test.py:35: AssertionError\n__ DiamondTest.test_smallest_non_degenerate_case_with_odd_diamond_side_length __\n\nself = <diamond_test.DiamondTest testMethod=test_smallest_non_degenerate_case_with_odd_diamond_side_length>\n\n    def test_smallest_non_degenerate_case_with_odd_diamond_side_length(self):\n        result = [\"  A  \", \" B B \", \"C   C\", \" B B \", \"  A  \"]\n>       self.assertEqual(rows(\"C\"), result)\nE       AssertionError: None != ['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']\n\ndiamond_test.py:23: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nFAILED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nFAILED diamond_test.py::DiamondTest::test_largest_possible_diamond - Assertio...\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nFAILED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 failed in 0.04s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "diamond.py",
+    "with_copy_of": "example.py",
+    "sha256": "ac5663df10f9a1db21e0fa5fd626bd3cbb620f1bc15a73869a62d009418395c7",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "diamond_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "78260fb452ea36ed0769f24a6e07a98e270aad69b8be84542f9b8b3d515b1f70"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_1.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.183,
+          "stdout_sha256": "5e820edb484ba70f719ae9fd273d1f4aecd1ed6f75797c10cee0c074e2d56c62",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 858,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....                                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nPASSED diamond_test.py::DiamondTest::test_largest_possible_diamond\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "78260fb452ea36ed0769f24a6e07a98e270aad69b8be84542f9b8b3d515b1f70"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_2.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.172,
+          "stdout_sha256": "a0b02ffd8cf53034156c1e506546286db0acb91141c1d7cb431b73bd52f5e618",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 858,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....                                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nPASSED diamond_test.py::DiamondTest::test_largest_possible_diamond\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "78260fb452ea36ed0769f24a6e07a98e270aad69b8be84542f9b8b3d515b1f70"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_3.xml",
+            "diamond_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.175,
+          "stdout_sha256": "dfcab6d59a40beea86296e8e5575dab1a9fe0f28d32307714b4ef386c4d9e3cc",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 858,
+          "stderr_bytes": 0,
+          "stdout_tail": ".....                                                                    [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__diamond/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_a_single_a_row\nPASSED diamond_test.py::DiamondTest::test_degenerate_case_with_no_row_containing_3_distinct_groups_of_spaces\nPASSED diamond_test.py::DiamondTest::test_largest_possible_diamond\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_even_diamond_side_length\nPASSED diamond_test.py::DiamondTest::test_smallest_non_degenerate_case_with_odd_diamond_side_length\n5 passed in 0.01s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 5/5 passed, 0 failed, 0 errors (consistent)"
+}

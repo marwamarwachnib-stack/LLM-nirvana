@@ -1,0 +1,24 @@
+...................                                                      [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__kindergarten-garden/v2b_junit_1.xml -
+=========================== short test summary info ============================
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_alice_first_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_bob_second_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_charlie
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_david
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_eve
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_fred
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ginny
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_harriet
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_ileana
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_joseph
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_kincaid_second_to_last_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_full_garden_for_larry_last_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_different_garden_with_single_student
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_single_student
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_garden_with_two_students
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_second_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_partial_garden_third_student_s_garden
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_first_student
+PASSED kindergarten_garden_test.py::KindergartenGardenTest::test_students_are_unordered_last_student
+19 passed in 0.02s

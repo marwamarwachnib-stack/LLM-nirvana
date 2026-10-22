@@ -1,0 +1,170 @@
+{
+  "endpoint": "https://pypi.org/pypi/<name>/json",
+  "queried_utc": "20261022T125002Z",
+  "results": {
+    "IPython": {
+      "exists": true,
+      "first_upload_utc": "2007-01-05T08:33:22",
+      "project": "ipython",
+      "status": 200,
+      "summary": "IPython: Productive Interactive Computing"
+    },
+    "_internal_utils": {
+      "exists": false,
+      "status": 404
+    },
+    "adapters": {
+      "exists": true,
+      "first_upload_utc": "2023-08-04T20:38:08",
+      "project": "adapters",
+      "status": 200,
+      "summary": "A Unified Library for Parameter-Efficient and Modular Transfer Learning"
+    },
+    "attr_category": {
+      "exists": false,
+      "status": 404
+    },
+    "cli": {
+      "exists": false,
+      "status": 404
+    },
+    "colorama": {
+      "exists": true,
+      "first_upload_utc": "2010-04-20T02:02:19",
+      "project": "colorama",
+      "status": 200,
+      "summary": "Cross-platform colored terminal text."
+    },
+    "compat": {
+      "exists": false,
+      "status": 404
+    },
+    "config": {
+      "exists": true,
+      "first_upload_utc": "2013-06-04T23:39:14",
+      "project": "config",
+      "status": 200,
+      "summary": "A hierarchical, easy-to-use, powerful configuration module for Python"
+    },
+    "constants": {
+      "exists": true,
+      "first_upload_utc": "2012-10-10T08:34:02",
+      "project": "constants",
+      "status": 200,
+      "summary": "The simple way to deal with environment constants."
+    },
+    "context": {
+      "exists": true,
+      "first_upload_utc": "2012-10-13T00:49:57",
+      "project": "context",
+      "status": 200,
+      "summary": "A filesystem-like interface for ChromaDB with semantic search"
+    },
+    "cookies": {
+      "exists": true,
+      "first_upload_utc": "2012-03-17T23:54:41",
+      "project": "cookies",
+      "status": 200,
+      "summary": "Friendlier RFC 6265-compliant cookie parser/renderer"
+    },
+    "encoding": {
+      "exists": false,
+      "status": 404
+    },
+    "format": {
+      "exists": true,
+      "first_upload_utc": "2017-08-31T08:48:08",
+      "project": "format",
+      "status": 200,
+      "summary": "Faux string interpolation for Python >2.4 && <3.6"
+    },
+    "importlib_metadata": {
+      "exists": true,
+      "first_upload_utc": "2018-05-17T17:47:55",
+      "project": "importlib-metadata",
+      "status": 200,
+      "summary": "Read metadata from Python packages"
+    },
+    "jinja2": {
+      "exists": true,
+      "first_upload_utc": "2008-06-09T16:50:19",
+      "project": "Jinja2",
+      "status": 200,
+      "summary": "A very fast and expressive template engine."
+    },
+    "legacy": {
+      "exists": true,
+      "first_upload_utc": "2014-10-29T17:49:29",
+      "project": "legacy",
+      "status": 200,
+      "summary": "Legacy Support"
+    },
+    "marshmallow": {
+      "exists": true,
+      "first_upload_utc": "2013-11-11T04:26:56",
+      "project": "marshmallow",
+      "status": 200,
+      "summary": "A lightweight library for converting complex datatypes to and from native Python datatypes."
+    },
+    "plugins": {
+      "exists": true,
+      "first_upload_utc": null,
+      "project": "Plugins",
+      "status": 200,
+      "summary": "Easily add hooks and plugins to your applications"
+    },
+    "pymonet": {
+      "exists": true,
+      "first_upload_utc": "2017-06-28T17:14:56",
+      "project": "pymonet",
+      "status": 200,
+      "summary": "High abstract python library for functional programming. Contains algebraic data structures known from Haskell or Scala."
+    },
+    "requests": {
+      "exists": true,
+      "first_upload_utc": "2011-02-14T08:49:42",
+      "project": "requests",
+      "status": 200,
+      "summary": "Python HTTP for Humans."
+    },
+    "requests_toolbelt": {
+      "exists": true,
+      "first_upload_utc": "2014-01-18T22:06:38",
+      "project": "requests-toolbelt",
+      "status": 200,
+      "summary": "A utility belt for advanced users of python-requests"
+    },
+    "stringcase": {
+      "exists": true,
+      "first_upload_utc": "2015-07-18T04:51:13",
+      "project": "stringcase",
+      "status": 200,
+      "summary": "String case converter."
+    },
+    "typing_inspect": {
+      "exists": true,
+      "first_upload_utc": "2017-05-07T11:41:55",
+      "project": "typing-inspect",
+      "status": 200,
+      "summary": "Runtime inspection utilities for typing module."
+    },
+    "urllib3": {
+      "exists": true,
+      "first_upload_utc": "2009-12-11T08:47:22",
+      "project": "urllib3",
+      "status": 200,
+      "summary": "HTTP library with thread-safe connection pooling, file post, and more."
+    },
+    "utils": {
+      "exists": true,
+      "first_upload_utc": "2013-06-22T21:54:43",
+      "project": "utils",
+      "status": 200,
+      "summary": "A grab-bag of utility functions and objects"
+    },
+    "yaml": {
+      "exists": false,
+      "status": 404
+    }
+  }
+}

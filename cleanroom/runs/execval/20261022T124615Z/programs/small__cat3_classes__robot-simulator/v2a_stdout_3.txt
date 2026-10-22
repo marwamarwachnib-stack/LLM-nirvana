@@ -1,0 +1,81 @@
+_decrements_y _______________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_facing_south_decrements_y>
+
+    def test_facing_south_decrements_y(self):
+        robot = Robot(SOUTH, 0, 0)
+>       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:99: AttributeError
+_______________ RobotSimulatorTest.test_facing_west_decrements_x _______________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_facing_west_decrements_x>
+
+    def test_facing_west_decrements_x(self):
+        robot = Robot(WEST, 0, 0)
+>       robot.move("A")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:113: AttributeError
+________________ RobotSimulatorTest.test_moving_east_and_north _________________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_moving_east_and_north>
+
+    def test_moving_east_and_north(self):
+        robot = Robot(SOUTH, 8, 4)
+>       robot.move("LAAARRRALLLL")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:142: AttributeError
+__________ RobotSimulatorTest.test_moving_east_and_north_from_readme ___________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_moving_east_and_north_from_readme>
+
+    def test_moving_east_and_north_from_readme(self):
+        robot = Robot(NORTH, 7, 3)
+>       robot.move("RAALAL")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:121: AttributeError
+________________ RobotSimulatorTest.test_moving_west_and_north _________________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_moving_west_and_north>
+
+    def test_moving_west_and_north(self):
+        robot = Robot(NORTH, 0, 0)
+>       robot.move("LAAARALA")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:128: AttributeError
+________________ RobotSimulatorTest.test_moving_west_and_south _________________
+
+self = <robot_simulator_test.RobotSimulatorTest testMethod=test_moving_west_and_south>
+
+    def test_moving_west_and_south(self):
+        robot = Robot(EAST, 2, -7)
+>       robot.move("RRAAAAALA")
+E       AttributeError: 'Robot' object has no attribute 'move'
+
+robot_simulator_test.py:135: AttributeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__robot-simulator/v2a_junit_3.xml -
+=========================== short test summary info ============================
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_at_negative_position_facing_south
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_at_origin_facing_north
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_east_to_north
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_east_to_south
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_north_to_east
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_north_to_west
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_south_to_east
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_south_to_west
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_west_to_north
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_changes_west_to_south
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_facing_east_increments_x
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_facing_north_increments_y
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_facing_south_decrements_y
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_facing_west_decrements_x
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_moving_east_and_north
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_moving_east_and_north_from_readme
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_moving_west_and_north
+FAILED robot_simulator_test.py::RobotSimulatorTest::test_moving_west_and_south
+18 failed in 0.08s

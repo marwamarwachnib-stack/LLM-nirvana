@@ -1,0 +1,20 @@
+...............                                                          [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__minesweeper/v2b_junit_2.xml -
+=========================== short test summary info ============================
+PASSED minesweeper_test.py::MinesweeperTest::test_annotate_9
+PASSED minesweeper_test.py::MinesweeperTest::test_cross
+PASSED minesweeper_test.py::MinesweeperTest::test_different_len
+PASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line
+PASSED minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges
+PASSED minesweeper_test.py::MinesweeperTest::test_invalid_char
+PASSED minesweeper_test.py::MinesweeperTest::test_large_minefield
+PASSED minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces
+PASSED minesweeper_test.py::MinesweeperTest::test_minefield_with_only_mines
+PASSED minesweeper_test.py::MinesweeperTest::test_no_columns
+PASSED minesweeper_test.py::MinesweeperTest::test_no_mines
+PASSED minesweeper_test.py::MinesweeperTest::test_no_rows
+PASSED minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines
+PASSED minesweeper_test.py::MinesweeperTest::test_vertical_line
+PASSED minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges
+15 passed in 0.02s

@@ -1,0 +1,77 @@
+ of complexity is an\n" + \
+                     "expensive yak shave waiting to\n" + \
+                     "happen."
+        actual = calculate(text_input.split('\n'))
+        expected = Counter([x for x in text_input.lower() if x.isalpha()])
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:57: AssertionError
+___________________ ParallelLetterFrequencyTest.test_numbers ___________________
+
+self = <parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_numbers>
+
+    def test_numbers(self):
+        actual = calculate(['012', '345', '6789'])
+        expected = {}
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:22: AssertionError
+_________________ ParallelLetterFrequencyTest.test_one_letter __________________
+
+self = <parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_one_letter>
+
+    def test_one_letter(self):
+        actual = calculate(['a'])
+        expected = {'a': 1}
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:12: AssertionError
+________________ ParallelLetterFrequencyTest.test_punctuations _________________
+
+self = <parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_punctuations>
+
+    def test_punctuations(self):
+        actual = calculate([r'[]\;,', './{}|', ':"<>?'])
+        expected = {}
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:27: AssertionError
+___ ParallelLetterFrequencyTest.test_repeated_string_with_known_frequencies ____
+
+self = <parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_repeated_string_with_known_frequencies>
+
+    def test_repeated_string_with_known_frequencies(self):
+        letter_frequency = 3
+        text_input = 'abc\n' * letter_frequency
+        actual = calculate(text_input.split('\n'))
+        expected = {'a': letter_frequency, 'b': letter_frequency,
+                    'c': letter_frequency}
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:40: AssertionError
+_________________ ParallelLetterFrequencyTest.test_whitespaces _________________
+
+self = <parallel_letter_frequency_test.ParallelLetterFrequencyTest testMethod=test_whitespaces>
+
+    def test_whitespaces(self):
+        actual = calculate(['  ', '\t ', '\n\n'])
+        expected = {}
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
+
+parallel_letter_frequency_test.py:32: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__parallel-letter-frequency/v2a_junit_2.xml -
+=========================== short test summary info ============================
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_case_insensitivity
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_multiline_text
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_numbers
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_one_letter
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_punctuations
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_repeated_string_with_known_frequencies
+FAILED parallel_letter_frequency_test.py::ParallelLetterFrequencyTest::test_whitespaces
+7 failed in 0.04s

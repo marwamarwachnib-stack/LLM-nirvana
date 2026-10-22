@@ -1,0 +1,63 @@
+t.delete(0)
+E           AttributeError: 'LinkedList' object has no attribute 'delete'
+
+linked_list_test.py:206: AttributeError
+__ LinkedListTest.test_using_delete_raises_an_error_if_the_value_is_not_found __
+
+self = <linked_list_test.LinkedListTest testMethod=test_using_delete_raises_an_error_if_the_value_is_not_found>
+
+    def test_using_delete_raises_an_error_if_the_value_is_not_found(self):
+        lst = LinkedList()
+>       lst.push(5)
+E       AttributeError: 'LinkedList' object has no attribute 'push'
+
+linked_list_test.py:212: AttributeError
+______ LinkedListTest.test_using_pop_raises_an_error_if_the_list_is_empty ______
+
+self = <linked_list_test.LinkedListTest testMethod=test_using_pop_raises_an_error_if_the_list_is_empty>
+
+    def test_using_pop_raises_an_error_if_the_list_is_empty(self):
+        lst = LinkedList()
+        with self.assertRaises(IndexError) as err:
+>           lst.pop()
+E           AttributeError: 'LinkedList' object has no attribute 'pop'
+
+linked_list_test.py:170: AttributeError
+_____ LinkedListTest.test_using_shift_raises_an_error_if_the_list_is_empty _____
+
+self = <linked_list_test.LinkedListTest testMethod=test_using_shift_raises_an_error_if_the_list_is_empty>
+
+    def test_using_shift_raises_an_error_if_the_list_is_empty(self):
+        lst = LinkedList()
+        with self.assertRaises(IndexError) as err:
+>           lst.shift()
+E           AttributeError: 'LinkedList' object has no attribute 'shift'
+
+linked_list_test.py:188: AttributeError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__linked-list/v2a_junit_3.xml -
+=========================== short test summary info ============================
+FAILED linked_list_test.py::LinkedListTest::test_can_return_with_pop_and_then_raise_an_error_if_empty
+FAILED linked_list_test.py::LinkedListTest::test_can_return_with_shift_and_then_raise_an_error_if_empty
+FAILED linked_list_test.py::LinkedListTest::test_count_a_list_with_items - At...
+FAILED linked_list_test.py::LinkedListTest::test_count_an_empty_list - TypeEr...
+FAILED linked_list_test.py::LinkedListTest::test_count_is_correct_after_mutation
+FAILED linked_list_test.py::LinkedListTest::test_deletes_only_the_first_occurrence
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_head
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_element_with_the_specified_value_from_the_list_re_assigns_tail
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_first_of_two_elements
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_only_element - A...
+FAILED linked_list_test.py::LinkedListTest::test_deletes_the_second_of_two_elements
+FAILED linked_list_test.py::LinkedListTest::test_pop_gets_element_from_the_list
+FAILED linked_list_test.py::LinkedListTest::test_pop_push_shift_and_unshift_can_be_used_in_any_order
+FAILED linked_list_test.py::LinkedListTest::test_popping_to_empty_doesn_t_break_the_list
+FAILED linked_list_test.py::LinkedListTest::test_push_pop_respectively_add_remove_at_the_end_of_the_list
+FAILED linked_list_test.py::LinkedListTest::test_shift_gets_an_element_from_the_list
+FAILED linked_list_test.py::LinkedListTest::test_shift_gets_first_element_from_the_list
+FAILED linked_list_test.py::LinkedListTest::test_shifting_to_empty_doesn_t_break_the_list
+FAILED linked_list_test.py::LinkedListTest::test_unshift_adds_element_at_start_of_the_list
+FAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_list_is_empty
+FAILED linked_list_test.py::LinkedListTest::test_using_delete_raises_an_error_if_the_value_is_not_found
+FAILED linked_list_test.py::LinkedListTest::test_using_pop_raises_an_error_if_the_list_is_empty
+FAILED linked_list_test.py::LinkedListTest::test_using_shift_raises_an_error_if_the_list_is_empty
+24 failed in 0.14s

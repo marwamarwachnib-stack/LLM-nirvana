@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/meetup",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/meetup/example.py",
+    "0_100 LOC/cat3_classes/meetup/meetup.py",
+    "0_100 LOC/cat3_classes/meetup/meetup_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "8f1994b2c508769fbad4abc3cc475de3b227e837486a25d1b23e280cc9f8bf4d",
+    "meetup.py": "ee60a79b400d68bc0643f4ca9aec0a7ad7ed751847d78641d1dacf4b96901edf",
+    "meetup_test.py": "cf32da5b0dc7e2a66774579c78418b6ad41d204e493f4d407c7ea46c4f5de350"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.03,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "meetup.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "meetup_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 103,
+    "passed": 0,
+    "failed": 103,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 0,
+          "failed": 103,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49700c0d16676b59e80136305fd34be7bbfd0fe5eff60b738381c7bccb76e20f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2a_junit_1.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.974,
+          "stdout_sha256": "a956aafd4cffc1a33e3767a4d27f918e3e2ebd4de2cefe53216efc277b756681",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 56834,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 failed in 0.77s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 0,
+          "failed": 103,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49700c0d16676b59e80136305fd34be7bbfd0fe5eff60b738381c7bccb76e20f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2a_junit_2.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 1.013,
+          "stdout_sha256": "fe969e6130cdd92bfd169330550affe75809ff579e3a91840124f28980b81cbe",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 56834,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 failed in 0.84s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 0,
+          "failed": 103,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "49700c0d16676b59e80136305fd34be7bbfd0fe5eff60b738381c7bccb76e20f"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2a_junit_3.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.939,
+          "stdout_sha256": "9b093cfb9a206be03ebfdd982faeb1e6bb43fe8aadc2b440fb39947de7309981",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 56834,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nFAILED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 failed in 0.75s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "meetup.py",
+    "with_copy_of": "example.py",
+    "sha256": "8f1994b2c508769fbad4abc3cc475de3b227e837486a25d1b23e280cc9f8bf4d",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "meetup_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 103,
+    "passed": 103,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "235998b209285da3b5260cadd82ac0063084c4c65d5e8250c8915e84a1d2579c"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2b_junit_1.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.28,
+          "stdout_sha256": "0bc7e6ce69c904e0314571ea8e54fe3593131554fbcb95cf60398bb9052f6005",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 10689,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 passed in 0.10s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "235998b209285da3b5260cadd82ac0063084c4c65d5e8250c8915e84a1d2579c"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2b_junit_2.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.289,
+          "stdout_sha256": "d905d45023eef1348ca4848e86c4fed3065f39b683e9bf0433a873596c53d83b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 10689,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 passed in 0.10s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "235998b209285da3b5260cadd82ac0063084c4c65d5e8250c8915e84a1d2579c"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__meetup/v2b_junit_3.xml",
+            "meetup_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.29,
+          "stdout_sha256": "c276282f99ccc523f28b7e88d06de4c6c18394f912f450baa5b205d97727ae98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 10689,
+          "stderr_bytes": 0,
+          "stdout_tail": "he_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_tuesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_some_day_in_the_middle_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_second_wednesday_is_the_14th_the_last_day_of_the_second_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_friday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_monday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_saturday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_sunday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_thursday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_tuesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_some_day_in_the_middle_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_13th_the_first_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_teenth_wednesday_is_the_19th_the_last_day_of_the_teenth_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_friday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_monday_is_the_15th_the_first_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_saturday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_sunday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_another_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_thursday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_tuesday_is_the_21st_the_last_day_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_some_day_in_the_middle_of_the_third_week\nPASSED meetup_test.py::MeetupTest::test_when_third_wednesday_is_the_21st_the_last_day_of_the_third_week\n103 passed in 0.09s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 103/103 passed, 0 failed, 0 errors (consistent)"
+}

@@ -1,0 +1,10 @@
+.....                                                                    [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__error-handling/v2b_junit_2.xml -
+=========================== short test summary info ============================
+PASSED error_handling_test.py::ErrorHandlingTest::test_filelike_objects_are_closed_on_exception
+PASSED error_handling_test.py::ErrorHandlingTest::test_filelike_objects_are_closed_without_exception
+PASSED error_handling_test.py::ErrorHandlingTest::test_return_none
+PASSED error_handling_test.py::ErrorHandlingTest::test_return_tuple
+PASSED error_handling_test.py::ErrorHandlingTest::test_throw_exception
+5 passed in 0.01s

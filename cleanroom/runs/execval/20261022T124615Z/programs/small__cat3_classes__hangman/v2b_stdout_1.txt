@@ -1,0 +1,12 @@
+.......                                                                  [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__hangman/v2b_junit_1.xml -
+=========================== short test summary info ============================
+PASSED hangman_test.py::HangmanTests::test_after_10_failures_the_game_is_over
+PASSED hangman_test.py::HangmanTests::test_feeding_a_correct_letter_removes_underscores
+PASSED hangman_test.py::HangmanTests::test_feeding_a_correct_letter_twice_counts_as_a_failure
+PASSED hangman_test.py::HangmanTests::test_getting_all_the_letters_right_makes_for_a_win
+PASSED hangman_test.py::HangmanTests::test_initially_9_failures_are_allowed
+PASSED hangman_test.py::HangmanTests::test_initially_no_letters_are_guessed
+PASSED hangman_test.py::HangmanTests::test_winning_on_last_guess_still_counts_as_a_win
+7 passed in 0.01s

@@ -1,0 +1,80 @@
+wed a goat!",
+                "She swallowed the goat to catch the dog.",
+                "She swallowed the dog to catch the cat.",
+                "She swallowed the cat to catch the bird.",
+                "She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.",
+                "She swallowed the spider to catch the fly.",
+                "I don't know why she swallowed the fly. Perhaps she'll die.",
+            ],
+        )
+E       AssertionError: None != ['I know an old lady who swallowed a goat[382 chars]ie."]
+
+food_chain_test.py:73: AssertionError
+___________________________ FoodChainTest.test_horse ___________________________
+
+self = <food_chain_test.FoodChainTest testMethod=test_horse>
+
+    def test_horse(self):
+>       self.assertEqual(
+            recite(8, 8),
+            ["I know an old lady who swallowed a horse.", "She's dead, of course!"],
+        )
+E       AssertionError: None != ['I know an old lady who swallowed a horse.', "She's dead, of course!"]
+
+food_chain_test.py:104: AssertionError
+______________________ FoodChainTest.test_multiple_verses ______________________
+
+self = <food_chain_test.FoodChainTest testMethod=test_multiple_verses>
+
+    def test_multiple_verses(self):
+>       self.assertEqual(
+            recite(1, 3),
+            [
+                "I know an old lady who swallowed a fly.",
+                "I don't know why she swallowed the fly. Perhaps she'll die.",
+                "",
+                "I know an old lady who swallowed a spider.",
+                "It wriggled and jiggled and tickled inside her.",
+                "She swallowed the spider to catch the fly.",
+                "I don't know why she swallowed the fly. Perhaps she'll die.",
+                "",
+                "I know an old lady who swallowed a bird.",
+                "How absurd to swallow a bird!",
+                "She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.",
+                "She swallowed the spider to catch the fly.",
+                "I don't know why she swallowed the fly. Perhaps she'll die.",
+            ],
+        )
+E       AssertionError: None != ['I know an old lady who swallowed a fly.[556 chars]ie."]
+
+food_chain_test.py:110: AssertionError
+__________________________ FoodChainTest.test_spider ___________________________
+
+self = <food_chain_test.FoodChainTest testMethod=test_spider>
+
+    def test_spider(self):
+>       self.assertEqual(
+            recite(2, 2),
+            [
+                "I know an old lady who swallowed a spider.",
+                "It wriggled and jiggled and tickled inside her.",
+                "She swallowed the spider to catch the fly.",
+                "I don't know why she swallowed the fly. Perhaps she'll die.",
+            ],
+        )
+E       AssertionError: None != ['I know an old lady who swallowed a spid[160 chars]ie."]
+
+food_chain_test.py:23: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__food-chain/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED food_chain_test.py::FoodChainTest::test_bird - AssertionError: None !=...
+FAILED food_chain_test.py::FoodChainTest::test_cat - AssertionError: None != ...
+FAILED food_chain_test.py::FoodChainTest::test_cow - AssertionError: None != ...
+FAILED food_chain_test.py::FoodChainTest::test_dog - AssertionError: None != ...
+FAILED food_chain_test.py::FoodChainTest::test_fly - AssertionError: None != ...
+FAILED food_chain_test.py::FoodChainTest::test_full_song - AssertionError: No...
+FAILED food_chain_test.py::FoodChainTest::test_goat - AssertionError: None !=...
+FAILED food_chain_test.py::FoodChainTest::test_horse - AssertionError: None !...
+FAILED food_chain_test.py::FoodChainTest::test_multiple_verses - AssertionErr...
+FAILED food_chain_test.py::FoodChainTest::test_spider - AssertionError: None ...
+10 failed in 0.04s

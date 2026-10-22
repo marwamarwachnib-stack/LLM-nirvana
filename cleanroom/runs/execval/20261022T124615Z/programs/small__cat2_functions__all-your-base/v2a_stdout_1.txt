@@ -1,0 +1,79 @@
+est.py:96: AssertionError
+___________________ AllYourBaseTest.test_output_base_is_one ____________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_one>
+
+    def test_output_base_is_one(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+all_your_base_test.py:84: AssertionError
+___________________ AllYourBaseTest.test_output_base_is_zero ___________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_output_base_is_zero>
+
+    def test_output_base_is_zero(self):
+>       with self.assertRaises(ValueError) as err:
+E       AssertionError: ValueError not raised
+
+all_your_base_test.py:90: AssertionError
+________________ AllYourBaseTest.test_single_bit_one_to_decimal ________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_single_bit_one_to_decimal>
+
+    def test_single_bit_one_to_decimal(self):
+>       self.assertEqual(rebase(2, [1], 10), [1])
+E       AssertionError: None != [1]
+
+all_your_base_test.py:14: AssertionError
+________________ AllYourBaseTest.test_single_decimal_to_binary _________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_single_decimal_to_binary>
+
+    def test_single_decimal_to_binary(self):
+>       self.assertEqual(rebase(10, [5], 2), [1, 0, 1])
+E       AssertionError: None != [1, 0, 1]
+
+all_your_base_test.py:20: AssertionError
+_______________________ AllYourBaseTest.test_single_zero _______________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_single_zero>
+
+    def test_single_zero(self):
+>       self.assertEqual(rebase(10, [0], 2), [0])
+E       AssertionError: None != [0]
+
+all_your_base_test.py:41: AssertionError
+_________________ AllYourBaseTest.test_trinary_to_hexadecimal __________________
+
+self = <all_your_base_test.AllYourBaseTest testMethod=test_trinary_to_hexadecimal>
+
+    def test_trinary_to_hexadecimal(self):
+>       self.assertEqual(rebase(3, [1, 1, 2, 0], 16), [2, 10])
+E       AssertionError: None != [2, 10]
+
+all_your_base_test.py:29: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__all-your-base/v2a_junit_1.xml -
+=========================== short test summary info ============================
+FAILED all_your_base_test.py::AllYourBaseTest::test_15_bit_integer - Assertio...
+FAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_multiple_decimal
+FAILED all_your_base_test.py::AllYourBaseTest::test_binary_to_single_decimal
+FAILED all_your_base_test.py::AllYourBaseTest::test_both_bases_are_negative
+FAILED all_your_base_test.py::AllYourBaseTest::test_decimal_to_binary - Asser...
+FAILED all_your_base_test.py::AllYourBaseTest::test_empty_list - AssertionErr...
+FAILED all_your_base_test.py::AllYourBaseTest::test_hexadecimal_to_trinary - ...
+FAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_negative - ...
+FAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_one - Asser...
+FAILED all_your_base_test.py::AllYourBaseTest::test_input_base_is_zero - Asse...
+FAILED all_your_base_test.py::AllYourBaseTest::test_invalid_positive_digit - ...
+FAILED all_your_base_test.py::AllYourBaseTest::test_leading_zeros - Assertion...
+FAILED all_your_base_test.py::AllYourBaseTest::test_multiple_zeros - Assertio...
+FAILED all_your_base_test.py::AllYourBaseTest::test_negative_digit - Assertio...
+FAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_negative
+FAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_one - Asse...
+FAILED all_your_base_test.py::AllYourBaseTest::test_output_base_is_zero - Ass...
+FAILED all_your_base_test.py::AllYourBaseTest::test_single_bit_one_to_decimal
+FAILED all_your_base_test.py::AllYourBaseTest::test_single_decimal_to_binary
+FAILED all_your_base_test.py::AllYourBaseTest::test_single_zero - AssertionEr...
+FAILED all_your_base_test.py::AllYourBaseTest::test_trinary_to_hexadecimal - ...
+21 failed in 0.11s

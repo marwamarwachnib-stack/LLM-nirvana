@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat3_classes/ledger",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/ledger/example.py",
+    "0_100 LOC/cat3_classes/ledger/ledger.py",
+    "0_100 LOC/cat3_classes/ledger/ledger_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "535d832874563747bcc6403ba9ebbfa1f7d32824babacdc3ccb025d82ac649b2",
+    "ledger.py": "fb8e5cd56d1f68e4c2cc87021f4a021e03eccb9a7ae470e921506c822c955ca9",
+    "ledger_test.py": "6c2e20e1ff66c7c868fc23012aa7a525e43fddb77f7c2f00b3393b0ef46c4b40"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.03,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "ledger.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "ledger_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_1.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.197,
+          "stdout_sha256": "465994e13f48f085615b7207ac8f664b8edb0e2b97776eddf1dc08ba8ea2e52d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_1.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_2.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.188,
+          "stdout_sha256": "a39a1fd62220ba53c34a481214384f05a37b7c911d9f70d2c7b1477b9db2b924",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_2.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_3.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.203,
+          "stdout_sha256": "0dc27be0091450e2ad7109f819808e4f3da4e50a0eaa46f116024ee5774465c0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2a_junit_3.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "ledger.py",
+    "with_copy_of": "example.py",
+    "sha256": "535d832874563747bcc6403ba9ebbfa1f7d32824babacdc3ccb025d82ac649b2",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "ledger_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_1.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.229,
+          "stdout_sha256": "8cffdff1002f9c509d2a5314469215c67f282dca23d5adb177ab46471053932a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_2.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.236,
+          "stdout_sha256": "c6d220b58ecd9ca66732aa7ab61914c3a4fe7b937086bb2bf1aef077a888a5f8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "6ead40b7a53e5d991f894efce8c641e4d969711b0a0170fdde49c04bb6ca79ea"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_3.xml",
+            "ledger_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.197,
+          "stdout_sha256": "06fb3ec2bca66c4b2d395cb2f65c9e751fc20e3d76ba05035ea7e067e61e867d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1161,
+          "stderr_bytes": 0,
+          "stdout_tail": "...........                                                              [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__ledger/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED ledger_test.py::LedgerTest::test_american_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_credit_and_debit\nPASSED ledger_test.py::LedgerTest::test_dutch_locale\nPASSED ledger_test.py::LedgerTest::test_dutch_locale_and_euros\nPASSED ledger_test.py::LedgerTest::test_dutch_negative_number_with_3_digits_before_decimal_point\nPASSED ledger_test.py::LedgerTest::test_empty_ledger\nPASSED ledger_test.py::LedgerTest::test_euros\nPASSED ledger_test.py::LedgerTest::test_final_order_tie_breaker_is_change\nPASSED ledger_test.py::LedgerTest::test_multiple_entries_on_same_date_ordered_by_description\nPASSED ledger_test.py::LedgerTest::test_one_entry\nPASSED ledger_test.py::LedgerTest::test_overlong_description_is_truncated\n11 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 11/11 passed, 0 failed, 0 errors (consistent)"
+}

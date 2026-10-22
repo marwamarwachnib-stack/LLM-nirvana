@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/change",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/change/change.py",
+    "0_100 LOC/cat2_functions/change/change_test.py",
+    "0_100 LOC/cat2_functions/change/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "change.py": "b13661aadb4f36de1b8fce36472661490db5855d1bf4a5774b31d4229a8480ab",
+    "change_test.py": "100dd2048a8a68fba90490f906794cf2136dc2c94bb4242cd6f6bd514d2507af",
+    "example.py": "f9c3ccf99862f3ffe76c2b3282d0b6a69c4366afbfc0b9a56350e200467e1f4e"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.02,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.022,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.021,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "change.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "change_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 12,
+    "passed": 0,
+    "failed": 12,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 0,
+          "failed": 12,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "30da8aa4c41af1c70404627e3c90bb0ba2044ada620cc58aa35de833a366268d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_1.xml",
+            "change_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.209,
+          "stdout_sha256": "7ad3779edfe36a1e10d02f06326112785d7394819c251db8fa617bb39d3e3e3d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5970,
+          "stderr_bytes": 0,
+          "stdout_tail": "\nchange_test.py:26: AssertionError\n_________ ChangeTest.test_error_if_no_combination_can_add_up_to_target _________\n\nself = <change_test.ChangeTest testMethod=test_error_if_no_combination_can_add_up_to_target>\n\n    def test_error_if_no_combination_can_add_up_to_target(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:50: AssertionError\n_ ChangeTest.test_error_testing_for_change_smaller_than_the_smallest_of_coins __\n\nself = <change_test.ChangeTest testMethod=test_error_testing_for_change_smaller_than_the_smallest_of_coins>\n\n    def test_error_testing_for_change_smaller_than_the_smallest_of_coins(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:44: AssertionError\n_____________________ ChangeTest.test_large_target_values ______________________\n\nself = <change_test.ChangeTest testMethod=test_large_target_values>\n\n    def test_large_target_values(self):\n>       self.assertEqual(\n            find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999),\n            [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100],\n        )\nE       AssertionError: None != [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]\n\nchange_test.py:29: AssertionError\n_____________________ ChangeTest.test_multiple_coin_change _____________________\n\nself = <change_test.ChangeTest testMethod=test_multiple_coin_change>\n\n    def test_multiple_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 15), [5, 10])\nE       AssertionError: None != [5, 10]\n\nchange_test.py:20: AssertionError\n____________________ ChangeTest.test_no_coins_make_0_change ____________________\n\nself = <change_test.ChangeTest testMethod=test_no_coins_make_0_change>\n\n    def test_no_coins_make_0_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 21, 25], 0), [])\nE       AssertionError: None != []\n\nchange_test.py:41: AssertionError\n_________ ChangeTest.test_possible_change_without_unit_coins_available _________\n\nself = <change_test.ChangeTest testMethod=test_possible_change_without_unit_coins_available>\n\n    def test_possible_change_without_unit_coins_available(self):\n>       self.assertEqual(find_fewest_coins([2, 5, 10, 20, 50], 21), [2, 2, 2, 5, 10])\nE       AssertionError: None != [2, 2, 2, 5, 10]\n\nchange_test.py:35: AssertionError\n______________________ ChangeTest.test_single_coin_change ______________________\n\nself = <change_test.ChangeTest testMethod=test_single_coin_change>\n\n    def test_single_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 25), [25])\nE       AssertionError: None != [25]\n\nchange_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_cannot_find_negative_change_values - ...\nFAILED change_test.py::ChangeTest::test_change_for_1_cent - AssertionError: N...\nFAILED change_test.py::ChangeTest::test_change_with_lilliputian_coins - Asser...\nFAILED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins - Ass...\nFAILED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nFAILED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nFAILED change_test.py::ChangeTest::test_large_target_values - AssertionError:...\nFAILED change_test.py::ChangeTest::test_multiple_coin_change - AssertionError...\nFAILED change_test.py::ChangeTest::test_no_coins_make_0_change - AssertionErr...\nFAILED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_single_coin_change - AssertionError: ...\n12 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 0,
+          "failed": 12,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "30da8aa4c41af1c70404627e3c90bb0ba2044ada620cc58aa35de833a366268d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_2.xml",
+            "change_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.223,
+          "stdout_sha256": "d7cb4e13c1a434bf4975f4efec92e01b3eea1fda8d3d7a25038ee5350fad7a35",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5970,
+          "stderr_bytes": 0,
+          "stdout_tail": "\nchange_test.py:26: AssertionError\n_________ ChangeTest.test_error_if_no_combination_can_add_up_to_target _________\n\nself = <change_test.ChangeTest testMethod=test_error_if_no_combination_can_add_up_to_target>\n\n    def test_error_if_no_combination_can_add_up_to_target(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:50: AssertionError\n_ ChangeTest.test_error_testing_for_change_smaller_than_the_smallest_of_coins __\n\nself = <change_test.ChangeTest testMethod=test_error_testing_for_change_smaller_than_the_smallest_of_coins>\n\n    def test_error_testing_for_change_smaller_than_the_smallest_of_coins(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:44: AssertionError\n_____________________ ChangeTest.test_large_target_values ______________________\n\nself = <change_test.ChangeTest testMethod=test_large_target_values>\n\n    def test_large_target_values(self):\n>       self.assertEqual(\n            find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999),\n            [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100],\n        )\nE       AssertionError: None != [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]\n\nchange_test.py:29: AssertionError\n_____________________ ChangeTest.test_multiple_coin_change _____________________\n\nself = <change_test.ChangeTest testMethod=test_multiple_coin_change>\n\n    def test_multiple_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 15), [5, 10])\nE       AssertionError: None != [5, 10]\n\nchange_test.py:20: AssertionError\n____________________ ChangeTest.test_no_coins_make_0_change ____________________\n\nself = <change_test.ChangeTest testMethod=test_no_coins_make_0_change>\n\n    def test_no_coins_make_0_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 21, 25], 0), [])\nE       AssertionError: None != []\n\nchange_test.py:41: AssertionError\n_________ ChangeTest.test_possible_change_without_unit_coins_available _________\n\nself = <change_test.ChangeTest testMethod=test_possible_change_without_unit_coins_available>\n\n    def test_possible_change_without_unit_coins_available(self):\n>       self.assertEqual(find_fewest_coins([2, 5, 10, 20, 50], 21), [2, 2, 2, 5, 10])\nE       AssertionError: None != [2, 2, 2, 5, 10]\n\nchange_test.py:35: AssertionError\n______________________ ChangeTest.test_single_coin_change ______________________\n\nself = <change_test.ChangeTest testMethod=test_single_coin_change>\n\n    def test_single_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 25), [25])\nE       AssertionError: None != [25]\n\nchange_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_cannot_find_negative_change_values - ...\nFAILED change_test.py::ChangeTest::test_change_for_1_cent - AssertionError: N...\nFAILED change_test.py::ChangeTest::test_change_with_lilliputian_coins - Asser...\nFAILED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins - Ass...\nFAILED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nFAILED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nFAILED change_test.py::ChangeTest::test_large_target_values - AssertionError:...\nFAILED change_test.py::ChangeTest::test_multiple_coin_change - AssertionError...\nFAILED change_test.py::ChangeTest::test_no_coins_make_0_change - AssertionErr...\nFAILED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_single_coin_change - AssertionError: ...\n12 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 0,
+          "failed": 12,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "30da8aa4c41af1c70404627e3c90bb0ba2044ada620cc58aa35de833a366268d"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_3.xml",
+            "change_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.24,
+          "stdout_sha256": "61fd0794849291cc77d7cb40a56f3aa3fbc4767c65dcbe40506f271953bb95c6",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5970,
+          "stderr_bytes": 0,
+          "stdout_tail": "\nchange_test.py:26: AssertionError\n_________ ChangeTest.test_error_if_no_combination_can_add_up_to_target _________\n\nself = <change_test.ChangeTest testMethod=test_error_if_no_combination_can_add_up_to_target>\n\n    def test_error_if_no_combination_can_add_up_to_target(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:50: AssertionError\n_ ChangeTest.test_error_testing_for_change_smaller_than_the_smallest_of_coins __\n\nself = <change_test.ChangeTest testMethod=test_error_testing_for_change_smaller_than_the_smallest_of_coins>\n\n    def test_error_testing_for_change_smaller_than_the_smallest_of_coins(self):\n>       with self.assertRaises(ValueError) as err:\nE       AssertionError: ValueError not raised\n\nchange_test.py:44: AssertionError\n_____________________ ChangeTest.test_large_target_values ______________________\n\nself = <change_test.ChangeTest testMethod=test_large_target_values>\n\n    def test_large_target_values(self):\n>       self.assertEqual(\n            find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999),\n            [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100],\n        )\nE       AssertionError: None != [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]\n\nchange_test.py:29: AssertionError\n_____________________ ChangeTest.test_multiple_coin_change _____________________\n\nself = <change_test.ChangeTest testMethod=test_multiple_coin_change>\n\n    def test_multiple_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 15), [5, 10])\nE       AssertionError: None != [5, 10]\n\nchange_test.py:20: AssertionError\n____________________ ChangeTest.test_no_coins_make_0_change ____________________\n\nself = <change_test.ChangeTest testMethod=test_no_coins_make_0_change>\n\n    def test_no_coins_make_0_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 21, 25], 0), [])\nE       AssertionError: None != []\n\nchange_test.py:41: AssertionError\n_________ ChangeTest.test_possible_change_without_unit_coins_available _________\n\nself = <change_test.ChangeTest testMethod=test_possible_change_without_unit_coins_available>\n\n    def test_possible_change_without_unit_coins_available(self):\n>       self.assertEqual(find_fewest_coins([2, 5, 10, 20, 50], 21), [2, 2, 2, 5, 10])\nE       AssertionError: None != [2, 2, 2, 5, 10]\n\nchange_test.py:35: AssertionError\n______________________ ChangeTest.test_single_coin_change ______________________\n\nself = <change_test.ChangeTest testMethod=test_single_coin_change>\n\n    def test_single_coin_change(self):\n>       self.assertEqual(find_fewest_coins([1, 5, 10, 25, 100], 25), [25])\nE       AssertionError: None != [25]\n\nchange_test.py:17: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_cannot_find_negative_change_values - ...\nFAILED change_test.py::ChangeTest::test_change_for_1_cent - AssertionError: N...\nFAILED change_test.py::ChangeTest::test_change_with_lilliputian_coins - Asser...\nFAILED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins - Ass...\nFAILED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nFAILED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nFAILED change_test.py::ChangeTest::test_large_target_values - AssertionError:...\nFAILED change_test.py::ChangeTest::test_multiple_coin_change - AssertionError...\nFAILED change_test.py::ChangeTest::test_no_coins_make_0_change - AssertionErr...\nFAILED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nFAILED change_test.py::ChangeTest::test_single_coin_change - AssertionError: ...\n12 failed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "change.py",
+    "with_copy_of": "example.py",
+    "sha256": "f9c3ccf99862f3ffe76c2b3282d0b6a69c4366afbfc0b9a56350e200467e1f4e",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "change_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 12,
+    "passed": 12,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 12,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f61d0a3359e307158bb0d45b3e115bd5e7a38c84d294c5fa3781b86b262e67a0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_1.xml",
+            "change_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.208,
+          "stdout_sha256": "e1fa8220ed25a172202b0909a62d32036bbc1b9578443dc0b06b9792fc81a1fd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1284,
+          "stderr_bytes": 0,
+          "stdout_tail": "............                                                             [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_cannot_find_negative_change_values\nPASSED change_test.py::ChangeTest::test_change_for_1_cent\nPASSED change_test.py::ChangeTest::test_change_with_lilliputian_coins\nPASSED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins\nPASSED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nPASSED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nPASSED change_test.py::ChangeTest::test_large_target_values\nPASSED change_test.py::ChangeTest::test_multiple_coin_change\nPASSED change_test.py::ChangeTest::test_no_coins_make_0_change\nPASSED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_single_coin_change\n12 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 12,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f61d0a3359e307158bb0d45b3e115bd5e7a38c84d294c5fa3781b86b262e67a0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_2.xml",
+            "change_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.189,
+          "stdout_sha256": "8f4cfc0399fa44a9189c1592a3006c576350ed9f4af8b9a1469943e9e0a52260",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1284,
+          "stderr_bytes": 0,
+          "stdout_tail": "............                                                             [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_cannot_find_negative_change_values\nPASSED change_test.py::ChangeTest::test_change_for_1_cent\nPASSED change_test.py::ChangeTest::test_change_with_lilliputian_coins\nPASSED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins\nPASSED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nPASSED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nPASSED change_test.py::ChangeTest::test_large_target_values\nPASSED change_test.py::ChangeTest::test_multiple_coin_change\nPASSED change_test.py::ChangeTest::test_no_coins_make_0_change\nPASSED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_single_coin_change\n12 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 12,
+          "passed": 12,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "f61d0a3359e307158bb0d45b3e115bd5e7a38c84d294c5fa3781b86b262e67a0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_3.xml",
+            "change_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.184,
+          "stdout_sha256": "92032e1a06729d8d1cdd0d306e65fc68f96150bc5661359b7796cbba0cdf8cd3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1284,
+          "stderr_bytes": 0,
+          "stdout_tail": "............                                                             [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_cannot_find_negative_change_values\nPASSED change_test.py::ChangeTest::test_change_for_1_cent\nPASSED change_test.py::ChangeTest::test_change_with_lilliputian_coins\nPASSED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins\nPASSED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target\nPASSED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins\nPASSED change_test.py::ChangeTest::test_large_target_values\nPASSED change_test.py::ChangeTest::test_multiple_coin_change\nPASSED change_test.py::ChangeTest::test_no_coins_make_0_change\nPASSED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available\nPASSED change_test.py::ChangeTest::test_single_coin_change\n12 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 12/12 passed, 0 failed, 0 errors (consistent)"
+}

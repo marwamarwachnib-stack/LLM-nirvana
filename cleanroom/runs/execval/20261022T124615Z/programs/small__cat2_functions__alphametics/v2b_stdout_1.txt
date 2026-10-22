@@ -1,0 +1,15 @@
+......s...                                                               [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__alphametics/v2b_junit_1.xml -
+=========================== short test summary info ============================
+PASSED alphametics_test.py::AlphameticsTest::test_leading_zero_solution_is_invalid
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_eight_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_four_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_seven_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_six_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_ten_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_three_letters
+PASSED alphametics_test.py::AlphameticsTest::test_puzzle_with_two_digits_final_carry
+PASSED alphametics_test.py::AlphameticsTest::test_solution_must_have_unique_value_for_each_letter
+SKIPPED [1] alphametics_test.py:67: extra-credit
+9 passed, 1 skipped in 0.03s

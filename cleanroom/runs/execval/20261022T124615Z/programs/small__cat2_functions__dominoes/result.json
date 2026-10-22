@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/dominoes",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/dominoes/dominoes.py",
+    "0_100 LOC/cat2_functions/dominoes/dominoes_test.py",
+    "0_100 LOC/cat2_functions/dominoes/example.py"
+  ],
+  "sandbox_copies_v1": {
+    "dominoes.py": "89f1fede34db8dbd73fb7103476080307e769425049014bf60b7d5e632f9743b",
+    "dominoes_test.py": "9645efc873738b9247ced09ccdce782fe2124646d24588d52c23df59e23ab140",
+    "example.py": "4a51af33d2fed21b11146fb6ef03179771481f27f4c59d53fe442218fc9e2d6a"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "dominoes.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "dominoes_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 13,
+    "passed": 6,
+    "failed": 7,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 6,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "886730de9c66cd55bea0d6937c72e472dfb96e9aca9bfd6a5acda4c0955498aa"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_1.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.217,
+          "stdout_sha256": "cf35e83f7ffbe9162de60ec1163acd507877b5ed0bd4d0afd4ca45e6d6bc539a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6203,
+          "stderr_bytes": 0,
+          "stdout_tail": "testMethod=test_nine_elements>\n\n    def test_nine_elements(self):\n        input_dominoes = [\n            (1, 2),\n            (5, 3),\n            (3, 1),\n            (1, 2),\n            (2, 4),\n            (1, 6),\n            (2, 3),\n            (3, 4),\n            (5, 6),\n        ]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (5, 3), (3, 1), (1, 2), (2, 4), (1, 6), (2, 3), (3, 4), (5, 6)]\n_______________________ DominoesTest.test_separate_loops _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_separate_loops>\n\n    def test_separate_loops(self):\n        input_dominoes = [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:66: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n______________ DominoesTest.test_singleton_input_singleton_output ______________\n\nself = <dominoes_test.DominoesTest testMethod=test_singleton_input_singleton_output>\n\n    def test_singleton_input_singleton_output(self):\n        input_dominoes = [(1, 1)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:21: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 1)]\n_______________________ DominoesTest.test_three_elements _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_three_elements>\n\n    def test_three_elements(self):\n        input_dominoes = [(1, 2), (3, 1), (2, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (3, 1), (2, 3)]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_1.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nFAILED dominoes_test.py::DominoesTest::test_can_reverse_dominoes - AssertionE...\nFAILED dominoes_test.py::DominoesTest::test_empty_input_empty_output - Assert...\nFAILED dominoes_test.py::DominoesTest::test_need_backtrack - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_nine_elements - AssertionError: u...\nFAILED dominoes_test.py::DominoesTest::test_separate_loops - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nFAILED dominoes_test.py::DominoesTest::test_three_elements - AssertionError: ...\n7 failed, 6 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 6,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "886730de9c66cd55bea0d6937c72e472dfb96e9aca9bfd6a5acda4c0955498aa"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_2.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "243337e2fe5f8254736054ab486a658a6e3d3ff84f92684fcd35da3c5fefda13",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6203,
+          "stderr_bytes": 0,
+          "stdout_tail": "testMethod=test_nine_elements>\n\n    def test_nine_elements(self):\n        input_dominoes = [\n            (1, 2),\n            (5, 3),\n            (3, 1),\n            (1, 2),\n            (2, 4),\n            (1, 6),\n            (2, 3),\n            (3, 4),\n            (5, 6),\n        ]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (5, 3), (3, 1), (1, 2), (2, 4), (1, 6), (2, 3), (3, 4), (5, 6)]\n_______________________ DominoesTest.test_separate_loops _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_separate_loops>\n\n    def test_separate_loops(self):\n        input_dominoes = [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:66: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n______________ DominoesTest.test_singleton_input_singleton_output ______________\n\nself = <dominoes_test.DominoesTest testMethod=test_singleton_input_singleton_output>\n\n    def test_singleton_input_singleton_output(self):\n        input_dominoes = [(1, 1)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:21: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 1)]\n_______________________ DominoesTest.test_three_elements _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_three_elements>\n\n    def test_three_elements(self):\n        input_dominoes = [(1, 2), (3, 1), (2, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (3, 1), (2, 3)]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_2.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nFAILED dominoes_test.py::DominoesTest::test_can_reverse_dominoes - AssertionE...\nFAILED dominoes_test.py::DominoesTest::test_empty_input_empty_output - Assert...\nFAILED dominoes_test.py::DominoesTest::test_need_backtrack - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_nine_elements - AssertionError: u...\nFAILED dominoes_test.py::DominoesTest::test_separate_loops - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nFAILED dominoes_test.py::DominoesTest::test_three_elements - AssertionError: ...\n7 failed, 6 passed in 0.05s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 6,
+          "failed": 7,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "886730de9c66cd55bea0d6937c72e472dfb96e9aca9bfd6a5acda4c0955498aa"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_3.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.292,
+          "stdout_sha256": "485ea6a4d8181cca56476d83f2f8577b56b61d18377ed69773211c8c7abc8a11",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 6203,
+          "stderr_bytes": 0,
+          "stdout_tail": "testMethod=test_nine_elements>\n\n    def test_nine_elements(self):\n        input_dominoes = [\n            (1, 2),\n            (5, 3),\n            (3, 1),\n            (1, 2),\n            (2, 4),\n            (1, 6),\n            (2, 3),\n            (3, 4),\n            (5, 6),\n        ]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (5, 3), (3, 1), (1, 2), (2, 4), (1, 6), (2, 3), (3, 4), (5, 6)]\n_______________________ DominoesTest.test_separate_loops _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_separate_loops>\n\n    def test_separate_loops(self):\n        input_dominoes = [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:66: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (2, 3), (3, 1), (1, 1), (2, 2), (3, 3)]\n______________ DominoesTest.test_singleton_input_singleton_output ______________\n\nself = <dominoes_test.DominoesTest testMethod=test_singleton_input_singleton_output>\n\n    def test_singleton_input_singleton_output(self):\n        input_dominoes = [(1, 1)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:21: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 1)]\n_______________________ DominoesTest.test_three_elements _______________________\n\nself = <dominoes_test.DominoesTest testMethod=test_three_elements>\n\n    def test_three_elements(self):\n        input_dominoes = [(1, 2), (3, 1), (2, 3)]\n        output_chain = can_chain(input_dominoes)\n>       self.assert_correct_chain(input_dominoes, output_chain)\n\ndominoes_test.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndominoes_test.py:123: in assert_correct_chain\n    self.assertIsNotNone(output_chain, msg)\nE   AssertionError: unexpectedly None : There should be a chain for [(1, 2), (3, 1), (2, 3)]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2a_junit_3.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nFAILED dominoes_test.py::DominoesTest::test_can_reverse_dominoes - AssertionE...\nFAILED dominoes_test.py::DominoesTest::test_empty_input_empty_output - Assert...\nFAILED dominoes_test.py::DominoesTest::test_need_backtrack - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_nine_elements - AssertionError: u...\nFAILED dominoes_test.py::DominoesTest::test_separate_loops - AssertionError: ...\nFAILED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nFAILED dominoes_test.py::DominoesTest::test_three_elements - AssertionError: ...\n7 failed, 6 passed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "dominoes.py",
+    "with_copy_of": "example.py",
+    "sha256": "4a51af33d2fed21b11146fb6ef03179771481f27f4c59d53fe442218fc9e2d6a",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "dominoes_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 13,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "062bb972b231823454ee5824b0fccc3e8426859675c572d11d8e269e0221b55b"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_1.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.216,
+          "stdout_sha256": "641cf2c924b9b80213b6480fe87d5eb37b541f07aa62a6ac43a4a8decd3e95b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1266,
+          "stderr_bytes": 0,
+          "stdout_tail": ".............                                                            [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_reverse_dominoes\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_empty_input_empty_output\nPASSED dominoes_test.py::DominoesTest::test_need_backtrack\nPASSED dominoes_test.py::DominoesTest::test_nine_elements\nPASSED dominoes_test.py::DominoesTest::test_separate_loops\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_three_elements\n13 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 13,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "062bb972b231823454ee5824b0fccc3e8426859675c572d11d8e269e0221b55b"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_2.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.189,
+          "stdout_sha256": "22d7ec597ae65e6d922418e7417637eb2d8c938d72227dc84aa8e92fbcb7868f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1266,
+          "stderr_bytes": 0,
+          "stdout_tail": ".............                                                            [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_reverse_dominoes\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_empty_input_empty_output\nPASSED dominoes_test.py::DominoesTest::test_need_backtrack\nPASSED dominoes_test.py::DominoesTest::test_nine_elements\nPASSED dominoes_test.py::DominoesTest::test_separate_loops\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_three_elements\n13 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 13,
+          "passed": 13,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "062bb972b231823454ee5824b0fccc3e8426859675c572d11d8e269e0221b55b"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_3.xml",
+            "dominoes_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.183,
+          "stdout_sha256": "e0075d8c525d89828ec20f00ecde3b06426abc3c1e97a5cf2689131fe427fcd3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1266,
+          "stderr_bytes": 0,
+          "stdout_tail": ".............                                                            [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__dominoes/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED dominoes_test.py::DominoesTest::test_can_reverse_dominoes\nPASSED dominoes_test.py::DominoesTest::test_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_disconnected_double_loop\nPASSED dominoes_test.py::DominoesTest::test_disconnected_simple\nPASSED dominoes_test.py::DominoesTest::test_disconnected_single_isolated\nPASSED dominoes_test.py::DominoesTest::test_empty_input_empty_output\nPASSED dominoes_test.py::DominoesTest::test_need_backtrack\nPASSED dominoes_test.py::DominoesTest::test_nine_elements\nPASSED dominoes_test.py::DominoesTest::test_separate_loops\nPASSED dominoes_test.py::DominoesTest::test_separate_three_domino_loops\nPASSED dominoes_test.py::DominoesTest::test_singleton_input_singleton_output\nPASSED dominoes_test.py::DominoesTest::test_singleton_that_can_t_be_chained\nPASSED dominoes_test.py::DominoesTest::test_three_elements\n13 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 13/13 passed, 0 failed, 0 errors (consistent)"
+}

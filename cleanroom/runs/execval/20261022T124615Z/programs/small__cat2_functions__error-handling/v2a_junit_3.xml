@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="0.036" timestamp="2026-10-22T12:46:30.266235" hostname="vm"><testcase classname="error_handling_test.ErrorHandlingTest" name="test_filelike_objects_are_closed_on_exception" time="0.001"><failure message="AssertionError: Exception not raised">self = &lt;error_handling_test.ErrorHandlingTest testMethod=test_filelike_objects_are_closed_on_exception&gt;
+
+    def test_filelike_objects_are_closed_on_exception(self):
+        filelike_object = FileLike(fail_something=True)
+&gt;       with self.assertRaisesWithMessage(Exception):
+E       AssertionError: Exception not raised
+
+error_handling_test.py:30: AssertionError</failure></testcase><testcase classname="error_handling_test.ErrorHandlingTest" name="test_filelike_objects_are_closed_without_exception" time="0.000"><failure message="AssertionError: False is not True : filelike_object should have been opened">self = &lt;error_handling_test.ErrorHandlingTest testMethod=test_filelike_objects_are_closed_without_exception&gt;
+
+    def test_filelike_objects_are_closed_without_exception(self):
+        filelike_object = FileLike(fail_something=False)
+        er.filelike_objects_are_closed_on_exception(filelike_object)
+        self.assertIs(filelike_object.is_open, False,
+                      'filelike_object should be closed')
+&gt;       self.assertIs(filelike_object.was_open, True,
+                      'filelike_object should have been opened')
+E       AssertionError: False is not True : filelike_object should have been opened
+
+error_handling_test.py:44: AssertionError</failure></testcase><testcase classname="error_handling_test.ErrorHandlingTest" name="test_return_none" time="0.001"><failure message="AssertionError: None != 1 : Result of valid input should not be None">self = &lt;error_handling_test.ErrorHandlingTest testMethod=test_return_none&gt;
+
+    def test_return_none(self):
+&gt;       self.assertEqual(er.handle_error_by_returning_none('1'), 1,
+                         'Result of valid input should not be None')
+E       AssertionError: None != 1 : Result of valid input should not be None
+
+error_handling_test.py:13: AssertionError</failure></testcase><testcase classname="error_handling_test.ErrorHandlingTest" name="test_return_tuple" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;error_handling_test.ErrorHandlingTest testMethod=test_return_tuple&gt;
+
+    def test_return_tuple(self):
+&gt;       successful_result, result = er.handle_error_by_returning_tuple('1')
+E       TypeError: cannot unpack non-iterable NoneType object
+
+error_handling_test.py:19: TypeError</failure></testcase><testcase classname="error_handling_test.ErrorHandlingTest" name="test_throw_exception" time="0.001"><failure message="AssertionError: Exception not raised">self = &lt;error_handling_test.ErrorHandlingTest testMethod=test_throw_exception&gt;
+
+    def test_throw_exception(self):
+&gt;       with self.assertRaisesWithMessage(Exception):
+E       AssertionError: Exception not raised
+
+error_handling_test.py:9: AssertionError</failure></testcase></testsuite></testsuites>

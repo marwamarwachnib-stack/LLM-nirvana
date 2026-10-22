@@ -1,0 +1,17 @@
+............                                                             [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__change/v2b_junit_2.xml -
+=========================== short test summary info ============================
+PASSED change_test.py::ChangeTest::test_another_possible_change_without_unit_coins_available
+PASSED change_test.py::ChangeTest::test_cannot_find_negative_change_values
+PASSED change_test.py::ChangeTest::test_change_for_1_cent
+PASSED change_test.py::ChangeTest::test_change_with_lilliputian_coins
+PASSED change_test.py::ChangeTest::test_change_with_lower_elbonia_coins
+PASSED change_test.py::ChangeTest::test_error_if_no_combination_can_add_up_to_target
+PASSED change_test.py::ChangeTest::test_error_testing_for_change_smaller_than_the_smallest_of_coins
+PASSED change_test.py::ChangeTest::test_large_target_values
+PASSED change_test.py::ChangeTest::test_multiple_coin_change
+PASSED change_test.py::ChangeTest::test_no_coins_make_0_change
+PASSED change_test.py::ChangeTest::test_possible_change_without_unit_coins_available
+PASSED change_test.py::ChangeTest::test_single_coin_change
+12 passed in 0.02s

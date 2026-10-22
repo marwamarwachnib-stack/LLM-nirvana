@@ -1,0 +1,11 @@
+{
+  "out": "runs/p2_evidence/20261022T125002Z",
+  "imports": 77,
+  "programs": 31,
+  "by_class": {
+    "SIBLING_BY_RELATIVE_IMPORT": 1,
+    "EXTERNAL_PACKAGE_CANDIDATE": 26,
+    "SIBLING_IN_AUTHORS_RUN": 40,
+    "NO_EVIDENCE": 10
+  }
+}

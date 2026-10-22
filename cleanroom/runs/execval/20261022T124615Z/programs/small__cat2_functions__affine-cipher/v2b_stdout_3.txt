@@ -1,0 +1,21 @@
+................                                                         [100%]
+==================================== PASSES ====================================
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__affine-cipher/v2b_junit_3.xml -
+=========================== short test summary info ============================
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_a_sentence
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_all_the_letters
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_exercism
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_numbers
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_a_not_coprime_to_m
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_no_spaces_in_input
+PASSED affine_cipher_test.py::AffineCipherTest::test_decode_with_too_many_spaces
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_all_the_letters
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_deep_thought
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_mindblowingly
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_no
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_numbers
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_o_m_g
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_omg
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_with_a_not_coprime_to_m
+PASSED affine_cipher_test.py::AffineCipherTest::test_encode_yes
+16 passed in 0.02s

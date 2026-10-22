@@ -1,0 +1,62 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_______ ErrorHandlingTest.test_filelike_objects_are_closed_on_exception ________
+
+self = <error_handling_test.ErrorHandlingTest testMethod=test_filelike_objects_are_closed_on_exception>
+
+    def test_filelike_objects_are_closed_on_exception(self):
+        filelike_object = FileLike(fail_something=True)
+>       with self.assertRaisesWithMessage(Exception):
+E       AssertionError: Exception not raised
+
+error_handling_test.py:30: AssertionError
+_____ ErrorHandlingTest.test_filelike_objects_are_closed_without_exception _____
+
+self = <error_handling_test.ErrorHandlingTest testMethod=test_filelike_objects_are_closed_without_exception>
+
+    def test_filelike_objects_are_closed_without_exception(self):
+        filelike_object = FileLike(fail_something=False)
+        er.filelike_objects_are_closed_on_exception(filelike_object)
+        self.assertIs(filelike_object.is_open, False,
+                      'filelike_object should be closed')
+>       self.assertIs(filelike_object.was_open, True,
+                      'filelike_object should have been opened')
+E       AssertionError: False is not True : filelike_object should have been opened
+
+error_handling_test.py:44: AssertionError
+______________________ ErrorHandlingTest.test_return_none ______________________
+
+self = <error_handling_test.ErrorHandlingTest testMethod=test_return_none>
+
+    def test_return_none(self):
+>       self.assertEqual(er.handle_error_by_returning_none('1'), 1,
+                         'Result of valid input should not be None')
+E       AssertionError: None != 1 : Result of valid input should not be None
+
+error_handling_test.py:13: AssertionError
+_____________________ ErrorHandlingTest.test_return_tuple ______________________
+
+self = <error_handling_test.ErrorHandlingTest testMethod=test_return_tuple>
+
+    def test_return_tuple(self):
+>       successful_result, result = er.handle_error_by_returning_tuple('1')
+E       TypeError: cannot unpack non-iterable NoneType object
+
+error_handling_test.py:19: TypeError
+____________________ ErrorHandlingTest.test_throw_exception ____________________
+
+self = <error_handling_test.ErrorHandlingTest testMethod=test_throw_exception>
+
+    def test_throw_exception(self):
+>       with self.assertRaisesWithMessage(Exception):
+E       AssertionError: Exception not raised
+
+error_handling_test.py:9: AssertionError
+- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__error-handling/v2a_junit_3.xml -
+=========================== short test summary info ============================
+FAILED error_handling_test.py::ErrorHandlingTest::test_filelike_objects_are_closed_on_exception
+FAILED error_handling_test.py::ErrorHandlingTest::test_filelike_objects_are_closed_without_exception
+FAILED error_handling_test.py::ErrorHandlingTest::test_return_none - Assertio...
+FAILED error_handling_test.py::ErrorHandlingTest::test_return_tuple - TypeErr...
+FAILED error_handling_test.py::ErrorHandlingTest::test_throw_exception - Asse...
+5 failed in 0.03s

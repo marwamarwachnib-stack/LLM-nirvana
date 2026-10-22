@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="13" time="0.078" timestamp="2026-10-22T12:46:39.753541" hostname="vm"><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_empty_result_for_largest_if_no_palindrome_in_the_range" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_empty_result_for_largest_if_no_palindrome_in_the_range&gt;
+
+    def test_empty_result_for_largest_if_no_palindrome_in_the_range(self):
+&gt;       value, factors = largest(min_factor=15, max_factor=15)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:60: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_empty_result_for_smallest_if_no_palindrome_in_the_range" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_empty_result_for_smallest_if_no_palindrome_in_the_range&gt;
+
+    def test_empty_result_for_smallest_if_no_palindrome_in_the_range(self):
+&gt;       value, factors = smallest(min_factor=1002, max_factor=1003)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:55: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_error_result_for_largest_if_min_is_more_than_max" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_error_result_for_largest_if_min_is_more_than_max&gt;
+
+    def test_error_result_for_largest_if_min_is_more_than_max(self):
+        with self.assertRaises(ValueError) as err:
+&gt;           value, factors = largest(min_factor=2, max_factor=1)
+E           TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:72: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_error_result_for_smallest_if_min_is_more_than_max" time="0.000"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_error_result_for_smallest_if_min_is_more_than_max&gt;
+
+    def test_error_result_for_smallest_if_min_is_more_than_max(self):
+        with self.assertRaises(ValueError) as err:
+&gt;           value, factors = smallest(min_factor=10000, max_factor=1)
+E           TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:66: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_largest_palindrome_from_double_digit_factors" time="0.000"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_largest_palindrome_from_double_digit_factors&gt;
+
+    def test_find_the_largest_palindrome_from_double_digit_factors(self):
+&gt;       value, factors = largest(min_factor=10, max_factor=99)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:30: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_largest_palindrome_from_four_digit_factors" time="0.000"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_largest_palindrome_from_four_digit_factors&gt;
+
+    def test_find_the_largest_palindrome_from_four_digit_factors(self):
+&gt;       value, factors = largest(min_factor=1000, max_factor=9999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:50: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_largest_palindrome_from_single_digit_factors" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_largest_palindrome_from_single_digit_factors&gt;
+
+    def test_find_the_largest_palindrome_from_single_digit_factors(self):
+&gt;       value, factors = largest(min_factor=1, max_factor=9)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:20: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_largest_palindrome_from_triple_digit_factors" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_largest_palindrome_from_triple_digit_factors&gt;
+
+    def test_find_the_largest_palindrome_from_triple_digit_factors(self):
+&gt;       value, factors = largest(min_factor=100, max_factor=999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:40: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_smallest_palindrome_from_double_digit_factors" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_double_digit_factors&gt;
+
+    def test_find_the_smallest_palindrome_from_double_digit_factors(self):
+&gt;       value, factors = smallest(min_factor=10, max_factor=99)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:25: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_smallest_palindrome_from_four_digit_factors" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_four_digit_factors&gt;
+
+    def test_find_the_smallest_palindrome_from_four_digit_factors(self):
+&gt;       value, factors = smallest(min_factor=1000, max_factor=9999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:45: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_smallest_palindrome_from_single_digit_factors" time="0.000"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_single_digit_factors&gt;
+
+    def test_find_the_smallest_palindrome_from_single_digit_factors(self):
+&gt;       value, factors = smallest(min_factor=1, max_factor=9)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:15: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_find_the_smallest_palindrome_from_triple_digit_factors" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_find_the_smallest_palindrome_from_triple_digit_factors&gt;
+
+    def test_find_the_smallest_palindrome_from_triple_digit_factors(self):
+&gt;       value, factors = smallest(min_factor=100, max_factor=999)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:35: TypeError</failure></testcase><testcase classname="palindrome_products_test.PalindromeProductsTest" name="test_smallest_product_does_not_use_the_smallest_factor" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">self = &lt;palindrome_products_test.PalindromeProductsTest testMethod=test_smallest_product_does_not_use_the_smallest_factor&gt;
+
+    def test_smallest_product_does_not_use_the_smallest_factor(self):
+&gt;       value, factors = smallest(min_factor=3215, max_factor=4000)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+palindrome_products_test.py:77: TypeError</failure></testcase></testsuite></testsuites>

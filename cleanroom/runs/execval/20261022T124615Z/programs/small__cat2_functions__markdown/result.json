@@ -1,0 +1,410 @@
+{
+  "program_id": "small/cat2_functions/markdown",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat2_functions/markdown/example.py",
+    "0_100 LOC/cat2_functions/markdown/markdown.py",
+    "0_100 LOC/cat2_functions/markdown/markdown_test.py"
+  ],
+  "sandbox_copies_v1": {
+    "example.py": "165b16b3d55138f9b7e02acac537e4befb8dad9e7cbeef76f6b09b9f586c4719",
+    "markdown.py": "3d6dbc85ae307226cdb74099579567d5a7e26ed403399fafb3ff1c4c7f3a2cd8",
+    "markdown_test.py": "2fbf76c87436053e93c87abf607827026c80b3f44a7593db2b76f9f29a339dc1"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.027,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.026,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "markdown.py",
+    "evidence": "config.json files.solution",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "markdown_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_1.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.218,
+          "stdout_sha256": "bb7f25923f0a38c5bde2fde414899dc788cc1f98a5994d3493a9017766cbac87",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_1.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_2.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.228,
+          "stdout_sha256": "2014a5e2a6aca712b39de0cda7ef8c6e7028ae521a04cc03cfa9064edf192b87",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_2.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_3.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.22,
+          "stdout_sha256": "cc351159e8eeeb5f84e67ef16520596d4280b4673edabcaaaf2de4dd8e7d097f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2a_junit_3.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "markdown.py",
+    "with_copy_of": "example.py",
+    "sha256": "165b16b3d55138f9b7e02acac537e4befb8dad9e7cbeef76f6b09b9f586c4719",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "markdown_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_1.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.207,
+          "stdout_sha256": "00228c9841aec07d971e89776493992f9a3f364f9fa3ade658eefc81c79d5ba0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_2.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.197,
+          "stdout_sha256": "ffc055d80842cacfe89c5403625f64192588264c71cfc8a9f47fac1941ad44aa",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 17,
+          "passed": 17,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "9690e56374f1fdc336e48d246556401176a22598f3c8898de3a4f19edd650ff9"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_3.xml",
+            "markdown_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.239,
+          "stdout_sha256": "77141d656cf4632ccd64ae536b4489ec7bfbf5a9b03d1230aafe7004b77cba1a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1749,
+          "stderr_bytes": 0,
+          "stdout_tail": ".................                                                        [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat2_functions__markdown/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED markdown_test.py::MarkdownTest::test_h7_header_level_is_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_mixed_normal_italics_and_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parses_normal_text_as_a_paragraph\nPASSED markdown_test.py::MarkdownTest::test_parsing_bold_text\nPASSED markdown_test.py::MarkdownTest::test_parsing_italics\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists\nPASSED markdown_test.py::MarkdownTest::test_unordered_lists_close_properly_with_preceding_and_following_lines\nPASSED markdown_test.py::MarkdownTest::test_with_a_little_bit_of_everything\nPASSED markdown_test.py::MarkdownTest::test_with_h1_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h2_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h3_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h4_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h5_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_h6_header_level\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_header_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_list_item_text_that_should_not_be_interpreted\nPASSED markdown_test.py::MarkdownTest::test_with_markdown_symbols_in_the_paragraph_text_that_should_not_be_interpreted\n17 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 17/17 passed, 0 failed, 0 errors (consistent)"
+}

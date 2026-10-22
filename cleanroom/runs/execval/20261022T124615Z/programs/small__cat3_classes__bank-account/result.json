@@ -1,0 +1,412 @@
+{
+  "program_id": "small/cat3_classes/bank-account",
+  "protocol": "execval-1",
+  "sandbox_sources": [
+    "0_100 LOC/cat3_classes/bank-account/bank_account.py",
+    "0_100 LOC/cat3_classes/bank-account/bank_account_test.py",
+    "0_100 LOC/cat3_classes/bank-account/example.py",
+    "0_100 LOC/cat3_classes/bank-account/get_coverage.py"
+  ],
+  "sandbox_copies_v1": {
+    "bank_account.py": "ed205e497b0fd700bababdba5d0b2522e67f03d7c166e3ae1d1d9da4dd76d60e",
+    "bank_account_test.py": "d4bfe068ce35af331541c5420eefb6e08bb0c1bf3920a2043bc3a4b763f1c380",
+    "example.py": "e75d1fb46070b291a9404f36be076944e5c8e2f20582cf3dd6e9195bde1be7e4",
+    "get_coverage.py": "6a613bae3197a8604e0e13f0b2aa165681eb9cd64f947c325ee7532231012546"
+  },
+  "v1_import": {
+    "module": "example",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.028,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "example"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.023,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "solution_module": {
+    "file": "bank_account.py",
+    "evidence": "inferred from directory name (no config.json)",
+    "imported_by_tests": true
+  },
+  "v2a_as_shipped": {
+    "label": "v2a",
+    "test_files": [
+      "bank_account_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 1,
+    "consistent": true,
+    "tests": 16,
+    "passed": 0,
+    "failed": 16,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2a_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1adb7a4f291440b1e20d0b4bc1869b94779f9a9e90d9dccd03f725d447c747d0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_1.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.245,
+          "stdout_sha256": "7cdf7b5ec9118c01046bec7ae940c355f0bfa64e777ee2edc61de759bd9c360c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8919,
+          "stderr_bytes": 0,
+          "stdout_tail": "00)\n        account.deposit(50)\n>       self.assertEqual(account.get_balance(), 150)\nE       AssertionError: None != 150\n\nbank_account_test.py:29: AssertionError\n__________ BankAccountTest.test_newly_opened_account_has_zero_balance __________\n\nself = <bank_account_test.BankAccountTest testMethod=test_newly_opened_account_has_zero_balance>\n\n    def test_newly_opened_account_has_zero_balance(self):\n        account = BankAccount()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:16: AssertionError\n________ BankAccountTest.test_reopened_account_does_not_retain_balance _________\n\nself = <bank_account_test.BankAccountTest testMethod=test_reopened_account_does_not_retain_balance>\n\n    def test_reopened_account_does_not_retain_balance(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(50)\n        account.close()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:111: AssertionError\n_____________________ BankAccountTest.test_single_deposit ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_single_deposit>\n\n    def test_single_deposit(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n>       self.assertEqual(account.get_balance(), 100)\nE       AssertionError: None != 100\n\nbank_account_test.py:22: AssertionError\n______________________ BankAccountTest.test_withdraw_once ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_once>\n\n    def test_withdraw_once(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(75)\n>       self.assertEqual(account.get_balance(), 25)\nE       AssertionError: None != 25\n\nbank_account_test.py:36: AssertionError\n_____________________ BankAccountTest.test_withdraw_twice ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_twice>\n\n    def test_withdraw_twice(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(80)\n        account.withdraw(20)\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:44: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_1.xml -\n=========================== short test summary info ============================\nFAILED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nFAILED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative - ...\nFAILED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nFAILED bank_account_test.py::BankAccountTest::test_multiple_deposits - Assert...\nFAILED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nFAILED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nFAILED bank_account_test.py::BankAccountTest::test_single_deposit - Assertion...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_once - AssertionE...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_twice - Assertion...\n16 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2a_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1adb7a4f291440b1e20d0b4bc1869b94779f9a9e90d9dccd03f725d447c747d0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_2.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.261,
+          "stdout_sha256": "441c1de0e7c8fdee39b4306de6b8411fa0b66221d62e6379333a9f1da5d501ed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8919,
+          "stderr_bytes": 0,
+          "stdout_tail": "00)\n        account.deposit(50)\n>       self.assertEqual(account.get_balance(), 150)\nE       AssertionError: None != 150\n\nbank_account_test.py:29: AssertionError\n__________ BankAccountTest.test_newly_opened_account_has_zero_balance __________\n\nself = <bank_account_test.BankAccountTest testMethod=test_newly_opened_account_has_zero_balance>\n\n    def test_newly_opened_account_has_zero_balance(self):\n        account = BankAccount()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:16: AssertionError\n________ BankAccountTest.test_reopened_account_does_not_retain_balance _________\n\nself = <bank_account_test.BankAccountTest testMethod=test_reopened_account_does_not_retain_balance>\n\n    def test_reopened_account_does_not_retain_balance(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(50)\n        account.close()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:111: AssertionError\n_____________________ BankAccountTest.test_single_deposit ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_single_deposit>\n\n    def test_single_deposit(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n>       self.assertEqual(account.get_balance(), 100)\nE       AssertionError: None != 100\n\nbank_account_test.py:22: AssertionError\n______________________ BankAccountTest.test_withdraw_once ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_once>\n\n    def test_withdraw_once(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(75)\n>       self.assertEqual(account.get_balance(), 25)\nE       AssertionError: None != 25\n\nbank_account_test.py:36: AssertionError\n_____________________ BankAccountTest.test_withdraw_twice ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_twice>\n\n    def test_withdraw_twice(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(80)\n        account.withdraw(20)\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:44: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_2.xml -\n=========================== short test summary info ============================\nFAILED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nFAILED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative - ...\nFAILED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nFAILED bank_account_test.py::BankAccountTest::test_multiple_deposits - Assert...\nFAILED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nFAILED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nFAILED bank_account_test.py::BankAccountTest::test_single_deposit - Assertion...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_once - AssertionE...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_twice - Assertion...\n16 failed in 0.08s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2a_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 0,
+          "failed": 16,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "1adb7a4f291440b1e20d0b4bc1869b94779f9a9e90d9dccd03f725d447c747d0"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_3.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 1,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.241,
+          "stdout_sha256": "27a3dd60015dc56b1e5fcb5c46d4f2cccf78cec05cf441cb4fdf68eb34160a20",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8919,
+          "stderr_bytes": 0,
+          "stdout_tail": "00)\n        account.deposit(50)\n>       self.assertEqual(account.get_balance(), 150)\nE       AssertionError: None != 150\n\nbank_account_test.py:29: AssertionError\n__________ BankAccountTest.test_newly_opened_account_has_zero_balance __________\n\nself = <bank_account_test.BankAccountTest testMethod=test_newly_opened_account_has_zero_balance>\n\n    def test_newly_opened_account_has_zero_balance(self):\n        account = BankAccount()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:16: AssertionError\n________ BankAccountTest.test_reopened_account_does_not_retain_balance _________\n\nself = <bank_account_test.BankAccountTest testMethod=test_reopened_account_does_not_retain_balance>\n\n    def test_reopened_account_does_not_retain_balance(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(50)\n        account.close()\n        account.open()\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:111: AssertionError\n_____________________ BankAccountTest.test_single_deposit ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_single_deposit>\n\n    def test_single_deposit(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n>       self.assertEqual(account.get_balance(), 100)\nE       AssertionError: None != 100\n\nbank_account_test.py:22: AssertionError\n______________________ BankAccountTest.test_withdraw_once ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_once>\n\n    def test_withdraw_once(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(75)\n>       self.assertEqual(account.get_balance(), 25)\nE       AssertionError: None != 25\n\nbank_account_test.py:36: AssertionError\n_____________________ BankAccountTest.test_withdraw_twice ______________________\n\nself = <bank_account_test.BankAccountTest testMethod=test_withdraw_twice>\n\n    def test_withdraw_twice(self):\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.withdraw(80)\n        account.withdraw(20)\n>       self.assertEqual(account.get_balance(), 0)\nE       AssertionError: None != 0\n\nbank_account_test.py:44: AssertionError\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2a_junit_3.xml -\n=========================== short test summary info ============================\nFAILED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nFAILED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative - ...\nFAILED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nFAILED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nFAILED bank_account_test.py::BankAccountTest::test_multiple_deposits - Assert...\nFAILED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nFAILED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nFAILED bank_account_test.py::BankAccountTest::test_single_deposit - Assertion...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_once - AssertionE...\nFAILED bank_account_test.py::BankAccountTest::test_withdraw_twice - Assertion...\n16 failed in 0.07s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v2b_resolution": {
+    "replaced_in_sandbox": "bank_account.py",
+    "with_copy_of": "example.py",
+    "sha256": "e75d1fb46070b291a9404f36be076944e5c8e2f20582cf3dd6e9195bde1be7e4",
+    "test_files_unmodified": true
+  },
+  "v2b_reference": {
+    "label": "v2b",
+    "test_files": [
+      "bank_account_test.py"
+    ],
+    "status": "RAN",
+    "pytest_returncode": 0,
+    "consistent": true,
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0,
+    "runs": [
+      {
+        "repetition": 1,
+        "junit": "v2b_junit_1.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "680502e60d73975a7cdba709a1c0dca8d18bbc9605e58fa1e83141568cf0a393"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_1.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.21,
+          "stdout_sha256": "5c7926025e862d36e95d613e0142059c0756e46a9c80bfbebc2165924dd2bed1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1718,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_1.xml -\n=========================== short test summary info ============================\nPASSED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nPASSED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative\nPASSED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nPASSED bank_account_test.py::BankAccountTest::test_multiple_deposits\nPASSED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nPASSED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nPASSED bank_account_test.py::BankAccountTest::test_single_deposit\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_once\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_twice\n16 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "junit": "v2b_junit_2.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "680502e60d73975a7cdba709a1c0dca8d18bbc9605e58fa1e83141568cf0a393"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_2.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.224,
+          "stdout_sha256": "4525606309b07c2d949f46c507c5a0f70d9ce8a7fb936e401f72e4fee92d457b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1718,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_2.xml -\n=========================== short test summary info ============================\nPASSED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nPASSED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative\nPASSED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nPASSED bank_account_test.py::BankAccountTest::test_multiple_deposits\nPASSED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nPASSED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nPASSED bank_account_test.py::BankAccountTest::test_single_deposit\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_once\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_twice\n16 passed in 0.03s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "junit": "v2b_junit_3.xml",
+        "summary": {
+          "parsed": true,
+          "tests": 16,
+          "passed": 16,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0,
+          "outcomes_sha256": "680502e60d73975a7cdba709a1c0dca8d18bbc9605e58fa1e83141568cf0a393"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "-q",
+            "-rA",
+            "--rootdir=.",
+            "--junitxml=/home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_3.xml",
+            "bank_account_test.py"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.194,
+          "stdout_sha256": "81ef08f5e57bbb30ad2e29e87287313e0673f077968e3c5959e9fe15d90289d3",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1718,
+          "stderr_bytes": 0,
+          "stdout_tail": "................                                                         [100%]\n==================================== PASSES ====================================\n- generated xml file: /home/user/LLM-nirvana/cleanroom/runs/execval/20261022T124615Z/programs/small__cat3_classes__bank-account/v2b_junit_3.xml -\n=========================== short test summary info ============================\nPASSED bank_account_test.py::BankAccountTest::test_can_do_multiple_operations_sequentially\nPASSED bank_account_test.py::BankAccountTest::test_cannot_check_balance_of_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_close_an_account_that_was_not_opened\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_into_unopened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_deposit_negative\nPASSED bank_account_test.py::BankAccountTest::test_cannot_open_an_already_opened_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_from_closed_account\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_more_than_deposited\nPASSED bank_account_test.py::BankAccountTest::test_cannot_withdraw_negative\nPASSED bank_account_test.py::BankAccountTest::test_multiple_deposits\nPASSED bank_account_test.py::BankAccountTest::test_newly_opened_account_has_zero_balance\nPASSED bank_account_test.py::BankAccountTest::test_reopened_account_does_not_retain_balance\nPASSED bank_account_test.py::BankAccountTest::test_single_deposit\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_once\nPASSED bank_account_test.py::BankAccountTest::test_withdraw_twice\n16 passed in 0.02s\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_AND_DEVTESTS",
+  "outcome_reason": "imports consistently; developer tests vs example.py: 16/16 passed, 0 failed, 0 errors (consistent)"
+}
