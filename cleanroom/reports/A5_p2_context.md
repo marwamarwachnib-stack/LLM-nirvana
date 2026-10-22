@@ -119,7 +119,8 @@ run (before the version-conditional rule) was deleted during development and is 
 - **Duplicate module objects are possible by design.** Where a benchmark module imports both flat
   modules and package modules (e.g. pymonet), the flat and package copies are distinct objects,
   as in the authors' run (their reports list both relative and absolute paths).
-- **External versions are a policy, not evidence.** The authors' installed versions are unknown;
+- **External versions are a policy, not evidence.** (A6: policy approved as a *reconstruction
+  policy*; see `reports/METHODOLOGY_AND_LIMITATIONS.md`.) The authors' installed versions are unknown;
   "newest before the cutoff" is the documented assumption (e.g. marshmallow 3.20.2, ipython 8.20.0).
 - **Developer-test oracle (small set)** — your decision recorded in `benchmark/eligibility.csv`,
   column `devtest_oracle`: Cat 2 = `EVIDENCE_BACKED_REFERENCE` (Exercism `config.json` declares

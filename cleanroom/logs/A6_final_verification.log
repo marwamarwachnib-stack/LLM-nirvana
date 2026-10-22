@@ -1,0 +1,22 @@
+$ python3 -m unittest discover -s tests
+Ran 113 tests in 12.706s
+
+OK
+$ integrity verify --against-git
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+    "passed": true,
+$ sha256sum -c
+    993 OK
+$ inventory files unchanged since commit
+$ git status/diff on originals (empty = untouched)
+$ __pycache__ / sandboxes
+../cleanroom/src/cleanroom/__pycache__
+$ sealed runs
+runs/execval/20261022T124436Z: OK
+runs/execval/20261022T124615Z: OK
+runs/execval/20261022T130857Z: OK
+runs/execval/20261022T131114Z: OK
+$ contexts unchanged (resolution hashes)
+contexts checked 26 with problems []

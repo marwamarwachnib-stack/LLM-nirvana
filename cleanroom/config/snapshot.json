@@ -42,7 +42,9 @@
       "mutation testing"
     ],
     "5_energy": "only with a reliable instrument; otherwise reported as not measured",
-    "6_fault_localization": "deferred until a benchmark with verified faulty-line labels is approved"
+    "6_fault_localization": "deferred until a benchmark with verified faulty-line labels is approved",
+    "7_dependency_versions": "Reconstruction policy (approved in A6): external dependencies of reconstructed contexts use the newest release first published before 2024-01-26. This is a reconstruction policy, NOT a claim about the original authors' environment, whose versions are not recorded.",
+    "8_httpie": "samples 8-12 stay unresolved; no GitHub access, no clone, no guessed revision (A6)"
   },
   "authorised_steps": [
     "A1 integrity inventory",
@@ -50,7 +52,8 @@
     "tests",
     "eligibility report",
     "A4 execution validation of the 51 CANDIDATE programs in an isolated Python 3.10.12 environment",
-    "A5 p2 project-context resolution from verified PyPI releases and re-validation"
+    "A5 p2 project-context resolution from verified PyPI releases and re-validation",
+    "A6 read-only audits: PyYAML/Jinja2 impact for samples 29-30; httpie evidence"
   ],
   "not_authorised_yet": [
     "test generation (Pynguin, LLMs)",
@@ -69,9 +72,8 @@
     "mutation tool, operators, timeout policy, score denominator",
     "energy instrument and execution hardware",
     "pin 2023-era C-library builds or accept current builds",
-    "httpie samples 8-12: obtain the authors' GitHub revision (github.com access)",
-    "optional PyYAML / Jinja2 for typesystem samples 29-30",
-    "external package version policy (newest before 2024-01-26)"
+    "PyYAML/Jinja2 for samples 29-30: include (pinned) / omit / exclude (see reports/A6_preparation_audit.md \u00a74)",
+    "httpie samples 8-12: whether to allow read access to the repository history (A6 \u00a72.3)"
   ],
   "environment": {
     "python": "CPython 3.10.12, Anaconda main channel build python-3.10.12-h955ad1f_0 (2023-07-05)",
@@ -109,5 +111,6 @@
   "devtest_oracle": {
     "cat2_functions": "evidence-backed reference (Exercism config.json)",
     "cat3_classes": "inferred only; not adopted as reference"
-  }
+  },
+  "a6_audit": "runs/a6_audit/20261022T132833Z/audit.json"
 }

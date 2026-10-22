@@ -1,0 +1,550 @@
+{
+ "generated_utc": "20261022T132833Z",
+ "dependency_impact": {
+  "p2/sample30": {
+   "file": "100_300 LOC p2/pynguin coverage/sample30/tokenize_yaml.py",
+   "sha256": "d67543b0551832b0defe0ca61cff4db3601e9a334d29832bb14cf2221863c2fc",
+   "dependency": "PyYAML (import yaml)",
+   "guard": "module-level try/except ImportError (`# pragma: no cover`) sets yaml = None; tokenize_yaml() and validate_yaml() start with `assert yaml is not None`",
+   "statements_ast": 72,
+   "groups": {
+    "requires the yaml module": {
+     "lines": [
+      28,
+      29,
+      31,
+      33,
+      35,
+      36,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      45,
+      47,
+      48,
+      49,
+      50,
+      51,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      65,
+      66,
+      67,
+      68,
+      69,
+      71,
+      72,
+      73,
+      74,
+      75,
+      77,
+      78,
+      79,
+      80,
+      81,
+      83,
+      87,
+      91,
+      95,
+      97,
+      99,
+      101,
+      103,
+      104,
+      107,
+      108,
+      109,
+      127,
+      128
+     ],
+     "count": 57
+    }
+   },
+   "upper_bound_statement_share_without_dependency": {
+    "requires the yaml module": 0.208
+   },
+   "authors_coverage": {
+    "pynguin_statement": {
+     "report": "100_300 LOC p2/pynguin coverage/sample30/statement_coverage_tokenize_yaml.txt",
+     "row": {
+      "stmts": 73,
+      "miss": 0,
+      "cover": "100%",
+      "missing": "",
+      "missing_lines": [],
+      "gated_executed": {
+       "requires the yaml module": [
+        28,
+        29,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        107,
+        108,
+        109,
+        127,
+        128
+       ]
+      },
+      "gated_missed": {
+       "requires the yaml module": []
+      }
+     }
+    },
+    "chatgpt_statement": {
+     "report": "100_300 LOC p2/ChatGPT coverage/sample30/statement_coverage.txt",
+     "row": {
+      "stmts": 73,
+      "miss": 22,
+      "cover": "70%",
+      "missing": "18, 29, 48-51, 66-69, 72-75, 78-81, 105-109",
+      "missing_lines": [
+       18,
+       29,
+       48,
+       49,
+       50,
+       51,
+       66,
+       67,
+       68,
+       69,
+       72,
+       73,
+       74,
+       75,
+       78,
+       79,
+       80,
+       81,
+       105,
+       106,
+       107,
+       108,
+       109
+      ],
+      "gated_executed": {
+       "requires the yaml module": [
+        28,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        71,
+        77,
+        83,
+        87,
+        91,
+        95,
+        97,
+        99,
+        101,
+        103,
+        104,
+        127,
+        128
+       ]
+      },
+      "gated_missed": {
+       "requires the yaml module": [
+        29,
+        48,
+        49,
+        50,
+        51,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        78,
+        79,
+        80,
+        81,
+        107,
+        108,
+        109
+       ]
+      }
+     }
+    }
+   },
+   "authors_suites": {
+    "pynguin": {
+     "file": "100_300 LOC p2/pynguin coverage/sample30/test_tokenize_yaml.py",
+     "dependency_imports": [
+      "import yaml as module_2"
+     ],
+     "dependency_mentions": 12
+    },
+    "chatgpt": {
+     "file": "100_300 LOC p2/ChatGPT coverage/sample30/test_example.py",
+     "dependency_imports": [],
+     "dependency_mentions": 13
+    }
+   }
+  },
+  "p2/sample29": {
+   "file": "100_300 LOC p2/pynguin coverage/sample29/forms.py",
+   "sha256": "2c367c6cf8ac8fd0a675fe672c814297b68d58e2982de21100ac8b315fc40341",
+   "dependency": "Jinja2 (import jinja2)",
+   "guard": "module-level try/except ImportError (`# pragma: no cover`) sets jinja2 = None; Jinja2Forms.__init__ starts with `assert jinja2 is not None`",
+   "statements_ast": 65,
+   "groups": {
+    "requires the jinja2 module": {
+     "lines": [
+      109,
+      115,
+      118,
+      123,
+      124,
+      125,
+      126,
+      128,
+      129,
+      130,
+      136,
+      145
+     ],
+     "count": 12
+    },
+    "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": {
+     "lines": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      54,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+     ],
+     "count": 16
+    }
+   },
+   "upper_bound_statement_share_without_dependency": {
+    "requires the jinja2 module": 0.815,
+    "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": 0.754
+   },
+   "authors_coverage": {
+    "pynguin_statement": {
+     "report": "100_300 LOC p2/pynguin coverage/sample29/statement_coverage_forms.txt",
+     "row": {
+      "stmts": 65,
+      "miss": 17,
+      "cover": "74%",
+      "missing": "49-54, 64-73, 92, 94, 96",
+      "missing_lines": [
+       49,
+       50,
+       51,
+       52,
+       53,
+       54,
+       64,
+       65,
+       66,
+       67,
+       68,
+       69,
+       70,
+       71,
+       72,
+       73,
+       92,
+       94,
+       96
+      ],
+      "gated_executed": {
+       "requires the jinja2 module": [
+        109,
+        115,
+        118,
+        123,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        136,
+        145
+       ],
+       "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": [
+        47,
+        48
+       ]
+      },
+      "gated_missed": {
+       "requires the jinja2 module": [],
+       "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": [
+        49,
+        50,
+        51,
+        54,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+       ]
+      }
+     }
+    },
+    "chatgpt_statement": {
+     "report": "100_300 LOC p2/ChatGPT coverage/sample29/statement_coverage.txt",
+     "row": {
+      "stmts": 65,
+      "miss": 14,
+      "cover": "78%",
+      "missing": "54, 65-73, 103, 128-130",
+      "missing_lines": [
+       54,
+       65,
+       66,
+       67,
+       68,
+       69,
+       70,
+       71,
+       72,
+       73,
+       103,
+       128,
+       129,
+       130
+      ],
+      "gated_executed": {
+       "requires the jinja2 module": [
+        109,
+        115,
+        118,
+        123,
+        124,
+        125,
+        126,
+        136,
+        145
+       ],
+       "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        64
+       ]
+      },
+      "gated_missed": {
+       "requires the jinja2 module": [
+        128,
+        129,
+        130
+       ],
+       "requires a template-environment object (jinja2.Environment in practice; a mock could stand in)": [
+        54,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+       ]
+      }
+     }
+    }
+   },
+   "authors_suites": {
+    "pynguin": {
+     "file": "100_300 LOC p2/pynguin coverage/sample29/test_forms.py",
+     "dependency_imports": [
+      "import jinja2.optimizer as module_2"
+     ],
+     "dependency_mentions": 44
+    },
+    "chatgpt": {
+     "file": "100_300 LOC p2/ChatGPT coverage/sample29/test_example.py",
+     "dependency_imports": [],
+     "dependency_mentions": 22
+    }
+   }
+  }
+ },
+ "ast_vs_coverage_calibration": {
+  "modules": 36,
+  "coverage_minus_ast": {
+   "-15": 1,
+   "-13": 1,
+   "-2": 2,
+   "-1": 3,
+   "0": 13,
+   "1": 6,
+   "2": 3,
+   "3": 1,
+   "4": 2,
+   "8": 2,
+   "9": 1,
+   "16": 1
+  },
+  "exact": 13
+ },
+ "httpie": {
+  "samples": {
+   "p2/sample8": {
+    "module": "compat.py",
+    "sha256": "a5178e3b8abcb37749179fffc57147c48c127dd9e1c1ada193541e3eb625a85b",
+    "vs_3_2_2": {
+     "canonical_equal": true,
+     "release_sha256": "e4a5909a6d2c8b7bb1b29493c5a6dcf0243f44bb57550a2163e1d053c6c0b946"
+    }
+   },
+   "p2/sample9": {
+    "module": "config.py",
+    "sha256": "a8ad8586e77ffc1802b7439157091bb29cab8c6d7c93ef1d2daaf1b153869fce",
+    "vs_3_2_2": {
+     "canonical_equal": true,
+     "release_sha256": "e85d8fd00aa6ae3bd5bc8d8ad2adbaabc224d172d41b37dd4aa5d23b29b37960"
+    }
+   },
+   "p2/sample10": {
+    "module": "sessions.py",
+    "sha256": "1c3c40bdca32fa0d86986a4bbcd4c72b95933b4f7b2a172218bfc2da2d10d98f",
+    "vs_3_2_2": {
+     "canonical_equal": true,
+     "release_sha256": "962d21af9c4d86f688be3123e21e71d8df5c456b756250790232f5a5e63e29bf"
+    }
+   },
+   "p2/sample11": {
+    "module": "ssl_.py",
+    "sha256": "d9773ee6aaaef517e7ead7ce85862f30e46461d70e08fdb9923123e89873d5f5",
+    "vs_3_2_2": {
+     "canonical_equal": false,
+     "release_sha256": "3bf4f9000df92c648d67321a5656d820949538179b184d4c112d066c319b267e",
+     "differing_lines": [
+      "-# <https://github.com/httpie/httpie/pull/1501>",
+      "+# <https://github.com/httpie/cli/pull/1501>"
+     ]
+    }
+   },
+   "p2/sample12": {
+    "module": "uploads.py",
+    "sha256": "b6455aefdbce34746201c79d37d141deae97c2dd928e42dad331c84514a391b2",
+    "vs_3_2_2": {
+     "canonical_equal": true,
+     "release_sha256": "dc7c2345f466036f04330bd7cebf1e26e837d2142324c528e0709ff2b9bebdb5"
+    }
+   }
+  },
+  "release_3_2_2_wheel_sha256": "33082092553126e3e38395682c23121c3450472ffddb363eb895ad685d01800e",
+  "authors_archive_roots": {
+   "sample11:cli-master": 148,
+   "sample12:cli-master": 148,
+   "sample8:httpie-master": 2,
+   "sample9:cli-master": 146
+  },
+  "cli_master_files_listed": 74,
+  "listed_not_in_3_2_2": [],
+  "in_3_2_2_not_listed": [
+   "httpie/output/lexers/http.py",
+   "httpie/output/ui/man_pages.py",
+   "httpie/output/ui/rich_progress.py",
+   "httpie/output/ui/rich_utils.py"
+  ]
+ }
+}
