@@ -1,0 +1,1 @@
+SUPERSEDED: produced before two fixes (flat import of the target name resolved to the benchmark module itself; platform-conditional imports recorded as optional). In this run sample40 flat/api.py was overwritten by the release copy in the materialized context. Kept unmodified as a record; not used.

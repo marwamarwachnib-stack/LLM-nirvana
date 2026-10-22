@@ -1,0 +1,378 @@
+{
+  "program_id": "p2/sample27",
+  "protocol": "execval-ctx-1",
+  "release_set": [
+    "0.2.4"
+  ],
+  "artifact_used": "typesystem-0.2.4.tar.gz",
+  "context_files": [
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/__init__.py",
+      "sha256": "c3a3e71ad060e7d4053115946e1e1cbb958ac114b6424f39ac5deb070419df00",
+      "source": "typesystem/__init__.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/base.py",
+      "sha256": "8f42766ef4470772a16111d4129d913bef1a894c21e404011bbc40245c862119",
+      "source": "typesystem/base.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/composites.py",
+      "sha256": "4b495f7e91001eef7cb00c4f1d93be37e811d92bdf56a7f6404f5686a63f18bf",
+      "source": "typesystem/composites.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/fields.py",
+      "sha256": "5ab4595ab6d48e4ecd24b17c2d1deadc30651a6d887a7c51a99f3622959c5418",
+      "source": "typesystem/fields.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/formats.py",
+      "sha256": "c9f958d24ef378f15217dcc97c47abe7f957db98999458167b3b6aad9a61afbd",
+      "source": "typesystem/formats.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/forms.py",
+      "sha256": "dd40b7be4976a94b8a038f1f1fd10e6050341715df31eae5cb16560f58f9f912",
+      "source": "typesystem/forms.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/json_schema.py",
+      "sha256": "dcf9248bdd471a4ffe0adac30b5c8ab4e0b2462788c07ce8291d763c86db4952",
+      "source": "typesystem/json_schema.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/schemas.py",
+      "sha256": "c32ddc54c25d1924c908737eedc0a6889c79415e337971f6d83e96ad5c27df91",
+      "source": "typesystem/schemas.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/tokenize/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "typesystem/tokenize/__init__.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/tokenize/positional_validation.py",
+      "sha256": "aadf3681393f76aefd05261072aad9e6ce600dddb6dc82ae9210e89f2031584a",
+      "source": "typesystem/tokenize/positional_validation.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/tokenize/tokenize_json.py",
+      "sha256": "c510b99688a7f79b3c8c2822696e16114adea987f5c6cc915da6339bb732faaa",
+      "source": "typesystem/tokenize/tokenize_json.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/tokenize/tokenize_yaml.py",
+      "sha256": "c97c181c9df129dbf0574c8964d7c0458f832807a577d80d94c61d58adba80f2",
+      "source": "typesystem/tokenize/tokenize_yaml.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/tokenize/tokens.py",
+      "sha256": "481e0057503f975bd78ccf3e95274682f0d1516e51c91255eaaa50fd29db41f0",
+      "source": "typesystem/tokenize/tokens.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/typesystem/unique.py",
+      "sha256": "90378dbdc0447dff63a8301385bdb0e6453ec86ccfcc1972746d34af4fd76df9",
+      "source": "typesystem/unique.py"
+    },
+    {
+      "kind": "benchmark_module",
+      "path": "flat/json_schema.py",
+      "sha256": "25b2d4569e05d88b6963274f0bd8de16efc5bc4816471c78d993340ff127e346"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/composites.py",
+      "rewritten_imports": [],
+      "sha256": "4b495f7e91001eef7cb00c4f1d93be37e811d92bdf56a7f6404f5686a63f18bf",
+      "source": "typesystem/composites.py",
+      "source_sha256": "4b495f7e91001eef7cb00c4f1d93be37e811d92bdf56a7f6404f5686a63f18bf"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/fields.py",
+      "rewritten_imports": [],
+      "sha256": "5ab4595ab6d48e4ecd24b17c2d1deadc30651a6d887a7c51a99f3622959c5418",
+      "source": "typesystem/fields.py",
+      "source_sha256": "5ab4595ab6d48e4ecd24b17c2d1deadc30651a6d887a7c51a99f3622959c5418"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/schemas.py",
+      "rewritten_imports": [],
+      "sha256": "c32ddc54c25d1924c908737eedc0a6889c79415e337971f6d83e96ad5c27df91",
+      "source": "typesystem/schemas.py",
+      "source_sha256": "c32ddc54c25d1924c908737eedc0a6889c79415e337971f6d83e96ad5c27df91"
+    }
+  ],
+  "sys_path_after_cwd": [
+    "<sandbox>/pkgroot"
+  ],
+  "context_integrity_problems": [],
+  "v1_import": {
+    "module": "json_schema",
+    "outcome": "IMPORT_ERROR",
+    "first_result": {
+      "outcome": "IMPORT_ERROR",
+      "exc_type": "AssertionError",
+      "exc": "AssertionError()"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_ERROR",
+          "exc_type": "AssertionError",
+          "exc": "AssertionError()"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "json_schema",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample27/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.089,
+          "stdout_sha256": "51af4a58e2e8d74120f7611661fed082f0b9c27e2cac7ab4564e00784a792b7e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 99,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_ERROR\", \"exc_type\": \"AssertionError\", \"exc\": \"AssertionError()\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_ERROR",
+          "exc_type": "AssertionError",
+          "exc": "AssertionError()"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "json_schema",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample27/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.089,
+          "stdout_sha256": "51af4a58e2e8d74120f7611661fed082f0b9c27e2cac7ab4564e00784a792b7e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 99,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_ERROR\", \"exc_type\": \"AssertionError\", \"exc\": \"AssertionError()\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_ERROR",
+          "exc_type": "AssertionError",
+          "exc": "AssertionError()"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "json_schema",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample27/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.077,
+          "stdout_sha256": "51af4a58e2e8d74120f7611661fed082f0b9c27e2cac7ab4564e00784a792b7e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 99,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_ERROR\", \"exc_type\": \"AssertionError\", \"exc\": \"AssertionError()\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v3_context_imports": {
+    "composites": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "fields": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "schemas": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.base": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.composites": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.fields": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.formats": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.forms": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.json_schema": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.schemas": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.tokenize": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.tokenize.positional_validation": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.tokenize.tokenize_json": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.tokenize.tokenize_yaml": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.tokenize.tokens": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "typesystem.unique": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    }
+  },
+  "site_unchanged": true,
+  "execution_verified": false,
+  "outcome": "FAIL_IMPORT_IMPORT_ERROR",
+  "outcome_reason": "import outcome IMPORT_ERROR AssertionError"
+}

@@ -1,0 +1,1 @@
+SUPERSEDED: context derivation rewrote only relative imports in flat siblings; sample27 failed (two copies of typesystem.fields). Replaced by derivation F (relative and package-absolute imports, as in the authors flattened samples) plus use of the authors own flattened copies where the snapshot contains them. Kept unmodified as a record; not used.

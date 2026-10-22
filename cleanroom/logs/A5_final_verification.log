@@ -1,0 +1,21 @@
+$ python3 -m unittest discover -s tests
+Ran 107 tests in 8.461s
+
+OK
+$ python3 -m cleanroom.integrity verify --against-git
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+    "passed": true,
+[exit=0]
+$ (cd .. && sha256sum --strict -c cleanroom/benchmark/originals.SHA256SUMS)
+    993 OK
+$ git -C .. status --porcelain --ignored -- ":!cleanroom"  (empty = untouched)
+$ git -C .. diff --stat e330b23 -- ":!cleanroom"
+$ find .. -name __pycache__ -not -path "../.git/*" -newer benchmark/originals_sha256.tsv
+$ ls -A /opt/cleanroom/sandboxes
+$ sealed runs
+runs/execval/20261022T124436Z: OK (29 files)
+runs/execval/20261022T124615Z: OK (521 files)
+runs/execval/20261022T130857Z: OK (28 files)
+runs/execval/20261022T131114Z: OK (28 files)

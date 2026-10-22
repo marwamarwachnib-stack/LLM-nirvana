@@ -49,12 +49,12 @@
     "A3 static eligibility manifest",
     "tests",
     "eligibility report",
-    "A4 execution validation of the 51 CANDIDATE programs in an isolated Python 3.10.12 environment"
+    "A4 execution validation of the 51 CANDIDATE programs in an isolated Python 3.10.12 environment",
+    "A5 p2 project-context resolution from verified PyPI releases and re-validation"
   ],
   "not_authorised_yet": [
     "test generation (Pynguin, LLMs)",
     "downloading models",
-    "installing benchmark dependencies / reconstructing p2 context",
     "coverage measurement",
     "mutation testing",
     "energy measurement"
@@ -64,13 +64,14 @@
     "Pynguin version and configuration",
     "model precision/quantization, runtime, decoding parameters, samples and seeds",
     "handling of Category 1 scripts (NEEDS_DECISION_STDIN / NEEDS_DECISION_NO_UNIT)",
-    "p2 dependency/context reconstruction method (PENDING_CONTEXT)",
     "p2 Cat 2 / Cat 3 labelling rule",
     "coverage.py version",
     "mutation tool, operators, timeout policy, score denominator",
     "energy instrument and execution hardware",
-    "adopt V2b (example.py substituted for the Exercism starter in the sandbox) as developer-test oracle",
-    "pin 2023-era C-library builds or accept current builds"
+    "pin 2023-era C-library builds or accept current builds",
+    "httpie samples 8-12: obtain the authors' GitHub revision (github.com access)",
+    "optional PyYAML / Jinja2 for typesystem samples 29-30",
+    "external package version policy (newest before 2024-01-26)"
   ],
   "environment": {
     "python": "CPython 3.10.12, Anaconda main channel build python-3.10.12-h955ad1f_0 (2023-07-05)",
@@ -90,5 +91,23 @@
     "attempted": 51,
     "not_attempted_in_scope": 52,
     "p2_evidence": "20261022T125002Z"
+  },
+  "p2_context": {
+    "resolution": "20261022T131041Z",
+    "context_execution_run": "20261022T131114Z",
+    "newly_verified": 26,
+    "unresolved": [
+      "p2/sample8",
+      "p2/sample9",
+      "p2/sample10",
+      "p2/sample11",
+      "p2/sample12"
+    ],
+    "locks": "config/p2_locks/",
+    "contexts": "/opt/cleanroom/context/contexts (rebuilt by p2_context resolve)"
+  },
+  "devtest_oracle": {
+    "cat2_functions": "evidence-backed reference (Exercism config.json)",
+    "cat3_classes": "inferred only; not adopted as reference"
   }
 }

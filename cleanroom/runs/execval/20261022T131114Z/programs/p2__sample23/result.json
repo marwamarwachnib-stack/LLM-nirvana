@@ -1,0 +1,183 @@
+{
+  "program_id": "p2/sample23",
+  "protocol": "execval-ctx-1",
+  "release_set": [
+    "1.0.0"
+  ],
+  "artifact_used": "python-string-utils-1.0.0.tar.gz",
+  "context_files": [
+    {
+      "kind": "benchmark_module",
+      "path": "flat/manipulation.py",
+      "sha256": "1e4b61729d018bd3a8cb33d68a0607c421c9caef83a8706a6defd1fe40788b7d"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/_regex.py",
+      "rewritten_imports": [],
+      "sha256": "32f7757a5bb7dd1ee47c65dca272db3d7047fdb9a319ca6843fc619916799878",
+      "source": "string_utils/_regex.py",
+      "source_sha256": "32f7757a5bb7dd1ee47c65dca272db3d7047fdb9a319ca6843fc619916799878"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/errors.py",
+      "rewritten_imports": [],
+      "sha256": "092188c7d5410d7cc4ea3131002994c95521fc0bd25c42c12e1382a2ee59e7e0",
+      "source": "string_utils/errors.py",
+      "source_sha256": "092188c7d5410d7cc4ea3131002994c95521fc0bd25c42c12e1382a2ee59e7e0"
+    },
+    {
+      "kind": "release_derived",
+      "path": "flat/validation.py",
+      "rewritten_imports": [
+        [
+          "from ._regex import *",
+          "from _regex import *"
+        ],
+        [
+          "from .errors import InvalidInputError",
+          "from errors import InvalidInputError"
+        ]
+      ],
+      "sha256": "80db5fcdb4cac87e16e3f6f6d9e3fb80900da646f5cdc9b303139897c9ae8cdb",
+      "source": "string_utils/validation.py",
+      "source_sha256": "d625c7caffd81143c0c4fd866ee604b519f646d365993835b6bb24203df368bc"
+    }
+  ],
+  "sys_path_after_cwd": [
+    "<sandbox>/pkgroot"
+  ],
+  "context_integrity_problems": [],
+  "v1_import": {
+    "module": "manipulation",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "manipulation",
+            "/opt/cleanroom/sandboxes/20261022T131114Z/p2__sample23/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.078,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "manipulation",
+            "/opt/cleanroom/sandboxes/20261022T131114Z/p2__sample23/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.08,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "manipulation",
+            "/opt/cleanroom/sandboxes/20261022T131114Z/p2__sample23/pkgroot"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.065,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v3_context_imports": {
+    "_regex": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "errors": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "validation": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    }
+  },
+  "site_unchanged": true,
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_WITH_CONTEXT",
+  "outcome_reason": "benchmark module and 3 context modules import consistently (network disabled)"
+}

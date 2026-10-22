@@ -21,6 +21,14 @@ class TestCombine(unittest.TestCase):
                          "solution_module": {"evidence": "config.json files.solution"}}}
         evidence = [{"program_id": "d", "import": "cfg", "classification": "SIBLING_IN_AUTHORS_RUN"}]
         out = {t["program_id"]: t for t in eligibility.combine(rows, "RUN", results, evidence)}
+        ctx = eligibility.combine(rows, "RUN", results, evidence,
+                                  {"d": {"project": "p", "release_set": ["1.0"], "decision": "RESOLVED", "reason": ""}},
+                                  "CTX", {"d": {"execution_verified": True, "outcome": "VERIFIED_IMPORT_WITH_CONTEXT",
+                                                "outcome_reason": "ok", "v1_import": {"consistent": True}}})
+        d = [t for t in ctx if t["program_id"] == "d"][0]
+        self.assertEqual((d["attempted"], d["run_id"], d["p2_release_set"], d["p2_context_decision"]),
+                         (True, "CTX", "1.0", "RESOLVED"))
+        self.assertEqual(out["a"]["devtest_oracle"].split()[0], "EVIDENCE_BACKED_REFERENCE")
         self.assertEqual(list(out), ["a", "b", "c", "d"])
         self.assertEqual((out["a"]["execution_verified"], out["a"]["devtests_as_shipped"],
                           out["a"]["devtests_vs_example"], out["a"]["run_id"]), (True, "0/4", "4/4", "RUN"))
@@ -42,7 +50,13 @@ class TestRealEligibility(unittest.TestCase):
         in_scope = [t for t in table if t["in_scope"] == "True"]
         self.assertEqual(len(in_scope), 103)
         attempted = [t for t in in_scope if t["attempted"] == "True"]
-        self.assertTrue(all(t["static_status"] == manifest.CANDIDATE for t in attempted))
+        self.assertTrue(all(t["static_status"] == manifest.CANDIDATE
+                            or (t["static_status"] == manifest.PENDING_CONTEXT
+                                and t["p2_context_decision"] == "RESOLVED") for t in attempted))
+        self.assertTrue(all(t["attempted"] == "False" for t in table
+                            if t["p2_context_decision"].startswith("UNRESOLVED")))
+        self.assertTrue(all(t["outcome"] == "NOT_ATTEMPTED" for t in table
+                            if t["category"] == "cat1_scripts"))  # Cat 1 deferred
         self.assertTrue(all(t["outcome"] == "NOT_ATTEMPTED" for t in table if t["attempted"] == "False"))
         self.assertTrue(all(t["execution_verified"] == "False" for t in table if t["attempted"] == "False"))
 

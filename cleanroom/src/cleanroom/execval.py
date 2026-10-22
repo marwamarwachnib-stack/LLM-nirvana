@@ -47,6 +47,8 @@ PYTEST_EXIT = {0: "RAN", 1: "RAN", 2: "COLLECTION_ERROR_OR_INTERRUPTED", 3: "INT
 IMPORT_PROBE = f"""
 import importlib, json, sys
 sys.path.insert(0, ".")
+for i, extra in enumerate(sys.argv[2:]):
+    sys.path.insert(1 + i, extra)
 name = sys.argv[1]
 try:
     importlib.import_module(name)
@@ -205,10 +207,12 @@ def consistent(values: list) -> bool:
 
 # ---------------------------------------------------------------- validation steps
 
-def validate_import(prog: dict, sandbox: Path, python: Path, module: str) -> dict:
+def validate_import(prog: dict, sandbox: Path, python: Path, module: str,
+                    extra_paths: tuple[str, ...] = ()) -> dict:
+    """Import `module` from `sandbox` (cwd) with `extra_paths` after it on sys.path."""
     runs = []
     for i in range(REPETITIONS):
-        rec, out = run_sandboxed([str(python), "-I", "-B", "-c", IMPORT_PROBE, module],
+        rec, out = run_sandboxed([str(python), "-I", "-B", "-c", IMPORT_PROBE, module, *extra_paths],
                                  sandbox, IMPORT_TIMEOUT_S, python)
         runs.append({"repetition": i + 1, "result": parse_import_result(rec, out), "run": asdict(rec)})
     signature = [(r["result"], r["run"]["stdout_sha256"], r["run"]["stderr_sha256"],

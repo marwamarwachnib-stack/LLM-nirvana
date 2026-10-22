@@ -1,0 +1,261 @@
+{
+  "program_id": "p2/sample38",
+  "protocol": "execval-ctx-1",
+  "release_set": [
+    "0.5.2",
+    "0.5.3"
+  ],
+  "artifact_used": "dataclasses-json-0.5.2.tar.gz",
+  "context_files": [
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/__init__.py",
+      "sha256": "2dabfbdd960690a0da79f98e9ead603cd76effdf5ecc40f84794ea0e1cb14205",
+      "source": "dataclasses_json/__init__.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/api.py",
+      "sha256": "83a9a3d0831ffa93937434601e99afdb98e0a9174cb42697bfa67a276fb42ca7",
+      "source": "dataclasses_json/api.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/cfg.py",
+      "sha256": "eeb1ccf4916b1624df0a6ebbd8e36e9e7151b96a65684a98949f7e09d847c953",
+      "source": "dataclasses_json/cfg.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/core.py",
+      "sha256": "1554a38be392ea53aada2c5e8438b0e0d5db884835c028936ec2e14a7dc3afc4",
+      "source": "dataclasses_json/core.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/mm.py",
+      "sha256": "25a2a613fbd9e9c0b7a98013512414f5d3b9a80280822ff0b68bb3d33ebc0714",
+      "source": "dataclasses_json/mm.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/undefined.py",
+      "sha256": "b0aa10badeb01688b6baf48db975f29fc3d048bfffc987c39885006a8a48dc59",
+      "source": "dataclasses_json/undefined.py"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "pkgroot/dataclasses_json/utils.py",
+      "sha256": "2a939c49dbb168d6b78f15d41670b31300f7456cb23b9efb932eecfcfa348177",
+      "source": "dataclasses_json/utils.py"
+    },
+    {
+      "kind": "benchmark_module",
+      "path": "flat/core.py",
+      "sha256": "0dcf34109774e5456e84cbb7df88063666ffe56ea62d6b4635572a7763fd3e42"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/cfg.py",
+      "rewritten_imports": [],
+      "sha256": "eeb1ccf4916b1624df0a6ebbd8e36e9e7151b96a65684a98949f7e09d847c953",
+      "source": "dataclasses_json/cfg.py",
+      "source_sha256": "eeb1ccf4916b1624df0a6ebbd8e36e9e7151b96a65684a98949f7e09d847c953"
+    },
+    {
+      "kind": "release_verbatim",
+      "path": "flat/utils.py",
+      "rewritten_imports": [],
+      "sha256": "2a939c49dbb168d6b78f15d41670b31300f7456cb23b9efb932eecfcfa348177",
+      "source": "dataclasses_json/utils.py",
+      "source_sha256": "2a939c49dbb168d6b78f15d41670b31300f7456cb23b9efb932eecfcfa348177"
+    }
+  ],
+  "sys_path_after_cwd": [
+    "<sandbox>/pkgroot",
+    "/opt/cleanroom/context/site/dataclasses-json==0.5.2"
+  ],
+  "context_integrity_problems": [],
+  "v1_import": {
+    "module": "core",
+    "outcome": "IMPORT_OK",
+    "first_result": {
+      "outcome": "IMPORT_OK"
+    },
+    "consistent": true,
+    "side_effect_files": [],
+    "runs": [
+      {
+        "repetition": 1,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "core",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample38/pkgroot",
+            "/opt/cleanroom/context/site/dataclasses-json==0.5.2"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.085,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 2,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "core",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample38/pkgroot",
+            "/opt/cleanroom/context/site/dataclasses-json==0.5.2"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.089,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      },
+      {
+        "repetition": 3,
+        "result": {
+          "outcome": "IMPORT_OK"
+        },
+        "run": {
+          "argv": [
+            "/opt/cleanroom/envs/py31012/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "\nimport importlib, json, sys\nsys.path.insert(0, \".\")\nfor i, extra in enumerate(sys.argv[2:]):\n    sys.path.insert(1 + i, extra)\nname = sys.argv[1]\ntry:\n    importlib.import_module(name)\n    r = {\"outcome\": \"IMPORT_OK\"}\nexcept ModuleNotFoundError as e:\n    r = {\"outcome\": \"MISSING_MODULE\", \"module\": e.name, \"exc\": repr(e)[:500]}\nexcept SystemExit as e:\n    r = {\"outcome\": \"SYSTEM_EXIT\", \"code\": repr(e.code)[:200]}\nexcept BaseException as e:\n    r = {\"outcome\": \"IMPORT_ERROR\", \"exc_type\": type(e).__name__, \"exc\": repr(e)[:500]}\nsys.stdout.flush()\nprint(\"\\n@@CR_RESULT@@\" + json.dumps(r))\n",
+            "core",
+            "/opt/cleanroom/sandboxes/20261022T130857Z/p2__sample38/pkgroot",
+            "/opt/cleanroom/context/site/dataclasses-json==0.5.2"
+          ],
+          "returncode": 0,
+          "signal": "",
+          "timed_out": false,
+          "duration_s": 0.089,
+          "stdout_sha256": "272e2ce2d32a5634c2ad9af5b7a21e79b6874edf3a12915ee4df6bb57d4e9375",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 39,
+          "stderr_bytes": 0,
+          "stdout_tail": "\n@@CR_RESULT@@{\"outcome\": \"IMPORT_OK\"}\n",
+          "stderr_tail": "",
+          "files_created": [],
+          "files_modified": [],
+          "files_deleted": []
+        }
+      }
+    ]
+  },
+  "v3_context_imports": {
+    "cfg": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.api": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.cfg": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.core": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.mm": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.undefined": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "dataclasses_json.utils": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    },
+    "utils": {
+      "outcome": "IMPORT_OK",
+      "consistent": true,
+      "first_result": {
+        "outcome": "IMPORT_OK"
+      },
+      "side_effect_files": []
+    }
+  },
+  "site_unchanged": true,
+  "execution_verified": true,
+  "outcome": "VERIFIED_IMPORT_WITH_CONTEXT",
+  "outcome_reason": "benchmark module and 9 context modules import consistently (network disabled)"
+}

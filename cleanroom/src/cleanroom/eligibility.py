@@ -1,7 +1,8 @@
-"""Combine the static manifest, an execution-validation run and the p2 evidence into
-benchmark/eligibility.csv (all manifest rows) and reports/A4_eligibility_status.md.
+"""Combine the static manifest, execution-validation runs, the p2 import evidence and the p2
+context resolution into benchmark/eligibility.csv (all manifest rows) and a status report.
 
-    python3 -m cleanroom.eligibility --run RUN_ID --evidence STAMP
+    python3 -m cleanroom.eligibility --run RUN_ID --evidence STAMP \
+        [--resolution STAMP --ctx-run RUN_ID] [--report NAME]
 """
 from __future__ import annotations
 
@@ -13,14 +14,21 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from . import execval, integrity, manifest, p2_evidence, paths
+from . import execval, integrity, manifest, p2_context, p2_evidence, paths
 
 ELIGIBILITY_CSV = paths.BENCHMARK_DIR / "eligibility.csv"
 REPORT = paths.REPORTS_DIR / "A4_eligibility_status.md"
+REPORT_A5 = paths.REPORTS_DIR / "A5_eligibility_status.md"
 FIELDS = ["program_id", "set", "category", "in_scope", "static_status", "attempted",
           "execution_verified", "outcome", "outcome_reason", "run_id",
           "import_consistent", "devtests_as_shipped", "devtests_vs_example", "devtests_skipped",
-          "solution_module_evidence", "p2_import_evidence"]
+          "solution_module_evidence", "devtest_oracle", "p2_import_evidence",
+          "p2_origin_project", "p2_release_set", "p2_context_decision", "p2_context_reason"]
+
+# User decision (phase A5): the example.py substitution is an evidence-backed reference oracle
+# for Cat 2 only (Exercism config.json); for Cat 3 it is an inference, documented separately.
+ORACLE = {"cat2_functions": "EVIDENCE_BACKED_REFERENCE (config.json: solution/test/example)",
+          "cat3_classes": "INFERRED_ONLY (no config.json; not adopted as reference)"}
 
 
 def _sha(p: Path) -> str:
@@ -46,16 +54,40 @@ def _frac(v: dict | None) -> str:
     return "" if not v else f"{v.get('passed')}/{v.get('tests')}"
 
 
-def combine(rows: list[dict], run_id: str, results: dict[str, dict], evidence: list[dict]) -> list[dict]:
+def load_resolution(stamp: str) -> dict[str, dict]:
+    """program_id -> {project, release_set, decision, reason} from a p2_context run."""
+    data = json.loads((p2_context.OUT_DIR / stamp / "resolution.json").read_text(encoding="utf-8"))
+    out = {}
+    for project, pres in data.items():
+        for s, d in pres["samples"].items():
+            out[d["program_id"]] = {"project": project, "release_set": d.get("release_set") or pres["release_set"],
+                                    "matching": d.get("matching_releases", []),
+                                    "decision": d.get("decision", ""), "reason": d.get("reason", "")}
+    return out
+
+
+def combine(rows: list[dict], run_id: str, results: dict[str, dict], evidence: list[dict],
+            resolution: dict[str, dict] | None = None, ctx_run_id: str = "",
+            ctx_results: dict[str, dict] | None = None) -> list[dict]:
     ev_by = defaultdict(list)
     for e in evidence:
         ev_by[e["program_id"]].append(f"{e['import']}={e['classification']}")
+    resolution, ctx_results = resolution or {}, ctx_results or {}
     out = []
     for r in rows:
-        res = results.get(r["program_id"])
-        row = {"program_id": r["program_id"], "set": r["set"], "category": r["category"],
+        pid = r["program_id"]
+        res = results.get(pid)
+        rid = run_id
+        if res is None and pid in ctx_results:
+            res, rid = ctx_results[pid], ctx_run_id
+        rz = resolution.get(pid, {})
+        row = {"program_id": pid, "set": r["set"], "category": r["category"],
                "in_scope": r["in_scope"], "static_status": r["status"],
-               "attempted": res is not None, "p2_import_evidence": ";".join(ev_by.get(r["program_id"], []))}
+               "attempted": res is not None, "p2_import_evidence": ";".join(ev_by.get(pid, [])),
+               "devtest_oracle": ORACLE.get(r["category"], "") if r["set"] == "small" else "",
+               "p2_origin_project": rz.get("project", ""),
+               "p2_release_set": ";".join(rz.get("release_set") or []),
+               "p2_context_decision": rz.get("decision", ""), "p2_context_reason": rz.get("reason", "")}
         if res is None:
             reason = ("out of scope (p1, decision 2)" if r["in_scope"] != "True"
                       else f"not executed in this phase: static status {r['status']} ({r['reasons']})")
@@ -63,7 +95,7 @@ def combine(rows: list[dict], run_id: str, results: dict[str, dict], evidence: l
         else:
             v2a, v2b = res.get("v2a_as_shipped"), res.get("v2b_reference")
             row.update(execution_verified=res["execution_verified"], outcome=res["outcome"],
-                       outcome_reason=res["outcome_reason"], run_id=run_id,
+                       outcome_reason=res["outcome_reason"], run_id=rid,
                        import_consistent=res["v1_import"]["consistent"],
                        devtests_as_shipped=_frac(v2a), devtests_vs_example=_frac(v2b),
                        devtests_skipped="" if not v2b else v2b.get("skipped"),
@@ -171,10 +203,84 @@ def render(table: list[dict], meta: dict, results: dict, evidence: list[dict], s
     return "\n".join(L)
 
 
+def render_a5(table: list[dict], meta: dict, ctx_meta: dict, resolution_stamp: str,
+              resolution: dict[str, dict], ctx_results: dict[str, dict]) -> str:
+    L: list[str] = []
+    w = L.append
+    w("# A5 — Eligibility status after p2 context resolution\n")
+    w("Generated by `python3 -m cleanroom.eligibility` from `benchmark/manifest.csv`, execution run "
+      f"`runs/execval/{meta['run_id']}/` (51 candidates), context resolution "
+      f"`runs/p2_context/{resolution_stamp}/` and context execution run "
+      f"`runs/execval/{ctx_meta['run_id']}/`. No number here is typed by hand.\n")
+    w(f"- `benchmark/eligibility.csv` SHA-256: `{_sha(ELIGIBILITY_CSV)}`")
+    w(f"- Context run protocol `{ctx_meta['protocol']}`: {ctx_meta['repetitions']} repetitions, import "
+      f"timeout {ctx_meta['import_timeout_s']} s, network {ctx_meta['network']}; integrity before/after "
+      f"`{ctx_meta['integrity_before']}`/`{ctx_meta['integrity_after']}`\n")
+    ins = [t for t in table if t["in_scope"] == "True"]
+    groups = defaultdict(Counter)
+    for t in ins:
+        state = ("verified" if t["execution_verified"] is True else
+                 "attempted, not verified" if t["attempted"] else "not verified")
+        groups[f"{t['set']}/{t['category']}"][state] += 1
+    states = ["verified", "attempted, not verified", "not verified"]
+    w("## Summary (103 in-scope programs)\n")
+    w("| Group | " + " | ".join(states) + " |\n|---|" + "---:|" * len(states))
+    tot = Counter()
+    for g, c in sorted(groups.items()):
+        tot.update(c)
+        w(f"| {g} | " + " | ".join(str(c[s]) for s in states) + " |")
+    w("| **all** | " + " | ".join(f"**{tot[s]}**" for s in states) + " |\n")
+
+    p2 = [t for t in ins if t["set"] == "p2"]
+    pend = [t for t in p2 if t["static_status"] == manifest.PENDING_CONTEXT]
+    newly = [t for t in pend if t["execution_verified"] is True]
+    w("## p2 programs with missing context (31)\n")
+    w(f"- Newly execution-verified with a reconstructed context: **{len(newly)}**")
+    w(f"- Unresolved: **{sum(t['p2_context_decision'].startswith('UNRESOLVED') for t in pend)}**")
+    w(f"- Resolved but failing execution: **{sum(t['p2_context_decision'] == 'RESOLVED' and t['execution_verified'] is not True for t in pend)}**\n")
+    w("| Program | Project | Release set | Context decision | Execution | Reason |\n|---|---|---|---|---|---|")
+    for t in pend:
+        w(f"| `{t['program_id']}` | {t['p2_origin_project']} | {t['p2_release_set'] or '—'} | "
+          f"`{t['p2_context_decision']}` | `{t['outcome']}` | {t['p2_context_reason'] or t['outcome_reason']} |")
+    w("")
+    w("### Context composition (resolved programs)\n")
+    w("Kinds: `benchmark_module` = the snapshot module; `benchmark_sibling` = the authors' own flattened "
+      "copy of a sibling module, present in the snapshot as another sample and verified against the "
+      "same release set; `release_verbatim` = release file, unchanged; `release_derived` = release "
+      "file with project-internal imports flattened by derivation F (line numbers kept).\n")
+    w("| Program | Release artifact | benchmark_sibling | release_verbatim | release_derived | Context modules imported (V3) |")
+    w("|---|---|---:|---:|---:|---:|")
+    for t in pend:
+        r = ctx_results.get(t["program_id"])
+        if not r:
+            continue
+        k = Counter(f["kind"] for f in r["context_files"])
+        w(f"| `{t['program_id']}` | `{r['artifact_used']}` | {k['benchmark_sibling']} | {k['release_verbatim']} | "
+          f"{k['release_derived']} | {len(r['v3_context_imports'])} |")
+    w("")
+    w("## Cross-checks (p2 programs already verified in A4)\n")
+    w("Matching releases for the 12 standard-library-only p2 programs (used to intersect release sets):\n")
+    w("| Program | Project | Matching releases |\n|---|---|---|")
+    for t in p2:
+        rz = resolution.get(t["program_id"])
+        if t["static_status"] == manifest.CANDIDATE:
+            w(f"| `{t['program_id']}` | {rz['project'] if rz else '— (no hypothesis)'} | "
+              f"{', '.join(rz['matching']) if rz else '—'} |")
+    w("")
+    w("## Developer-test oracle (small set)\n")
+    for cat, label in ORACLE.items():
+        n = sum(t["category"] == cat for t in ins)
+        w(f"- `{cat}` ({n} programs): {label}")
+    w("")
+    return "\n".join(L)
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="cleanroom.eligibility")
-    ap.add_argument("--run", required=True, help="execution-validation run id")
+    ap.add_argument("--run", required=True, help="execution-validation run id (51 candidates)")
     ap.add_argument("--evidence", required=True, help="p2 evidence stamp")
+    ap.add_argument("--resolution", help="p2_context resolution stamp")
+    ap.add_argument("--ctx-run", help="execution run of the resolved contexts")
     args = ap.parse_args(argv)
     integrity.assert_originals_intact()
     rows = manifest.read_manifest(paths.MANIFEST_CSV)
@@ -182,15 +288,28 @@ def main(argv: list[str] | None = None) -> int:
     if meta["manifest_sha256"] != _sha(paths.MANIFEST_CSV):
         raise RuntimeError("run was made against a different manifest")
     evidence = load_evidence(args.evidence)
-    table = combine(rows, args.run, results, evidence)
+    resolution, ctx_meta, ctx_results = {}, None, {}
+    if args.resolution:
+        resolution = load_resolution(args.resolution)
+    if args.ctx_run:
+        ctx_meta, ctx_results = load_run(args.ctx_run)
+        if ctx_meta["manifest_sha256"] != _sha(paths.MANIFEST_CSV) or ctx_meta["resolution"] != args.resolution:
+            raise RuntimeError("context run does not belong to this manifest/resolution")
+    table = combine(rows, args.run, results, evidence, resolution, args.ctx_run or "", ctx_results)
     with open(ELIGIBILITY_CSV, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
         w.writeheader()
         w.writerows(table)
-    REPORT.write_text(render(table, meta, results, evidence, args.evidence), encoding="utf-8")
+    if ctx_meta:
+        report = REPORT_A5
+        report.write_text(render_a5(table, meta, ctx_meta, args.resolution, resolution, ctx_results),
+                          encoding="utf-8")
+    else:
+        report = REPORT
+        report.write_text(render(table, meta, results, evidence, args.evidence), encoding="utf-8")
     integrity.assert_originals_intact()
-    print(json.dumps({"eligibility_csv": _sha(ELIGIBILITY_CSV), "report": _sha(REPORT),
-                      "rows": len(table)}, indent=2))
+    print(json.dumps({"eligibility_csv": _sha(ELIGIBILITY_CSV), "report": str(report.name),
+                      "report_sha256": _sha(report), "rows": len(table)}, indent=2))
     return 0
 
 

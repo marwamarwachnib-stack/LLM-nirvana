@@ -1,0 +1,56 @@
+{
+  "_comment": "Origin-project HYPOTHESES for p2 samples, from the authors' saved coverage reports (sibling file names; absolute paths of the authors' machine). A hypothesis is accepted only if the sample module matches a released file under the normalization in cleanroom/src/cleanroom/p2_context.py.",
+  "flutils": {
+    "pypi": "flutils", "package": "flutils",
+    "samples": ["sample1", "sample2", "sample3", "sample4", "sample5", "sample6"],
+    "evidence": "saved reports list moduleutils.py, decorators.py, objutils.py, packages.py, strutils.py, txtutils.py, validators.py with __init__.py"
+  },
+  "httpie": {
+    "pypi": "httpie", "package": "httpie",
+    "samples": ["sample8", "sample9", "sample10", "sample11", "sample12"],
+    "evidence": "saved reports contain absolute paths <ROOT>/httpie-master/httpie/__init__.py (sample8) and <ROOT>/cli-master/httpie/... (samples 9, 11, 12)",
+    "vcs_snapshot": "authors' paths name GitHub branch archives ('httpie-master', 'cli-master'), not releases"
+  },
+  "pymonet": {
+    "pypi": "pymonet", "package": "pymonet",
+    "samples": ["sample13", "sample14", "sample15", "sample16", "sample17", "sample18", "sample19", "sample20", "sample21"],
+    "evidence": "saved reports list box.py, either.py, lazy.py, maybe.py, monad_try.py, validation.py with __init__.py; modules import pymonet.* inside functions"
+  },
+  "python-string-utils": {
+    "pypi": "python-string-utils", "package": "string_utils",
+    "samples": ["sample22", "sample23"],
+    "evidence": "saved reports list _regex.py, errors.py, generation.py, manipulation.py, validation.py with __init__.py"
+  },
+  "sty": {
+    "pypi": "sty", "package": "sty",
+    "samples": ["sample24"],
+    "evidence": "saved report lists lib.py, primitive.py, register.py, renderfunc.py, rendertype.py with __init__.py"
+  },
+  "typesystem": {
+    "pypi": "typesystem", "package": "typesystem",
+    "samples": ["sample25", "sample26", "sample27", "sample28", "sample29", "sample30", "sample31", "sample32"],
+    "evidence": "saved reports list base.py, composites.py, fields.py, formats.py, forms.py, json_schema.py, positional_validation.py, schemas.py, tokenize_json.py, tokenize_yaml.py, tokens.py, unique.py with __init__.py"
+  },
+  "docstring-parser": {
+    "pypi": "docstring-parser", "package": "docstring_parser",
+    "samples": ["sample33", "sample34", "sample35", "sample36"],
+    "evidence": "saved reports list common.py, google.py, numpydoc.py, parser.py, rest.py, styles.py with __init__.py"
+  },
+  "dataclasses-json": {
+    "pypi": "dataclasses-json", "package": "dataclasses_json",
+    "samples": ["sample37", "sample38", "sample39"],
+    "evidence": "saved reports list api.py, cfg.py, core.py, mm.py, undefined.py, utils.py with __init__.py"
+  },
+  "pdir2": {
+    "pypi": "pdir2", "package": "pdir",
+    "samples": ["sample40", "sample41"],
+    "evidence": "saved reports contain absolute paths <ROOT>/pdir2-0.3.2/pdir/... (release 0.3.2 named in the path)",
+    "named_release": "0.3.2"
+  },
+  "flutes": {
+    "pypi": "flutes", "package": "flutes",
+    "samples": ["sample42", "sample43"],
+    "evidence": "saved reports contain absolute paths <ROOT>/flutes_new/flutes/... and flat types_renamed.py",
+    "module_renames": {"types_renamed": "types"}
+  }
+}

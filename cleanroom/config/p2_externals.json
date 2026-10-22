@@ -1,0 +1,25 @@
+{
+  "_comment": "External requirements per resolved release. 'declared' is copied from the release's own metadata (source given); a requirement is installed only if one of its import names occurs in the sample's import closure (import time or inside functions). Conditional/optional imports are not installed.",
+  "cutoff_utc": "2024-01-26T16:51:11",
+  "dataclasses-json==0.5.2": {
+    "declared_source": "dataclasses_json-0.5.2-py3-none-any.whl METADATA Requires-Dist / setup.py install_requires",
+    "declared": ["marshmallow>=3.3.0,<4.0.0", "marshmallow-enum>=1.5.1,<2.0.0", "typing-inspect>=0.4.0", "stringcase==1.2.0,<2.0.0"],
+    "import_names": {"marshmallow": "marshmallow", "marshmallow_enum": "marshmallow-enum",
+                     "typing_inspect": "typing-inspect", "stringcase": "stringcase"},
+    "samples": ["sample37", "sample38", "sample39"]
+  },
+  "flutes==0.3.0": {
+    "declared_source": "flutes-0.3.0-py3-none-any.whl METADATA Requires-Dist",
+    "declared": ["ipython", "psutil", "termcolor>=1.0", "tqdm>=4.0", "typing-extensions"],
+    "import_names": {"IPython": "ipython", "psutil": "psutil", "termcolor": "termcolor",
+                     "tqdm": "tqdm", "typing_extensions": "typing-extensions"},
+    "samples": ["sample42", "sample43"]
+  },
+  "pdir2==0.3.2": {
+    "declared_source": "pdir2-0.3.2-py2.py3-none-any.whl METADATA Requires-Dist",
+    "declared": ["colorama; platform_system == \"Windows\"", "enum34; python_version < \"3.4\""],
+    "import_names": {"colorama": "colorama"},
+    "samples": ["sample40", "sample41"],
+    "note": "both requirements are excluded by their markers on Linux / Python 3.10; colorama is imported only under `if platform.system() == 'Windows'`"
+  }
+}
