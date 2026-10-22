@@ -1,0 +1,27 @@
+$ python3 -m cleanroom.integrity verify --against-git
+{
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+  "modified": [],
+  "missing": [],
+  "extra": [],
+  "not_regular": [],
+  "against_git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "passed": true,
+    "problems": []
+  }
+}
+exit=0
+
+$ (cd .. && sha256sum --strict -c cleanroom/benchmark/originals.SHA256SUMS) | tally
+    993 OK
+exit=0
+
+$ git -C .. diff --stat e330b23 -- ":!cleanroom" ; git -C .. status --porcelain --ignored -- ":!cleanroom"
+(empty output = no differences)
+
+$ independent re-derivation: git ls-tree paths == inventory paths
+paths identical (993)
+blob ids identical

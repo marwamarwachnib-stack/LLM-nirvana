@@ -1,0 +1,49 @@
+test_blob_ids_match_git (test_integrity.TestBuild.test_blob_ids_match_git) ... ok
+test_build_refuses_modified_tree (test_integrity.TestBuild.test_build_refuses_modified_tree) ... ok
+test_build_refuses_untracked_original_file (test_integrity.TestBuild.test_build_refuses_untracked_original_file) ... ok
+test_inventory_lists_tracked_files_only (test_integrity.TestBuild.test_inventory_lists_tracked_files_only) ... ok
+test_sums_file_is_coreutils_compatible (test_integrity.TestBuild.test_sums_file_is_coreutils_compatible) ... ok
+test_write_is_deterministic_and_round_trips (test_integrity.TestBuild.test_write_is_deterministic_and_round_trips) ... ok
+test_inventory_is_reproducible (test_integrity.TestRealSnapshot.test_inventory_is_reproducible) ... ok
+test_inventory_matches_working_tree_and_commit (test_integrity.TestRealSnapshot.test_inventory_matches_working_tree_and_commit) ... ok
+test_against_git_detects_tampered_inventory (test_integrity.TestVerify.test_against_git_detects_tampered_inventory) ... ok
+test_assert_originals_intact_raises (test_integrity.TestVerify.test_assert_originals_intact_raises) ... ok
+test_clean_tree_passes (test_integrity.TestVerify.test_clean_tree_passes) ... ok
+test_cleanroom_and_git_are_ignored (test_integrity.TestVerify.test_cleanroom_and_git_are_ignored) ... ok
+test_extra_pycache_detected (test_integrity.TestVerify.test_extra_pycache_detected) ... ok
+test_missing_detected (test_integrity.TestVerify.test_missing_detected) ... ok
+test_new_top_level_file_detected (test_integrity.TestVerify.test_new_top_level_file_detected) ... ok
+test_same_size_modification_detected (test_integrity.TestVerify.test_same_size_modification_detected) ... ok
+test_symlink_reported (test_integrity.TestVerify.test_symlink_reported) ... ok
+test_committed_manifest_is_reproducible (test_manifest.TestRealSnapshot.test_committed_manifest_is_reproducible) ... ok
+test_counts_and_originals_untouched (test_manifest.TestRealSnapshot.test_counts_and_originals_untouched) ... ok
+test_csv_round_trip (test_manifest.TestSyntheticLayout.test_csv_round_trip) ... ok
+test_dev_tests_and_stub (test_manifest.TestSyntheticLayout.test_dev_tests_and_stub) ... ok
+test_discovery (test_manifest.TestSyntheticLayout.test_discovery) ... ok
+test_duplicates (test_manifest.TestSyntheticLayout.test_duplicates) ... ok
+test_reasons (test_manifest.TestSyntheticLayout.test_reasons) ... ok
+test_saved_suites_p2 (test_manifest.TestSyntheticLayout.test_saved_suites_p2) ... ok
+test_statuses (test_manifest.TestSyntheticLayout.test_statuses) ... ok
+test_target_excludes_itself_from_local_modules (test_manifest.TestSyntheticLayout.test_target_excludes_itself_from_local_modules) ... ok
+test_added_module_excluded (test_static_analysis.TestImports.test_added_module_excluded) ... ok
+test_classification (test_static_analysis.TestImports.test_classification) ... ok
+test_removed_stdlib_modules_count_as_stdlib_310 (test_static_analysis.TestImports.test_removed_stdlib_modules_count_as_stdlib_310) ... ok
+test_stdlib_310_set (test_static_analysis.TestImports.test_stdlib_310_set) ... ok
+test_counts (test_static_analysis.TestShape.test_counts) ... ok
+test_line_counts (test_static_analysis.TestShape.test_line_counts) ... ok
+test_python2_source_does_not_parse (test_static_analysis.TestShape.test_python2_source_does_not_parse) ... ok
+test_stub_detection (test_static_analysis.TestShape.test_stub_detection) ... ok
+test_called_through_helper (test_static_analysis.TestStdin.test_called_through_helper) ... ok
+test_default_argument_is_executed (test_static_analysis.TestStdin.test_default_argument_is_executed) ... ok
+test_embedded_data_named_input_is_not_stdin (test_static_analysis.TestStdin.test_embedded_data_named_input_is_not_stdin) ... ok
+test_from_sys_import_stdin (test_static_analysis.TestStdin.test_from_sys_import_stdin) ... ok
+test_main_guard_only (test_static_analysis.TestStdin.test_main_guard_only) ... ok
+test_method_body_not_executed (test_static_analysis.TestStdin.test_method_body_not_executed) ... ok
+test_module_level_input (test_static_analysis.TestStdin.test_module_level_input) ... ok
+test_sys_stdin_at_module_level (test_static_analysis.TestStdin.test_sys_stdin_at_module_level) ... ok
+test_uncalled_top_level_function (test_static_analysis.TestStdin.test_uncalled_top_level_function) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 2.142s
+
+OK

@@ -1,0 +1,10 @@
+{
+  "snapshot_commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+  "upstream_equivalence_verified": false,
+  "files": 993,
+  "total_bytes": 3325554,
+  "inventory_tsv_sha256": "47b8fdcd931e30604a100f7811405967390fbd14653ae9d54c337ada112e6122",
+  "sha256sums_sha256": "b72e95d308b78c460f01103cdaa06c803b0688710cb30fd3c84936ded5cb035e",
+  "created_utc": "2026-10-22T12:20:27+00:00",
+  "python": "3.13.16"
+}

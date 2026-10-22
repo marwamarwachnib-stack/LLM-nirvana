@@ -1,0 +1,92 @@
+$ python3 -m cleanroom.integrity build
+refusing to overwrite /home/user/LLM-nirvana/cleanroom/benchmark/originals_sha256.tsv
+[exit=2]
+
+$ python3 -m cleanroom.integrity verify --against-git
+{
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+  "modified": [],
+  "missing": [],
+  "extra": [],
+  "not_regular": [],
+  "against_git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "passed": true,
+    "problems": []
+  }
+}
+[exit=0]
+
+$ (cd .. && sha256sum --strict -c cleanroom/benchmark/originals.SHA256SUMS) | summary
+[exit=0] 993 OK, 0 not OK
+
+$ python3 -m cleanroom.manifest
+{
+  "manifest": "benchmark/manifest.csv",
+  "manifest_sha256": "e2e49e27638b6ba18d42831f75235adf4f68a9b82ba640bb78759f1893095831",
+  "programs": 144,
+  "by_group_and_status": {
+    "p1/cat1": {
+      "OUT_OF_SCOPE": 1
+    },
+    "p1/cat2": {
+      "OUT_OF_SCOPE": 20
+    },
+    "p1/cat3": {
+      "OUT_OF_SCOPE": 20
+    },
+    "p2/unlabelled": {
+      "CANDIDATE": 12,
+      "PENDING_CONTEXT": 31
+    },
+    "small/cat1_scripts": {
+      "NEEDS_DECISION_STDIN": 19,
+      "NEEDS_DECISION_NO_UNIT": 2
+    },
+    "small/cat2_functions": {
+      "CANDIDATE": 19
+    },
+    "small/cat3_classes": {
+      "CANDIDATE": 20
+    }
+  },
+  "integrity_before": true,
+  "integrity_after": true
+}
+[exit=0]
+
+$ python3 -m cleanroom.report
+{"report": "reports/A3_eligibility.md", "sha256": "af1f41e27a0b530803218ac4ae0252e32ad450b66fb463283b864cf523eee628"}
+[exit=0]
+
+$ python3 -m unittest discover -s tests
+............................................
+----------------------------------------------------------------------
+Ran 44 tests in 1.968s
+
+OK
+[exit=0]
+
+$ python3 -m cleanroom.integrity verify --against-git
+{
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+  "modified": [],
+  "missing": [],
+  "extra": [],
+  "not_regular": [],
+  "against_git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "passed": true,
+    "problems": []
+  }
+}
+[exit=0]
+
+$ git -C .. status --porcelain --ignored -- ":!cleanroom"  (empty = originals untouched)
+[exit=0]
+$ find .. -name __pycache__ -newer benchmark/originals_sha256.tsv -not -path "../.git/*"
+[done]

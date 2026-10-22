@@ -1,0 +1,41 @@
+{
+  "snapshot": {
+    "repository": "marwamarwachnib-stack/llm-nirvana",
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "upstream_candidate": "Shreya20542/LLM-nirvana",
+    "upstream_equivalence_verified": false,
+    "note": "All 38 commits at the snapshot are authored by Shreya20542; the upstream repository was not reachable from the execution environment."
+  },
+  "paper": {
+    "title": "Unit Test Generation using Generative AI: A Comparative Performance Analysis of Autogeneration Tools",
+    "authors": ["Shreya Bhatia", "Tarushi Gandhi", "Dhruv Kumar", "Pankaj Jalote"],
+    "identified_versions": ["arXiv:2312.10622v1 (Dec 2023)", "arXiv:2312.10622v2 (Feb 2024)", "LLM4Code @ ICSE 2024"],
+    "source_of_identification": "web-search snippets and secondary pages only",
+    "full_text_read": false,
+    "authoritative_version": null,
+    "doi_verified": false,
+    "protocol_verified_from_full_text": false
+  },
+  "approved_decisions": {
+    "1_snapshot": "freeze e330b23; document that upstream equivalence is not verified",
+    "2_scope": "small set and p2; p1 iterative prompting deferred as a possible later extension",
+    "3_generators": ["Pynguin", "CodeLlama-7B-Instruct", "DeepSeek-Coder-6.7B-Instruct"],
+    "3_no_substitution": true,
+    "4_metrics": ["test validity", "statement coverage", "branch coverage", "execution and generation cost", "mutation testing"],
+    "5_energy": "only with a reliable instrument; otherwise reported as not measured",
+    "6_fault_localization": "deferred until a benchmark with verified faulty-line labels is approved"
+  },
+  "authorised_steps": ["A1 integrity inventory", "A3 static eligibility manifest", "tests", "eligibility report"],
+  "not_authorised_yet": ["downloading models", "installing dependencies", "generation experiments", "mutation testing"],
+  "open_decisions": [
+    "paper version (requires the PDF)",
+    "Pynguin version and configuration",
+    "model precision/quantization, runtime, decoding parameters, samples and seeds",
+    "handling of Category 1 scripts (NEEDS_DECISION_STDIN / NEEDS_DECISION_NO_UNIT)",
+    "p2 dependency/context reconstruction method (PENDING_CONTEXT)",
+    "p2 Cat 2 / Cat 3 labelling rule",
+    "coverage.py version",
+    "mutation tool, operators, timeout policy, score denominator",
+    "energy instrument and execution hardware"
+  ]
+}

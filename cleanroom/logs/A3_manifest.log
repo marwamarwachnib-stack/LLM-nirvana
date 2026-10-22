@@ -1,0 +1,32 @@
+{
+  "manifest": "benchmark/manifest.csv",
+  "manifest_sha256": "f8582f3d62cc8d342693c94041341e66f9f4f4feedd84f15daf4ba35b6208ab0",
+  "programs": 144,
+  "by_group_and_status": {
+    "p1/cat1": {
+      "OUT_OF_SCOPE": 1
+    },
+    "p1/cat2": {
+      "OUT_OF_SCOPE": 20
+    },
+    "p1/cat3": {
+      "OUT_OF_SCOPE": 20
+    },
+    "p2/unlabelled": {
+      "CANDIDATE": 12,
+      "PENDING_CONTEXT": 31
+    },
+    "small/cat1_scripts": {
+      "NEEDS_DECISION_STDIN": 19,
+      "NEEDS_DECISION_NO_UNIT": 2
+    },
+    "small/cat2_functions": {
+      "CANDIDATE": 19
+    },
+    "small/cat3_classes": {
+      "CANDIDATE": 20
+    }
+  },
+  "integrity_before": true,
+  "integrity_after": true
+}

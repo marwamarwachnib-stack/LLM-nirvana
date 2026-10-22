@@ -1,0 +1,993 @@
+0_100 LOC/README.md: OK
+0_100 LOC/a1_script.py: OK
+0_100 LOC/a2_script.py: OK
+0_100 LOC/a3_script.py: OK
+0_100 LOC/calc_coverage.py: OK
+0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/ACM Contest Scoring_Kattis.pdf: OK
+0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/cc_out.txt: OK
+0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/example.py: OK
+0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/notc.txt: OK
+0_100 LOC/cat1_scripts/Albhabet_Spam/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Albhabet_Spam/example.py: OK
+0_100 LOC/cat1_scripts/Albhabet_Spam/notc.txt: OK
+0_100 LOC/cat1_scripts/Amazing_Human_Cannon_Ball/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Amazing_Human_Cannon_Ball/example.py: OK
+0_100 LOC/cat1_scripts/Amazing_Human_Cannon_Ball/notc.txt: OK
+0_100 LOC/cat1_scripts/Bella/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Bella/example.py: OK
+0_100 LOC/cat1_scripts/Bella/notc.txt: OK
+0_100 LOC/cat1_scripts/Cetvrta/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Cetvrta/example.py: OK
+0_100 LOC/cat1_scripts/Cetvrta/notc.txt: OK
+0_100 LOC/cat1_scripts/Cryptographers_Conundrum/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Cryptographers_Conundrum/example.py: OK
+0_100 LOC/cat1_scripts/Cryptographers_Conundrum/notc.txt: OK
+0_100 LOC/cat1_scripts/DRM_Messages/cc_out.txt: OK
+0_100 LOC/cat1_scripts/DRM_Messages/example.py: OK
+0_100 LOC/cat1_scripts/DRM_Messages/notc.txt: OK
+0_100 LOC/cat1_scripts/FizzBuzz/cc_out.txt: OK
+0_100 LOC/cat1_scripts/FizzBuzz/example.py: OK
+0_100 LOC/cat1_scripts/FizzBuzz/notc.txt: OK
+0_100 LOC/cat1_scripts/ICPC_Awards/cc_out.txt: OK
+0_100 LOC/cat1_scripts/ICPC_Awards/example.py: OK
+0_100 LOC/cat1_scripts/ICPC_Awards/notc.txt: OK
+0_100 LOC/cat1_scripts/Judging_Moose/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Judging_Moose/example.py: OK
+0_100 LOC/cat1_scripts/Judging_Moose/notc.txt: OK
+0_100 LOC/cat1_scripts/Number_Fun/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Number_Fun/example.py: OK
+0_100 LOC/cat1_scripts/Number_Fun/notc.txt: OK
+0_100 LOC/cat1_scripts/Speed_Limit/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Speed_Limit/example.py: OK
+0_100 LOC/cat1_scripts/Speed_Limit/notc.txt: OK
+0_100 LOC/cat1_scripts/Start_Arrangements/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Start_Arrangements/example.py: OK
+0_100 LOC/cat1_scripts/Start_Arrangements/notc.txt: OK
+0_100 LOC/cat1_scripts/Tarifa/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Tarifa/example.py: OK
+0_100 LOC/cat1_scripts/Tarifa/notc.txt: OK
+0_100 LOC/cat1_scripts/The_Easiest_Problem_Is_This_One/cc_out.txt: OK
+0_100 LOC/cat1_scripts/The_Easiest_Problem_Is_This_One/example.py: OK
+0_100 LOC/cat1_scripts/The_Easiest_Problem_Is_This_One/notc.txt: OK
+0_100 LOC/cat1_scripts/Trik/cc_out.txt: OK
+0_100 LOC/cat1_scripts/Trik/example.py: OK
+0_100 LOC/cat1_scripts/Trik/notc.txt: OK
+0_100 LOC/cat1_scripts/a1_script.py: OK
+0_100 LOC/cat1_scripts/akicija/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat1_scripts/akicija/cc_out.txt: OK
+0_100 LOC/cat1_scripts/akicija/example.py: OK
+0_100 LOC/cat1_scripts/akicija/notc.txt: OK
+0_100 LOC/cat1_scripts/day2/cc_out.txt: OK
+0_100 LOC/cat1_scripts/day2/example.py: OK
+0_100 LOC/cat1_scripts/day2/notc.txt: OK
+0_100 LOC/cat1_scripts/linethemup/cc_out.txt: OK
+0_100 LOC/cat1_scripts/linethemup/example.py: OK
+0_100 LOC/cat1_scripts/linethemup/notc.txt: OK
+0_100 LOC/cat1_scripts/seven_wonders/cc_out.txt: OK
+0_100 LOC/cat1_scripts/seven_wonders/example.py: OK
+0_100 LOC/cat1_scripts/seven_wonders/notc.txt: OK
+0_100 LOC/cat1_scripts/three_sum/cc_out.txt: OK
+0_100 LOC/cat1_scripts/three_sum/example.py: OK
+0_100 LOC/cat1_scripts/three_sum/notc.txt: OK
+0_100 LOC/cat2_functions/Readme.md: OK
+0_100 LOC/cat2_functions/a2_script.py: OK
+0_100 LOC/cat2_functions/affine-cipher/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/affine-cipher/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/affine-cipher/affine_cipher.py: OK
+0_100 LOC/cat2_functions/affine-cipher/affine_cipher_test.py: OK
+0_100 LOC/cat2_functions/affine-cipher/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/affine-cipher/cc_out.txt: OK
+0_100 LOC/cat2_functions/affine-cipher/config.json: OK
+0_100 LOC/cat2_functions/affine-cipher/example.py: OK
+0_100 LOC/cat2_functions/affine-cipher/line_coverage.txt: OK
+0_100 LOC/cat2_functions/affine-cipher/notc.txt: OK
+0_100 LOC/cat2_functions/affine-cipher/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/affine-cipher/test_example.py: OK
+0_100 LOC/cat2_functions/all-your-base/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/all-your-base/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/all-your-base/all_your_base.py: OK
+0_100 LOC/cat2_functions/all-your-base/all_your_base_test.py: OK
+0_100 LOC/cat2_functions/all-your-base/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/all-your-base/cc_out.txt: OK
+0_100 LOC/cat2_functions/all-your-base/config.json: OK
+0_100 LOC/cat2_functions/all-your-base/example.py: OK
+0_100 LOC/cat2_functions/all-your-base/line_coverage.txt: OK
+0_100 LOC/cat2_functions/all-your-base/notc.txt: OK
+0_100 LOC/cat2_functions/all-your-base/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/all-your-base/test_example.py: OK
+0_100 LOC/cat2_functions/alphametics/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/alphametics/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/alphametics/alphametics.py: OK
+0_100 LOC/cat2_functions/alphametics/alphametics_test.py: OK
+0_100 LOC/cat2_functions/alphametics/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/alphametics/cc_out.txt: OK
+0_100 LOC/cat2_functions/alphametics/config.json: OK
+0_100 LOC/cat2_functions/alphametics/example.py: OK
+0_100 LOC/cat2_functions/alphametics/line_coverage.txt: OK
+0_100 LOC/cat2_functions/alphametics/notc.txt: OK
+0_100 LOC/cat2_functions/alphametics/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/alphametics/test_example.py: OK
+0_100 LOC/cat2_functions/atbash-cipher/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/atbash-cipher/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/atbash-cipher/atbash_cipher.py: OK
+0_100 LOC/cat2_functions/atbash-cipher/atbash_cipher_test.py: OK
+0_100 LOC/cat2_functions/atbash-cipher/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/atbash-cipher/cc_out.txt: OK
+0_100 LOC/cat2_functions/atbash-cipher/config.json: OK
+0_100 LOC/cat2_functions/atbash-cipher/example.py: OK
+0_100 LOC/cat2_functions/atbash-cipher/line_coverage.txt: OK
+0_100 LOC/cat2_functions/atbash-cipher/notc.txt: OK
+0_100 LOC/cat2_functions/atbash-cipher/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/atbash-cipher/test_example.py: OK
+0_100 LOC/cat2_functions/beer-song/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/beer-song/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/beer-song/beer_song.py: OK
+0_100 LOC/cat2_functions/beer-song/beer_song_test.py: OK
+0_100 LOC/cat2_functions/beer-song/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/beer-song/cc_out.txt: OK
+0_100 LOC/cat2_functions/beer-song/config.json: OK
+0_100 LOC/cat2_functions/beer-song/example.py: OK
+0_100 LOC/cat2_functions/beer-song/line_coverage.txt: OK
+0_100 LOC/cat2_functions/beer-song/notc.txt: OK
+0_100 LOC/cat2_functions/beer-song/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/beer-song/test_example.py: OK
+0_100 LOC/cat2_functions/bob/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/bob/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/bob/bob.py: OK
+0_100 LOC/cat2_functions/bob/bob_test.py: OK
+0_100 LOC/cat2_functions/bob/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/bob/cc_out.txt: OK
+0_100 LOC/cat2_functions/bob/config.json: OK
+0_100 LOC/cat2_functions/bob/example.py: OK
+0_100 LOC/cat2_functions/bob/line_coverage.txt: OK
+0_100 LOC/cat2_functions/bob/notc.txt: OK
+0_100 LOC/cat2_functions/bob/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/bob/test_example.py: OK
+0_100 LOC/cat2_functions/change/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/change/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/change/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/change/cc_out.txt: OK
+0_100 LOC/cat2_functions/change/change.py: OK
+0_100 LOC/cat2_functions/change/change_test.py: OK
+0_100 LOC/cat2_functions/change/config.json: OK
+0_100 LOC/cat2_functions/change/example.py: OK
+0_100 LOC/cat2_functions/change/line_coverage.txt: OK
+0_100 LOC/cat2_functions/change/notc.txt: OK
+0_100 LOC/cat2_functions/change/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/change/test_example.py: OK
+0_100 LOC/cat2_functions/crypto-square/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/crypto-square/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/crypto-square/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/crypto-square/cc_out.txt: OK
+0_100 LOC/cat2_functions/crypto-square/config.json: OK
+0_100 LOC/cat2_functions/crypto-square/crypto_square.py: OK
+0_100 LOC/cat2_functions/crypto-square/crypto_square_test.py: OK
+0_100 LOC/cat2_functions/crypto-square/example.py: OK
+0_100 LOC/cat2_functions/crypto-square/line_coverage.txt: OK
+0_100 LOC/cat2_functions/crypto-square/notc.txt: OK
+0_100 LOC/cat2_functions/crypto-square/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/crypto-square/test_example.py: OK
+0_100 LOC/cat2_functions/diamond/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/diamond/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/diamond/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/diamond/cc_out.txt: OK
+0_100 LOC/cat2_functions/diamond/config.json: OK
+0_100 LOC/cat2_functions/diamond/diamond.py: OK
+0_100 LOC/cat2_functions/diamond/diamond_test.py: OK
+0_100 LOC/cat2_functions/diamond/example.py: OK
+0_100 LOC/cat2_functions/diamond/line_coverage.txt: OK
+0_100 LOC/cat2_functions/diamond/notc.txt: OK
+0_100 LOC/cat2_functions/diamond/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/diamond/test_example.py: OK
+0_100 LOC/cat2_functions/dominoes/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/dominoes/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/dominoes/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/dominoes/cc_out.txt: OK
+0_100 LOC/cat2_functions/dominoes/config.json: OK
+0_100 LOC/cat2_functions/dominoes/dominoes.py: OK
+0_100 LOC/cat2_functions/dominoes/dominoes_test.py: OK
+0_100 LOC/cat2_functions/dominoes/example.py: OK
+0_100 LOC/cat2_functions/dominoes/line_coverage.txt: OK
+0_100 LOC/cat2_functions/dominoes/notc.txt: OK
+0_100 LOC/cat2_functions/dominoes/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/dominoes/test_example.py: OK
+0_100 LOC/cat2_functions/error-handling/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/error-handling/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/error-handling/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/error-handling/cc_out.txt: OK
+0_100 LOC/cat2_functions/error-handling/config.json: OK
+0_100 LOC/cat2_functions/error-handling/error_handling.py: OK
+0_100 LOC/cat2_functions/error-handling/error_handling_test.py: OK
+0_100 LOC/cat2_functions/error-handling/example.py: OK
+0_100 LOC/cat2_functions/error-handling/line_coverage.txt: OK
+0_100 LOC/cat2_functions/error-handling/notc.txt: OK
+0_100 LOC/cat2_functions/error-handling/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/error-handling/test_example.py: OK
+0_100 LOC/cat2_functions/error-handling/test_utils.py: OK
+0_100 LOC/cat2_functions/flatten-array/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/flatten-array/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/flatten-array/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/flatten-array/cc_out.txt: OK
+0_100 LOC/cat2_functions/flatten-array/config.json: OK
+0_100 LOC/cat2_functions/flatten-array/example.py: OK
+0_100 LOC/cat2_functions/flatten-array/flatten_array.py: OK
+0_100 LOC/cat2_functions/flatten-array/flatten_array_test.py: OK
+0_100 LOC/cat2_functions/flatten-array/line_coverage.txt: OK
+0_100 LOC/cat2_functions/flatten-array/notc.txt: OK
+0_100 LOC/cat2_functions/flatten-array/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/flatten-array/test_example.py: OK
+0_100 LOC/cat2_functions/food-chain/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/food-chain/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/food-chain/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/food-chain/cc_out.txt: OK
+0_100 LOC/cat2_functions/food-chain/config.json: OK
+0_100 LOC/cat2_functions/food-chain/example.py: OK
+0_100 LOC/cat2_functions/food-chain/food_chain.py: OK
+0_100 LOC/cat2_functions/food-chain/food_chain_test.py: OK
+0_100 LOC/cat2_functions/food-chain/line_coverage.txt: OK
+0_100 LOC/cat2_functions/food-chain/notc.txt: OK
+0_100 LOC/cat2_functions/food-chain/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/food-chain/test_example.py: OK
+0_100 LOC/cat2_functions/get_coverage.py: OK
+0_100 LOC/cat2_functions/knapsack/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/knapsack/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/knapsack/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/knapsack/cc_out.txt: OK
+0_100 LOC/cat2_functions/knapsack/config.json: OK
+0_100 LOC/cat2_functions/knapsack/example.py: OK
+0_100 LOC/cat2_functions/knapsack/knapsack.py: OK
+0_100 LOC/cat2_functions/knapsack/knapsack_test.py: OK
+0_100 LOC/cat2_functions/knapsack/line_coverage.txt: OK
+0_100 LOC/cat2_functions/knapsack/notc.txt: OK
+0_100 LOC/cat2_functions/knapsack/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/knapsack/test_example.py: OK
+0_100 LOC/cat2_functions/largest-series-product/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/largest-series-product/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/largest-series-product/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/largest-series-product/cc_out.txt: OK
+0_100 LOC/cat2_functions/largest-series-product/config.json: OK
+0_100 LOC/cat2_functions/largest-series-product/example.py: OK
+0_100 LOC/cat2_functions/largest-series-product/largest_series_product.py: OK
+0_100 LOC/cat2_functions/largest-series-product/largest_series_product_test.py: OK
+0_100 LOC/cat2_functions/largest-series-product/line_coverage.txt: OK
+0_100 LOC/cat2_functions/largest-series-product/notc.txt: OK
+0_100 LOC/cat2_functions/largest-series-product/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/largest-series-product/test_example.py: OK
+0_100 LOC/cat2_functions/markdown/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/markdown/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/markdown/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/markdown/cc_out.txt: OK
+0_100 LOC/cat2_functions/markdown/config.json: OK
+0_100 LOC/cat2_functions/markdown/example.py: OK
+0_100 LOC/cat2_functions/markdown/line_coverage.txt: OK
+0_100 LOC/cat2_functions/markdown/markdown.py: OK
+0_100 LOC/cat2_functions/markdown/markdown_test.py: OK
+0_100 LOC/cat2_functions/markdown/notc.txt: OK
+0_100 LOC/cat2_functions/markdown/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/markdown/test_example.py: OK
+0_100 LOC/cat2_functions/minesweeper/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/minesweeper/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/minesweeper/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/minesweeper/cc_out.txt: OK
+0_100 LOC/cat2_functions/minesweeper/config.json: OK
+0_100 LOC/cat2_functions/minesweeper/example.py: OK
+0_100 LOC/cat2_functions/minesweeper/line_coverage.txt: OK
+0_100 LOC/cat2_functions/minesweeper/minesweeper.py: OK
+0_100 LOC/cat2_functions/minesweeper/minesweeper_test.py: OK
+0_100 LOC/cat2_functions/minesweeper/notc.txt: OK
+0_100 LOC/cat2_functions/minesweeper/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/minesweeper/test_example.py: OK
+0_100 LOC/cat2_functions/palindrome-products/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/palindrome-products/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/palindrome-products/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/palindrome-products/cc_out.txt: OK
+0_100 LOC/cat2_functions/palindrome-products/config.json: OK
+0_100 LOC/cat2_functions/palindrome-products/example.py: OK
+0_100 LOC/cat2_functions/palindrome-products/line_coverage.txt: OK
+0_100 LOC/cat2_functions/palindrome-products/notc.txt: OK
+0_100 LOC/cat2_functions/palindrome-products/palindrome_products.py: OK
+0_100 LOC/cat2_functions/palindrome-products/palindrome_products_test.py: OK
+0_100 LOC/cat2_functions/palindrome-products/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/palindrome-products/test_example.py: OK
+0_100 LOC/cat2_functions/poker/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat2_functions/poker/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat2_functions/poker/branch_coverage.txt: OK
+0_100 LOC/cat2_functions/poker/cc_out.txt: OK
+0_100 LOC/cat2_functions/poker/config.json: OK
+0_100 LOC/cat2_functions/poker/example.py: OK
+0_100 LOC/cat2_functions/poker/line_coverage.txt: OK
+0_100 LOC/cat2_functions/poker/notc.txt: OK
+0_100 LOC/cat2_functions/poker/poker.py: OK
+0_100 LOC/cat2_functions/poker/poker_test.py: OK
+0_100 LOC/cat2_functions/poker/pynguin-report/statistics.csv: OK
+0_100 LOC/cat2_functions/poker/test_example.py: OK
+0_100 LOC/cat3_classes/Readme.md: OK
+0_100 LOC/cat3_classes/bank-account/__pycache__/bank_account.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/bank-account/__pycache__/bank_account_test.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/bank-account/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/bank-account/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/bank-account/bank_account.py: OK
+0_100 LOC/cat3_classes/bank-account/bank_account_test.py: OK
+0_100 LOC/cat3_classes/bank-account/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/bank-account/cc_out.txt: OK
+0_100 LOC/cat3_classes/bank-account/example.py: OK
+0_100 LOC/cat3_classes/bank-account/get_coverage.py: OK
+0_100 LOC/cat3_classes/bank-account/instructions.append.md: OK
+0_100 LOC/cat3_classes/bank-account/line_coverage.txt: OK
+0_100 LOC/cat3_classes/bank-account/notc.txt: OK
+0_100 LOC/cat3_classes/bank-account/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/bank-account/test_example.py: OK
+0_100 LOC/cat3_classes/binary-search-tree/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/binary-search-tree/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/binary-search-tree/binary_search_tree.py: OK
+0_100 LOC/cat3_classes/binary-search-tree/binary_search_tree_test.py: OK
+0_100 LOC/cat3_classes/binary-search-tree/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/binary-search-tree/cc_out.txt: OK
+0_100 LOC/cat3_classes/binary-search-tree/example.py: OK
+0_100 LOC/cat3_classes/binary-search-tree/line_coverage.txt: OK
+0_100 LOC/cat3_classes/binary-search-tree/notc.txt: OK
+0_100 LOC/cat3_classes/binary-search-tree/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/binary-search-tree/test_example.py: OK
+0_100 LOC/cat3_classes/circular-buffer/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/circular-buffer/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/circular-buffer/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/circular-buffer/cc_out.txt: OK
+0_100 LOC/cat3_classes/circular-buffer/circular_buffer.py: OK
+0_100 LOC/cat3_classes/circular-buffer/circular_buffer_test.py: OK
+0_100 LOC/cat3_classes/circular-buffer/example.py: OK
+0_100 LOC/cat3_classes/circular-buffer/line_coverage.txt: OK
+0_100 LOC/cat3_classes/circular-buffer/notc.txt: OK
+0_100 LOC/cat3_classes/circular-buffer/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/circular-buffer/test_example.py: OK
+0_100 LOC/cat3_classes/clock/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/clock/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/clock/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/clock/cc_out.txt: OK
+0_100 LOC/cat3_classes/clock/clock.py: OK
+0_100 LOC/cat3_classes/clock/clock_test.py: OK
+0_100 LOC/cat3_classes/clock/example.py: OK
+0_100 LOC/cat3_classes/clock/line_coverage.txt: OK
+0_100 LOC/cat3_classes/clock/notc.txt: OK
+0_100 LOC/cat3_classes/clock/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/clock/test_example.py: OK
+0_100 LOC/cat3_classes/complex-numbers/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/complex-numbers/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/complex-numbers/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/complex-numbers/cc_out.txt: OK
+0_100 LOC/cat3_classes/complex-numbers/complex_numbers.py: OK
+0_100 LOC/cat3_classes/complex-numbers/complex_numbers_test.py: OK
+0_100 LOC/cat3_classes/complex-numbers/example.py: OK
+0_100 LOC/cat3_classes/complex-numbers/line_coverage.txt: OK
+0_100 LOC/cat3_classes/complex-numbers/notc.txt: OK
+0_100 LOC/cat3_classes/complex-numbers/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/complex-numbers/test_example.py: OK
+0_100 LOC/cat3_classes/custom-set/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/custom-set/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/custom-set/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/custom-set/cc_out.txt: OK
+0_100 LOC/cat3_classes/custom-set/custom_set.py: OK
+0_100 LOC/cat3_classes/custom-set/custom_set_test.py: OK
+0_100 LOC/cat3_classes/custom-set/example.py: OK
+0_100 LOC/cat3_classes/custom-set/line_coverage.txt: OK
+0_100 LOC/cat3_classes/custom-set/notc.txt: OK
+0_100 LOC/cat3_classes/custom-set/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/custom-set/test_example.py: OK
+0_100 LOC/cat3_classes/dnd-character/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/dnd-character/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/dnd-character/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/dnd-character/cc_out.txt: OK
+0_100 LOC/cat3_classes/dnd-character/dnd_character.py: OK
+0_100 LOC/cat3_classes/dnd-character/dnd_character_test.py: OK
+0_100 LOC/cat3_classes/dnd-character/example.py: OK
+0_100 LOC/cat3_classes/dnd-character/line_coverage.txt: OK
+0_100 LOC/cat3_classes/dnd-character/notc.txt: OK
+0_100 LOC/cat3_classes/dnd-character/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/dnd-character/test_example.py: OK
+0_100 LOC/cat3_classes/forth/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/forth/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/forth/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/forth/cc_out.txt: OK
+0_100 LOC/cat3_classes/forth/example.py: OK
+0_100 LOC/cat3_classes/forth/forth.py: OK
+0_100 LOC/cat3_classes/forth/forth_test.py: OK
+0_100 LOC/cat3_classes/forth/line_coverage.txt: OK
+0_100 LOC/cat3_classes/forth/notc.txt: OK
+0_100 LOC/cat3_classes/forth/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/forth/test_example.py: OK
+0_100 LOC/cat3_classes/grade-school/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/grade-school/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/grade-school/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/grade-school/cc_out.txt: OK
+0_100 LOC/cat3_classes/grade-school/example.py: OK
+0_100 LOC/cat3_classes/grade-school/grade_school.py: OK
+0_100 LOC/cat3_classes/grade-school/grade_school_test.py: OK
+0_100 LOC/cat3_classes/grade-school/line_coverage.txt: OK
+0_100 LOC/cat3_classes/grade-school/notc.txt: OK
+0_100 LOC/cat3_classes/grade-school/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/grade-school/test_example.py: OK
+0_100 LOC/cat3_classes/hangman/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/hangman/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/hangman/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/hangman/cc_out.txt: OK
+0_100 LOC/cat3_classes/hangman/example.py: OK
+0_100 LOC/cat3_classes/hangman/hangman.py: OK
+0_100 LOC/cat3_classes/hangman/hangman_test.py: OK
+0_100 LOC/cat3_classes/hangman/line_coverage.txt: OK
+0_100 LOC/cat3_classes/hangman/notc.txt: OK
+0_100 LOC/cat3_classes/hangman/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/hangman/test_example.py: OK
+0_100 LOC/cat3_classes/kindergarten-garden/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/kindergarten-garden/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/kindergarten-garden/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/kindergarten-garden/cc_out.txt: OK
+0_100 LOC/cat3_classes/kindergarten-garden/example.py: OK
+0_100 LOC/cat3_classes/kindergarten-garden/kindergarten_garden.py: OK
+0_100 LOC/cat3_classes/kindergarten-garden/kindergarten_garden_test.py: OK
+0_100 LOC/cat3_classes/kindergarten-garden/line_coverage.txt: OK
+0_100 LOC/cat3_classes/kindergarten-garden/notc.txt: OK
+0_100 LOC/cat3_classes/kindergarten-garden/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/kindergarten-garden/test_example.py: OK
+0_100 LOC/cat3_classes/ledger/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/ledger/__pycache__/ledger.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/ledger/__pycache__/ledger_test.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/ledger/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/ledger/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/ledger/cc_out.txt: OK
+0_100 LOC/cat3_classes/ledger/example.py: OK
+0_100 LOC/cat3_classes/ledger/ledger.py: OK
+0_100 LOC/cat3_classes/ledger/ledger_test.py: OK
+0_100 LOC/cat3_classes/ledger/line_coverage.txt: OK
+0_100 LOC/cat3_classes/ledger/notc.txt: OK
+0_100 LOC/cat3_classes/ledger/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/ledger/test_example.py: OK
+0_100 LOC/cat3_classes/linked-list/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/linked-list/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/linked-list/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/linked-list/cc_out.txt: OK
+0_100 LOC/cat3_classes/linked-list/example.py: OK
+0_100 LOC/cat3_classes/linked-list/line_coverage.txt: OK
+0_100 LOC/cat3_classes/linked-list/linked_list.py: OK
+0_100 LOC/cat3_classes/linked-list/linked_list_test.py: OK
+0_100 LOC/cat3_classes/linked-list/notc.txt: OK
+0_100 LOC/cat3_classes/linked-list/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/linked-list/test_example.py: OK
+0_100 LOC/cat3_classes/luhn/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/luhn/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/luhn/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/luhn/cc_out.txt: OK
+0_100 LOC/cat3_classes/luhn/example.py: OK
+0_100 LOC/cat3_classes/luhn/line_coverage.txt: OK
+0_100 LOC/cat3_classes/luhn/luhn.py: OK
+0_100 LOC/cat3_classes/luhn/luhn_test.py: OK
+0_100 LOC/cat3_classes/luhn/notc.txt: OK
+0_100 LOC/cat3_classes/luhn/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/luhn/test_example.py: OK
+0_100 LOC/cat3_classes/meetup/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/meetup/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/meetup/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/meetup/cc_out.txt: OK
+0_100 LOC/cat3_classes/meetup/example.py: OK
+0_100 LOC/cat3_classes/meetup/line_coverage.txt: OK
+0_100 LOC/cat3_classes/meetup/meetup.py: OK
+0_100 LOC/cat3_classes/meetup/meetup_test.py: OK
+0_100 LOC/cat3_classes/meetup/notc.txt: OK
+0_100 LOC/cat3_classes/meetup/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/meetup/test_example.py: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/cc_out.txt: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/example.py: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/line_coverage.txt: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/notc.txt: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/parallel_letter_frequency.py: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/parallel_letter_frequency_test.py: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/parallel-letter-frequency/test_example.py: OK
+0_100 LOC/cat3_classes/phone-number/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/phone-number/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/phone-number/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/phone-number/cc_out.txt: OK
+0_100 LOC/cat3_classes/phone-number/example.py: OK
+0_100 LOC/cat3_classes/phone-number/line_coverage.txt: OK
+0_100 LOC/cat3_classes/phone-number/notc.txt: OK
+0_100 LOC/cat3_classes/phone-number/phone_number.py: OK
+0_100 LOC/cat3_classes/phone-number/phone_number_test.py: OK
+0_100 LOC/cat3_classes/phone-number/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/phone-number/test_example.py: OK
+0_100 LOC/cat3_classes/queen-attack/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/queen-attack/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/queen-attack/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/queen-attack/cc_out.txt: OK
+0_100 LOC/cat3_classes/queen-attack/example.py: OK
+0_100 LOC/cat3_classes/queen-attack/line_coverage.txt: OK
+0_100 LOC/cat3_classes/queen-attack/notc.txt: OK
+0_100 LOC/cat3_classes/queen-attack/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/queen-attack/queen_attack.py: OK
+0_100 LOC/cat3_classes/queen-attack/queen_attack_test.py: OK
+0_100 LOC/cat3_classes/queen-attack/test_example.py: OK
+0_100 LOC/cat3_classes/robot-name/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/robot-name/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/robot-name/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/robot-name/cc_out.txt: OK
+0_100 LOC/cat3_classes/robot-name/example.py: OK
+0_100 LOC/cat3_classes/robot-name/line_coverage.txt: OK
+0_100 LOC/cat3_classes/robot-name/notc.txt: OK
+0_100 LOC/cat3_classes/robot-name/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/robot-name/robot_name.py: OK
+0_100 LOC/cat3_classes/robot-name/robot_name_test.py: OK
+0_100 LOC/cat3_classes/robot-name/test_example.py: OK
+0_100 LOC/cat3_classes/robot-simulator/__pycache__/example.cpython-310.pyc: OK
+0_100 LOC/cat3_classes/robot-simulator/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+0_100 LOC/cat3_classes/robot-simulator/branch_coverage.txt: OK
+0_100 LOC/cat3_classes/robot-simulator/cc_out.txt: OK
+0_100 LOC/cat3_classes/robot-simulator/example.py: OK
+0_100 LOC/cat3_classes/robot-simulator/notc.txt: OK
+0_100 LOC/cat3_classes/robot-simulator/pynguin-report/statistics.csv: OK
+0_100 LOC/cat3_classes/robot-simulator/robot_simulator.py: OK
+0_100 LOC/cat3_classes/robot-simulator/robot_simulator_test.py: OK
+0_100 LOC/cat3_classes/robot-simulator/test_example.py: OK
+0_100 LOC/cov1.py: OK
+0_100 LOC/cov2.py: OK
+0_100 LOC/cov3.py: OK
+0_100 LOC/cyclo_cov.py: OK
+0_100 LOC/numTest.py: OK
+100_300 LOC p1/README.md: OK
+100_300 LOC p1/cat1/s15/example.py: OK
+100_300 LOC p1/cat2/a.txt: OK
+100_300 LOC p1/cat2/s1/example.py: OK
+100_300 LOC p1/cat2/s10/example.py: OK
+100_300 LOC p1/cat2/s11/example.py: OK
+100_300 LOC p1/cat2/s12/example.py: OK
+100_300 LOC p1/cat2/s13/example.py: OK
+100_300 LOC p1/cat2/s14/example.py: OK
+100_300 LOC p1/cat2/s15/example.py: OK
+100_300 LOC p1/cat2/s16/example.py: OK
+100_300 LOC p1/cat2/s17/example.py: OK
+100_300 LOC p1/cat2/s18/example.py: OK
+100_300 LOC p1/cat2/s19/example.py: OK
+100_300 LOC p1/cat2/s2/example.py: OK
+100_300 LOC p1/cat2/s20/example.py: OK
+100_300 LOC p1/cat2/s3/example.py: OK
+100_300 LOC p1/cat2/s4/example.py: OK
+100_300 LOC p1/cat2/s5/example.py: OK
+100_300 LOC p1/cat2/s6/example.py: OK
+100_300 LOC p1/cat2/s7/example.py: OK
+100_300 LOC p1/cat2/s8/example.py: OK
+100_300 LOC p1/cat2/s9/example.py: OK
+100_300 LOC p1/cat3/a.txt: OK
+100_300 LOC p1/cat3/s1/example.py: OK
+100_300 LOC p1/cat3/s10/example.py: OK
+100_300 LOC p1/cat3/s11/example.py: OK
+100_300 LOC p1/cat3/s12/example.py: OK
+100_300 LOC p1/cat3/s13/example.py: OK
+100_300 LOC p1/cat3/s14/example.py: OK
+100_300 LOC p1/cat3/s15/example.py: OK
+100_300 LOC p1/cat3/s16/example.py: OK
+100_300 LOC p1/cat3/s17/example.py: OK
+100_300 LOC p1/cat3/s18/example.py: OK
+100_300 LOC p1/cat3/s19/example.py: OK
+100_300 LOC p1/cat3/s2/example.py: OK
+100_300 LOC p1/cat3/s20/example.py: OK
+100_300 LOC p1/cat3/s3/example.py: OK
+100_300 LOC p1/cat3/s4/example.py: OK
+100_300 LOC p1/cat3/s4/i3.py: OK
+100_300 LOC p1/cat3/s5/copy_state_db.py: OK
+100_300 LOC p1/cat3/s5/example.py: OK
+100_300 LOC p1/cat3/s5/faster_ordered_dict.py: OK
+100_300 LOC p1/cat3/s5/utils.py: OK
+100_300 LOC p1/cat3/s6/example.py: OK
+100_300 LOC p1/cat3/s7/example.py: OK
+100_300 LOC p1/cat3/s8/example.py: OK
+100_300 LOC p1/cat3/s9/example.py: OK
+100_300 LOC p2/ChatGPT coverage/ReadMe.md: OK
+100_300 LOC p2/ChatGPT coverage/sample1/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample1/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample1/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample1/decorators_statistics.csv: OK
+100_300 LOC p2/ChatGPT coverage/sample1/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample1/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample10/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample10/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample10/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample11/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample11/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample11/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample11/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample11/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample11/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample12/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample12/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample12/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample12/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample12/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample12/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample13/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample13/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample13/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample13/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample13/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample13/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample14/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample14/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample14/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample14/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample14/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample14/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample15/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample15/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample15/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample15/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample15/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample15/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample16/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample16/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample16/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample16/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample16/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample16/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample17/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample17/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample17/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample17/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample17/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample17/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample18/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample18/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample18/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample18/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample18/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample18/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample19/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample19/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample19/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample19/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample19/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample19/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample2/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample2/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample2/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample20/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample20/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample20/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample20/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample20/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample20/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample21/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample21/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample21/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample21/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample22/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample22/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample22/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample22/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample23/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample23/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample23/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample23/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample23/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample23/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample24/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample24/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample24/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample24/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample24/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample24/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample25/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample25/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample25/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample25/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample25/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample25/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample26/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample26/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample26/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample26/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample26/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample26/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample27/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample27/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample27/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample27/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample28/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample28/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample28/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample28/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample28/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample28/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample29/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample29/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample29/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample29/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample29/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample29/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample3/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample3/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample3/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample3/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample30/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample30/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample30/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample30/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample31/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample31/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample31/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample31/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample31/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample31/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample32/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample32/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample32/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample32/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample32/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample32/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample33/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample33/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample33/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample33/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample33/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample33/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample34/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample34/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample34/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample34/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample34/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample34/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample35/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample35/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample35/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample35/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample35/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample35/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample36/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample36/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample36/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample36/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample37/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample37/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample37/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample37/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample37/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample37/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample38/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample38/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample38/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample38/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample38/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample38/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample39/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample39/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample39/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample39/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample39/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample39/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample4/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample4/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample4/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample4/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample40/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample40/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample40/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample40/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample40/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample40/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample41/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample41/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample41/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample41/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample41/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample41/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample42/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample42/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample42/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample42/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample43/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample43/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample43/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample43/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample43/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample43/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample5/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample5/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample5/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample5/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample5/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample5/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample6/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample6/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample6/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample6/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample7/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample7/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample7/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample7/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample7/statistics.csv: OK
+100_300 LOC p2/ChatGPT coverage/sample7/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample8/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample8/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample8/test_example.py: OK
+100_300 LOC p2/ChatGPT coverage/sample9/__pycache__/example.cpython-310.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample9/__pycache__/test_example.cpython-310-pytest-7.4.0.pyc: OK
+100_300 LOC p2/ChatGPT coverage/sample9/branch_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample9/compilation_report.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample9/statement_coverage.txt: OK
+100_300 LOC p2/ChatGPT coverage/sample9/test_example.py: OK
+100_300 LOC p2/ReadMe.md: OK
+100_300 LOC p2/pynguin coverage/ReadMe.md: OK
+100_300 LOC p2/pynguin coverage/sample1/branch_coverage_decorators.txt: OK
+100_300 LOC p2/pynguin coverage/sample1/decorators.py: OK
+100_300 LOC p2/pynguin coverage/sample1/decorators_statistics.csv: OK
+100_300 LOC p2/pynguin coverage/sample1/statement_coverage_decorators.txt: OK
+100_300 LOC p2/pynguin coverage/sample1/test_decorators.py: OK
+100_300 LOC p2/pynguin coverage/sample10/branch_coverage_sessions.txt: OK
+100_300 LOC p2/pynguin coverage/sample10/sessions.py: OK
+100_300 LOC p2/pynguin coverage/sample10/statement_coverage_sessions.txt: OK
+100_300 LOC p2/pynguin coverage/sample10/test_sessions.py: OK
+100_300 LOC p2/pynguin coverage/sample11/branch_coverage_ssl.txt: OK
+100_300 LOC p2/pynguin coverage/sample11/ssl_.py: OK
+100_300 LOC p2/pynguin coverage/sample11/statement_coverage_ssl.txt: OK
+100_300 LOC p2/pynguin coverage/sample11/test_ssl_.py: OK
+100_300 LOC p2/pynguin coverage/sample12/branch_coverage_uploads.txt: OK
+100_300 LOC p2/pynguin coverage/sample12/statement_coverage_uploads.txt: OK
+100_300 LOC p2/pynguin coverage/sample12/test_uploads.py: OK
+100_300 LOC p2/pynguin coverage/sample12/uploads.py: OK
+100_300 LOC p2/pynguin coverage/sample13/box.py: OK
+100_300 LOC p2/pynguin coverage/sample13/branch_coverage_box.txt: OK
+100_300 LOC p2/pynguin coverage/sample13/statement_coverage_box.txt: OK
+100_300 LOC p2/pynguin coverage/sample13/test_box.py: OK
+100_300 LOC p2/pynguin coverage/sample14/branch_coverage_either.txt: OK
+100_300 LOC p2/pynguin coverage/sample14/either.py: OK
+100_300 LOC p2/pynguin coverage/sample14/statement_coverage_either.txt: OK
+100_300 LOC p2/pynguin coverage/sample14/test_either.py: OK
+100_300 LOC p2/pynguin coverage/sample15/branch_coverage_immutable.txt: OK
+100_300 LOC p2/pynguin coverage/sample15/immutable_list.py: OK
+100_300 LOC p2/pynguin coverage/sample15/statement_coverage_immutable.txt: OK
+100_300 LOC p2/pynguin coverage/sample15/test_immutable_list.py: OK
+100_300 LOC p2/pynguin coverage/sample16/branch_coverage_lazy.txt: OK
+100_300 LOC p2/pynguin coverage/sample16/lazy.py: OK
+100_300 LOC p2/pynguin coverage/sample16/statement_coverage_lazy.txt: OK
+100_300 LOC p2/pynguin coverage/sample16/test_lazy.py: OK
+100_300 LOC p2/pynguin coverage/sample17/branch_coverage_maybe.txt: OK
+100_300 LOC p2/pynguin coverage/sample17/maybe.py: OK
+100_300 LOC p2/pynguin coverage/sample17/statement_coverage_maybe.txt: OK
+100_300 LOC p2/pynguin coverage/sample17/test_maybe.py: OK
+100_300 LOC p2/pynguin coverage/sample18/branch_coverage_monad.txt: OK
+100_300 LOC p2/pynguin coverage/sample18/monad_try.py: OK
+100_300 LOC p2/pynguin coverage/sample18/statement_coverage_monad.txt: OK
+100_300 LOC p2/pynguin coverage/sample18/test_monad_try.py: OK
+100_300 LOC p2/pynguin coverage/sample19/branch_coverage_semigroups.txt: OK
+100_300 LOC p2/pynguin coverage/sample19/semigroups.py: OK
+100_300 LOC p2/pynguin coverage/sample19/statement_coverage_semigroups.txt: OK
+100_300 LOC p2/pynguin coverage/sample19/test_semigroups.py: OK
+100_300 LOC p2/pynguin coverage/sample2/branch_coverage_objutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample2/objutils.py: OK
+100_300 LOC p2/pynguin coverage/sample2/statement_coverage_objutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample2/test_objutils.py: OK
+100_300 LOC p2/pynguin coverage/sample20/branch_coverage_validation.txt: OK
+100_300 LOC p2/pynguin coverage/sample20/statement_coverage_validation.txt: OK
+100_300 LOC p2/pynguin coverage/sample20/test_validation.py: OK
+100_300 LOC p2/pynguin coverage/sample20/validation.py: OK
+100_300 LOC p2/pynguin coverage/sample21/branch_coverage_utils.txt: OK
+100_300 LOC p2/pynguin coverage/sample21/statement_coverage_utils.txt: OK
+100_300 LOC p2/pynguin coverage/sample21/test_utils.py: OK
+100_300 LOC p2/pynguin coverage/sample21/utils.py: OK
+100_300 LOC p2/pynguin coverage/sample22/branch_coverage_generation.txt: OK
+100_300 LOC p2/pynguin coverage/sample22/generation.py: OK
+100_300 LOC p2/pynguin coverage/sample22/statement_coverage_generation.txt: OK
+100_300 LOC p2/pynguin coverage/sample22/test_generation.py: OK
+100_300 LOC p2/pynguin coverage/sample23/branch_coverage_manipulation.txt: OK
+100_300 LOC p2/pynguin coverage/sample23/manipulation.py: OK
+100_300 LOC p2/pynguin coverage/sample23/statement_coverage_manipulation.txt: OK
+100_300 LOC p2/pynguin coverage/sample23/test_manipulation.py: OK
+100_300 LOC p2/pynguin coverage/sample24/branch_coverage_register.txt: OK
+100_300 LOC p2/pynguin coverage/sample24/register.py: OK
+100_300 LOC p2/pynguin coverage/sample24/statement_coverage_register.txt: OK
+100_300 LOC p2/pynguin coverage/sample24/test_register.py: OK
+100_300 LOC p2/pynguin coverage/sample25/base.py: OK
+100_300 LOC p2/pynguin coverage/sample25/branch_coverage_base.txt: OK
+100_300 LOC p2/pynguin coverage/sample25/statement_coverage_base.txt: OK
+100_300 LOC p2/pynguin coverage/sample25/test_base.py: OK
+100_300 LOC p2/pynguin coverage/sample26/branch_coverage_formats.txt: OK
+100_300 LOC p2/pynguin coverage/sample26/formats.py: OK
+100_300 LOC p2/pynguin coverage/sample26/statement_coverage_formats.txt: OK
+100_300 LOC p2/pynguin coverage/sample26/test_formats.py: OK
+100_300 LOC p2/pynguin coverage/sample27/branch_coverage_json.txt: OK
+100_300 LOC p2/pynguin coverage/sample27/json_schema.py: OK
+100_300 LOC p2/pynguin coverage/sample27/statement_coverage_json.txt: OK
+100_300 LOC p2/pynguin coverage/sample27/test_json_schema.py: OK
+100_300 LOC p2/pynguin coverage/sample28/branch_coverage_schemas.txt: OK
+100_300 LOC p2/pynguin coverage/sample28/schemas.py: OK
+100_300 LOC p2/pynguin coverage/sample28/statement_coverage_schemas.txt: OK
+100_300 LOC p2/pynguin coverage/sample28/test_schemas.py: OK
+100_300 LOC p2/pynguin coverage/sample29/branch_coverage_forms.txt: OK
+100_300 LOC p2/pynguin coverage/sample29/forms.py: OK
+100_300 LOC p2/pynguin coverage/sample29/statement_coverage_forms.txt: OK
+100_300 LOC p2/pynguin coverage/sample29/test_forms.py: OK
+100_300 LOC p2/pynguin coverage/sample3/branch_coverage_packages.txt: OK
+100_300 LOC p2/pynguin coverage/sample3/packages.py: OK
+100_300 LOC p2/pynguin coverage/sample3/statement_coverage_packages.txt: OK
+100_300 LOC p2/pynguin coverage/sample3/test_packages.py: OK
+100_300 LOC p2/pynguin coverage/sample30/branch_coverage_tokenize_yaml.txt: OK
+100_300 LOC p2/pynguin coverage/sample30/statement_coverage_tokenize_yaml.txt: OK
+100_300 LOC p2/pynguin coverage/sample30/test_tokenize_yaml.py: OK
+100_300 LOC p2/pynguin coverage/sample30/tokenize_yaml.py: OK
+100_300 LOC p2/pynguin coverage/sample31/branch_coverage_tokens.txt: OK
+100_300 LOC p2/pynguin coverage/sample31/statement_coverage_tokens.txt: OK
+100_300 LOC p2/pynguin coverage/sample31/test_tokens.py: OK
+100_300 LOC p2/pynguin coverage/sample31/tokens.py: OK
+100_300 LOC p2/pynguin coverage/sample32/branch_coverage_fields.txt: OK
+100_300 LOC p2/pynguin coverage/sample32/fields.py: OK
+100_300 LOC p2/pynguin coverage/sample32/statement_coverage_fields.txt: OK
+100_300 LOC p2/pynguin coverage/sample32/test_fields.py: OK
+100_300 LOC p2/pynguin coverage/sample33/branch_coverage_common.txt: OK
+100_300 LOC p2/pynguin coverage/sample33/common.py: OK
+100_300 LOC p2/pynguin coverage/sample33/statement_coverage_common.txt: OK
+100_300 LOC p2/pynguin coverage/sample33/test_common.py: OK
+100_300 LOC p2/pynguin coverage/sample34/branch_coverage_google.txt: OK
+100_300 LOC p2/pynguin coverage/sample34/google.py: OK
+100_300 LOC p2/pynguin coverage/sample34/statement_coverage_google.txt: OK
+100_300 LOC p2/pynguin coverage/sample34/test_google.py: OK
+100_300 LOC p2/pynguin coverage/sample35/branch_coverage_numpydoc.txt: OK
+100_300 LOC p2/pynguin coverage/sample35/numpydoc.py: OK
+100_300 LOC p2/pynguin coverage/sample35/statement_coverage_numpydoc.txt: OK
+100_300 LOC p2/pynguin coverage/sample35/test_numpydoc.py: OK
+100_300 LOC p2/pynguin coverage/sample36/branch_coverage_rest.txt: OK
+100_300 LOC p2/pynguin coverage/sample36/rest.py: OK
+100_300 LOC p2/pynguin coverage/sample36/statement_coverage_rest.txt: OK
+100_300 LOC p2/pynguin coverage/sample36/test_rest.py: OK
+100_300 LOC p2/pynguin coverage/sample37/api.py: OK
+100_300 LOC p2/pynguin coverage/sample37/branch_coverage_api.txt: OK
+100_300 LOC p2/pynguin coverage/sample37/statement_coverage_api.txt: OK
+100_300 LOC p2/pynguin coverage/sample37/test_api.py: OK
+100_300 LOC p2/pynguin coverage/sample38/branch_coverage_core.txt: OK
+100_300 LOC p2/pynguin coverage/sample38/core.py: OK
+100_300 LOC p2/pynguin coverage/sample38/statement_coverage_core.txt: OK
+100_300 LOC p2/pynguin coverage/sample38/statement_coverage_core_old.txt: OK
+100_300 LOC p2/pynguin coverage/sample38/test_core.py: OK
+100_300 LOC p2/pynguin coverage/sample38/test_core_old.py: OK
+100_300 LOC p2/pynguin coverage/sample39/branch_coverage_undefined.txt: OK
+100_300 LOC p2/pynguin coverage/sample39/statement_coverage_undefined.txt: OK
+100_300 LOC p2/pynguin coverage/sample39/test_undefined.py: OK
+100_300 LOC p2/pynguin coverage/sample39/undefined.py: OK
+100_300 LOC p2/pynguin coverage/sample4/branch_coverage_strutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample4/statement_coverage_strutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample4/strutils.py: OK
+100_300 LOC p2/pynguin coverage/sample4/test_strutils.py: OK
+100_300 LOC p2/pynguin coverage/sample40/api.py: OK
+100_300 LOC p2/pynguin coverage/sample40/branch_coverage.txt: OK
+100_300 LOC p2/pynguin coverage/sample40/statement_coverage.txt: OK
+100_300 LOC p2/pynguin coverage/sample40/test_api.py: OK
+100_300 LOC p2/pynguin coverage/sample41/attr_category.py: OK
+100_300 LOC p2/pynguin coverage/sample41/branch_coverage.txt: OK
+100_300 LOC p2/pynguin coverage/sample41/statement_coverage.txt: OK
+100_300 LOC p2/pynguin coverage/sample41/test_attr_category.py: OK
+100_300 LOC p2/pynguin coverage/sample42/branch_coverage_exception.txt: OK
+100_300 LOC p2/pynguin coverage/sample42/exception.py: OK
+100_300 LOC p2/pynguin coverage/sample42/statement_coverage_exception.txt: OK
+100_300 LOC p2/pynguin coverage/sample42/test_exception.py: OK
+100_300 LOC p2/pynguin coverage/sample43/branch_coverage_run.txt: OK
+100_300 LOC p2/pynguin coverage/sample43/run.py: OK
+100_300 LOC p2/pynguin coverage/sample43/statement_coverage_run.txt: OK
+100_300 LOC p2/pynguin coverage/sample43/test_run.py: OK
+100_300 LOC p2/pynguin coverage/sample5/branch_coverage_txtutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample5/statement_coverage_txtutils.txt: OK
+100_300 LOC p2/pynguin coverage/sample5/test_txtutils.py: OK
+100_300 LOC p2/pynguin coverage/sample5/txtutils.py: OK
+100_300 LOC p2/pynguin coverage/sample6/branch_coverage_validators.txt: OK
+100_300 LOC p2/pynguin coverage/sample6/statement_coverage_validators.txt: OK
+100_300 LOC p2/pynguin coverage/sample6/test_validators.py: OK
+100_300 LOC p2/pynguin coverage/sample6/validators.py: OK
+100_300 LOC p2/pynguin coverage/sample7/_timers.py: OK
+100_300 LOC p2/pynguin coverage/sample7/branch_coverage__timers.txt: OK
+100_300 LOC p2/pynguin coverage/sample7/statement_coverage__timers.txt: OK
+100_300 LOC p2/pynguin coverage/sample7/statistics.csv: OK
+100_300 LOC p2/pynguin coverage/sample7/test__timers.py: OK
+100_300 LOC p2/pynguin coverage/sample8/branch_coverage_compat.txt: OK
+100_300 LOC p2/pynguin coverage/sample8/compat.py: OK
+100_300 LOC p2/pynguin coverage/sample8/statement_coverage_compat.txt: OK
+100_300 LOC p2/pynguin coverage/sample8/test_compat.py: OK
+100_300 LOC p2/pynguin coverage/sample9/branch_coverage_config.txt: OK
+100_300 LOC p2/pynguin coverage/sample9/config.py: OK
+100_300 LOC p2/pynguin coverage/sample9/statement_coverage_config.txt: OK
+100_300 LOC p2/pynguin coverage/sample9/test_config.py: OK
