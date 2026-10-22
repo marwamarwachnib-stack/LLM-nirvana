@@ -1,5 +1,8 @@
 # A8 — Protocol-reconstruction audit (before any experiment)
 
+> Superseded in part by A9 (`reports/A9_paper_protocol.md`): the arXiv v2 full text has since been
+> read; [P] items and the paper-to-snapshot comparison are there. This report is kept unchanged otherwise.
+
 Date: 2026-10-22. Read-only. No GitHub access, model download, package installation, Pynguin run,
 test generation, mutation testing or energy measurement.
 

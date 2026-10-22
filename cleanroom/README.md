@@ -11,8 +11,8 @@ environment exists (outside the repository); 77/103 in-scope programs are execut
 from verified PyPI releases (`reports/A5_p2_context.md`). No model has been downloaded, no test
 generated, no coverage or mutation run. Methodology and limitations:
 `reports/METHODOLOGY_AND_LIMITATIONS.md`; protocol audit and open decisions: `reports/A8_protocol_audit.md`.
-The paper's full text has not been read, so no protocol detail is claimed as reproduced. See
-`config/snapshot.json` for approved and open decisions.
+Paper: arXiv:2312.10622v2 read in full (A9, `reports/A9_paper_protocol.md`); the published
+LLM4Code version was not examined. See `config/snapshot.json` for approved and open decisions.
 
 ## Isolation rules
 
@@ -47,6 +47,7 @@ src/cleanroom/
   p2_validate.py      execution validation of reconstructed contexts
   a6_audit.py         read-only audits (optional-dependency impact, httpie evidence)
   p2_probes.py        pre-registered validation probes of dependency paths (not tests; no metrics)
+  a9_paper_check.py   paper-reported numbers vs the authors' saved artifacts (read-only)
 tests/       unittest suite (standard library only)
 runs/        execval/<run_id>/ and probes/<run_id>/ (sealed), p2_evidence/, p2_context/, p2_externals/, a6_audit/,
              SUPERSEDED.md (runs kept as records but not used)

@@ -1,4 +1,4 @@
-# Methodology and limitations (living document; current to phase A8)
+# Methodology and limitations (living document; current to phase A9)
 
 This file states, in one place, what the clean-room pipeline does and what it cannot claim.
 Details and evidence: `reports/A1_A3_preparation.md`, `A4_execution_validation.md`,
@@ -32,7 +32,7 @@ Details and evidence: `reports/A1_A3_preparation.md`, `A4_execution_validation.m
 
 | Area | Limitation |
 |---|---|
-| Paper | Full text not read; no protocol detail is claimed as reproduced. |
+| Paper | Full text of arXiv:2312.10622v2 read (A9); the published LLM4Code version was not examined. The paper does not state Pynguin, ChatGPT, Python, OS or coverage-tool versions/settings. |
 | Snapshot | Equivalence with upstream `Shreya20542/LLM-nirvana` not verified. |
 | Platform | Linux, whereas the authors' reports record macOS; Anaconda's CPython build; C libraries resolved to 2026 builds. |
 | Dependency versions | Chosen by the reconstruction policy above; may differ from the authors' versions (e.g. marshmallow 3.20.2, ipython 8.20.0). Behaviour that depends on library versions may differ from the authors' runs. |
@@ -42,4 +42,4 @@ Details and evidence: `reports/A1_A3_preparation.md`, `A4_execution_validation.m
 | Developer-test oracle | `example.py` is an evidence-backed reference for Cat 2 only; Cat 3 relation inferred. |
 | Coverage tool | Authors' coverage.py version unknown; statement counts are not comparable across versions. |
 | Energy | Not measured in this environment (no hardware counters). |
-| Protocol | No protocol setting is verified from the paper; the snapshot is not established as the paper's benchmark. Known and unknown settings: `reports/A8_protocol_audit.md`. |
+| Protocol | Paper-stated settings and their limits: `reports/A9_paper_protocol.md`. The snapshot is not established as the paper's repository; p2 samples 1–43 match the paper's Sample IDs and reproduce Table 2's ChatGPT columns and Category 2 row (41 samples); the small-set artifacts do not reproduce Table 1. |

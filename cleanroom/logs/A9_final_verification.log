@@ -1,0 +1,26 @@
+$ unittest
+Ran 132 tests in 11.683s
+
+OK
+$ integrity verify --against-git
+  "passed": true,
+  "expected": 993,
+  "ok": 993,
+    "passed": true,
+$ sha256sum -c
+    993 OK
+$ inventory + committed runs unchanged vs HEAD (empty = unchanged)
+$ originals untouched (empty)
+$ sealed runs
+runs/execval/20261022T124436Z: OK
+runs/execval/20261022T124615Z: OK
+runs/execval/20261022T130857Z: OK
+runs/execval/20261022T131114Z: OK
+runs/execval/20261022T133552Z: OK
+runs/probes/20261022T133555Z: OK
+runs/probes/20261022T133620Z: OK
+$ new __pycache__ / sandboxes
+0
+0
+$ PDF unchanged
+7199f7c80fa05f09946d3b28ef15b3e7adf8f02612778387cc69c4479f4ca701

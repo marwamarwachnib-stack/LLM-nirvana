@@ -19,11 +19,18 @@
       "arXiv:2312.10622v2 (Feb 2024)",
       "LLM4Code @ ICSE 2024"
     ],
-    "source_of_identification": "web-search snippets and secondary pages only",
-    "full_text_read": false,
+    "source_of_identification": "full text of arXiv v2 (this phase); earlier phases used secondary sources only",
+    "full_text_read": true,
     "authoritative_version": null,
     "doi_verified": false,
-    "protocol_verified_from_full_text": false
+    "protocol_verified_from_full_text": "partially: see reports/A9_paper_protocol.md",
+    "version_examined": "arXiv:2312.10622v2 [cs.SE], 13 Feb 2024 (margin stamp p.1); ACM template header 'ICSE 2024, April 2024, Lisbon, Portugal'",
+    "pdf_sha256": "7199f7c80fa05f09946d3b28ef15b3e7adf8f02612778387cc69c4479f4ca701",
+    "pdf_size_bytes": 1020429,
+    "pdf_location": "session upload (not committed)",
+    "published_llm4code_version_examined": false,
+    "doi_in_document": "placeholder https://doi.org/XXXXXXX.XXXXXXX",
+    "repository_cited": "https://github.com/Rey-2001/LLM-nirvana (p.2 footnote 1); equivalence with this snapshot not verified"
   },
   "approved_decisions": {
     "1_snapshot": "freeze e330b23; document that upstream equivalence is not verified",
@@ -57,7 +64,8 @@
     "A5 p2 project-context resolution from verified PyPI releases and re-validation",
     "A6 read-only audits: PyYAML/Jinja2 impact for samples 29-30; httpie evidence",
     "A7 install sample-scoped PyYAML/Jinja2, offline validation and pre-registered probes",
-    "A8 protocol-reconstruction audit (read-only)"
+    "A8 protocol-reconstruction audit (read-only)",
+    "A9 paper protocol extraction (arXiv v2) and paper-to-snapshot comparison (read-only)"
   ],
   "not_authorised_yet": [
     "test generation (Pynguin, LLMs)",
@@ -122,5 +130,6 @@
     "probes": "runs/probes/20261022T133620Z/probes.json",
     "execution_verified_in_scope": 77
   },
-  "protocol_audit": "reports/A8_protocol_audit.md (decisions D1-D11)"
+  "protocol_audit": "reports/A8_protocol_audit.md (decisions D1-D11)",
+  "paper_comparison": "reports/A9_paper_protocol.md; runs/a9_paper/20261022T154115Z/check.json; decisions D1-D13"
 }

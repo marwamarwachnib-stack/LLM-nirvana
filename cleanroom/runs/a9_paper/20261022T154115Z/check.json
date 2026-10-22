@@ -1,0 +1,1096 @@
+{
+ "paper_pdf_sha256": "7199f7c80fa05f09946d3b28ef15b3e7adf8f02612778387cc69c4479f4ca701",
+ "paper_version": "arXiv:2312.10622v2 (13 Feb 2024)",
+ "table1_check": {
+  "cat2_functions": {
+   "programs": 19,
+   "pynguin_stmt_n": 19,
+   "pynguin_stmt_mean": 95.579,
+   "pynguin_branch_n": 19,
+   "pynguin_branch_mean": 95.421,
+   "pynguin_internal_n": 19,
+   "pynguin_internal_mean": 95.123,
+   "paper_pynguin_stmt": 90.3,
+   "paper_pynguin_branch": 90.1,
+   "missing_stmt": [],
+   "chatgpt_artifacts_in_snapshot": 0,
+   "stmt_sum": 1816.0,
+   "stmt_sum_over_20": 90.8,
+   "branch_sum_over_20": 90.65
+  },
+  "cat3_classes": {
+   "programs": 20,
+   "pynguin_stmt_n": 19,
+   "pynguin_stmt_mean": 96.368,
+   "pynguin_branch_n": 20,
+   "pynguin_branch_mean": 95.65,
+   "pynguin_internal_n": 20,
+   "pynguin_internal_mean": 90.262,
+   "paper_pynguin_stmt": 97.0,
+   "paper_pynguin_branch": 96.15,
+   "missing_stmt": [
+    "cat3_classes/robot-simulator"
+   ],
+   "chatgpt_artifacts_in_snapshot": 0,
+   "stmt_sum": 1831.0,
+   "stmt_sum_over_20": 91.55,
+   "branch_sum_over_20": 95.65
+  }
+ },
+ "table2_check": {
+  "samples_with_all_four_values": 41,
+  "samples_missing_a_value": [
+   "sample8",
+   "sample10"
+  ],
+  "per_tool_availability": {
+   "chatgpt_stat": 41,
+   "pynguin_stat": 42,
+   "chatgpt_branch": 41,
+   "pynguin_branch": 42
+  },
+  "all_available_vs_paper_all40": [
+   {
+    "computed": 77.439,
+    "paper": 77.43,
+    "equal_truncated": true,
+    "equal_rounded": false
+   },
+   {
+    "computed": 81.6098,
+    "paper": 81.63,
+    "equal_truncated": false,
+    "equal_rounded": false
+   },
+   {
+    "computed": 73.3902,
+    "paper": 73.39,
+    "equal_truncated": true,
+    "equal_rounded": true
+   },
+   {
+    "computed": 78.1463,
+    "paper": 78.36,
+    "equal_truncated": false,
+    "equal_rounded": false
+   }
+  ],
+  "size40_subsets_matching_all_four": [],
+  "candidate_rule": {
+   "rule": "INFERENCE, not the paper's labels: module defines a top-level class -> Category 3, else Category 2",
+   "category2": {
+    "n": 9,
+    "samples": [
+     "sample2",
+     "sample4",
+     "sample6",
+     "sample21",
+     "sample22",
+     "sample27",
+     "sample30",
+     "sample36",
+     "sample42"
+    ],
+    "vs_paper": [
+     {
+      "computed": 77.4444,
+      "paper": 77.44,
+      "equal_truncated": true,
+      "equal_rounded": true
+     },
+     {
+      "computed": 88.7778,
+      "paper": 88.77,
+      "equal_truncated": true,
+      "equal_rounded": false
+     },
+     {
+      "computed": 74.7778,
+      "paper": 74.77,
+      "equal_truncated": true,
+      "equal_rounded": false
+     },
+     {
+      "computed": 86.2222,
+      "paper": 86.22,
+      "equal_truncated": true,
+      "equal_rounded": true
+     }
+    ]
+   },
+   "category3": {
+    "n": 32,
+    "vs_paper": [
+     {
+      "computed": 77.4375,
+      "paper": 77.4,
+      "equal_truncated": true,
+      "equal_rounded": true
+     },
+     {
+      "computed": 79.5938,
+      "paper": 79.6,
+      "equal_truncated": false,
+      "equal_rounded": true
+     },
+     {
+      "computed": 73.0,
+      "paper": 73.0,
+      "equal_truncated": true,
+      "equal_rounded": true
+     },
+     {
+      "computed": 75.875,
+      "paper": 76.15,
+      "equal_truncated": false,
+      "equal_rounded": false
+     }
+    ]
+   },
+   "pynguin_branch_residual_points": {
+    "category3_total": 8.8,
+    "all_total": 8.76
+   }
+  }
+ },
+ "saved_small": {
+  "cat1_scripts/ACM_Contest_Scoring_Kattis": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Albhabet_Spam": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Amazing_Human_Cannon_Ball": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Bella": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Cetvrta": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Cryptographers_Conundrum": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/DRM_Messages": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/FizzBuzz": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/ICPC_Awards": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Judging_Moose": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Number_Fun": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Speed_Limit": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Start_Arrangements": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Tarifa": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/The_Easiest_Problem_Is_This_One": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/Trik": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/akicija": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/day2": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/linethemup": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/seven_wonders": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat1_scripts/three_sum": {
+   "category": "cat1_scripts",
+   "pynguin_stmt": null,
+   "pynguin_branch": null,
+   "pynguin_internal_coverage": null,
+   "statistics_csv_line_endings": null
+  },
+  "cat2_functions/affine-cipher": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/all-your-base": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 95.45454545454545,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/alphametics": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 96.0,
+   "pynguin_branch": 95.0,
+   "pynguin_internal_coverage": 92.06349206349206,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/atbash-cipher": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/beer-song": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/bob": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/change": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/crypto-square": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/diamond": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 77.0,
+   "pynguin_branch": 80.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/dominoes": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/error-handling": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 87.0,
+   "pynguin_branch": 76.0,
+   "pynguin_internal_coverage": 75.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/flatten-array": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 90.9090909090909,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/food-chain": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/knapsack": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 60.0,
+   "pynguin_branch": 67.0,
+   "pynguin_internal_coverage": 81.81818181818183,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/largest-series-product": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/markdown": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/minesweeper": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/palindrome-products": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat2_functions/poker": {
+   "category": "cat2_functions",
+   "pynguin_stmt": 96.0,
+   "pynguin_branch": 95.0,
+   "pynguin_internal_coverage": 72.09302325581395,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/bank-account": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 88.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/binary-search-tree": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 98.0,
+   "pynguin_internal_coverage": 92.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/circular-buffer": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 97.0,
+   "pynguin_branch": 98.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/clock": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/complex-numbers": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/custom-set": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/dnd-character": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/forth": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 87.0,
+   "pynguin_branch": 86.0,
+   "pynguin_internal_coverage": 82.22222222222221,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/grade-school": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/hangman": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/kindergarten-garden": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/ledger": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 80.0,
+   "pynguin_branch": 80.0,
+   "pynguin_internal_coverage": 54.54545454545454,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/linked-list": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 94.73684210526315,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/luhn": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 100.0,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/meetup": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 94.0,
+   "pynguin_branch": 92.0,
+   "pynguin_internal_coverage": 73.91304347826086,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/parallel-letter-frequency": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 78.0,
+   "pynguin_branch": 70.0,
+   "pynguin_internal_coverage": 45.83333333333333,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/phone-number": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 100.0,
+   "pynguin_internal_coverage": 97.5,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/queen-attack": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 95.0,
+   "pynguin_branch": 94.0,
+   "pynguin_internal_coverage": 87.5,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/robot-name": {
+   "category": "cat3_classes",
+   "pynguin_stmt": 100.0,
+   "pynguin_branch": 97.0,
+   "pynguin_internal_coverage": 93.33333333333333,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  },
+  "cat3_classes/robot-simulator": {
+   "category": "cat3_classes",
+   "pynguin_stmt": null,
+   "pynguin_branch": 98.0,
+   "pynguin_internal_coverage": 95.65217391304348,
+   "statistics_csv_line_endings": "b'\\r\\n\"'"
+  }
+ },
+ "saved_p2": {
+  "sample1": {
+   "module": "decorators.py",
+   "top_level_class": true,
+   "pynguin_stat": 62.0,
+   "pynguin_statement_row": "statement_coverage_decorators.txt:decorators.py",
+   "pynguin_branch": 64.0,
+   "pynguin_branch_row": "branch_coverage_decorators.txt:decorators.py",
+   "chatgpt_stat": 62.0,
+   "chatgpt_statement_row": "statement_coverage.txt:decorators.py",
+   "chatgpt_branch": 60.0,
+   "chatgpt_branch_row": "branch_coverage.txt:decorators.py"
+  },
+  "sample2": {
+   "module": "objutils.py",
+   "top_level_class": false,
+   "pynguin_stat": 97.0,
+   "pynguin_statement_row": "statement_coverage_objutils.txt:objutils.py",
+   "pynguin_branch": 95.0,
+   "pynguin_branch_row": "branch_coverage_objutils.txt:objutils.py",
+   "chatgpt_stat": 97.0,
+   "chatgpt_statement_row": "statement_coverage.txt:objutils.py",
+   "chatgpt_branch": 94.0,
+   "chatgpt_branch_row": "branch_coverage.txt:objutils.py"
+  },
+  "sample3": {
+   "module": "packages.py",
+   "top_level_class": true,
+   "pynguin_stat": 24.0,
+   "pynguin_statement_row": "statement_coverage_packages.txt:packages.py",
+   "pynguin_branch": 16.0,
+   "pynguin_branch_row": "branch_coverage_packages.txt:packages.py",
+   "chatgpt_stat": 83.0,
+   "chatgpt_statement_row": "statement_coverage.txt:packages.py",
+   "chatgpt_branch": 78.0,
+   "chatgpt_branch_row": "branch_coverage.txt:packages.py"
+  },
+  "sample4": {
+   "module": "strutils.py",
+   "top_level_class": false,
+   "pynguin_stat": 81.0,
+   "pynguin_statement_row": "statement_coverage_strutils.txt:strutils.py",
+   "pynguin_branch": 79.0,
+   "pynguin_branch_row": "branch_coverage_strutils.txt:strutils.py",
+   "chatgpt_stat": 89.0,
+   "chatgpt_statement_row": "statement_coverage.txt:strutils.py",
+   "chatgpt_branch": 92.0,
+   "chatgpt_branch_row": "branch_coverage.txt:strutils.py"
+  },
+  "sample5": {
+   "module": "txtutils.py",
+   "top_level_class": true,
+   "pynguin_stat": 89.0,
+   "pynguin_statement_row": "statement_coverage_txtutils.txt:txtutils.py",
+   "pynguin_branch": 86.0,
+   "pynguin_branch_row": "branch_coverage_txtutils.txt:txtutils.py",
+   "chatgpt_stat": 73.0,
+   "chatgpt_statement_row": "statement_coverage.txt:txtutils.py",
+   "chatgpt_branch": 67.0,
+   "chatgpt_branch_row": "branch_coverage.txt:txtutils.py"
+  },
+  "sample6": {
+   "module": "validators.py",
+   "top_level_class": false,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_validators.txt:validators.py",
+   "pynguin_branch": 100.0,
+   "pynguin_branch_row": "branch_coverage_validators.txt:validators.py",
+   "chatgpt_stat": 78.0,
+   "chatgpt_statement_row": "statement_coverage.txt:validators.py",
+   "chatgpt_branch": 76.0,
+   "chatgpt_branch_row": "branch_coverage.txt:validators.py"
+  },
+  "sample7": {
+   "module": "_timers.py",
+   "top_level_class": true,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage__timers.txt:_timers.py",
+   "pynguin_branch": 100.0,
+   "pynguin_branch_row": "branch_coverage__timers.txt:_timers.py",
+   "chatgpt_stat": 92.0,
+   "chatgpt_statement_row": "statement_coverage.txt:_timers.py",
+   "chatgpt_branch": 90.0,
+   "chatgpt_branch_row": "branch_coverage.txt:_timers.py"
+  },
+  "sample8": {
+   "module": "compat.py",
+   "top_level_class": false,
+   "pynguin_stat": 17.0,
+   "pynguin_statement_row": "statement_coverage_compat.txt:compat.py",
+   "pynguin_branch": 13.0,
+   "pynguin_branch_row": "branch_coverage_compat.txt:compat.py",
+   "chatgpt_stat": null,
+   "chatgpt_statement_row": null,
+   "chatgpt_branch": null,
+   "chatgpt_branch_row": null
+  },
+  "sample9": {
+   "module": "config.py",
+   "top_level_class": true,
+   "pynguin_stat": 89.0,
+   "pynguin_statement_row": "statement_coverage_config.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py",
+   "pynguin_branch": 84.0,
+   "pynguin_branch_row": "branch_coverage_config.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py",
+   "chatgpt_stat": 69.0,
+   "chatgpt_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py",
+   "chatgpt_branch": 62.0,
+   "chatgpt_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/config.py"
+  },
+  "sample10": {
+   "module": "sessions.py",
+   "top_level_class": true,
+   "pynguin_stat": null,
+   "pynguin_statement_row": null,
+   "pynguin_branch": null,
+   "pynguin_branch_row": null,
+   "chatgpt_stat": null,
+   "chatgpt_statement_row": null,
+   "chatgpt_branch": null,
+   "chatgpt_branch_row": null
+  },
+  "sample11": {
+   "module": "ssl_.py",
+   "top_level_class": true,
+   "pynguin_stat": 95.0,
+   "pynguin_statement_row": "statement_coverage_ssl.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py",
+   "pynguin_branch": 96.0,
+   "pynguin_branch_row": "branch_coverage_ssl.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py",
+   "chatgpt_stat": 75.0,
+   "chatgpt_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py",
+   "chatgpt_branch": 66.0,
+   "chatgpt_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/ssl_.py"
+  },
+  "sample12": {
+   "module": "uploads.py",
+   "top_level_class": true,
+   "pynguin_stat": 73.0,
+   "pynguin_statement_row": "statement_coverage_uploads.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py",
+   "pynguin_branch": 70.0,
+   "pynguin_branch_row": "branch_coverage_uploads.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py",
+   "chatgpt_stat": 25.0,
+   "chatgpt_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py",
+   "chatgpt_branch": 18.0,
+   "chatgpt_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/cli-master/httpie/uploads.py"
+  },
+  "sample13": {
+   "module": "box.py",
+   "top_level_class": true,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_box.txt:box.py",
+   "pynguin_branch": 97.0,
+   "pynguin_branch_row": "branch_coverage_box.txt:box.py",
+   "chatgpt_stat": 100.0,
+   "chatgpt_statement_row": "statement_coverage.txt:box.py",
+   "chatgpt_branch": 97.0,
+   "chatgpt_branch_row": "branch_coverage.txt:box.py"
+  },
+  "sample14": {
+   "module": "either.py",
+   "top_level_class": true,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_either.txt:either.py",
+   "pynguin_branch": 98.0,
+   "pynguin_branch_row": "branch_coverage_either.txt:either.py",
+   "chatgpt_stat": 84.0,
+   "chatgpt_statement_row": "statement_coverage.txt:either.py",
+   "chatgpt_branch": 82.0,
+   "chatgpt_branch_row": "branch_coverage.txt:either.py"
+  },
+  "sample15": {
+   "module": "immutable_list.py",
+   "top_level_class": true,
+   "pynguin_stat": 84.0,
+   "pynguin_statement_row": "statement_coverage_immutable.txt:immutable_list.py",
+   "pynguin_branch": 81.0,
+   "pynguin_branch_row": "branch_coverage_immutable.txt:immutable_list.py",
+   "chatgpt_stat": 94.0,
+   "chatgpt_statement_row": "statement_coverage.txt:immutable_list.py",
+   "chatgpt_branch": 93.0,
+   "chatgpt_branch_row": "branch_coverage.txt:immutable_list.py"
+  },
+  "sample16": {
+   "module": "lazy.py",
+   "top_level_class": true,
+   "pynguin_stat": 91.0,
+   "pynguin_statement_row": "statement_coverage_lazy.txt:lazy.py",
+   "pynguin_branch": 87.0,
+   "pynguin_branch_row": "branch_coverage_lazy.txt:lazy.py",
+   "chatgpt_stat": 96.0,
+   "chatgpt_statement_row": "statement_coverage.txt:lazy.py",
+   "chatgpt_branch": 94.0,
+   "chatgpt_branch_row": "branch_coverage.txt:lazy.py"
+  },
+  "sample17": {
+   "module": "maybe.py",
+   "top_level_class": true,
+   "pynguin_stat": 79.0,
+   "pynguin_statement_row": "statement_coverage_maybe.txt:maybe.py",
+   "pynguin_branch": 72.0,
+   "pynguin_branch_row": "branch_coverage_maybe.txt:maybe.py",
+   "chatgpt_stat": 97.0,
+   "chatgpt_statement_row": "statement_coverage.txt:maybe.py",
+   "chatgpt_branch": 94.0,
+   "chatgpt_branch_row": "branch_coverage.txt:maybe.py"
+  },
+  "sample18": {
+   "module": "monad_try.py",
+   "top_level_class": true,
+   "pynguin_stat": 87.0,
+   "pynguin_statement_row": "statement_coverage_monad.txt:monad_try.py",
+   "pynguin_branch": 88.0,
+   "pynguin_branch_row": "branch_coverage_monad.txt:monad_try.py",
+   "chatgpt_stat": 100.0,
+   "chatgpt_statement_row": "statement_coverage.txt:monad_try.py",
+   "chatgpt_branch": 96.0,
+   "chatgpt_branch_row": "branch_coverage.txt:monad_try.py"
+  },
+  "sample19": {
+   "module": "semigroups.py",
+   "top_level_class": true,
+   "pynguin_stat": 97.0,
+   "pynguin_statement_row": "statement_coverage_semigroups.txt:semigroups.py",
+   "pynguin_branch": 98.0,
+   "pynguin_branch_row": "branch_coverage_semigroups.txt:semigroups.py",
+   "chatgpt_stat": 97.0,
+   "chatgpt_statement_row": "statement_coverage.txt:semigroups.py",
+   "chatgpt_branch": 98.0,
+   "chatgpt_branch_row": "branch_coverage.txt:semigroups.py"
+  },
+  "sample20": {
+   "module": "validation.py",
+   "top_level_class": true,
+   "pynguin_stat": 83.0,
+   "pynguin_statement_row": "statement_coverage_validation.txt:validation.py",
+   "pynguin_branch": 77.0,
+   "pynguin_branch_row": "branch_coverage_validation.txt:validation.py",
+   "chatgpt_stat": 100.0,
+   "chatgpt_statement_row": "statement_coverage.txt:validation.py",
+   "chatgpt_branch": 98.0,
+   "chatgpt_branch_row": "branch_coverage.txt:validation.py"
+  },
+  "sample21": {
+   "module": "utils.py",
+   "top_level_class": false,
+   "pynguin_stat": 96.0,
+   "pynguin_statement_row": "statement_coverage_utils.txt:utils.py",
+   "pynguin_branch": 91.0,
+   "pynguin_branch_row": "branch_coverage_utils.txt:utils.py",
+   "chatgpt_stat": 90.0,
+   "chatgpt_statement_row": "statement_coverage.txt:utils.py",
+   "chatgpt_branch": 85.0,
+   "chatgpt_branch_row": "branch_coverage.txt:utils.py"
+  },
+  "sample22": {
+   "module": "generation.py",
+   "top_level_class": false,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_generation.txt:generation.py",
+   "pynguin_branch": 100.0,
+   "pynguin_branch_row": "branch_coverage_generation.txt:generation.py",
+   "chatgpt_stat": 84.0,
+   "chatgpt_statement_row": "statement_coverage.txt:generation.py",
+   "chatgpt_branch": 81.0,
+   "chatgpt_branch_row": "branch_coverage.txt:generation.py"
+  },
+  "sample23": {
+   "module": "manipulation.py",
+   "top_level_class": true,
+   "pynguin_stat": 97.0,
+   "pynguin_statement_row": "statement_coverage_manipulation.txt:manipulation.py",
+   "pynguin_branch": 97.0,
+   "pynguin_branch_row": "branch_coverage_manipulation.txt:manipulation.py",
+   "chatgpt_stat": 87.0,
+   "chatgpt_statement_row": "statement_coverage.txt:manipulation.py",
+   "chatgpt_branch": 81.0,
+   "chatgpt_branch_row": "branch_coverage.txt:manipulation.py"
+  },
+  "sample24": {
+   "module": "register.py",
+   "top_level_class": true,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_register.txt:register.py",
+   "pynguin_branch": 100.0,
+   "pynguin_branch_row": "branch_coverage_register.txt:register.py",
+   "chatgpt_stat": 100.0,
+   "chatgpt_statement_row": "statement_coverage.txt:register.py",
+   "chatgpt_branch": 100.0,
+   "chatgpt_branch_row": "branch_coverage.txt:register.py"
+  },
+  "sample25": {
+   "module": "base.py",
+   "top_level_class": true,
+   "pynguin_stat": 96.0,
+   "pynguin_statement_row": "statement_coverage_base.txt:base.py",
+   "pynguin_branch": 92.0,
+   "pynguin_branch_row": "branch_coverage_base.txt:base.py",
+   "chatgpt_stat": 63.0,
+   "chatgpt_statement_row": "statement_coverage.txt:base.py",
+   "chatgpt_branch": 57.0,
+   "chatgpt_branch_row": "branch_coverage.txt:base.py"
+  },
+  "sample26": {
+   "module": "formats.py",
+   "top_level_class": true,
+   "pynguin_stat": 63.0,
+   "pynguin_statement_row": "statement_coverage_formats.txt:formats.py",
+   "pynguin_branch": 56.0,
+   "pynguin_branch_row": "branch_coverage_formats.txt:formats.py",
+   "chatgpt_stat": 82.0,
+   "chatgpt_statement_row": "statement_coverage.txt:formats.py",
+   "chatgpt_branch": 81.0,
+   "chatgpt_branch_row": "branch_coverage.txt:formats.py"
+  },
+  "sample27": {
+   "module": "json_schema.py",
+   "top_level_class": false,
+   "pynguin_stat": 81.0,
+   "pynguin_statement_row": "statement_coverage_json.txt:json_schema.py",
+   "pynguin_branch": 78.0,
+   "pynguin_branch_row": "branch_coverage_json.txt:json_schema.py",
+   "chatgpt_stat": 30.0,
+   "chatgpt_statement_row": "statement_coverage.txt:json_schema.py",
+   "chatgpt_branch": 25.0,
+   "chatgpt_branch_row": "branch_coverage.txt:json_schema.py"
+  },
+  "sample28": {
+   "module": "schemas.py",
+   "top_level_class": true,
+   "pynguin_stat": 77.0,
+   "pynguin_statement_row": "statement_coverage_schemas.txt:schemas.py",
+   "pynguin_branch": 70.0,
+   "pynguin_branch_row": "branch_coverage_schemas.txt:schemas.py",
+   "chatgpt_stat": 57.0,
+   "chatgpt_statement_row": "statement_coverage.txt:schemas.py",
+   "chatgpt_branch": 47.0,
+   "chatgpt_branch_row": "branch_coverage.txt:schemas.py"
+  },
+  "sample29": {
+   "module": "forms.py",
+   "top_level_class": true,
+   "pynguin_stat": 74.0,
+   "pynguin_statement_row": "statement_coverage_forms.txt:forms.py",
+   "pynguin_branch": 72.0,
+   "pynguin_branch_row": "branch_coverage_forms.txt:forms.py",
+   "chatgpt_stat": 78.0,
+   "chatgpt_statement_row": "statement_coverage.txt:forms.py",
+   "chatgpt_branch": 78.0,
+   "chatgpt_branch_row": "branch_coverage.txt:forms.py"
+  },
+  "sample30": {
+   "module": "tokenize_yaml.py",
+   "top_level_class": false,
+   "pynguin_stat": 100.0,
+   "pynguin_statement_row": "statement_coverage_tokenize_yaml.txt:tokenize_yaml.py",
+   "pynguin_branch": 100.0,
+   "pynguin_branch_row": "branch_coverage_tokenize_yaml.txt:tokenize_yaml.py",
+   "chatgpt_stat": 70.0,
+   "chatgpt_statement_row": "statement_coverage.txt:tokenize_yaml.py",
+   "chatgpt_branch": 70.0,
+   "chatgpt_branch_row": "branch_coverage.txt:tokenize_yaml.py"
+  },
+  "sample31": {
+   "module": "tokens.py",
+   "top_level_class": true,
+   "pynguin_stat": 87.0,
+   "pynguin_statement_row": "statement_coverage_tokens.txt:tokens.py",
+   "pynguin_branch": 89.0,
+   "pynguin_branch_row": "branch_coverage_tokens.txt:tokens.py",
+   "chatgpt_stat": 81.0,
+   "chatgpt_statement_row": "statement_coverage.txt:tokens.py",
+   "chatgpt_branch": 74.0,
+   "chatgpt_branch_row": "branch_coverage.txt:tokens.py"
+  },
+  "sample32": {
+   "module": "fields.py",
+   "top_level_class": true,
+   "pynguin_stat": 91.0,
+   "pynguin_statement_row": "statement_coverage_fields.txt:fields.py",
+   "pynguin_branch": 88.0,
+   "pynguin_branch_row": "branch_coverage_fields.txt:fields.py",
+   "chatgpt_stat": 67.0,
+   "chatgpt_statement_row": "statement_coverage.txt:fields.py",
+   "chatgpt_branch": 60.0,
+   "chatgpt_branch_row": "branch_coverage.txt:fields.py"
+  },
+  "sample33": {
+   "module": "common.py",
+   "top_level_class": true,
+   "pynguin_stat": 83.0,
+   "pynguin_statement_row": "statement_coverage_common.txt:common.py",
+   "pynguin_branch": 69.0,
+   "pynguin_branch_row": "branch_coverage_common.txt:common.py",
+   "chatgpt_stat": 97.0,
+   "chatgpt_statement_row": "statement_coverage.txt:common.py",
+   "chatgpt_branch": 92.0,
+   "chatgpt_branch_row": "branch_coverage.txt:common.py"
+  },
+  "sample34": {
+   "module": "google.py",
+   "top_level_class": true,
+   "pynguin_stat": 43.0,
+   "pynguin_statement_row": "statement_coverage_google.txt:google.py",
+   "pynguin_branch": 37.0,
+   "pynguin_branch_row": "branch_coverage_google.txt:google.py",
+   "chatgpt_stat": 79.0,
+   "chatgpt_statement_row": "statement_coverage.txt:google.py",
+   "chatgpt_branch": 75.0,
+   "chatgpt_branch_row": "branch_coverage.txt:google.py"
+  },
+  "sample35": {
+   "module": "numpydoc.py",
+   "top_level_class": true,
+   "pynguin_stat": 92.0,
+   "pynguin_statement_row": "statement_coverage_numpydoc.txt:numpydoc.py",
+   "pynguin_branch": 90.0,
+   "pynguin_branch_row": "branch_coverage_numpydoc.txt:numpydoc.py",
+   "chatgpt_stat": 88.0,
+   "chatgpt_statement_row": "statement_coverage.txt:numpydoc.py",
+   "chatgpt_branch": 84.0,
+   "chatgpt_branch_row": "branch_coverage.txt:numpydoc.py"
+  },
+  "sample36": {
+   "module": "rest.py",
+   "top_level_class": false,
+   "pynguin_stat": 61.0,
+   "pynguin_statement_row": "statement_coverage_rest.txt:rest.py",
+   "pynguin_branch": 55.0,
+   "pynguin_branch_row": "branch_coverage_rest.txt:rest.py",
+   "chatgpt_stat": 81.0,
+   "chatgpt_statement_row": "statement_coverage.txt:rest.py",
+   "chatgpt_branch": 78.0,
+   "chatgpt_branch_row": "branch_coverage.txt:rest.py"
+  },
+  "sample37": {
+   "module": "api.py",
+   "top_level_class": true,
+   "pynguin_stat": 72.0,
+   "pynguin_statement_row": "statement_coverage_api.txt:api.py",
+   "pynguin_branch": 69.0,
+   "pynguin_branch_row": "branch_coverage_api.txt:api.py",
+   "chatgpt_stat": 88.0,
+   "chatgpt_statement_row": "statement_coverage.txt:api.py",
+   "chatgpt_branch": 83.0,
+   "chatgpt_branch_row": "branch_coverage.txt:api.py"
+  },
+  "sample38": {
+   "module": "core.py",
+   "top_level_class": true,
+   "pynguin_stat": 20.0,
+   "pynguin_statement_row": "statement_coverage_core.txt:core.py",
+   "pynguin_branch": 15.0,
+   "pynguin_branch_row": "branch_coverage_core.txt:core.py",
+   "chatgpt_stat": 22.0,
+   "chatgpt_statement_row": "statement_coverage.txt:core.py",
+   "chatgpt_branch": 18.0,
+   "chatgpt_branch_row": "branch_coverage.txt:core.py"
+  },
+  "sample39": {
+   "module": "undefined.py",
+   "top_level_class": true,
+   "pynguin_stat": 50.0,
+   "pynguin_statement_row": "statement_coverage_undefined.txt:undefined.py",
+   "pynguin_branch": 41.0,
+   "pynguin_branch_row": "branch_coverage_undefined.txt:undefined.py",
+   "chatgpt_stat": 49.0,
+   "chatgpt_statement_row": "statement_coverage.txt:undefined.py",
+   "chatgpt_branch": 40.0,
+   "chatgpt_branch_row": "branch_coverage.txt:undefined.py"
+  },
+  "sample40": {
+   "module": "api.py",
+   "top_level_class": true,
+   "pynguin_stat": 73.0,
+   "pynguin_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py",
+   "pynguin_branch": 63.0,
+   "pynguin_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py",
+   "chatgpt_stat": 78.0,
+   "chatgpt_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py",
+   "chatgpt_branch": 73.0,
+   "chatgpt_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/api.py"
+  },
+  "sample41": {
+   "module": "attr_category.py",
+   "top_level_class": true,
+   "pynguin_stat": 94.0,
+   "pynguin_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py",
+   "pynguin_branch": 92.0,
+   "pynguin_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py",
+   "chatgpt_stat": 77.0,
+   "chatgpt_statement_row": "statement_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py",
+   "chatgpt_branch": 68.0,
+   "chatgpt_branch_row": "branch_coverage.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/pdir2-0.3.2/pdir/attr_category.py"
+  },
+  "sample42": {
+   "module": "exception.py",
+   "top_level_class": false,
+   "pynguin_stat": 83.0,
+   "pynguin_statement_row": "statement_coverage_exception.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/exception.py",
+   "pynguin_branch": 78.0,
+   "pynguin_branch_row": "branch_coverage_exception.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/exception.py",
+   "chatgpt_stat": 78.0,
+   "chatgpt_statement_row": "statement_coverage.txt:exception.py",
+   "chatgpt_branch": 72.0,
+   "chatgpt_branch_row": "branch_coverage.txt:exception.py"
+  },
+  "sample43": {
+   "module": "run.py",
+   "top_level_class": true,
+   "pynguin_stat": 82.0,
+   "pynguin_statement_row": "statement_coverage_run.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/run.py",
+   "pynguin_branch": 74.0,
+   "pynguin_branch_row": "branch_coverage_run.txt:/Users/DELL/Desktop/python_projects_pynguin_testing/flutes_new/flutes/run.py",
+   "chatgpt_stat": 38.0,
+   "chatgpt_statement_row": "statement_coverage.txt:run.py",
+   "chatgpt_branch": 32.0,
+   "chatgpt_branch_row": "branch_coverage.txt:run.py"
+  }
+ }
+}
