@@ -5,7 +5,7 @@
 
 > Status: **approved 2026-10-25** (decisions in §11). Pilot v3 done (`results/pilot_report.md`; decision 11 applied, evaluator v3). Decision 10 confirmed for both 7B models, dsc-1.3b joins the main study (decision 12). Next: the main study (pilot v3 report §9), then the determinism sample.
 
-### PhD context (confirmed by the PhD student)
+### PhD context
 
 - LLMs play **two roles** in the PhD: (1) supporting **fuzz testing** to generate large test sets for SBFL, and (2) being **integrated into SBFL's statistical analysis**.
 - **Phase 1 (this plan):** LLM vs Pynguin unit-test generation, measuring quality, time and energy.
@@ -27,7 +27,7 @@
 | Disk | 198 GB free on `/` | Models need ~8.5 GB, which is fine. |
 | GPU | GeForce MX150 on the **nouveau** driver. No NVIDIA/CUDA driver, no `nvidia-smi` | Ollama cannot use the GPU, so the runs are CPU-only by construction. `num_gpu=0` and `CUDA_VISIBLE_DEVICES=""` are still set explicitly. |
 | OS | Ubuntu 24.04.2 LTS, kernel 6.8.0-59 | — |
-| Python | System 3.12.3. **No pip. `python3 -m venv` fails** (ensurepip missing) | Needs `uv` (user-level, no sudo) **or** `sudo apt install python3.12-venv python3-pip`. I recommend **uv**. |
+| Python | System 3.12.3. **No pip. `python3 -m venv` fails** (ensurepip missing) | Needs `uv` (user-level, no sudo) **or** `sudo apt install python3.12-venv python3-pip`. **uv** was chosen (decision 1). |
 | Ollama / CodeCarbon / Pynguin | Not installed | See §8. |
 | Power | AC online. Governor `powersave` (intel_pstate). Turbo enabled | Settings are recorded per session. All runs are done on AC. |
 | RAPL | `intel-rapl:0` (package-0) with sub-domains `:0:0` core, `:0:1` uncore, `:0:2` dram. Also `intel-rapl-mmio:0` | **`energy_uj` is `-r-------- root`**, so a normal user cannot read it. See §6.1. |
@@ -55,14 +55,14 @@ The repo contains **no ChatGPT outputs or prompts for `0_100 LOC`**. Only `p2` h
 - **Iteration 1, basic prompt (RQ1):**
   - system: `You give unit test cases in pytest for given code.`
   - user: `<full content of example.py>` followed by `Write unittests using pytest for the given python code that cover all the edge cases.`
-  - Note: the paper's §2.4 text gives a slightly different wording ("Write Unit tests using Pytest for given Python code that covers all the edge cases."). I use **Fig. 1 verbatim** and keep the §2.4 variant as a stored alternative.
+  - Note: the paper's §2.4 text gives a slightly different wording ("Write Unit tests using Pytest for given Python code that covers all the edge cases."). **Fig. 1** is used verbatim, and the §2.4 variant as a stored alternative.
 - **Iterations 2..5, improvement prompt (RQ2):** each prompt is self-contained (stateless, no chat history) and contains:
   - the code with a `#<n>` line-number comment on each line,
   - `The comments on each line indicate line number`,
   - the current test suite,
   - `The above test cases only give <X>% coverage` / `The following lines from the code file are not being covered given by the line numbers - <list>` / `Please write more test cases to improve the coverage of the unit tests`.
 - **Stopping rule:** stop when statement coverage does not improve between consecutive iterations, with **at most 5 iterations** (as in the paper).
-- **Suite per iteration:** cumulative. The new test functions are appended to the previous suite, and duplicate names are renamed. The paper does not say whether suites are cumulative or replaced, so this is a decision for you (§9, Q3).
+- **Suite per iteration:** cumulative. The new test functions are appended to the previous suite, and duplicate names are renamed. The paper does not say whether suites are cumulative or replaced, so cumulative suites were chosen (decision 3, §11).
 - All prompt templates live in `phase1/config/prompts/`. Every rendered prompt is saved with each run, together with its SHA-256.
 
 ### 3.2 Tools under test
@@ -75,7 +75,7 @@ The repo contains **no ChatGPT outputs or prompts for `0_100 LOC`**. Only `p2` h
 | `pynguin` | Pynguin (pinned version, see §8) | — | baseline: `pynguin --project-path . --output-path . --module-name example` (same command as `a*_script.py`), plus an explicit `--seed` |
 
 **Decoding settings (stored in `config/experiment.yaml`):** `temperature=0.0`, `seed=42`, `top_k=40`, `top_p=0.9`, `num_ctx=8192`, `num_predict=2048`, `num_thread=4` (physical cores), `num_gpu=0`.
-The paper used the ChatGPT web UI with an unstated temperature and a single run. temperature=0 gives a reproducible primary run, and a temperature-sensitivity run is optional (§9, Q2).
+The paper used the ChatGPT web UI with an unstated temperature and a single run. temperature=0 gives a reproducible primary run, and a temperature-sensitivity run is optional and not part of the main study (decision 2, §11).
 
 **Pynguin settings:** Pynguin is stochastic, so it is run with **5 seeds** per program (0–4) using the default search budget (the original scripts passed no budget flags). Its effective configuration is logged from its own output.
 
@@ -170,7 +170,7 @@ Proxies: objective static proxies computed on each generated suite, all without 
 | Maintainability Index and Halstead volume (radon) | complexity |
 | Max line length | layout |
 
-A validated learned model (e.g. Scalabrino et al.'s readability model) exists only for Java and is not applicable to Python. If you want human judgement instead, a small blind rating (e.g. 2 raters × a sample of suites, Likert 1–5) can be added later.
+A validated learned model (e.g. Scalabrino et al.'s readability model) exists only for Java and is not applicable to Python. A small blind human rating (e.g. 2 raters × a sample of suites, Likert 1–5) could complement these proxies later.
 
 ### 4.4 Checklist: everything the paper reports and where it is in Phase 1
 
@@ -211,9 +211,9 @@ A session-level `phase1/env/environment.json` (hardware, kernel, `pip freeze`/`u
 
 ### 6.1 RAPL permissions: **yes, they are needed**
 
-`/sys/class/powercap/intel-rapl:*/energy_uj` is root-only (mode 0400) since the PLATYPUS mitigation (CVE-2020-8694). Without read access, CodeCarbon falls back to a **TDP-based estimate**, which is not a measurement. I will not run the experiment as root. Choose one option:
+`/sys/class/powercap/intel-rapl:*/energy_uj` is root-only (mode 0400) since the PLATYPUS mitigation (CVE-2020-8694). Without read access, CodeCarbon falls back to a **TDP-based estimate**, which is not a measurement. The experiment is not run as root. Two options exist:
 
-- **A (recommended, temporary, resets on reboot).** Run this once per session yourself:
+- **A (chosen, decision 5; temporary, resets on reboot).** Run once per session:
   ```bash
   sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj   # MSR and MMIO interfaces (CodeCarbon reads MMIO)
   ```
@@ -250,7 +250,7 @@ Package temperature and mean frequency are logged per phase. A cool-down (wait u
 - **Cross-check:** the existing Pynguin tests in `0_100 LOC` are re-measured with our pipeline (read-only copy), and their coverage must match the stored `line_coverage.txt`/`branch_coverage.txt` before any new results are trusted.
 - Timeouts: `pytest-timeout` 10 s per test and 300 s per file. stdin is closed (Cat 1 scripts call `input()`).
 
-## 8. What I will install (after your OK)
+## 8. Software installed
 
 Everything installs user-level unless noted. Versions are pinned to the newest release **at least 2 weeks old** at install time. Right now that rules out Pynguin 0.48.0 (2026-10-15), CodeCarbon 3.3.2 (2026-10-23) and Ollama ≥ v0.40.4. Exact versions go into `phase1/env/`.
 
@@ -260,7 +260,7 @@ Everything installs user-level unless noted. Versions are pinned to the newest r
    - `phase1/.venv`: codecarbon, coverage, pytest, pytest-timeout, mccabe, radon, psutil, pyyaml, pandas, scipy, matplotlib
 3. **Ollama**: the official Linux release tarball extracted to `~/.local/ollama` (no `curl | sh`, no systemd service, no sudo). It runs in the foreground only during sessions.
 4. **Models (~8.5 GB):** `deepseek-coder:6.7b-instruct` (~3.8 GB), `codellama:7b-instruct` (~3.8 GB), `deepseek-coder:1.3b-instruct` (~0.8 GB). Their digests are recorded.
-5. **RAPL read access:** you run the `sudo chmod` from §6.1 yourself, e.g. by typing `! sudo chmod …` in this session.
+5. **RAPL read access:** the `sudo chmod` from §6.1 is run manually once per session.
 
 `phase1/.venv*`, model caches and the bulky `runs/` artifacts go into `phase1/.gitignore`. Code, configs, manifests, prompts and summary results are kept in git.
 

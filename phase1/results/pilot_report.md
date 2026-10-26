@@ -114,7 +114,7 @@ What this shows:
 - **It can change coverage, not only assertion rates.**
   - dsc-6.7b's new bank-account answer has 11 tests instead of 9: iteration-1 branch coverage went from 68.75 to 81.25 % at the same statement coverage, and iteration 2 started from a different suite.
   - cl-7b bank-account's split moved its assertion rate by about 17 points (§2).
-- **Within a session, answers stay stable** (the earlier 4/4 and 2/2 reruns). Between sessions, a 7B answer can flip at a near-tie (cl-7b showed gaps of 0.04 in log-probability). The cause remains unknown. I did not look for the token at which dsc-6.7b split.
+- **Within a session, answers stay stable** (the earlier 4/4 and 2/2 reruns). Between sessions, a 7B answer can flip at a near-tie (cl-7b showed gaps of 0.04 in log-probability). The cause remains unknown. The token at which dsc-6.7b split was not investigated.
 
 Over 3 generations of 9 prompts, all three generations of a prompt agree byte for byte in 5 of 9 cases and in their test code in 7 of 9. Both code-level splits are on bank-account, the longest answers.
 
@@ -124,7 +124,7 @@ Over 3 generations of 9 prompts, all three generations of a prompt agree byte fo
 - Keep steps 2–4: no T=0 repetitions, one run per program, a determinism sample after the main study.
 - Apply them to both 7B models, not just CodeLlama.
 - Report variation between sessions, not only within a session, as a threat to validity.
-- Note the run order: when you run `determinism_check.py` now, it compares against these v3 answers.
+- Run order: `determinism_check.py` now compares against these v3 answers.
 
 ## 6. Time, energy and speed
 
