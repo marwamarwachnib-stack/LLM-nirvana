@@ -118,7 +118,7 @@ What this shows:
 
 Over 3 generations of 9 prompts, all three generations of a prompt agree byte for byte in 5 of 9 cases and in their test code in 7 of 9. Both code-level splits are on bank-account, the longest answers.
 
-**What this changes in the recommendation (decision 10, still awaiting your OK):**
+**What this changes in decision 10 (confirmed 2026-10-26 for both 7B models; PLAN.md §11):**
 
 - Drop step 1 (the AC test).
 - Keep steps 2–4: no T=0 repetitions, one run per program, a determinism sample after the main study.
