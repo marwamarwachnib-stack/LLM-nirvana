@@ -181,8 +181,9 @@ def main():
     a.to_csv(out("table_assertions.csv"))
 
     # 11c: truncated answers (output hit num_predict), per model and per model x category
-    llm_it = it[it.tool != "pynguin"].assign(truncated=lambda d: d["hit_num_predict"].fillna(False).astype(bool))
-    if not llm_it.empty:
+    llm_it = it[it.tool != "pynguin"]
+    if not llm_it.empty and "hit_num_predict" in llm_it:
+        llm_it = llm_it.assign(truncated=llm_it["hit_num_predict"].fillna(False).astype(bool))
         tr = []
         for keys, g in [((t, "all"), g) for t, g in llm_it.groupby("tool")] + list(llm_it.groupby(["tool", "category"])):
             tr.append({"tool": keys[0], "category": keys[1], "calls": len(g), "truncated_calls": int(g.truncated.sum()),
