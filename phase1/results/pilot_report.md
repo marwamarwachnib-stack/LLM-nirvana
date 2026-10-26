@@ -1,5 +1,7 @@
 # Pilot report: Phase 1 (3 programs), v2
 
+> **Superseded for the LLM part (2026-10-26).** Decision 11 (evaluator v3: carried imports, not-reached assertions outside the rate, truncation marked) changes iteration ≥ 2. The v2 LLM runs are archived in `runs_archive/pilot_v2/` and are being regenerated as pilot v3. The Pynguin results below are unchanged under v3.
+
 Date: 2026-10-25 · sessions `20261025-175514` (Pynguin FizzBuzz, change) and `20261025-204452` (Pynguin bank-account, all LLM jobs) · Ollama 0.40.3, Pynguin 0.47.0, CodeCarbon 3.3.1, Python 3.12.3 · evaluator v2.
 Programs: `cat1_scripts/FizzBuzz`, `cat2_functions/change`, `cat3_classes/bank-account`, all from `0_100 LOC`.
 Tools: Pynguin (5 seeds, 600 s budget, 6 GB cgroup cap), and three models with T=0, seed=42, Q4_0 on CPU, cold prompt cache per call: `deepseek-coder:6.7b-instruct` (ce298d984115), `codellama:7b-instruct` (8fdf8f752f6e) and `deepseek-coder:1.3b-instruct` (3ddd2d3fc8d2).

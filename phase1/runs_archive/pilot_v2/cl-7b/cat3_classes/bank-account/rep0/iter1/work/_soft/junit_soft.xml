@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="15" time="0.047" timestamp="2026-10-25T22:11:36.275789+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_bank_account_open_close" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw" time="0.000" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_amount" time="0.000" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_balance" time="0.000" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_balance" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state" time="0.001"><failure message="ValueError: account not open">def test_bank_account_concurrent_access_invalid_state():
+        account = BankAccount()
+    
+        def open_thread():
+            account.open()
+    
+        def close_thread():
+            account.close()
+        t1 = Thread(target=open_thread)
+        t2 = Thread(target=close_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+        with _soft_assert.raises('test_example_i1:10', pytest.raises(ValueError)):
+            account.get_balance()
+&gt;       account.close()
+
+test_example_i1.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x78d2f51e1970&gt;
+
+    def close(self):
+        if not self.is_open:
+&gt;           raise ValueError('account not open')
+E           ValueError: account not open
+
+example.py:42: ValueError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_2" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_3" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_4" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_5" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_6" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_7" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_8" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_9" time="0.000" /></testsuite></testsuites>

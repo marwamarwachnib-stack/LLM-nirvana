@@ -10,7 +10,7 @@
   "pynguin_memory_max": "6G",
   "pynguin_killed": false,
   "mccabe_max": 4,
-  "evaluator_version": 2,
+  "evaluator_version": 3,
   "coverage": {
     "num_statements": 36,
     "covered_lines": 36,
@@ -52,8 +52,10 @@
     "n_assertion": 0,
     "n_try_except": 0,
     "n_runtime": 0,
+    "n_not_reached": 0,
     "n_not_executed": 0,
     "incorrect_pct": 0.0,
+    "not_reached_pct": 0.0,
     "incorrect_breakdown_pct": {
       "assertion": null,
       "try_except": null,
@@ -140,5 +142,6 @@
       }
     }
   },
-  "cooldown_s": 0.0
+  "cooldown_s": 0.0,
+  "reevaluated_from_version": 2
 }

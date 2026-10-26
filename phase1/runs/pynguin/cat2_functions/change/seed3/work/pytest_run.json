@@ -1,7 +1,7 @@
 {
   "run": {
     "returncode": 0,
-    "stdout_tail": "...x.                                                                    [100%]\n4 passed, 1 xfailed in 0.13s\n",
+    "stdout_tail": "...x.                                                                    [100%]\n4 passed, 1 xfailed in 0.09s\n",
     "stderr_tail": "",
     "timeout": false,
     "cmd": [

@@ -4,7 +4,9 @@ Outputs in results/ (or results/<prefix>_* with --prefix):
   table_coverage.csv     Tables 1/2   avg statement / branch coverage per category and tool (iteration 1)
   stats_tests.csv        §3.1/§3.2.1  t-test (paper) + Mann-Whitney U, each LLM vs Pynguin, per category
   table_iterations.csv   Table 3      iteration-1 / iteration-5 / best coverage, best-least, median iterations
-  table_assertions.csv   Table 4      % incorrect assertions and breakdown (final suites)
+  table_assertions.csv   Table 4      % incorrect assertions and breakdown (final suites); not-reached share (11b)
+  table_truncation.csv   (new, 11c)   LLM answers cut at num_predict: calls, truncated calls, share, per model
+  table_jobs.csv         (new)        one row per job (Pynguin: per seed), truncated answers marked (11c)
   overlap.csv            Table 5      per program x tool pair: missed-statement overlap, Jaccard, combined coverage
   table_overlap.csv      Table 5      averages per category and pair
   complexity_corr.csv    Fig. 5       Spearman / Pearson of coverage vs max McCabe per tool
@@ -111,13 +113,16 @@ def main():
     pre = f"{args.prefix}_" if args.prefix else ""
     out = lambda name: RESULTS / f"{pre}{name}"  # noqa: E731
     it = pd.read_csv(RESULTS / "iterations.csv")
-    jobs = pd.read_csv(RESULTS / "jobs.csv")
+    jobs = pd.read_csv(RESULTS / "jobs.csv", dtype={"truncated_iterations": str}).copy()  # copy: de-fragmented frame
     tools = tools_in(jobs)
 
     # Tables 1/2 (RQ1, iteration 1). Pynguin: mean over seeds per program first.
     per_prog = jobs.groupby(["tool", "category", "program"], as_index=False)[
         ["stmt_cov", "branch_cov", "stmt_branch_cov", "mccabe_max"]].mean()
     tab = per_prog.groupby(["category", "tool"])[["stmt_cov", "branch_cov", "stmt_branch_cov"]].agg(["mean", "std", "count"]).round(2)
+    if "hit_num_predict" in jobs:  # 11c: how many of the iteration-1 answers in each cell were truncated
+        trunc1 = jobs.assign(t=jobs["hit_num_predict"].fillna(False).astype(bool)).groupby(["category", "tool"])["t"].sum()
+        tab[("n_iter1_truncated", "")] = trunc1.reindex(tab.index).fillna(0).astype(int)
     tab.to_csv(out("table_coverage.csv"))
 
     # statistics: each LLM vs Pynguin per category (paper: independent t-test)
@@ -166,10 +171,36 @@ def main():
         plt.close(fig)
 
     # Table 4 (RQ3): incorrect assertions on the final suites
-    a = jobs.groupby(["tool", "category"])[["final_incorrect_assert_pct", "final_incorrect_pct_assertion_error",
-                                            "final_incorrect_pct_try_except", "final_incorrect_pct_runtime"]].mean().round(2)
+    acols = ["final_incorrect_assert_pct", "final_incorrect_pct_assertion_error", "final_incorrect_pct_try_except",
+             "final_incorrect_pct_runtime", "final_not_reached_pct"]
+    a = jobs.groupby(["tool", "category"])[[c for c in acols if c in jobs]].mean().round(2)
     e = jobs.groupby(["tool", "category"])[["n_collection_error_files", "n_syntax_error_files"]].mean().round(2)
-    a.join(e).to_csv(out("table_assertions.csv"))
+    a = a.join(e)
+    if "truncated" in jobs:
+        a["n_jobs_truncated"] = jobs.groupby(["tool", "category"])["truncated"].apply(lambda x: int(x.fillna(False).astype(bool).sum()))
+    a.to_csv(out("table_assertions.csv"))
+
+    # 11c: truncated answers (output hit num_predict), per model and per model x category
+    llm_it = it[it.tool != "pynguin"].assign(truncated=lambda d: d["hit_num_predict"].fillna(False).astype(bool))
+    if not llm_it.empty:
+        tr = []
+        for keys, g in [((t, "all"), g) for t, g in llm_it.groupby("tool")] + list(llm_it.groupby(["tool", "category"])):
+            tr.append({"tool": keys[0], "category": keys[1], "calls": len(g), "truncated_calls": int(g.truncated.sum()),
+                       "truncated_pct": round(100 * g.truncated.mean(), 2),
+                       "jobs": g.program.nunique(), "jobs_with_truncation": g[g.truncated].program.nunique(),
+                       "truncated_at": " ".join(f"{r.program}#i{r.iteration}" for r in g[g.truncated].itertuples())})
+        pd.DataFrame(tr).sort_values(["tool", "category"]).to_csv(out("table_truncation.csv"), index=False)
+
+    # per-job results with truncated answers marked (11c)
+    jcols = ["tool", "category", "program", "seed", "n_iterations", "stmt_cov", "final_stmt_cov", "final_branch_cov",
+             "final_incorrect_assert_pct", "final_not_reached_pct", "n_calls", "n_truncated_calls", "truncated_iterations"]
+    jt = jobs[[c for c in jcols if c in jobs]].rename(columns={"stmt_cov": "iter1_stmt_cov"})
+    for c in ("seed", "n_iterations", "n_calls", "n_truncated_calls"):
+        if c in jt:
+            jt[c] = jt[c].astype("Int64")
+    if "n_truncated_calls" in jt:
+        jt["mark"] = jt["n_truncated_calls"].fillna(0).gt(0).map({True: "TRUNCATED", False: ""})
+    jt.sort_values(["tool", "category", "program"]).to_csv(out("table_jobs.csv"), index=False)
 
     # Table 5 / Fig. 7 (RQ4): overlap of missed statements
     ov = overlap_rows(missed_sets())

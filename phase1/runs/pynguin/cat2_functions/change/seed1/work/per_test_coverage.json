@@ -3,10 +3,10 @@
     ""
   ],
   "2": [
-    "test_example.test_2",
     "test_example.test_1",
-    "test_example.test_0",
-    "test_example.test_3"
+    "test_example.test_2",
+    "test_example.test_3",
+    "test_example.test_0"
   ],
   "3": [
     "test_example.test_0"

@@ -20,7 +20,9 @@ from common import VENV_PY, atomic_write_json
 
 # 1: pilot v1. 2: missing `from example import *` added (decision 4b); pytest.raises with a different
 #    exception type classified as runtime instead of pass (PLAN.md §13, items 8-9)
-EVALUATOR_VERSION = 2
+# 3: imports of the existing suite carried into iteration-k files (decision 11a); assertions skipped because
+#    the test crashed earlier are "not_reached", outside the incorrect rate (decision 11b)
+EVALUATOR_VERSION = 3
 
 COVERAGERC = """[run]
 branch = True
@@ -81,8 +83,10 @@ def _importable(mod):
     return r.returncode == 0
 
 
-def normalize_imports(test_src, module_src, target="example"):
-    """Rewrite imports of a non-existent module whose names exist in example.py to `example`.
+def normalize_imports(test_src, module_src, target="example", prior_srcs=()):
+    """Rewrite imports of a non-existent module whose names exist in example.py to `example`, then carry
+    imports over from the earlier suite files `prior_srcs` (decision 11a), then add a missing
+    `from example import *` (decision 4b).
 
     Returns (new_src, changes). Only the module name in the import line is changed.
     """
@@ -118,6 +122,10 @@ def normalize_imports(test_src, module_src, target="example"):
     for c in changes:
         c["rule"] = "renamed-module"
     src = "".join(lines)
+    carried = carry_imports(src, prior_srcs)
+    if carried:
+        src, change = carried
+        changes.append(change)
     added = add_missing_import(src, module_src, target)
     if added:
         src, change = added
@@ -149,24 +157,75 @@ def add_missing_import(test_src, module_src, target="example"):
         return None
     units = {n.name for n in mod.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))
              and not n.name.startswith("_")}
-    own = {n.name for n in ast.walk(tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))}
-    own |= {n.id for n in ast.walk(tree) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store)}
-    own |= {(a.asname or a.name).split(".")[0] for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom))
-            for a in n.names}
-    used = sorted({n.id for n in ast.walk(tree) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Load)} & (units - own))
+    used = sorted(_loaded_names(tree) & (units - _bound_names(tree)))
     if not used:
         return None
     line = f"from {target} import *"
     lines = test_src.splitlines(keepends=True)
-    at = 0  # after a module docstring / __future__ imports, which must stay first
+    at = _insert_at(tree)
+    lines.insert(at, line + "\n")
+    return "".join(lines), {"line": at + 1, "old": "", "new": line, "rule": "added-missing-import", "names_used": used}
+
+
+def carry_imports(test_src, prior_srcs):
+    """Decision 11a: an iteration-k answer is written as a continuation of the suite in the prompt and relies on
+    its imports (typically `import pytest`). Prepend each top-level import of the earlier files that binds a
+    name the new file uses but does not bind itself. Star imports are left to add_missing_import.
+    Returns (new_src, change) or None."""
+    try:
+        tree = ast.parse(test_src)
+    except SyntaxError:
+        return None
+    need = _loaded_names(tree) - _bound_names(tree)
+    carried, names = [], set()
+    for src in prior_srcs:
+        try:
+            ptree = ast.parse(src)
+        except SyntaxError:
+            continue
+        for n in ptree.body:
+            if not isinstance(n, (ast.Import, ast.ImportFrom)) or any(a.name == "*" for a in n.names) \
+                    or (isinstance(n, ast.ImportFrom) and n.module == "__future__"):
+                continue
+            bound = {(a.asname or a.name).split(".")[0] for a in n.names}
+            if bound & (need - names):
+                seg = ast.get_source_segment(src, n)
+                if seg not in carried:
+                    carried.append(seg)
+                names |= bound
+    if not carried:
+        return None
+    lines = test_src.splitlines(keepends=True)
+    at = _insert_at(tree)
+    lines.insert(at, "\n".join(carried) + "\n")
+    return "".join(lines), {"line": at + 1, "old": "", "new": "\n".join(carried), "rule": "carried-imports",
+                            "names_used": sorted(names & need)}
+
+
+def _loaded_names(tree):
+    return {n.id for n in ast.walk(tree) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Load)}
+
+
+def _bound_names(tree):
+    own = {n.name for n in ast.walk(tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))}
+    own |= {n.id for n in ast.walk(tree) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store)}
+    own |= {a.arg for n in ast.walk(tree) if isinstance(n, ast.arguments)
+            for a in n.posonlyargs + n.args + n.kwonlyargs + [x for x in (n.vararg, n.kwarg) if x]}
+    own |= {(a.asname or a.name).split(".")[0] for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom))
+            for a in n.names}
+    return own
+
+
+def _insert_at(tree):
+    """Line after a module docstring / __future__ imports, which must stay first."""
+    at = 0
     for n in tree.body:
         is_doc = isinstance(n, ast.Expr) and isinstance(n.value, ast.Constant) and isinstance(n.value.value, str)
         if is_doc or (isinstance(n, ast.ImportFrom) and n.module == "__future__"):
             at = n.end_lineno
         else:
             break
-    lines.insert(at, line + "\n")
-    return "".join(lines), {"line": at + 1, "old": "", "new": line, "rule": "added-missing-import", "names_used": used}
+    return at
 
 
 def numbered_code(src):
@@ -477,14 +536,14 @@ def soft_assertions(work, files, junit_plain, cfg):
                 return v["status"]
         return None
 
-    counts = {"pass": 0, "assertion": 0, "try_except": 0, "runtime": 0, "not_executed": 0}
+    counts = {"pass": 0, "assertion": 0, "try_except": 0, "runtime": 0, "not_reached": 0, "not_executed": 0}
     for s in sites:
         o = outcomes.get(s["site"])
         st = test_status(s)
         if o:
             s["outcome"], s["detail"] = o["outcome"], o["detail"]
         elif st in ("failed", "error"):
-            s["outcome"] = "runtime"  # test crashed before reaching this assertion
+            s["outcome"] = "not_reached"  # test crashed before this assertion: not executed, so not judged (11b)
             s["detail"] = "unreached: test crashed outside assertions"
         else:
             s["outcome"] = "not_executed"  # e.g. xfail tests, untaken branches, never-collected tests
@@ -496,6 +555,8 @@ def soft_assertions(work, files, junit_plain, cfg):
     return {
         "n_sites": len(sites), "n_judged": judged, **{f"n_{k}": v for k, v in counts.items()},
         "incorrect_pct": round(100 * incorrect / judged, 2) if judged else None,
+        "not_reached_pct": round(100 * counts["not_reached"] / (judged + counts["not_reached"]), 2)
+        if judged + counts["not_reached"] else None,
         "incorrect_breakdown_pct": {k: round(100 * counts[k] / incorrect, 2) if incorrect else None
                                     for k in ("assertion", "try_except", "runtime")},
     }

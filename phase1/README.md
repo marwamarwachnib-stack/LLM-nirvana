@@ -33,7 +33,7 @@ Start long runs in **your own terminal**, not from inside Claude Code: Claude Co
 What the steps do:
 - `run.sh` checks RAPL, starts Ollama (user-level, CPU only) if needed, blocks sleep, and logs to `runs/console_<time>.log`.
 - Results are rebuilt after each job: `.venv/bin/python scripts/aggregate.py` → `results/iterations.csv`, `results/jobs.csv`.
-- Paper tables and figures: `.venv/bin/python scripts/analyze.py --prefix pilot` → `results/pilot_*`.
+- Paper tables and figures: `.venv/bin/python scripts/analyze.py --prefix pilot` → `results/pilot_*` (truncated answers: `table_truncation.csv`, marked per job in `table_jobs.csv`).
 - Readability proxies (post-processing, after a run): `.venv/bin/python scripts/readability.py --prefix pilot`.
 - Stored Pynguin cross-check: `.venv/bin/python scripts/xcheck_stored.py`.
 - Dataset dry run (no generation): `.venv/bin/python scripts/dry_run.py --set small` → `results/dry_run_small.csv`.
@@ -47,7 +47,7 @@ What the steps do:
 | `config/experiment.yaml` | models, decoding (T=0, seed=42), iterations, Pynguin, energy (PRT) |
 | `config/prompts/` | paper prompts (Fig. 1, Fig. 2) |
 | `scripts/` | `run.py` (orchestrator), `evaluate.py` (coverage, errors, soft assertions), `common.py` (RAPL/CodeCarbon), `aggregate.py`, `analyze.py`, `readability.py`, `reevaluate.py`, `determinism_check.py`, `dry_run.py`, `xcheck_stored.py`, `ollama_serve.sh` |
-| `runs_archive/pilot_v1/` | superseded pilot v1 runs, kept unchanged (see its README) |
+| `runs_archive/pilot_v1/`, `runs_archive/pilot_v2/` | superseded pilot runs, kept unchanged (see each README) |
 | `env/` | lockfiles of both venvs (pinned with `uv --exclude-newer 2026-10-11`) |
 | `runs/<tool>/<cat>/<program>/rep0/iter<k>/` | per iteration: prompts, raw response, Ollama metadata, normalized and raw tests, coverage, per-test coverage contexts, assertions, energy, `manifest.json`, `DONE` |
 | `runs/<tool>/<cat>/<program>/rep0/final_suite/` | final cumulative suite (reused by Phase 2) |

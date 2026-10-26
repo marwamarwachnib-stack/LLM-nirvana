@@ -2,7 +2,7 @@
   "sites": [],
   "run": {
     "returncode": 5,
-    "stdout_tail": "\nno tests ran in 0.01s\n",
+    "stdout_tail": "\nno tests ran in 0.00s\n",
     "stderr_tail": "",
     "timeout": false,
     "cmd": [

@@ -203,7 +203,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
                 module_src, refactored = module_block, True  # paper: ChatGPT refactored Cat-1 scripts
                 (work / "example.py").write_text(module_src)
             fname = f"test_example_i{k}.py"
-            norm, changes = normalize_imports(test_code, module_src)
+            norm, changes = normalize_imports(test_code, module_src, prior_srcs=[t for _, t in suite])
             (work / f"test_example_i{k}.raw.py").write_text(test_code)
             (work / fname).write_text(norm)
             atomic_write_json(idir / "postprocess_log.json", {"extraction": xinfo, "import_rewrites": changes,
@@ -230,7 +230,8 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
                 "new_file": {"name": fname, "errors_normalized": metrics["errors"]["files"][fname], "errors_raw": raw_err,
                              "n_import_rewrites": len(changes),
                              "n_imports_renamed": sum(c["rule"] == "renamed-module" for c in changes),
-                             "import_added": any(c["rule"] == "added-missing-import" for c in changes)},
+                             "import_added": any(c["rule"] == "added-missing-import" for c in changes),
+                             "imports_carried": any(c["rule"] == "carried-imports" for c in changes)},
                 "llm": {"prompt_tokens": meta.get("prompt_eval_count"), "output_tokens": meta.get("eval_count"),
                         "prompt_eval_s": dur("prompt_eval_duration"), "eval_s": dur("eval_duration"),
                         "load_s": dur("load_duration"), "total_s": dur("total_duration"),

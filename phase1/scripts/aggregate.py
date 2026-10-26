@@ -74,6 +74,7 @@ def flatten(m, manifest):
         "incorrect_assert_pct": a.get("incorrect_pct"),
         "incorrect_pct_assertion_error": br.get("assertion"), "incorrect_pct_try_except": br.get("try_except"),
         "incorrect_pct_runtime": br.get("runtime"),
+        "n_assert_not_reached": a.get("n_not_reached"), "not_reached_pct": a.get("not_reached_pct"),
     }
     if "new_file" in m:
         nf, llm = m["new_file"], m["llm"]
@@ -82,6 +83,7 @@ def flatten(m, manifest):
             "new_file_collection_error_raw": nf["errors_raw"]["collection_error"],
             "new_file_syntax_error": nf["errors_raw"]["syntax_error"], "n_import_rewrites": nf["n_import_rewrites"],
             "n_imports_renamed": nf.get("n_imports_renamed"), "import_added": nf.get("import_added"),
+            "imports_carried": nf.get("imports_carried"),
             "prompt_cached_tokens": llm.get("prompt_cached_tokens"), "cold_cache": llm.get("cold_cache"),
             "prompt_tokens": llm["prompt_tokens"], "output_tokens": llm["output_tokens"], "tokens_per_s": llm["tokens_per_s"],
             "llm_prompt_eval_s": llm["prompt_eval_s"], "llm_eval_s": llm["eval_s"], "llm_load_s": llm["load_s"],
@@ -133,7 +135,8 @@ def aggregate():
                          "final_incorrect_assert_pct": r["incorrect_assert_pct"],
                          "final_incorrect_pct_assertion_error": r["incorrect_pct_assertion_error"],
                          "final_incorrect_pct_try_except": r["incorrect_pct_try_except"],
-                         "final_incorrect_pct_runtime": r["incorrect_pct_runtime"]})
+                         "final_incorrect_pct_runtime": r["incorrect_pct_runtime"],
+                         "final_not_reached_pct": r["not_reached_pct"]})
     llm = {}
     for r in iters:
         if r["tool"] != "pynguin":
@@ -152,6 +155,11 @@ def aggregate():
                      "final_incorrect_pct_assertion_error": last["incorrect_pct_assertion_error"],
                      "final_incorrect_pct_try_except": last["incorrect_pct_try_except"],
                      "final_incorrect_pct_runtime": last["incorrect_pct_runtime"],
+                     "final_not_reached_pct": last["not_reached_pct"],
+                     # decision 11c: answers cut at num_predict are kept, counted and marked
+                     "n_calls": len(rs), "n_truncated_calls": sum(bool(r.get("hit_num_predict")) for r in rs),
+                     "truncated": any(r.get("hit_num_predict") for r in rs),
+                     "truncated_iterations": " ".join(str(r["iteration"]) for r in rs if r.get("hit_num_predict")),
                      "best_stmt_cov": max(r["stmt_cov"] or 0 for r in rs),
                      "chain_gen_wall_s": energy_sum("gen_wall_s"), "chain_gen_cc_cpu_wh": energy_sum("gen_cc_cpu_wh"),
                      "chain_gen_cc_cpu_wh_net": energy_sum("gen_cc_cpu_wh_net"),

@@ -1,7 +1,7 @@
 {
   "run": {
     "returncode": 5,
-    "stdout_tail": "\nno tests ran in 0.03s\n",
+    "stdout_tail": "\nno tests ran in 0.02s\n",
     "stderr_tail": "",
     "timeout": false,
     "cmd": [
