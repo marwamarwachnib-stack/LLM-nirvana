@@ -129,3 +129,12 @@ From the pilot's per-program means (n = 1 per category, so uncertain):
 1. `./run.sh small --tools pynguin`
 2. `./run.sh small --tools dsc-6.7b,cl-7b`
 3. `.venv/bin/python scripts/determinism_check.py --tools dsc-6.7b,cl-7b --max-per-tool 10 --out determinism_small.csv`
+
+## 7. Pre-main-study checks (2026-10-26)
+
+Details in PLAN.md §13.14–13.17; proposals as decision 11 (awaiting OK). No long runs were started.
+
+- **Token limit:** 4 of 32 pilot calls hit 2048 tokens (cl-7b 3 of 11, dsc-1.3b 1 of 12, dsc-6.7b 0 of 10), and all 4 were degenerate loops. Raising the limit to 4096 would cost about +6.5–9 h for cl-7b and needs a larger context. Proposal: keep 2048.
+- **Iteration 2:** the prompt matches Fig. 2, missed lines included. The new tests lack `import pytest` and die with `NameError` before reaching those lines. With the suite's imports carried over, dsc-6.7b bank-account goes 86.1 → 91.7 % and dsc-1.3b bank-account 91.7 → 94.4 %.
+- **Incorrect assertions:** 29 of the 69 incorrect sites were never reached (the test crashed earlier); 18 of those 29 are the missing-import artifact. Of 10 random sites, 6 are correct, 2 questionable and 2 artifacts (`pilot_incorrect_sample.md`). With carried imports, dsc-6.7b bank-account drops from 29.4 to 0 %. What remains high is genuine.
+- **Dry run:** all 60 programs in 0_100 LOC compile under Python 3.12 and import, using only the standard library (`dry_run_small.csv`).
