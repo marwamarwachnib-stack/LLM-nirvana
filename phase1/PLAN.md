@@ -3,7 +3,7 @@
 **PhD:** Large Language Models for Automated Program Debugging (LLMs + SBFL; quality and energy measured in every study)
 **Phase 1 goal:** replicate *Bhatia, Gandhi, Kumar, Jalote, "Unit Test Generation using Generative AI: A Comparative Performance Analysis of Autogeneration Tools", LLM4Code@ICSE 2024* ([doi:10.1145/3643795.3648396](https://doi.org/10.1145/3643795.3648396), arXiv:2312.10622). ChatGPT is replaced by local LLMs (DeepSeek-Coder, CodeLlama) served by Ollama on CPU. Every tool is compared with Pynguin on the same dataset, using the paper's quality metrics plus time and energy.
 
-> Status: **approved 2026-10-25** (decisions in §11). Pilot v3 done (`results/pilot_report.md`; decision 11 applied, evaluator v3). Decision 10 confirmed for both 7B models (§11). Next: the main study (pilot v3 report §9), then the determinism sample.
+> Status: **approved 2026-10-25** (decisions in §11). Pilot v3 done (`results/pilot_report.md`; decision 11 applied, evaluator v3). Decision 10 confirmed for both 7B models, dsc-1.3b joins the main study (decision 12). Next: the main study (pilot v3 report §9), then the determinism sample.
 
 ### PhD context (confirmed by the PhD student)
 
@@ -71,7 +71,7 @@ The repo contains **no ChatGPT outputs or prompts for `0_100 LOC`**. Only `p2` h
 |---|---|---|---|
 | `dsc-6.7b` | DeepSeek-Coder 6.7B Instruct | `deepseek-coder:6.7b-instruct` | main |
 | `cl-7b` | CodeLlama 7B Instruct | `codellama:7b-instruct` | main |
-| `dsc-1.3b` | DeepSeek-Coder 1.3B Instruct | `deepseek-coder:1.3b-instruct` | pilot speed comparison (may join the main study after the pilot) |
+| `dsc-1.3b` | DeepSeek-Coder 1.3B Instruct | `deepseek-coder:1.3b-instruct` | small-model comparison; **in the main study** (decision 12) |
 | `pynguin` | Pynguin (pinned version, see §8) | — | baseline: `pynguin --project-path . --output-path . --module-name example` (same command as `a*_script.py`), plus an explicit `--seed` |
 
 **Decoding settings (stored in `config/experiment.yaml`):** `temperature=0.0`, `seed=42`, `top_k=40`, `top_p=0.9`, `num_ctx=8192`, `num_predict=2048`, `num_thread=4` (physical cores), `num_gpu=0`.
@@ -121,7 +121,7 @@ For each program, let `S` be the statements of `example.py` and `M_A`, `M_B` the
 | **Jaccard index** (added) | \|M_A ∩ M_B\| / \|M_A ∪ M_B\|; undefined (reported as NA, and counted) when both miss nothing | — |
 | **Combined coverage** (added) | (\|S\| − \|M_A ∩ M_B\|) / \|S\| × 100, i.e. the coverage of the union of the two suites | — |
 
-- **Pairs:** every LLM vs Pynguin (the paper's RQ4), plus LLM vs LLM (`dsc-6.7b` vs `cl-7b`, and `dsc-6.7b` vs `dsc-1.3b` if 1.3B joins), and all tools together (the n-way intersection, and the coverage of the union of all suites).
+- **Pairs:** every LLM vs Pynguin (the paper's RQ4), plus LLM vs LLM (`dsc-6.7b` vs `cl-7b`, and `dsc-6.7b` vs `dsc-1.3b`), and all tools together (the n-way intersection, and the coverage of the union of all suites).
 - **Pynguin seeds:** each pair is computed for every Pynguin seed and then averaged. The union over the 5 seeds is also reported as "Pynguin (all seeds)".
 - **When:** for iteration 1 (comparable with RQ1) and for the final iterative suite.
 - **Validity:** combined coverage is computed from line sets, so it is exact for statements (no re-run needed). Combined *branch* coverage is computed the same way from `missing_branches`.
@@ -319,7 +319,7 @@ Added after the pilot (confirmed 2026-10-25):
 9. **Energy headline:** RAPL package Wh (net of idle) + RAPL DRAM Wh. CodeCarbon's `total_wh` is not used, because its RAM part is an estimate 3–26× above measured DRAM (`results/pilot_report.md` §5).
 10. **Determinism (confirmed 2026-10-26, for both 7B models):** try deterministic generation first; only if that fails, run each model 3 times. **Result: deterministic generation works within a session** with a cold prompt cache per call (§13.10), so each LLM job runs once (`rep0`). Between sessions a 7B answer can still flip at a near-tie: pilot v2 check CodeLlama 1/3 (§13.13); pilot v3 showed it is not a power-state effect and also hits dsc-6.7b (§13.18). Decided:
     - **No repetitions at T=0** (identical reruns cannot measure this) and no sampling at T>0 (departs from the paper's protocol).
-    - **After the main study**, re-send a fixed random sample (seed 0) of 10 jobs per model for **dsc-6.7b and cl-7b**: `.venv/bin/python scripts/determinism_check.py --tools dsc-6.7b,cl-7b --max-per-tool 10 --out determinism_small.csv` (about 1–2 h, on AC). dsc-1.3b, if run, is sampled the same way.
+    - **After the main study**, re-send a fixed random sample (seed 0) of 10 jobs per model for **dsc-6.7b and cl-7b**, and for dsc-1.3b too since it joins (decision 12): `.venv/bin/python scripts/determinism_check.py --tools dsc-1.3b,dsc-6.7b,cl-7b --max-per-tool 10 --out determinism_small.csv` (about 1.5–2 h, on AC).
     - **Report** per model the share of byte-identical answers and of identical test code as a threat to validity, covering variation *between sessions*, not only within one. Flag the 7B models' assertion rates (and, for bank-account-like long answers, coverage) as sensitive to near-ties.
     - **Escalate per model:** if a 7B model's identical-code share falls below about 90 %, re-score its differing programs from the rerun as well and report both values (min–max) for those programs.
     - The AC-only test proposed earlier is dropped: pilot v3 answered it (§13.18).
@@ -328,6 +328,7 @@ Added after the pilot (confirmed 2026-10-25):
     - **(b) Not-reached assertions (yes):** incorrect = failed / executed (§4). An assertion skipped because its test crashed earlier is `not_reached`: outside the rate, reported as `not_reached_pct`.
     - **(c) Token limit:** `num_predict` stays at 2048. Truncated answers are kept and scored, counted per model and category in `table_truncation.csv`, and marked per job in `table_jobs.csv` (`mark = TRUNCATED`, with the iterations), in `table_coverage.csv` (`n_iter1_truncated`) and in `table_assertions.csv` (`n_jobs_truncated`).
     - **Verified:** unit cases (carry needed / already imported / bound by a fixture argument / docstring first / syntax error / nothing needed); re-scoring the 7 pilot-v2 iteration-2 suites; and a dsc-1.3b smoke run of the pilot on AC. That run reproduced all 6 earlier answers byte for byte, improved bank-account in iteration 2 (91.7 → 94.4 %) and continued to iteration 3. The pilot v2 LLM runs are archived in `runs_archive/pilot_v2/`; the Pynguin seeds were re-scored with v3 (no change).
+12. **dsc-1.3b joins the main study (confirmed 2026-10-26).** All three models run on 0_100 LOC: `./run.sh small --tools dsc-1.3b,dsc-6.7b,cl-7b`. Cost from pilot v3: about 120 s and 0.58 Wh net per program, so about +2 h and +0.04 kWh. It adds a size comparison within one model family (`dsc-6.7b` vs `dsc-1.3b`): quality against energy at about 3.4× less energy per program in the pilot.
 
 ## 12. Resumability and Phase-2 readiness
 

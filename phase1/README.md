@@ -23,7 +23,8 @@ This covers both the MSR (`intel-rapl:*`) and MMIO (`intel-rapl-mmio:*`) interfa
 ```bash
 cd ~/LLM-nirvana/phase1
 ./run.sh pilot                                   # pilot: 3 programs × {Pynguin ×5 seeds, dsc-1.3b, dsc-6.7b, cl-7b}
-./run.sh small --tools pynguin,dsc-6.7b,cl-7b    # main study, 0_100 LOC (60 programs)
+./run.sh small --tools pynguin                   # main study, 0_100 LOC (60 programs): Pynguin
+./run.sh small --tools dsc-1.3b,dsc-6.7b,cl-7b   # then the three LLMs
 ```
 
 Start long runs in **your own terminal**, not from inside Claude Code: Claude Code may stop background jobs when memory is low. Close Firefox and other apps first (memory and energy noise). Each Pynguin run is capped at 6 GB RAM with no swap (cgroup). **The runner waits while the laptop is on battery** (it prints `ON BATTERY`) and continues when the charger is back.

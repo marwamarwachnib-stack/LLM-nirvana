@@ -199,15 +199,15 @@ From the v3 per-program means (n = 1 per category, so uncertain). Working iterat
 | Pynguin, 5 seeds | Cat 1 ≈ 6 s; Cat 2 ≈ 5 × 254 s; Cat 3 ≈ 5 × 604 s | ≈ 24 h, ≈ 0.37 kWh package |
 | dsc-6.7b | ≈ 355 s, 1.96 Wh net | ≈ 6 h, ≈ 0.12 kWh |
 | cl-7b | ≈ 614 s, 2.61 Wh net | ≈ 10 h, ≈ 0.16 kWh |
-| dsc-1.3b (optional) | ≈ 120 s, 0.58 Wh net | ≈ 2 h, ≈ 0.04 kWh |
+| dsc-1.3b (decision 12) | ≈ 120 s, 0.58 Wh net | ≈ 2 h, ≈ 0.04 kWh |
 | idle baselines, loads, cooldowns, evaluation | | + 10–20 % |
 
-**Total** (Pynguin, dsc-6.7b, cl-7b, one run per program): about 45 h of machine time and about 0.65 kWh of package energy. The determinism sample adds about 1–2 h.
+**Total** (Pynguin and all three models, one run per program): about 47 h of machine time and about 0.7 kWh of package energy. The determinism sample adds about 1.5–2 h.
 
 **Suggested order** (one command each, all resumable, on mains power):
 
 1. `./run.sh small --tools pynguin`
-2. `./run.sh small --tools dsc-6.7b,cl-7b`
-3. `.venv/bin/python scripts/determinism_check.py --tools dsc-6.7b,cl-7b --max-per-tool 10 --out determinism_small.csv`
+2. `./run.sh small --tools dsc-1.3b,dsc-6.7b,cl-7b`
+3. `.venv/bin/python scripts/determinism_check.py --tools dsc-1.3b,dsc-6.7b,cl-7b --max-per-tool 10 --out determinism_small.csv`
 
 The pre-main-study checks (token limit, iteration-2 prompt, incorrect-assertion sample, dry run of all 60 programs) are in the v2 report §7 and PLAN.md §13.14–13.17. Their conclusions stand.

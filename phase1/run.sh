@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Phase 1 launcher. Resumable: after a power cut / crash, re-run EXACTLY the same command.
 #   ./run.sh pilot                                  # pilot: 3 programs, Pynguin + 3 LLMs
-#   ./run.sh small --tools pynguin,dsc-6.7b,cl-7b   # main study on 0_100 LOC
+#   ./run.sh small --tools pynguin                  # main study on 0_100 LOC: Pynguin first,
+#   ./run.sh small --tools dsc-1.3b,dsc-6.7b,cl-7b  # then the three LLMs
 # Blocks system sleep while running (systemd-inhibit); logs to runs/console_<timestamp>.log
 set -euo pipefail
 cd "$(dirname "$0")"
