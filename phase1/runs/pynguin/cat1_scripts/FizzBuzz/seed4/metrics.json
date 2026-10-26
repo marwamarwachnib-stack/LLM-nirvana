@@ -1,0 +1,156 @@
+{
+  "tool": "pynguin",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "seed": 4,
+  "iteration": 1,
+  "pynguin_returncode": 1,
+  "pynguin_produced_tests": false,
+  "pynguin_worker_restarts": 0,
+  "pynguin_memory_max": "6G",
+  "pynguin_killed": false,
+  "mccabe_max": 5,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 0,
+    "num_branches": null,
+    "covered_branches": 0,
+    "missing_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "missing_branches": null,
+    "stmt_cov": 0.0,
+    "branch_cov": null,
+    "stmt_branch_cov": 0.0
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": true,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 5
+  },
+  "tests": {
+    "n_tests": 0,
+    "passed": 0,
+    "failed": 0,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 0,
+    "n_judged": 0,
+    "n_pass": 0,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 0,
+    "n_not_executed": 0,
+    "incorrect_pct": null,
+    "incorrect_breakdown_pct": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+    }
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T18:22:02+00:00",
+      "wall_s": 1.184,
+      "codecarbon": {
+        "cpu_wh": 0.0036206331742831555,
+        "ram_wh": 0.0032996738777809594,
+        "gpu_wh": 0.0,
+        "total_wh": 0.006920307052064114,
+        "cpu_power_w": 3.8027331278702206,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.1456775933903702e-06,
+        "duration_s": 1.1892871010004455,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.0036160013888888887,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.0001661,
+        "msr:intel-rapl:0:package-0": 0.0036160013888888887,
+        "msr:intel-rapl:0:0:core": 0.0033367325,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.0001662863888888889
+      },
+      "pkg_temp_c": {
+        "mean": 66.0,
+        "max": 66.0
+      },
+      "cpu_mhz": {
+        "mean": 2461.3,
+        "max": 2461.3
+      },
+      "cpu_util_pct": {
+        "mean": 12.9,
+        "max": 12.9
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T18:22:04+00:00",
+      "wall_s": 1.098,
+      "codecarbon": {
+        "cpu_wh": 0.003967261229361613,
+        "ram_wh": 0.0030564842444467414,
+        "gpu_wh": 0.0,
+        "total_wh": 0.007023745473808353,
+        "cpu_power_w": 11.972848571993788,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.1628021344253944e-06,
+        "duration_s": 1.1015815360005945,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.003960595,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00014146555555555557,
+        "msr:intel-rapl:0:package-0": 0.003958899444444444,
+        "msr:intel-rapl:0:0:core": 0.0036857341666666666,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.00014161833333333333
+      },
+      "pkg_temp_c": {
+        "mean": 66.0,
+        "max": 66.0
+      },
+      "cpu_mhz": {
+        "mean": 3323.1,
+        "max": 3323.1
+      },
+      "cpu_util_pct": {
+        "mean": 12.7,
+        "max": 12.7
+      }
+    }
+  },
+  "cooldown_s": 2.0,
+  "evaluator_version": 2,
+  "reevaluated_from_version": 1
+}

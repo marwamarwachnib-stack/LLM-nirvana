@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "tool": "dsc-6.7b",
+  "model": "deepseek-coder:6.7b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "started": "2026-10-25T21:58:19+00:00",
+  "session": "20261025-204452",
+  "finished": "2026-10-25T22:00:14+00:00",
+  "n_iterations": 1,
+  "stmt_cov_by_iter": [
+    100.0
+  ]
+}

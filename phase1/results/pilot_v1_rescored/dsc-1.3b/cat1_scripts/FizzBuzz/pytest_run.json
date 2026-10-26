@@ -1,0 +1,41 @@
+{
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "F                                                                        [100%]\n=================================== FAILURES ===================================\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n>       capturedOutput = pytest.monkeypatch.stdout\n                         ^^^^^^^^^^^^^^^^^^\nE       AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?\n\ntest_example_i1.py:6: AttributeError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_fizzbuzz - AttributeError: module 'pytest' ha...\n1 failed in 0.10s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "coverage",
+      "run",
+      "--rcfile=.coveragerc",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  },
+  "junit": {
+    "test_example_i1::test_fizzbuzz": {
+      "status": "failed",
+      "message": "AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?"
+    }
+  },
+  "file_errors": {
+    "test_example_i1.py": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    }
+  }
+}

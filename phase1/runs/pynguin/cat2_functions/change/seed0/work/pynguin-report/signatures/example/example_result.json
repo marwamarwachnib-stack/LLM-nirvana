@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 1, "type": [], "col_offset": 23, "function": "find_fewest_coins", "parameter": "coins"}, {"file": "example.py", "line_number": 1, "type": [], "col_offset": 30, "function": "find_fewest_coins", "parameter": "target"}, {"file": "example.py", "line_number": 1, "type": [], "col_offset": 5, "function": "find_fewest_coins"}]

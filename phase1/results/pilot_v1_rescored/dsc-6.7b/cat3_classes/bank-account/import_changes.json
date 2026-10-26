@@ -1,0 +1,8 @@
+[
+  {
+    "line": 2,
+    "old": "from your_module import BankAccount  # replace 'your_module' with the actual module name",
+    "new": "from example import BankAccount  # replace 'your_module' with the actual module name",
+    "rule": "renamed-module"
+  }
+]

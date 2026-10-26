@@ -1,0 +1,79 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 7,
+      "test": "test_find_fewest_coins_1",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 12,
+      "test": "test_find_fewest_coins_2",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 17,
+      "test": "test_find_fewest_coins_3",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "raises",
+      "lineno": 22,
+      "test": "test_find_fewest_coins_4",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 28,
+      "test": "test_find_fewest_coins_5",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "assert",
+      "lineno": 33,
+      "test": "test_find_fewest_coins_6",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 0,
+    "stdout_tail": "......                                                                   [100%]\n6 passed in 0.03s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  }
+}

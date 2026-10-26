@@ -1,0 +1,8 @@
+[
+  {
+    "line": 6,
+    "old": "    import fizzbuzz  # assuming the script name is fizzbuzz.py",
+    "new": "    import example as fizzbuzz  # assuming the script name is fizzbuzz.py",
+    "rule": "renamed-module"
+  }
+]

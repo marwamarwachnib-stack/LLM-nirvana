@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="8" time="0.083" timestamp="2026-10-25T21:45:35.303467+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_open_account" time="0.004" /><testcase classname="test_example_i1" name="test_deposit_into_open_account" time="0.001" /><testcase classname="test_example_i1" name="test_withdraw_from_open_account" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_deposit_negative_amount" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_withdraw_more_than_balance" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_withdraw_negative_amount" time="0.001" /><testcase classname="test_example_i1" name="test_close_account" time="0.001"><failure message="ValueError: account not open">def test_close_account():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+        account.close()
+        assert account.is_open == False
+&gt;       assert account.get_balance() == 100
+               ^^^^^^^^^^^^^^^^^^^^^
+
+test_example_i1.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x7853dd551250&gt;
+
+    def get_balance(self):
+        with self.lock:
+            if not self.is_open:
+&gt;               raise ValueError('account not open')
+E               ValueError: account not open
+
+example.py:13: ValueError</failure></testcase><testcase classname="test_example_i1" name="test_cannot_open_already_open_account" time="0.001" /></testsuite></testsuites>

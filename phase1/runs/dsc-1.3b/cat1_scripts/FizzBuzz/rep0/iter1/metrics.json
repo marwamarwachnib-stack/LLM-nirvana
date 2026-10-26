@@ -1,0 +1,231 @@
+{
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "iteration": 1,
+  "refactored_module": false,
+  "mccabe_max": 5,
+  "evaluator_version": 2,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 0,
+    "num_branches": null,
+    "covered_branches": 0,
+    "missing_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "missing_branches": null,
+    "stmt_cov": 0.0,
+    "branch_cov": null,
+    "stmt_branch_cov": 0.0
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 2,
+    "n_judged": 2,
+    "n_pass": 0,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 2,
+    "n_not_executed": 0,
+    "incorrect_pct": 100.0,
+    "incorrect_breakdown_pct": {
+      "assertion": 0.0,
+      "try_except": 0.0,
+      "runtime": 100.0
+    }
+  },
+  "new_file": {
+    "name": "test_example_i1.py",
+    "errors_normalized": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "errors_raw": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "n_import_rewrites": 0,
+    "n_imports_renamed": 0,
+    "import_added": false
+  },
+  "llm": {
+    "prompt_tokens": 197,
+    "output_tokens": 352,
+    "prompt_eval_s": 2.00202,
+    "eval_s": 12.117823,
+    "load_s": 0.002580836,
+    "total_s": 14.127607567,
+    "tokens_per_s": 29.05,
+    "done_reason": "stop",
+    "prompt_cached_tokens": 0,
+    "cold_cache": true,
+    "hit_num_predict": false,
+    "possible_ctx_overflow": false,
+    "template": "basic_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T21:40:38+00:00",
+      "wall_s": 14.129,
+      "codecarbon": {
+        "cpu_wh": 0.1000871209029669,
+        "ram_wh": 0.03922927131387851,
+        "gpu_wh": 0.0,
+        "total_wh": 0.13931639221684539,
+        "cpu_power_w": 23.048576297325784,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 2.3064246680675403e-05,
+        "duration_s": 14.133013418999326,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.10007707194444444,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.010807789444444445,
+        "msr:intel-rapl:0:package-0": 0.10008131055555555,
+        "msr:intel-rapl:0:0:core": 0.09458265027777778,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.010807942222222222
+      },
+      "pkg_temp_c": {
+        "mean": 70.1,
+        "max": 79.0
+      },
+      "cpu_mhz": {
+        "mean": 2871.2,
+        "max": 3405.4
+      },
+      "cpu_util_pct": {
+        "mean": 50.3,
+        "max": 50.6
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T21:40:53+00:00",
+      "wall_s": 1.143,
+      "codecarbon": {
+        "cpu_wh": 0.004882227516884996,
+        "ram_wh": 0.0031826886833288075,
+        "gpu_wh": 0.0,
+        "total_wh": 0.008064916200213802,
+        "cpu_power_w": 7.13870336903926,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.3351710716939958e-06,
+        "duration_s": 1.1470407859997067,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.004871966388888889,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00014143166666666666,
+        "msr:intel-rapl:0:package-0": 0.004871966388888889,
+        "msr:intel-rapl:0:0:core": 0.004593138055555556,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.0001415163888888889
+      },
+      "pkg_temp_c": {
+        "mean": 73.0,
+        "max": 73.0
+      },
+      "cpu_mhz": {
+        "mean": 2463.5,
+        "max": 2463.5
+      },
+      "cpu_util_pct": {
+        "mean": 15.6,
+        "max": 15.6
+      }
+    },
+    "load": {
+      "phase": "model_load",
+      "started": "2026-10-25T21:40:34+00:00",
+      "wall_s": 2.023,
+      "codecarbon": {
+        "cpu_wh": 0.009074487815147192,
+        "ram_wh": 0.0055546430222218795,
+        "gpu_wh": 0.0,
+        "total_wh": 0.01462913083736907,
+        "cpu_power_w": 7.680165574363738,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 2.4218964975189618e-06,
+        "duration_s": 2.0261614189985266,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.009181410277777777,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.0005257316666666666,
+        "msr:intel-rapl:0:package-0": 0.009181410277777777,
+        "msr:intel-rapl:0:0:core": 0.00858299611111111,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.0005257316666666666
+      },
+      "pkg_temp_c": {
+        "mean": 67.0,
+        "max": 69.0
+      },
+      "cpu_mhz": {
+        "mean": 3084.6,
+        "max": 3287.7
+      },
+      "cpu_util_pct": {
+        "mean": 20.0,
+        "max": 27.3
+      },
+      "ollama": {
+        "model": "deepseek-coder:1.3b-instruct",
+        "created_at": "2026-10-25T21:40:36.84098017Z",
+        "response": "",
+        "done": true,
+        "done_reason": "load"
+      }
+    }
+  },
+  "cooldown_s": 2.0
+}

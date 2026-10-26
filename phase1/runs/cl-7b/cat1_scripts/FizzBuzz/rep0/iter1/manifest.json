@@ -1,0 +1,107 @@
+{
+  "tool": "cl-7b",
+  "model_info": {
+    "model": "codellama:7b-instruct",
+    "digest": "8fdf8f752f6e80de33e82f381aba784c025982752cd1ae9377add66449d2225f",
+    "size_bytes": 3825910662,
+    "modified_at": "2026-10-25T16:19:48.70086032Z",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "llama",
+      "families": null,
+      "parameter_size": "7B",
+      "quantization_level": "Q4_0"
+    },
+    "model_info": {
+      "general.architecture": "llama",
+      "general.file_type": 2,
+      "general.parameter_count": 6738546688,
+      "general.quantization_version": 2,
+      "llama.attention.head_count": 32,
+      "llama.attention.head_count_kv": 32,
+      "llama.attention.layer_norm_rms_epsilon": 1e-05,
+      "llama.block_count": 32,
+      "llama.context_length": 16384,
+      "llama.embedding_length": 4096,
+      "llama.feed_forward_length": 11008,
+      "llama.rope.dimension_count": 128,
+      "llama.rope.freq_base": 1000000,
+      "tokenizer.ggml.bos_token_id": 1,
+      "tokenizer.ggml.eos_token_id": 2,
+      "tokenizer.ggml.model": "llama",
+      "tokenizer.ggml.unknown_token_id": 0
+    },
+    "parameters_default": "rope_frequency_base            1e+06\nstop                           \"[INST]\"\nstop                           \"[/INST]\"\nstop                           \"<<SYS>>\"\nstop                           \"<</SYS>>\"",
+    "template": "[INST] <<SYS>>{{ .System }}<</SYS>>\n\n{{ .Prompt }} [/INST]\n",
+    "ollama_version": "0.40.3"
+  },
+  "options": {
+    "temperature": 0.0,
+    "seed": 42,
+    "top_k": 40,
+    "top_p": 0.9,
+    "num_ctx": 8192,
+    "num_predict": 2048,
+    "num_thread": 4,
+    "num_gpu": 0
+  },
+  "keep_alive": "60m",
+  "ollama_cfg": {
+    "host": "http://127.0.0.1:11434",
+    "keep_alive": "60m",
+    "request_timeout_s": 3600,
+    "cold_cache_per_call": true
+  },
+  "evaluator_version": 2,
+  "prompt_files": {
+    "basic_system.txt": "f2463177c1a9b51f44281cb907fa6a83c741b8bc42b7894a42f61b3f824827d2",
+    "basic_user.txt": "b6050c4b595649aa7e3596b6fd5820fa3835e4d15683dfc0db4076525e15b479"
+  },
+  "prompt_sha256": {
+    "system": "f2463177c1a9b51f44281cb907fa6a83c741b8bc42b7894a42f61b3f824827d2",
+    "user": "bf4e9761aeb061951afef176f76c4e490dec720b22946b22d714adefac7f2cab"
+  },
+  "iteration_rules": {
+    "max": 5,
+    "stop_when_no_improvement": true,
+    "suite": "cumulative"
+  },
+  "evaluation": {
+    "per_test_timeout_s": 10,
+    "per_file_timeout_s": 300
+  },
+  "energy_cfg": {
+    "country_iso_code": "PRT",
+    "measure_power_secs": 1,
+    "idle_baseline_s": 300,
+    "cooldown_temp_c": 55,
+    "cooldown_max_s": 60
+  },
+  "session": "20261025-204452",
+  "finished": "2026-10-25T22:29:05+00:00",
+  "git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "dirty": true
+  },
+  "system_state": {
+    "governor": "powersave",
+    "no_turbo": "0",
+    "ac_online": [
+      "1"
+    ],
+    "energy_performance_preference": "balance_performance",
+    "pkg_temp_c": 66.0,
+    "load_avg": [
+      3.7392578125,
+      3.94189453125,
+      3.869140625
+    ],
+    "mem_available_gb": 5.46
+  },
+  "env_locks": {
+    "requirements-venv.lock": "564c77151f582e6a7d6454690c5b9ebcdd4aef117e8c08bf2f3f04d569fdbec9",
+    "requirements-venv-pynguin.lock": "80c2a44792ddf4cbcc46f9597586ada2f2f9714842b988676fd856041e57298b"
+  },
+  "dataset_program": "0_100 LOC/cat1_scripts/FizzBuzz"
+}

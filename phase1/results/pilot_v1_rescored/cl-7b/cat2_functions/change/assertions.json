@@ -1,0 +1,88 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "raises",
+      "lineno": 5,
+      "test": "test_negative_target",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "raises",
+      "lineno": 9,
+      "test": "test_empty_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "raises",
+      "lineno": 13,
+      "test": "test_target_not_in_coins",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "assert",
+      "lineno": 17,
+      "test": "test_target_in_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 20,
+      "test": "test_target_in_coins_with_change",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "assert",
+      "lineno": 23,
+      "test": "test_target_in_coins_with_change_and_remainder",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:6",
+      "kind": "assert",
+      "lineno": 26,
+      "test": "test_target_in_coins_with_change_and_remainder_and_change",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 0,
+    "stdout_tail": ".......                                                                  [100%]\n7 passed in 0.03s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  }
+}

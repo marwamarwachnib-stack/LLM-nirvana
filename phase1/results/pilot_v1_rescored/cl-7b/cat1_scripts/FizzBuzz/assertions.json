@@ -1,0 +1,70 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 8,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 15,
+      "test": "test_fizzbuzz_with_zero",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 22,
+      "test": "test_fizzbuzz_with_negative",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "assert",
+      "lineno": 29,
+      "test": "test_fizzbuzz_with_large_input",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 36,
+      "test": "test_fizzbuzz_with_empty_input",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    }
+  ],
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "FFFFF                                                                    [100%]\n=================================== FAILURES ===================================\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n        num = [1, 2, 3]\n        expected = ['Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:7: NameError\n___________________________ test_fizzbuzz_with_zero ____________________________\n\n    def test_fizzbuzz_with_zero():\n        num = [0, 0, 0]\n        expected = ['Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:20: NameError\n_________________________ test_fizzbuzz_with_negative __________________________\n\n    def test_fizzbuzz_with_negative():\n        num = [-1, -2, -3]\n        expected = ['Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:33: NameError\n________________________ test_fizzbuzz_with_large_input ________________________\n\n    def test_fizzbuzz_with_large_input():\n        num = [100, 100, 100]\n        expected = ['Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:46: NameError\n________________________ test_fizzbuzz_with_empty_input ________________________\n\n    def test_fizzbuzz_with_empty_input():\n        num = []\n        expected = []\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:59: NameError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_fizzbuzz - NameError: name 'fizzbuzz' is not ...\nFAILED test_example_i1.py::test_fizzbuzz_with_zero - NameError: name 'fizzbuz...\nFAILED test_example_i1.py::test_fizzbuzz_with_negative - NameError: name 'fiz...\nFAILED test_example_i1.py::test_fizzbuzz_with_large_input - NameError: name '...\nFAILED test_example_i1.py::test_fizzbuzz_with_empty_input - NameError: name '...\n5 failed in 0.05s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  }
+}

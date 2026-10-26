@@ -1,0 +1,34 @@
+Sure, here is a pytest test case for the given python code:
+
+```python
+import pytest
+from unittest.mock import patch
+
+@patch('builtins.input', side_effect=['3 5 15', '2 4 8'])
+def test_fizzbuzz(mock_input):
+    import fizzbuzz  # assuming the script name is fizzbuzz.py
+
+    # Test case 1: Normal numbers
+    assert fizzbuzz.num == [3, 5, 15]
+    assert fizzbuzz.key == 'Fizz'
+
+    # Test case 2: Buzz
+    assert fizzbuzz.num == [2, 4, 8]
+    assert fizzbuzz.key == 'Buzz'
+
+    # Test case 3: FizzBuzz
+    assert fizzbuzz.num == [15, 3, 15]
+    assert fizzbuzz.key == 'FizzBuzz'
+
+    # Test case 4: Non-FizzBuzz numbers
+    assert fizzbuzz.num == [5, 2, 7]
+    assert fizzbuzz.key == 7
+```
+
+In this test case, we are using the `patch` decorator from the `unittest.mock` module to mock the `input` function. This allows us to simulate user input. We then import the `fizzbuzz` module and test the `num` and `key` variables.
+
+Please note that the `fizzbuzz` module in the test case is assumed to be the name of the python script you are testing. You may need to adjust this to match your actual script name.
+
+Also, the test cases are written assuming that the `fizzbuzz` module has defined `num` and `key` variables. If this is not the case, you will need to modify the test case to reflect the actual variables used in your script.
+
+Finally, the test cases are written assuming that the `fizzbuzz` module does not have any side effects other than setting the `num` and `key` variables. If this is not the case, you will need to modify the test case to account for these side effects.

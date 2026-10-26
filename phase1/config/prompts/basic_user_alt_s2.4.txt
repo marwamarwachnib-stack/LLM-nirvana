@@ -1,0 +1,3 @@
+{code}
+
+Write Unit tests using Pytest for given Python code that covers all the edge cases.

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="12" skipped="0" tests="12" time="0.207" timestamp="2026-10-25T18:53:32.688072+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_bank_account_open_close" time="0.004"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_open_close():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:7: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_deposit_withdraw():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:16: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_amount" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_deposit_withdraw_invalid_amount():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:27: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_balance" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_deposit_withdraw_invalid_balance():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:36: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:43: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_balance" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_balance():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:63: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:84: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_2" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state_2():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:115: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_3" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state_3():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:147: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_4" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state_4():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:180: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_5" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state_5():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:213: NameError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_6" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_bank_account_concurrent_access_invalid_state_6():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i1.py:246: NameError</failure></testcase></testsuite></testsuites>
