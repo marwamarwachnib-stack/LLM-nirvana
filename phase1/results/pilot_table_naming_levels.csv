@@ -1,9 +1,9 @@
 which,tool,test_names_descriptive_pct,test_names_partial_pct,test_names_non_pct,n_test_names,identifiers_descriptive_pct,identifiers_partial_pct,identifiers_non_pct,n_identifiers
-final,cl-7b,90.91,9.09,0.0,33,90.0,10.0,0.0,10
-final,dsc-1.3b,43.75,56.25,0.0,32,50.0,50.0,0.0,4
-final,dsc-6.7b,61.11,38.89,0.0,18,50.0,37.5,12.5,8
+final,cl-7b,90.32,9.68,0.0,31,90.91,9.09,0.0,11
+final,dsc-1.3b,53.85,46.15,0.0,39,50.0,50.0,0.0,4
+final,dsc-6.7b,75.0,25.0,0.0,28,55.56,33.34,11.11,9
 final,pynguin,0.0,0.0,100.0,83,0.0,0.0,100.0,40
-iter1,cl-7b,88.89,11.11,0.0,27,90.0,10.0,0.0,10
+iter1,cl-7b,88.46,11.54,0.0,26,90.91,9.09,0.0,11
 iter1,dsc-1.3b,43.75,56.25,0.0,16,50.0,50.0,0.0,4
-iter1,dsc-6.7b,45.46,54.54,0.0,11,66.67,33.33,0.0,3
+iter1,dsc-6.7b,53.85,46.15,0.0,13,66.67,33.33,0.0,3
 iter1,pynguin,0.0,0.0,100.0,83,0.0,0.0,100.0,40

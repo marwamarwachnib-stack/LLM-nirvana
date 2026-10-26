@@ -3,7 +3,7 @@
 **PhD:** Large Language Models for Automated Program Debugging (LLMs + SBFL; quality and energy measured in every study)
 **Phase 1 goal:** replicate *Bhatia, Gandhi, Kumar, Jalote, "Unit Test Generation using Generative AI: A Comparative Performance Analysis of Autogeneration Tools", LLM4Code@ICSE 2024* ([doi:10.1145/3643795.3648396](https://doi.org/10.1145/3643795.3648396), arXiv:2312.10622). ChatGPT is replaced by local LLMs (DeepSeek-Coder, CodeLlama) served by Ollama on CPU. Every tool is compared with Pynguin on the same dataset, using the paper's quality metrics plus time and energy.
 
-> Status: **approved 2026-10-25** (decisions in §11). Pilot v2 and pre-main-study checks done (§13.14–13.17); decision 11 implemented (evaluator v3). Next: LLM pilot rerun on AC (pilot v3), then decision 10 (CodeLlama), then the main study.
+> Status: **approved 2026-10-25** (decisions in §11). Pilot v3 done (`results/pilot_report.md`; decision 11 applied, evaluator v3). Next: determinism check, then decision 10 (see pilot v3 report §5: not a power-state effect, affects dsc-6.7b too), then the main study.
 
 ### PhD context (confirmed by the PhD student)
 

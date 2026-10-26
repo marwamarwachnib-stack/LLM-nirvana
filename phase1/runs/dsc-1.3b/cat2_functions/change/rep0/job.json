@@ -1,0 +1,15 @@
+{
+  "status": "done",
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat2_functions",
+  "program": "change",
+  "started": "2026-10-26T14:02:19+00:00",
+  "session": "20261026-135424",
+  "finished": "2026-10-26T14:03:51+00:00",
+  "n_iterations": 2,
+  "stmt_cov_by_iter": [
+    91.67,
+    91.67
+  ]
+}

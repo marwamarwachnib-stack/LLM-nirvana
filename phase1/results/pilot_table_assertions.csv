@@ -1,4 +1,13 @@
-tool,category,final_incorrect_assert_pct,final_incorrect_pct_assertion_error,final_incorrect_pct_try_except,final_incorrect_pct_runtime,final_not_reached_pct,n_collection_error_files,n_syntax_error_files
-pynguin,cat1_scripts,,,,,,0.0,0.0
-pynguin,cat2_functions,0.0,,,,0.0,0.0,0.0
-pynguin,cat3_classes,0.0,,,,0.0,0.0,0.0
+tool,category,final_incorrect_assert_pct,final_incorrect_pct_assertion_error,final_incorrect_pct_try_except,final_incorrect_pct_runtime,final_not_reached_pct,n_collection_error_files,n_syntax_error_files,n_jobs_truncated
+cl-7b,cat1_scripts,100.0,0.0,0.0,100.0,80.0,0.0,0.0,0
+cl-7b,cat2_functions,42.86,66.67,33.33,0.0,0.0,0.0,0.0,0
+cl-7b,cat3_classes,29.41,20.0,80.0,0.0,5.56,0.0,0.0,1
+dsc-1.3b,cat1_scripts,,,,,100.0,0.0,0.0,1
+dsc-1.3b,cat2_functions,93.33,92.86,7.14,0.0,0.0,0.0,0.0,0
+dsc-1.3b,cat3_classes,21.74,0.0,0.0,100.0,0.0,0.0,0.0,0
+dsc-6.7b,cat1_scripts,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0
+dsc-6.7b,cat2_functions,59.09,53.85,0.0,46.15,0.0,0.0,0.0,0
+dsc-6.7b,cat3_classes,0.0,,,,3.45,0.0,0.0,0
+pynguin,cat1_scripts,,,,,,0.0,0.0,0
+pynguin,cat2_functions,0.0,,,,0.0,0.0,0.0,0
+pynguin,cat3_classes,0.0,,,,0.0,0.0,0.0,0

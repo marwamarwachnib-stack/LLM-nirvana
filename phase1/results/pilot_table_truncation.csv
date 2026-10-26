@@ -3,11 +3,11 @@ cl-7b,all,5,1,20.0,3,1,bank-account#i1
 cl-7b,cat1_scripts,2,0,0.0,1,0,
 cl-7b,cat2_functions,1,0,0.0,1,0,
 cl-7b,cat3_classes,2,1,50.0,1,1,bank-account#i1
-dsc-1.3b,all,6,1,16.67,3,1,FizzBuzz#i2
+dsc-1.3b,all,7,1,14.29,3,1,FizzBuzz#i2
 dsc-1.3b,cat1_scripts,2,1,50.0,1,1,FizzBuzz#i2
 dsc-1.3b,cat2_functions,2,0,0.0,1,0,
-dsc-1.3b,cat3_classes,2,0,0.0,1,0,
-dsc-6.7b,all,5,0,0.0,3,0,
+dsc-1.3b,cat3_classes,3,0,0.0,1,0,
+dsc-6.7b,all,6,0,0.0,3,0,
 dsc-6.7b,cat1_scripts,1,0,0.0,1,0,
 dsc-6.7b,cat2_functions,2,0,0.0,1,0,
-dsc-6.7b,cat3_classes,2,0,0.0,1,0,
+dsc-6.7b,cat3_classes,3,0,0.0,1,0,

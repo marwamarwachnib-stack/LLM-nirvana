@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="15" time="0.117" timestamp="2026-10-26T14:05:15.111617+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_open_account" time="0.004" /><testcase classname="test_example_i1" name="test_deposit_into_open_account" time="0.001" /><testcase classname="test_example_i1" name="test_withdraw_from_open_account" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_deposit_negative_amount" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_withdraw_more_than_balance" time="0.001" /><testcase classname="test_example_i1" name="test_cannot_withdraw_negative_amount" time="0.001" /><testcase classname="test_example_i1" name="test_close_account" time="0.001"><failure message="ValueError: account not open">def test_close_account():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+        account.close()
+        assert account.is_open == False
+&gt;       assert account.get_balance() == 100
+               ^^^^^^^^^^^^^^^^^^^^^
+
+test_example_i1.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x799be47af6e0&gt;
+
+    def get_balance(self):
+        with self.lock:
+            if not self.is_open:
+&gt;               raise ValueError('account not open')
+E               ValueError: account not open
+
+example.py:13: ValueError</failure></testcase><testcase classname="test_example_i1" name="test_cannot_open_already_open_account" time="0.001" /><testcase classname="test_example_i2" name="test_cannot_deposit_non_numeric_amount" time="0.001"><failure message="TypeError: '&lt;=' not supported between instances of 'str' and 'int'">def test_cannot_deposit_non_numeric_amount():
+        account = BankAccount()
+        account.open()
+        with pytest.raises(ValueError):
+&gt;           account.deposit('abc')
+
+test_example_i2.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x799be47aed50&gt;, amount = 'abc'
+
+    def deposit(self, amount):
+        with self.lock:
+            if not self.is_open:
+                raise ValueError('account not open')
+&gt;           if amount &lt;= 0:
+               ^^^^^^^^^^^
+E           TypeError: '&lt;=' not supported between instances of 'str' and 'int'
+
+example.py:26: TypeError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_non_numeric_amount" time="0.001"><failure message="TypeError: '&lt;=' not supported between instances of 'str' and 'int'">def test_cannot_withdraw_non_numeric_amount():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+        with pytest.raises(ValueError):
+&gt;           account.withdraw('abc')
+
+test_example_i2.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x799be47ae0c0&gt;, amount = 'abc'
+
+    def withdraw(self, amount):
+        with self.lock:
+            if not self.is_open:
+                raise ValueError('account not open')
+&gt;           if amount &lt;= 0:
+               ^^^^^^^^^^^
+E           TypeError: '&lt;=' not supported between instances of 'str' and 'int'
+
+example.py:34: TypeError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_close_already_closed_account" time="0.001" /><testcase classname="test_example_i2" name="test_cannot_get_balance_on_closed_account" time="0.001" /><testcase classname="test_example_i2" name="test_cannot_withdraw_more_than_balance" time="0.001" /><testcase classname="test_example_i2" name="test_cannot_withdraw_negative_amount" time="0.001" /><testcase classname="test_example_i2" name="test_cannot_deposit_negative_amount" time="0.001" /></testsuite></testsuites>

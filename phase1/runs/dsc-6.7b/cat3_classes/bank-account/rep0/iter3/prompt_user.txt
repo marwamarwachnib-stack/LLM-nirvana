@@ -1,0 +1,164 @@
+import threading #1
+#2
+#3
+class BankAccount: #4
+    def __init__(self): #5
+        self.is_open = False #6
+        self.balance = None #7
+        self.lock = threading.Lock() #8
+#9
+    def get_balance(self): #10
+        with self.lock: #11
+            if not self.is_open: #12
+                raise ValueError('account not open') #13
+            return self.balance #14
+#15
+    def open(self): #16
+        if self.is_open: #17
+            raise ValueError('account already open') #18
+        self.is_open = True #19
+        self.balance = 0 #20
+#21
+    def deposit(self, amount): #22
+        with self.lock: #23
+            if not self.is_open: #24
+                raise ValueError('account not open') #25
+            if amount <= 0: #26
+                raise ValueError('amount must be greater than 0') #27
+            self.balance += amount #28
+#29
+    def withdraw(self, amount): #30
+        with self.lock: #31
+            if not self.is_open: #32
+                raise ValueError('account not open') #33
+            if amount <= 0: #34
+                raise ValueError('amount must be greater than 0') #35
+            if amount > self.balance: #36
+                raise ValueError('amount must be less than balance') #37
+            self.balance -= amount #38
+#39
+    def close(self): #40
+        if not self.is_open: #41
+            raise ValueError('account not open') #42
+        self.is_open = False #43
+The comments on each line indicate line number
+
+import pytest
+from example import BankAccount
+
+def test_account_creation():
+    account = BankAccount()
+    assert account.is_open == False
+    assert account.balance == None
+
+def test_open_account():
+    account = BankAccount()
+    account.open()
+    assert account.is_open == True
+    assert account.balance == 0
+
+def test_deposit():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    assert account.balance == 100
+
+def test_withdraw():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    account.withdraw(50)
+    assert account.balance == 50
+
+def test_close_account():
+    account = BankAccount()
+    account.open()
+    account.close()
+    assert account.is_open == False
+
+def test_error_on_deposit_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.deposit(100)
+
+def test_error_on_withdraw_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.withdraw(100)
+
+def test_error_on_close_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.close()
+
+def test_error_on_deposit_zero_or_negative_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.deposit(0)
+    with pytest.raises(ValueError):
+        account.deposit(-100)
+
+def test_error_on_withdraw_zero_or_negative_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.withdraw(0)
+    with pytest.raises(ValueError):
+        account.withdraw(-100)
+
+def test_error_on_overdraw():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    with pytest.raises(ValueError):
+        account.withdraw(200)
+
+
+import pytest
+from example import BankAccount
+def test_get_balance_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+def test_deposit_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.deposit(100)
+
+def test_withdraw_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.withdraw(100)
+
+def test_close_account_without_account_open():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.close()
+
+def test_get_balance_after_deposit():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    assert account.get_balance() == 100
+
+def test_get_balance_after_withdraw():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    account.withdraw(50)
+    assert account.get_balance() == 50
+
+def test_get_balance_after_close():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    account.close()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+The above test cases only give 97% coverage
+The following lines from the code file are not being covered given by the line numbers - 18
+Please write more test cases to improve the coverage of the unit tests

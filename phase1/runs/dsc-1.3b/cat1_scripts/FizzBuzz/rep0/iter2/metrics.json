@@ -1,0 +1,237 @@
+{
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "iteration": 2,
+  "refactored_module": false,
+  "mccabe_max": 5,
+  "evaluator_version": 3,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 0,
+    "num_branches": null,
+    "covered_branches": 0,
+    "missing_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "missing_branches": null,
+    "stmt_cov": 0.0,
+    "branch_cov": null,
+    "stmt_branch_cov": 0.0
+  },
+  "errors": {
+    "n_files": 2,
+    "n_syntax_error": 1,
+    "n_collection_error": 1,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      },
+      "test_example_i2.py": {
+        "syntax_error": true,
+        "collection_error": true,
+        "detail": "SyntaxError: unterminated triple-quoted string literal (detected at line 472) (<unknown>, line 12)"
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 3,
+    "passed": 0,
+    "failed": 2,
+    "error": 1,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 2,
+    "n_judged": 0,
+    "n_pass": 0,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 0,
+    "n_not_reached": 2,
+    "n_not_executed": 0,
+    "incorrect_pct": null,
+    "not_reached_pct": 100.0,
+    "incorrect_breakdown_pct": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+    }
+  },
+  "new_file": {
+    "name": "test_example_i2.py",
+    "errors_normalized": {
+      "syntax_error": true,
+      "collection_error": true,
+      "detail": "SyntaxError: unterminated triple-quoted string literal (detected at line 472) (<unknown>, line 12)"
+    },
+    "errors_raw": {
+      "syntax_error": true,
+      "collection_error": true,
+      "detail": "SyntaxError: unterminated triple-quoted string literal (detected at line 472) (<unknown>, line 12)"
+    },
+    "n_import_rewrites": 0,
+    "n_imports_renamed": 0,
+    "import_added": false,
+    "imports_carried": false
+  },
+  "llm": {
+    "prompt_tokens": 516,
+    "output_tokens": 2048,
+    "prompt_eval_s": 6.032346,
+    "eval_s": 142.1446,
+    "load_s": 0.00274513,
+    "total_s": 148.185470338,
+    "tokens_per_s": 14.41,
+    "done_reason": "length",
+    "prompt_cached_tokens": 0,
+    "cold_cache": true,
+    "hit_num_predict": true,
+    "possible_ctx_overflow": false,
+    "template": "improve_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-26T13:59:49+00:00",
+      "wall_s": 148.186,
+      "codecarbon": {
+        "cpu_wh": 0.6014854695213234,
+        "ram_wh": 0.4113182414833263,
+        "gpu_wh": 0.0,
+        "total_wh": 1.0128037110046502,
+        "cpu_power_w": 14.620019079382716,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 0.00016767269276795282,
+        "duration_s": 148.19131294100043,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.6014747819444445,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.11828611805555556,
+        "msr:intel-rapl:0:package-0": 0.6014747819444445,
+        "msr:intel-rapl:0:0:core": 0.5400070438888889,
+        "msr:intel-rapl:0:1:uncore": 9.143388888888889e-05,
+        "msr:intel-rapl:0:2:dram": 0.11828615222222222
+      },
+      "pkg_temp_c": {
+        "mean": 58.1,
+        "max": 73.0
+      },
+      "cpu_mhz": {
+        "mean": 2024.8,
+        "max": 3380.6
+      },
+      "cpu_util_pct": {
+        "mean": 51.1,
+        "max": 82.5
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-26T14:02:17+00:00",
+      "wall_s": 1.396,
+      "codecarbon": {
+        "cpu_wh": 0.006606654174208006,
+        "ram_wh": 0.0038869611972232737,
+        "gpu_wh": 0.0,
+        "total_wh": 0.01049361537143128,
+        "cpu_power_w": 21.574461651422425,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.7372495055865627e-06,
+        "duration_s": 1.4004027049995784,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.0065929836111111115,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00021033333333333334,
+        "msr:intel-rapl:0:package-0": 0.0065929836111111115,
+        "msr:intel-rapl:0:0:core": 0.006206259166666667,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.00021051972222222223
+      },
+      "pkg_temp_c": {
+        "mean": 60.0,
+        "max": 60.0
+      },
+      "cpu_mhz": {
+        "mean": 3100.5,
+        "max": 3100.5
+      },
+      "cpu_util_pct": {
+        "mean": 23.6,
+        "max": 23.6
+      }
+    },
+    "load": {
+      "phase": "model_load",
+      "started": "2026-10-26T13:59:45+00:00",
+      "wall_s": 2.024,
+      "codecarbon": {
+        "cpu_wh": 0.009153324544875809,
+        "ram_wh": 0.005555603436116346,
+        "gpu_wh": 0.0,
+        "total_wh": 0.014708927980992154,
+        "cpu_power_w": 7.762214337413457,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 2.435107154037194e-06,
+        "duration_s": 2.027337309000359,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.009247751944444445,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.0005739494444444445,
+        "msr:intel-rapl:0:package-0": 0.009241716388888889,
+        "msr:intel-rapl:0:0:core": 0.008631501944444444,
+        "msr:intel-rapl:0:1:uncore": 2.6619444444444443e-06,
+        "msr:intel-rapl:0:2:dram": 0.0005741019444444445
+      },
+      "pkg_temp_c": {
+        "mean": 60.0,
+        "max": 61.0
+      },
+      "cpu_mhz": {
+        "mean": 3238.3,
+        "max": 3599.8
+      },
+      "cpu_util_pct": {
+        "mean": 21.2,
+        "max": 28.9
+      },
+      "ollama": {
+        "model": "deepseek-coder:1.3b-instruct",
+        "created_at": "2026-10-26T13:59:47.639214608Z",
+        "response": "",
+        "done": true,
+        "done_reason": "load"
+      }
+    }
+  },
+  "cooldown_s": 2.0
+}
