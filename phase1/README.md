@@ -18,13 +18,34 @@ This covers both the MSR (`intel-rapl:*`) and MMIO (`intel-rapl-mmio:*`) interfa
 - Screen blanking is fine, and even preferable (less energy noise). Don't lock the session in a way that suspends.
 - Keep the laptop on AC with no other applications open.
 
-## Run, and resume after a power cut
+## Main study on the server (decision 13)
+
+Three ~7B code instruct models (`dsc-6.7b`, `cl-7b`, `qwen-7b`) and Pynguin on the 60 programs of `0_100 LOC`, 5 repetitions each, then every generated suite executed 5 times. All commands are in the `Makefile` (`make help`). Results go to `runs_main/` and `results_main/`; the laptop pilot stays in `runs/` and `results/`.
+
+```bash
+cd LLM-nirvana/phase1
+make setup        # the two venvs from env/*.lock (needs uv, user-level, as on the laptop: PLAN.md §8)
+                  # Ollama: the official Linux release archive (0.40.3, as on the laptop) extracted to ~/.local/ollama,
+                  # no sudo; or set OLLAMA_BIN to an ollama binary already installed
+make models       # pulls deepseek-coder:6.7b-instruct, codellama:7b-instruct, qwen2.5-coder:7b-instruct-q4_0
+sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj   # once per boot
+make check        # everything "ok"?
+tmux new -s phase1
+make generate     # 1200 jobs: Pynguin 60 x 5 seeds + 3 LLMs x 60 x 5 repetitions (resumable: run it again)
+make execute      # every generated suite: 5 timed plain-pytest runs
+make results      # results_main/: CSVs, tables, figures, paper_comparison.md
+```
+
+- Jobs run in **rounds**: round 0 = Pynguin seed 0 and LLM repetition 0 for all 60 programs, then round 1, and so on. After round 0, `make results` already gives the full comparison; the later rounds add the repetitions.
+- **Energy** is measured inside (RAPL + CodeCarbon, idle subtracted, model loading apart) unless `ENERGY=none`. For an external meter, one job at a time: `make gen-one TOOL=cl-7b PROGRAM=cat2_functions/change REP=0` (generation) and `make exec-one TOOL=cl-7b PROGRAM=cat2_functions/change JOB=rep0` (running its tests; Pynguin: `TOOL=pynguin JOB=seed0`).
+- One runs folder per machine: `run.py` refuses to add runs to a folder that holds another machine's runs (use `make CAMPAIGN=<name> ...`).
+- Without a systemd user session, Pynguin runs without its memory cap (`make check` says so; `sudo loginctl enable-linger $USER` usually fixes it).
+
+## Pilot (laptop), and resume after a power cut
 
 ```bash
 cd ~/LLM-nirvana/phase1
-./run.sh pilot                                   # pilot: 3 programs × {Pynguin ×5 seeds, dsc-1.3b, dsc-6.7b, cl-7b}
-./run.sh small --tools pynguin                   # main study, 0_100 LOC (60 programs): Pynguin
-./run.sh small --tools dsc-1.3b,dsc-6.7b,cl-7b   # then the three LLMs
+./run.sh pilot --tools pynguin,dsc-1.3b,dsc-6.7b,cl-7b   # pilot: 3 programs (runs/, results/)
 ```
 
 Start long runs in **your own terminal**, not from inside Claude Code: Claude Code may stop background jobs when memory is low. Close Firefox and other apps first (memory and energy noise). Each Pynguin run is capped at 6 GB RAM with no swap (cgroup). **The runner waits while the laptop is on battery** (it prints `ON BATTERY`) and continues when the charger is back.
@@ -45,9 +66,12 @@ What the steps do:
 
 | Path | Content |
 |---|---|
-| `config/experiment.yaml` | models, decoding (T=0, seed=42), iterations, Pynguin, energy (PRT) |
+| `Makefile` | the commands of the main study (`make help`) |
+| `config/experiment.yaml` | models, decoding (T=0, seed=42), iterations, repetitions, Pynguin, energy (PRT) |
 | `config/prompts/` | paper prompts (Fig. 1, Fig. 2) |
-| `scripts/` | `run.py` (orchestrator), `evaluate.py` (coverage, errors, soft assertions), `common.py` (RAPL/CodeCarbon), `aggregate.py`, `analyze.py`, `readability.py`, `reevaluate.py`, `determinism_check.py`, `dry_run.py`, `xcheck_stored.py`, `ollama_serve.sh` |
+| `scripts/` | `run.py` (orchestrator), `execute.py` (timed test execution), `evaluate.py` (coverage, errors, soft assertions), `common.py` (RAPL/CodeCarbon), `aggregate.py`, `analyze.py`, `compare_paper.py` (paper vs ours), `readability.py`, `reevaluate.py`, `determinism_check.py`, `dry_run.py`, `xcheck_stored.py`, `ollama_serve.sh`, `ollama_bin.sh`, `check_setup.sh` |
+| `runs_main/`, `results_main/` | main study (`make`, CAMPAIGN=main), same layout as `runs/` and `results/` |
+| `runs*/<tool>/<cat>/<program>/<rep<r>\|seed<s>>/exec/run<i>/` | one timed execution of that job's suite (`metrics.json`, `junit.xml`) |
 | `runs_archive/pilot_v1/`, `runs_archive/pilot_v2/` | superseded pilot runs, kept unchanged (see each README) |
 | `env/` | lockfiles of both venvs (pinned with `uv --exclude-newer 2026-10-11`) |
 | `runs/<tool>/<cat>/<program>/rep0/iter<k>/` | per iteration: prompts, raw response, Ollama metadata, normalized and raw tests, coverage, per-test coverage contexts, assertions, energy, `manifest.json`, `DONE` |

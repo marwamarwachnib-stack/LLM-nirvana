@@ -4,9 +4,12 @@ Resumable: every iteration is written to its own folder and marked DONE; finishe
 and a half-written iteration (no DONE marker) is deleted and redone. To resume after a power cut,
 re-run exactly the same command.
 
-    .venv/bin/python scripts/run.py pilot                     # everything in the pilot
-    .venv/bin/python scripts/run.py pilot --tools dsc-1.3b    # subset of tools
-    .venv/bin/python scripts/run.py small --tools dsc-6.7b,cl-7b,pynguin
+Jobs run in rounds: round r = Pynguin seed r and LLM repetition r for every program, so round 0
+gives a complete first comparison before the repetitions start (decision 13).
+
+    .venv/bin/python scripts/run.py pilot --tools pynguin,dsc-1.3b,dsc-6.7b,cl-7b
+    .venv/bin/python scripts/run.py small                     # main tools (config main_tools), all rounds
+    .venv/bin/python scripts/run.py small --tools cl-7b --programs cat2_functions/change --rep 0 --energy none
 """
 import argparse
 import json
@@ -20,8 +23,8 @@ import urllib.request
 from pathlib import Path
 
 from common import (CONFIG_DIR, PHASE1, PYNGUIN_BIN, REPO, RUNS, atomic_write_json, atomic_write_text,
-                    cooldown, environment_info, git_commit, is_done, load_config, mark_done, measure, now_iso,
-                    rapl_readable, read_json, reset_dir, sha256_text, system_state, wait_for_ac)
+                    cooldown, environment_info, git_commit, is_done, load_config, machine_id, mark_done, measure,
+                    now_iso, rapl_readable, read_json, reset_dir, sha256_text, system_state, wait_for_ac)
 from evaluate import EVALUATOR_VERSION, evaluate, extract_blocks, file_errors, mccabe_max, normalize_imports, numbered_code, ranges
 
 PYTEST_INI = "[pytest]\n"
@@ -29,12 +32,17 @@ PYTEST_INI = "[pytest]\n"
 
 # ----------------------------------------------------------------------------- programs / jobs
 
-def programs(cfg, set_name):
+def programs(cfg, set_name, only=None):
     root = (PHASE1 / cfg["dataset_root"]).resolve()
     spec = cfg["program_sets"][set_name]
     if spec == "auto":
         spec = [f"{c}/{d.name}" for c in ("cat1_scripts", "cat2_functions", "cat3_classes")
                 for d in sorted((root / c).iterdir()) if (d / "example.py").exists()]
+    if only:
+        unknown = set(only) - set(spec)
+        if unknown:
+            sys.exit(f"not in set {set_name!r}: {', '.join(sorted(unknown))}")
+        spec = [p for p in spec if p in only]
     return [(p.split("/")[0], p.split("/")[1], root / p) for p in spec]
 
 
@@ -151,15 +159,16 @@ def build_prompt(cfg, k, module_src, suite_texts, cov, missed):
 
 # ----------------------------------------------------------------------------- LLM job
 
-def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
+def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
     model = cfg["llm_tools"][tool]["model"]
-    jdir = RUNS / tool / cat / prog / "rep0"
+    jdir = RUNS / tool / cat / prog / f"rep{rep}"
     job = read_json(jdir / "job.json", {})
     if job.get("status") == "done":
         return "skip"
     jdir.mkdir(parents=True, exist_ok=True)
     atomic_write_json(jdir / "job.json", {"status": "running", "tool": tool, "model": model, "category": cat,
-                                          "program": prog, "started": job.get("started", now_iso()), "session": sid})
+                                          "program": prog, "rep": rep, "started": job.get("started", now_iso()),
+                                          "session": sid})
     module_src = (src_dir / "example.py").read_text()
     refactored = False
     suite = []           # [(file name, normalized text)]
@@ -224,7 +233,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
             suite.append((fname, norm))
             dur = lambda key: (meta.get(key) or 0) / 1e9  # noqa: E731
             m = {
-                "tool": tool, "model": model, "category": cat, "program": prog, "iteration": k,
+                "tool": tool, "model": model, "category": cat, "program": prog, "rep": rep, "iteration": k,
                 "refactored_module": refactored, "mccabe_max": mccabe_max(module_src),
                 **metrics,
                 "new_file": {"name": fname, "errors_normalized": metrics["errors"]["files"][fname], "errors_raw": raw_err,
@@ -257,7 +266,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
             })
             mark_done(idir)
             history.append(m)
-            print(f"  [{tool}] {cat}/{prog} iter{k}: stmt={m['coverage']['stmt_cov']} branch={m['coverage']['branch_cov']} "
+            print(f"  [{tool}] {cat}/{prog} rep{rep} iter{k}: stmt={m['coverage']['stmt_cov']} branch={m['coverage']['branch_cov']} "
                   f"gen={gen['wall_s']:.0f}s tok/s={m['llm']['tokens_per_s']}", flush=True)
         cov = history[-1]["coverage"]["stmt_cov"] or 0
         if cov >= 100:
@@ -277,6 +286,28 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo):
 
 # ----------------------------------------------------------------------------- Pynguin job
 
+_cap = {}
+
+
+def memory_cap(cfg):
+    """cgroup memory cap for Pynguin and all its workers: a runaway mutant is OOM-killed inside the cgroup
+    (Pynguin restarts the worker) instead of starving the machine. Needs a systemd user session; on a
+    machine without one (some servers, SSH without lingering) Pynguin runs uncapped and the manifest
+    records pynguin_memory_max = null."""
+    if "prefix" not in _cap:
+        prefix = ["systemd-run", "--user", "--scope", "--quiet", "-p", f"MemoryMax={cfg['pynguin']['memory_max']}",
+                  "-p", f"MemorySwapMax={cfg['pynguin']['memory_swap_max']}",
+                  "-p", "OOMPolicy=continue", "--"]  # default 'stop' would also kill the master that restarts the worker
+        try:
+            ok = subprocess.run(prefix + ["true"], capture_output=True, timeout=30).returncode == 0
+        except (OSError, subprocess.TimeoutExpired):
+            ok = False
+        if not ok:
+            print("  WARNING: systemd-run --user is not available: Pynguin runs without the memory cap", flush=True)
+        _cap["prefix"] = prefix if ok else []
+    return _cap["prefix"]
+
+
 def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
     jdir = RUNS / "pynguin" / cat / prog / f"seed{seed}"
     if is_done(jdir):
@@ -288,12 +319,7 @@ def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
     shutil.copy(src_dir / "example.py", work / "example.py")
     pyn = [str(PYNGUIN_BIN), "--project-path", ".", "--output-path", ".", "--module-name", "example",
            "--seed", str(seed), "--report-dir", "pynguin-report", *cfg["pynguin"]["args"]]
-    # cgroup memory cap for Pynguin and all its workers: a runaway mutant is OOM-killed inside the cgroup
-    # (Pynguin restarts the worker) instead of starving the machine
-    limit = ["systemd-run", "--user", "--scope", "--quiet", "-p", f"MemoryMax={cfg['pynguin']['memory_max']}",
-             "-p", f"MemorySwapMax={cfg['pynguin']['memory_swap_max']}",
-             "-p", "OOMPolicy=continue", "--"]  # default 'stop' would also kill the master that restarts the worker
-    cmd = limit + pyn
+    cmd = memory_cap(cfg) + pyn
     env = {**os.environ, "PYNGUIN_DANGER_AWARE": "1"}
     cool = cooldown(cfg)
     gen = {}
@@ -317,7 +343,8 @@ def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
     m = {"tool": "pynguin", "category": cat, "program": prog, "seed": seed, "iteration": 1,
          "pynguin_returncode": rc, "pynguin_produced_tests": has_tests,
          "pynguin_worker_restarts": str(out).count("Worker process died"),
-         "pynguin_memory_max": cfg["pynguin"]["memory_max"], "pynguin_killed": rc in (-9, -15, 137, 143), "mccabe_max": mccabe_max((work / "example.py").read_text()),
+         "pynguin_memory_max": cfg["pynguin"]["memory_max"] if memory_cap(cfg) else None,
+         "pynguin_killed": rc in (-9, -15, 137, 143), "mccabe_max": mccabe_max((work / "example.py").read_text()),
          **metrics, "energy": {"generation": gen, "evaluation": ev}, "cooldown_s": cool}
     atomic_write_json(jdir / "metrics.json", m)
     atomic_write_json(jdir / "manifest.json", {
@@ -334,48 +361,81 @@ def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
 
 # ----------------------------------------------------------------------------- main
 
+def check_same_machine(allow):
+    """One runs folder = one machine: time and energy measured on different machines are not comparable."""
+    here = machine_id()
+    for env in sorted(RUNS.glob("_sessions/*/environment.json")):
+        e = read_json(env, {})
+        there = {"hostname": e.get("hostname"), "cpu": e.get("cpu")}
+        if there != here and not allow:
+            sys.exit(f"{RUNS} already holds runs made on {there} (session {env.parent.name}); this machine is {here}.\n"
+                     "Use a separate runs folder for this machine (make CAMPAIGN=<name>, or PHASE1_RUNS=<dir>).")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("set", help="program set from config (pilot, small)")
-    ap.add_argument("--tools", default="pynguin,dsc-1.3b,dsc-6.7b,cl-7b")
+    ap.add_argument("--tools", default=None, help="comma list (default: config main_tools)")
+    ap.add_argument("--programs", default=None, help="comma list of <category>/<program> (default: the whole set)")
+    ap.add_argument("--rep", type=int, default=None, help="run only round R (Pynguin seed number R, LLM repetition R)")
+    ap.add_argument("--reps", type=int, default=None, help="LLM repetitions (default: config repetitions.llm)")
+    ap.add_argument("--energy", choices=("internal", "none"), default="internal",
+                    help="none: record wall time only, for an external energy meter wrapping this command")
     ap.add_argument("--idle-s", type=int, default=None, help="idle baseline seconds (default from config; 0 = skip)")
     ap.add_argument("--allow-no-rapl", action="store_true", help="debug only: run without real RAPL energy")
     ap.add_argument("--allow-battery", action="store_true", help="debug only: do not wait for mains power")
+    ap.add_argument("--allow-mixed-machines", action="store_true", help="debug only: add runs of this machine to a "
+                    "runs folder that already holds another machine's runs")
     args = ap.parse_args()
     cfg = load_config()
     cfg["_allow_battery"] = args.allow_battery
+    cfg["_energy"] = args.energy
     if args.idle_s is None:
-        args.idle_s = cfg["energy"]["idle_baseline_s"]
-    ok, info = rapl_readable()
-    if not ok and not args.allow_no_rapl:
-        sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
-                 "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
-    tools = args.tools.split(",")
-    progs = programs(cfg, args.set)
+        args.idle_s = cfg["energy"]["idle_baseline_s"] if args.energy == "internal" else 0
+    if args.energy == "internal":
+        ok, info = rapl_readable()
+        if not ok and not args.allow_no_rapl:
+            sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
+                     "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
+    check_same_machine(args.allow_mixed_machines)
+    tools = (args.tools or ",".join(cfg["main_tools"])).split(",")
+    unknown = [t for t in tools if t != "pynguin" and t not in cfg["llm_tools"]]
+    if unknown:
+        sys.exit(f"unknown tools: {', '.join(unknown)} (known: pynguin, {', '.join(cfg['llm_tools'])})")
+    progs = programs(cfg, args.set, args.programs and args.programs.split(","))
+    seeds = cfg["pynguin"]["seeds"]
+    reps = args.reps if args.reps is not None else cfg["repetitions"]["llm"]
+    n_rounds = max(len(seeds) if "pynguin" in tools else 0, reps if any(t != "pynguin" for t in tools) else 0)
+    if args.rep is not None and not 0 <= args.rep < n_rounds:
+        sys.exit(f"--rep must be in 0..{n_rounds - 1}")
+    rounds = [args.rep] if args.rep is not None else range(n_rounds)
     wait_for_ac(args.allow_battery)  # before the idle baseline too
     sid, sdir = start_session(cfg, args)
     from aggregate import aggregate
-    for tool in tools:
-        if tool == "pynguin":
-            for cat, prog, src in ordered(progs, cfg, tool):
-                for seed in cfg["pynguin"]["seeds"]:
-                    if run_pynguin_job(cfg, cat, prog, src, seed, sid) == "done":
-                        aggregate()
-            continue
-        model = cfg["llm_tools"][tool]["model"]
-        todo = [p for p in ordered(progs, cfg, tool)
-                if read_json(RUNS / tool / p[0] / p[1] / "rep0" / "job.json", {}).get("status") != "done"]
-        if not todo:
-            print(f"[{tool}] all {len(progs)} programs done", flush=True)
-            continue
-        ensure_ollama(cfg)
-        minfo = model_info(cfg, model)
-        atomic_write_json(sdir / f"model_info_{tool}.json", minfo)
-        warmup(cfg, model, sdir, tool)
-        print(f"[{tool}] {model} digest={minfo['digest'][:12]} — {len(todo)} programs to run", flush=True)
-        for cat, prog, src in todo:
-            run_llm_job(cfg, tool, cat, prog, src, sid, minfo)
-            aggregate()
+    for r in rounds:
+        for tool in tools:
+            if tool == "pynguin":
+                if r < len(seeds):
+                    for cat, prog, src in ordered(progs, cfg, tool):
+                        if run_pynguin_job(cfg, cat, prog, src, seeds[r], sid) == "done":
+                            aggregate()
+                continue
+            if r >= reps:
+                continue
+            model = cfg["llm_tools"][tool]["model"]
+            todo = [p for p in ordered(progs, cfg, tool)
+                    if read_json(RUNS / tool / p[0] / p[1] / f"rep{r}" / "job.json", {}).get("status") != "done"]
+            if not todo:
+                print(f"[{tool}] rep{r}: all {len(progs)} programs done", flush=True)
+                continue
+            ensure_ollama(cfg)
+            minfo = model_info(cfg, model)
+            atomic_write_json(sdir / f"model_info_{tool}.json", minfo)
+            warmup(cfg, model, sdir, tool)
+            print(f"[{tool}] {model} digest={minfo['digest'][:12]} rep{r} — {len(todo)} programs to run", flush=True)
+            for cat, prog, src in todo:
+                run_llm_job(cfg, tool, cat, prog, src, sid, minfo, rep=r)
+                aggregate()
     if args.idle_s > 0:
         rec = {}
         with measure("idle_baseline_end", sdir / "idle_end", cfg, rec):

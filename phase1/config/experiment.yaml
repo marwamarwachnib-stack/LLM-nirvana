@@ -24,13 +24,21 @@ decoding:                              # passed verbatim as Ollama "options"
   top_p: 0.9
   num_ctx: 8192
   num_predict: 2048
-  num_thread: 4                        # physical cores of the i7-8550U
+  num_thread: auto                     # auto = physical cores of the machine (4 on the i7-8550U laptop)
   num_gpu: 0                           # CPU only
 
+# Main study (decision 13): three ~7B code-specialised instruct models, all Q4_0 (the pilot's quantization)
 llm_tools:
   dsc-6.7b: {model: "deepseek-coder:6.7b-instruct"}
   cl-7b:    {model: "codellama:7b-instruct"}
-  dsc-1.3b: {model: "deepseek-coder:1.3b-instruct"}
+  qwen-7b:  {model: "qwen2.5-coder:7b-instruct-q4_0"}
+  dsc-1.3b: {model: "deepseek-coder:1.3b-instruct"}   # pilot only (not the same size as the others)
+
+main_tools: [pynguin, dsc-6.7b, cl-7b, qwen-7b]
+
+repetitions:
+  llm: 5                               # independent runs of each LLM job (rep0..rep4); rep0 = quality results
+  test_execution: 5                    # timed runs of every generated suite (scripts/execute.py)
 
 prompts:
   system: basic_system.txt

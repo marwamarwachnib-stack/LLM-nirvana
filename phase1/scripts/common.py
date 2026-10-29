@@ -34,7 +34,10 @@ def now_iso():
 
 def load_config():
     with open(CONFIG_DIR / "experiment.yaml") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    if cfg["decoding"].get("num_thread") == "auto":  # resolved here so manifests record the actual value
+        cfg["decoding"]["num_thread"] = psutil.cpu_count(logical=False)
+    return cfg
 
 
 def sha256_text(s):
@@ -147,6 +150,10 @@ def environment_info():
     }
 
 
+def machine_id():
+    return {"hostname": platform.node(), "cpu": _cpu_model()}
+
+
 def _cpu_model():
     for line in _read("/proc/cpuinfo", "").splitlines():
         if line.startswith("model name"):
@@ -257,7 +264,18 @@ def measure(phase, out_dir, cfg, record):
 
     Fills ``record`` (a dict) with wall time, CodeCarbon energy, raw RAPL energy per domain
     and thermal/frequency statistics. Energy is in Wh.
+
+    With ``cfg["_energy"] == "none"`` only the wall time is recorded: an external meter (e.g. the
+    energy tool of the supervisors) wraps the whole command and must not see CodeCarbon's sampling.
     """
+    if cfg.get("_energy") == "none":
+        started, t0 = now_iso(), time.perf_counter()
+        try:
+            yield record
+        finally:
+            record.update({"phase": phase, "started": started, "wall_s": round(time.perf_counter() - t0, 3),
+                           "energy_meter": "external"})
+        return
     from codecarbon import OfflineEmissionsTracker
     logging.getLogger("codecarbon").setLevel(logging.ERROR)
     out_dir = Path(out_dir)

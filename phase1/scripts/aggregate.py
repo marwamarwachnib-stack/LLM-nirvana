@@ -1,7 +1,8 @@
 """Rebuild results/ CSVs from the run folders (safe to call any time; never reads partial iterations).
 
 results/iterations.csv : one row per LLM iteration and per Pynguin run (seed)
-results/jobs.csv       : one row per job: iteration-1 (RQ1) and final (RQ2/RQ3) metrics
+results/jobs.csv       : one row per job (LLM: per repetition; Pynguin: per seed): iteration-1 (RQ1) and final (RQ2/RQ3) metrics
+results/executions.csv : one row per timed test execution (scripts/execute.py)
 Energy columns are in Wh. Headline: RAPL package (*_rapl_msr_pkg_wh, *_rapl_pkg_wh_net) and RAPL DRAM; CodeCarbon's
 CPU figure equals the RAPL package counter, its RAM figure is a fixed 10 W estimate (PLAN.md §6, decision 9).
 *_net subtracts the session's idle power of the same domain.
@@ -37,7 +38,7 @@ def energy_cols(prefix, rec, idle):
         return {}
     cc = rec.get("codecarbon") or {}
     row = {
-        f"{prefix}_wall_s": rec.get("wall_s"),
+        f"{prefix}_wall_s": rec.get("wall_s"), f"{prefix}_meter": rec.get("energy_meter", "internal"),
         f"{prefix}_cc_cpu_wh": cc.get("cpu_wh"), f"{prefix}_cc_ram_wh_estimated": cc.get("ram_wh"),
         f"{prefix}_cc_total_wh": cc.get("total_wh"), f"{prefix}_cc_kgco2eq": cc.get("emissions_kgco2eq"),
         f"{prefix}_rapl_msr_pkg_wh": _pkg(rec, "msr"), f"{prefix}_rapl_mmio_pkg_wh": _pkg(rec, "mmio"),
@@ -54,14 +55,14 @@ def energy_cols(prefix, rec, idle):
     return row
 
 
-def flatten(m, manifest):
+def flatten(m, manifest, rep=None):
     session = (manifest or {}).get("session")
     idle = idle_power_w(session) if session else None
     c, e, t, a = m["coverage"], m["errors"], m["tests"], m["assertions"]
     br = a.get("incorrect_breakdown_pct") or {}
     row = {
         "tool": m["tool"], "model": m.get("model", "pynguin"), "category": m["category"], "program": m["program"],
-        "seed": m.get("seed"), "iteration": m["iteration"], "session": session,
+        "seed": m.get("seed"), "rep": rep, "iteration": m["iteration"], "session": session,
         "evaluator_version": m.get("evaluator_version", 1),
         "refactored_module": m.get("refactored_module"), "mccabe_max": m.get("mccabe_max"),
         "stmt_cov": c["stmt_cov"], "branch_cov": c["branch_cov"], "stmt_branch_cov": c["stmt_branch_cov"],
@@ -120,14 +121,26 @@ def write_csv(path, rows):
     tmp.replace(path)
 
 
+def flatten_exec(m):
+    session = m.get("session")
+    row = {k: m.get(k) for k in ("tool", "category", "program", "job", "run", "session", "n_files", "n_tests", "passed",
+                                 "failed", "error", "xfailed", "skipped", "pytest_returncode", "pytest_timeout")}
+    row.update(energy_cols("exec", m["energy"], idle_power_w(session) if session else None))
+    return row
+
+
 def aggregate():
     RESULTS.mkdir(exist_ok=True)
-    iters, jobs = [], []
+    iters, jobs, execs = [], [], []
     for metrics in sorted(RUNS.glob("*/*/*/*/**/metrics.json")):
         d = metrics.parent
         if not (d / "DONE").exists():
             continue
-        iters.append(flatten(read_json(metrics), read_json(d / "manifest.json")))
+        if "exec" in d.relative_to(RUNS).parts:
+            execs.append(flatten_exec(read_json(metrics)))
+            continue
+        rep = int(d.parent.name[3:]) if d.parent.name.startswith("rep") else None  # LLM: <job>/rep<r>/iter<k>
+        iters.append(flatten(read_json(metrics), read_json(d / "manifest.json"), rep))
     for r in iters:
         if r["tool"] == "pynguin":
             jobs.append({**{k: v for k, v in r.items()}, "n_iterations": 1,
@@ -140,9 +153,9 @@ def aggregate():
     llm = {}
     for r in iters:
         if r["tool"] != "pynguin":
-            llm.setdefault((r["tool"], r["category"], r["program"]), []).append(r)
-    for (tool, cat, prog), rs in sorted(llm.items()):
-        job = read_json(RUNS / tool / cat / prog / "rep0" / "job.json", {})
+            llm.setdefault((r["tool"], r["category"], r["program"], r["rep"]), []).append(r)
+    for (tool, cat, prog, rep), rs in sorted(llm.items()):
+        job = read_json(RUNS / tool / cat / prog / f"rep{rep}" / "job.json", {})
         if job.get("status") != "done":
             continue
         rs.sort(key=lambda r: r["iteration"])
@@ -172,9 +185,10 @@ def aggregate():
                      "chain_output_tokens": energy_sum("output_tokens")})
     write_csv(RESULTS / "iterations.csv", iters)
     write_csv(RESULTS / "jobs.csv", jobs)
-    return len(iters), len(jobs)
+    write_csv(RESULTS / "executions.csv", execs)
+    return len(iters), len(jobs), len(execs)
 
 
 if __name__ == "__main__":
-    n_i, n_j = aggregate()
-    print(f"{n_i} iteration rows, {n_j} job rows -> {RESULTS}", file=sys.stderr)
+    n_i, n_j, n_e = aggregate()
+    print(f"{n_i} iteration rows, {n_j} job rows, {n_e} execution rows -> {RESULTS}", file=sys.stderr)

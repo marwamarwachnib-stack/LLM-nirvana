@@ -2,7 +2,8 @@
 
 Outputs in results/ (or results/<prefix>_* with --prefix):
   table_coverage.csv     Tables 1/2   avg statement / branch coverage per category and tool (iteration 1)
-  stats_tests.csv        §3.1/§3.2.1  t-test (paper) + Mann-Whitney U, each LLM vs Pynguin, per category
+  stats_tests.csv        §3.1/§3.2.1  Student t-test (the paper's), Welch t-test, Mann-Whitney U, each LLM vs Pynguin, per category
+  table_repetitions.csv  (new, 13)    LLM repetitions: share of programs with the same iteration-1 coverage in every repetition
   table_iterations.csv   Table 3      iteration-1 / iteration-5 / best coverage, best-least, median iterations
   table_assertions.csv   Table 4      % incorrect assertions and breakdown (final suites); not-reached share (11b)
   table_truncation.csv   (new, 11c)   LLM answers cut at num_predict: calls, truncated calls, share, per model
@@ -10,8 +11,12 @@ Outputs in results/ (or results/<prefix>_* with --prefix):
   overlap.csv            Table 5      per program x tool pair: missed-statement overlap, Jaccard, combined coverage
   table_overlap.csv      Table 5      averages per category and pair
   complexity_corr.csv    Fig. 5       Spearman / Pearson of coverage vs max McCabe per tool
-  table_energy.csv       (new)        time and energy per tool
+  table_energy.csv       (new)        time and energy per tool (generation)
+  table_execution.csv    (new, 13)    time and energy of running the generated suites (scripts/execute.py)
   fig4_*.png fig5_*.png fig6_iterations.png fig7_overlap.png
+
+LLM jobs repeated in several repetitions are averaged per program first, like Pynguin's seeds;
+Table 5 / Fig. 7 use repetition 0 (one run per tool, as in the paper).
 
 Usage: .venv/bin/python scripts/analyze.py [--prefix pilot]
 """
@@ -29,8 +34,8 @@ from scipy import stats  # noqa: E402
 from common import RESULTS, RUNS, read_json  # noqa: E402
 
 # fixed categorical slots (reference palette, slots 1-4); color follows the tool, never its rank
-TOOL_COLORS = {"pynguin": "#2a78d6", "dsc-6.7b": "#eb6834", "cl-7b": "#1baf7a", "dsc-1.3b": "#eda100"}
-TOOL_ORDER = ["pynguin", "dsc-6.7b", "cl-7b", "dsc-1.3b"]
+TOOL_COLORS = {"pynguin": "#2a78d6", "dsc-6.7b": "#eb6834", "cl-7b": "#1baf7a", "qwen-7b": "#8f5bd6", "dsc-1.3b": "#eda100"}
+TOOL_ORDER = ["pynguin", "dsc-6.7b", "cl-7b", "qwen-7b", "dsc-1.3b"]
 INK, MUTED, GRID = "#1f1f1e", "#6b6a63", "#e4e3dd"
 
 
@@ -138,15 +143,29 @@ def main():
                 row = {"category": cat, "tool": t, "metric": metric, "n_llm": len(a), "n_pynguin": len(b),
                        "mean_llm": a.mean(), "mean_pynguin": b.mean()}
                 if len(a) >= 2 and len(b) >= 2:
-                    row["ttest_p"] = stats.ttest_ind(a, b, equal_var=False).pvalue
+                    # the paper's "Independent t-test" is Student's (equal variances): it reproduces all four
+                    # Table 2 p-values from the repository's per-sample coverage; Welch's does not
+                    row["ttest_student_p"] = stats.ttest_ind(a, b).pvalue
+                    row["ttest_p"] = stats.ttest_ind(a, b, equal_var=False).pvalue  # Welch (kept: pilot files)
                     row["mannwhitney_p"] = stats.mannwhitneyu(a, b).pvalue
                 srows.append(row)
     pd.DataFrame(srows).to_csv(out("stats_tests.csv"), index=False)
 
-    # Table 3 (RQ2): iterative improvement (LLM tools)
+    # decision 13: do the LLM repetitions agree? (iteration-1 statement coverage per program)
+    reps = jobs[(jobs.tool != "pynguin") & jobs["rep"].notna()] if "rep" in jobs else jobs.iloc[0:0]
+    if not reps.empty and reps["rep"].nunique() > 1:
+        per = reps.groupby(["tool", "category", "program"])["stmt_cov"].agg(["nunique", "min", "max", "count"]).reset_index()
+        per["spread"] = per["max"] - per["min"]
+        per.groupby(["tool", "category"]).agg(
+            n_programs=("program", "count"), reps_per_program=("count", "median"),
+            share_identical=("nunique", lambda s: round(100 * (s == 1).mean(), 1)),
+            mean_spread=("spread", "mean"), max_spread=("spread", "max")).round(2).to_csv(out("table_repetitions.csv"))
+
+    # Table 3 (RQ2): iterative improvement (LLM tools); a chain = one program in one repetition
     llm_it = it[it.tool != "pynguin"]
+    chain_keys = ["tool", "category", "program"] + (["rep"] if "rep" in it else [])
     if not llm_it.empty:
-        g = llm_it.groupby(["tool", "category", "program"])
+        g = llm_it.groupby(chain_keys)
         chain = g.agg(iter1=("stmt_cov", "first"), last=("stmt_cov", "last"), best=("stmt_cov", "max"),
                       least=("stmt_cov", "min"), n_iter=("iteration", "max")).reset_index()
         chain["iter5_or_last"] = chain["last"]
@@ -158,7 +177,7 @@ def main():
         # Fig. 6: average statement coverage per iteration (carry last value forward after stopping)
         fig, ax = plt.subplots(figsize=(7, 4))
         for t in tools_in(llm_it):
-            sub = llm_it[llm_it.tool == t].pivot_table(index=["category", "program"], columns="iteration", values="stmt_cov")
+            sub = llm_it[llm_it.tool == t].pivot_table(index=chain_keys[1:], columns="iteration", values="stmt_cov")
             sub = sub.reindex(columns=range(1, int(llm_it.iteration.max()) + 1)).ffill(axis=1)
             mean = sub.mean()
             ax.plot(mean.index, mean.values, color=TOOL_COLORS.get(t), linewidth=2, marker="o", markersize=8, label=t)
@@ -193,10 +212,10 @@ def main():
         pd.DataFrame(tr).sort_values(["tool", "category"]).to_csv(out("table_truncation.csv"), index=False)
 
     # per-job results with truncated answers marked (11c)
-    jcols = ["tool", "category", "program", "seed", "n_iterations", "stmt_cov", "final_stmt_cov", "final_branch_cov",
+    jcols = ["tool", "category", "program", "seed", "rep", "n_iterations", "stmt_cov", "final_stmt_cov", "final_branch_cov",
              "final_incorrect_assert_pct", "final_not_reached_pct", "n_calls", "n_truncated_calls", "truncated_iterations"]
     jt = jobs[[c for c in jcols if c in jobs]].rename(columns={"stmt_cov": "iter1_stmt_cov"})
-    for c in ("seed", "n_iterations", "n_calls", "n_truncated_calls"):
+    for c in ("seed", "rep", "n_iterations", "n_calls", "n_truncated_calls"):
         if c in jt:
             jt[c] = jt[c].astype("Int64")
     if "n_truncated_calls" in jt:
@@ -293,6 +312,17 @@ def main():
         agg["iter1_tokens_per_s"] = ("tokens_per_s", "mean")
     en = jobs.groupby(["tool", "category"]).agg(**agg).round(4)
     en.to_csv(out("table_energy.csv"))
+
+    # decision 13: running the generated suites (plain pytest, several timed runs per suite)
+    if (RESULTS / "executions.csv").exists():
+        ex = pd.read_csv(RESULTS / "executions.csv")
+        ex.groupby(["tool", "category"]).agg(
+            n_runs=("run", "count"), n_suites=("job", lambda s: len(set(zip(ex.loc[s.index, "program"], s)))),
+            mean_tests=("n_tests", "mean"), mean_passed=("passed", "mean"), wall_s=("exec_wall_s", "mean"),
+            **({"rapl_pkg_wh": ("exec_rapl_msr_pkg_wh", "mean")} if "exec_rapl_msr_pkg_wh" in ex else {}),
+            **({"rapl_pkg_wh_net": ("exec_rapl_pkg_wh_net", "mean")} if "exec_rapl_pkg_wh_net" in ex else {}),
+            **({"rapl_dram_wh": ("exec_rapl_msr_dram_wh", "mean")} if "exec_rapl_msr_dram_wh" in ex else {}),
+        ).round(4).to_csv(out("table_execution.csv"))
     print("analysis written to", RESULTS)
 
 
