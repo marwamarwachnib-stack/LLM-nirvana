@@ -18,26 +18,26 @@ import sys
 from common import (RUNS, atomic_write_json, cooldown, git_commit, is_done, load_config, mark_done, measure, now_iso,
                     rapl_readable, read_json, reset_dir, system_state, wait_for_ac)
 from evaluate import PYTEST_INI, _junit, _run_pytest
-from run import check_same_machine, programs, start_session
+from run import check_same_machine, programs, stage, start_session
 
 
 def suites(cfg, set_name, tools, only, job=None):
-    """Finished jobs: [(tool, category, program, job dir, suite dir)]."""
+    """Finished jobs: [(tool, program, job dir, suite dir)]."""
     out = []
-    for cat, prog, _ in programs(cfg, set_name, only):
+    for p in programs(cfg, set_name, only):
         for tool in tools:
-            base = RUNS / tool / cat / prog
+            base = RUNS / tool / p.cat / p.prog
             if tool == "pynguin":
                 found = [(d, d / "work") for d in sorted(base.glob("seed*")) if is_done(d)]
             else:
                 found = [(d, d / "final_suite") for d in sorted(base.glob("rep*"))
                          if read_json(d / "job.json", {}).get("status") == "done"]
-            out += [(tool, cat, prog, d, s) for d, s in found if job is None or d.name == job]
+            out += [(tool, p, d, s) for d, s in found if job is None or d.name == job]
     return out
 
 
 def test_files(suite):
-    return sorted(p.name for p in suite.glob("test_example*.py") if not p.name.endswith(".raw.py"))
+    return sorted(f.name for f in suite.glob("test_*.py") if not f.name.endswith(".raw.py"))
 
 
 def next_run(jdir):
@@ -45,7 +45,7 @@ def next_run(jdir):
     return max(done) + 1 if done else 0
 
 
-def run_once(cfg, tool, cat, prog, jdir, suite, i, sid):
+def run_once(cfg, tool, p, jdir, suite, i, sid):
     edir = jdir / "exec" / f"run{i}"
     if is_done(edir):
         return "skip"
@@ -54,26 +54,27 @@ def run_once(cfg, tool, cat, prog, jdir, suite, i, sid):
     work = edir / "work"
     work.mkdir()
     files = test_files(suite)
-    for name in ["example.py"] + files:
+    for name in [f"{p.module}.py"] + files:
         shutil.copy(suite / name, work / name)
+    stage(p, work)
     (work / "pytest.ini").write_text(PYTEST_INI)
     cool = cooldown(cfg)
     rec = {}
     with measure("test_execution", edir / "energy_execution", cfg, rec):
-        run = _run_pytest(work, files, cfg, [], "junit.xml", with_coverage=False)
+        run = _run_pytest(work, files, cfg, [], "junit.xml", with_coverage=False, env=p.env)
     junit = _junit(work / "junit.xml")
     if (work / "junit.xml").exists():
         shutil.move(work / "junit.xml", edir / "junit.xml")
     shutil.rmtree(work)  # the suite itself stays in the job folder
     statuses = [v["status"] for v in junit.values()]
-    m = {"tool": tool, "category": cat, "program": prog, "job": jdir.name, "run": i, "session": sid,
+    m = {"tool": tool, "category": p.cat, "program": p.prog, "job": jdir.name, "run": i, "session": sid,
          "n_files": len(files), "n_tests": len(junit), **{k: statuses.count(k) for k in ("passed", "failed", "error", "xfailed", "skipped")},
          "pytest_returncode": run["returncode"], "pytest_timeout": run["timeout"], "pytest_cmd": run["cmd"],
          "energy": rec, "cooldown_s": cool, "finished": now_iso(), "git": git_commit(), "system_state": system_state(),
          "evaluation": cfg["evaluation"]}
     atomic_write_json(edir / "metrics.json", m)
     mark_done(edir)
-    print(f"  [{tool}] {cat}/{prog} {jdir.name} run{i}: {m['n_tests']} tests, {m['passed']} passed, "
+    print(f"  [{tool}] {p.cat}/{p.prog} {jdir.name} run{i}: {m['n_tests']} tests, {m['passed']} passed, "
           f"{rec['wall_s']:.1f}s", flush=True)
     return "done"
 
@@ -115,8 +116,8 @@ def main():
     sid, _ = start_session(cfg, args)
     from aggregate import aggregate
     for i in range(n_runs):
-        for tool, cat, prog, jdir, suite in todo:
-            run_once(cfg, tool, cat, prog, jdir, suite, next_run(jdir) if args.append else i, sid)
+        for tool, p, jdir, suite in todo:
+            run_once(cfg, tool, p, jdir, suite, next_run(jdir) if args.append else i, sid)
         aggregate()
     print("all executions finished", flush=True)
 

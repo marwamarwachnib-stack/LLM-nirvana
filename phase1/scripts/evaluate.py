@@ -6,10 +6,12 @@
   suite, so a failing assertion does not hide the following ones; failures are classified as the
   paper's AssertionError / Try-Except error (expected exception not raised) / Runtime error.
 
-The work directory must contain example.py and the suite files test_example*.py.
+The work directory must contain the module under test (example.py for 0_100 LOC, its own name for the large
+samples) and the suite files. `env` holds the extra import paths of a prepared program (scripts/prepare_datasets.py).
 """
 import ast
 import json
+import os
 import re
 import subprocess
 import sys
@@ -74,16 +76,22 @@ def defined_names(src):
     return names
 
 
-def _importable(mod):
+def _importable(mod, target="example", env=None, cwd=None):
+    """Can the test import `mod` as it is? Seen from the work directory, with the program's import paths
+    (for the large samples, the flattened sibling modules of the package)."""
     top = mod.split(".")[0]
-    if top in sys.stdlib_module_names or top in ("pytest", "_pytest", "example"):
+    if top in sys.stdlib_module_names or top in ("pytest", "_pytest", target):
         return True
     r = subprocess.run([str(VENV_PY), "-c", f"import importlib.util,sys;sys.exit(importlib.util.find_spec({top!r}) is None)"],
-                       capture_output=True)
+                       capture_output=True, cwd=cwd, env=run_env(env))
     return r.returncode == 0
 
 
-def normalize_imports(test_src, module_src, target="example", prior_srcs=()):
+def run_env(env):
+    return {**os.environ, **env} if env else None
+
+
+def normalize_imports(test_src, module_src, target="example", prior_srcs=(), env=None, cwd=None):
     """Rewrite imports of a non-existent module whose names exist in example.py to `example`, then carry
     imports over from the earlier suite files `prior_srcs` (decision 11a), then add a missing
     `from example import *` (decision 4b).
@@ -100,7 +108,7 @@ def normalize_imports(test_src, module_src, target="example", prior_srcs=()):
     for node in ast.walk(tree):
         if isinstance(node, ast.ImportFrom) and node.level == 0 and node.module and node.module != target:
             names = [a.name for a in node.names]
-            if _importable(node.module):
+            if _importable(node.module, target, env, cwd):
                 continue
             if "*" in names or any(n in defined for n in names):
                 i = node.lineno - 1
@@ -110,7 +118,7 @@ def normalize_imports(test_src, module_src, target="example", prior_srcs=()):
                     lines[i] = new
         elif isinstance(node, ast.Import):
             for a in node.names:
-                if a.name == target or "." in a.name or _importable(a.name):
+                if a.name == target or "." in a.name or _importable(a.name, target, env, cwd):
                     continue
                 i = node.lineno - 1
                 alias = a.asname or a.name
@@ -411,21 +419,21 @@ def _junit(path):
     return out
 
 
-def _run_pytest(work, files, cfg, extra, junit_name, with_coverage):
+def _run_pytest(work, files, cfg, extra, junit_name, with_coverage, env=None):
     ev = cfg["evaluation"]
     base = ["-m", "pytest", "-q", "-p", "no:cacheprovider", "--continue-on-collection-errors",
             f"--timeout={ev['per_test_timeout_s']}", f"--junitxml={junit_name}", "--rootdir=.", "-c", "pytest.ini"]
     cmd = [str(VENV_PY)] + (["-m", "coverage", "run", "--rcfile=.coveragerc"] if with_coverage else []) + base + extra + files
     try:
         p = subprocess.run(cmd, cwd=work, capture_output=True, text=True, stdin=subprocess.DEVNULL,
-                           timeout=ev["per_file_timeout_s"])
+                           timeout=ev["per_file_timeout_s"], env=run_env(env))
         return {"returncode": p.returncode, "stdout_tail": p.stdout[-4000:], "stderr_tail": p.stderr[-2000:], "timeout": False, "cmd": cmd}
     except subprocess.TimeoutExpired as e:
         return {"returncode": None, "stdout_tail": (e.stdout or b"")[-4000:].decode(errors="replace") if isinstance(e.stdout, bytes) else str(e.stdout)[-4000:],
                 "stderr_tail": "", "timeout": True, "cmd": cmd}
 
 
-def file_errors(work, files, cfg):
+def file_errors(work, files, cfg, env=None):
     """Per file: syntax error? collection error? (used for normalized and raw suites)."""
     res = {}
     for f in files:
@@ -437,7 +445,7 @@ def file_errors(work, files, cfg):
             continue
         p = subprocess.run([str(VENV_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
                             "--rootdir=.", "-c", "pytest.ini", f], cwd=work, capture_output=True, text=True,
-                           stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"])
+                           stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"], env=run_env(env))
         err = p.returncode not in (0, 5)  # 5 = no tests collected (not an error per se)
         detail = ""
         if err:
@@ -447,16 +455,16 @@ def file_errors(work, files, cfg):
     return res
 
 
-def coverage_metrics(work, cfg):
+def coverage_metrics(work, cfg, module="example"):
     w = Path(work)
     subprocess.run([str(VENV_PY), "-m", "coverage", "json", "--rcfile=.coveragerc", "-o", "coverage.json"],
                    cwd=w, capture_output=True, text=True)
     with open(w / "branch_coverage.txt", "w") as f:  # same format as the repo's branch_coverage.txt
         subprocess.run([str(VENV_PY), "-m", "coverage", "report", "-m", "--rcfile=.coveragerc"], cwd=w, stdout=f, stderr=subprocess.STDOUT)
     data = json.loads((w / "coverage.json").read_text()) if (w / "coverage.json").exists() else {"files": {}}
-    fe = data["files"].get("example.py")
+    fe = data["files"].get(f"{module}.py")
     if fe is None:  # module never imported -> nothing covered
-        stmts = _statement_lines(w)
+        stmts = _statement_lines(w, module)
         s = {"num_statements": len(stmts) if stmts is not None else None, "covered_lines": 0, "num_branches": None,
              "covered_branches": 0, "missing_lines": stmts or [], "missing_branches": None, "contexts": {}}
     else:
@@ -471,13 +479,13 @@ def coverage_metrics(work, cfg):
     s["branch_cov"] = round(100 * cb / nb, 2) if nb else None
     # coverage.py's "Cover" column with --branch (what the repo's branch_coverage.txt reports)
     s["stmt_branch_cov"] = round(100 * (s["covered_lines"] + cb) / (ns + nb), 2) if (ns + nb) else None
-    _write_line_report(w, s)
+    _write_line_report(w, s, module)
     return s
 
 
-def _statement_lines(w):
-    """Statement line numbers of example.py when no coverage data exists (coverage.py's own parser)."""
-    code = ("import json;from coverage.parser import PythonParser as P;p=P(filename='example.py');p.parse_source();"
+def _statement_lines(w, module="example"):
+    """Statement line numbers of the module when no coverage data exists (coverage.py's own parser)."""
+    code = (f"import json;from coverage.parser import PythonParser as P;p=P(filename='{module}.py');p.parse_source();"
             "print(json.dumps(sorted(p.statements)))")
     p = subprocess.run([str(VENV_PY), "-c", code], cwd=w, capture_output=True, text=True)
     try:
@@ -486,22 +494,24 @@ def _statement_lines(w):
         return None
 
 
-def _write_line_report(w, s):
+def _write_line_report(w, s, module="example"):
     """Statement-only report in the format of the repo's line_coverage.txt (module under test only)."""
     pct = f"{round(s['stmt_cov'])}%" if s["stmt_cov"] is not None else "n/a"
     n = s["num_statements"]
     miss = n - s["covered_lines"] if n is not None else "n/a"  # n is None: module itself does not parse
     (w / "line_coverage.txt").write_text(
         "Name              Stmts   Miss  Cover   Missing\n" + "-" * 47 + "\n"
-        f"example.py   {n if n is not None else 'n/a':>10} {miss:>6} {pct:>6}   {ranges(s['missing_lines'])}\n")
+        f"{module}.py   {n if n is not None else 'n/a':>10} {miss:>6} {pct:>6}   {ranges(s['missing_lines'])}\n")
 
 
-def soft_assertions(work, files, junit_plain, cfg):
+def soft_assertions(work, files, junit_plain, cfg, module="example", env=None, data=()):
     """Run an instrumented copy of the suite and classify every assertion site."""
     w = Path(work)
     sdir = w / "_soft"
     sdir.mkdir(exist_ok=True)
-    (sdir / "example.py").write_text((w / "example.py").read_text())
+    (sdir / f"{module}.py").write_text((w / f"{module}.py").read_text())
+    for f in data:
+        (sdir / Path(f).name).write_bytes(Path(f).read_bytes())
     (sdir / "_soft_assert.py").write_text(SOFT_HELPER)
     (sdir / "pytest.ini").write_text(PYTEST_INI)
     (sdir / "soft_results.jsonl").write_text("")
@@ -516,7 +526,7 @@ def soft_assertions(work, files, junit_plain, cfg):
         ins_files.append(f)
     if not ins_files:
         return {"n_sites": 0}
-    run = _run_pytest(sdir, ins_files, cfg, [], "junit_soft.xml", with_coverage=False)
+    run = _run_pytest(sdir, ins_files, cfg, [], "junit_soft.xml", with_coverage=False, env=env)
     junit = _junit(sdir / "junit_soft.xml")
     outcomes = {}
     for line in (sdir / "soft_results.jsonl").read_text().splitlines():
@@ -562,20 +572,21 @@ def soft_assertions(work, files, junit_plain, cfg):
     }
 
 
-def evaluate(work, files, cfg):
-    """Full evaluation of suite `files` (list of test file names in `work`). Returns a metrics dict."""
+def evaluate(work, files, cfg, module="example", env=None, data=()):
+    """Full evaluation of suite `files` (list of test file names in `work`). Returns a metrics dict.
+    With `env` (a prepared large sample) coverage is limited to the module: its package's files are on the path."""
     w = Path(work)
-    (w / ".coveragerc").write_text(COVERAGERC)
+    (w / ".coveragerc").write_text(COVERAGERC.replace("[json]", f"include = {module}.py\n[json]") if env else COVERAGERC)
     (w / "pytest.ini").write_text(PYTEST_INI)
     for stale in (".coverage", "coverage.json", "junit.xml"):
         (w / stale).unlink(missing_ok=True)
-    errs = file_errors(w, files, cfg)
-    run = _run_pytest(w, files, cfg, [], "junit.xml", with_coverage=True)
+    errs = file_errors(w, files, cfg, env)
+    run = _run_pytest(w, files, cfg, [], "junit.xml", with_coverage=True, env=env)
     junit = _junit(w / "junit.xml")
-    cov = coverage_metrics(w, cfg)
+    cov = coverage_metrics(w, cfg, module)
     statuses = [v["status"] for v in junit.values()]
     tests = {k: statuses.count(k) for k in ("passed", "failed", "error", "xfailed", "skipped")}
-    soft = soft_assertions(w, files, junit, cfg)
+    soft = soft_assertions(w, files, junit, cfg, module, env, data)
     contexts = cov.pop("contexts")
     atomic_write_json(w / "per_test_coverage.json", contexts)  # line -> tests (SBFL spectrum, Phase 2)
     atomic_write_json(w / "pytest_run.json", {"run": run, "junit": junit, "file_errors": errs})

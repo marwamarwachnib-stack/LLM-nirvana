@@ -21,6 +21,7 @@ import sys
 import time
 import urllib.request
 from pathlib import Path
+from typing import NamedTuple
 
 from common import (CONFIG_DIR, PHASE1, PYNGUIN_BIN, REPO, RUNS, atomic_write_json, atomic_write_text,
                     cooldown, environment_info, git_commit, is_done, load_config, machine_id, mark_done, measure,
@@ -32,18 +33,44 @@ PYTEST_INI = "[pytest]\n"
 
 # ----------------------------------------------------------------------------- programs / jobs
 
+class Program(NamedTuple):
+    cat: str        # category folder (cat1_scripts, cat2_functions, cat3_classes)
+    prog: str       # program name (0_100 LOC: folder name; large samples: sample<N> / s<N>)
+    src: Path       # the module under test in the repository
+    module: str     # its import name in the work directory ("example" for 0_100 LOC)
+    env: dict       # extra import paths of a prepared large sample (scripts/prepare_datasets.py), else {}
+    data: tuple = ()  # data files the module reads when imported, copied next to it
+
+
+def stage(p, folder):
+    """Put the module's data files next to it (a module that opens 'dowstocks.csv' at import)."""
+    for f in p.data:
+        shutil.copy(f, Path(folder) / f.name)
+
+
 def programs(cfg, set_name, only=None):
-    root = (PHASE1 / cfg["dataset_root"]).resolve()
     spec = cfg["program_sets"][set_name]
-    if spec == "auto":
-        spec = [f"{c}/{d.name}" for c in ("cat1_scripts", "cat2_functions", "cat3_classes")
-                for d in sorted((root / c).iterdir()) if (d / "example.py").exists()]
+    if spec == "prepared":  # large samples: datasets/<set>/manifest.json (scripts/prepare_datasets.py)
+        from prepare_datasets import DATASETS, install_hook, runtime_env
+        man = read_json(DATASETS / set_name / "manifest.json")
+        if not man or not (DATASETS / set_name / "deps").exists():
+            sys.exit(f"{set_name}: not prepared on this machine. Run: make datasets (scripts/prepare_datasets.py {set_name})")
+        install_hook()  # idempotent; a venv rebuilt by `make setup` loses it
+        progs = {f"{e['category']}/{name}": Program(e["category"], name, REPO / e["source"], e["module"], runtime_env(e),
+                                                     tuple(DATASETS / d for d in e.get("data_files", [])))
+                 for name, e in man["programs"].items()}
+    else:
+        root = (PHASE1 / cfg["dataset_root"]).resolve()
+        if spec == "auto":
+            spec = [f"{c}/{d.name}" for c in ("cat1_scripts", "cat2_functions", "cat3_classes")
+                    for d in sorted((root / c).iterdir()) if (d / "example.py").exists()]
+        progs = {p: Program(p.split("/")[0], p.split("/")[1], root / p / "example.py", "example", {}) for p in spec}
     if only:
-        unknown = set(only) - set(spec)
+        unknown = set(only) - set(progs)
         if unknown:
             sys.exit(f"not in set {set_name!r}: {', '.join(sorted(unknown))}")
-        spec = [p for p in spec if p in only]
-    return [(p.split("/")[0], p.split("/")[1], root / p) for p in spec]
+        return [progs[p] for p in only]
+    return list(progs.values())
 
 
 def ordered(progs, cfg, tool):
@@ -159,7 +186,8 @@ def build_prompt(cfg, k, module_src, suite_texts, cov, missed):
 
 # ----------------------------------------------------------------------------- LLM job
 
-def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
+def run_llm_job(cfg, tool, p, sid, minfo, rep=0):
+    cat, prog, mod = p.cat, p.prog, p.module
     model = cfg["llm_tools"][tool]["model"]
     jdir = RUNS / tool / cat / prog / f"rep{rep}"
     job = read_json(jdir / "job.json", {})
@@ -169,7 +197,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
     atomic_write_json(jdir / "job.json", {"status": "running", "tool": tool, "model": model, "category": cat,
                                           "program": prog, "rep": rep, "started": job.get("started", now_iso()),
                                           "session": sid})
-    module_src = (src_dir / "example.py").read_text()
+    module_src = p.src.read_text()
     refactored = False
     suite = []           # [(file name, normalized text)]
     history = []
@@ -178,7 +206,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
         if is_done(idir):  # resume: reload state of a finished iteration
             m = read_json(idir / "metrics.json")
             work = idir / "work"
-            module_src = (work / "example.py").read_text()
+            module_src = (work / f"{mod}.py").read_text()
             refactored = m["refactored_module"]
             suite.append((f"test_example_i{k}.py", (work / f"test_example_i{k}.py").read_text()))
             history.append(m)
@@ -186,8 +214,9 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
             reset_dir(idir)
             work = idir / "work"
             work.mkdir()
-            (work / "example.py").write_text(module_src)
+            (work / f"{mod}.py").write_text(module_src)
             (work / "pytest.ini").write_text(PYTEST_INI)
+            stage(p, work)
             for name, text in suite:
                 (work / name).write_text(text)
             prev = history[-1]["coverage"] if history else None
@@ -208,11 +237,12 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
 
             test_code, module_block, xinfo = extract_blocks(content)
             if k == 1 and cat == "cat1_scripts" and module_block:
-                (work / "example_original.py").write_text(module_src)
+                (work / f"{mod}_original.py").write_text(module_src)
                 module_src, refactored = module_block, True  # paper: ChatGPT refactored Cat-1 scripts
-                (work / "example.py").write_text(module_src)
+                (work / f"{mod}.py").write_text(module_src)
             fname = f"test_example_i{k}.py"
-            norm, changes = normalize_imports(test_code, module_src, prior_srcs=[t for _, t in suite])
+            norm, changes = normalize_imports(test_code, module_src, target=mod, prior_srcs=[t for _, t in suite],
+                                              env=p.env, cwd=work)
             (work / f"test_example_i{k}.raw.py").write_text(test_code)
             (work / fname).write_text(norm)
             atomic_write_json(idir / "postprocess_log.json", {"extraction": xinfo, "import_rewrites": changes,
@@ -220,16 +250,17 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
                                                               "refactored_module_from_response": refactored and k == 1})
             rawdir = idir / "_raw"
             rawdir.mkdir()
-            (rawdir / "example.py").write_text(module_src)
+            (rawdir / f"{mod}.py").write_text(module_src)
             (rawdir / "pytest.ini").write_text(PYTEST_INI)
             (rawdir / fname).write_text(test_code)
-            raw_err = file_errors(rawdir, [fname], cfg)[fname]
+            stage(p, rawdir)
+            raw_err = file_errors(rawdir, [fname], cfg, p.env)[fname]
             shutil.rmtree(rawdir)
 
             ev = {}
             files = [n for n, _ in suite] + [fname]
             with measure("evaluation", idir / "energy_evaluation", cfg, ev):
-                metrics = evaluate(work, files, cfg)
+                metrics = evaluate(work, files, cfg, mod, p.env, p.data)
             suite.append((fname, norm))
             dur = lambda key: (meta.get(key) or 0) / 1e9  # noqa: E731
             m = {
@@ -262,7 +293,7 @@ def run_llm_job(cfg, tool, cat, prog, src_dir, sid, minfo, rep=0):
                 "iteration_rules": cfg["iterations"], "evaluation": cfg["evaluation"], "energy_cfg": cfg["energy"],
                 "session": sid, "finished": now_iso(), "git": git_commit(), "system_state": system_state(),
                 "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
-                "dataset_program": str(src_dir.relative_to(REPO)),
+                "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
             })
             mark_done(idir)
             history.append(m)
@@ -308,7 +339,8 @@ def memory_cap(cfg):
     return _cap["prefix"]
 
 
-def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
+def run_pynguin_job(cfg, p, seed, sid):
+    cat, prog, mod = p.cat, p.prog, p.module
     jdir = RUNS / "pynguin" / cat / prog / f"seed{seed}"
     if is_done(jdir):
         return "skip"
@@ -316,42 +348,44 @@ def run_pynguin_job(cfg, cat, prog, src_dir, seed, sid):
     reset_dir(jdir)
     work = jdir / "work"
     work.mkdir()
-    shutil.copy(src_dir / "example.py", work / "example.py")
-    pyn = [str(PYNGUIN_BIN), "--project-path", ".", "--output-path", ".", "--module-name", "example",
+    shutil.copy(p.src, work / f"{mod}.py")
+    stage(p, work)
+    pyn = [str(PYNGUIN_BIN), "--project-path", ".", "--output-path", ".", "--module-name", mod,
            "--seed", str(seed), "--report-dir", "pynguin-report", *cfg["pynguin"]["args"]]
     cmd = memory_cap(cfg) + pyn
-    env = {**os.environ, "PYNGUIN_DANGER_AWARE": "1"}
+    env = {**os.environ, **p.env, "PYNGUIN_DANGER_AWARE": "1"}
     cool = cooldown(cfg)
     gen = {}
     with measure("generation", jdir / "energy_generation", cfg, gen):
         try:
-            p = subprocess.run(cmd, cwd=work, env=env, capture_output=True, text=True, stdin=subprocess.DEVNULL,
-                               timeout=cfg["pynguin"]["timeout_s"])
-            rc, out = p.returncode, p.stdout + p.stderr
+            proc = subprocess.run(cmd, cwd=work, env=env, capture_output=True, text=True, stdin=subprocess.DEVNULL,
+                                  timeout=cfg["pynguin"]["timeout_s"])
+            rc, out = proc.returncode, proc.stdout + proc.stderr
         except subprocess.TimeoutExpired as e:
             rc, out = None, f"TIMEOUT\n{e.stdout or ''}{e.stderr or ''}"
     atomic_write_text(jdir / "pynguin.log", out if isinstance(out, str) else out.decode(errors="replace"))
-    has_tests = (work / "test_example.py").exists()
+    tests = f"test_{mod}.py"
+    has_tests = (work / tests).exists()
     if not has_tests:  # e.g. Cat-1 scripts: Pynguin cannot import / find units (paper §3.1)
-        (work / "test_example.py").write_text("# Pynguin produced no tests\n")
+        (work / tests).write_text("# Pynguin produced no tests\n")
     (work / "pytest.ini").write_text(PYTEST_INI)
     ev = {}
     with measure("evaluation", jdir / "energy_evaluation", cfg, ev):
-        metrics = evaluate(work, ["test_example.py"], cfg)
+        metrics = evaluate(work, [tests], cfg, mod, p.env, p.data)
     ver = subprocess.run([str(PYNGUIN_BIN.parent / "python"), "-c", "import importlib.metadata as m;print(m.version('pynguin'))"],
                          capture_output=True, text=True).stdout.strip()
     m = {"tool": "pynguin", "category": cat, "program": prog, "seed": seed, "iteration": 1,
          "pynguin_returncode": rc, "pynguin_produced_tests": has_tests,
          "pynguin_worker_restarts": str(out).count("Worker process died"),
          "pynguin_memory_max": cfg["pynguin"]["memory_max"] if memory_cap(cfg) else None,
-         "pynguin_killed": rc in (-9, -15, 137, 143), "mccabe_max": mccabe_max((work / "example.py").read_text()),
+         "pynguin_killed": rc in (-9, -15, 137, 143), "mccabe_max": mccabe_max((work / f"{mod}.py").read_text()),
          **metrics, "energy": {"generation": gen, "evaluation": ev}, "cooldown_s": cool}
     atomic_write_json(jdir / "metrics.json", m)
     atomic_write_json(jdir / "manifest.json", {
         "tool": "pynguin", "pynguin_version": ver, "command": cmd, "seed": seed, "session": sid, "finished": now_iso(),
         "git": git_commit(), "system_state": system_state(), "evaluation": cfg["evaluation"], "energy_cfg": cfg["energy"],
         "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
-        "dataset_program": str(src_dir.relative_to(REPO)),
+        "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
     })
     mark_done(jdir)
     print(f"  [pynguin] {cat}/{prog} seed{seed}: rc={rc} tests={has_tests} stmt={m['coverage']['stmt_cov']} "
@@ -381,6 +415,8 @@ def main():
     ap.add_argument("--reps", type=int, default=None, help="LLM repetitions (default: config repetitions.llm)")
     ap.add_argument("--energy", choices=("internal", "none"), default="internal",
                     help="none: record wall time only, for an external energy meter wrapping this command")
+    ap.add_argument("--pynguin-time", type=int, default=None, help="smoke tests only: Pynguin search time in seconds "
+                    "(default from config; recorded in each manifest)")
     ap.add_argument("--idle-s", type=int, default=None, help="idle baseline seconds (default from config; 0 = skip)")
     ap.add_argument("--allow-no-rapl", action="store_true", help="debug only: run without real RAPL energy")
     ap.add_argument("--allow-battery", action="store_true", help="debug only: do not wait for mains power")
@@ -388,6 +424,9 @@ def main():
                     "runs folder that already holds another machine's runs")
     args = ap.parse_args()
     cfg = load_config()
+    if args.pynguin_time is not None:
+        a = cfg["pynguin"]["args"]
+        a[a.index("--maximum-search-time") + 1] = str(args.pynguin_time)
     cfg["_allow_battery"] = args.allow_battery
     cfg["_energy"] = args.energy
     if args.idle_s is None:
@@ -416,15 +455,15 @@ def main():
         for tool in tools:
             if tool == "pynguin":
                 if r < len(seeds):
-                    for cat, prog, src in ordered(progs, cfg, tool):
-                        if run_pynguin_job(cfg, cat, prog, src, seeds[r], sid) == "done":
+                    for p in ordered(progs, cfg, tool):
+                        if run_pynguin_job(cfg, p, seeds[r], sid) == "done":
                             aggregate()
                 continue
             if r >= reps:
                 continue
             model = cfg["llm_tools"][tool]["model"]
             todo = [p for p in ordered(progs, cfg, tool)
-                    if read_json(RUNS / tool / p[0] / p[1] / f"rep{r}" / "job.json", {}).get("status") != "done"]
+                    if read_json(RUNS / tool / p.cat / p.prog / f"rep{r}" / "job.json", {}).get("status") != "done"]
             if not todo:
                 print(f"[{tool}] rep{r}: all {len(progs)} programs done", flush=True)
                 continue
@@ -433,8 +472,8 @@ def main():
             atomic_write_json(sdir / f"model_info_{tool}.json", minfo)
             warmup(cfg, model, sdir, tool)
             print(f"[{tool}] {model} digest={minfo['digest'][:12]} rep{r} — {len(todo)} programs to run", flush=True)
-            for cat, prog, src in todo:
-                run_llm_job(cfg, tool, cat, prog, src, sid, minfo, rep=r)
+            for p in todo:
+                run_llm_job(cfg, tool, p, sid, minfo, rep=r)
                 aggregate()
     if args.idle_s > 0:
         rec = {}

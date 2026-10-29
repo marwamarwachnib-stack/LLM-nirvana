@@ -7,12 +7,12 @@ export CUDA_VISIBLE_DEVICES=""
 export OLLAMA_NUM_PARALLEL=1
 export OLLAMA_MAX_LOADED_MODELS=1
 export OLLAMA_KEEP_ALIVE=60m
-BIN="$("$(dirname "$0")/ollama_bin.sh")"
 LOG="${PHASE1_RUNS:-$(dirname "$0")/../runs}/ollama_server.log"
 mkdir -p "$(dirname "$LOG")"
 if curl -sf "http://$OLLAMA_HOST/api/version" >/dev/null; then
   echo "ollama already running: $(curl -s http://$OLLAMA_HOST/api/version)"; exit 0
 fi
+BIN="$("$(dirname "$0")/ollama_bin.sh")"
 nohup "$BIN" serve >>"$LOG" 2>&1 &
 for _ in $(seq 1 30); do
   curl -sf "http://$OLLAMA_HOST/api/version" >/dev/null && { echo "ollama started (pid $!): $(curl -s http://$OLLAMA_HOST/api/version)"; exit 0; }

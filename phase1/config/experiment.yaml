@@ -9,6 +9,8 @@ program_sets:
     - cat2_functions/change
     - cat3_classes/bank-account
   small: auto                          # all sub-folders of cat1_scripts, cat2_functions, cat3_classes
+  p2: prepared                         # 100_300 LOC p2: datasets/p2/manifest.json (scripts/prepare_datasets.py p2)
+  p1: prepared                         # 100_300 LOC p1: datasets/p1/manifest.json (scripts/prepare_datasets.py p1)
 
 ollama:
   host: "http://127.0.0.1:11434"
