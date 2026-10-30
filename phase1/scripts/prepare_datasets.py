@@ -45,7 +45,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from common import PHASE1, PYNGUIN_BIN, REPO, VENV_PY, atomic_write_json, now_iso
+from common import PHASE1, PYNGUIN_BIN, REPO, RUNNER_PY, atomic_write_json, now_iso
 
 DATASETS = PHASE1 / "datasets"
 STD = set(sys.stdlib_module_names)
@@ -280,7 +280,7 @@ def install_hook():
     sys.path. Appended, not prepended: the standard library and the venv's own packages always win, as they did
     in the authors' runs for every module already imported by Python itself."""
     out = []
-    for py in (VENV_PY, PYNGUIN_BIN.parent / "python"):
+    for py in (RUNNER_PY, PYNGUIN_BIN.parent / "python"):
         sp = site_packages(py)
         (sp / "phase1_paths.pth").write_text(HOOK)
         out.append(str(sp / "phase1_paths.pth"))
@@ -294,14 +294,14 @@ def runtime_env(entry):
 
 
 def import_check(module_file, module, env, data_files=()):
-    """Import the module (the authors' file) in both venvs, in a fresh temporary directory, after pytest (main venv)
+    """Import the module (the authors' file) in both venvs, in a fresh temporary directory, after pytest (runner venv)
     or pynguin (Pynguin's venv) as in a real run (they import modules some old code relies on, e.g. collections.abc)."""
     res = {}
     with tempfile.TemporaryDirectory() as tmp:
         shutil.copy(module_file, Path(tmp) / f"{module}.py")
         for f in data_files:
             shutil.copy(f, Path(tmp) / Path(f).name)
-        for name, py, first in (("main", VENV_PY, "pytest"), ("pynguin", PYNGUIN_BIN.parent / "python", "pynguin")):
+        for name, py, first in (("runner", RUNNER_PY, "pytest"), ("pynguin", PYNGUIN_BIN.parent / "python", "pynguin")):
             try:
                 p = subprocess.run([str(py), "-c", f"import {first}; import {module}"], cwd=tmp, capture_output=True,
                                    text=True, env={**os.environ, **env, "PYNGUIN_DANGER_AWARE": "1"},
@@ -314,8 +314,11 @@ def import_check(module_file, module, env, data_files=()):
     return res
 
 
-def uv_install(target, reqs):
-    cmd = ["uv", "pip", "install", "--python", str(VENV_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER, *reqs]
+def uv_install(target, reqs, constraints=None, build_constraints=None):
+    """Install into `target` for the runner's Python (3.10: the same minor version as Pynguin's venv)."""
+    cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER,
+           *(["--constraint", str(constraints)] if constraints else []),
+           *(["--build-constraint", str(build_constraints)] if build_constraints else []), *reqs]
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
         sys.exit(f"dependency install failed:\n{' '.join(cmd)}\n{p.stderr[-3000:]}")
@@ -411,28 +414,40 @@ def prepare_p2(force=False):
 P1_DIR = REPO / "100_300 LOC p1"
 P1_CATS = {"cat1": "cat1_scripts", "cat2": "cat2_functions", "cat3": "cat3_classes"}
 # third-party packages the p1 modules (and the project files they import) need; one shared directory
-P1_DEPS = ["numpy", "matplotlib", "scipy", "cvxpy", "tqdm", "requests", "pymongo", "gevent", "pandas", "sqlalchemy",
+P1_DEPS = ["numpy", "matplotlib", "scipy", "cvxpy", "tqdm", "requests", "gevent", "pandas", "sqlalchemy",
            "discord.py", "youtube_dl", "anthropic", "opencv-python-headless", "scikit-video", "onnxruntime", "pillow",
-           "plyfile", "pytz", "ipython", "tabulate", "gdown"]
-# tried one by one, each may fail on a given machine (no index access, no C library to build against): reported
-P1_OPTIONAL = [(["torch"], "https://download.pytorch.org/whl/cpu"), (["tensorflow-cpu"], None), (["insightface"], None),
-               (["--no-deps", "opennsfw2"], None),  # facefusion; its own tensorflow requirement = tensorflow-cpu above
-               (["mysqlclient"], None), (["pyaudio"], None)]
+           "plyfile", "pytz", "ipython", "tabulate", "gdown", "psutil",
+           "scikit-image", "asteval", "multiprocess", "h5py", "lmfit", "statsmodels"]   # Stoner
+# versions of the modules' time where their code needs them (decision 15); constraints of every p1 install
+P1_CONSTRAINTS = ["numpy<1.24",          # Stoner: numpy.float, removed in numpy 1.24
+                  "scipy<1.12",          # Stoner: scipy.integrate.cumtrapz (removed in 1.14); 1.11 = numpy 1.23 era
+                  "scikit-image<0.20",   # Stoner: skimage.viewer, removed in 0.20
+                  "pymongo<3"]           # hydra (2013): pymongo.errors.TimeoutError, removed in pymongo 3
+# built from source with an old setuptools: pymongo 2 uses setup(use_2to3=...), removed in setuptools 58
+P1_OLD_BUILDS = [(["pymongo<3"], ["setuptools<58"])]
+# tried one by one, alternatives in order; each may fail on a given machine (index unreachable, C library missing)
+P1_OPTIONAL = [("torch", [(["torch"], "https://download.pytorch.org/whl/cpu"), (["torch"], None)]),  # CPU build, else PyPI
+               ("tensorflow-cpu", [(["tensorflow-cpu"], None)]), ("insightface", [(["insightface"], None)]),
+               ("opennsfw2", [(["--no-deps", "opennsfw2"], None)]),   # facefusion; its tensorflow = tensorflow-cpu
+               ("mysqlclient", [(["mysqlclient"], None)]),            # needs libmysqlclient-dev and pkg-config
+               ("pyaudio", [(["pyaudio"], None)])]                    # needs portaudio19-dev
 # why a module cannot be imported here, whatever error comes first (the authors' files are used as they are)
 P1_NOTES = {
     "cat1_s15": "script: parses command-line arguments when imported; as for the 0-100 LOC scripts, Pynguin cannot test it",
-    **{k: "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError, removed in pymongo 3); none for Python 3.12"
+    **{k: "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58"
        for k in ("cat2_s1", "cat3_s5", "cat3_s6")},
     "cat2_s2": "Python 2 code at module level (str.decode('hex'))",
-    "cat2_s5": "needs torch (CPU build from download.pytorch.org): installed only if that index is reachable",
-    "cat2_s6": "needs torch and gaussian-splatting's CUDA rasterizer (diff_gaussian_rasterization): GPU only",
-    "cat2_s9": "Stoner (2023) imports numpy.NaN, removed in numpy 2 (the venvs have numpy 2)",
+    "cat2_s5": "needs torch (CPU build from download.pytorch.org, else the PyPI build)",
+    "cat2_s6": "needs an NVIDIA GPU: gaussian-splatting's CUDA rasterizer (diff_gaussian_rasterization); impossible on "
+               "CPU, and on the authors' macOS",
+    "cat2_s9": "Stoner needs numpy < 1.24, scipy < 1.12 and scikit-image < 0.20 (pinned for p1)",
     **{k: "vbench is Python 2 code (exec statement, cPickle)" for k in ("cat2_s10", "cat3_s14")},
-    "cat2_s11": "Windows only (win32api) and the PortAudio C library (pyaudio)",
-    "cat2_s12": "MySQLdb (mysqlclient) needs the MySQL client C library to build (installed if the machine has it)",
+    "cat2_s11": "Windows only: win32api (pywin32 exists for Windows only; impossible on the authors' macOS too)",
+    "cat2_s12": "MySQLdb (mysqlclient) needs the MySQL client C library: sudo apt install libmysqlclient-dev pkg-config",
     **{k: "relative import at module level (from .x import ...): it cannot be imported as a top-level module"
        for k in ("cat3_s8", "cat3_s12")},
-    "cat3_s9": "runs a stock-market simulation that never ends when imported",
+    "cat3_s9": "runs a real-time stock-market simulation when imported (1 s per simulated minute, 9:30 to 16:40): "
+               "about 7 h 10 min per import",
     **{k: "starts a Discord bot (network login) when imported" for k in ("cat3_s10", "cat3_s11")},
 }
 # data files a module reads when it is imported (copied next to it in every work directory)
@@ -530,18 +545,31 @@ def p1_overlay(name, samples, out):
     return str(d.relative_to(DATASETS))
 
 
-def install_deps(target, reqs, optional):
-    """Required packages (all or nothing), then each optional group on its own. Re-runs add what is missing."""
-    uv_install(target, reqs)
+def install_deps(target, reqs, optional, constraints=(), old_builds=()):
+    """Old source builds first, then the required packages (all or nothing), then each optional group on its own
+    (first alternative that installs). Every install keeps `constraints`. Re-runs add what is missing."""
+    cfile = None
+    if constraints:
+        cfile = target.parent / "constraints.txt"
+        cfile.write_text("\n".join(constraints) + "\n")
+    for group, build in old_builds:
+        bfile = target.parent / "build-constraints.txt"
+        bfile.write_text("\n".join(build) + "\n")
+        uv_install(target, group, cfile, bfile)
+    uv_install(target, reqs, cfile)
     status = read_heavy(target)
-    for group, index in optional:
-        key = " ".join(group)
-        if status.get(key) == "installed":
+    for key, alternatives in optional:
+        if status.get(key, "").startswith("installed"):
             continue
-        cmd = ["uv", "pip", "install", "--python", str(VENV_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER,
-               *(["--index", index, "--index-strategy", "unsafe-best-match"] if index else []), *group]
-        p = subprocess.run(cmd, capture_output=True, text=True)
-        status[key] = "installed" if p.returncode == 0 else ("skipped: " + (p.stderr.strip().splitlines() or ["?"])[-1])[:300]
+        for group, index in alternatives:
+            cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER,
+                   *(["--constraint", str(cfile)] if cfile else []),
+                   *(["--index", index, "--index-strategy", "unsafe-best-match"] if index else []), *group]
+            p = subprocess.run(cmd, capture_output=True, text=True)
+            if p.returncode == 0:
+                status[key] = "installed" + (f" from {index}" if index else " from PyPI")
+                break
+            status[key] = ("skipped: " + (p.stderr.strip().splitlines() or ["?"])[-1])[:300]
     atomic_write_json(target / "_heavy.json", status)
     return status
 
@@ -592,8 +620,8 @@ def prepare_p1(force=False):
         print(f"{name:9} {(o or {}).get('repo', '-'):28} match={entry['origin'] and entry['origin']['ratio']} "
               f"{(entry['origin'] or {}).get('state', '')}", flush=True)
     (out / "deps").mkdir(parents=True, exist_ok=True)
-    optional = install_deps(out / "deps", P1_DEPS, P1_OPTIONAL)
-    manifest["deps"] = {"dir": "p1/deps", "requirements": P1_DEPS, "optional": optional,
+    optional = install_deps(out / "deps", P1_DEPS, P1_OPTIONAL, P1_CONSTRAINTS, P1_OLD_BUILDS)
+    manifest["deps"] = {"dir": "p1/deps", "requirements": P1_DEPS, "constraints": P1_CONSTRAINTS, "optional": optional,
                         "installed": sorted(p.name for p in (out / "deps").glob("*.dist-info"))}
     install_hook()
     manifest["hook"] = "phase1_paths.pth in the site-packages of .venv and .venv-pynguin"

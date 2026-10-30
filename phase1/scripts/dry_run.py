@@ -5,7 +5,7 @@
 
 Per program, in a temporary copy (the dataset is never written to):
   - compile `example.py` under this Python (catches Python 2 syntax);
-  - list its top-level imports and check each in the main venv and the Pynguin venv;
+  - list its top-level imports and check each in the runner venv (Python 3.10) and the Pynguin venv;
   - import it in a subprocess with empty stdin (Cat 1 scripts that read input() end in EOFError, as expected);
   - run the repository's stored `test_example.py` (the 2024 Pynguin suite) with pytest, if there is one.
 Every subprocess has a timeout and a 2 GB address-space cap.
@@ -20,7 +20,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from common import PHASE1, RESULTS, VENV_PY, load_config
+from common import PHASE1, RESULTS, RUNNER_PY, load_config
 from run import programs
 
 PYNGUIN_PY = PHASE1 / ".venv-pynguin" / "bin" / "python"
@@ -76,21 +76,21 @@ def check(cat, name, src_dir, tmp):
         row["python2_suspect"] = any(k in src for k in ("print ", "raw_input", "xrange", "except Exception, "))
     local = {p.stem for p in w.glob("*.py")}
     row["imports"] = " ".join(mods)
-    row["missing_main_venv"] = " ".join(m for m in missing(VENV_PY, mods, w) if m not in local)
+    row["missing_runner_venv"] = " ".join(m for m in missing(RUNNER_PY, mods, w) if m not in local)
     row["missing_pynguin_venv"] = " ".join(m for m in missing(PYNGUIN_PY, mods, w) if m not in local)
     if row["compiles"]:
-        rc, out = run([str(VENV_PY), "-c", "import example"], w, 20)
+        rc, out = run([str(RUNNER_PY), "-c", "import example"], w, 20)
         row["import_rc"] = rc
         row["import_error"] = "" if rc == 0 else last_error(out)
         row["reads_stdin"] = "EOFError" in row["import_error"]
     if (w / "test_example.py").exists():
-        rc, out = run([str(VENV_PY), "-m", "pytest", "-q", "-p", "no:cacheprovider", "test_example.py"], w, 120)
+        rc, out = run([str(RUNNER_PY), "-m", "pytest", "-q", "-p", "no:cacheprovider", "test_example.py"], w, 120)
         row["stored_tests_rc"] = rc
         row["stored_tests_summary"] = last_error(out)
     else:
         row["stored_tests_rc"] = "no stored tests"
     row["status"] = ("SYNTAX ERROR" if not row["compiles"] else
-                     "MISSING DEPENDENCY" if row["missing_main_venv"] else
+                     "MISSING DEPENDENCY" if row["missing_runner_venv"] else
                      "OK (reads stdin)" if row.get("reads_stdin") else
                      "OK" if row["import_rc"] == 0 else f"IMPORT FAILS: {row['import_error']}")
     return row

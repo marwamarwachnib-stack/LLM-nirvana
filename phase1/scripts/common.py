@@ -21,8 +21,10 @@ REPO = PHASE1.parent
 CONFIG_DIR = PHASE1 / "config"
 RUNS = Path(os.environ.get("PHASE1_RUNS", PHASE1 / "runs"))           # override only for smoke tests
 RESULTS = Path(os.environ.get("PHASE1_RESULTS", PHASE1 / "results"))
-VENV_PY = PHASE1 / ".venv" / "bin" / "python"
-PYNGUIN_BIN = PHASE1 / ".venv-pynguin" / "bin" / "pynguin"
+VENV_PY = PHASE1 / ".venv" / "bin" / "python"              # orchestration, energy meter, analysis (Python 3.12)
+RUNNER_PY = PHASE1 / ".venv-run" / "bin" / "python"        # runs the code under test: pytest, coverage (Python 3.10,
+                                                           # pytest 7.4.0: the authors' versions, decision 15)
+PYNGUIN_BIN = PHASE1 / ".venv-pynguin" / "bin" / "pynguin"  # Pynguin 0.47.0 on Python 3.10
 POWERCAP = Path("/sys/class/powercap")
 
 log = logging.getLogger("phase1")

@@ -1,5 +1,6 @@
 .venv/
 .venv-pynguin/
+.venv-run/
 __pycache__/
 *.tmp
 # bulky per-run working files (metrics, manifests, prompts, responses and final suites stay tracked)
@@ -22,3 +23,5 @@ datasets/*/*.tmp
 # make smoke: quick checks, not results
 runs_smoke_*/
 results_smoke_*/
+datasets/*/constraints.txt
+datasets/*/build-constraints.txt

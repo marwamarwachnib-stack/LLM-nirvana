@@ -18,7 +18,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from common import VENV_PY, atomic_write_json
+from common import RUNNER_PY, atomic_write_json
 
 # 1: pilot v1. 2: missing `from example import *` added (decision 4b); pytest.raises with a different
 #    exception type classified as runtime instead of pass (PLAN.md §13, items 8-9)
@@ -82,7 +82,7 @@ def _importable(mod, target="example", env=None, cwd=None):
     top = mod.split(".")[0]
     if top in sys.stdlib_module_names or top in ("pytest", "_pytest", target):
         return True
-    r = subprocess.run([str(VENV_PY), "-c", f"import importlib.util,sys;sys.exit(importlib.util.find_spec({top!r}) is None)"],
+    r = subprocess.run([str(RUNNER_PY), "-c", f"import importlib.util,sys;sys.exit(importlib.util.find_spec({top!r}) is None)"],
                        capture_output=True, cwd=cwd, env=run_env(env))
     return r.returncode == 0
 
@@ -423,7 +423,7 @@ def _run_pytest(work, files, cfg, extra, junit_name, with_coverage, env=None):
     ev = cfg["evaluation"]
     base = ["-m", "pytest", "-q", "-p", "no:cacheprovider", "--continue-on-collection-errors",
             f"--timeout={ev['per_test_timeout_s']}", f"--junitxml={junit_name}", "--rootdir=.", "-c", "pytest.ini"]
-    cmd = [str(VENV_PY)] + (["-m", "coverage", "run", "--rcfile=.coveragerc"] if with_coverage else []) + base + extra + files
+    cmd = [str(RUNNER_PY)] + (["-m", "coverage", "run", "--rcfile=.coveragerc"] if with_coverage else []) + base + extra + files
     try:
         p = subprocess.run(cmd, cwd=work, capture_output=True, text=True, stdin=subprocess.DEVNULL,
                            timeout=ev["per_file_timeout_s"], env=run_env(env))
@@ -443,7 +443,7 @@ def file_errors(work, files, cfg, env=None):
         except SyntaxError as e:
             res[f] = {"syntax_error": True, "collection_error": True, "detail": f"SyntaxError: {e}"}
             continue
-        p = subprocess.run([str(VENV_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
+        p = subprocess.run([str(RUNNER_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
                             "--rootdir=.", "-c", "pytest.ini", f], cwd=work, capture_output=True, text=True,
                            stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"], env=run_env(env))
         err = p.returncode not in (0, 5)  # 5 = no tests collected (not an error per se)
@@ -457,10 +457,10 @@ def file_errors(work, files, cfg, env=None):
 
 def coverage_metrics(work, cfg, module="example"):
     w = Path(work)
-    subprocess.run([str(VENV_PY), "-m", "coverage", "json", "--rcfile=.coveragerc", "-o", "coverage.json"],
+    subprocess.run([str(RUNNER_PY), "-m", "coverage", "json", "--rcfile=.coveragerc", "-o", "coverage.json"],
                    cwd=w, capture_output=True, text=True)
     with open(w / "branch_coverage.txt", "w") as f:  # same format as the repo's branch_coverage.txt
-        subprocess.run([str(VENV_PY), "-m", "coverage", "report", "-m", "--rcfile=.coveragerc"], cwd=w, stdout=f, stderr=subprocess.STDOUT)
+        subprocess.run([str(RUNNER_PY), "-m", "coverage", "report", "-m", "--rcfile=.coveragerc"], cwd=w, stdout=f, stderr=subprocess.STDOUT)
     data = json.loads((w / "coverage.json").read_text()) if (w / "coverage.json").exists() else {"files": {}}
     fe = data["files"].get(f"{module}.py")
     if fe is None:  # module never imported -> nothing covered
@@ -487,7 +487,7 @@ def _statement_lines(w, module="example"):
     """Statement line numbers of the module when no coverage data exists (coverage.py's own parser)."""
     code = (f"import json;from coverage.parser import PythonParser as P;p=P(filename='{module}.py');p.parse_source();"
             "print(json.dumps(sorted(p.statements)))")
-    p = subprocess.run([str(VENV_PY), "-c", code], cwd=w, capture_output=True, text=True)
+    p = subprocess.run([str(RUNNER_PY), "-c", code], cwd=w, capture_output=True, text=True)
     try:
         return json.loads(p.stdout)
     except ValueError:

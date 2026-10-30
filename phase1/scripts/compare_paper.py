@@ -254,7 +254,7 @@ def section_table5(rep, auth):
                "32.55: unexplained).", "", md_table(["source"] + cols, rows), ""]
 
 
-def section_table3(rep, it, llms, label, reference_only):
+def section_table3(rep, it, llms, label, reference_only, importable=None):
     llm_it = it[it.tool != "pynguin"]
     if llm_it.empty:
         return
@@ -267,11 +267,14 @@ def section_table3(rep, it, llms, label, reference_only):
     for cat, vals in T3.items():
         rows.append([cat, "paper ChatGPT (100-300 LOC p1)"] + [fmt(v) for v in vals])
         for t in llms:
-            s = ch[(ch.tool == t) & (ch.category.map(CAT) == cat)]
-            if len(s):
-                rows.append([cat, f"ours {t} ({label}, n={len(s)})"] + [
-                    fmt(s[c].median() if c == "median_iters" else s[c].mean()) for c in T3_COLS])
-                rep.add("3", cat, "iter1", "ours", t, s["iter1"].mean(), len(s))
+            groups = [(label, ch[(ch.tool == t) & (ch.category.map(CAT) == cat)])]
+            if importable is not None:  # p1: also the modules that can be imported (decision 15)
+                groups.append((f"{label}, importable only", groups[0][1][groups[0][1].program.isin(importable)]))
+            for glabel, s in groups:
+                if len(s):
+                    rows.append([cat, f"ours {t} ({glabel}, n={len(s)})"] + [
+                        fmt(s[c].median() if c == "median_iters" else s[c].mean()) for c in T3_COLS])
+                    rep.add("3", cat, "iter1", f"ours ({glabel})", t, s["iter1"].mean(), len(s))
     note = ("The paper's Table 3 uses 100-300 LOC p1 (repository README); these chains are on another dataset: "
             "reference only." if reference_only else "Same dataset as the paper (p1).")
     rep.md += [f"## Table 3: iterative improvement{' (reference only)' if reference_only else ''}", "",
@@ -307,7 +310,8 @@ def section_imports(rep, set_name):
                "gets 0 % coverage, for every tool.", ""]
     if bad:
         def why(e):
-            err = re.sub(r"\(/[^)]*\)", "", e["import_check"]["main"]).replace("|", "/").strip()
+            first_error = next(v for v in e["import_check"].values() if v != "ok")
+            err = re.sub(r"\(/[^)]*\)", "", first_error).replace("|", "/").strip()
             return e.get("note") or err
         rep.md += [md_table(["program", "category", "reason"], [[n, e["category"], why(e)] for n, e in sorted(bad.items())]), ""]
 
@@ -340,7 +344,9 @@ def main():
         section_table4(rep, jobs, llms)
         section_imports(rep, "p2")
     else:
-        section_table3(rep, it, llms, "p1", reference_only=False)
+        man = json.loads((PHASE1 / "datasets" / "p1" / "manifest.json").read_text())
+        importable = {n for n, e in man["programs"].items() if all(v == "ok" for v in e["import_check"].values())}
+        section_table3(rep, it, llms, "p1", reference_only=False, importable=importable)
         section_table4(rep, jobs, llms)
         section_imports(rep, "p1")
     (RESULTS / "paper_comparison.md").write_text("\n".join(rep.md))

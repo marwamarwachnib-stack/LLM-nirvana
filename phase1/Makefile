@@ -1,6 +1,7 @@
 # Phase 1 commands (laptop or server). Run long targets inside tmux or screen.
 #
-#   make setup                 create the two venvs from env/*.lock (needs uv and network)
+#   make setup                 create the three venvs from env/*.lock (needs uv and network): analysis 3.12,
+#                              code under test 3.10 (pytest 7.4.0) and Pynguin 3.10, as the authors (decision 15)
 #   make models                pull the LLMs of config main_tools into Ollama (network)
 #   make datasets              rebuild the projects of the large samples (p2, p1) and their dependencies (network)
 #   make check                 what is installed / readable on this machine
@@ -40,9 +41,11 @@ help:
 	@sed -n '1,/^$$/p' Makefile | sed 's/^# \{0,1\}//'
 
 setup:
-	uv venv --python 3.12 .venv
+	uv venv --clear --python 3.12 .venv
 	uv pip sync --python .venv/bin/python env/requirements-venv.lock
-	uv venv --python 3.12 .venv-pynguin
+	uv venv --clear --python 3.10.12 .venv-run
+	uv pip sync --python .venv-run/bin/python env/requirements-run.lock
+	uv venv --clear --python 3.10.12 .venv-pynguin
 	uv pip sync --python .venv-pynguin/bin/python env/requirements-venv-pynguin.lock
 
 models:

@@ -12,7 +12,7 @@ import tempfile
 import time
 from pathlib import Path
 
-from common import CONFIG_DIR, REPO, VENV_PY, load_config, rapl_delta_wh, rapl_readable, rapl_snapshot
+from common import CONFIG_DIR, REPO, RUNNER_PY, load_config, rapl_delta_wh, rapl_readable, rapl_snapshot
 from evaluate import extract_blocks, normalize_imports
 from run import chat
 
@@ -45,8 +45,8 @@ def main():
     print(tests)
 
     print("\n[3/3] Running the tests with coverage:\n")
-    subprocess.run([str(VENV_PY), "-m", "coverage", "run", "--branch", "-m", "pytest", "-q", "test_example.py"], cwd=work)
-    subprocess.run([str(VENV_PY), "-m", "coverage", "report", "-m", "--include=example.py"], cwd=work)
+    subprocess.run([str(RUNNER_PY), "-m", "coverage", "run", "--branch", "-m", "pytest", "-q", "test_example.py"], cwd=work)
+    subprocess.run([str(RUNNER_PY), "-m", "coverage", "report", "-m", "--include=example.py"], cwd=work)
 
     print(f"\nGeneration time: {secs:.0f} s")
     if energy:
