@@ -1,12 +1,12 @@
-program,harness,plain_passed,plain_stmt_cov,harness_passed,harness_stmt_cov,harness_summary,source_sha256,source_unchanged
-cat1_s15,,False,17.8,,,,7624d6fe1f0cd843,True
-cat2_s10,harness/p1/cat2_s10/conftest.py,False,11.6,True,20.3,1 passed in 0.01s,a8ed4819002fc819,True
-cat2_s11,harness/p1/cat2_s11/conftest.py,False,10.5,True,35.1,1 passed in 0.01s,493aa9a7f0f05d78,True
-cat2_s2,,False,12.8,,,,ae3de0f3706a0625,True
-cat2_s6,harness/p1/cat2_s6/conftest.py,False,3.1,True,12.6,"1 passed, 1 warning in 0.01s",b8331b33af78f4d0,True
-cat3_s10,harness/p1/cat3_s10/conftest.py,False,42.9,True,42.9,1 passed in 0.01s,cddc235d5f3aa7a9,True
-cat3_s11,harness/p1/cat3_s11/conftest.py,False,51.9,True,51.9,1 passed in 0.01s,05467eeeff1d9c8f,True
-cat3_s12,harness/p1/cat3_s12/conftest.py,False,18.2,True,34.1,"1 passed, 1 warning in 0.01s",71327c91b1673f0d,True
-cat3_s14,harness/p1/cat3_s14/conftest.py,False,0.7,True,15.8,"1 passed, 1 warning in 0.01s",0f32edf7e110ea7d,True
-cat3_s8,harness/p1/cat3_s8/conftest.py,False,3.8,True,26.9,1 passed in 0.01s,d7dc7fc93c7cd9a3,True
-cat3_s9,harness/p1/cat3_s9/conftest.py,False,,True,97.8,1 passed in 0.01s,41cd2eb96ac1ecb6,True
+program,harness,plain_passed,plain_stmt_cov,harness_passed,harness_stmt_cov,harness_summary,harness_stmt_cov_without_import,harness_imports_nothing,source_sha256,source_unchanged
+cat1_s15,,False,17.8,,,,,,7624d6fe1f0cd843,True
+cat2_s10,harness/p1/cat2_s10/conftest.py,False,11.6,True,20.3,1 passed in 0.01s,,True,a8ed4819002fc819,True
+cat2_s11,harness/p1/cat2_s11/conftest.py,False,10.5,True,35.1,1 passed in 0.21s,,True,493aa9a7f0f05d78,True
+cat2_s2,,False,12.8,,,,,,ae3de0f3706a0625,True
+cat2_s6,harness/p1/cat2_s6/conftest.py,False,3.1,True,12.6,"1 passed, 1 warning in 14.67s",,True,b8331b33af78f4d0,True
+cat3_s10,harness/p1/cat3_s10/conftest.py,False,42.9,True,42.9,1 passed in 0.24s,,True,cddc235d5f3aa7a9,True
+cat3_s11,harness/p1/cat3_s11/conftest.py,False,51.9,True,51.9,1 passed in 0.92s,,True,05467eeeff1d9c8f,True
+cat3_s12,harness/p1/cat3_s12/conftest.py,False,18.2,True,34.1,"1 passed, 1 warning in 2.45s",,True,71327c91b1673f0d,True
+cat3_s14,harness/p1/cat3_s14/conftest.py,False,0.7,True,15.8,"1 passed, 1 warning in 0.74s",,True,0f32edf7e110ea7d,True
+cat3_s8,harness/p1/cat3_s8/conftest.py,False,3.8,True,26.9,1 passed in 0.75s,,True,d7dc7fc93c7cd9a3,True
+cat3_s9,harness/p1/cat3_s9/conftest.py,False,,True,97.8,1 passed in 6.65s,,True,41cd2eb96ac1ecb6,True
