@@ -265,7 +265,7 @@ def section_table3(rep, it, llms, label, reference_only, importable=None):
     ch["best_minus_least"] = ch["best"] - ch["least"]
     rows = []
     for cat, vals in T3.items():
-        src = "100-300 LOC p1" if cat != "cat1" else "6 large Cat 1 modules, not in the repository"
+        src = "100-300 LOC p1" if cat != "cat1" else "6 Cat 1 modules, at most one of them in the repository"
         rows.append([cat, f"paper ChatGPT ({src})"] + [fmt(v) for v in vals])
         for t in llms:
             groups = [(label, ch[(ch.tool == t) & (ch.category.map(CAT) == cat)])]
@@ -279,8 +279,8 @@ def section_table3(rep, it, llms, label, reference_only, importable=None):
     note = ("The paper's Table 3 uses 100-300 LOC p1 (repository README); these chains are on another dataset: "
             "reference only." if reference_only else
             "Same dataset as the paper (p1) for Cat 2 and Cat 3. The paper's Cat 1 row averages 6 modules "
-            "(56.833 = 341/6: the 6 large Cat 1 modules of §2.2), which the repository does not contain; p1 has one "
-            "Cat 1 module (cat1_s15), so that row is not comparable (decision 17).")
+            "(56.833 = 341/6; no single module gives it: cat1_s15 has 73 statements, so 56.16 % or 57.53 %); the "
+            "repository has one Cat 1 module of this size (cat1_s15), so that row is not comparable (decision 17).")
     rep.md += [f"## Table 3: iterative improvement{' (reference only)' if reference_only else ''}", "",
                note + " One chain = one program in one repetition.", "",
                md_table(["category", "source", "iter 1", "iter 5 (or last)", "best", "best − least", "median iterations"], rows), ""]
