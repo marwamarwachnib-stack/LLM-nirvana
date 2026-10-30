@@ -379,6 +379,27 @@ Added after the pilot (confirmed 2026-10-25):
     - **Table 3:** "median iterations for coverage plateau" is the iteration where the best coverage is first reached (the paper's flat Cat 1 row gives 1); `analyze.py` and `compare_paper.py` reported the number of iterations run (2 for a flat chain). Fixed (`common.plateau_iteration`); the iterations run stay in `table_iterations.csv` as `median_iters_run`.
     - **Dates from the authors' .pyc headers:** the small-set modules and Pynguin suites were last written on 3–4 August 2023, the p2 ChatGPT folders on 17–18 October 2023. Pynguin 0.34.0 was released on 18 August 2023, so the small-set suites come from Pynguin ≤ 0.33.0 (0.33.0 was the newest). 0.33.0 and 0.34.0 write test files with the same code (read from both wheels), but differ in search, stopping and execution code. Proposed: pin 0.33.0 for Pynguin; it changes the environment, so it waits for approval. Whether coverage 7.2.7 also reproduces the 77/77 (7.3.0 was released after 3 August) is untested for the same reason.
     - **Re-verified by execution (2026-10-30):** 77/77 small-set reports and 223/237 overall, identical to the committed `env/verify_environment.md`.
+20. **Preparation for the experimental campaign (2026-10-30; nothing installed, sent or launched).** Decisions 1–19 stand.
+    - **Version comparison, prepared only** (`VERSION_COMPARISON_PLAN.md`):
+      - candidate B = Pynguin 0.33.0 + coverage 7.2.7, resolved as `env/candidates/*.lock` (`--exclude-newer 2023-08-04`) and not installed; the current venvs and `env/*.lock` are unchanged;
+      - `PHASE1_RUNNER_VENV` / `PHASE1_PYNGUIN_VENV` point a run at another venv, and every session records its tool versions;
+      - the decision rule was fixed before any run: agreement with the authors' stored suites over 5 seeds, and an operational gate.
+    - **p1 harnesses, a secondary condition** (`P1_HARNESS_STATUS.md`):
+      - for 9 of the 11 modules that fail a plain import, a `harness/p1/<program>/conftest.py` prepares the import (stub, patch during the import, or loading inside the package); the authors' files are never changed (sha256 checked);
+      - the harness never imports the module itself; it prepares a test's own import, so a suite that never imports the module gets no coverage from it (checked);
+      - used only with `HARNESS=1`, in `runs_p1_harness/`; `_condition.json` stops plain and harness runs from mixing;
+      - the plain condition stays the replication of the paper;
+      - cat1_s15 (a Cat 1 script that exits at its first external command) and cat2_s2 (Python 2 `str.decode`, capped at 12.8 %) get no harness.
+    - **Missing data is recorded, never replaced** (`MISSING_DATA_LIMITATIONS.md`):
+      - the 5 or 6 large Cat 1 modules are listed under `"missing"` in `datasets/p1/manifest.json` (`P1_MISSING` in `prepare_datasets.py`);
+      - results that depend on them, or on the authors' unstored ChatGPT outputs, are compared with published values only;
+      - the request to the authors is drafted (`AUTHOR_DATA_REQUEST.md`) and not sent.
+    - **Campaign readiness** (`EXPERIMENTAL_CAMPAIGN_READINESS.md`):
+      - same programs and conditions for every tool (checked);
+      - `run.py` now refuses a runs folder whose earlier sessions used another digest of the same model;
+      - `jobs.csv` gains per-job load and evaluation energy sums and a `harness` column;
+      - `make generate ROUND=r`.
+      - Launch needs approval on the server; this container has neither RAPL nor Ollama.
 
 ## 12. Resumability and Phase-2 readiness
 

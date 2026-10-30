@@ -465,6 +465,17 @@ P1_NOTES = {
 P1_DATA = {"cat3_s9": ["Data/dowstocks.csv"]}
 # environment variables of a program's runs: prompttools sends crash reports to Sentry when imported unless opted out
 P1_ENV = {"cat3_s12": {"SENTRY_OPT_OUT": "1"}}
+# the large Cat 1 modules the paper counts but the authors did not upload (MISSING_DATA_LIMITATIONS.md); recorded,
+# never replaced: no program is generated or substituted for them, and every count says they are absent
+P1_MISSING = {"large_cat1": {
+    "paper": "§2.2: 49 large modules = 20 Cat 2 + 23 Cat 3 + 6 Cat 1; Table 3's Cat 1 row 56.833 % = 341/6",
+    "expected": 6, "in_repository": ["cat1_s15"], "missing": "5 or 6 (whether cat1_s15 is one of the six is unknown)",
+    "expected_path": "100_300 LOC p1/cat1/s<k>/example.py, k unknown (only s15 uploaded)",
+    "expected_role": "Cat 1 procedural script of 100-300 LOC from a GitHub project, with its source URL on the first "
+                     "line like s15",
+    "results": ["Table 3 Cat 1 row", "Fig. 6 Cat 1 line", "Table 4 Cat 1 row, if Table 4 uses the large set"],
+    "slots": [f"large_cat1/#{i}" for i in range(1, 7)], "audit": "DATASET_FORENSIC_AUDIT.csv",
+    "replacement": "none"}}
 GH_URL = r"https://github\.com/([^/\s]+)/([^/\s]+)/blob/([^/\s]+)/(\S+)"
 
 
@@ -594,7 +605,8 @@ def prepare_p1(force=False):
         shutil.rmtree(out / "deps", ignore_errors=True)
     stale_deps(out / "deps", EXCLUDE_NEWER["p1"])
     samples = p1_samples()
-    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER["p1"], "repos": {}, "programs": {}}
+    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER["p1"], "repos": {}, "programs": {},
+                "missing": P1_MISSING}
     for name, s in samples.items():
         o = s["origin"]
         entry = {"module": "example", "source": str(s["file"].relative_to(REPO)), "category": s["category"],

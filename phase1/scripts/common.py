@@ -24,9 +24,11 @@ RUNS = Path(os.environ.get("PHASE1_RUNS", PHASE1 / "runs"))           # override
 # results next to their runs (runs_main -> results_main), so a runs folder given alone never overwrites the pilot's results/
 RESULTS = Path(os.environ.get("PHASE1_RESULTS") or RUNS.parent / RUNS.name.replace("runs", "results", 1))
 VENV_PY = PHASE1 / ".venv" / "bin" / "python"              # orchestration, energy meter, analysis (Python 3.12)
-RUNNER_PY = PHASE1 / ".venv-run" / "bin" / "python"        # runs the code under test: pytest, coverage (Python 3.10.12,
-                                                           # pytest 7.4.0, coverage 7.3.0: the authors' versions, decision 16)
-PYNGUIN_BIN = PHASE1 / ".venv-pynguin" / "bin" / "pynguin"  # Pynguin 0.34.0 on Python 3.10.12, as the authors
+# the code under test runs in .venv-run (Python 3.10.12, pytest 7.4.0, coverage 7.3.0: the authors' versions,
+# decision 16) and Pynguin in .venv-pynguin (0.34.0). PHASE1_RUNNER_VENV / PHASE1_PYNGUIN_VENV point a run at
+# another venv, e.g. the candidates of VERSION_COMPARISON_PLAN.md (Pynguin 0.33.0, coverage 7.2.7); unset, nothing changes
+RUNNER_PY = Path(os.environ.get("PHASE1_RUNNER_VENV") or PHASE1 / ".venv-run") / "bin" / "python"
+PYNGUIN_BIN = Path(os.environ.get("PHASE1_PYNGUIN_VENV") or PHASE1 / ".venv-pynguin") / "bin" / "pynguin"
 POWERCAP = Path("/sys/class/powercap")
 
 log = logging.getLogger("phase1")
@@ -159,6 +161,22 @@ def wait_for_ac(allow_battery=False, poll_s=30):
     return time.time() - t0
 
 
+def tool_versions():
+    """Interpreters and versions that run the code under test and Pynguin (recorded per session, so runs made with
+    another venv, e.g. the version comparison, say which one they used)."""
+    probe = ("import importlib.metadata as m, sys; v = lambda n: m.version(n) if any(d.metadata['Name'].lower() == n "
+             "for d in m.distributions()) else None; print(sys.version.split()[0], v('pytest'), v('pluggy'), v('coverage'), v('pynguin'))")
+    out = {}
+    for name, py in (("runner", RUNNER_PY), ("pynguin", PYNGUIN_BIN.parent / "python")):
+        try:
+            f = subprocess.run([str(py), "-c", probe], capture_output=True, text=True, timeout=60).stdout.split()
+            out[name] = {"interpreter": str(py), "python": f[0], "pytest": f[1], "pluggy": f[2], "coverage": f[3],
+                         **({"pynguin": f[4]} if name == "pynguin" else {})}
+        except (OSError, IndexError, subprocess.TimeoutExpired):
+            out[name] = {"interpreter": str(py), "error": "not available"}
+    return out
+
+
 def environment_info():
     return {
         "captured_at": now_iso(),
@@ -169,6 +187,7 @@ def environment_info():
         "physical_cpus": psutil.cpu_count(logical=False),
         "ram_gb": round(psutil.virtual_memory().total / 2**30, 2),
         "python": platform.python_version(),
+        "tools": tool_versions(),
         "git": git_commit(),
         "system_state": system_state(),
         "rapl_domains": rapl_domains_info(),

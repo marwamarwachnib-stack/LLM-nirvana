@@ -42,7 +42,9 @@ make execute      # every generated suite: 5 timed plain-pytest runs
 make results      # results_main/: CSVs, tables, figures, paper_comparison.md
 ```
 
-- Jobs run in **rounds**: round 0 = Pynguin seed 0 and LLM repetition 0 for all 60 programs, then round 1, and so on. After round 0, `make results` already gives the full comparison; the later rounds add the repetitions.
+- **Before the campaign:** `EXPERIMENTAL_CAMPAIGN_READINESS.md` (checks, launch order, approvals). The Pynguin/coverage version check is in `VERSION_COMPARISON_PLAN.md` (`make setup-candidate`, `make vercmp-a`, `make vercmp-b`, `make vercmp-report`; it installs separate venvs and leaves the current ones and their locks unchanged).
+- Jobs run in **rounds**: round 0 = Pynguin seed 0 and LLM repetition 0 for all 60 programs, then round 1, and so on. After round 0, `make results` already gives the full comparison; the later rounds add the repetitions. `make generate ROUND=0` runs round 0 only.
+- One runs folder per model build too: `run.py` refuses to continue a folder whose earlier sessions used another digest of the same model.
 - **Energy** is measured inside (RAPL + CodeCarbon, idle subtracted, model loading apart) unless `ENERGY=none`. For an external meter, one job at a time: `make gen-one TOOL=cl-7b PROGRAM=cat2_functions/change REP=0` (generation) and `make exec-one TOOL=cl-7b PROGRAM=cat2_functions/change JOB=rep0` (running its tests; Pynguin: `TOOL=pynguin JOB=seed0`).
 - One runs folder per machine: `run.py` refuses to add runs to a folder that holds another machine's runs (use `make CAMPAIGN=<name> ...`).
 - Without a systemd user session, Pynguin runs without its memory cap (`make check` says so; `sudo loginctl enable-linger $USER` usually fixes it).
@@ -54,7 +56,11 @@ make datasets          # once per machine (network): rebuilds the projects and t
 make smoke SET=p2      # a few minutes
 make all SET=p2        # 43 modules: paper Table 2, Figs 4/5/7, Table 5  -> runs_p2/, results_p2/
 make all SET=p1        # 41 modules, LLMs only as in the paper: Table 3   -> runs_p1/, results_p1/
+make all SET=p1 HARNESS=1   # secondary condition: 9 failing modules' imports prepared -> runs_p1_harness/, results_p1_harness/
 ```
+
+- **p1 harnesses** (`harness/p1/<program>/conftest.py`, `P1_HARNESS_STATUS.md`, decision 20): for 9 of the 11 modules that fail a plain import, a `conftest.py` prepares the import (a stub, a patch during the import, or loading inside its package). The authors' files are not changed. They are used only with `HARNESS=1`, in their own runs folder, which refuses plain runs and vice versa. `.venv/bin/python scripts/verify_p1_harness.py` re-checks them.
+- **Missing data** (`MISSING_DATA_LIMITATIONS.md`): 5 or 6 large Cat 1 modules (recorded under `"missing"` in `datasets/p1/manifest.json`, never replaced) and the authors' ChatGPT outputs. The draft request to the authors is `AUTHOR_DATA_REQUEST.md` (not sent).
 
 - **p2** (`scripts/prepare_datasets.py p2`, libraries as of 2023-09-01): every module is identical, apart from its import lines, to a PyPI release: flutils 0.7, codetiming 1.4.0, httpie 3.2.2, pymonet 0.12.0, python-string-utils 1.0.0, sty 1.0.0rc1, typesystem 0.2.4, docstring-parser 0.7.3, dataclasses-json 0.5.3, pdir2 0.3.2, flutes 0.3.0 (`datasets/p2/manifest.json`). The authors ran each module inside its package with the package's own imports flattened (`from httpie.cookies import X` → `from cookies import X`); the other files of each package are rebuilt the same way. That rule reproduces the authors' import lines exactly for 36 of 43 modules; the 7 others are the authors' own exceptions, and the manifest notes them. All 43 import.
 - **p1** (`scripts/prepare_datasets.py p1`): each module names its GitHub source in its first line; the repository is taken as it was at the end of January 2024, with libraries of that date and older versions where the modules' code needs them (numpy < 1.24, scipy < 1.12, scikit-image < 0.20, pymongo 2). **30 of 41 import.** A plain import of the 11 others fails on any Linux or macOS machine as the authors' files are written: Python 2 code (3), top-level relative imports (2), a Discord bot that logs in when imported (2), a real-time simulation of about 7.2 h at import (1), a script that requires command-line arguments (1), Windows only (1), NVIDIA GPU only (1). The reasons are listed in `results_p1/paper_comparison.md` and `DATASET_FORENSIC_AUDIT.csv`. They are still run. A test that imports them plainly covers only the lines before the failure; a test that first stubs the missing module, sets `sys.argv` or patches `time.sleep` / the Discord client can reach more (all but cat2_s2, whose Python 2 `str.decode` runs at import).
@@ -92,6 +98,9 @@ What the steps do:
 | `scripts/` | `run.py` (orchestrator), `execute.py` (timed test execution), `evaluate.py` (coverage, errors, soft assertions), `common.py` (RAPL/CodeCarbon), `aggregate.py`, `analyze.py`, `compare_paper.py` (paper vs ours), `readability.py`, `reevaluate.py`, `determinism_check.py`, `dry_run.py`, `xcheck_stored.py`, `ollama_serve.sh`, `ollama_bin.sh`, `check_setup.sh` |
 | `runs_main/`, `results_main/` | main study (`make`, CAMPAIGN=main), same layout as `runs/` and `results/` |
 | `runs_p2/`, `results_p2/`, `runs_p1/`, `results_p1/` | the large samples (`make ... SET=p2` / `SET=p1`) |
+| `runs_p1_harness/`, `results_p1_harness/` | p1 with the import harnesses (`make ... SET=p1 HARNESS=1`) |
+| `harness/p1/` | one `conftest.py` per prepared p1 module; `p1_harness_check.csv` (`scripts/verify_p1_harness.py`) |
+| `env/candidates/` | candidate locks for the version comparison (Pynguin 0.33.0, coverage 7.2.7), not installed |
 | `datasets/<set>/manifest.json` | p2/p1: versions, sources, import paths, import check (tracked); the rest of `datasets/` is rebuilt by `make datasets` |
 | `runs*/<tool>/<cat>/<program>/<rep<r>\|seed<s>>/exec/run<i>/` | one timed execution of that job's suite (`metrics.json`, `junit.xml`) |
 | `runs_archive/pilot_v1/`, `runs_archive/pilot_v2/` | superseded pilot runs, kept unchanged (see each README) |

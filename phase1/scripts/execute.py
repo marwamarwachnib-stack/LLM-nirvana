@@ -18,7 +18,7 @@ import sys
 from common import (RUNS, atomic_write_json, cooldown, git_commit, is_done, load_config, mark_done, measure, now_iso,
                     rapl_readable, read_json, reset_dir, system_state, wait_for_ac)
 from evaluate import PYTEST_INI, _junit, _run_pytest
-from run import check_same_machine, programs, stage, start_session
+from run import check_condition, check_same_machine, programs, stage, start_session
 
 
 def suites(cfg, set_name, tools, only, job=None):
@@ -106,6 +106,7 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
+    check_condition()
     tools = args.tools.split(",") if args.tools else [
         t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     todo = suites(cfg, args.set, tools, args.programs and args.programs.split(","), args.job)

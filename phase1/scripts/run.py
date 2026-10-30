@@ -13,6 +13,7 @@ gives a complete first comparison before the repetitions start (decision 13).
 """
 import argparse
 import json
+import os
 import random
 import shutil
 import subprocess
@@ -47,6 +48,27 @@ def stage(p, folder):
         shutil.copy(f, Path(folder) / f.name)
 
 
+def harness(set_name, name):
+    """(harness/<set>/<program>/conftest.py,) when PHASE1_HARNESS=1 and the program has one, else (). Staged with the
+    data files, it prepares the module's import for every test run (P1_HARNESS_STATUS.md, decision 20)."""
+    h = PHASE1 / "harness" / set_name / name / "conftest.py"
+    return (h,) if os.environ.get("PHASE1_HARNESS") == "1" and h.exists() else ()
+
+
+def check_condition():
+    """One runs folder = one condition: runs with harnesses are not mixed with plain runs (a finished plain job
+    would otherwise be skipped instead of redone with its harness)."""
+    want = {"harness": os.environ.get("PHASE1_HARNESS") == "1"}
+    f = RUNS / "_condition.json"
+    have = read_json(f, None)
+    if have is None:
+        RUNS.mkdir(parents=True, exist_ok=True)
+        atomic_write_json(f, want)
+    elif have != want:
+        sys.exit(f"{RUNS} holds runs made with {have}, this run is {want}. Use another runs folder "
+                 "(make ... HARNESS=1 uses runs_<set>_harness).")
+
+
 def programs(cfg, set_name, only=None):
     spec = cfg["program_sets"][set_name]
     if spec == "prepared":  # large samples: datasets/<set>/manifest.json (scripts/prepare_datasets.py)
@@ -56,7 +78,7 @@ def programs(cfg, set_name, only=None):
             sys.exit(f"{set_name}: not prepared on this machine. Run: make datasets (scripts/prepare_datasets.py {set_name})")
         install_hook()  # idempotent; a venv rebuilt by `make setup` loses it
         progs = {f"{e['category']}/{name}": Program(e["category"], name, REPO / e["source"], e["module"], runtime_env(e),
-                                                     tuple(DATASETS / d for d in e.get("data_files", [])))
+                                                     tuple(DATASETS / d for d in e.get("data_files", [])) + harness(set_name, name))
                  for name, e in man["programs"].items()}
     else:
         root = (PHASE1 / cfg["dataset_root"]).resolve()
@@ -293,6 +315,7 @@ def run_llm_job(cfg, tool, p, sid, minfo, rep=0):
                 "session": sid, "finished": now_iso(), "git": git_commit(), "system_state": system_state(),
                 "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
                 "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
+                "harness": next((str(f.relative_to(PHASE1)) for f in p.data if f.name == "conftest.py"), None),
             })
             mark_done(idir)
             history.append(m)
@@ -385,6 +408,7 @@ def run_pynguin_job(cfg, p, seed, sid):
         "git": git_commit(), "system_state": system_state(), "evaluation": cfg["evaluation"], "energy_cfg": cfg["energy"],
         "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
         "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
+        "harness": next((str(f.relative_to(PHASE1)) for f in p.data if f.name == "conftest.py"), None),
     })
     mark_done(jdir)
     print(f"  [pynguin] {cat}/{prog} seed{seed}: rc={rc} tests={has_tests} stmt={m['coverage']['stmt_cov']} "
@@ -403,6 +427,16 @@ def check_same_machine(allow):
         if there != here and not allow:
             sys.exit(f"{RUNS} already holds runs made on {there} (session {env.parent.name}); this machine is {here}.\n"
                      "Use a separate runs folder for this machine (make CAMPAIGN=<name>, or PHASE1_RUNS=<dir>).")
+
+
+def check_same_model(tool, minfo):
+    """One runs folder = one build of each model: a model pulled again with another digest is another model, and
+    its repetitions would not be repetitions of the same condition."""
+    for f in sorted(RUNS.glob(f"_sessions/*/model_info_{tool}.json")):
+        there = read_json(f, {}).get("digest")
+        if there and there != minfo["digest"]:
+            sys.exit(f"[{tool}] {minfo['model']} is now digest {(minfo['digest'] or '?')[:12]}, but session {f.parent.name} "
+                     f"of {RUNS} used {there[:12]}. Restore that build, or use another runs folder.")
 
 
 def main():
@@ -436,6 +470,7 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
+    check_condition()
     tools = args.tools.split(",") if args.tools else [
         t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     unknown = [t for t in tools if t != "pynguin" and t not in cfg["llm_tools"]]
@@ -469,6 +504,7 @@ def main():
                 continue
             ensure_ollama(cfg)
             minfo = model_info(cfg, model)
+            check_same_model(tool, minfo)
             atomic_write_json(sdir / f"model_info_{tool}.json", minfo)
             warmup(cfg, model, sdir, tool)
             print(f"[{tool}] {model} digest={minfo['digest'][:12]} rep{r} — {len(todo)} programs to run", flush=True)

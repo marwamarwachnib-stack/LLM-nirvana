@@ -19,12 +19,22 @@
 #
 # Variables: SET (small | p2 | p1, default small), CAMPAIGN (default main for small, else the set name:
 #            runs_<campaign>/, results_<campaign>/; the pilot stays in runs/ and results/),
-#            TOOLS (comma list, default config main_tools), ENERGY (internal | none).
+#            TOOLS (comma list, default config main_tools), ENERGY (internal | none),
+#            ROUND=r (generate only round r: Pynguin seed r + LLM repetition r; e.g. ROUND=0 first),
+#            HARNESS=1 (p1: prepare each failing module's import with harness/p1/<program>/conftest.py; runs_p1_harness/).
 # The large samples: make datasets, then make all SET=p2 (and SET=p1).
+#
+# Pynguin version comparison (VERSION_COMPARISON_PLAN.md; the current venvs and locks are not touched):
+#   make setup-candidate       INSTALLS (approval needed): .venv-run-cov727 (coverage 7.2.7) and .venv-pynguin-033
+#   make verify-env-candidate  the authors' stored suites re-run with coverage 7.2.7 -> env/candidates/
+#   make vercmp-a / vercmp-b   Pynguin on the small set, seeds 0-4 (VERCMP_REP=0: seed 0 only), current / candidate
+#   make vercmp-report         results_vercmp/version_comparison.md
 
 SHELL := /bin/bash
 PY := .venv/bin/python
-CAMPAIGN ?= $(if $(filter small,$(SET)),main,$(SET))
+HARNESS ?=
+CAMPAIGN ?= $(if $(filter small,$(SET)),main,$(SET))$(if $(filter 1,$(HARNESS)),_harness,)
+export PHASE1_HARNESS := $(if $(filter 1,$(HARNESS)),1,)
 SET ?= small
 TOOLS ?=
 ENERGY ?= internal
@@ -36,7 +46,8 @@ TOOLS_ARG := $(if $(TOOLS),--tools $(TOOLS),)
 ONE_ENERGY := $(if $(filter command line,$(origin ENERGY)),$(ENERGY),none)
 MODELS = $$($(PY) -c 'import sys; sys.path.insert(0, "scripts"); from common import load_config; c = load_config(); print(*[c["llm_tools"][t]["model"] for t in c["main_tools"] if t != "pynguin"])')
 
-.PHONY: help setup models datasets check verify-env smoke generate execute results all gen-one exec-one
+.PHONY: help setup models datasets check verify-env smoke generate execute results all gen-one exec-one \
+        setup-candidate verify-env-candidate vercmp-a vercmp-b vercmp-report
 
 help:
 	@sed -n '1,/^$$/p' Makefile | sed 's/^# \{0,1\}//'
@@ -75,7 +86,7 @@ smoke:
 	@echo "smoke test done: $$PHASE1_RESULTS/paper_comparison.md"
 
 generate:
-	./run.sh $(SET) $(TOOLS_ARG) --energy $(ENERGY)
+	./run.sh $(SET) $(TOOLS_ARG) --energy $(ENERGY) $(if $(ROUND),--rep $(ROUND),)
 
 execute:
 	@mkdir -p "$(PHASE1_RUNS)"
@@ -96,3 +107,32 @@ gen-one:
 exec-one:
 	@test -n "$(TOOL)" -a -n "$(PROGRAM)" -a -n "$(JOB)" || { echo "usage: make exec-one TOOL=<tool> PROGRAM=<category>/<program> JOB=<rep0|seed0> [ENERGY=none]"; exit 2; }
 	$(PY) scripts/execute.py $(SET) --tools $(TOOL) --programs $(PROGRAM) --job $(JOB) --append 1 --energy $(ONE_ENERGY) --idle-s 0
+
+CAND_RUN := $(CURDIR)/.venv-run-cov727
+CAND_PYN := $(CURDIR)/.venv-pynguin-033
+VERCMP_REP ?=
+VERCMP_ARGS = small --tools pynguin --energy $(ENERGY) $(if $(VERCMP_REP),--rep $(VERCMP_REP),)
+
+setup-candidate:
+	uv venv --python 3.10.12 $(CAND_RUN)
+	uv pip sync --python $(CAND_RUN)/bin/python env/candidates/requirements-run-cov727.lock
+	uv venv --python 3.10.12 $(CAND_PYN)
+	uv pip sync --python $(CAND_PYN)/bin/python env/candidates/requirements-pynguin-033.lock
+
+verify-env-candidate:
+	PHASE1_RUNNER_VENV=$(CAND_RUN) $(PY) scripts/verify_environment.py --out env/candidates/verify_environment_cov727.md
+
+vercmp-a:
+	@mkdir -p runs_vercmp_a
+	set -o pipefail; PHASE1_RUNS=$(CURDIR)/runs_vercmp_a PHASE1_RESULTS=$(CURDIR)/results_vercmp_a \
+	  $(PY) -u scripts/run.py $(VERCMP_ARGS) 2>&1 | tee -a runs_vercmp_a/console_$$(date +%Y%m%d-%H%M%S).log
+
+vercmp-b:
+	@test -x $(CAND_PYN)/bin/pynguin -a -x $(CAND_RUN)/bin/python || { echo "candidate venvs missing: make setup-candidate (approval needed)"; exit 2; }
+	@mkdir -p runs_vercmp_b
+	set -o pipefail; PHASE1_RUNNER_VENV=$(CAND_RUN) PHASE1_PYNGUIN_VENV=$(CAND_PYN) \
+	  PHASE1_RUNS=$(CURDIR)/runs_vercmp_b PHASE1_RESULTS=$(CURDIR)/results_vercmp_b \
+	  $(PY) -u scripts/run.py $(VERCMP_ARGS) 2>&1 | tee -a runs_vercmp_b/console_$$(date +%Y%m%d-%H%M%S).log
+
+vercmp-report:
+	$(PY) scripts/compare_versions.py --a results_vercmp_a --b results_vercmp_b --out results_vercmp

@@ -63,7 +63,7 @@ def flatten(m, manifest, rep=None):
     row = {
         "tool": m["tool"], "model": m.get("model", "pynguin"), "category": m["category"], "program": m["program"],
         "seed": m.get("seed"), "rep": rep, "iteration": m["iteration"], "session": session,
-        "evaluator_version": m.get("evaluator_version", 1),
+        "evaluator_version": m.get("evaluator_version", 1), "harness": (manifest or {}).get("harness"),
         "refactored_module": m.get("refactored_module"), "mccabe_max": m.get("mccabe_max"),
         "stmt_cov": c["stmt_cov"], "branch_cov": c["branch_cov"], "stmt_branch_cov": c["stmt_branch_cov"],
         "num_statements": c["num_statements"], "num_branches": c["num_branches"], "n_missed_lines": len(c["missing_lines"]),
@@ -180,8 +180,13 @@ def aggregate():
                      "chain_gen_rapl_msr_dram_wh": energy_sum("gen_rapl_msr_dram_wh"),
                      "chain_gen_rapl_pkg_wh_net": energy_sum("gen_rapl_pkg_wh_net"),
                      "chain_load_rapl_msr_pkg_wh": energy_sum("load_rapl_msr_pkg_wh"),
+                     "chain_load_rapl_pkg_wh_net": energy_sum("load_rapl_pkg_wh_net"),
+                     "chain_load_cc_cpu_wh": energy_sum("load_cc_cpu_wh"),
                      "chain_load_wall_s": energy_sum("load_wall_s"),
                      "chain_eval_cc_cpu_wh": energy_sum("eval_cc_cpu_wh"),
+                     "chain_eval_rapl_msr_pkg_wh": energy_sum("eval_rapl_msr_pkg_wh"),
+                     "chain_eval_rapl_pkg_wh_net": energy_sum("eval_rapl_pkg_wh_net"),
+                     "chain_eval_wall_s": energy_sum("eval_wall_s"),
                      "chain_output_tokens": energy_sum("output_tokens")})
     write_csv(RESULTS / "iterations.csv", iters)
     write_csv(RESULTS / "jobs.csv", jobs)

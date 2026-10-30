@@ -25,3 +25,5 @@ runs_smoke_*/
 results_smoke_*/
 datasets/*/constraints.txt
 datasets/*/build-constraints.txt
+.venv-run-cov727/
+.venv-pynguin-033/

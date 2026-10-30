@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from pathlib import Path
 
 from common import PHASE1, REPO, RUNNER_PY, now_iso, run_code
 from compare_paper import pick
@@ -83,6 +84,8 @@ def cases_p2():
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--set", default="all", choices=("small", "p2", "all"))
+    ap.add_argument("--out", default=str(PHASE1 / "env" / "verify_environment.md"),
+                    help="report file (another venv, e.g. PHASE1_RUNNER_VENV=.venv-run-cov727: write elsewhere)")
     args = ap.parse_args()
     versions = subprocess.run([str(RUNNER_PY), "-c", "import sys, coverage, pytest, pluggy; "
                                "print(sys.version.split()[0], pytest.__version__, pluggy.__version__, coverage.__version__)"],
@@ -110,7 +113,7 @@ def main():
         lines += ["", "| set | program | tool | report | theirs | ours | cause |", "|---|---|---|---|---|---|---|"]
         lines += [f"| {s} | {n} | {tool} | {k} | {' '.join((t or ['-'])[:5])} | {' '.join((o or ['-'])[:5])} | {c} |"
                   for s, n, tool, k, t, o, c in diffs]
-    out = PHASE1 / "env" / "verify_environment.md"
+    out = Path(args.out)
     out.write_text("\n".join(lines) + "\n")
     print("\n".join(lines[6:]))
     print(f"-> {out}")

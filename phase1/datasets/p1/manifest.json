@@ -1370,6 +1370,33 @@
       }
     }
   },
+  "missing": {
+    "large_cat1": {
+      "paper": "\u00a72.2: 49 large modules = 20 Cat 2 + 23 Cat 3 + 6 Cat 1; Table 3's Cat 1 row 56.833 % = 341/6",
+      "expected": 6,
+      "in_repository": [
+        "cat1_s15"
+      ],
+      "missing": "5 or 6 (whether cat1_s15 is one of the six is unknown)",
+      "expected_path": "100_300 LOC p1/cat1/s<k>/example.py, k unknown (only s15 uploaded)",
+      "expected_role": "Cat 1 procedural script of 100-300 LOC from a GitHub project, with its source URL on the first line like s15",
+      "results": [
+        "Table 3 Cat 1 row",
+        "Fig. 6 Cat 1 line",
+        "Table 4 Cat 1 row, if Table 4 uses the large set"
+      ],
+      "slots": [
+        "large_cat1/#1",
+        "large_cat1/#2",
+        "large_cat1/#3",
+        "large_cat1/#4",
+        "large_cat1/#5",
+        "large_cat1/#6"
+      ],
+      "audit": "DATASET_FORENSIC_AUDIT.csv",
+      "replacement": "none"
+    }
+  },
   "deps": {
     "dir": "p1/deps",
     "requirements": [

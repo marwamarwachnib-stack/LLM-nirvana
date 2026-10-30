@@ -20,10 +20,10 @@ import sys
 import tempfile
 from pathlib import Path
 
-from common import PHASE1, RESULTS, RUNNER_PY, load_config
+from common import PYNGUIN_BIN, RESULTS, RUNNER_PY, load_config
 from run import programs
 
-PYNGUIN_PY = PHASE1 / ".venv-pynguin" / "bin" / "python"
+PYNGUIN_PY = PYNGUIN_BIN.parent / "python"
 
 
 def limits():
