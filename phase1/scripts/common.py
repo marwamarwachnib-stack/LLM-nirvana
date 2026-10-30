@@ -9,6 +9,7 @@ import os
 import platform
 import shutil
 import subprocess
+import tempfile
 import threading
 import time
 from pathlib import Path
@@ -20,11 +21,12 @@ PHASE1 = Path(__file__).resolve().parent.parent
 REPO = PHASE1.parent
 CONFIG_DIR = PHASE1 / "config"
 RUNS = Path(os.environ.get("PHASE1_RUNS", PHASE1 / "runs"))           # override only for smoke tests
-RESULTS = Path(os.environ.get("PHASE1_RESULTS", PHASE1 / "results"))
+# results next to their runs (runs_main -> results_main), so a runs folder given alone never overwrites the pilot's results/
+RESULTS = Path(os.environ.get("PHASE1_RESULTS") or RUNS.parent / RUNS.name.replace("runs", "results", 1))
 VENV_PY = PHASE1 / ".venv" / "bin" / "python"              # orchestration, energy meter, analysis (Python 3.12)
-RUNNER_PY = PHASE1 / ".venv-run" / "bin" / "python"        # runs the code under test: pytest, coverage (Python 3.10,
-                                                           # pytest 7.4.0: the authors' versions, decision 15)
-PYNGUIN_BIN = PHASE1 / ".venv-pynguin" / "bin" / "pynguin"  # Pynguin 0.47.0 on Python 3.10
+RUNNER_PY = PHASE1 / ".venv-run" / "bin" / "python"        # runs the code under test: pytest, coverage (Python 3.10.12,
+                                                           # pytest 7.4.0, coverage 7.3.0: the authors' versions, decision 16)
+PYNGUIN_BIN = PHASE1 / ".venv-pynguin" / "bin" / "pynguin"  # Pynguin 0.34.0 on Python 3.10.12, as the authors
 POWERCAP = Path("/sys/class/powercap")
 
 log = logging.getLogger("phase1")
@@ -32,6 +34,19 @@ log = logging.getLogger("phase1")
 
 def now_iso():
     return dt.datetime.now().astimezone().isoformat(timespec="seconds")
+
+
+XDG_BASE = ("XDG_CONFIG_HOME", "XDG_CACHE_HOME", "XDG_DATA_HOME", "XDG_STATE_HOME")
+
+
+def run_code(cmd, env=None, **kw):
+    """subprocess.run for a process that runs the code under test (pytest, coverage, Pynguin): the program's import
+    paths `env`, and an empty HOME of its own, removed afterwards (the XDG directories follow it). What one run writes
+    there (httpie's ~/.httpie, mutpy's ~/mutpy, IPython's history) can then not change what a later run covers:
+    a ~/.httpie left by Pynguin changed a ChatGPT suite's coverage of p2 sample9 (decision 16)."""
+    with tempfile.TemporaryDirectory(prefix="phase1-home-", ignore_cleanup_errors=True) as home:
+        base = {k: v for k, v in os.environ.items() if k not in XDG_BASE}
+        return subprocess.run(cmd, env={**base, **(env or {}), "HOME": home}, **kw)
 
 
 def load_config():

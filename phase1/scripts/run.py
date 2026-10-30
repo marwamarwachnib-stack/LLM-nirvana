@@ -13,7 +13,6 @@ gives a complete first comparison before the repetitions start (decision 13).
 """
 import argparse
 import json
-import os
 import random
 import shutil
 import subprocess
@@ -25,7 +24,7 @@ from typing import NamedTuple
 
 from common import (CONFIG_DIR, PHASE1, PYNGUIN_BIN, REPO, RUNS, atomic_write_json, atomic_write_text,
                     cooldown, environment_info, git_commit, is_done, load_config, machine_id, mark_done, measure,
-                    now_iso, rapl_readable, read_json, reset_dir, sha256_text, system_state, wait_for_ac)
+                    now_iso, rapl_readable, read_json, reset_dir, run_code, sha256_text, system_state, wait_for_ac)
 from evaluate import EVALUATOR_VERSION, evaluate, extract_blocks, file_errors, mccabe_max, normalize_imports, numbered_code, ranges
 
 PYTEST_INI = "[pytest]\n"
@@ -321,14 +320,14 @@ _cap = {}
 
 
 def memory_cap(cfg):
-    """cgroup memory cap for Pynguin and all its workers: a runaway mutant is OOM-killed inside the cgroup
-    (Pynguin restarts the worker) instead of starving the machine. Needs a systemd user session; on a
+    """cgroup memory cap for Pynguin and its children: a runaway generated test is OOM-killed inside the cgroup
+    (Pynguin 0.34 runs in one process, so the run ends: pynguin_killed) instead of starving the machine. Needs a systemd user session; on a
     machine without one (some servers, SSH without lingering) Pynguin runs uncapped and the manifest
     records pynguin_memory_max = null."""
     if "prefix" not in _cap:
         prefix = ["systemd-run", "--user", "--scope", "--quiet", "-p", f"MemoryMax={cfg['pynguin']['memory_max']}",
                   "-p", f"MemorySwapMax={cfg['pynguin']['memory_swap_max']}",
-                  "-p", "OOMPolicy=continue", "--"]  # default 'stop' would also kill the master that restarts the worker
+                  "-p", "OOMPolicy=continue", "--"]  # default 'stop' kills the whole scope at the first OOM kill
         try:
             ok = subprocess.run(prefix + ["true"], capture_output=True, timeout=30).returncode == 0
         except (OSError, subprocess.TimeoutExpired):
@@ -353,13 +352,13 @@ def run_pynguin_job(cfg, p, seed, sid):
     pyn = [str(PYNGUIN_BIN), "--project-path", ".", "--output-path", ".", "--module-name", mod,
            "--seed", str(seed), "--report-dir", "pynguin-report", *cfg["pynguin"]["args"]]
     cmd = memory_cap(cfg) + pyn
-    env = {**os.environ, **p.env, "PYNGUIN_DANGER_AWARE": "1"}
+    env = {**p.env, "PYNGUIN_DANGER_AWARE": "1"}
     cool = cooldown(cfg)
     gen = {}
     with measure("generation", jdir / "energy_generation", cfg, gen):
         try:
-            proc = subprocess.run(cmd, cwd=work, env=env, capture_output=True, text=True, stdin=subprocess.DEVNULL,
-                                  timeout=cfg["pynguin"]["timeout_s"])
+            proc = run_code(cmd, env, cwd=work, capture_output=True, text=True, stdin=subprocess.DEVNULL,
+                            timeout=cfg["pynguin"]["timeout_s"])
             rc, out = proc.returncode, proc.stdout + proc.stderr
         except subprocess.TimeoutExpired as e:
             rc, out = None, f"TIMEOUT\n{e.stdout or ''}{e.stderr or ''}"

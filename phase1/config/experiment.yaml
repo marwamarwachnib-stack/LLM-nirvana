@@ -55,7 +55,8 @@ iterations:
 pynguin:
   seeds: [0, 1, 2, 3, 4]
   args: ["--maximum-search-time", "600", "-v"]   # 600 s = Pynguin's own fallback default; stated explicitly
-  timeout_s: 1200
+  timeout_s: 3600                      # Pynguin 0.34 adds post-processing and mutation analysis after the search, and
+                                       # writes its tests only at the end: p2 sample32 took 756 s with a 60 s search
   memory_max: "6G"                     # cgroup cap for the whole Pynguin process tree (systemd-run --user --scope)
   memory_swap_max: "0"                 # no swapping (it distorts time/energy and starved the machine on 2026-10-25)
 

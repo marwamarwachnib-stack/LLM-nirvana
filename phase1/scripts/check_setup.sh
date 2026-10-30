@@ -6,9 +6,10 @@ no() { echo "  MISSING  $*"; }
 warn() { echo "  warning  $*"; }
 echo "machine: $(hostname) | $(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2- | xargs) | $(nproc) logical CPUs | $(free -g | awk '/^Mem/{print $2}') GB RAM"
 [ -x .venv/bin/python ] && ok ".venv: analysis ($(.venv/bin/python --version))" || no ".venv: make setup"
-[ -x .venv-run/bin/python ] && ok ".venv-run: code under test ($(.venv-run/bin/python --version), pytest $(.venv-run/bin/python -c 'import pytest; print(pytest.__version__)'))" \
+[ -x .venv-run/bin/python ] && ok ".venv-run: code under test ($(.venv-run/bin/python --version), $(.venv-run/bin/python -c 'import pytest, pluggy, coverage; print(f"pytest {pytest.__version__}, pluggy {pluggy.__version__}, coverage {coverage.__version__}")'))" \
   || no ".venv-run: make setup"
-[ -x .venv-pynguin/bin/pynguin ] && ok ".venv-pynguin ($(.venv-pynguin/bin/python --version))" || no ".venv-pynguin: make setup"
+[ -x .venv-pynguin/bin/pynguin ] && ok ".venv-pynguin ($(.venv-pynguin/bin/python --version), Pynguin $(.venv-pynguin/bin/python -c 'import importlib.metadata as m; print(m.version("pynguin"))'))" \
+  || no ".venv-pynguin: make setup"
 BIN=$(scripts/ollama_bin.sh 2>/dev/null) && ok "ollama: $BIN ($("$BIN" --version 2>/dev/null | tail -1))" || no "ollama: see README, Server setup"
 if cat /sys/class/powercap/intel-rapl:0/energy_uj >/dev/null 2>&1; then ok "RAPL readable"
 elif [ -e /sys/class/powercap/intel-rapl:0/energy_uj ]; then no "RAPL not readable: sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj"

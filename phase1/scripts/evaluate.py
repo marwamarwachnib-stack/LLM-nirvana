@@ -11,14 +11,13 @@ samples) and the suite files. `env` holds the extra import paths of a prepared p
 """
 import ast
 import json
-import os
 import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from common import RUNNER_PY, atomic_write_json
+from common import RUNNER_PY, atomic_write_json, run_code
 
 # 1: pilot v1. 2: missing `from example import *` added (decision 4b); pytest.raises with a different
 #    exception type classified as runtime instead of pass (PLAN.md §13, items 8-9)
@@ -82,13 +81,9 @@ def _importable(mod, target="example", env=None, cwd=None):
     top = mod.split(".")[0]
     if top in sys.stdlib_module_names or top in ("pytest", "_pytest", target):
         return True
-    r = subprocess.run([str(RUNNER_PY), "-c", f"import importlib.util,sys;sys.exit(importlib.util.find_spec({top!r}) is None)"],
-                       capture_output=True, cwd=cwd, env=run_env(env))
+    r = run_code([str(RUNNER_PY), "-c", f"import importlib.util,sys;sys.exit(importlib.util.find_spec({top!r}) is None)"],
+                 env, capture_output=True, cwd=cwd)
     return r.returncode == 0
-
-
-def run_env(env):
-    return {**os.environ, **env} if env else None
 
 
 def normalize_imports(test_src, module_src, target="example", prior_srcs=(), env=None, cwd=None):
@@ -425,8 +420,8 @@ def _run_pytest(work, files, cfg, extra, junit_name, with_coverage, env=None):
             f"--timeout={ev['per_test_timeout_s']}", f"--junitxml={junit_name}", "--rootdir=.", "-c", "pytest.ini"]
     cmd = [str(RUNNER_PY)] + (["-m", "coverage", "run", "--rcfile=.coveragerc"] if with_coverage else []) + base + extra + files
     try:
-        p = subprocess.run(cmd, cwd=work, capture_output=True, text=True, stdin=subprocess.DEVNULL,
-                           timeout=ev["per_file_timeout_s"], env=run_env(env))
+        p = run_code(cmd, env, cwd=work, capture_output=True, text=True, stdin=subprocess.DEVNULL,
+                     timeout=ev["per_file_timeout_s"])
         return {"returncode": p.returncode, "stdout_tail": p.stdout[-4000:], "stderr_tail": p.stderr[-2000:], "timeout": False, "cmd": cmd}
     except subprocess.TimeoutExpired as e:
         return {"returncode": None, "stdout_tail": (e.stdout or b"")[-4000:].decode(errors="replace") if isinstance(e.stdout, bytes) else str(e.stdout)[-4000:],
@@ -443,9 +438,9 @@ def file_errors(work, files, cfg, env=None):
         except SyntaxError as e:
             res[f] = {"syntax_error": True, "collection_error": True, "detail": f"SyntaxError: {e}"}
             continue
-        p = subprocess.run([str(RUNNER_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
-                            "--rootdir=.", "-c", "pytest.ini", f], cwd=work, capture_output=True, text=True,
-                           stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"], env=run_env(env))
+        p = run_code([str(RUNNER_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
+                      "--rootdir=.", "-c", "pytest.ini", f], env, cwd=work, capture_output=True, text=True,
+                     stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"])
         err = p.returncode not in (0, 5)  # 5 = no tests collected (not an error per se)
         detail = ""
         if err:

@@ -1,10 +1,11 @@
 # Phase 1 commands (laptop or server). Run long targets inside tmux or screen.
 #
 #   make setup                 create the three venvs from env/*.lock (needs uv and network): analysis 3.12,
-#                              code under test 3.10 (pytest 7.4.0) and Pynguin 3.10, as the authors (decision 15)
+#                              code under test and Pynguin 0.34.0 on 3.10.12 with the authors' versions (decision 16)
 #   make models                pull the LLMs of config main_tools into Ollama (network)
 #   make datasets              rebuild the projects of the large samples (p2, p1) and their dependencies (network)
 #   make check                 what is installed / readable on this machine
+#   make verify-env            re-run the authors' stored suites, compare with their coverage reports (env/verify_environment.md)
 #   make generate              Pynguin (5 seeds) + LLMs (5 repetitions), round by round, resumable (SET=small: 60 programs)
 #   make execute               run every generated suite with plain pytest, 5 timed runs each, resumable
 #   make results               CSVs, paper tables and figures, comparison with the paper
@@ -35,7 +36,7 @@ TOOLS_ARG := $(if $(TOOLS),--tools $(TOOLS),)
 ONE_ENERGY := $(if $(filter command line,$(origin ENERGY)),$(ENERGY),none)
 MODELS = $$($(PY) -c 'import sys; sys.path.insert(0, "scripts"); from common import load_config; c = load_config(); print(*[c["llm_tools"][t]["model"] for t in c["main_tools"] if t != "pynguin"])')
 
-.PHONY: help setup models datasets check smoke generate execute results all gen-one exec-one
+.PHONY: help setup models datasets check verify-env smoke generate execute results all gen-one exec-one
 
 help:
 	@sed -n '1,/^$$/p' Makefile | sed 's/^# \{0,1\}//'
@@ -59,9 +60,12 @@ datasets:
 check:
 	@scripts/check_setup.sh
 
+verify-env:
+	$(PY) scripts/verify_environment.py
+
 SMOKE_small := cat1_scripts/FizzBuzz,cat2_functions/change,cat3_classes/bank-account
 SMOKE_p2 := cat2_functions/sample2,cat3_classes/sample24
-SMOKE_p1 := cat2_functions/cat2_s14,cat3_classes/cat3_s4
+SMOKE_p1 := cat2_functions/cat2_s14,cat3_classes/cat3_s2
 smoke: export PHASE1_RUNS := $(CURDIR)/runs_smoke_$(SET)
 smoke: export PHASE1_RESULTS := $(CURDIR)/results_smoke_$(SET)
 smoke:

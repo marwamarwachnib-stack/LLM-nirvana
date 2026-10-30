@@ -33,7 +33,6 @@ import argparse
 import ast
 import concurrent.futures as cf
 import hashlib
-import io
 import json
 import os
 import shutil
@@ -45,12 +44,14 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from common import PHASE1, PYNGUIN_BIN, REPO, RUNNER_PY, atomic_write_json, now_iso
+from common import PHASE1, PYNGUIN_BIN, REPO, RUNNER_PY, atomic_write_json, now_iso, run_code
 
 DATASETS = PHASE1 / "datasets"
 STD = set(sys.stdlib_module_names)
 CUTOFF = "2024-01-31"          # the repository was uploaded on 2024-01-27
-EXCLUDE_NEWER = "2026-10-11"   # same rule as env/*.lock
+# libraries as the authors could install them (decision 16): p2 as their environment, built between 26 August and
+# 2 September 2023 (dated from their reports, like env/requirements-run.lock); p1 when its modules were uploaded
+EXCLUDE_NEWER = {"p2": "2023-09-01", "p1": CUTOFF}
 # one line; no comprehension: before Python 3.12 a .pth line runs where a comprehension cannot see `site`
 HOOK = ('import os, site, sys; list(map(site.addsitedir, filter(None, os.environ.get("PHASE1_SITE_DIRS", "").split(os.pathsep)))); '
         'sys.path.extend(filter(None, os.environ.get("PHASE1_PATH_APPEND", "").split(os.pathsep)))\n')
@@ -303,9 +304,8 @@ def import_check(module_file, module, env, data_files=()):
             shutil.copy(f, Path(tmp) / Path(f).name)
         for name, py, first in (("runner", RUNNER_PY, "pytest"), ("pynguin", PYNGUIN_BIN.parent / "python", "pynguin")):
             try:
-                p = subprocess.run([str(py), "-c", f"import {first}; import {module}"], cwd=tmp, capture_output=True,
-                                   text=True, env={**os.environ, **env, "PYNGUIN_DANGER_AWARE": "1"},
-                                   stdin=subprocess.DEVNULL, timeout=120)
+                p = run_code([str(py), "-c", f"import {first}; import {module}"], {**env, "PYNGUIN_DANGER_AWARE": "1"},
+                             cwd=tmp, capture_output=True, text=True, stdin=subprocess.DEVNULL, timeout=120)
             except subprocess.TimeoutExpired:
                 res[name] = "import did not finish in 120 s (the module runs at import)"
                 continue
@@ -314,15 +314,23 @@ def import_check(module_file, module, env, data_files=()):
     return res
 
 
-def uv_install(target, reqs, constraints=None, build_constraints=None):
+def uv_install(target, reqs, exclude_newer, constraints=None, build_constraints=None):
     """Install into `target` for the runner's Python (3.10: the same minor version as Pynguin's venv)."""
-    cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER,
+    cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", exclude_newer,
            *(["--constraint", str(constraints)] if constraints else []),
            *(["--build-constraint", str(build_constraints)] if build_constraints else []), *reqs]
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
         sys.exit(f"dependency install failed:\n{' '.join(cmd)}\n{p.stderr[-3000:]}")
     return cmd
+
+
+def stale_deps(target, exclude_newer):
+    """A dependency directory built for another date is removed, so it is rebuilt (a re-run after decision 16)."""
+    stamp = target / "_exclude_newer.txt"
+    if target.exists() and (not stamp.exists() or stamp.read_text().strip() != exclude_newer):
+        print(f"{target.relative_to(PHASE1)}: built for another date, rebuilding", flush=True)
+        shutil.rmtree(target)
 
 
 # ----------------------------------------------------------------------------- p2
@@ -332,13 +340,14 @@ def prepare_p2(force=False):
     if force:
         for d in ("src", "deps"):
             shutil.rmtree(out / d, ignore_errors=True)
+    stale_deps(out / "deps", EXCLUDE_NEWER["p2"])
     samples = {}
     for i, (dist, pkg) in P2_DISTS.items():
         d = P2_DIR / f"sample{i}"
         module_file = next(p for p in sorted(d.glob("*.py")) if not p.name.startswith("test_"))
         samples[i] = {"dist": dist, "pkg": pkg, "file": module_file, "module": module_file.stem,
                       "key": without_imports(module_file.read_text())}
-    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER, "dists": {}, "programs": {}}
+    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER["p2"], "dists": {}, "programs": {}}
     for dist in sorted({s["dist"] for s in samples.values()}):
         mine = {i: s for i, s in samples.items() if s["dist"] == dist}
         pkg = next(iter(mine.values()))["pkg"]
@@ -380,7 +389,7 @@ def prepare_p2(force=False):
             tmp.replace(src)
         manifest["dists"][dist] = {
             "package": pkg, "version": rel["version"], "date": rel["date"], "file": rel["filename"], "sha256": rel["sha256"],
-            "candidates": [r["version"] for r in common], "renamed": layout.renamed, "flat_subpackages": layout.flat_dirs,
+            "candidates": [r["version"] for r in common], "renamed": dict(sorted(layout.renamed.items())), "flat_subpackages": layout.flat_dirs,
             "src": str(src.relative_to(DATASETS)), "module_paths": {f"sample{i}": matches[i][rel["version"]] for i in mine}}
     # one deps directory for all projects: the releases themselves (for imports the authors left package-absolute,
     # e.g. pymonet's `from pymonet.maybe import Maybe`) and their dependencies
@@ -388,12 +397,13 @@ def prepare_p2(force=False):
     if not (out / "deps").exists():
         tmp = out / "deps.tmp"
         shutil.rmtree(tmp, ignore_errors=True)
-        uv_install(tmp, reqs)
+        uv_install(tmp, reqs, EXCLUDE_NEWER["p2"])
+        (tmp / "_exclude_newer.txt").write_text(EXCLUDE_NEWER["p2"] + "\n")
         tmp.replace(out / "deps")
     manifest["deps"] = {"dir": "p2/deps", "requirements": reqs,
                         "installed": sorted(p.name for p in (out / "deps").glob("*.dist-info"))}
     install_hook()
-    manifest["hook"] = "phase1_paths.pth in the site-packages of .venv and .venv-pynguin"
+    manifest["hook"] = "phase1_paths.pth in the site-packages of .venv-run and .venv-pynguin"
     for i, s in sorted(samples.items()):
         d = manifest["dists"][s["dist"]]
         entry = {"module": s["module"], "source": str(s["file"].relative_to(REPO)), "dist": s["dist"],
@@ -545,7 +555,7 @@ def p1_overlay(name, samples, out):
     return str(d.relative_to(DATASETS))
 
 
-def install_deps(target, reqs, optional, constraints=(), old_builds=()):
+def install_deps(target, reqs, optional, exclude_newer, constraints=(), old_builds=()):
     """Old source builds first, then the required packages (all or nothing), then each optional group on its own
     (first alternative that installs). Every install keeps `constraints`. Re-runs add what is missing."""
     cfile = None
@@ -555,14 +565,14 @@ def install_deps(target, reqs, optional, constraints=(), old_builds=()):
     for group, build in old_builds:
         bfile = target.parent / "build-constraints.txt"
         bfile.write_text("\n".join(build) + "\n")
-        uv_install(target, group, cfile, bfile)
-    uv_install(target, reqs, cfile)
+        uv_install(target, group, exclude_newer, cfile, bfile)
+    uv_install(target, reqs, exclude_newer, cfile)
     status = read_heavy(target)
     for key, alternatives in optional:
         if status.get(key, "").startswith("installed"):
             continue
         for group, index in alternatives:
-            cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", EXCLUDE_NEWER,
+            cmd = ["uv", "pip", "install", "--python", str(RUNNER_PY), "--target", str(target), "--exclude-newer", exclude_newer,
                    *(["--constraint", str(cfile)] if cfile else []),
                    *(["--index", index, "--index-strategy", "unsafe-best-match"] if index else []), *group]
             p = subprocess.run(cmd, capture_output=True, text=True)
@@ -571,6 +581,7 @@ def install_deps(target, reqs, optional, constraints=(), old_builds=()):
                 break
             status[key] = ("skipped: " + (p.stderr.strip().splitlines() or ["?"])[-1])[:300]
     atomic_write_json(target / "_heavy.json", status)
+    (target / "_exclude_newer.txt").write_text(exclude_newer + "\n")
     return status
 
 
@@ -578,8 +589,9 @@ def prepare_p1(force=False):
     out = DATASETS / "p1"
     if force:
         shutil.rmtree(out / "deps", ignore_errors=True)
+    stale_deps(out / "deps", EXCLUDE_NEWER["p1"])
     samples = p1_samples()
-    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER, "repos": {}, "programs": {}}
+    manifest = {"created": now_iso(), "cutoff": CUTOFF, "exclude_newer": EXCLUDE_NEWER["p1"], "repos": {}, "programs": {}}
     for name, s in samples.items():
         o = s["origin"]
         entry = {"module": "example", "source": str(s["file"].relative_to(REPO)), "category": s["category"],
@@ -620,11 +632,11 @@ def prepare_p1(force=False):
         print(f"{name:9} {(o or {}).get('repo', '-'):28} match={entry['origin'] and entry['origin']['ratio']} "
               f"{(entry['origin'] or {}).get('state', '')}", flush=True)
     (out / "deps").mkdir(parents=True, exist_ok=True)
-    optional = install_deps(out / "deps", P1_DEPS, P1_OPTIONAL, P1_CONSTRAINTS, P1_OLD_BUILDS)
+    optional = install_deps(out / "deps", P1_DEPS, P1_OPTIONAL, EXCLUDE_NEWER["p1"], P1_CONSTRAINTS, P1_OLD_BUILDS)
     manifest["deps"] = {"dir": "p1/deps", "requirements": P1_DEPS, "constraints": P1_CONSTRAINTS, "optional": optional,
                         "installed": sorted(p.name for p in (out / "deps").glob("*.dist-info"))}
     install_hook()
-    manifest["hook"] = "phase1_paths.pth in the site-packages of .venv and .venv-pynguin"
+    manifest["hook"] = "phase1_paths.pth in the site-packages of .venv-run and .venv-pynguin"
     for name, entry in manifest["programs"].items():
         entry["import_check"] = import_check(REPO / entry["source"], "example", runtime_env(entry),
                                              [DATASETS / d for d in entry["data_files"]])
