@@ -82,7 +82,7 @@ def run_once(cfg, tool, p, jdir, suite, i, sid):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("set", help="program set from config (pilot, small)")
-    ap.add_argument("--tools", default=None, help="comma list (default: config main_tools)")
+    ap.add_argument("--tools", default=None, help="comma list (default: config main_tools; LLMs only for llm_only_sets)")
     ap.add_argument("--programs", default=None, help="comma list of <category>/<program> (default: the whole set)")
     ap.add_argument("--job", default=None, help="only this job folder: rep<r> (LLM) or seed<s> (Pynguin)")
     ap.add_argument("--runs", type=int, default=None, help="executions per suite (default: config repetitions.test_execution)")
@@ -106,7 +106,8 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
-    tools = (args.tools or ",".join(cfg["main_tools"])).split(",")
+    tools = args.tools.split(",") if args.tools else [
+        t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     todo = suites(cfg, args.set, tools, args.programs and args.programs.split(","), args.job)
     if not todo:
         sys.exit("no finished generation jobs match: run scripts/run.py first")

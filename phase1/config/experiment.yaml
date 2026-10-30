@@ -37,6 +37,9 @@ llm_tools:
   dsc-1.3b: {model: "deepseek-coder:1.3b-instruct"}   # pilot only (not the same size as the others)
 
 main_tools: [pynguin, dsc-6.7b, cl-7b, qwen-7b]
+# sets without Pynguin by default: the paper runs only ChatGPT on p1 (Table 3), whose README says its files
+# "didn't work with Pynguin" (§2.2: Pynguin does not handle native code) (decision 18); --tools pynguin still runs it
+llm_only_sets: [p1]
 
 repetitions:
   llm: 5                               # independent runs of each LLM job (rep0..rep4); rep0 = quality results

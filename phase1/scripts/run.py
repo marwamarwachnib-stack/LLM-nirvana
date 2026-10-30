@@ -408,7 +408,7 @@ def check_same_machine(allow):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("set", help="program set from config (pilot, small)")
-    ap.add_argument("--tools", default=None, help="comma list (default: config main_tools)")
+    ap.add_argument("--tools", default=None, help="comma list (default: config main_tools; LLMs only for llm_only_sets)")
     ap.add_argument("--programs", default=None, help="comma list of <category>/<program> (default: the whole set)")
     ap.add_argument("--rep", type=int, default=None, help="run only round R (Pynguin seed number R, LLM repetition R)")
     ap.add_argument("--reps", type=int, default=None, help="LLM repetitions (default: config repetitions.llm)")
@@ -436,7 +436,8 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
-    tools = (args.tools or ",".join(cfg["main_tools"])).split(",")
+    tools = args.tools.split(",") if args.tools else [
+        t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     unknown = [t for t in tools if t != "pynguin" and t not in cfg["llm_tools"]]
     if unknown:
         sys.exit(f"unknown tools: {', '.join(unknown)} (known: pynguin, {', '.join(cfg['llm_tools'])})")

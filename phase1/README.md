@@ -52,7 +52,7 @@ make results      # results_main/: CSVs, tables, figures, paper_comparison.md
 make datasets          # once per machine (network): rebuilds the projects and their dependencies (about 3 GB in datasets/)
 make smoke SET=p2      # a few minutes
 make all SET=p2        # 43 modules: paper Table 2, Figs 4/5/7, Table 5  -> runs_p2/, results_p2/
-make all SET=p1        # 41 modules: paper Table 3                       -> runs_p1/, results_p1/
+make all SET=p1        # 41 modules, LLMs only as in the paper: Table 3   -> runs_p1/, results_p1/
 ```
 
 - **p2** (`scripts/prepare_datasets.py p2`, libraries as of 2023-09-01): every module is identical, apart from its import lines, to a PyPI release: flutils 0.7, codetiming 1.4.0, httpie 3.2.2, pymonet 0.12.0, python-string-utils 1.0.0, sty 1.0.0rc1, typesystem 0.2.4, docstring-parser 0.7.3, dataclasses-json 0.5.3, pdir2 0.3.2, flutes 0.3.0 (`datasets/p2/manifest.json`). The authors ran each module inside its package with the package's own imports flattened (`from httpie.cookies import X` → `from cookies import X`); the other files of each package are rebuilt the same way. That rule reproduces the authors' import lines exactly for 36 of 43 modules; the 7 others are the authors' own exceptions, and the manifest notes them. All 43 import.

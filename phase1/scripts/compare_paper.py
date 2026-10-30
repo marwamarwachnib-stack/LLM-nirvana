@@ -11,7 +11,7 @@ p-values from p2 exactly):
   Table 2  100-300 LOC p2, 41 samples -> --set p2 (also: the authors' per-sample coverage of both tools, Fig. 4)
   Table 5  p2 (missed statements)     -> --set p2
   Table 3  100-300 LOC p1             -> --set p1
-  Table 4  not stated in the paper    -> shown with every set (Cat 1: refactored modules only, as in §3.2.3)
+  Table 4  §3.2.3, large samples (p2 or p1: not stated) -> shown with every set (Cat 1: refactored modules, §3.2.3)
 The paper's "Avg Branch Coverage" is coverage.py's Cover column with --branch (statements + branches together),
 the column of the authors' branch_coverage.txt; it is compared with our stmt_branch_cov.
 LLM repetitions and Pynguin seeds are averaged per program first; the t-test is Student's, as in the paper.
@@ -301,7 +301,8 @@ def section_table4(rep, jobs, llms):
                     rep.add("4", cat, c, "ours", t, p[cols[c]].mean(), len(p))
     rep.md += ["## Table 4: incorrect assertions (final suites)", "",
                "Paper: % of incorrect assertions, then the share of each cause among the incorrect ones. "
-               "The paper does not say which dataset; Cat 1 = refactored modules only (§3.2.3).", "",
+               "The paper reports it in §3.2 (large samples) without saying whether p2 or p1; Cat 1 = refactored "
+               "modules only (§3.2.3).", "",
                md_table(["category", "source", "all incorrect", "AssertionError", "try/except", "runtime"], rows), ""]
 
 
