@@ -290,7 +290,7 @@ def install_hook():
 
 def runtime_env(entry):
     """Environment variables for one prepared program (paths relative to phase1/datasets in the manifest)."""
-    return {"PHASE1_SITE_DIRS": os.pathsep.join(str(DATASETS / p) for p in entry["site_dirs"]),
+    return {**entry.get("env", {}), "PHASE1_SITE_DIRS": os.pathsep.join(str(DATASETS / p) for p in entry["site_dirs"]),
             "PHASE1_PATH_APPEND": os.pathsep.join(str(DATASETS / p) for p in entry["path_append"])}
 
 
@@ -427,7 +427,8 @@ P1_CATS = {"cat1": "cat1_scripts", "cat2": "cat2_functions", "cat3": "cat3_class
 P1_DEPS = ["numpy", "matplotlib", "scipy", "cvxpy", "tqdm", "requests", "gevent", "pandas", "sqlalchemy",
            "discord.py", "youtube_dl", "anthropic", "opencv-python-headless", "scikit-video", "onnxruntime", "pillow",
            "plyfile", "pytz", "ipython", "tabulate", "gdown", "psutil",
-           "scikit-image", "asteval", "multiprocess", "h5py", "lmfit", "statsmodels"]   # Stoner
+           "scikit-image", "asteval", "multiprocess", "h5py", "lmfit", "statsmodels",   # Stoner
+           "openai", "tenacity", "sentry-sdk", "jinja2", "ipywidgets", "pylint"]         # prompttools (requirements.txt)
 # versions of the modules' time where their code needs them (decision 15); constraints of every p1 install
 P1_CONSTRAINTS = ["numpy<1.24",          # Stoner: numpy.float, removed in numpy 1.24
                   "scipy<1.12",          # Stoner: scipy.integrate.cumtrapz (removed in 1.14); 1.11 = numpy 1.23 era
@@ -462,6 +463,8 @@ P1_NOTES = {
 }
 # data files a module reads when it is imported (copied next to it in every work directory)
 P1_DATA = {"cat3_s9": ["Data/dowstocks.csv"]}
+# environment variables of a program's runs: prompttools sends crash reports to Sentry when imported unless opted out
+P1_ENV = {"cat3_s12": {"SENTRY_OPT_OUT": "1"}}
 GH_URL = r"https://github\.com/([^/\s]+)/([^/\s]+)/blob/([^/\s]+)/(\S+)"
 
 
@@ -596,7 +599,7 @@ def prepare_p1(force=False):
         o = s["origin"]
         entry = {"module": "example", "source": str(s["file"].relative_to(REPO)), "category": s["category"],
                  "structural_category": structural_category(s["file"].read_text()), "site_dirs": ["p1/deps"],
-                 "path_append": [], "data_files": [], "origin": None}
+                 "path_append": [], "data_files": [], "env": P1_ENV.get(name, {}), "origin": None}
         overlay = p1_overlay(name, samples, out)
         if o:
             slug = f"{o['owner']}__{o['repo']}"
