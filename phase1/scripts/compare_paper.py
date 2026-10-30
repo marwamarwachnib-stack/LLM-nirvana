@@ -5,8 +5,8 @@
 Reads results/jobs.csv, iterations.csv and overlap.csv (of the campaign in PHASE1_RESULTS) and the authors' files.
 Writes results/paper_comparison.md and results/paper_comparison.csv.
 
-Dataset behind each paper table (repository READMEs; the audit of the stored files reproduces Table 2 and its
-p-values from p2 exactly):
+Dataset behind each paper table (repository READMEs; the stored p2 files reproduce Table 2's Cat 2 row and its
+p-values exactly, its Cat 3 and "all" rows within 0.3 points: decision 19):
   Table 1  0-100 LOC                  -> --set small (also: the authors' stored Pynguin suites, per program)
   Table 2  100-300 LOC p2, 41 samples -> --set p2 (also: the authors' per-sample coverage of both tools, Fig. 4)
   Table 5  p2 (missed statements)     -> --set p2
@@ -24,7 +24,7 @@ import re
 import pandas as pd
 from scipy import stats
 
-from common import PHASE1, REPO, RESULTS
+from common import PHASE1, REPO, RESULTS, plateau_iteration
 from xcheck_stored import stored
 
 CAT = {"cat1_scripts": "cat1", "cat2_functions": "cat2", "cat3_classes": "cat3"}
@@ -176,7 +176,8 @@ def section_table2(rep, per, tools, llms, auth):
     rep.md += ["## Table 2: coverage, 100-300 LOC p2 (iteration 1)", "",
                f"Rows over the authors' {len(a41)} samples with ChatGPT coverage (the paper's caption says 40; its means "
                "need 41). 'authors' files' = recomputed from the coverage reports in the repository (the paper's Fig. 4 "
-               "differs from them on s5, s25, s31). Categories: any class → Cat 3 (the split that reproduces Table 2).", ""]
+               "differs from them on s5, s25, s31). Categories: any class → Cat 3 (the split that reproduces Table 2's "
+               "Cat 2 row exactly, n = 9; its Cat 3 row within 0.3 points).", ""]
     af = pd.DataFrame.from_dict(auth, orient="index")
     for mi, (metric, a_g, a_p, label) in enumerate((("stmt_cov", "gpt_stmt", "pyn_stmt", "statement"),
                                                     ("stmt_branch_cov", "gpt_branch", "pyn_branch", "branch (Cover with --branch)"))):
@@ -226,7 +227,9 @@ def section_table2(rep, per, tools, llms, auth):
 def section_table5(rep, auth):
     """Table 5 / Fig. 7: missed-statement overlap, with the paper's definitions (averages over samples)."""
     def summary(inter, union, miss_a, miss_b):
-        mi = min(sum(miss_a) / len(miss_a), sum(miss_b) / len(miss_b))
+        # minimum missed: the per-sample minimum, averaged (the paper's 20.29 and 2.51 match this; the minimum of the
+        # two averages, as its caption reads, gives 28.85 on the authors' files: decision 19)
+        mi = sum(min(x, y) for x, y in zip(miss_a, miss_b)) / len(miss_a)
         ai, au = sum(inter) / len(inter), sum(union) / len(union)
         return {"intersecting_missed": ai, "union_missed": au, "minimum_missed": mi, "minimum_covered": mi - ai,
                 "maximum_covered": au - ai}
@@ -255,13 +258,13 @@ def section_table5(rep, auth):
 
 
 def section_table3(rep, it, llms, label, reference_only, importable=None):
-    llm_it = it[it.tool != "pynguin"]
+    llm_it = it[it.tool != "pynguin"].sort_values("iteration")
     if llm_it.empty:
         return
     keys = ["tool", "category", "program"] + (["rep"] if "rep" in it else [])
     ch = llm_it.groupby(keys).agg(iter1=("stmt_cov", "first"), iter5_or_last=("stmt_cov", "last"),
-                                  best=("stmt_cov", "max"), least=("stmt_cov", "min"),
-                                  median_iters=("iteration", "max")).reset_index()
+                                  best=("stmt_cov", "max"), least=("stmt_cov", "min")).reset_index()
+    ch = ch.merge(llm_it.groupby(keys).apply(plateau_iteration).rename("median_iters").reset_index(), on=keys)
     ch["best_minus_least"] = ch["best"] - ch["least"]
     rows = []
     for cat, vals in T3.items():
@@ -311,8 +314,9 @@ def section_imports(rep, set_name):
     bad = {n: e for n, e in man["programs"].items() if any(v != "ok" for v in e["import_check"].values())}
     rep.md += ["## Modules that cannot be imported", "",
                f"{len(man['programs']) - len(bad)} of {len(man['programs'])} modules import in both venvs "
-               "(scripts/prepare_datasets.py). The others are still run: a test suite that cannot import its module "
-               "gets 0 % coverage, for every tool.", ""]
+               "(scripts/prepare_datasets.py). The others are still run. A plain import fails, so a suite covers only "
+               "the lines run before the failure, unless its tests prepare the module's environment first (a stub in "
+               "sys.modules, sys.argv, a patched time.sleep or client): then more is reachable (decision 19).", ""]
     if bad:
         def why(e):
             first_error = next(v for v in e["import_check"].values() if v != "ok")

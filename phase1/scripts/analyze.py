@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 from scipy import stats  # noqa: E402
 
-from common import RESULTS, RUNS, read_json  # noqa: E402
+from common import RESULTS, RUNS, plateau_iteration, read_json  # noqa: E402
 
 # fixed categorical slots (reference palette, slots 1-4); color follows the tool, never its rank
 TOOL_COLORS = {"pynguin": "#2a78d6", "dsc-6.7b": "#eb6834", "cl-7b": "#1baf7a", "qwen-7b": "#8f5bd6", "dsc-1.3b": "#eda100"}
@@ -143,8 +143,9 @@ def main():
                 row = {"category": cat, "tool": t, "metric": metric, "n_llm": len(a), "n_pynguin": len(b),
                        "mean_llm": a.mean(), "mean_pynguin": b.mean()}
                 if len(a) >= 2 and len(b) >= 2:
-                    # the paper's "Independent t-test" is Student's (equal variances): it reproduces all four
-                    # Table 2 p-values from the repository's per-sample coverage; Welch's does not
+                    # the paper's "Independent t-test" is Student's (equal variances): on the authors' per-sample
+                    # files it gives Table 2's Cat 2 p-values exactly (0.169, 0.195) and Cat 3 0.681 / 0.613 for
+                    # the paper's 0.677 / 0.580 (decision 19); Welch's is no closer
                     row["ttest_student_p"] = stats.ttest_ind(a, b).pvalue
                     row["ttest_p"] = stats.ttest_ind(a, b, equal_var=False).pvalue  # Welch (kept: pilot files)
                     row["mannwhitney_p"] = stats.mannwhitneyu(a, b).pvalue
@@ -162,17 +163,19 @@ def main():
             mean_spread=("spread", "mean"), max_spread=("spread", "max")).round(2).to_csv(out("table_repetitions.csv"))
 
     # Table 3 (RQ2): iterative improvement (LLM tools); a chain = one program in one repetition
-    llm_it = it[it.tool != "pynguin"]
+    llm_it = it[it.tool != "pynguin"].sort_values("iteration")
     chain_keys = ["tool", "category", "program"] + (["rep"] if "rep" in it else [])
     if not llm_it.empty:
         g = llm_it.groupby(chain_keys)
         chain = g.agg(iter1=("stmt_cov", "first"), last=("stmt_cov", "last"), best=("stmt_cov", "max"),
                       least=("stmt_cov", "min"), n_iter=("iteration", "max")).reset_index()
+        chain = chain.merge(g.apply(plateau_iteration).rename("plateau_iter").reset_index(), on=chain_keys)
         chain["iter5_or_last"] = chain["last"]
         chain["best_minus_least"] = chain["best"] - chain["least"]
         chain.groupby(["tool", "category"]).agg(
             avg_iter1=("iter1", "mean"), avg_iter5_or_last=("iter5_or_last", "mean"), avg_best=("best", "mean"),
-            avg_best_minus_least=("best_minus_least", "mean"), median_iters_to_plateau=("n_iter", "median"),
+            avg_best_minus_least=("best_minus_least", "mean"), median_iters_to_plateau=("plateau_iter", "median"),
+            median_iters_run=("n_iter", "median"),
             n=("program", "count")).round(2).to_csv(out("table_iterations.csv"))
         # Fig. 6: average statement coverage per iteration (carry last value forward after stopping)
         fig, ax = plt.subplots(figsize=(7, 4))

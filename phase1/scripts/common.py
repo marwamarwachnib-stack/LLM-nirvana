@@ -57,6 +57,14 @@ def load_config():
     return cfg
 
 
+def plateau_iteration(chain):
+    """Iteration at which an iteration chain first reached its best statement coverage: the paper's "median
+    iterations to achieve coverage saturation" (Table 3: 1 for Cat 1, where nothing improves). Not the number of
+    iterations run, which also counts the last iteration, the one that showed no gain."""
+    c = chain.sort_values("iteration")
+    return int(c["iteration"].iloc[c["stmt_cov"].fillna(0).to_numpy().argmax()])
+
+
 def sha256_text(s):
     return hashlib.sha256(s.encode()).hexdigest()
 

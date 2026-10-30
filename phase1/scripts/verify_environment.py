@@ -27,6 +27,10 @@ KNOWN = {  # differences whose cause the authors' files show (decision 16)
     "sample17": "their ChatGPT test needs a maybe.py with Box at top level (not pymonet 0.12.0's)",
     "sample40": "their report is of pdir2's own api.py (`from . import format` on one line, two lines in the file they "
                 "uploaded): every missing line is one lower, the counts are equal",
+    "sample28": "partly: their stored compilation report shows a collection error (No module named 'base'), so the coverage "
+                "report comes from another setup (the whole typesystem package); we miss lines 11, 23-26, 213-218",
+    "sample32": "partly: their stored compilation report shows a collection error (No module named 'formats'), so the coverage "
+                "report comes from another setup (the whole typesystem package); we miss lines 83-93",
     "sample42": "their run measured the whole flutes package (15 files in their report)",
     "sample43": "their run measured the whole flutes package (15 files in their report)",
 }
