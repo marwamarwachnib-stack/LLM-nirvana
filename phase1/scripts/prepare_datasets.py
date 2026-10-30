@@ -51,8 +51,9 @@ DATASETS = PHASE1 / "datasets"
 STD = set(sys.stdlib_module_names)
 CUTOFF = "2024-01-31"          # the repository was uploaded on 2024-01-27
 EXCLUDE_NEWER = "2026-10-11"   # same rule as env/*.lock
-HOOK = ('import os, site, sys; [site.addsitedir(p) for p in os.environ.get("PHASE1_SITE_DIRS", "").split(os.pathsep) if p]; '
-        'sys.path.extend(p for p in os.environ.get("PHASE1_PATH_APPEND", "").split(os.pathsep) if p)\n')
+# one line; no comprehension: before Python 3.12 a .pth line runs where a comprehension cannot see `site`
+HOOK = ('import os, site, sys; list(map(site.addsitedir, filter(None, os.environ.get("PHASE1_SITE_DIRS", "").split(os.pathsep)))); '
+        'sys.path.extend(filter(None, os.environ.get("PHASE1_PATH_APPEND", "").split(os.pathsep)))\n')
 
 P2_DIR = REPO / "100_300 LOC p2" / "pynguin coverage"
 P2_DISTS = {  # sample number -> (PyPI distribution, package directory)
