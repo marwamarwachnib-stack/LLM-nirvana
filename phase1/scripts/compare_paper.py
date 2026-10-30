@@ -265,7 +265,8 @@ def section_table3(rep, it, llms, label, reference_only, importable=None):
     ch["best_minus_least"] = ch["best"] - ch["least"]
     rows = []
     for cat, vals in T3.items():
-        rows.append([cat, "paper ChatGPT (100-300 LOC p1)"] + [fmt(v) for v in vals])
+        src = "100-300 LOC p1" if cat != "cat1" else "6 large Cat 1 modules, not in the repository"
+        rows.append([cat, f"paper ChatGPT ({src})"] + [fmt(v) for v in vals])
         for t in llms:
             groups = [(label, ch[(ch.tool == t) & (ch.category.map(CAT) == cat)])]
             if importable is not None:  # p1: also the modules that can be imported (decision 15)
@@ -276,7 +277,10 @@ def section_table3(rep, it, llms, label, reference_only, importable=None):
                         fmt(s[c].median() if c == "median_iters" else s[c].mean()) for c in T3_COLS])
                     rep.add("3", cat, "iter1", f"ours ({glabel})", t, s["iter1"].mean(), len(s))
     note = ("The paper's Table 3 uses 100-300 LOC p1 (repository README); these chains are on another dataset: "
-            "reference only." if reference_only else "Same dataset as the paper (p1).")
+            "reference only." if reference_only else
+            "Same dataset as the paper (p1) for Cat 2 and Cat 3. The paper's Cat 1 row averages 6 modules "
+            "(56.833 = 341/6: the 6 large Cat 1 modules of §2.2), which the repository does not contain; p1 has one "
+            "Cat 1 module (cat1_s15), so that row is not comparable (decision 17).")
     rep.md += [f"## Table 3: iterative improvement{' (reference only)' if reference_only else ''}", "",
                note + " One chain = one program in one repetition.", "",
                md_table(["category", "source", "iter 1", "iter 5 (or last)", "best", "best − least", "median iterations"], rows), ""]
