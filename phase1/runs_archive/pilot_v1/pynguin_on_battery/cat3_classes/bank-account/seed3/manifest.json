@@ -1,0 +1,57 @@
+{
+  "tool": "pynguin",
+  "pynguin_version": "0.47.0",
+  "command": [
+    "/home/diguest/LLM-nirvana/phase1/.venv-pynguin/bin/pynguin",
+    "--project-path",
+    ".",
+    "--output-path",
+    ".",
+    "--module-name",
+    "example",
+    "--seed",
+    "3",
+    "--report-dir",
+    "pynguin-report",
+    "--maximum-search-time",
+    "600",
+    "-v"
+  ],
+  "seed": 3,
+  "session": "20261025-162917",
+  "finished": "2026-10-25T17:14:50+00:00",
+  "git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "dirty": true
+  },
+  "system_state": {
+    "governor": "powersave",
+    "no_turbo": "0",
+    "ac_online": [
+      "0"
+    ],
+    "pkg_temp_c": 38.0,
+    "load_avg": [
+      1.33544921875,
+      1.12548828125,
+      1.10693359375
+    ],
+    "mem_available_gb": 12.51
+  },
+  "evaluation": {
+    "per_test_timeout_s": 10,
+    "per_file_timeout_s": 300
+  },
+  "energy_cfg": {
+    "country_iso_code": "PRT",
+    "measure_power_secs": 1,
+    "idle_baseline_s": 300,
+    "cooldown_temp_c": 55,
+    "cooldown_max_s": 60
+  },
+  "env_locks": {
+    "requirements-venv.lock": "564c77151f582e6a7d6454690c5b9ebcdd4aef117e8c08bf2f3f04d569fdbec9",
+    "requirements-venv-pynguin.lock": "80c2a44792ddf4cbcc46f9597586ada2f2f9714842b988676fd856041e57298b"
+  },
+  "dataset_program": "0_100 LOC/cat3_classes/bank-account"
+}

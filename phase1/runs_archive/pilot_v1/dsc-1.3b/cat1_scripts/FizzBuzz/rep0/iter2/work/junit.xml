@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.079" timestamp="2026-10-25T18:24:52.852691+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.003"><failure message="AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?">def test_fizzbuzz():
+&gt;       capturedOutput = pytest.monkeypatch.stdout
+                         ^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?
+
+test_example_i1.py:6: AttributeError</failure></testcase><testcase classname="test_example_i2" name="test_fizzbuzz" time="0.001"><failure message="NameError: name 'pytest' is not defined">def test_fizzbuzz():
+        # Testing with multiple inputs
+&gt;       with pytest.raises(SystemExit):
+             ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:3: NameError</failure></testcase></testsuite></testsuites>

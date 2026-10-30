@@ -1,0 +1,8 @@
+[
+  {
+    "line": 2,
+    "old": "from your_module import find_fewest_coins  # replace 'your_module' with the name of the module where the function is defined",
+    "new": "from example import find_fewest_coins  # replace 'your_module' with the name of the module where the function is defined",
+    "rule": "renamed-module"
+  }
+]

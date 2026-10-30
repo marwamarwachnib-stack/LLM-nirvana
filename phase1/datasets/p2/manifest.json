@@ -1,0 +1,1063 @@
+{
+  "created": "2026-10-30T12:02:39+00:00",
+  "cutoff": "2024-01-31",
+  "exclude_newer": "2023-09-01",
+  "dists": {
+    "codetiming": {
+      "package": "codetiming",
+      "version": "1.4.0",
+      "date": "2022-11-08",
+      "file": "codetiming-1.4.0-py3-none-any.whl",
+      "sha256": "3b80f409bef00941a9755c5524071ce2f72eaa4520f4bc35b33869cde024ccbd",
+      "candidates": [
+        "1.3.2",
+        "1.4.0"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/codetiming-1.4.0",
+      "module_paths": {
+        "sample7": "_timers.py"
+      }
+    },
+    "dataclasses-json": {
+      "package": "dataclasses_json",
+      "version": "0.5.3",
+      "date": "2021-04-26",
+      "file": "dataclasses_json-0.5.3-py3-none-any.whl",
+      "sha256": "740e7b564d72ddaa0f66406b4ecb799447afda2799c1c425a4a76151bfcfda50",
+      "candidates": [
+        "0.5.2",
+        "0.5.3"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/dataclasses-json-0.5.3",
+      "module_paths": {
+        "sample37": "api.py",
+        "sample38": "core.py",
+        "sample39": "undefined.py"
+      }
+    },
+    "docstring-parser": {
+      "package": "docstring_parser",
+      "version": "0.7.3",
+      "date": "2020-09-19",
+      "file": "docstring_parser-0.7.3.tar.gz",
+      "sha256": "cde5fbf8b846433dfbde1e0f96b7f909336a634d5df34a38cb75050c7346734a",
+      "candidates": [
+        "0.7.3"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/docstring-parser-0.7.3",
+      "module_paths": {
+        "sample33": "common.py",
+        "sample34": "google.py",
+        "sample35": "numpydoc.py",
+        "sample36": "rest.py"
+      }
+    },
+    "flutes": {
+      "package": "flutes",
+      "version": "0.3.0",
+      "date": "2020-06-15",
+      "file": "flutes-0.3.0-py3-none-any.whl",
+      "sha256": "3730b991f1eb2340a46607bea4fc5adc874680a6c6569ddacff276d361cdbeea",
+      "candidates": [
+        "0.3.0"
+      ],
+      "renamed": {
+        "io": "io_renamed",
+        "math": "math_renamed",
+        "types": "types_renamed"
+      },
+      "flat_subpackages": [],
+      "src": "p2/src/flutes-0.3.0",
+      "module_paths": {
+        "sample42": "exception.py",
+        "sample43": "run.py"
+      }
+    },
+    "flutils": {
+      "package": "flutils",
+      "version": "0.7",
+      "date": "2020-07-23",
+      "file": "flutils-0.7-py3-none-any.whl",
+      "sha256": "185943439de40f96c9c166c106a8962704cc19433356a0b3c135d9816e2e0c81",
+      "candidates": [
+        "0.6",
+        "0.6.1",
+        "0.7"
+      ],
+      "renamed": {},
+      "flat_subpackages": [
+        "codecs"
+      ],
+      "src": "p2/src/flutils-0.7",
+      "module_paths": {
+        "sample1": "decorators.py",
+        "sample2": "objutils.py",
+        "sample3": "packages.py",
+        "sample4": "strutils.py",
+        "sample5": "txtutils.py",
+        "sample6": "validators.py"
+      }
+    },
+    "httpie": {
+      "package": "httpie",
+      "version": "3.2.2",
+      "date": "2023-05-19",
+      "file": "httpie-3.2.2-py3-none-any.whl",
+      "sha256": "33082092553126e3e38395682c23121c3450472ffddb363eb895ad685d01800e",
+      "candidates": [
+        "3.2.2"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/httpie-3.2.2",
+      "module_paths": {
+        "sample8": "compat.py",
+        "sample9": "config.py",
+        "sample10": "sessions.py",
+        "sample11": "ssl_.py",
+        "sample12": "uploads.py"
+      }
+    },
+    "pdir2": {
+      "package": "pdir",
+      "version": "0.3.2",
+      "date": "2020-11-19",
+      "file": "pdir2-0.3.2-py2.py3-none-any.whl",
+      "sha256": "9d3300e1704df359102c3ce8f92bd615155e348258809954ac868932ee03cff3",
+      "candidates": [
+        "0.3.2"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/pdir2-0.3.2",
+      "module_paths": {
+        "sample40": "api.py",
+        "sample41": "attr_category.py"
+      }
+    },
+    "pymonet": {
+      "package": "pymonet",
+      "version": "0.12.0",
+      "date": "2020-04-19",
+      "file": "pymonet-0.12.0.tar.gz",
+      "sha256": "c34dc032dcd27e2bc8f445aa5c12aa5d86c672c56b6ed3009462275454d945cc",
+      "candidates": [
+        "0.12.0"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/pymonet-0.12.0",
+      "module_paths": {
+        "sample13": "box.py",
+        "sample14": "either.py",
+        "sample15": "immutable_list.py",
+        "sample16": "lazy.py",
+        "sample17": "maybe.py",
+        "sample18": "monad_try.py",
+        "sample19": "semigroups.py",
+        "sample20": "validation.py",
+        "sample21": "utils.py"
+      }
+    },
+    "python-string-utils": {
+      "package": "string_utils",
+      "version": "1.0.0",
+      "date": "2020-03-04",
+      "file": "python_string_utils-1.0.0-py3-none-any.whl",
+      "sha256": "f1a88700baf99db1a9b6953f44181ad9ca56623c81e257e6009707e2e7851fa4",
+      "candidates": [
+        "1.0.0"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/python-string-utils-1.0.0",
+      "module_paths": {
+        "sample22": "generation.py",
+        "sample23": "manipulation.py"
+      }
+    },
+    "sty": {
+      "package": "sty",
+      "version": "1.0.0rc1",
+      "date": "2021-01-31",
+      "file": "sty-1.0.0rc1-py3-none-any.whl",
+      "sha256": "52bc299ba08a7e2683ed4500a13222d62811ad616e621c9d3e3da2d8175ae46c",
+      "candidates": [
+        "1.0.0rc0",
+        "1.0.0rc1"
+      ],
+      "renamed": {},
+      "flat_subpackages": [],
+      "src": "p2/src/sty-1.0.0rc1",
+      "module_paths": {
+        "sample24": "register.py"
+      }
+    },
+    "typesystem": {
+      "package": "typesystem",
+      "version": "0.2.4",
+      "date": "2019-07-01",
+      "file": "typesystem-0.2.4.tar.gz",
+      "sha256": "ba2bd10f1c5844d08dd8841e777bdee55bfca569bf21cb96cd0f91e0a4f66cd8",
+      "candidates": [
+        "0.2.4"
+      ],
+      "renamed": {},
+      "flat_subpackages": [
+        "tokenize"
+      ],
+      "src": "p2/src/typesystem-0.2.4",
+      "module_paths": {
+        "sample25": "base.py",
+        "sample26": "formats.py",
+        "sample27": "json_schema.py",
+        "sample28": "schemas.py",
+        "sample29": "forms.py",
+        "sample30": "tokenize/tokenize_yaml.py",
+        "sample31": "tokenize/tokens.py",
+        "sample32": "fields.py"
+      }
+    }
+  },
+  "programs": {
+    "sample1": {
+      "module": "decorators",
+      "source": "100_300 LOC p2/pynguin coverage/sample1/decorators.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample2": {
+      "module": "objutils",
+      "source": "100_300 LOC p2/pynguin coverage/sample2/objutils.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample3": {
+      "module": "packages",
+      "source": "100_300 LOC p2/pynguin coverage/sample3/packages.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample4": {
+      "module": "strutils",
+      "source": "100_300 LOC p2/pynguin coverage/sample4/strutils.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "note": "authors rewrote `from flutils.codecs import register_codecs` to `from codecs import ...`, which hits the standard module codecs: convert_escaped_utf8_literal() raises ImportError (kept as in their file)",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample5": {
+      "module": "txtutils",
+      "source": "100_300 LOC p2/pynguin coverage/sample5/txtutils.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "note": "authors left `from .decorators import cached_property` in a branch for Python < 3.8 (never executed)",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample6": {
+      "module": "validators",
+      "source": "100_300 LOC p2/pynguin coverage/sample6/validators.py",
+      "dist": "flutils",
+      "version": "0.7",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutils-0.7",
+        "p2/src/flutils-0.7/codecs"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample7": {
+      "module": "_timers",
+      "source": "100_300 LOC p2/pynguin coverage/sample7/_timers.py",
+      "dist": "codetiming",
+      "version": "1.4.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/codetiming-1.4.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample8": {
+      "module": "compat",
+      "source": "100_300 LOC p2/pynguin coverage/sample8/compat.py",
+      "dist": "httpie",
+      "version": "3.2.2",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/httpie-3.2.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample9": {
+      "module": "config",
+      "source": "100_300 LOC p2/pynguin coverage/sample9/config.py",
+      "dist": "httpie",
+      "version": "3.2.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/httpie-3.2.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample10": {
+      "module": "sessions",
+      "source": "100_300 LOC p2/pynguin coverage/sample10/sessions.py",
+      "dist": "httpie",
+      "version": "3.2.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/httpie-3.2.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample11": {
+      "module": "ssl_",
+      "source": "100_300 LOC p2/pynguin coverage/sample11/ssl_.py",
+      "dist": "httpie",
+      "version": "3.2.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/httpie-3.2.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample12": {
+      "module": "uploads",
+      "source": "100_300 LOC p2/pynguin coverage/sample12/uploads.py",
+      "dist": "httpie",
+      "version": "3.2.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/httpie-3.2.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample13": {
+      "module": "box",
+      "source": "100_300 LOC p2/pynguin coverage/sample13/box.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample14": {
+      "module": "either",
+      "source": "100_300 LOC p2/pynguin coverage/sample14/either.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample15": {
+      "module": "immutable_list",
+      "source": "100_300 LOC p2/pynguin coverage/sample15/immutable_list.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample16": {
+      "module": "lazy",
+      "source": "100_300 LOC p2/pynguin coverage/sample16/lazy.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample17": {
+      "module": "maybe",
+      "source": "100_300 LOC p2/pynguin coverage/sample17/maybe.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample18": {
+      "module": "monad_try",
+      "source": "100_300 LOC p2/pynguin coverage/sample18/monad_try.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample19": {
+      "module": "semigroups",
+      "source": "100_300 LOC p2/pynguin coverage/sample19/semigroups.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample20": {
+      "module": "validation",
+      "source": "100_300 LOC p2/pynguin coverage/sample20/validation.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample21": {
+      "module": "utils",
+      "source": "100_300 LOC p2/pynguin coverage/sample21/utils.py",
+      "dist": "pymonet",
+      "version": "0.12.0",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pymonet-0.12.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample22": {
+      "module": "generation",
+      "source": "100_300 LOC p2/pynguin coverage/sample22/generation.py",
+      "dist": "python-string-utils",
+      "version": "1.0.0",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/python-string-utils-1.0.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample23": {
+      "module": "manipulation",
+      "source": "100_300 LOC p2/pynguin coverage/sample23/manipulation.py",
+      "dist": "python-string-utils",
+      "version": "1.0.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/python-string-utils-1.0.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample24": {
+      "module": "register",
+      "source": "100_300 LOC p2/pynguin coverage/sample24/register.py",
+      "dist": "sty",
+      "version": "1.0.0rc1",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/sty-1.0.0rc1"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample25": {
+      "module": "base",
+      "source": "100_300 LOC p2/pynguin coverage/sample25/base.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample26": {
+      "module": "formats",
+      "source": "100_300 LOC p2/pynguin coverage/sample26/formats.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample27": {
+      "module": "json_schema",
+      "source": "100_300 LOC p2/pynguin coverage/sample27/json_schema.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample28": {
+      "module": "schemas",
+      "source": "100_300 LOC p2/pynguin coverage/sample28/schemas.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample29": {
+      "module": "forms",
+      "source": "100_300 LOC p2/pynguin coverage/sample29/forms.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample30": {
+      "module": "tokenize_yaml",
+      "source": "100_300 LOC p2/pynguin coverage/sample30/tokenize_yaml.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample31": {
+      "module": "tokens",
+      "source": "100_300 LOC p2/pynguin coverage/sample31/tokens.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample32": {
+      "module": "fields",
+      "source": "100_300 LOC p2/pynguin coverage/sample32/fields.py",
+      "dist": "typesystem",
+      "version": "0.2.4",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/typesystem-0.2.4",
+        "p2/src/typesystem-0.2.4/tokenize"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample33": {
+      "module": "common",
+      "source": "100_300 LOC p2/pynguin coverage/sample33/common.py",
+      "dist": "docstring-parser",
+      "version": "0.7.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/docstring-parser-0.7.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample34": {
+      "module": "google",
+      "source": "100_300 LOC p2/pynguin coverage/sample34/google.py",
+      "dist": "docstring-parser",
+      "version": "0.7.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/docstring-parser-0.7.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample35": {
+      "module": "numpydoc",
+      "source": "100_300 LOC p2/pynguin coverage/sample35/numpydoc.py",
+      "dist": "docstring-parser",
+      "version": "0.7.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/docstring-parser-0.7.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample36": {
+      "module": "rest",
+      "source": "100_300 LOC p2/pynguin coverage/sample36/rest.py",
+      "dist": "docstring-parser",
+      "version": "0.7.3",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/docstring-parser-0.7.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample37": {
+      "module": "api",
+      "source": "100_300 LOC p2/pynguin coverage/sample37/api.py",
+      "dist": "dataclasses-json",
+      "version": "0.5.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/dataclasses-json-0.5.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample38": {
+      "module": "core",
+      "source": "100_300 LOC p2/pynguin coverage/sample38/core.py",
+      "dist": "dataclasses-json",
+      "version": "0.5.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/dataclasses-json-0.5.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample39": {
+      "module": "undefined",
+      "source": "100_300 LOC p2/pynguin coverage/sample39/undefined.py",
+      "dist": "dataclasses-json",
+      "version": "0.5.3",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/dataclasses-json-0.5.3"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample40": {
+      "module": "api",
+      "source": "100_300 LOC p2/pynguin coverage/sample40/api.py",
+      "dist": "pdir2",
+      "version": "0.3.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pdir2-0.3.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample41": {
+      "module": "attr_category",
+      "source": "100_300 LOC p2/pynguin coverage/sample41/attr_category.py",
+      "dist": "pdir2",
+      "version": "0.3.2",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/pdir2-0.3.2"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample42": {
+      "module": "exception",
+      "source": "100_300 LOC p2/pynguin coverage/sample42/exception.py",
+      "dist": "flutes",
+      "version": "0.3.0",
+      "category": "cat2_functions",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutes-0.3.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "sample43": {
+      "module": "run",
+      "source": "100_300 LOC p2/pynguin coverage/sample43/run.py",
+      "dist": "flutes",
+      "version": "0.3.0",
+      "category": "cat3_classes",
+      "site_dirs": [
+        "p2/deps"
+      ],
+      "path_append": [
+        "p2/src/flutes-0.3.0"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    }
+  },
+  "deps": {
+    "dir": "p2/deps",
+    "requirements": [
+      "codetiming==1.4.0",
+      "dataclasses-json==0.5.3",
+      "docstring-parser==0.7.3",
+      "flutes==0.3.0",
+      "flutils==0.7",
+      "httpie==3.2.2",
+      "pdir2==0.3.2",
+      "pymonet==0.12.0",
+      "python-string-utils==1.0.0",
+      "sty==1.0.0rc1",
+      "typesystem==0.2.4",
+      "pyyaml",
+      "jinja2",
+      "ipython",
+      "colorama"
+    ],
+    "installed": [
+      "Jinja2-3.1.2.dist-info",
+      "MarkupSafe-2.1.3.dist-info",
+      "PySocks-1.7.1.dist-info",
+      "PyYAML-6.0.1.dist-info",
+      "Pygments-2.16.1.dist-info",
+      "asttokens-2.2.1.dist-info",
+      "backcall-0.2.0.dist-info",
+      "certifi-2023.7.22.dist-info",
+      "charset_normalizer-3.2.0.dist-info",
+      "codetiming-1.4.0.dist-info",
+      "colorama-0.4.6.dist-info",
+      "dataclasses_json-0.5.3.dist-info",
+      "decorator-5.1.1.dist-info",
+      "defusedxml-0.7.1.dist-info",
+      "docstring_parser-0.7.3.dist-info",
+      "exceptiongroup-1.1.3.dist-info",
+      "executing-1.2.0.dist-info",
+      "flutes-0.3.0.dist-info",
+      "flutils-0.7.dist-info",
+      "httpie-3.2.2.dist-info",
+      "idna-3.4.dist-info",
+      "ipython-8.15.0.dist-info",
+      "jedi-0.19.0.dist-info",
+      "markdown_it_py-3.0.0.dist-info",
+      "marshmallow-3.20.1.dist-info",
+      "marshmallow_enum-1.5.1.dist-info",
+      "matplotlib_inline-0.1.6.dist-info",
+      "mdurl-0.1.2.dist-info",
+      "multidict-6.0.4.dist-info",
+      "mypy_extensions-1.0.0.dist-info",
+      "packaging-23.1.dist-info",
+      "parso-0.8.3.dist-info",
+      "pdir2-0.3.2.dist-info",
+      "pexpect-4.8.0.dist-info",
+      "pickleshare-0.7.5.dist-info",
+      "pip-23.2.1.dist-info",
+      "prompt_toolkit-3.0.39.dist-info",
+      "psutil-5.9.5.dist-info",
+      "ptyprocess-0.7.0.dist-info",
+      "pure_eval-0.2.2.dist-info",
+      "pymonet-0.12.0.dist-info",
+      "python_string_utils-1.0.0.dist-info",
+      "requests-2.31.0.dist-info",
+      "requests_toolbelt-1.0.0.dist-info",
+      "rich-13.5.2.dist-info",
+      "setuptools-68.1.2.dist-info",
+      "six-1.16.0.dist-info",
+      "stack_data-0.6.2.dist-info",
+      "stringcase-1.2.0.dist-info",
+      "sty-1.0.0rc1.dist-info",
+      "termcolor-2.3.0.dist-info",
+      "tqdm-4.66.1.dist-info",
+      "traitlets-5.9.0.dist-info",
+      "typesystem-0.2.4.dist-info",
+      "typing_extensions-4.7.1.dist-info",
+      "typing_inspect-0.9.0.dist-info",
+      "urllib3-2.0.4.dist-info",
+      "wcwidth-0.2.6.dist-info"
+    ]
+  },
+  "hook": "phase1_paths.pth in the site-packages of .venv-run and .venv-pynguin"
+}

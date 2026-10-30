@@ -1,0 +1,170 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 7,
+      "test": "test_open_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 13,
+      "test": "test_deposit_into_open_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 20,
+      "test": "test_withdraw_from_open_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "raises",
+      "lineno": 25,
+      "test": "test_cannot_deposit_negative_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "raises",
+      "lineno": 32,
+      "test": "test_cannot_withdraw_more_than_balance",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "raises",
+      "lineno": 38,
+      "test": "test_cannot_withdraw_negative_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:6",
+      "kind": "assert",
+      "lineno": 46,
+      "test": "test_close_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:7",
+      "kind": "assert",
+      "lineno": 47,
+      "test": "test_close_account",
+      "outcome": "runtime",
+      "detail": "account not open",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:8",
+      "kind": "raises",
+      "lineno": 52,
+      "test": "test_cannot_open_already_open_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:0",
+      "kind": "raises",
+      "lineno": 6,
+      "test": "test_cannot_deposit_non_numeric_amount",
+      "outcome": "runtime",
+      "detail": "TypeError: '<=' not supported between instances of 'str' and 'int'",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:1",
+      "kind": "raises",
+      "lineno": 13,
+      "test": "test_cannot_withdraw_non_numeric_amount",
+      "outcome": "runtime",
+      "detail": "TypeError: '<=' not supported between instances of 'str' and 'int'",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:2",
+      "kind": "raises",
+      "lineno": 20,
+      "test": "test_cannot_close_already_closed_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:3",
+      "kind": "raises",
+      "lineno": 27,
+      "test": "test_cannot_get_balance_on_closed_account",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:4",
+      "kind": "raises",
+      "lineno": 34,
+      "test": "test_cannot_withdraw_more_than_balance",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:5",
+      "kind": "raises",
+      "lineno": 40,
+      "test": "test_cannot_withdraw_negative_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:6",
+      "kind": "raises",
+      "lineno": 46,
+      "test": "test_cannot_deposit_negative_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 0,
+    "stdout_tail": "...............                                                          [100%]\n15 passed in 0.03s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py",
+      "test_example_i2.py"
+    ]
+  }
+}

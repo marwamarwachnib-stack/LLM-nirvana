@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "scripts/run.py",
+    "pilot",
+    "--tools",
+    "dsc-1.3b,dsc-6.7b,cl-7b"
+  ],
+  "args": {
+    "set": "pilot",
+    "tools": "dsc-1.3b,dsc-6.7b,cl-7b",
+    "idle_s": 300,
+    "allow_no_rapl": false,
+    "allow_battery": false
+  },
+  "started": "2026-10-26T13:54:24+00:00"
+}

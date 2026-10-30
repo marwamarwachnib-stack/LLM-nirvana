@@ -1,0 +1,186 @@
+{
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "iteration": 2,
+  "refactored_module": false,
+  "mccabe_max": 5,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 0,
+    "num_branches": null,
+    "covered_branches": 0,
+    "missing_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "missing_branches": null,
+    "stmt_cov": 0.0,
+    "branch_cov": null,
+    "stmt_branch_cov": 0.0
+  },
+  "errors": {
+    "n_files": 2,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      },
+      "test_example_i2.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 14,
+    "n_judged": 14,
+    "n_pass": 0,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 14,
+    "n_not_executed": 0,
+    "incorrect_pct": 100.0,
+    "incorrect_breakdown_pct": {
+      "assertion": 0.0,
+      "try_except": 0.0,
+      "runtime": 100.0
+    }
+  },
+  "new_file": {
+    "name": "test_example_i2.py",
+    "errors_normalized": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "errors_raw": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "n_import_rewrites": 0
+  },
+  "llm": {
+    "prompt_tokens": 1193,
+    "output_tokens": 1243,
+    "prompt_eval_s": 12.795132,
+    "eval_s": 94.644306,
+    "load_s": 0.003399604,
+    "total_s": 107.598442849,
+    "tokens_per_s": 13.13,
+    "done_reason": "stop",
+    "hit_num_predict": false,
+    "possible_ctx_overflow": false,
+    "template": "improve_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T18:23:04+00:00",
+      "wall_s": 107.6,
+      "codecarbon": {
+        "cpu_wh": 0.4777223613442495,
+        "ram_wh": 0.2986609952722371,
+        "gpu_wh": 0.0,
+        "total_wh": 0.7763833566164865,
+        "cpu_power_w": 15.854565632580869,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 0.00012853259383792918,
+        "duration_s": 107.60479949100045,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.47771733361111113,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.07903125444444445,
+        "msr:intel-rapl:0:package-0": 0.47771733361111113,
+        "msr:intel-rapl:0:0:core": 0.43668741972222225,
+        "msr:intel-rapl:0:1:uncore": 1.746111111111111e-06,
+        "msr:intel-rapl:0:2:dram": 0.07903132222222223
+      },
+      "pkg_temp_c": {
+        "mean": 63.2,
+        "max": 86.0
+      },
+      "cpu_mhz": {
+        "mean": 2038.1,
+        "max": 3370.7
+      },
+      "cpu_util_pct": {
+        "mean": 50.3,
+        "max": 52.8
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T18:24:52+00:00",
+      "wall_s": 1.371,
+      "codecarbon": {
+        "cpu_wh": 0.005587775581329668,
+        "ram_wh": 0.003814405211106634,
+        "gpu_wh": 0.0,
+        "total_wh": 0.009402180792436302,
+        "cpu_power_w": 7.10792237124318,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.5565592367302072e-06,
+        "duration_s": 1.3744677630002116,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.005582481388888889,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00017459416666666666,
+        "msr:intel-rapl:0:package-0": 0.0055753775,
+        "msr:intel-rapl:0:0:core": 0.005227919166666667,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.00017472972222222223
+      },
+      "pkg_temp_c": {
+        "mean": 68.0,
+        "max": 68.0
+      },
+      "cpu_mhz": {
+        "mean": 2464.6,
+        "max": 2464.6
+      },
+      "cpu_util_pct": {
+        "mean": 15.4,
+        "max": 15.4
+      }
+    }
+  },
+  "cooldown_s": 4.0
+}

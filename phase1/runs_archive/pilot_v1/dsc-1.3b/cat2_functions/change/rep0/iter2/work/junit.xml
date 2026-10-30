@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="24" skipped="0" tests="25" time="0.251" timestamp="2026-10-25T18:27:12.093648+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_find_fewest_coins_1" time="0.004"><failure message="assert [1, 5, 5] == [5, 5]&#10;  &#10;  At index 0 diff: 1 != 5&#10;  Left contains one more item: 5&#10;  Use -v to get more diff">def test_find_fewest_coins_1():
+        coins = [1, 2, 5]
+        target = 11
+&gt;       assert find_fewest_coins(coins, target) == [5, 5]
+E       assert [1, 5, 5] == [5, 5]
+E         
+E         At index 0 diff: 1 != 5
+E         Left contains one more item: 5
+E         Use -v to get more diff
+
+test_example_i1.py:7: AssertionError</failure></testcase><testcase classname="test_example_i1" name="test_find_fewest_coins_2" time="0.002"><failure message="assert [1, 5] == [2, 2, 2]&#10;  &#10;  At index 0 diff: 1 != 2&#10;  Right contains one more item: 2&#10;  Use -v to get more diff">def test_find_fewest_coins_2():
+        coins = [1, 2, 5]
+        target = 6
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2]
+E       assert [1, 5] == [2, 2, 2]
+E         
+E         At index 0 diff: 1 != 2
+E         Right contains one more item: 2
+E         Use -v to get more diff
+
+test_example_i1.py:12: AssertionError</failure></testcase><testcase classname="test_example_i1" name="test_find_fewest_coins_3" time="0.001"><failure message="assert [5, 5] == [2, 2, 2, 2]&#10;  &#10;  At index 0 diff: 5 != 2&#10;  Right contains 2 more items, first extra item: 2&#10;  Use -v to get more diff">def test_find_fewest_coins_3():
+        coins = [1, 2, 5]
+        target = 10
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 2]
+E       assert [5, 5] == [2, 2, 2, 2]
+E         
+E         At index 0 diff: 5 != 2
+E         Right contains 2 more items, first extra item: 2
+E         Use -v to get more diff
+
+test_example_i1.py:17: AssertionError</failure></testcase><testcase classname="test_example_i1" name="test_find_fewest_coins_4" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">def test_find_fewest_coins_4():
+        coins = [1, 2, 5]
+        target = 1
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:22: Failed</failure></testcase><testcase classname="test_example_i1" name="test_find_fewest_coins_5" time="0.001" /><testcase classname="test_example_i1" name="test_find_fewest_coins_6" time="0.001"><failure message="assert [2, 5] == [2, 2, 2, 2, 2]&#10;  &#10;  At index 1 diff: 5 != 2&#10;  Right contains 3 more items, first extra item: 2&#10;  Use -v to get more diff">def test_find_fewest_coins_6():
+        coins = [1, 2, 5]
+        target = 7
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 2, 2]
+E       assert [2, 5] == [2, 2, 2, 2, 2]
+E         
+E         At index 1 diff: 5 != 2
+E         Right contains 3 more items, first extra item: 2
+E         Use -v to get more diff
+
+test_example_i1.py:33: AssertionError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_7" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_7():
+        coins = [1, 2, 5]
+        target = 8
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 2]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:4: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_8" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_8():
+        coins = [1, 2, 5]
+        target = 9
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:9: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_9" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_9():
+        coins = [1, 2, 5]
+        target = 10
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 2, 2]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:14: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_10" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_10():
+        coins = [1, 2, 5]
+        target = 11
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 2, 3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:19: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_11" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_11():
+        coins = [1, 2, 5]
+        target = 12
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 2, 3, 3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:24: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_12" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_12():
+        coins = [1, 2, 5]
+        target = 13
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 3, 3, 3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:29: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_13" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_13():
+        coins = [1, 2, 5]
+        target = 14
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 3, 3, 4]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:34: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_14" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_14():
+        coins = [1, 2, 5]
+        target = 15
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 3, 4, 4]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:39: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_15" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_15():
+        coins = [1, 2, 5]
+        target = 16
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 4, 4, 4]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:44: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_16" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_16():
+        coins = [1, 2, 5]
+        target = 17
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 4, 4, 5]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:49: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_17" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_17():
+        coins = [1, 2, 5]
+        target = 18
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 4, 5, 5]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:54: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_18" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_18():
+        coins = [1, 2, 5]
+        target = 19
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 4, 5, 5]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:59: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_19" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_19():
+        coins = [1, 2, 5]
+        target = 20
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 5, 5, 5]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:64: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_20" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_20():
+        coins = [1, 2, 5]
+        target = 21
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 5, 5, 6]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:69: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_21" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_21():
+        coins = [1, 2, 5]
+        target = 22
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 5, 6, 6]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:74: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_22" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_22():
+        coins = [1, 2, 5]
+        target = 23
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 6, 6, 6]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:79: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_23" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_23():
+        coins = [1, 2, 5]
+        target = 24
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 6, 6, 7]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:84: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_24" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_24():
+        coins = [1, 2, 5]
+        target = 25
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 6, 7, 7]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:89: NameError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins_25" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_find_fewest_coins_25():
+        coins = [1, 2, 5]
+        target = 26
+&gt;       assert find_fewest_coins(coins, target) == [2, 2, 7, 7, 7]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i2.py:94: NameError</failure></testcase></testsuite></testsuites>

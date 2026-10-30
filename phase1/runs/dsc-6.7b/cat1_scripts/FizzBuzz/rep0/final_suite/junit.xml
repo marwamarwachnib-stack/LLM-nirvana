@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.104" timestamp="2026-10-26T14:25:34.401077+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.010"><failure message="AssertionError: assert 1 == 2&#10; +  where 1 = &lt;MagicMock name='input' id='131691385144864'&gt;.call_count">mock_input = &lt;MagicMock name='input' id='131691385144864'&gt;
+
+    @patch('builtins.input', side_effect=['3 5 15', '2 4 8'])
+    def test_fizzbuzz(mock_input):
+        import example as fizzbuzz  # assuming the script name is fizzbuzz.py
+    
+&gt;       assert mock_input.call_count == 2
+E       AssertionError: assert 1 == 2
+E        +  where 1 = &lt;MagicMock name='input' id='131691385144864'&gt;.call_count
+
+test_example_i1.py:8: AssertionError</failure></testcase></testsuite></testsuites>

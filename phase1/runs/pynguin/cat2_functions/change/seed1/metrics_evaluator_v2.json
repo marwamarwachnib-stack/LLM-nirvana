@@ -1,0 +1,145 @@
+{
+  "tool": "pynguin",
+  "category": "cat2_functions",
+  "program": "change",
+  "seed": 1,
+  "iteration": 1,
+  "pynguin_returncode": 0,
+  "pynguin_produced_tests": true,
+  "pynguin_worker_restarts": 1,
+  "pynguin_memory_max": "6G",
+  "pynguin_killed": false,
+  "mccabe_max": 8,
+  "coverage": {
+    "num_statements": 24,
+    "covered_lines": 24,
+    "num_branches": 14,
+    "covered_branches": 14,
+    "missing_lines": [],
+    "missing_branches": [],
+    "stmt_cov": 100.0,
+    "branch_cov": 100.0,
+    "stmt_branch_cov": 100.0
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 0
+  },
+  "tests": {
+    "n_tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 2,
+    "n_judged": 2,
+    "n_pass": 2,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 0,
+    "n_not_executed": 0,
+    "incorrect_pct": 0.0,
+    "incorrect_breakdown_pct": {
+      "assertion": null,
+      "try_except": null,
+      "runtime": null
+    }
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T18:05:27+00:00",
+      "wall_s": 175.337,
+      "codecarbon": {
+        "cpu_wh": 0.855864311357566,
+        "ram_wh": 0.4868900305389009,
+        "gpu_wh": 0.0,
+        "total_wh": 1.342754341896466,
+        "cpu_power_w": 17.516564721445295,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 0.00022229700956398566,
+        "duration_s": 175.34282570899995,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.8558569127777778,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.01639267861111111,
+        "msr:intel-rapl:0:package-0": 0.8558595236111111,
+        "msr:intel-rapl:0:0:core": 0.8148061111111111,
+        "msr:intel-rapl:0:1:uncore": 4.035e-06,
+        "msr:intel-rapl:0:2:dram": 0.01639293277777778
+      },
+      "pkg_temp_c": {
+        "mean": 76.9,
+        "max": 88.0
+      },
+      "cpu_mhz": {
+        "mean": 1795.8,
+        "max": 3776.3
+      },
+      "cpu_util_pct": {
+        "mean": 12.7,
+        "max": 15.3
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T18:08:22+00:00",
+      "wall_s": 1.062,
+      "codecarbon": {
+        "cpu_wh": 0.004134005807203064,
+        "ram_wh": 0.0029598557055528036,
+        "gpu_wh": 0.0,
+        "total_wh": 0.007093861512755869,
+        "cpu_power_w": 5.884959754104962,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.1744100550212723e-06,
+        "duration_s": 1.066853930000434,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.0041290177777777775,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.0001344975,
+        "msr:intel-rapl:0:package-0": 0.0041290177777777775,
+        "msr:intel-rapl:0:0:core": 0.0038623625,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.00013451444444444446
+      },
+      "pkg_temp_c": {
+        "mean": 73.0,
+        "max": 73.0
+      },
+      "cpu_mhz": {
+        "mean": 2888.1,
+        "max": 2888.1
+      },
+      "cpu_util_pct": {
+        "mean": 13.0,
+        "max": 13.0
+      }
+    }
+  },
+  "cooldown_s": 2.0,
+  "evaluator_version": 2,
+  "reevaluated_from_version": 1
+}

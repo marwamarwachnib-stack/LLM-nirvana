@@ -1,0 +1,11 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 5,
+    "rule": "test-blocks-concatenated",
+    "n_test_blocks": 5,
+    "n_other_blocks": 0
+  },
+  "import_rewrites": [],
+  "evaluator_version": 3,
+  "refactored_module_from_response": false
+}

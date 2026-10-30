@@ -1,0 +1,277 @@
+{
+  "sites": [
+    {
+      "site": "test_example:0",
+      "kind": "assert",
+      "lineno": 19,
+      "test": "test_0",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:1",
+      "kind": "raises",
+      "lineno": 20,
+      "test": "test_0",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:2",
+      "kind": "assert",
+      "lineno": 27,
+      "test": "test_1",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:3",
+      "kind": "assert",
+      "lineno": 29,
+      "test": "test_1",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:4",
+      "kind": "raises",
+      "lineno": 30,
+      "test": "test_1",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:5",
+      "kind": "assert",
+      "lineno": 37,
+      "test": "test_2",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:6",
+      "kind": "assert",
+      "lineno": 38,
+      "test": "test_2",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:7",
+      "kind": "assert",
+      "lineno": 40,
+      "test": "test_2",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:8",
+      "kind": "assert",
+      "lineno": 46,
+      "test": "test_3",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:9",
+      "kind": "assert",
+      "lineno": 47,
+      "test": "test_3",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:10",
+      "kind": "raises",
+      "lineno": 48,
+      "test": "test_3",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:11",
+      "kind": "assert",
+      "lineno": 55,
+      "test": "test_4",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:12",
+      "kind": "assert",
+      "lineno": 56,
+      "test": "test_4",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:13",
+      "kind": "raises",
+      "lineno": 57,
+      "test": "test_4",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:14",
+      "kind": "assert",
+      "lineno": 63,
+      "test": "test_5",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:15",
+      "kind": "raises",
+      "lineno": 64,
+      "test": "test_5",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:16",
+      "kind": "assert",
+      "lineno": 71,
+      "test": "test_6",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:17",
+      "kind": "assert",
+      "lineno": 72,
+      "test": "test_6",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:18",
+      "kind": "raises",
+      "lineno": 73,
+      "test": "test_6",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:19",
+      "kind": "assert",
+      "lineno": 79,
+      "test": "test_7",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:20",
+      "kind": "raises",
+      "lineno": 80,
+      "test": "test_7",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:21",
+      "kind": "assert",
+      "lineno": 86,
+      "test": "test_8",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:22",
+      "kind": "raises",
+      "lineno": 87,
+      "test": "test_8",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:23",
+      "kind": "assert",
+      "lineno": 94,
+      "test": "test_9",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:24",
+      "kind": "assert",
+      "lineno": 96,
+      "test": "test_9",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:25",
+      "kind": "assert",
+      "lineno": 103,
+      "test": "test_10",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:26",
+      "kind": "assert",
+      "lineno": 104,
+      "test": "test_10",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example:27",
+      "kind": "raises",
+      "lineno": 105,
+      "test": "test_10",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 0,
+    "stdout_tail": "...........                                                              [100%]\n11 passed in 0.03s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example.py"
+    ]
+  }
+}

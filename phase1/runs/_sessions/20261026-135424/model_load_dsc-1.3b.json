@@ -1,0 +1,43 @@
+{
+  "phase": "model_load",
+  "started": "2026-10-26T13:59:26+00:00",
+  "wall_s": 0.438,
+  "codecarbon": {
+    "cpu_wh": 0.0028937056482962117,
+    "ram_wh": 0.001224818838889203,
+    "gpu_wh": 0.0,
+    "total_wh": 0.0041185244871854145,
+    "cpu_power_w": 11.812963510967371,
+    "ram_power_w": 10.0,
+    "emissions_kgco2eq": 6.818340844270069e-07,
+    "duration_s": 0.44165757699920505,
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "tracking_mode": "machine",
+    "codecarbon_version": "3.3.1",
+    "country_iso_code": "PRT"
+  },
+  "rapl_raw_wh": {
+    "mmio:intel-rapl-mmio:0:package-0": 0.0028827,
+    "mmio:intel-rapl-mmio:0:0:dram": 0.00015697861111111112,
+    "msr:intel-rapl:0:package-0": 0.0028827,
+    "msr:intel-rapl:0:0:core": 0.002707631388888889,
+    "msr:intel-rapl:0:1:uncore": 3.7333055555555554e-05,
+    "msr:intel-rapl:0:2:dram": 0.0001568938888888889
+  },
+  "pkg_temp_c": null,
+  "cpu_mhz": null,
+  "cpu_util_pct": null,
+  "ollama": {
+    "model": "deepseek-coder:1.3b-instruct",
+    "created_at": "2026-10-26T13:59:27.006710565Z",
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 437279757,
+    "load_duration": 1915427,
+    "prompt_eval_count": 21,
+    "prompt_eval_cached_count": 2,
+    "prompt_eval_duration": 213211000,
+    "eval_count": 1,
+    "eval_duration": 1000
+  }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="12" time="0.085" timestamp="2026-10-25T20:04:05.293147+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_bank_account_open_close" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw" time="0.001"><failure message="ValueError: amount must be less than balance">def test_bank_account_deposit_withdraw():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+        try:
+            _sa_v = account.get_balance() == 100
+        except AssertionError as _sa_e:
+            _soft_assert.record('test_example_i1:3', 'assertion', _sa_e)
+        except Exception as _sa_e:
+            _soft_assert.record('test_example_i1:3', 'runtime', _sa_e)
+        else:
+            _soft_assert.record('test_example_i1:3', 'pass' if _sa_v else 'assertion')
+        account.withdraw(50)
+        try:
+            _sa_v = account.get_balance() == 50
+        except AssertionError as _sa_e:
+            _soft_assert.record('test_example_i1:4', 'assertion', _sa_e)
+        except Exception as _sa_e:
+            _soft_assert.record('test_example_i1:4', 'runtime', _sa_e)
+        else:
+            _soft_assert.record('test_example_i1:4', 'pass' if _sa_v else 'assertion')
+&gt;       account.withdraw(100)
+
+test_example_i1.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x75d0e06c1880&gt;, amount = 100
+
+    def withdraw(self, amount):
+        with self.lock:
+            if not self.is_open:
+                raise ValueError('account not open')
+            if amount &lt;= 0:
+                raise ValueError('amount must be greater than 0')
+            if amount &gt; self.balance:
+&gt;               raise ValueError('amount must be less than balance')
+E               ValueError: amount must be less than balance
+
+example.py:37: ValueError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_amount" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_balance" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_balance" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state" time="0.006" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_2" time="0.003" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_3" time="0.002" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_4" time="0.002" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_5" time="0.002" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_6" time="0.003" /></testsuite></testsuites>

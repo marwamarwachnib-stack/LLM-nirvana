@@ -1,0 +1,29 @@
+.venv/
+.venv-pynguin/
+.venv-run/
+__pycache__/
+*.tmp
+# bulky per-run working files (metrics, manifests, prompts, responses and final suites stay tracked)
+runs*/**/work/_soft/
+runs*/**/work/.coverage
+runs*/**/work/__pycache__/
+runs*/**/energy_*/emissions.csv.bak
+runs*/ollama_server.log
+# Pynguin's own debug log (~6 MB per seed, ~1.5 GB for the main study): kept on disk, not in git;
+# restarts/kills/return code are recorded in each run's metrics.json
+runs*/**/pynguin.log
+# rebuilt projects and their dependencies (scripts/prepare_datasets.py); the manifests stay tracked
+datasets/*/archives/
+datasets/*/repos/
+datasets/*/src/
+datasets/*/overlay/
+datasets/*/data/
+datasets/*/deps/
+datasets/*/*.tmp
+# make smoke: quick checks, not results
+runs_smoke_*/
+results_smoke_*/
+datasets/*/constraints.txt
+datasets/*/build-constraints.txt
+.venv-run-cov727/
+.venv-pynguin-033/

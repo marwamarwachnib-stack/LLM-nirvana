@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="15" time="0.209" timestamp="2026-10-25T22:11:35.567724+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_bank_account_open_close" time="0.004" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_amount" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_deposit_withdraw_invalid_balance" time="0.001" /><testcase classname="test_example_i1" name="test_bank_account_concurrent_access" time="0.002"><failure message="assert 100 == 0&#10; +  where 100 = get_balance()&#10; +    where get_balance = &lt;example.BankAccount object at 0x7ec49fd3b290&gt;.get_balance">def test_bank_account_concurrent_access():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       assert account.get_balance() == 0
+E       assert 100 == 0
+E        +  where 100 = get_balance()
+E        +    where get_balance = &lt;example.BankAccount object at 0x7ec49fd3b290&gt;.get_balance
+
+test_example_i1.py:62: AssertionError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_balance" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_balance():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:84: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state" time="0.002"><failure message="ValueError: account not open">def test_bank_account_concurrent_access_invalid_state():
+        account = BankAccount()
+    
+        def open_thread():
+            account.open()
+    
+        def close_thread():
+            account.close()
+    
+        t1 = Thread(target=open_thread)
+        t2 = Thread(target=close_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+        with pytest.raises(ValueError):
+            account.get_balance()
+&gt;       account.close()
+
+test_example_i1.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;example.BankAccount object at 0x7ec49fdb82f0&gt;
+
+    def close(self):
+        if not self.is_open:
+&gt;           raise ValueError('account not open')
+E           ValueError: account not open
+
+example.py:42: ValueError</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_2" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_2():
+        account = BankAccount()
+        account.open()
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:127: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_3" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_3():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:150: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_4" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_4():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:173: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_5" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_5():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:196: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_6" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_6():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:219: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_7" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_7():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:242: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_8" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">def test_bank_account_concurrent_access_invalid_state_8():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+    
+        def deposit_thread():
+            account.deposit(50)
+    
+        def withdraw_thread():
+            account.withdraw(50)
+    
+        t1 = Thread(target=deposit_thread)
+        t2 = Thread(target=withdraw_thread)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_example_i1.py:265: Failed</failure></testcase><testcase classname="test_example_i1" name="test_bank_account_concurrent_access_invalid_state_9" time="0.001" /></testsuite></testsuites>

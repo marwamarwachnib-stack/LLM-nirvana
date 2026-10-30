@@ -1,0 +1,62 @@
+{
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "......F.                                                                 [100%]\n=================================== FAILURES ===================================\n______________________________ test_close_account ______________________________\n\n    def test_close_account():\n        account = BankAccount()\n        account.open()\n        account.deposit(100)\n        account.close()\n        assert account.is_open == False\n>       assert account.get_balance() == 100\n               ^^^^^^^^^^^^^^^^^^^^^\n\ntest_example_i1.py:47: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <example.BankAccount object at 0x7b60805e13a0>\n\n    def get_balance(self):\n        with self.lock:\n            if not self.is_open:\n>               raise ValueError('account not open')\nE               ValueError: account not open\n\nexample.py:13: ValueError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_close_account - ValueError: account not open\n1 failed, 7 passed in 0.13s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "coverage",
+      "run",
+      "--rcfile=.coveragerc",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  },
+  "junit": {
+    "test_example_i1::test_open_account": {
+      "status": "passed"
+    },
+    "test_example_i1::test_deposit_into_open_account": {
+      "status": "passed"
+    },
+    "test_example_i1::test_withdraw_from_open_account": {
+      "status": "passed"
+    },
+    "test_example_i1::test_cannot_deposit_negative_amount": {
+      "status": "passed"
+    },
+    "test_example_i1::test_cannot_withdraw_more_than_balance": {
+      "status": "passed"
+    },
+    "test_example_i1::test_cannot_withdraw_less_than_zero": {
+      "status": "passed"
+    },
+    "test_example_i1::test_close_account": {
+      "status": "failed",
+      "message": "ValueError: account not open"
+    },
+    "test_example_i1::test_cannot_open_already_open_account": {
+      "status": "passed"
+    }
+  },
+  "file_errors": {
+    "test_example_i1.py": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    }
+  }
+}

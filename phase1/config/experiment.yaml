@@ -1,0 +1,77 @@
+# Phase 1 experiment configuration. Every run copies the resolved values into its manifest.json.
+# Prompt templates are filled with plain str.replace (code contains braces), placeholders: {code} {numbered_code} {tests} {coverage} {missed}
+
+dataset_root: "../0_100 LOC"          # relative to phase1/, read-only
+
+program_sets:
+  pilot:
+    - cat1_scripts/FizzBuzz
+    - cat2_functions/change
+    - cat3_classes/bank-account
+  small: auto                          # all sub-folders of cat1_scripts, cat2_functions, cat3_classes
+  p2: prepared                         # 100_300 LOC p2: datasets/p2/manifest.json (scripts/prepare_datasets.py p2)
+  p1: prepared                         # 100_300 LOC p1: datasets/p1/manifest.json (scripts/prepare_datasets.py p1)
+
+ollama:
+  host: "http://127.0.0.1:11434"
+  keep_alive: "60m"
+  request_timeout_s: 3600
+  cold_cache_per_call: true            # unload + empty reload before every generation: makes T=0 answers reproducible
+                                       # (a warm prompt cache changes the answer; PLAN.md §13.10). Load energy kept separate.
+
+decoding:                              # passed verbatim as Ollama "options"
+  temperature: 0.0
+  seed: 42
+  top_k: 40
+  top_p: 0.9
+  num_ctx: 8192
+  num_predict: 2048
+  num_thread: auto                     # auto = physical cores of the machine (4 on the i7-8550U laptop)
+  num_gpu: 0                           # CPU only
+
+# Main study (decision 13): three ~7B code-specialised instruct models, all Q4_0 (the pilot's quantization)
+llm_tools:
+  dsc-6.7b: {model: "deepseek-coder:6.7b-instruct"}
+  cl-7b:    {model: "codellama:7b-instruct"}
+  qwen-7b:  {model: "qwen2.5-coder:7b-instruct-q4_0"}
+  dsc-1.3b: {model: "deepseek-coder:1.3b-instruct"}   # pilot only (not the same size as the others)
+
+main_tools: [pynguin, dsc-6.7b, cl-7b, qwen-7b]
+# sets without Pynguin by default: the paper runs only ChatGPT on p1 (Table 3), whose README says its files
+# "didn't work with Pynguin" (§2.2: Pynguin does not handle native code) (decision 18); --tools pynguin still runs it
+llm_only_sets: [p1]
+
+repetitions:
+  llm: 5                               # independent runs of each LLM job (rep0..rep4); rep0 = quality results
+  test_execution: 5                    # timed runs of every generated suite (scripts/execute.py)
+
+prompts:
+  system: basic_system.txt
+  basic_user: basic_user.txt           # Fig. 1 verbatim (alternative: basic_user_alt_s2.4.txt)
+  improve_user: improve_user.txt       # Fig. 2 verbatim
+
+iterations:
+  max: 5                               # paper: at most 5
+  stop_when_no_improvement: true       # statement coverage did not increase vs previous iteration
+  suite: cumulative                    # each iteration adds test_example_i<k>.py next to the previous ones
+
+pynguin:
+  seeds: [0, 1, 2, 3, 4]
+  args: ["--maximum-search-time", "600", "-v"]   # 600 s = Pynguin's own fallback default; stated explicitly
+  timeout_s: 3600                      # Pynguin 0.34 adds post-processing and mutation analysis after the search, and
+                                       # writes its tests only at the end: p2 sample32 took 756 s with a 60 s search
+  memory_max: "6G"                     # cgroup cap for the whole Pynguin process tree (systemd-run --user --scope)
+  memory_swap_max: "0"                 # no swapping (it distorts time/energy and starved the machine on 2026-10-25)
+
+evaluation:
+  per_test_timeout_s: 10
+  per_file_timeout_s: 300
+
+energy:
+  country_iso_code: "PRT"
+  measure_power_secs: 1
+  idle_baseline_s: 300
+  cooldown_temp_c: 55
+  cooldown_max_s: 60
+
+shuffle_seed: 2024                     # order of programs inside a tool block

@@ -1,0 +1,152 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 14,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "raises",
+      "lineno": 9,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 22,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "raises",
+      "lineno": 17,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 29,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "assert",
+      "lineno": 36,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:6",
+      "kind": "assert",
+      "lineno": 43,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:0",
+      "kind": "assert",
+      "lineno": 8,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:1",
+      "kind": "raises",
+      "lineno": 3,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:2",
+      "kind": "assert",
+      "lineno": 16,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:3",
+      "kind": "raises",
+      "lineno": 11,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:4",
+      "kind": "assert",
+      "lineno": 23,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:5",
+      "kind": "assert",
+      "lineno": 30,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:6",
+      "kind": "assert",
+      "lineno": 37,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    }
+  ],
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "FF                                                                       [100%]\n=================================== FAILURES ===================================\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n>       capturedOutput = pytest.monkeypatch.stdout\n                         ^^^^^^^^^^^^^^^^^^\nE       AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?\n\ntest_example_i1.py:7: AttributeError\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n>       with _soft_assert.raises('test_example_i2:1', pytest.raises(SystemExit)):\n                                                      ^^^^^^\nE       NameError: name 'pytest' is not defined\n\ntest_example_i2.py:4: NameError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_fizzbuzz - AttributeError: module 'pytest' ha...\nFAILED test_example_i2.py::test_fizzbuzz - NameError: name 'pytest' is not de...\n2 failed in 0.03s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py",
+      "test_example_i2.py"
+    ]
+  }
+}

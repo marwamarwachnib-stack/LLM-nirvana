@@ -1,0 +1,46 @@
+from example import *
+def test_cannot_deposit_non_numeric_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.deposit('abc')
+
+def test_cannot_withdraw_non_numeric_amount():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    with pytest.raises(ValueError):
+        account.withdraw('abc')
+
+def test_cannot_close_already_closed_account():
+    account = BankAccount()
+    account.open()
+    account.close()
+    with pytest.raises(ValueError):
+        account.close()
+
+def test_cannot_get_balance_on_closed_account():
+    account = BankAccount()
+    account.open()
+    account.close()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+def test_cannot_withdraw_more_than_balance():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    with pytest.raises(ValueError):
+        account.withdraw(150)
+
+def test_cannot_withdraw_negative_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.withdraw(-100)
+
+def test_cannot_deposit_negative_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.deposit(-100)

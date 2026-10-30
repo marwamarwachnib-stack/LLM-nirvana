@@ -1,0 +1,6 @@
+[session 20261025-162917] idle baseline 300s (do not use the laptop)...
+  [pynguin] cat3_classes/bank-account seed0: rc=0 tests=True stmt=100.0 branch=100.0 gen=606s
+  [pynguin] cat3_classes/bank-account seed1: rc=0 tests=True stmt=100.0 branch=100.0 gen=606s
+  [pynguin] cat3_classes/bank-account seed2: rc=0 tests=True stmt=100.0 branch=100.0 gen=605s
+  [pynguin] cat3_classes/bank-account seed3: rc=0 tests=True stmt=100.0 branch=100.0 gen=606s
+  [pynguin] cat3_classes/bank-account seed4: rc=0 tests=True stmt=100.0 branch=100.0 gen=606s

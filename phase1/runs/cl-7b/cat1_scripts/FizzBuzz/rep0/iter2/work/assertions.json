@@ -1,0 +1,116 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 8,
+      "test": "test_fizzbuzz",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "raises",
+      "lineno": 13,
+      "test": "test_fizzbuzz_with_invalid_input",
+      "outcome": "runtime",
+      "detail": "NameError: name 'fizzbuzz' is not defined",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "raises",
+      "lineno": 19,
+      "test": "test_fizzbuzz_with_empty_input",
+      "outcome": "runtime",
+      "detail": "NameError: name 'fizzbuzz' is not defined",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "assert",
+      "lineno": 27,
+      "test": "test_fizzbuzz_with_single_input",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 34,
+      "test": "test_fizzbuzz_with_multiple_inputs",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:0",
+      "kind": "assert",
+      "lineno": 5,
+      "test": "test_fizzbuzz_with_mixed_input",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:1",
+      "kind": "assert",
+      "lineno": 12,
+      "test": "test_fizzbuzz_with_non_multiples",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:2",
+      "kind": "assert",
+      "lineno": 19,
+      "test": "test_fizzbuzz_with_multiples_of_3_but_not_5",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:3",
+      "kind": "assert",
+      "lineno": 26,
+      "test": "test_fizzbuzz_with_multiples_of_5_but_not_3",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i2:4",
+      "kind": "assert",
+      "lineno": 33,
+      "test": "test_fizzbuzz_with_multiples_of_3_and_5",
+      "outcome": "not_reached",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    }
+  ],
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "F..FFFFFFF                                                               [100%]\n=================================== FAILURES ===================================\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n        num = [1, 2, 3]\n        expected = ['Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:7: NameError\n_______________________ test_fizzbuzz_with_single_input ________________________\n\n    def test_fizzbuzz_with_single_input():\n        num = [1]\n        expected = ['Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:30: NameError\n______________________ test_fizzbuzz_with_multiple_inputs ______________________\n\n    def test_fizzbuzz_with_multiple_inputs():\n        num = [1, 2, 3, 4, 5]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i1.py:43: NameError\n________________________ test_fizzbuzz_with_mixed_input ________________________\n\n    def test_fizzbuzz_with_mixed_input():\n        num = [1, -2, 3, 4, 5]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i2.py:6: NameError\n_______________________ test_fizzbuzz_with_non_multiples _______________________\n\n    def test_fizzbuzz_with_non_multiples():\n        num = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i2.py:19: NameError\n_________________ test_fizzbuzz_with_multiples_of_3_but_not_5 __________________\n\n    def test_fizzbuzz_with_multiples_of_3_but_not_5():\n        num = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i2.py:32: NameError\n_________________ test_fizzbuzz_with_multiples_of_5_but_not_3 __________________\n\n    def test_fizzbuzz_with_multiples_of_5_but_not_3():\n        num = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i2.py:45: NameError\n___________________ test_fizzbuzz_with_multiples_of_3_and_5 ____________________\n\n    def test_fizzbuzz_with_multiples_of_3_and_5():\n        num = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']\n>       actual = fizzbuzz(num)\n                 ^^^^^^^^\nE       NameError: name 'fizzbuzz' is not defined\n\ntest_example_i2.py:58: NameError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_fizzbuzz - NameError: name 'fizzbuzz' is not ...\nFAILED test_example_i1.py::test_fizzbuzz_with_single_input - NameError: name ...\nFAILED test_example_i1.py::test_fizzbuzz_with_multiple_inputs - NameError: na...\nFAILED test_example_i2.py::test_fizzbuzz_with_mixed_input - NameError: name '...\nFAILED test_example_i2.py::test_fizzbuzz_with_non_multiples - NameError: name...\nFAILED test_example_i2.py::test_fizzbuzz_with_multiples_of_3_but_not_5 - Name...\nFAILED test_example_i2.py::test_fizzbuzz_with_multiples_of_5_but_not_3 - Name...\nFAILED test_example_i2.py::test_fizzbuzz_with_multiples_of_3_and_5 - NameErro...\n8 failed, 2 passed in 0.05s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py",
+      "test_example_i2.py"
+    ]
+  }
+}

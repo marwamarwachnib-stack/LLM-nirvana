@@ -1,0 +1,59 @@
+''' #1
+https://open.kattis.com/problems/fizzbuzz #2
+''' #3
+#4
+num = list(map(int,input().split())) #5
+for i in range(1,num[2]+1): #6
+    if i%num[0]==0 and i%num[1] == 0: #7
+        key = 'FizzBuzz' #8
+    elif i%num[1]==0: #9
+        key = 'Buzz' #10
+    elif i%num[0] == 0: #11
+        key = 'Fizz' #12
+    else: #13
+        key = i #14
+    print(key) #15
+#16
+The comments on each line indicate line number
+
+import pytest
+from io import StringIO
+import sys
+
+def test_fizzbuzz():
+    capturedOutput = io.StringIO()          
+    sys.stdout = capturedOutput
+
+    fizzbuzz(1, 2, 10)
+
+    sys.stdout = sys.__stdout__
+
+    assert capturedOutput.getvalue() == """
+    1
+    2
+    Fizz
+    4
+    Buzz
+    Fizz
+    7
+    8
+    Fizz
+    Buzz
+    """
+
+def test_fizzbuzz_edge_cases():
+    capturedOutput = io.StringIO()          
+    sys.stdout = capturedOutput
+
+    fizzbuzz(1, 3, 1)
+
+    sys.stdout = sys.__stdout__
+
+    assert capturedOutput.getvalue() == """
+    1
+    """
+
+
+The above test cases only give 0% coverage
+The following lines from the code file are not being covered given by the line numbers - 5-12, 14-15
+Please write more test cases to improve the coverage of the unit tests

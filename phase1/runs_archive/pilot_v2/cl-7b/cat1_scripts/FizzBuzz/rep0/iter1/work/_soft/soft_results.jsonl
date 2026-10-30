@@ -1,0 +1,2 @@
+{"site": "test_example_i1:1", "outcome": "runtime", "detail": "NameError: name 'fizzbuzz' is not defined"}
+{"site": "test_example_i1:2", "outcome": "runtime", "detail": "NameError: name 'fizzbuzz' is not defined"}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.043" timestamp="2026-10-25T22:00:13.879712+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.002"><failure message="AttributeError: module 'example' has no attribute 'main'">mock_input = &lt;MagicMock name='input' id='130019904160208'&gt;
+
+    @patch('builtins.input', side_effect=['3 5 15', '2 4 8'])
+    def test_fizzbuzz(mock_input):
+        import example as fizzbuzz
+        try:
+            _sa_v = mock_input.call_count == 2
+        except AssertionError as _sa_e:
+            _soft_assert.record('test_example_i1:0', 'assertion', _sa_e)
+        except Exception as _sa_e:
+            _soft_assert.record('test_example_i1:0', 'runtime', _sa_e)
+        else:
+            _soft_assert.record('test_example_i1:0', 'pass' if _sa_v else 'assertion')
+        try:
+            _sa_v = mock_input.side_effect == ['3 5 15', '2 4 8']
+        except AssertionError as _sa_e:
+            _soft_assert.record('test_example_i1:1', 'assertion', _sa_e)
+        except Exception as _sa_e:
+            _soft_assert.record('test_example_i1:1', 'runtime', _sa_e)
+        else:
+            _soft_assert.record('test_example_i1:1', 'pass' if _sa_v else 'assertion')
+        with patch('builtins.print') as mock_print:
+&gt;           fizzbuzz.main()
+            ^^^^^^^^^^^^^
+E           AttributeError: module 'example' has no attribute 'main'
+
+test_example_i1.py:25: AttributeError</failure></testcase></testsuite></testsuites>

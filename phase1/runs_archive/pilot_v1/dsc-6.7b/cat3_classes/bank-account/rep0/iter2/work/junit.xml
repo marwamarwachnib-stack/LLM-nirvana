@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="10" time="0.101" timestamp="2026-10-25T18:33:36.560743+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_account_creation" time="0.004" /><testcase classname="test_example_i1" name="test_open_account" time="0.001" /><testcase classname="test_example_i1" name="test_close_account" time="0.001" /><testcase classname="test_example_i1" name="test_deposit" time="0.001" /><testcase classname="test_example_i1" name="test_withdraw" time="0.001" /><testcase classname="test_example_i1" name="test_concurrent_transactions" time="0.001"><failure message="NameError: name 'threading' is not defined. Did you forget to import 'threading'">def test_concurrent_transactions():
+        account = BankAccount()
+        account.open()
+    
+        def deposit(account, amount):
+            for _ in range(10000):
+                account.deposit(amount)
+    
+        def withdraw(account, amount):
+            for _ in range(10000):
+                account.withdraw(amount)
+    
+&gt;       t1 = threading.Thread(target=deposit, args=(account, 1))
+             ^^^^^^^^^
+E       NameError: name 'threading' is not defined. Did you forget to import 'threading'
+
+test_example_i1.py:58: NameError</failure></testcase><testcase classname="test_example_i2" name="test_deposit_on_closed_account" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_deposit_on_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:2: NameError</failure></testcase><testcase classname="test_example_i2" name="test_withdraw_on_closed_account" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_withdraw_on_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:7: NameError</failure></testcase><testcase classname="test_example_i2" name="test_close_on_closed_account" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_close_on_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:12: NameError</failure></testcase><testcase classname="test_example_i2" name="test_get_balance_on_closed_account" time="0.001"><failure message="NameError: name 'BankAccount' is not defined">def test_get_balance_on_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:17: NameError</failure></testcase></testsuite></testsuites>
