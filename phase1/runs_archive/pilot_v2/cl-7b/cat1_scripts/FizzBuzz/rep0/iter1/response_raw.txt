@@ -1,0 +1,47 @@
+
+Here are some unit test cases for the given Python code using pytest:
+```
+import pytest
+
+def test_fizzbuzz():
+    # Test with input 1, 2, and 3
+    num = [1, 2, 3]
+    expected = ['Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+
+def test_fizzbuzz_with_invalid_input():
+    # Test with invalid input
+    num = [0, 0, 0]
+    with pytest.raises(ValueError):
+        fizzbuzz(num)
+
+def test_fizzbuzz_with_empty_input():
+    # Test with empty input
+    num = []
+    with pytest.raises(ValueError):
+        fizzbuzz(num)
+
+def test_fizzbuzz_with_single_input():
+    # Test with single input
+    num = [1]
+    expected = ['Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+
+def test_fizzbuzz_with_multiple_inputs():
+    # Test with multiple inputs
+    num = [1, 2, 3, 4, 5]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+These test cases cover the following scenarios:
+
+1. Test with valid input: [1, 2, 3]
+2. Test with invalid input: [0, 0, 0]
+3. Test with empty input: []
+4. Test with single input: [1]
+5. Test with multiple inputs: [1, 2, 3, 4, 5]
+
+The `test_fizzbuzz_with_invalid_input` test case checks that the function raises a `ValueError` when given an invalid input. The `test_fizzbuzz_with_empty_input` test case checks that the function raises a `ValueError` when given an empty input. The `test_fizzbuzz_with_single_input` test case checks that the function returns the correct output for a single input. The `test_fizzbuzz_with_multiple_inputs` test case checks that the function returns the correct output for multiple inputs.

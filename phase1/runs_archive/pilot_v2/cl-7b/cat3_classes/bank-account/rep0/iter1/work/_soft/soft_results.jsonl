@@ -1,0 +1,18 @@
+{"site": "test_example_i1:0", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:1", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:2", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:3", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:4", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:5", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:6", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:7", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:8", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:9", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:10", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:11", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:12", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:13", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:14", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:15", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:16", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}
+{"site": "test_example_i1:17", "outcome": "try_except", "detail": "DID NOT RAISE ValueError"}

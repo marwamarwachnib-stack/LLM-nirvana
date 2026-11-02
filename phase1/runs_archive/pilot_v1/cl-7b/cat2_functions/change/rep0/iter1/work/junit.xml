@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="7" time="0.096" timestamp="2026-10-25T18:42:35.280944+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_negative_target" time="0.004"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_negative_target():
+        with pytest.raises(ValueError):
+&gt;           find_fewest_coins([1, 2, 3], -1)
+            ^^^^^^^^^^^^^^^^^
+E           NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:5: NameError</failure></testcase><testcase classname="test_example_i1" name="test_empty_coins" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_empty_coins():
+        with pytest.raises(ValueError):
+&gt;           find_fewest_coins([], 1)
+            ^^^^^^^^^^^^^^^^^
+E           NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:9: NameError</failure></testcase><testcase classname="test_example_i1" name="test_target_not_in_coins" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_target_not_in_coins():
+        with pytest.raises(ValueError):
+&gt;           find_fewest_coins([1, 2, 3], 4)
+            ^^^^^^^^^^^^^^^^^
+E           NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:13: NameError</failure></testcase><testcase classname="test_example_i1" name="test_target_in_coins" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_target_in_coins():
+&gt;       assert find_fewest_coins([1, 2, 3], 3) == [3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:16: NameError</failure></testcase><testcase classname="test_example_i1" name="test_target_in_coins_with_change" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_target_in_coins_with_change():
+&gt;       assert find_fewest_coins([1, 2, 3], 6) == [3, 3]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:19: NameError</failure></testcase><testcase classname="test_example_i1" name="test_target_in_coins_with_change_and_remainder" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_target_in_coins_with_change_and_remainder():
+&gt;       assert find_fewest_coins([1, 2, 3], 7) == [3, 3, 1]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:22: NameError</failure></testcase><testcase classname="test_example_i1" name="test_target_in_coins_with_change_and_remainder_and_change" time="0.001"><failure message="NameError: name 'find_fewest_coins' is not defined">def test_target_in_coins_with_change_and_remainder_and_change():
+&gt;       assert find_fewest_coins([1, 2, 3], 10) == [3, 3, 3, 1]
+               ^^^^^^^^^^^^^^^^^
+E       NameError: name 'find_fewest_coins' is not defined
+
+test_example_i1.py:25: NameError</failure></testcase></testsuite></testsuites>

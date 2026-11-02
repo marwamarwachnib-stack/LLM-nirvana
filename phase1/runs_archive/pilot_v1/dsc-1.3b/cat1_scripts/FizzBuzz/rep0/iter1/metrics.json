@@ -1,0 +1,180 @@
+{
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "iteration": 1,
+  "refactored_module": false,
+  "mccabe_max": 5,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 0,
+    "num_branches": null,
+    "covered_branches": 0,
+    "missing_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "missing_branches": null,
+    "stmt_cov": 0.0,
+    "branch_cov": null,
+    "stmt_branch_cov": 0.0
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 7,
+    "n_judged": 7,
+    "n_pass": 0,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 7,
+    "n_not_executed": 0,
+    "incorrect_pct": 100.0,
+    "incorrect_breakdown_pct": {
+      "assertion": 0.0,
+      "try_except": 0.0,
+      "runtime": 100.0
+    }
+  },
+  "new_file": {
+    "name": "test_example_i1.py",
+    "errors_normalized": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "errors_raw": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "n_import_rewrites": 0
+  },
+  "llm": {
+    "prompt_tokens": 197,
+    "output_tokens": 1060,
+    "prompt_eval_s": 1.996482,
+    "eval_s": 45.273296,
+    "load_s": 0.005278623,
+    "total_s": 47.282572332,
+    "tokens_per_s": 23.41,
+    "done_reason": "stop",
+    "hit_num_predict": false,
+    "possible_ctx_overflow": false,
+    "template": "basic_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T18:22:11+00:00",
+      "wall_s": 47.285,
+      "codecarbon": {
+        "cpu_wh": 0.26153984673171066,
+        "ram_wh": 0.13126127423889158,
+        "gpu_wh": 0.0,
+        "total_wh": 0.3928011209706021,
+        "cpu_power_w": 19.283060167832357,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 6.50294039800461e-05,
+        "duration_s": 47.289782141000615,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.2615328897222222,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.03836282,
+        "msr:intel-rapl:0:package-0": 0.2615341611111111,
+        "msr:intel-rapl:0:0:core": 0.24264201444444444,
+        "msr:intel-rapl:0:1:uncore": 1.6944444444444443e-08,
+        "msr:intel-rapl:0:2:dram": 0.03836293888888889
+      },
+      "pkg_temp_c": {
+        "mean": 65.9,
+        "max": 74.0
+      },
+      "cpu_mhz": {
+        "mean": 2385.5,
+        "max": 3109.6
+      },
+      "cpu_util_pct": {
+        "mean": 50.4,
+        "max": 52.7
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T18:22:59+00:00",
+      "wall_s": 1.158,
+      "codecarbon": {
+        "cpu_wh": 0.004880396404314397,
+        "ram_wh": 0.0032283793111168454,
+        "gpu_wh": 0.0,
+        "total_wh": 0.008108775715431242,
+        "cpu_power_w": 6.957039575220107,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.3424321460167884e-06,
+        "duration_s": 1.163633365998976,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.004870321666666667,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00015063777777777777,
+        "msr:intel-rapl:0:package-0": 0.0048711525,
+        "msr:intel-rapl:0:0:core": 0.004579896666666666,
+        "msr:intel-rapl:0:1:uncore": 2.2719444444444446e-06,
+        "msr:intel-rapl:0:2:dram": 0.0001508075
+      },
+      "pkg_temp_c": {
+        "mean": 71.0,
+        "max": 71.0
+      },
+      "cpu_mhz": {
+        "mean": 3273.9,
+        "max": 3273.9
+      },
+      "cpu_util_pct": {
+        "mean": 15.5,
+        "max": 15.5
+      }
+    }
+  },
+  "cooldown_s": 2.0
+}

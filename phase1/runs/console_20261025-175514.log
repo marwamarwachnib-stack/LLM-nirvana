@@ -1,0 +1,32 @@
+[session 20261025-175514] idle baseline 300s (do not use the laptop)...
+  [pynguin] cat2_functions/change seed0: rc=0 tests=True stmt=100.0 branch=100.0 gen=307s
+  [pynguin] cat2_functions/change seed1: rc=0 tests=True stmt=100.0 branch=100.0 gen=175s
+  [pynguin] cat2_functions/change seed2: rc=0 tests=True stmt=100.0 branch=100.0 gen=238s
+  [pynguin] cat2_functions/change seed3: rc=0 tests=True stmt=100.0 branch=100.0 gen=220s
+  [pynguin] cat2_functions/change seed4: rc=0 tests=True stmt=100.0 branch=100.0 gen=327s
+  [pynguin] cat1_scripts/FizzBuzz seed0: rc=1 tests=False stmt=0.0 branch=None gen=1s
+  [pynguin] cat1_scripts/FizzBuzz seed1: rc=1 tests=False stmt=0.0 branch=None gen=1s
+  [pynguin] cat1_scripts/FizzBuzz seed2: rc=1 tests=False stmt=0.0 branch=None gen=1s
+  [pynguin] cat1_scripts/FizzBuzz seed3: rc=1 tests=False stmt=0.0 branch=None gen=1s
+  [pynguin] cat1_scripts/FizzBuzz seed4: rc=1 tests=False stmt=0.0 branch=None gen=1s
+[dsc-1.3b] deepseek-coder:1.3b-instruct digest=3ddd2d3fc8d2 — 3 programs to run
+  [dsc-1.3b] cat1_scripts/FizzBuzz iter1: stmt=0.0 branch=None gen=47s tok/s=23.41
+  [dsc-1.3b] cat1_scripts/FizzBuzz iter2: stmt=0.0 branch=None gen=108s tok/s=13.13
+  [dsc-1.3b] cat2_functions/change iter1: stmt=91.67 branch=85.71 gen=27s tok/s=24.86
+  [dsc-1.3b] cat2_functions/change iter2: stmt=91.67 branch=85.71 gen=101s tok/s=14.49
+  [dsc-1.3b] cat3_classes/bank-account iter1: stmt=91.67 branch=81.25 gen=25s tok/s=25.37
+  [dsc-1.3b] cat3_classes/bank-account iter2: stmt=91.67 branch=81.25 gen=38s tok/s=16.88
+[dsc-6.7b] deepseek-coder:6.7b-instruct digest=ce298d984115 — 3 programs to run
+  [dsc-6.7b] cat3_classes/bank-account iter1: stmt=88.89 branch=75.0 gen=146s tok/s=5.0
+  [dsc-6.7b] cat3_classes/bank-account iter2: stmt=88.89 branch=75.0 gen=137s tok/s=4.08
+  [dsc-6.7b] cat2_functions/change iter1: stmt=91.67 branch=85.71 gen=119s tok/s=5.13
+  [dsc-6.7b] cat2_functions/change iter2: stmt=91.67 branch=85.71 gen=168s tok/s=4.18
+  [dsc-6.7b] cat1_scripts/FizzBuzz iter1: stmt=100.0 branch=100.0 gen=98s tok/s=5.74
+[cl-7b] codellama:7b-instruct digest=8fdf8f752f6e — 3 programs to run
+  [cl-7b] cat2_functions/change iter1: stmt=0.0 branch=None gen=114s tok/s=5.28
+  [cl-7b] cat2_functions/change iter2: stmt=0.0 branch=None gen=114s tok/s=4.48
+  [cl-7b] cat3_classes/bank-account iter1: stmt=0.0 branch=None gen=532s tok/s=4.0
+  [cl-7b] cat3_classes/bank-account iter2: stmt=0.0 branch=None gen=894s tok/s=2.3
+  [cl-7b] cat1_scripts/FizzBuzz iter1: stmt=0.0 branch=None gen=98s tok/s=5.79
+  [cl-7b] cat1_scripts/FizzBuzz iter2: stmt=0.0 branch=None gen=591s tok/s=3.67
+all jobs finished

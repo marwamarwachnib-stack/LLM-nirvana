@@ -1,0 +1,41 @@
+Sure, here are some unit tests for the function `find_fewest_coins` using pytest:
+
+```python
+import pytest
+from your_module import find_fewest_coins  # replace 'your_module' with the name of the module where the function is defined
+
+def test_find_fewest_coins():
+    # Test with standard inputs
+    assert find_fewest_coins([1, 2, 5], 11) == [10, 1]
+    assert find_fewest_coins([1, 5, 10, 25], 47) == [25, 22]
+    assert find_fewest_coins([1, 3, 4], 6) == [4, 2]
+
+    # Test with target 0
+    assert find_fewest_coins([1, 2, 5], 0) == []
+
+    # Test with no coins
+    assert find_fewest_coins([], 10) == []
+
+    # Test with negative coins
+    with pytest.raises(ValueError):
+        find_fewest_coins([-1, -2, -5], 10)
+
+    # Test with negative target
+    with pytest.raises(ValueError):
+        find_fewest_coins([1, 2, 5], -10)
+
+    # Test with impossible target
+    with pytest.raises(ValueError):
+        find_fewest_coins([2, 5, 10], 1)
+```
+
+Please replace `your_module` with the actual name of the module where the function `find_fewest_coins` is defined.
+
+This test suite covers the following edge cases:
+
+1. Standard inputs: Test with standard inputs where the function should return the correct result.
+2. Target 0: Test with a target of 0, which should return an empty list.
+3. No coins: Test with no coins, which should return an empty list.
+4. Negative coins: Test with negative coins, which should raise a ValueError.
+5. Negative target: Test with a negative target, which should raise a ValueError.
+6. Impossible target: Test with a target that cannot be achieved with the given coins, which should raise a ValueError.

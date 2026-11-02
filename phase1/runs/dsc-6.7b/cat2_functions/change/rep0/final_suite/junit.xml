@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.076" timestamp="2026-10-26T14:23:31.333070+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_find_fewest_coins" time="0.004"><failure message="assert [1, 5, 5] == [10, 1]&#10;  &#10;  At index 0 diff: 1 != 10&#10;  Left contains one more item: 5&#10;  Use -v to get more diff">def test_find_fewest_coins():
+        # Test with standard inputs
+&gt;       assert find_fewest_coins([1, 2, 5], 11) == [10, 1]
+E       assert [1, 5, 5] == [10, 1]
+E         
+E         At index 0 diff: 1 != 10
+E         Left contains one more item: 5
+E         Use -v to get more diff
+
+test_example_i1.py:6: AssertionError</failure></testcase><testcase classname="test_example_i2" name="test_find_fewest_coins" time="0.002"><failure message="assert [1, 5, 5] == [10, 1]&#10;  &#10;  At index 0 diff: 1 != 10&#10;  Left contains one more item: 5&#10;  Use -v to get more diff">def test_find_fewest_coins():
+        # Test with standard inputs
+&gt;       assert find_fewest_coins([1, 2, 5], 11) == [10, 1]
+E       assert [1, 5, 5] == [10, 1]
+E         
+E         At index 0 diff: 1 != 10
+E         Left contains one more item: 5
+E         Use -v to get more diff
+
+test_example_i2.py:5: AssertionError</failure></testcase></testsuite></testsuites>

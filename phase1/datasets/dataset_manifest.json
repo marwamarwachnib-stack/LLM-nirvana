@@ -1,0 +1,4229 @@
+{
+  "created": "2026-11-01T21:48:01+00:00",
+  "source": {
+    "repository": "https://github.com/Rey-2001/LLM-nirvana",
+    "upstream_commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "local_commit_of_dataset_folders": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "verified": "byte-identical to a fresh clone, 993/993 files (2026-10-31, re-run 2026-11-01)"
+  },
+  "rule": "Programs are used exactly as the authors uploaded them; nothing missing is replaced (decision 20, 21).",
+  "sets": {
+    "small": {
+      "paper": {
+        "n": 60,
+        "cat1_scripts": 20,
+        "cat2_functions": 20,
+        "cat3_classes": 20,
+        "evidence": "\u00a72.2: 60 small modules, 20 per category; 0_100 LOC/README"
+      },
+      "repository": {
+        "n": 60,
+        "cat1_scripts": 21,
+        "cat2_functions": 19,
+        "cat3_classes": 20
+      },
+      "used_by": [
+        "Table 1"
+      ]
+    },
+    "p2": {
+      "paper": {
+        "n": 43,
+        "evidence": "\u00a72.2: 49 large = 20 Cat 2 + 23 Cat 3 + 6 Cat 1; the 43 Cat 2/3 ones are p2 (README: Lukasczyk et al. benchmark); Table 2 means need the 41 with ChatGPT reports"
+      },
+      "repository": {
+        "n": 43,
+        "cat3_classes": 33,
+        "cat2_functions": 10
+      },
+      "used_by": [
+        "Table 2",
+        "Fig. 4",
+        "Fig. 5",
+        "Table 5",
+        "Fig. 7"
+      ]
+    },
+    "p1": {
+      "paper": {
+        "n": 40,
+        "cat2_functions": 20,
+        "cat3_classes": 20,
+        "evidence": "Table 3 / Fig. 6 (p1 README); n = 20 + 20 inferred from Table 3's values"
+      },
+      "repository": {
+        "n": 41,
+        "cat1_scripts": 1,
+        "cat2_functions": 20,
+        "cat3_classes": 20
+      },
+      "used_by": [
+        "Table 3",
+        "Fig. 6"
+      ]
+    }
+  },
+  "programs": [
+    {
+      "set": "small",
+      "id": "ACM_Contest_Scoring_Kattis",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/ACM_Contest_Scoring_Kattis/example.py",
+      "sha256": "4aca996aee5390521bc7b091644e939b009eca955603db645c90a30a2e923a50",
+      "lines": 30,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Albhabet_Spam",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Albhabet_Spam/example.py",
+      "sha256": "6d5bee31156e0eae56c448da3de6eb2eb62daaee99e6ac00b5cdc51230f6760c",
+      "lines": 31,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Amazing_Human_Cannon_Ball",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Amazing_Human_Cannon_Ball/example.py",
+      "sha256": "7f90258a2d223d94350711d268e45811231a33f369d7cf2db63bfb1fbd0d4bbd",
+      "lines": 15,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Bella",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Bella/example.py",
+      "sha256": "394179a7a8232e2b976f20db418009ad44e26b250b13518e0b83c0e54f4aff9e",
+      "lines": 17,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Cetvrta",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Cetvrta/example.py",
+      "sha256": "7ba6dbcb6b84a2f6eb95925c9fb6463c5971b13f055c62ef228f9dcf06ee6fca",
+      "lines": 25,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Cryptographers_Conundrum",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Cryptographers_Conundrum/example.py",
+      "sha256": "47511c5da01f4ae00d8f9dee26c0a8f2be7b43b224a9a233a7f8ce1faa9987e6",
+      "lines": 20,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "DRM_Messages",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/DRM_Messages/example.py",
+      "sha256": "4be01f010d1403b974e9b960146a2c49f25391c1fee8839f0ba89ba16165ff5a",
+      "lines": 27,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "FizzBuzz",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/FizzBuzz/example.py",
+      "sha256": "084d029bc7e2136da7303609c91fc1d151540b3f62b9e416e405b5becc19fdfc",
+      "lines": 16,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "ICPC_Awards",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/ICPC_Awards/example.py",
+      "sha256": "1331b27c8c2c6e22dd74e9442a45091c5358dc286dcb739c492023dfa1af1a6e",
+      "lines": 23,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Judging_Moose",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Judging_Moose/example.py",
+      "sha256": "d208252b9698cc5e894254f8e028e45600488ccca737b5b7acbbc7e0736991c8",
+      "lines": 13,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Number_Fun",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Number_Fun/example.py",
+      "sha256": "70aebabaf2636c95e297e4dd6002d9183688d1cda2d14f10d2726323afb0cccf",
+      "lines": 12,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Speed_Limit",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Speed_Limit/example.py",
+      "sha256": "fb167415d14b79b30b475a65ae4178117342c7ea616e22a9307d471cdfbcfedc",
+      "lines": 17,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Start_Arrangements",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Start_Arrangements/example.py",
+      "sha256": "6d202fd856d31537e7a2d9bed239e41440b2434fe5d70f3f68d31c7fdc5b8a4c",
+      "lines": 19,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Tarifa",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Tarifa/example.py",
+      "sha256": "872273ea025e1d11ef15e9a154bf3e9f80ffefb4026ea27d786326022c70d06d",
+      "lines": 11,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "The_Easiest_Problem_Is_This_One",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/The_Easiest_Problem_Is_This_One/example.py",
+      "sha256": "0c6b377824e87a71cfb2aa4a0182d58fdabd74fc012c4b5889325f7dcf3182cf",
+      "lines": 20,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "Trik",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/Trik/example.py",
+      "sha256": "e6da13d3da934d352f7b35cee7e02108ccdd51241776f0fe538c2c1c4198662e",
+      "lines": 38,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "akicija",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/akicija/example.py",
+      "sha256": "1f6a391ac4cbc51869e1b413778369027a22edeaf956b820f0263f42273d9c65",
+      "lines": 25,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "day2",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/day2/example.py",
+      "sha256": "acc88b4d2ef0d0d028f840018b1e5dbdfa78c179ecfdb8624fbdbb7d35b7f2de",
+      "lines": 540,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "linethemup",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/linethemup/example.py",
+      "sha256": "7bd4f1d2dc7be043bccbaa4ac64b397574db6506f38117ab15575f2895269ee4",
+      "lines": 18,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "seven_wonders",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/seven_wonders/example.py",
+      "sha256": "653ecda53130e09f4d8b311ca236166bcb115da97fdfbdc2f6e481f75412a0ae",
+      "lines": 16,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "three_sum",
+      "category": "cat1_scripts",
+      "path": "0_100 LOC/cat1_scripts/three_sum/example.py",
+      "sha256": "7b0b067c8bb28a707b5a9bae2648c8b2880f9c7178ce21125e0df12d0de48f47",
+      "lines": 17,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: source not recorded by the authors",
+        "note": "folder names suggest programming-exercise sites (Kattis-style problem names; Advent of Code for day2); not verified"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "affine-cipher",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/affine-cipher/example.py",
+      "sha256": "6952153be60d7690e0bfad52c89c4647e9edb4bd068c77f1c15735e00d9216ba",
+      "lines": 41,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/affine-cipher/.meta/example.py",
+        "git_blob": "34ca0418da6a5044b034ed3e9d9f2a7b9b3492b0",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "all-your-base",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/all-your-base/example.py",
+      "sha256": "73d36e4fad7424d9725eb32b73a628c1927b8b6c8c48c3e472ae36acd55332e1",
+      "lines": 25,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/all-your-base/.meta/example.py",
+        "git_blob": "e493a50243e3b5290ee3cca3dfe4f656eba47342",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "alphametics",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/alphametics/example.py",
+      "sha256": "15926d6b24ca7a49977b5bd06811a20575730d92a3764ce3cb714bc091009283",
+      "lines": 177,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/alphametics/.meta/example.py",
+        "git_blob": "3faf17aaa0d7c56c9851cdee4d536155ba51b4e5",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "atbash-cipher",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/atbash-cipher/example.py",
+      "sha256": "037b2e1eea480351d933b88c67758c58850448c86d6975d9adab1d9db493cfaa",
+      "lines": 19,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/atbash-cipher/.meta/example.py",
+        "git_blob": "a358998e05d9b0e28a357ede680ae9909ac4237a",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "beer-song",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/beer-song/example.py",
+      "sha256": "b799738d63ff7e375f9bedfb76552eeee9b328ee8c3581f6f48a05ff71690fef",
+      "lines": 38,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/beer-song/.meta/example.py",
+        "git_blob": "4dfa8ea02968e622476a17d6118699b1466f3fa1",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "bob",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/bob/example.py",
+      "sha256": "f9162a6932c526d8ce23a710ddd488fb3c8e02115ba3bd9702a8da316b19242b",
+      "lines": 26,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/bob/.meta/example.py",
+        "git_blob": "630ccccc613826ccf4d9e7688588cba9a03292b7",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "change",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/change/example.py",
+      "sha256": "f9c3ccf99862f3ffe76c2b3282d0b6a69c4366afbfc0b9a56350e200467e1f4e",
+      "lines": 25,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/change/.meta/example.py",
+        "git_blob": "b62fa0cc10c0a2540f43abceabe80991fa0baf2e",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "crypto-square",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/crypto-square/example.py",
+      "sha256": "f9f0b348693146c2a56f1154e3ac15bf3664657109d65585d43b64c363322ad9",
+      "lines": 23,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/crypto-square/.meta/example.py",
+        "git_blob": "8cfc7642f0b684620ee21385d5eeef74e03128f2",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "diamond",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/diamond/example.py",
+      "sha256": "ac5663df10f9a1db21e0fa5fd626bd3cbb620f1bc15a73869a62d009418395c7",
+      "lines": 15,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/diamond/.meta/example.py",
+        "git_blob": "bd992476405ac3019f527de34a89b9c99f0da5da",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "dominoes",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/dominoes/example.py",
+      "sha256": "4a51af33d2fed21b11146fb6ef03179771481f27f4c59d53fe442218fc9e2d6a",
+      "lines": 30,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/dominoes/.meta/example.py",
+        "git_blob": "2490525ad675365f017dd00a45eed02863ad7586",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "error-handling",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/error-handling/example.py",
+      "sha256": "704d6b39a28e66be616e69d60323d688f84fc61be28f17911dddf6305d5bb4e6",
+      "lines": 21,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/error-handling/.meta/example.py",
+        "git_blob": "1dba190d4f6bce1ef770567c8d9bf01a09b7fd7d",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "flatten-array",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/flatten-array/example.py",
+      "sha256": "0dbe31fa4237bcbf95e0a2e1d78a6ed22af823e53ab41d3016b1af1961c1c424",
+      "lines": 18,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/flatten-array/.meta/example.py",
+        "git_blob": "424f01e0c819bf2b8234cbd82e66d673dbbc199a",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "food-chain",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/food-chain/example.py",
+      "sha256": "8eea5c1f75e15326ac221952e38c9289cacdabdd9dc1dcc4a5b52b4fb0682640",
+      "lines": 63,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/food-chain/.meta/example.py",
+        "git_blob": "075f83fafa258ae11fad7801ca16e9cabac5e241",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "knapsack",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/knapsack/example.py",
+      "sha256": "a0ffb9f3689142e0955cf1db1be4a5dc864d83c2ea60068a63e11dddaca4d3ba",
+      "lines": 15,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/knapsack/.meta/example.py",
+        "git_blob": "548dd5a2b92c7e774d2cc00bac0d8a0e31ac5c54",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "largest-series-product",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/largest-series-product/example.py",
+      "sha256": "91cb8b260452598f24b71fed2554beab7053c2db7283244d0bbeffd4ad275df2",
+      "lines": 23,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/largest-series-product/.meta/example.py",
+        "git_blob": "0599e7417e6baa2be4907acd3935c2a7f7784047",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "markdown",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/markdown/example.py",
+      "sha256": "165b16b3d55138f9b7e02acac537e4befb8dad9e7cbeef76f6b09b9f586c4719",
+      "lines": 88,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/markdown/.meta/example.py",
+        "git_blob": "1c9d04cf9e6a6bf3afe9a026077b638cf31427dc",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "minesweeper",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/minesweeper/example.py",
+      "sha256": "ce990e898785e3173048d9605d4137adf392bfd4b002b75ed05ba76cd5b5ab73",
+      "lines": 40,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/minesweeper/.meta/example.py",
+        "git_blob": "4ebbc8413b87263f5b017a18d80730c21c728b7c",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "palindrome-products",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/palindrome-products/example.py",
+      "sha256": "1422028a0d52c617c45f4cd650172e2e06d76f23cdaab9338b87f2cb951b395b",
+      "lines": 108,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/palindrome-products/.meta/example.py",
+        "git_blob": "f656ff18522bd8d32fddfb640fe88a694add2487",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "poker",
+      "category": "cat2_functions",
+      "path": "0_100 LOC/cat2_functions/poker/example.py",
+      "sha256": "9627361e2566290218239ed64ea4edf610f826e94ae7044d9eef9316d241ec43",
+      "lines": 36,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/poker/.meta/example.py",
+        "git_blob": "e650f143cd031f793f4f339324e931a50cda2ca3",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file, and config.json naming .meta/example.py"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "bank-account",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/bank-account/example.py",
+      "sha256": "e75d1fb46070b291a9404f36be076944e5c8e2f20582cf3dd6e9195bde1be7e4",
+      "lines": 43,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/bank-account/.meta/example.py",
+        "git_blob": "90ddf31c23b7fefb49b3c3a251ab913bbe060dbf",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "binary-search-tree",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/binary-search-tree/example.py",
+      "sha256": "a7cc3f6e9f3df46d18272459324cf9e9595ecdc953e3499e855c0a2f2182155f",
+      "lines": 50,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/binary-search-tree/.meta/example.py",
+        "git_blob": "fede54dd61cd2ac0499ce95d9aa35cfaa80fe9d5",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "circular-buffer",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/circular-buffer/example.py",
+      "sha256": "8a6057be363e6deb96df46b856863491d70d3ca8785fe0b36ddde0a55f108d65",
+      "lines": 56,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/circular-buffer/.meta/example.py",
+        "git_blob": "538cc7bc5e21526a23724c133d0a649df55207eb",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "clock",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/clock/example.py",
+      "sha256": "91f83a5bfbdda1a953599b8c04d699a310a4ec32a6a65bb42649237e452cb6aa",
+      "lines": 30,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/clock/.meta/example.py",
+        "git_blob": "47d5268162281ec655658283061ce7b79f861db5",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "complex-numbers",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/complex-numbers/example.py",
+      "sha256": "30806b1f99b2fda21645647c2a24abd3d3d600090c3f3b5597ee4508a31b3fd0",
+      "lines": 96,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/complex-numbers/.meta/example.py",
+        "git_blob": "b833c38fc971ff91e704dde132ccd4491a17bdda",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "custom-set",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/custom-set/example.py",
+      "sha256": "1cad5ce97926dec38c63eaa7368c52c182f45acde2eeb22b0d5cc522c3aa577b",
+      "lines": 45,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/custom-set/.meta/example.py",
+        "git_blob": "fed6acb6a0525c5f58f00124088313aaccc1ac38",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "dnd-character",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/dnd-character/example.py",
+      "sha256": "566be121fbb20aa0e6e8c2d1cc7f6337d267bd4cc149dd00541c075b38fc47cc",
+      "lines": 21,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/dnd-character/.meta/example.py",
+        "git_blob": "fad3dfe172d9064bcc219da1ff8fbca14bccacfb",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "forth",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/forth/example.py",
+      "sha256": "a90f6134d4f24b5abee77880c8eb4f8adf7a88d925c0cd3d9bbfcfba895a320b",
+      "lines": 66,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/forth/.meta/example.py",
+        "git_blob": "5e499acf53df9680c92af07dd5dd93516dcf97f4",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "grade-school",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/grade-school/example.py",
+      "sha256": "f6a52a73ebe023737547952d2b27231a0eaa086f2b9804aac4c137b9fd687473",
+      "lines": 36,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/grade-school/.meta/example.py",
+        "git_blob": "fc974919e7e24d8dfa8aae006338641d7bb8ba6e",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "hangman",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/hangman/example.py",
+      "sha256": "fde813e1c2871eb8b522dd687b47781c2196375e7c8c37e2ab40ddd7e108e300",
+      "lines": 50,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/hangman/.meta/example.py",
+        "git_blob": "b03168609568722d5fedc10c09f2a4ee2810cb14",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "kindergarten-garden",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/kindergarten-garden/example.py",
+      "sha256": "7f3e07aa5a5e0032676c2d4a35586895504b5ee8510e8a3e28b96f9884478f72",
+      "lines": 35,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/kindergarten-garden/.meta/example.py",
+        "git_blob": "262c6ad6e2259dcca31ab20495374f4d06409521",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "ledger",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/ledger/example.py",
+      "sha256": "535d832874563747bcc6403ba9ebbfa1f7d32824babacdc3ccb025d82ac649b2",
+      "lines": 85,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/ledger/.meta/example.py",
+        "git_blob": "46e8e3c9f6fe5e268f97cd05827e935a5abe8b60",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "linked-list",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/linked-list/example.py",
+      "sha256": "1b935d64b49c20e9102f79f5f5df45cbe74472e62acb78bb12b7794c0385f018",
+      "lines": 94,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/linked-list/.meta/example.py",
+        "git_blob": "acc13d4f9e40dc9042065b24d4a19498ab84c0b7",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "luhn",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/luhn/example.py",
+      "sha256": "8c9b705167891902cc94605dd71668082cc7b8cd2b67cc1054e40755d38b5d23",
+      "lines": 19,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/luhn/.meta/example.py",
+        "git_blob": "32a4dbc48b960695a91e446d8e07e349076abe03",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "meetup",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/meetup/example.py",
+      "sha256": "8f1994b2c508769fbad4abc3cc475de3b227e837486a25d1b23e280cc9f8bf4d",
+      "lines": 34,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/meetup/.meta/example.py",
+        "git_blob": "d547107488cb2eadb683cc96fd1e5b5b2778448c",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "parallel-letter-frequency",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/parallel-letter-frequency/example.py",
+      "sha256": "5c195fc736a8d98fe833187116e9b8f5c528fdfe324b59c2b3b718b6e35c0105",
+      "lines": 51,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/parallel-letter-frequency/.meta/example.py",
+        "git_blob": "5a16fb31c17266afb0620b2e82c8282edf488463",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "phone-number",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/phone-number/example.py",
+      "sha256": "4724acfb7b22518b9a0b4b3ea031cb614cda2a58225f4aaf1a52416b3225a846",
+      "lines": 53,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/phone-number/.meta/example.py",
+        "git_blob": "d23102a01ed7655649403cda0d5554e7d0c6b4a6",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "queen-attack",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/queen-attack/example.py",
+      "sha256": "3983ec4a2a490be8228911c4a118a0fa7c4afe1cd6f33e0f956a78dd251736d8",
+      "lines": 22,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/queen-attack/.meta/example.py",
+        "git_blob": "e9ae242ff2becd4ee02e543a4fbc9307ad2f0a75",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "robot-name",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/robot-name/example.py",
+      "sha256": "d5c2eecdf7738305ce15bf6f6e5b410835179ca0125450baf43643263e2b7c1c",
+      "lines": 39,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/robot-name/.meta/example.py",
+        "git_blob": "405142718ae1ddabbc092b49df0ddfad1d5f3ac4",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "line_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "small",
+      "id": "robot-simulator",
+      "category": "cat3_classes",
+      "path": "0_100 LOC/cat3_classes/robot-simulator/example.py",
+      "sha256": "1ccd276a6c411c04fbf13d0140b47d7482d890826fdc7c24067cf15a0d19714d",
+      "lines": 53,
+      "status": "present",
+      "origin": {
+        "kind": "Exercism Python track, reference solution",
+        "repository": "https://github.com/exercism/python",
+        "path": "exercises/practice/robot-simulator/.meta/example.py",
+        "git_blob": "20caf3bedcb256d3e1bcd954e5dde6c43ed7ecca",
+        "evidence": "the file's git blob equals that of a historical version of this path (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the folder holds the exercise stub and test file"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "test_example.py"
+        ],
+        "chatgpt": []
+      }
+    },
+    {
+      "set": "p2",
+      "id": "sample1",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample1/decorators.py",
+      "sha256": "7d9823ead4c19d179a6be179a2bdc1037d17170c3627e9b4312825ae202d2765",
+      "lines": 79,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_decorators.txt",
+          "statement_coverage_decorators.txt",
+          "test_decorators.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "decorators",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample2",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample2/objutils.py",
+      "sha256": "e264f4d8e01e1b7736fddd40f091518d64479cfeeda69a1646aa178d9c7c6d37",
+      "lines": 231,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_objutils.txt",
+          "statement_coverage_objutils.txt",
+          "test_objutils.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "objutils",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample3",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample3/packages.py",
+      "sha256": "e3046541d9785f5e7dcc794d70fad16f8b454094b9fabc30802cbf768a72b236",
+      "lines": 292,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_packages.txt",
+          "statement_coverage_packages.txt",
+          "test_packages.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "packages",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample4",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample4/strutils.py",
+      "sha256": "2259614262b6c4f6d08423360b177c28fa2963b4506e8aea93499ef93aa7b6e7",
+      "lines": 236,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_strutils.txt",
+          "statement_coverage_strutils.txt",
+          "test_strutils.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "strutils",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors rewrote `from flutils.codecs import register_codecs` to `from codecs import ...`, which hits the standard module codecs: convert_escaped_utf8_literal() raises ImportError (kept as in their file)",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample5",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample5/txtutils.py",
+      "sha256": "b3a50833a4051567339f8bebcef9bd989a356a15f4f1e8f7e375fdc73c722037",
+      "lines": 423,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_txtutils.txt",
+          "statement_coverage_txtutils.txt",
+          "test_txtutils.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "txtutils",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left `from .decorators import cached_property` in a branch for Python < 3.8 (never executed)",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample6",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample6/validators.py",
+      "sha256": "214745a0b8a0b905d474b564bdc5b05274d1da0f5689fc989d37091218e71e7b",
+      "lines": 81,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutils",
+        "version": "0.7"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_validators.txt",
+          "statement_coverage_validators.txt",
+          "test_validators.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "validators",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample7",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample7/_timers.py",
+      "sha256": "3741d7bae53ac2c9588365665780c4c397e9405038249b2db5dd6f3e68f88e20",
+      "lines": 77,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "codetiming",
+        "version": "1.4.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage__timers.txt",
+          "statement_coverage__timers.txt",
+          "test__timers.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "_timers",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample8",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample8/compat.py",
+      "sha256": "a5178e3b8abcb37749179fffc57147c48c127dd9e1c1ada193541e3eb625a85b",
+      "lines": 102,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "httpie",
+        "version": "3.2.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_compat.txt",
+          "statement_coverage_compat.txt",
+          "test_compat.py"
+        ],
+        "chatgpt": [
+          "compilation_report.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "compat",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample9",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample9/config.py",
+      "sha256": "a8ad8586e77ffc1802b7439157091bb29cab8c6d7c93ef1d2daaf1b153869fce",
+      "lines": 172,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "httpie",
+        "version": "3.2.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_config.txt",
+          "statement_coverage_config.txt",
+          "test_config.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "config",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample10",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample10/sessions.py",
+      "sha256": "1c3c40bdca32fa0d86986a4bbcd4c72b95933b4f7b2a172218bfc2da2d10d98f",
+      "lines": 322,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "httpie",
+        "version": "3.2.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_sessions.txt",
+          "statement_coverage_sessions.txt",
+          "test_sessions.py"
+        ],
+        "chatgpt": [
+          "test_example.py"
+        ]
+      },
+      "module": "sessions",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample11",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample11/ssl_.py",
+      "sha256": "d9773ee6aaaef517e7ead7ce85862f30e46461d70e08fdb9923123e89873d5f5",
+      "lines": 105,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "httpie",
+        "version": "3.2.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_ssl.txt",
+          "statement_coverage_ssl.txt",
+          "test_ssl_.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "ssl_",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample12",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample12/uploads.py",
+      "sha256": "b6455aefdbce34746201c79d37d141deae97c2dd928e42dad331c84514a391b2",
+      "lines": 269,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "httpie",
+        "version": "3.2.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_uploads.txt",
+          "statement_coverage_uploads.txt",
+          "test_uploads.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "uploads",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample13",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample13/box.py",
+      "sha256": "f38622309f2732a2845ac1ce754c78a3b067ae148f3cf7b58af82e7f480fa560",
+      "lines": 112,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_box.txt",
+          "statement_coverage_box.txt",
+          "test_box.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "box",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample14",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample14/either.py",
+      "sha256": "2f4ff2f14e308d3e584fe9d3135650ea9feb7b60a074e13fcb7a410a0c4a4b80",
+      "lines": 209,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_either.txt",
+          "statement_coverage_either.txt",
+          "test_either.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "either",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample15",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample15/immutable_list.py",
+      "sha256": "ec81ca406f017cc245ff515175a22bf8023c43fb6692f303786c1aeb40c875be",
+      "lines": 168,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_immutable.txt",
+          "statement_coverage_immutable.txt",
+          "test_immutable_list.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "immutable_list",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample16",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample16/lazy.py",
+      "sha256": "67dde63b095e4ddc70b499dfb6a9ad6e4de9a4ef47378be4c82cbb8f3d6e99b7",
+      "lines": 160,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_lazy.txt",
+          "statement_coverage_lazy.txt",
+          "test_lazy.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "lazy",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample17",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample17/maybe.py",
+      "sha256": "3eae381d6f93a809965630b02b5082eb9bc2a130e2860916ed9d9be2be3e4360",
+      "lines": 177,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_maybe.txt",
+          "statement_coverage_maybe.txt",
+          "test_maybe.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "maybe",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample18",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample18/monad_try.py",
+      "sha256": "54905aee150da5eddc036dcd895bccce5972c225b2c377234f185e52cb76f543",
+      "lines": 128,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_monad.txt",
+          "statement_coverage_monad.txt",
+          "test_monad_try.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "monad_try",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample19",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample19/semigroups.py",
+      "sha256": "9a81f974f0d48f51b057a41c85bafe771af5ea8336fe1d233f4b59f06bfad245",
+      "lines": 177,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_semigroups.txt",
+          "statement_coverage_semigroups.txt",
+          "test_semigroups.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "semigroups",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample20",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample20/validation.py",
+      "sha256": "bf933aefb116883c6c0f08ad73e23ea8af7ad2e2c003acc077dc5f2b78166160",
+      "lines": 155,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_validation.txt",
+          "statement_coverage_validation.txt",
+          "test_validation.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "validation",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "authors left pymonet's lazy imports package-absolute (`from pymonet.maybe import Maybe` inside methods): they use the installed release in deps/",
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample21",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample21/utils.py",
+      "sha256": "cad868a901e439372d76809a338042adb4bd8b9b6205ec40144519c73b61ccae",
+      "lines": 165,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pymonet",
+        "version": "0.12.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_utils.txt",
+          "statement_coverage_utils.txt",
+          "test_utils.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "utils",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample22",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample22/generation.py",
+      "sha256": "c3214cbd7394e21ebf3e668fc721ca8a0b2f0645ad3227a75285dcbd308ae39c",
+      "lines": 140,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "python-string-utils",
+        "version": "1.0.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_generation.txt",
+          "statement_coverage_generation.txt",
+          "test_generation.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "generation",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample23",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample23/manipulation.py",
+      "sha256": "1e4b61729d018bd3a8cb33d68a0607c421c9caef83a8706a6defd1fe40788b7d",
+      "lines": 649,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "python-string-utils",
+        "version": "1.0.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_manipulation.txt",
+          "statement_coverage_manipulation.txt",
+          "test_manipulation.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "manipulation",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample24",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample24/register.py",
+      "sha256": "0754cd7e449d418684529a3d6ab8dd87ddb101830cb8d00ad41c47dcd09e4a43",
+      "lines": 153,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "sty",
+        "version": "1.0.0rc1"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_register.txt",
+          "statement_coverage_register.txt",
+          "test_register.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "register",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample25",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample25/base.py",
+      "sha256": "8f42766ef4470772a16111d4129d913bef1a894c21e404011bbc40245c862119",
+      "lines": 254,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_base.txt",
+          "statement_coverage_base.txt",
+          "test_base.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "base",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample26",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample26/formats.py",
+      "sha256": "f11ade145a80cb1a7928eb6deca68c1dcdba60e6ad274e4993b6fc24d9264b27",
+      "lines": 171,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_formats.txt",
+          "statement_coverage_formats.txt",
+          "test_formats.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "formats",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample27",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample27/json_schema.py",
+      "sha256": "25b2d4569e05d88b6963274f0bd8de16efc5bc4816471c78d993340ff127e346",
+      "lines": 569,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_json.txt",
+          "statement_coverage_json.txt",
+          "test_json_schema.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "json_schema",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample28",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample28/schemas.py",
+      "sha256": "8c9f3e05905b6bf464931ce648824819282508368af16612e8788d81d55db100",
+      "lines": 247,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_schemas.txt",
+          "statement_coverage_schemas.txt",
+          "test_schemas.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "schemas",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample29",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample29/forms.py",
+      "sha256": "2c367c6cf8ac8fd0a675fe672c814297b68d58e2982de21100ac8b315fc40341",
+      "lines": 145,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_forms.txt",
+          "statement_coverage_forms.txt",
+          "test_forms.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "forms",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample30",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample30/tokenize_yaml.py",
+      "sha256": "d67543b0551832b0defe0ca61cff4db3601e9a334d29832bb14cf2221863c2fc",
+      "lines": 128,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_tokenize_yaml.txt",
+          "statement_coverage_tokenize_yaml.txt",
+          "test_tokenize_yaml.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "tokenize_yaml",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample31",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample31/tokens.py",
+      "sha256": "15b49f9c8a4e3b983969084b634937ae166e5db85e017dec72047816368d9cfc",
+      "lines": 106,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_tokens.txt",
+          "statement_coverage_tokens.txt",
+          "test_tokens.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "tokens",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample32",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample32/fields.py",
+      "sha256": "6ec1af1765e1fef70f008ad9b4fb90571ab73a8d17f7e1dce5cc9392336c7a5a",
+      "lines": 763,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "typesystem",
+        "version": "0.2.4"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_fields.txt",
+          "statement_coverage_fields.txt",
+          "test_fields.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "fields",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample33",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample33/common.py",
+      "sha256": "e7e89528cd0f0f72e39f6ce3c5cbb39a5283ca4ee0f14f4d67919a49a394fc74",
+      "lines": 146,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "docstring-parser",
+        "version": "0.7.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_common.txt",
+          "statement_coverage_common.txt",
+          "test_common.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "common",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample34",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample34/google.py",
+      "sha256": "5bdff67dcce4ebaffd1a2b96be3330bb16615cb72ae23dbefb36aaf3ef3e2b43",
+      "lines": 274,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "docstring-parser",
+        "version": "0.7.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_google.txt",
+          "statement_coverage_google.txt",
+          "test_google.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "google",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample35",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample35/numpydoc.py",
+      "sha256": "c6ed02a0e78c68f5bf06b9d36e83274571570410a1e3a1637ae1419e76ae19e0",
+      "lines": 331,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "docstring-parser",
+        "version": "0.7.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_numpydoc.txt",
+          "statement_coverage_numpydoc.txt",
+          "test_numpydoc.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "numpydoc",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample36",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample36/rest.py",
+      "sha256": "290204290c54ea1dce2dd5964db63da6d2fec5b7420feb873c5f603846881ac8",
+      "lines": 132,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "docstring-parser",
+        "version": "0.7.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_rest.txt",
+          "statement_coverage_rest.txt",
+          "test_rest.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "rest",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample37",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample37/api.py",
+      "sha256": "3a418a52aeb537bd42e2992bda5a6a034ad2027daa9b6639694767efb2c1c8f8",
+      "lines": 155,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "dataclasses-json",
+        "version": "0.5.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_api.txt",
+          "statement_coverage_api.txt",
+          "test_api.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "api",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample38",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample38/core.py",
+      "sha256": "0dcf34109774e5456e84cbb7df88063666ffe56ea62d6b4635572a7763fd3e42",
+      "lines": 339,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "dataclasses-json",
+        "version": "0.5.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_core.txt",
+          "statement_coverage_core.txt",
+          "statement_coverage_core_old.txt",
+          "test_core.py",
+          "test_core_old.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "core",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample39",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample39/undefined.py",
+      "sha256": "676f4d83e5af2cf69eed18c8cd9657926ac0fff168b0273074c005ade3923eb5",
+      "lines": 273,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "dataclasses-json",
+        "version": "0.5.3"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_undefined.txt",
+          "statement_coverage_undefined.txt",
+          "test_undefined.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "undefined",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample40",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample40/api.py",
+      "sha256": "a68910d0fc67d672bac5938842b26e48fed72a5f872fef276b8482a60faa2236",
+      "lines": 211,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pdir2",
+        "version": "0.3.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "statement_coverage.txt",
+          "test_api.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "api",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample41",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample41/attr_category.py",
+      "sha256": "7a7d85d2f250c73e31940e4223242a8d8b8b36addea26611685e9c37838a0796",
+      "lines": 279,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "pdir2",
+        "version": "0.3.2"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage.txt",
+          "statement_coverage.txt",
+          "test_attr_category.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "attr_category",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample42",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p2/pynguin coverage/sample42/exception.py",
+      "sha256": "1a874d02fb42178bd637e0ad6fb7f0036d35e398342d1fb0e1c8e325ab19b0f5",
+      "lines": 141,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutes",
+        "version": "0.3.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_exception.txt",
+          "statement_coverage_exception.txt",
+          "test_exception.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "exception",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p2",
+      "id": "sample43",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p2/pynguin coverage/sample43/run.py",
+      "sha256": "54021b0dc93c759bebe22710003b862b63b36acdbc3d2c040e715b1bc227bff5",
+      "lines": 107,
+      "status": "present",
+      "origin": {
+        "kind": "PyPI release (identical apart from import lines)",
+        "dist": "flutes",
+        "version": "0.3.0"
+      },
+      "authors_artifacts": {
+        "pynguin": [
+          "branch_coverage_run.txt",
+          "statement_coverage_run.txt",
+          "test_run.py"
+        ],
+        "chatgpt": [
+          "branch_coverage.txt",
+          "compilation_report.txt",
+          "statement_coverage.txt",
+          "test_example.py"
+        ]
+      },
+      "module": "run",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat1_s15",
+      "category": "cat1_scripts",
+      "path": "100_300 LOC p1/cat1/s15/example.py",
+      "sha256": "7624d6fe1f0cd843022f1eae5e6e71808335ba73d3381fd9324105d564d80c6a",
+      "lines": 115,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "convert.py",
+        "commit": "2eee0e26d2d5fd00ec462df47752223952f6bf4e",
+        "date": "2023-11-01",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "Colmap converter: error: the following arguments are required: --source_path/-s",
+        "pynguin": "Colmap converter: error: the following arguments are required: --source_path/-s"
+      },
+      "note": "script: parses command-line arguments when imported; as for the 0-100 LOC scripts, Pynguin cannot test it",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s1",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s1/example.py",
+      "sha256": "83f278b93ff113fb1c1a3b43ed77639fe0d05653729bf5dbf6d3f529bb2e7a01",
+      "lines": 190,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "copy_collection.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s10",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s10/example.py",
+      "sha256": "a8ed4819002fc819f3ea1d7068ecf3111dac995a0f02a26f93763929a27287bd",
+      "lines": 149,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/utils.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "SyntaxError: Missing parentheses in call to 'exec'. Did you mean exec(...)?",
+        "pynguin": "SyntaxError: Missing parentheses in call to 'exec'. Did you mean exec(...)?"
+      },
+      "note": "vbench is Python 2 code (exec statement, cPickle)",
+      "harness": "harness/p1/cat2_s10/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s11",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s11/example.py",
+      "sha256": "493aa9a7f0f05d78b9e5e394f764b61a57e285282632c8e18561ceaa4e143d5e",
+      "lines": 95,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "Show-Me-the-Code",
+        "repo": "python",
+        "branch": "master",
+        "path": "A1014280203/25/25.py",
+        "commit": "1a7e3edd1cd3422cc0eaa55471a0b42e004a9a1a",
+        "date": "2017-09-18",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'win32api'",
+        "pynguin": "ModuleNotFoundError: No module named 'win32api'"
+      },
+      "note": "Windows only: win32api (pywin32 exists for Windows only; impossible on the authors' macOS too)",
+      "harness": "harness/p1/cat2_s11/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s12",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s12/example.py",
+      "sha256": "bffbc3c2ceada835bc89c037d3bc2cab3c1bae34d584723139621e3b3e89df37",
+      "lines": 131,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "not comparable",
+        "owner": "Show-Me-the-Code",
+        "repo": "python",
+        "branch": "master",
+        "path": "AK-wang/0002/save_key.py",
+        "commit": "26577653be8df42b16f2e54c113ab477c3624ab3",
+        "date": "2016-03-30",
+        "ratio": 0.0,
+        "state": "most similar version",
+        "note": "every upstream version of the file is Python 2 code that does not parse as Python 3, so no similarity could be computed (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the authors' file parses as Python 3"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "MySQLdb (mysqlclient) needs the MySQL client C library: sudo apt install libmysqlclient-dev pkg-config",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s13",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s13/example.py",
+      "sha256": "cb4106f503db19e0d544b7e47b09fca6623bf206f4ed3bce8da13808327c64f0",
+      "lines": 120,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "cosmicpython",
+        "repo": "code",
+        "branch": "master",
+        "path": "src/allocation/service_layer/handlers.py",
+        "commit": "af5550869895fbd255d98c6809f6fed961e2bf6b",
+        "date": "2023-11-17",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s14",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s14/example.py",
+      "sha256": "dfb257a01c5b524c2a0626176f67d2e0b7c17c5e8411571503026dd24c8d2f4a",
+      "lines": 213,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "AerialNavigation/drone_3d_trajectory_following/drone_3d_trajectory_following.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s15",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s15/example.py",
+      "sha256": "515a2b5f6fd9a657eaa5cf45e0ef8246d58416e7bd434b108788edd68229f3ab",
+      "lines": 268,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/arm_obstacle_navigation/arm_obstacle_navigation.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s16",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s16/example.py",
+      "sha256": "268cc779913153e337ebd8266aa9aa71159470b63b40cc08ad6f2b1c3c553a98",
+      "lines": 167,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/n_joint_arm_to_point_control/n_joint_arm_to_point_control.py",
+        "commit": "76b0d04a3ce61f6a1935e496ea43c809fb247097",
+        "date": "2022-09-11",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s17",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s17/example.py",
+      "sha256": "eac2e21def368ef5dd1f8658a78c93e3c8b5369c402d209d83ee251e5ba05d50",
+      "lines": 144,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/two_joint_arm_to_point_control/two_joint_arm_to_point_control.py",
+        "commit": "4d714706312735ce46a118bb6782c2aef0ba333f",
+        "date": "2023-07-01",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s18",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s18/example.py",
+      "sha256": "34b846192b8a872922e02d034ce0d7f9eb19f647f148301f9d97f5652b282423",
+      "lines": 192,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/inverted_pendulum/inverted_pendulum_lqr_control.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s19",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s19/example.py",
+      "sha256": "0154103f0cedcf11aebb2f1ed33b573a15eb4906cdddee0acbcd62dc529067b4",
+      "lines": 187,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/inverted_pendulum/inverted_pendulum_mpc_control.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s2",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s2/example.py",
+      "sha256": "ae3de0f3706a0625cb2bf4c123a9ca8f5b0ebc6a22926715aa2ea31ef451e806",
+      "lines": 133,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "not comparable",
+        "owner": "Lekensteyn",
+        "repo": "pacemaker",
+        "branch": "master",
+        "path": "ssltest.py",
+        "commit": "1b94b1ae93ca3775634666572d0a1c92b7c25e42",
+        "date": "2014-04-09",
+        "ratio": 0.0,
+        "state": "most similar version",
+        "note": "every upstream version of the file is Python 2 code that does not parse as Python 3, so no similarity could be computed (verification documented on 2026-11-01; fixed text, not re-checked when the manifest is regenerated); the authors' file parses as Python 3"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?",
+        "pynguin": "AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?"
+      },
+      "note": "Python 2 code at module level (str.decode('hex'))",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s20",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s20/example.py",
+      "sha256": "668147d7e2c4597a560b1a073f392d58efeb683563105296ce00087a4d5c50b0",
+      "lines": 246,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Localization/cubature_kalman_filter/cubature_kalman_filter.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s3",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s3/example.py",
+      "sha256": "f0fdf9c7723c0bc7cb15ad11fdc08c88bcff3f7229bbc16414e4ab94a605fc61",
+      "lines": 192,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "facefusion",
+        "repo": "facefusion",
+        "branch": "master",
+        "path": "facefusion/utilities.py",
+        "commit": "0c34dd846c9a7d1490fcc3df02d578cb5ba2c09d",
+        "date": "2023-08-22",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s4",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s4/example.py",
+      "sha256": "b75dc1ea1e05ede32b1bb20dd759ddd0eebffa187e165349ba7bb9984bd8f67d",
+      "lines": 222,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "facefusion",
+        "repo": "facefusion",
+        "branch": "master",
+        "path": "facefusion/core.py",
+        "commit": "20138d09574e4a9cfe9ebc8e409ef6783cbcea9c",
+        "date": "2023-08-22",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s5",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s5/example.py",
+      "sha256": "af9efd824010512389fcb104412191cbdb9fb8311a62e8f02d57823ce4cf6202",
+      "lines": 123,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "utils/general_utils.py",
+        "commit": "2eee0e26d2d5fd00ec462df47752223952f6bf4e",
+        "date": "2023-11-01",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "needs torch (CPU build from download.pytorch.org, else the PyPI build)",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s6",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s6/example.py",
+      "sha256": "b8331b33af78f4d03ad75cdec10004909280d42c99a332b5317aa95c535c7b8a",
+      "lines": 210,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "train.py",
+        "commit": "666a5ee203daaed5aad8b5ebe90a7250cb136322",
+        "date": "2023-07-26",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'diff_gaussian_rasterization'",
+        "pynguin": "ModuleNotFoundError: No module named 'diff_gaussian_rasterization'"
+      },
+      "note": "needs an NVIDIA GPU: gaussian-splatting's CUDA rasterizer (diff_gaussian_rasterization); impossible on CPU, and on the authors' macOS",
+      "harness": "harness/p1/cat2_s6/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s7",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s7/example.py",
+      "sha256": "39538a63eb285d45f73c318608e29251a1cd9d2897a204fe8dbdf7b7823cf1c1",
+      "lines": 117,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: no upstream source recorded",
+        "note": "the authors' files name no source (line 1 is an import; cat2/a.txt starts at entry 8)"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s8",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s8/example.py",
+      "sha256": "4a5dd6cc59448213b5a860574e0aafbdfbfa99b1071aa8ff04f5c28988f46219",
+      "lines": 263,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Localization/particle_filter/particle_filter.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat2_s9",
+      "category": "cat2_functions",
+      "path": "100_300 LOC p1/cat2/s9/example.py",
+      "sha256": "75db08649c63918989360ec8da42c47ad344bf69184bea52373215dd2efd3ed5",
+      "lines": 385,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "approximate (most similar version, similarity 0.9212)",
+        "owner": "stonerlab",
+        "repo": "Stoner-PythonCode",
+        "branch": "master",
+        "path": "Stoner/plot/utils.py",
+        "commit": "ff5d37042a6d4c91e79a7d657e3e23f3f7e15cb4",
+        "date": "2021-11-06",
+        "ratio": 0.9212,
+        "state": "most similar version"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "Stoner needs numpy < 1.24, scipy < 1.12 and scikit-image < 0.20 (pinned for p1)",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s1",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s1/example.py",
+      "sha256": "5e99913b9d8f81ec5570c02805ea0f1fc22358e12d14a717e11ec13f07a2fd1a",
+      "lines": 169,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "approximate (most similar version, similarity 0.9874)",
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Solutions/8_1/validate.py",
+        "commit": "7d4b30154a5977e7b574835a3e3e239ccbcdbf9e",
+        "date": "2023-07-16",
+        "ratio": 0.9874,
+        "state": "most similar version"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s10",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s10/example.py",
+      "sha256": "cddc235d5f3aa7a98b8902d2fc42c55881c3a09b0bd9bf3e3e4c3a5b4d4796b8",
+      "lines": 125,
+      "status": "present",
+      "origin": {
+        "kind": "uncertain: no upstream source recorded",
+        "note": "the authors name discord.py examples/converters.py on line 2, which prepare_datasets.p1_samples does not read (to fix in R0)"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]",
+        "pynguin": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]"
+      },
+      "note": "starts a Discord bot (network login) when imported",
+      "harness": "harness/p1/cat3_s10/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s11",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s11/example.py",
+      "sha256": "05467eeeff1d9c8fd5e910ba5546d184f32c0b6328db19fc3b050f45575cce66",
+      "lines": 151,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "Rapptz",
+        "repo": "discord.py",
+        "branch": "master",
+        "path": "examples/basic_voice.py",
+        "commit": "bd402b486cc12f0c1bf7377fd65f2fe0a8fabd73",
+        "date": "2024-01-27",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]",
+        "pynguin": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]"
+      },
+      "note": "starts a Discord bot (network login) when imported",
+      "harness": "harness/p1/cat3_s11/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s12",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s12/example.py",
+      "sha256": "71327c91b1673f0d92ed905359b86dc7767ff16878b6218d07aab497ee046864",
+      "lines": 135,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "hegelai",
+        "repo": "prompttools",
+        "branch": "main",
+        "path": "prompttools/experiment/experiments/anthropic_completion_experiment.py",
+        "commit": "133e02a1ea3abd717770cc4d28b395aaaedb1261",
+        "date": "2024-01-29",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ImportError: attempted relative import with no known parent package",
+        "pynguin": "ImportError: attempted relative import with no known parent package"
+      },
+      "note": "relative import at module level (from .x import ...): it cannot be imported as a top-level module",
+      "harness": "harness/p1/cat3_s12/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s13",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s13/example.py",
+      "sha256": "0eab647ffd207d81db425e5384b24d277f4575a73591ad591f88a1db7d82fc6e",
+      "lines": 176,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/db.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s14",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s14/example.py",
+      "sha256": "0f32edf7e110ea7d4ae283a394fcc82423f557cd480fae9601ed24e5b70d1da2",
+      "lines": 256,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/runner.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'cPickle'",
+        "pynguin": "ModuleNotFoundError: No module named 'cPickle'"
+      },
+      "note": "vbench is Python 2 code (exec statement, cPickle)",
+      "harness": "harness/p1/cat3_s14/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s15",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s15/example.py",
+      "sha256": "f16b63b043b0e7ce855299e1513e11c8a741035fbb2fde6f268a845ba83a2a4b",
+      "lines": 214,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/n_joint_arm_3d/NLinkArm3d.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s16",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s16/example.py",
+      "sha256": "0252ce179e4b243663afc64ebaaa1dda971fcaf3ee8450d01202ca97e4f23e66",
+      "lines": 205,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Bipedal/bipedal_planner/bipedal_planner.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s17",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s17/example.py",
+      "sha256": "496b7124cf2002e4baecb633cbd95c17425ae312437e174351eeff9184e29aea",
+      "lines": 190,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/move_to_pose/move_to_pose.py",
+        "commit": "680ecdafb21a798eb47649175e0eba4e72ef356d",
+        "date": "2021-12-25",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s18",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s18/example.py",
+      "sha256": "67bdbfcf754b4e44cbfe26833171a496775eea36bd95a5764ad2cc8c8b1fcda6",
+      "lines": 240,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/move_to_pose/move_to_pose_robot.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s19",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s19/example.py",
+      "sha256": "44ff31b12cd95498685e4596c9be14b77a954f4191125bf44444a9a5a5b7c80a",
+      "lines": 312,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Mapping/grid_map_lib/grid_map_lib.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s2",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s2/example.py",
+      "sha256": "9181ee7a4e229e5cadb202194d0c6a286564c966216c36dc4334b93fd448e586",
+      "lines": 144,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Solutions/2_5/readrides.py",
+        "commit": "0eedffd4292cd4adaefe0a33a0d5af96318337dd",
+        "date": "2023-11-19",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s20",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s20/example.py",
+      "sha256": "c1ead66903eec3f039dec78e37c28bae65bedfb6f8564e60070e75e490575e54",
+      "lines": 215,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "PathTracking/pure_pursuit/pure_pursuit.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s3",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s3/example.py",
+      "sha256": "045330efee32690685a246becfb5fc0e02d62e1a450b196800404ddef2306758",
+      "lines": 111,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "approximate (most similar version, similarity 0.9716)",
+        "owner": "sivy",
+        "repo": "pystatsd",
+        "branch": "master",
+        "path": "pystatsd/daemon.py",
+        "commit": "7de9df74751a245f72fad3f3a70c9d8521270504",
+        "date": "2020-02-18",
+        "ratio": 0.9716,
+        "state": "most similar version"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s4",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s4/example.py",
+      "sha256": "919b1b712ac1a1ef1210183ac14b1aeeb1d0127500b814e7618fe79337315db4",
+      "lines": 153,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "ziberna",
+        "repo": "i3-py",
+        "branch": "master",
+        "path": "examples/wsbar.py",
+        "commit": "27f88a616e9ecc340e7d041d3d00782f8a1964c1",
+        "date": "2012-06-20",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s5",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s5/example.py",
+      "sha256": "376e4d1c7cf69a99291d10b8ce34898d2f3f7b255aa212a69e67285c86c05d32",
+      "lines": 199,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "copier.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s6",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s6/example.py",
+      "sha256": "bfbb3fc836bcd2d817a4ccfdbd2cac4a3d5c4fb34b22687908e6d5940b9088bc",
+      "lines": 260,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "oplog_applier.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s7",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s7/example.py",
+      "sha256": "b1c77084262156e732db683b4554b0bc56242daa1ebc7e3a2b57e3433fff5d78",
+      "lines": 274,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "Lekensteyn",
+        "repo": "pacemaker",
+        "branch": "master",
+        "path": "heartbleed.py",
+        "commit": "e46f3549ce5651deb688c73f67ff348b53c1601b",
+        "date": "2016-01-22",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      },
+      "note": null,
+      "harness": null
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s8",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s8/example.py",
+      "sha256": "d7dc7fc93c7cd9a3b0c7cff0e8dd9199807b29524db182d510de290c98af19a2",
+      "lines": 142,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "no version of the file found in the repository",
+        "owner": "qiuyu96",
+        "repo": "CoDeF",
+        "branch": "main",
+        "path": "utils/video_visualizer.py",
+        "commit": null,
+        "date": null,
+        "ratio": null,
+        "state": null
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "ImportError: attempted relative import with no known parent package",
+        "pynguin": "ImportError: attempted relative import with no known parent package"
+      },
+      "note": "relative import at module level (from .x import ...): it cannot be imported as a top-level module",
+      "harness": "harness/p1/cat3_s8/conftest.py"
+    },
+    {
+      "set": "p1",
+      "id": "cat3_s9",
+      "category": "cat3_classes",
+      "path": "100_300 LOC p1/cat3/s9/example.py",
+      "sha256": "41cd2eb96ac1ecb6d8d5a11c9ccce4b34b261f56d44977f7d31c095fcf235bb1",
+      "lines": 171,
+      "status": "present",
+      "origin": {
+        "kind": "GitHub file named by the authors (first lines of the module, or cat*/a.txt)",
+        "match": "exact, apart from comments and imports",
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Data/stocksim.py",
+        "commit": "0eedffd4292cd4adaefe0a33a0d5af96318337dd",
+        "date": "2023-11-19",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "authors_artifacts": {
+        "pynguin": [],
+        "chatgpt": []
+      },
+      "module": "example",
+      "import_check": {
+        "runner": "import did not finish in 120 s (the module runs at import)",
+        "pynguin": "import did not finish in 120 s (the module runs at import)"
+      },
+      "note": "runs a real-time stock-market simulation when imported (1 s per simulated minute, 9:30 to 16:40): about 7 h 10 min per import",
+      "harness": "harness/p1/cat3_s9/conftest.py"
+    }
+  ],
+  "missing": {
+    "large_cat1": {
+      "paper": "\u00a72.2: 49 large modules = 20 Cat 2 + 23 Cat 3 + 6 Cat 1; Table 3's Cat 1 row 56.833 % = 341/6",
+      "expected": 6,
+      "in_repository": [
+        "cat1_s15"
+      ],
+      "missing": "5 or 6 (whether cat1_s15 is one of the six is unknown)",
+      "results": [
+        "Table 3 Cat 1 row",
+        "Fig. 6 Cat 1 line",
+        "Table 4 Cat 1 row, if Table 4 uses the large set"
+      ],
+      "replacement": "none",
+      "expected_role": "Cat 1 module of the large set (paper: procedural script lacking classes and functions, 100-300 LOC); origin uncertain, see possible_origins",
+      "expected_path": "unknown; under H2 likely 100_300 LOC p1/cat1/s<k>/example.py (only s15 uploaded)",
+      "possible_origins": {
+        "H1": "modules of the Lukasczyk et al. benchmark (paper \u00a72.2: the 49 large modules, six of them Cat 1, came from it); the 11 projects behind p2 hold no strict-definition candidate; the benchmark's full list (Zenodo 10.5281/zenodo.6838658) is unread",
+        "H2": "GitHub scripts collected like p1 (s15, the only one uploaded, is one; p1 README; Table 3 uses them)",
+        "status": "uncertain: neither verified"
+      },
+      "count_assumptions": {
+        "A": "Table 3's six = the six of \u00a72.2: 60 + 43 + 40 + 6 = 149 programs needed, 5-6 missing",
+        "B": "different sets: 60 + 43 + 40 + 6 + 6 = 155 needed, 11-12 missing",
+        "status": "A is the simpler reading, not verified"
+      },
+      "slots": [
+        {
+          "id": "large_cat1/#1",
+          "status": "possibly present: p1/cat1_s15 (membership unknown)",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        },
+        {
+          "id": "large_cat1/#2",
+          "status": "missing",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        },
+        {
+          "id": "large_cat1/#3",
+          "status": "missing",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        },
+        {
+          "id": "large_cat1/#4",
+          "status": "missing",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        },
+        {
+          "id": "large_cat1/#5",
+          "status": "missing",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        },
+        {
+          "id": "large_cat1/#6",
+          "status": "missing",
+          "category": "cat1_scripts",
+          "expected_lines": "stated 100-300 (the authors' files do not consistently meet their stated ranges)"
+        }
+      ],
+      "used_by": [
+        "Table 3 (Cat 1 row)",
+        "Fig. 6 (Cat 1 line)"
+      ],
+      "searched": "recovery_2026-11-01/DATASET_RECOVERY_REPORT_2026-11-01.md"
+    },
+    "chatgpt_outputs": [
+      {
+        "item": "small set: ChatGPT test suites and coverage reports (60 programs, incl. the refactored Cat 1 modules)",
+        "needed_for": [
+          "Table 1 ChatGPT columns",
+          "Table 1 p-values",
+          "Table 1 'Category 1 (refactored)' row"
+        ]
+      },
+      {
+        "item": "p1: ChatGPT suites and coverage of each improvement iteration (40 modules + the 6 large Cat 1 modules)",
+        "needed_for": [
+          "Table 3",
+          "Fig. 6"
+        ]
+      },
+      {
+        "item": "p2 samples 8 and 10: ChatGPT coverage reports (test files are stored)",
+        "needed_for": [
+          "Table 2 (n = 41, not 43)"
+        ]
+      },
+      {
+        "item": "p2 samples 1, 2, 7 and 10: ChatGPT compilation reports (39 of 43 are stored)",
+        "needed_for": [
+          "Table 4"
+        ]
+      },
+      {
+        "item": "assertion classification behind Table 4, and which dataset it uses (of the 39 stored p2 compilation reports, 10 show tests that ran, 20 only errors, 9 'No test classes found')",
+        "needed_for": [
+          "Table 4"
+        ]
+      }
+    ]
+  },
+  "discrepancies": [
+    "small: paper 20/20/20, repository 21 Cat 1 / 19 Cat 2 / 20 Cat 3; Table 1's ChatGPT means fit 20 Cat 1 (refactored) and, among 19-21, only 19 Cat 2 (which Cat 1 folder the authors left out is unknown). All 60 are run and reported per folder.",
+    "p2: Table 2 averages 41 samples (caption: 40); \u00a72.2's 20/23 split differs from Table 2's 9/32.",
+    "p2: \u00a72.2 speaks of 49 large 'projects', one core module each; the 43 p2 modules come from 11 PyPI projects.",
+    "p2: 39 ChatGPT compilation reports are stored, not 43 (none for samples 1, 2, 7, 10).",
+    "p1: 41 modules = 20 Cat 2 + 20 Cat 3 + cat1_s15; 11 fail a plain import as uploaded (INDEPENDENT_REAUDIT.md \u00a76); cat2_s7 names no source.",
+    "LOC ranges are not met: 0_100 LOC holds day2 (540 lines); by radon SLOC 24 of 43 p2 and 15 of 41 p1 modules are under 100 (s15: 88); by total lines 10 p2 and 3 p1 modules fall outside 100-300.",
+    "Categories are applied loosely: 3 small Cat 1 programs define functions (Cetvrta, Start_Arrangements, Trik); 3 p1 Cat 2 modules define classes (cat2_s12, cat2_s13, cat2_s15)."
+  ]
+}

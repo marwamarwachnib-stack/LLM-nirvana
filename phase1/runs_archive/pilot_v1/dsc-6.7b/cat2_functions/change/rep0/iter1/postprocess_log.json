@@ -1,0 +1,16 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 1,
+    "rule": "test-blocks-concatenated",
+    "n_test_blocks": 1,
+    "n_other_blocks": 0
+  },
+  "import_rewrites": [
+    {
+      "line": 2,
+      "old": "from your_module import find_fewest_coins  # replace 'your_module' with the name of the module where the function is defined",
+      "new": "from example import find_fewest_coins  # replace 'your_module' with the name of the module where the function is defined"
+    }
+  ],
+  "refactored_module_from_response": false
+}

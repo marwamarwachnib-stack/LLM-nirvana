@@ -1,0 +1,8 @@
+[
+  {
+    "line": 2,
+    "old": "from BankAccount import BankAccount",
+    "new": "from example import BankAccount",
+    "rule": "renamed-module"
+  }
+]

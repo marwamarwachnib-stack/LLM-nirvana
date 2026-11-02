@@ -1,0 +1,10 @@
+tool,category,avg_iter1,avg_iter5_or_last,avg_best,avg_best_minus_least,median_iters_to_plateau,n
+cl-7b,cat1_scripts,0.0,0.0,0.0,0.0,2.0,1
+cl-7b,cat2_functions,100.0,100.0,100.0,0.0,1.0,1
+cl-7b,cat3_classes,91.67,91.67,91.67,0.0,2.0,1
+dsc-1.3b,cat1_scripts,0.0,0.0,0.0,0.0,2.0,1
+dsc-1.3b,cat2_functions,91.67,91.67,91.67,0.0,2.0,1
+dsc-1.3b,cat3_classes,91.67,94.44,94.44,2.77,3.0,1
+dsc-6.7b,cat1_scripts,100.0,100.0,100.0,0.0,1.0,1
+dsc-6.7b,cat2_functions,91.67,91.67,91.67,0.0,2.0,1
+dsc-6.7b,cat3_classes,86.11,97.22,97.22,11.11,3.0,1

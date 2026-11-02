@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "scripts/run.py",
+    "pilot"
+  ],
+  "args": {
+    "set": "pilot",
+    "tools": "pynguin,dsc-1.3b,dsc-6.7b,cl-7b",
+    "idle_s": 300,
+    "allow_no_rapl": false
+  },
+  "started": "2026-10-25T16:29:17+00:00"
+}

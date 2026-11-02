@@ -1,0 +1,169 @@
+{
+  "1": [
+    ""
+  ],
+  "2": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_negative_target",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "3": [
+    "test_example_i1.test_negative_target"
+  ],
+  "4": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "5": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "6": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "7": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "8": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "9": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "17": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "10": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "16": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_empty_coins",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "18": [
+    "test_example_i1.test_empty_coins"
+  ],
+  "11": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "12": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "13": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "14": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "15": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "20": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "21": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "22": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "23": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "25": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ],
+  "24": [
+    "test_example_i1.test_target_in_coins_with_change_and_remainder",
+    "test_example_i1.test_target_in_coins_with_change",
+    "test_example_i1.test_target_not_in_coins",
+    "test_example_i1.test_target_in_coins",
+    "test_example_i1.test_target_in_coins_with_change_and_remainder_and_change"
+  ]
+}

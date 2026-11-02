@@ -1,0 +1,10 @@
+tool,job,stored_sha,rerun_sha,identical,code_identical,first_diff_char,stored_len,diff_in_code,rerun_cached_tokens,stored_digest
+dsc-1.3b,cat1_scripts/FizzBuzz,ca1181d5f80c,ca1181d5f80c,True,True,,1090,False,0,3ddd2d3fc8d2
+dsc-1.3b,cat2_functions/change,b8f88faaadae,b8f88faaadae,True,True,,1470,False,0,3ddd2d3fc8d2
+dsc-1.3b,cat3_classes/bank-account,005ea0127bd3,005ea0127bd3,True,True,,1719,False,0,3ddd2d3fc8d2
+dsc-6.7b,cat1_scripts/FizzBuzz,fea17d00ccd3,fea17d00ccd3,True,True,,1683,False,0,ce298d984115
+dsc-6.7b,cat2_functions/change,e4c9e10a2c9d,e4c9e10a2c9d,True,True,,1634,False,0,ce298d984115
+dsc-6.7b,cat3_classes/bank-account,4de74f3b8396,4de74f3b8396,True,True,,1715,False,0,ce298d984115
+cl-7b,cat1_scripts/FizzBuzz,2262b8fc3642,02c01fc05565,False,True,980,1650,False,0,8fdf8f752f6e
+cl-7b,cat2_functions/change,3687e1ed2c9a,3687e1ed2c9a,True,True,,1367,False,0,8fdf8f752f6e
+cl-7b,cat3_classes/bank-account,9beae6fbbf78,ad1b7ead6b20,False,False,470,5817,True,0,8fdf8f752f6e

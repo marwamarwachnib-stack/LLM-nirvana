@@ -1,0 +1,19 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 0,
+    "rule": "no-fence:whole-response"
+  },
+  "import_rewrites": [
+    {
+      "line": 1,
+      "old": "",
+      "new": "from example import *",
+      "rule": "added-missing-import",
+      "names_used": [
+        "BankAccount"
+      ]
+    }
+  ],
+  "evaluator_version": 2,
+  "refactored_module_from_response": false
+}

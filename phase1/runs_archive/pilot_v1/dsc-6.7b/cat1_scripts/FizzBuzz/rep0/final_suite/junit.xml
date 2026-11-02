@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.109" timestamp="2026-10-25T18:40:19.187571+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.014"><failure message="AssertionError: assert 'FizzBuzz' == 'Fizz'&#10;  &#10;  - Fizz&#10;  + FizzBuzz">mock_input = &lt;MagicMock name='input' id='126148674108112'&gt;
+
+    @patch('builtins.input', side_effect=['3 5 15', '2 4 8'])
+    def test_fizzbuzz(mock_input):
+        import example as fizzbuzz  # assuming the script name is fizzbuzz.py
+    
+        # Test case 1: Normal numbers
+        assert fizzbuzz.num == [3, 5, 15]
+&gt;       assert fizzbuzz.key == 'Fizz'
+E       AssertionError: assert 'FizzBuzz' == 'Fizz'
+E         
+E         - Fizz
+E         + FizzBuzz
+
+test_example_i1.py:10: AssertionError</failure></testcase></testsuite></testsuites>

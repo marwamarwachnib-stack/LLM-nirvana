@@ -1,0 +1,15 @@
+,,stmt_cov,stmt_cov,stmt_cov,branch_cov,branch_cov,branch_cov,stmt_branch_cov,stmt_branch_cov,stmt_branch_cov,n_iter1_truncated
+,,mean,std,count,mean,std,count,mean,std,count,
+category,tool,,,,,,,,,,
+cat1_scripts,cl-7b,0.0,,1,,,0,0.0,,1,0
+cat1_scripts,dsc-1.3b,0.0,,1,,,0,0.0,,1,0
+cat1_scripts,dsc-6.7b,100.0,,1,100.0,,1,100.0,,1,0
+cat1_scripts,pynguin,0.0,,1,,,0,0.0,,1,0
+cat2_functions,cl-7b,100.0,,1,100.0,,1,100.0,,1,0
+cat2_functions,dsc-1.3b,91.67,,1,85.71,,1,89.47,,1,0
+cat2_functions,dsc-6.7b,91.67,,1,85.71,,1,89.47,,1,0
+cat2_functions,pynguin,100.0,,1,100.0,,1,100.0,,1,0
+cat3_classes,cl-7b,91.67,,1,81.25,,1,88.46,,1,1
+cat3_classes,dsc-1.3b,91.67,,1,81.25,,1,88.46,,1,0
+cat3_classes,dsc-6.7b,86.11,,1,81.25,,1,84.62,,1,0
+cat3_classes,pynguin,100.0,,1,100.0,,1,100.0,,1,0

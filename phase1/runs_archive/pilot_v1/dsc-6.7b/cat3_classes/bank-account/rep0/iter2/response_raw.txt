@@ -1,0 +1,27 @@
+Sure, here are some additional test cases that cover the lines 18, 25, 33, 42:
+
+```python
+def test_deposit_on_closed_account():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.deposit(100)
+
+def test_withdraw_on_closed_account():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.withdraw(100)
+
+def test_close_on_closed_account():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.close()
+
+def test_get_balance_on_closed_account():
+    account = BankAccount()
+    with pytest.raises(ValueError):
+        account.get_balance()
+```
+
+These test cases cover the scenarios where the account is closed and we try to deposit, withdraw, close, or get the balance.
+
+Please note that these tests are not checking the concurrency aspect of the code, as the original test case `test_concurrent_transactions` already covers that. If you want to test the concurrency aspect, you might need to use a different approach, such as using a mock object to simulate the race conditions.

@@ -1,0 +1,61 @@
+category,program,loc,compiles,imports,missing_main_venv,missing_pynguin_venv,import_rc,import_error,reads_stdin,stored_tests_rc,status,stored_tests_summary
+cat1_scripts,ACM_Contest_Scoring_Kattis,30,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Albhabet_Spam,31,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Amazing_Human_Cannon_Ball,15,True,math,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Bella,17,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Cetvrta,25,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Cryptographers_Conundrum,20,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,DRM_Messages,27,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,FizzBuzz,16,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,ICPC_Awards,23,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Judging_Moose,13,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Number_Fun,12,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Speed_Limit,17,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Start_Arrangements,19,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Tarifa,11,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,The_Easiest_Problem_Is_This_One,20,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,Trik,38,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,akicija,25,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,day2,540,True,,,,0,,False,no stored tests,OK,
+cat1_scripts,linethemup,18,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,seven_wonders,16,True,,,,1,EOFError: EOF when reading a line,True,no stored tests,OK (reads stdin),
+cat1_scripts,three_sum,17,True,,,,0,,False,no stored tests,OK,
+cat2_functions,affine-cipher,41,True,,,,0,,False,0,OK,"3 passed, 8 xfailed in 0.05s"
+cat2_functions,all-your-base,25,True,,,,0,,False,0,OK,"5 passed, 3 xfailed in 0.03s"
+cat2_functions,alphametics,177,True,itertools,,,0,,False,0,OK,5 passed in 0.02s
+cat2_functions,atbash-cipher,19,True,string,,,0,,False,0,OK,"1 passed, 5 xfailed in 0.04s"
+cat2_functions,beer-song,38,True,,,,0,,False,0,OK,"3 passed, 1 xfailed in 0.02s"
+cat2_functions,bob,26,True,,,,0,,False,0,OK,"2 passed, 5 xfailed in 0.03s"
+cat2_functions,change,25,True,,,,0,,False,0,OK,"3 passed, 3 xfailed in 0.03s"
+cat2_functions,crypto-square,23,True,itertools math,,,0,,False,0,OK,"1 passed, 2 xfailed in 0.02s"
+cat2_functions,diamond,15,True,,,,0,,False,0,OK,2 xfailed in 0.02s
+cat2_functions,dominoes,30,True,functools itertools,,,0,,False,0,OK,"6 passed, 9 xfailed in 0.06s"
+cat2_functions,error-handling,21,True,,,,0,,False,0,OK,"3 passed, 2 xfailed in 0.02s"
+cat2_functions,flatten-array,18,True,,,,0,,False,0,OK,"2 passed, 3 xfailed in 0.02s"
+cat2_functions,food-chain,63,True,,,,0,,False,0,OK,"1 passed, 5 xfailed in 0.03s"
+cat2_functions,knapsack,15,True,,,,0,,False,0,OK,3 xfailed in 0.02s
+cat2_functions,largest-series-product,23,True,functools operator,,,0,,False,0,OK,"2 passed, 6 xfailed in 0.04s"
+cat2_functions,markdown,88,True,re,,,0,,False,1,OK,"1 failed, 8 passed, 1 xfailed in 0.03s"
+cat2_functions,minesweeper,40,True,,,,0,,False,0,OK,"4 passed, 3 xfailed in 0.03s"
+cat2_functions,palindrome-products,108,True,itertools math,,,0,,False,0,OK,"7 passed, 4 xfailed in 0.04s"
+cat2_functions,poker,36,True,,,,0,,False,0,OK,"5 passed, 5 xfailed in 0.03s"
+cat3_classes,bank-account,43,True,threading,,,0,,False,0,OK,"9 passed, 6 xfailed in 0.05s"
+cat3_classes,binary-search-tree,50,True,,,,0,,False,0,OK,5 passed in 0.01s
+cat3_classes,circular-buffer,56,True,,,,0,,False,0,OK,"4 passed, 8 xfailed in 0.07s"
+cat3_classes,clock,30,True,,,,0,,False,0,OK,4 xfailed in 0.04s
+cat3_classes,complex-numbers,96,True,math,,,0,,False,0,OK,"4 passed, 12 xfailed in 0.22s"
+cat3_classes,custom-set,45,True,,,,0,,False,0,OK,"6 passed, 10 xfailed in 0.11s"
+cat3_classes,dnd-character,21,True,math random,,,0,,False,0,OK,"1 passed, 1 xfailed in 0.01s"
+cat3_classes,forth,66,True,,,,0,,False,0,OK,"14 passed, 6 xfailed in 0.05s"
+cat3_classes,grade-school,36,True,collections,,,0,,False,0,OK,"1 passed, 4 xfailed in 0.04s"
+cat3_classes,hangman,50,True,,,,0,,False,0,OK,"3 passed, 5 xfailed in 0.08s"
+cat3_classes,kindergarten-garden,35,True,,,,0,,False,0,OK,5 xfailed in 0.03s
+cat3_classes,ledger,85,True,datetime,,,0,,False,0,OK,"1 passed, 5 xfailed in 0.05s"
+cat3_classes,linked-list,94,True,,,,0,,False,0,OK,"8 passed, 5 xfailed in 0.07s"
+cat3_classes,luhn,19,True,,,,0,,False,0,OK,5 xfailed in 0.04s
+cat3_classes,meetup,34,True,calendar,,,0,,False,0,OK,"1 passed, 5 xfailed in 0.07s"
+cat3_classes,parallel-letter-frequency,51,True,collections queue threading time,,,0,,False,0,OK,"2 passed, 1 xfailed in 0.02s"
+cat3_classes,phone-number,53,True,re string,,,0,,False,0,OK,"2 passed, 15 xfailed in 0.10s"
+cat3_classes,queen-attack,22,True,,,,0,,False,0,OK,"7 passed, 2 xfailed in 0.04s"
+cat3_classes,robot-name,39,True,random,,,0,,False,0,OK,"4 passed, 1 xfailed in 0.03s"
+cat3_classes,robot-simulator,53,True,,,,0,,False,0,OK,"3 passed, 8 xfailed in 0.09s"

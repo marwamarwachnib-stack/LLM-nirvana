@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="8" time="0.053" timestamp="2026-10-25T19:20:12.287318+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz():
+        num = [1, 2, 3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:7: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_zero" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_zero():
+        num = [0, 0, 0]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:20: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_negative" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_negative():
+        num = [-1, -2, -3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:33: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_large_input" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_large_input():
+        num = [100, 100, 100]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:46: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_empty_input" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_empty_input():
+        num = []
+        expected = []
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:59: NameError</failure></testcase><testcase classname="test_example_i2" name="test_fizzbuzz_with_different_output" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_different_output():
+        num = [1, 2, 3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i2.py:6: NameError</failure></testcase><testcase classname="test_example_i2" name="test_fizzbuzz_with_different_length" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_different_length():
+        num = [1, 2, 3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i2.py:201: NameError</failure></testcase><testcase classname="test_example_i2" name="test_fizzbuzz_with_different_elements" time="0.000"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_different_elements():
+        num = [1, 2, 3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i2.py:214: NameError</failure></testcase></testsuite></testsuites>

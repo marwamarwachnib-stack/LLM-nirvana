@@ -1,0 +1,223 @@
+{
+  "tool": "dsc-6.7b",
+  "model": "deepseek-coder:6.7b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "iteration": 1,
+  "refactored_module": false,
+  "mccabe_max": 5,
+  "evaluator_version": 3,
+  "coverage": {
+    "num_statements": 10,
+    "covered_lines": 10,
+    "num_branches": 8,
+    "covered_branches": 8,
+    "missing_lines": [],
+    "missing_branches": [],
+    "stmt_cov": 100.0,
+    "branch_cov": 100.0,
+    "stmt_branch_cov": 100.0
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 2,
+    "n_judged": 2,
+    "n_pass": 0,
+    "n_assertion": 2,
+    "n_try_except": 0,
+    "n_runtime": 0,
+    "n_not_reached": 0,
+    "n_not_executed": 0,
+    "incorrect_pct": 100.0,
+    "not_reached_pct": 0.0,
+    "incorrect_breakdown_pct": {
+      "assertion": 100.0,
+      "try_except": 0.0,
+      "runtime": 0.0
+    }
+  },
+  "new_file": {
+    "name": "test_example_i1.py",
+    "errors_normalized": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "errors_raw": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "n_import_rewrites": 1,
+    "n_imports_renamed": 1,
+    "import_added": false,
+    "imports_carried": false
+  },
+  "llm": {
+    "prompt_tokens": 197,
+    "output_tokens": 556,
+    "prompt_eval_s": 10.523352,
+    "eval_s": 99.807504,
+    "load_s": 0.002193929,
+    "total_s": 110.336541778,
+    "tokens_per_s": 5.57,
+    "done_reason": "stop",
+    "prompt_cached_tokens": 0,
+    "cold_cache": true,
+    "hit_num_predict": false,
+    "possible_ctx_overflow": false,
+    "template": "basic_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-26T14:23:43+00:00",
+      "wall_s": 110.337,
+      "codecarbon": {
+        "cpu_wh": 0.665418835390199,
+        "ram_wh": 0.30628879273052817,
+        "gpu_wh": 0.0,
+        "total_wh": 0.9717076281207269,
+        "cpu_power_w": 21.414105985023745,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 0.0001608691129582707,
+        "duration_s": 110.34269922799831,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.6654113519444445,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.08878707194444445,
+        "msr:intel-rapl:0:package-0": 0.6654138441666667,
+        "msr:intel-rapl:0:0:core": 0.6184942730555556,
+        "msr:intel-rapl:0:1:uncore": 1.746111111111111e-06,
+        "msr:intel-rapl:0:2:dram": 0.08878703805555556
+      },
+      "pkg_temp_c": {
+        "mean": 72.0,
+        "max": 86.0
+      },
+      "cpu_mhz": {
+        "mean": 2267.2,
+        "max": 3600.4
+      },
+      "cpu_util_pct": {
+        "mean": 50.3,
+        "max": 52.7
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-26T14:25:33+00:00",
+      "wall_s": 1.16,
+      "codecarbon": {
+        "cpu_wh": 0.004546127803563976,
+        "ram_wh": 0.003228575433336623,
+        "gpu_wh": 0.0,
+        "total_wh": 0.007774703236900601,
+        "cpu_power_w": 6.808143959180655,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.2871254449786052e-06,
+        "duration_s": 1.1636156300010043,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.004543801388888889,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00017259333333333334,
+        "msr:intel-rapl:0:package-0": 0.004535968611111111,
+        "msr:intel-rapl:0:0:core": 0.004218874722222222,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.000172695
+      },
+      "pkg_temp_c": {
+        "mean": 77.0,
+        "max": 77.0
+      },
+      "cpu_mhz": {
+        "mean": 2890.3,
+        "max": 2890.3
+      },
+      "cpu_util_pct": {
+        "mean": 12.7,
+        "max": 12.7
+      }
+    },
+    "load": {
+      "phase": "model_load",
+      "started": "2026-10-26T14:23:32+00:00",
+      "wall_s": 6.789,
+      "codecarbon": {
+        "cpu_wh": 0.027569599555663654,
+        "ram_wh": 0.01885793829722691,
+        "gpu_wh": 0.0,
+        "total_wh": 0.04642753785289057,
+        "cpu_power_w": 11.852983181135745,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 7.686218174159593e-06,
+        "duration_s": 6.792854898998485,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.027561541111111112,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.002467645,
+        "msr:intel-rapl:0:package-0": 0.027561541111111112,
+        "msr:intel-rapl:0:0:core": 0.025302516944444443,
+        "msr:intel-rapl:0:1:uncore": 1.1630555555555556e-05,
+        "msr:intel-rapl:0:2:dram": 0.002467763611111111
+      },
+      "pkg_temp_c": {
+        "mean": 69.5,
+        "max": 71.0
+      },
+      "cpu_mhz": {
+        "mean": 2577.0,
+        "max": 3699.6
+      },
+      "cpu_util_pct": {
+        "mean": 14.9,
+        "max": 26.0
+      },
+      "ollama": {
+        "model": "deepseek-coder:6.7b-instruct",
+        "created_at": "2026-10-26T14:23:39.186461459Z",
+        "response": "",
+        "done": true,
+        "done_reason": "load"
+      }
+    }
+  },
+  "cooldown_s": 4.0
+}

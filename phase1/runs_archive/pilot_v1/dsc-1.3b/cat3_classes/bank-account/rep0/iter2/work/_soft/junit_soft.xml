@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="15" time="0.046" timestamp="2026-10-25T18:28:28.396064+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_deposit_into_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_withdraw_from_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_deposit_negative_amount" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_withdraw_more_than_balance" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_withdraw_less_than_zero" time="0.000" /><testcase classname="test_example_i1" name="test_close_account" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_open_already_open_account" time="0.000" /><testcase classname="test_example_i2" name="test_cannot_deposit_non_numeric_amount" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_deposit_non_numeric_amount():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:4: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_non_numeric_amount" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_withdraw_non_numeric_amount():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:10: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_close_already_closed_account" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_close_already_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:17: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_get_balance_on_closed_account" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_get_balance_on_closed_account():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:24: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_more_than_balance" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_withdraw_more_than_balance():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:31: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_negative_amount" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_withdraw_negative_amount():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:38: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_deposit_negative_amount" time="0.000"><failure message="NameError: name 'BankAccount' is not defined">def test_cannot_deposit_negative_amount():
+&gt;       account = BankAccount()
+                  ^^^^^^^^^^^
+E       NameError: name 'BankAccount' is not defined
+
+test_example_i2.py:45: NameError</failure></testcase></testsuite></testsuites>

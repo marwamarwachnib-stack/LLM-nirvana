@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.031" timestamp="2026-10-25T18:24:53.418005+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.000"><failure message="AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?">def test_fizzbuzz():
+&gt;       capturedOutput = pytest.monkeypatch.stdout
+                         ^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?
+
+test_example_i1.py:7: AttributeError</failure></testcase><testcase classname="test_example_i2" name="test_fizzbuzz" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_fizzbuzz():
+&gt;       with _soft_assert.raises('test_example_i2:1', pytest.raises(SystemExit)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:4: NameError</failure></testcase></testsuite></testsuites>

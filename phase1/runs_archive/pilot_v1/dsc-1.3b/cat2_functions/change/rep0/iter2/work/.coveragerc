@@ -1,0 +1,6 @@
+[run]
+branch = True
+dynamic_context = test_function
+data_file = .coverage
+[json]
+show_contexts = True

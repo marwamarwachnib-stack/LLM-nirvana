@@ -1,0 +1,10 @@
+tool,category,program,stmt_cov_v1,branch_cov_v1,incorrect_pct_v1,stmt_cov,branch_cov,n_tests,passed,incorrect_pct,imports_renamed,import_added,collection_error,evaluator_version
+cl-7b,cat1_scripts,FizzBuzz,0.0,,100.0,0.0,,5,0,100.0,0,False,False,2
+cl-7b,cat2_functions,change,0.0,,57.14,100.0,100.0,7,4,42.86,0,True,False,2
+cl-7b,cat3_classes,bank-account,0.0,,100.0,97.22,93.75,12,8,23.53,0,True,False,2
+dsc-1.3b,cat1_scripts,FizzBuzz,0.0,,100.0,0.0,,1,0,100.0,0,False,False,2
+dsc-1.3b,cat2_functions,change,91.67,85.71,83.33,91.67,85.71,6,1,83.33,1,False,False,2
+dsc-1.3b,cat3_classes,bank-account,91.67,81.25,11.11,91.67,81.25,8,7,11.11,1,False,False,2
+dsc-6.7b,cat1_scripts,FizzBuzz,100.0,100.0,75.0,100.0,100.0,1,0,75.0,1,False,False,2
+dsc-6.7b,cat2_functions,change,91.67,85.71,55.56,91.67,85.71,1,0,55.56,1,False,False,2
+dsc-6.7b,cat3_classes,bank-account,88.89,75.0,7.14,88.89,75.0,6,5,7.14,1,False,False,2

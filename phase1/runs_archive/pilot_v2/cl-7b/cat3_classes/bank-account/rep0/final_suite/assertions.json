@@ -1,0 +1,187 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 9,
+      "test": "test_bank_account_open_close",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 11,
+      "test": "test_bank_account_open_close",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 13,
+      "test": "test_bank_account_open_close",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "assert",
+      "lineno": 20,
+      "test": "test_bank_account_deposit_withdraw",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 22,
+      "test": "test_bank_account_deposit_withdraw",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "raises",
+      "lineno": 29,
+      "test": "test_bank_account_deposit_withdraw_invalid_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:6",
+      "kind": "raises",
+      "lineno": 31,
+      "test": "test_bank_account_deposit_withdraw_invalid_amount",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:7",
+      "kind": "raises",
+      "lineno": 39,
+      "test": "test_bank_account_deposit_withdraw_invalid_balance",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:8",
+      "kind": "assert",
+      "lineno": 62,
+      "test": "test_bank_account_concurrent_access",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:9",
+      "kind": "raises",
+      "lineno": 84,
+      "test": "test_bank_account_concurrent_access_invalid_balance",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:10",
+      "kind": "raises",
+      "lineno": 105,
+      "test": "test_bank_account_concurrent_access_invalid_state",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:11",
+      "kind": "raises",
+      "lineno": 127,
+      "test": "test_bank_account_concurrent_access_invalid_state_2",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:12",
+      "kind": "raises",
+      "lineno": 150,
+      "test": "test_bank_account_concurrent_access_invalid_state_3",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:13",
+      "kind": "raises",
+      "lineno": 173,
+      "test": "test_bank_account_concurrent_access_invalid_state_4",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:14",
+      "kind": "raises",
+      "lineno": 196,
+      "test": "test_bank_account_concurrent_access_invalid_state_5",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:15",
+      "kind": "raises",
+      "lineno": 219,
+      "test": "test_bank_account_concurrent_access_invalid_state_6",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:16",
+      "kind": "raises",
+      "lineno": 242,
+      "test": "test_bank_account_concurrent_access_invalid_state_7",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:17",
+      "kind": "raises",
+      "lineno": 265,
+      "test": "test_bank_account_concurrent_access_invalid_state_8",
+      "outcome": "try_except",
+      "detail": "DID NOT RAISE ValueError",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "......F........                                                          [100%]\n=================================== FAILURES ===================================\n______________ test_bank_account_concurrent_access_invalid_state _______________\n\n    def test_bank_account_concurrent_access_invalid_state():\n        account = BankAccount()\n    \n        def open_thread():\n            account.open()\n    \n        def close_thread():\n            account.close()\n        t1 = Thread(target=open_thread)\n        t2 = Thread(target=close_thread)\n        t1.start()\n        t2.start()\n        t1.join()\n        t2.join()\n        with _soft_assert.raises('test_example_i1:10', pytest.raises(ValueError)):\n            account.get_balance()\n>       account.close()\n\ntest_example_i1.py:136: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <example.BankAccount object at 0x75ea4ed85760>\n\n    def close(self):\n        if not self.is_open:\n>           raise ValueError('account not open')\nE           ValueError: account not open\n\nexample.py:42: ValueError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_bank_account_concurrent_access_invalid_state\n1 failed, 14 passed in 0.04s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  }
+}

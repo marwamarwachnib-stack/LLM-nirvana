@@ -1,0 +1,324 @@
+import threading #1
+#2
+#3
+class BankAccount: #4
+    def __init__(self): #5
+        self.is_open = False #6
+        self.balance = None #7
+        self.lock = threading.Lock() #8
+#9
+    def get_balance(self): #10
+        with self.lock: #11
+            if not self.is_open: #12
+                raise ValueError('account not open') #13
+            return self.balance #14
+#15
+    def open(self): #16
+        if self.is_open: #17
+            raise ValueError('account already open') #18
+        self.is_open = True #19
+        self.balance = 0 #20
+#21
+    def deposit(self, amount): #22
+        with self.lock: #23
+            if not self.is_open: #24
+                raise ValueError('account not open') #25
+            if amount <= 0: #26
+                raise ValueError('amount must be greater than 0') #27
+            self.balance += amount #28
+#29
+    def withdraw(self, amount): #30
+        with self.lock: #31
+            if not self.is_open: #32
+                raise ValueError('account not open') #33
+            if amount <= 0: #34
+                raise ValueError('amount must be greater than 0') #35
+            if amount > self.balance: #36
+                raise ValueError('amount must be less than balance') #37
+            self.balance -= amount #38
+#39
+    def close(self): #40
+        if not self.is_open: #41
+            raise ValueError('account not open') #42
+        self.is_open = False #43
+The comments on each line indicate line number
+
+
+import pytest
+from threading import Thread
+
+
+def test_bank_account_open_close():
+    account = BankAccount()
+    assert not account.is_open
+    account.open()
+    assert account.is_open
+    account.close()
+    assert not account.is_open
+
+
+def test_bank_account_deposit_withdraw():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+    assert account.get_balance() == 100
+    account.withdraw(50)
+    assert account.get_balance() == 50
+    account.withdraw(100)
+    assert account.get_balance() == 0
+
+
+def test_bank_account_deposit_withdraw_invalid_amount():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.deposit(-1)
+    with pytest.raises(ValueError):
+        account.withdraw(-1)
+
+
+def test_bank_account_deposit_withdraw_invalid_balance():
+    account = BankAccount()
+    account.open()
+    with pytest.raises(ValueError):
+        account.withdraw(100)
+
+
+def test_bank_account_concurrent_access():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=deposit_thread)
+    t2 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    assert account.get_balance() == 0
+
+
+def test_bank_account_concurrent_access_invalid_balance():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(150)
+
+    t1 = Thread(target=deposit_thread)
+    t2 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state():
+    account = BankAccount()
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state_2():
+    account = BankAccount()
+    account.open()
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state_3():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state_4():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state_5():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_balance()
+
+
+def test_bank_account_concurrent_access_invalid_state_6():
+    account = BankAccount()
+    account.open()
+    account.deposit(100)
+
+    def open_thread():
+        account.open()
+
+    def close_thread():
+        account.close()
+
+    def deposit_thread():
+        account.deposit(50)
+
+    def withdraw_thread():
+        account.withdraw(50)
+
+    t1 = Thread(target=open_thread)
+    t2 = Thread(target=close_thread)
+    t3 = Thread(target=deposit_thread)
+    t4 = Thread(target=withdraw_thread)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    with pytest.raises(ValueError):
+        account.get_
+
+The above test cases only give 0% coverage
+The following lines from the code file are not being covered given by the line numbers - 1, 4-8, 10-14, 16-20, 22-28, 30-38, 40-43
+Please write more test cases to improve the coverage of the unit tests

@@ -1,0 +1,13 @@
+{
+  "model": "deepseek-coder:6.7b-instruct",
+  "created_at": "2026-10-25T18:31:12.649589131Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 146011249714,
+  "load_duration": 4321312,
+  "prompt_eval_count": 385,
+  "prompt_eval_cached_count": 2,
+  "prompt_eval_duration": 20826524000,
+  "eval_count": 626,
+  "eval_duration": 125163614000
+}

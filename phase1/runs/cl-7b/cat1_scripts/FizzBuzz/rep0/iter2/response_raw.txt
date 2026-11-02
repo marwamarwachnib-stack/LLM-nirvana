@@ -1,0 +1,44 @@
+
+Here are some additional test cases that can be added to improve the coverage of the unit tests:
+
+1. Test with a list of numbers that includes both positive and negative numbers:
+```
+def test_fizzbuzz_with_mixed_input():
+    num = [1, -2, 3, 4, 5]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+2. Test with a list of numbers that includes numbers that are not multiples of 3 or 5:
+```
+def test_fizzbuzz_with_non_multiples():
+    num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+3. Test with a list of numbers that includes numbers that are multiples of 3 but not 5:
+```
+def test_fizzbuzz_with_multiples_of_3_but_not_5():
+    num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+4. Test with a list of numbers that includes numbers that are multiples of 5 but not 3:
+```
+def test_fizzbuzz_with_multiples_of_5_but_not_3():
+    num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+5. Test with a list of numbers that includes numbers that are multiples of both 3 and 5:
+```
+def test_fizzbuzz_with_multiples_of_3_and_5():
+    num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+    actual = fizzbuzz(num)
+    assert actual == expected
+```
+These additional test cases cover more scenarios and can help improve the coverage of the unit tests.

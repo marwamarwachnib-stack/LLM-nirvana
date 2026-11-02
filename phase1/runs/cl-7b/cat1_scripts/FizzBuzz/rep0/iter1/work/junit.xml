@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="0.085" timestamp="2026-10-26T14:54:22.811668+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.003"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz():
+        # Test with input 1, 2, and 3
+        num = [1, 2, 3]
+        expected = ['Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:7: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_invalid_input" time="0.001"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_invalid_input():
+        # Test with invalid input
+        num = [0, 0, 0]
+        with pytest.raises(ValueError):
+&gt;           fizzbuzz(num)
+            ^^^^^^^^
+E           NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:14: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_empty_input" time="0.001"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_empty_input():
+        # Test with empty input
+        num = []
+        with pytest.raises(ValueError):
+&gt;           fizzbuzz(num)
+            ^^^^^^^^
+E           NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:20: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_single_input" time="0.001"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_single_input():
+        # Test with single input
+        num = [1]
+        expected = ['Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:26: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_with_multiple_inputs" time="0.001"><failure message="NameError: name 'fizzbuzz' is not defined">def test_fizzbuzz_with_multiple_inputs():
+        # Test with multiple inputs
+        num = [1, 2, 3, 4, 5]
+        expected = ['Fizz', 'Buzz', 'Fizz', 'Buzz', 'Fizz']
+&gt;       actual = fizzbuzz(num)
+                 ^^^^^^^^
+E       NameError: name 'fizzbuzz' is not defined
+
+test_example_i1.py:33: NameError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,8 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 0,
+    "rule": "no-fence:whole-response"
+  },
+  "import_rewrites": [],
+  "refactored_module_from_response": false
+}

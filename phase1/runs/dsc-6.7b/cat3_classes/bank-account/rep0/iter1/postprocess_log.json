@@ -1,0 +1,18 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 1,
+    "rule": "test-blocks-concatenated",
+    "n_test_blocks": 1,
+    "n_other_blocks": 0
+  },
+  "import_rewrites": [
+    {
+      "line": 2,
+      "old": "from your_module import BankAccount",
+      "new": "from example import BankAccount",
+      "rule": "renamed-module"
+    }
+  ],
+  "evaluator_version": 3,
+  "refactored_module_from_response": false
+}

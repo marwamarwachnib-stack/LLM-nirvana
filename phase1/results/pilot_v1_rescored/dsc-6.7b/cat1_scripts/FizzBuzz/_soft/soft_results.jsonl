@@ -1,0 +1,8 @@
+{"site": "test_example_i1:0", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:1", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:2", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:3", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:4", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:5", "outcome": "pass", "detail": ""}
+{"site": "test_example_i1:6", "outcome": "assertion", "detail": ""}
+{"site": "test_example_i1:7", "outcome": "assertion", "detail": ""}

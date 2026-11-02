@@ -1,0 +1,186 @@
+{
+  "tool": "dsc-1.3b",
+  "model": "deepseek-coder:1.3b-instruct",
+  "category": "cat3_classes",
+  "program": "bank-account",
+  "iteration": 1,
+  "refactored_module": false,
+  "mccabe_max": 4,
+  "coverage": {
+    "num_statements": 36,
+    "covered_lines": 33,
+    "num_branches": 16,
+    "covered_branches": 13,
+    "missing_lines": [
+      25,
+      33,
+      42
+    ],
+    "missing_branches": [
+      [
+        24,
+        25
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        41,
+        42
+      ]
+    ],
+    "stmt_cov": 91.67,
+    "branch_cov": 81.25,
+    "stmt_branch_cov": 88.46
+  },
+  "errors": {
+    "n_files": 1,
+    "n_syntax_error": 0,
+    "n_collection_error": 0,
+    "files": {
+      "test_example_i1.py": {
+        "syntax_error": false,
+        "collection_error": false,
+        "no_tests": false,
+        "detail": ""
+      }
+    },
+    "pytest_timeout": false,
+    "pytest_returncode": 1
+  },
+  "tests": {
+    "n_tests": 8,
+    "passed": 7,
+    "failed": 1,
+    "error": 0,
+    "xfailed": 0,
+    "skipped": 0
+  },
+  "assertions": {
+    "n_sites": 9,
+    "n_judged": 9,
+    "n_pass": 8,
+    "n_assertion": 0,
+    "n_try_except": 0,
+    "n_runtime": 1,
+    "n_not_executed": 0,
+    "incorrect_pct": 11.11,
+    "incorrect_breakdown_pct": {
+      "assertion": 0.0,
+      "try_except": 0.0,
+      "runtime": 100.0
+    }
+  },
+  "new_file": {
+    "name": "test_example_i1.py",
+    "errors_normalized": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "errors_raw": {
+      "syntax_error": false,
+      "collection_error": true,
+      "no_tests": false,
+      "detail": "ModuleNotFoundError: No module named 'BankAccount'"
+    },
+    "n_import_rewrites": 1
+  },
+  "llm": {
+    "prompt_tokens": 385,
+    "output_tokens": 521,
+    "prompt_eval_s": 3.780325,
+    "eval_s": 20.536574,
+    "load_s": 0.00411228,
+    "total_s": 24.576744611,
+    "tokens_per_s": 25.37,
+    "done_reason": "stop",
+    "hit_num_predict": false,
+    "possible_ctx_overflow": false,
+    "template": "basic_user.txt",
+    "dropped_suite_files": 0
+  },
+  "energy": {
+    "generation": {
+      "phase": "generation",
+      "started": "2026-10-25T18:27:14+00:00",
+      "wall_s": 24.578,
+      "codecarbon": {
+        "cpu_wh": 0.16047948782792892,
+        "ram_wh": 0.06823414381666329,
+        "gpu_wh": 0.0,
+        "total_wh": 0.22871363164459213,
+        "cpu_power_w": 22.16838574381577,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 3.786422785965716e-05,
+        "duration_s": 24.582827170999735,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.1604718486111111,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.018133176388888887,
+        "msr:intel-rapl:0:package-0": 0.16047054333333333,
+        "msr:intel-rapl:0:0:core": 0.151105655,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.018133396666666666
+      },
+      "pkg_temp_c": {
+        "mean": 69.8,
+        "max": 80.0
+      },
+      "cpu_mhz": {
+        "mean": 2598.7,
+        "max": 3520.4
+      },
+      "cpu_util_pct": {
+        "mean": 49.9,
+        "max": 50.6
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "started": "2026-10-25T18:27:39+00:00",
+      "wall_s": 1.111,
+      "codecarbon": {
+        "cpu_wh": 0.004372126831027334,
+        "ram_wh": 0.003097142177774812,
+        "gpu_wh": 0.0,
+        "total_wh": 0.007469269008802146,
+        "cpu_power_w": 16.47553268536889,
+        "ram_power_w": 10.0,
+        "emissions_kgco2eq": 1.2365598922142218e-06,
+        "duration_s": 1.1165184740002587,
+        "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+        "tracking_mode": "machine",
+        "codecarbon_version": "3.3.1",
+        "country_iso_code": "PRT"
+      },
+      "rapl_raw_wh": {
+        "mmio:intel-rapl-mmio:0:package-0": 0.004364511111111111,
+        "mmio:intel-rapl-mmio:0:0:dram": 0.00014212694444444443,
+        "msr:intel-rapl:0:package-0": 0.004365172222222222,
+        "msr:intel-rapl:0:0:core": 0.004093770277777777,
+        "msr:intel-rapl:0:1:uncore": 0.0,
+        "msr:intel-rapl:0:2:dram": 0.0001422963888888889
+      },
+      "pkg_temp_c": {
+        "mean": 76.0,
+        "max": 76.0
+      },
+      "cpu_mhz": {
+        "mean": 2468.7,
+        "max": 2468.7
+      },
+      "cpu_util_pct": {
+        "mean": 13.0,
+        "max": 13.0
+      }
+    }
+  },
+  "cooldown_s": 2.0
+}

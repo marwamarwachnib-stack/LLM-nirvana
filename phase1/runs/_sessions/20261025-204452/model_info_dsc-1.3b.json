@@ -1,0 +1,42 @@
+{
+  "model": "deepseek-coder:1.3b-instruct",
+  "digest": "3ddd2d3fc8d2b5fe039d18f859271132fd9c7960ef0be1864984442dc2a915d3",
+  "size_bytes": 776080839,
+  "modified_at": "2026-10-25T15:56:28.697099747Z",
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "llama",
+    "families": [
+      "llama"
+    ],
+    "parameter_size": "1B",
+    "quantization_level": "Q4_0"
+  },
+  "model_info": {
+    "general.architecture": "llama",
+    "general.file_type": 2,
+    "general.parameter_count": 1346471936,
+    "general.quantization_version": 2,
+    "llama.attention.head_count": 16,
+    "llama.attention.head_count_kv": 16,
+    "llama.attention.layer_norm_rms_epsilon": 1e-06,
+    "llama.block_count": 24,
+    "llama.context_length": 16384,
+    "llama.embedding_length": 2048,
+    "llama.feed_forward_length": 5504,
+    "llama.rope.dimension_count": 128,
+    "llama.rope.freq_base": 100000,
+    "llama.rope.scaling.factor": 4,
+    "llama.rope.scaling.type": "linear",
+    "tokenizer.ggml.add_bos_token": true,
+    "tokenizer.ggml.add_eos_token": false,
+    "tokenizer.ggml.bos_token_id": 32013,
+    "tokenizer.ggml.eos_token_id": 32021,
+    "tokenizer.ggml.model": "gpt2",
+    "tokenizer.ggml.padding_token_id": 32014
+  },
+  "parameters_default": null,
+  "template": "{{ .System }}\n### Instruction:\n{{ .Prompt }}\n### Response:\n",
+  "ollama_version": "0.40.3"
+}

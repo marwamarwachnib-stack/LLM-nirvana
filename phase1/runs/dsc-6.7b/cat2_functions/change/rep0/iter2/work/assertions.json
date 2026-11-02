@@ -1,0 +1,224 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 6,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 7,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:2",
+      "kind": "assert",
+      "lineno": 8,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:3",
+      "kind": "assert",
+      "lineno": 11,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:4",
+      "kind": "assert",
+      "lineno": 14,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "can't make target with given coins",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:5",
+      "kind": "raises",
+      "lineno": 17,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "IndexError: list index out of range",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:6",
+      "kind": "raises",
+      "lineno": 21,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i1:7",
+      "kind": "raises",
+      "lineno": 25,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:0",
+      "kind": "assert",
+      "lineno": 5,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:1",
+      "kind": "assert",
+      "lineno": 6,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:2",
+      "kind": "assert",
+      "lineno": 7,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:3",
+      "kind": "assert",
+      "lineno": 10,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:4",
+      "kind": "assert",
+      "lineno": 13,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "can't make target with given coins",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:5",
+      "kind": "raises",
+      "lineno": 16,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "IndexError: list index out of range",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:6",
+      "kind": "raises",
+      "lineno": 20,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:7",
+      "kind": "raises",
+      "lineno": 24,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:8",
+      "kind": "assert",
+      "lineno": 28,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:9",
+      "kind": "assert",
+      "lineno": 31,
+      "test": "test_find_fewest_coins",
+      "outcome": "assertion",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:10",
+      "kind": "assert",
+      "lineno": 34,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "can't make target with given coins",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:11",
+      "kind": "raises",
+      "lineno": 37,
+      "test": "test_find_fewest_coins",
+      "outcome": "runtime",
+      "detail": "IndexError: list index out of range",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:12",
+      "kind": "raises",
+      "lineno": 41,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    },
+    {
+      "site": "test_example_i2:13",
+      "kind": "raises",
+      "lineno": 45,
+      "test": "test_find_fewest_coins",
+      "outcome": "pass",
+      "detail": "",
+      "test_status": "passed"
+    }
+  ],
+  "run": {
+    "returncode": 0,
+    "stdout_tail": "..                                                                       [100%]\n2 passed in 0.02s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py",
+      "test_example_i2.py"
+    ]
+  }
+}

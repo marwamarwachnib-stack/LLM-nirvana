@@ -1,0 +1,43 @@
+{
+  "sites": [
+    {
+      "site": "test_example_i1:0",
+      "kind": "assert",
+      "lineno": 13,
+      "test": "test_fizzbuzz",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    },
+    {
+      "site": "test_example_i1:1",
+      "kind": "assert",
+      "lineno": 34,
+      "test": "test_fizzbuzz_edge_cases",
+      "outcome": "runtime",
+      "detail": "unreached: test crashed outside assertions",
+      "test_status": "failed"
+    }
+  ],
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "FF                                                                       [100%]\n=================================== FAILURES ===================================\n________________________________ test_fizzbuzz _________________________________\n\n    def test_fizzbuzz():\n>       capturedOutput = io.StringIO()\n                         ^^\nE       NameError: name 'io' is not defined. Did you forget to import 'io'\n\ntest_example_i1.py:7: NameError\n___________________________ test_fizzbuzz_edge_cases ___________________________\n\n    def test_fizzbuzz_edge_cases():\n>       capturedOutput = io.StringIO()\n                         ^^\nE       NameError: name 'io' is not defined. Did you forget to import 'io'\n\ntest_example_i1.py:21: NameError\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_fizzbuzz - NameError: name 'io' is not define...\nFAILED test_example_i1.py::test_fizzbuzz_edge_cases - NameError: name 'io' is...\n2 failed in 0.02s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit_soft.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  }
+}

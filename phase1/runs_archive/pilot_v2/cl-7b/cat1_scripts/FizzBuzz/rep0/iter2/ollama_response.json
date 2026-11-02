@@ -1,0 +1,13 @@
+{
+  "model": "codellama:7b-instruct",
+  "created_at": "2026-10-25T22:33:40.965460692Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 260106690686,
+  "load_duration": 2570624,
+  "prompt_eval_count": 595,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 32359831000,
+  "eval_count": 846,
+  "eval_duration": 227735033000
+}

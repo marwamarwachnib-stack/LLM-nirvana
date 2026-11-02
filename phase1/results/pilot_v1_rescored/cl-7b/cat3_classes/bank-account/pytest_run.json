@@ -1,0 +1,77 @@
+{
+  "run": {
+    "returncode": 1,
+    "stdout_tail": "rnings for more info.\n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\ntest_example_i1.py::test_bank_account_concurrent_access_invalid_state_6\n  /home/diguest/LLM-nirvana/phase1/.venv/lib/python3.12/site-packages/_pytest/threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-28 (withdraw_thread)\n  \n  Traceback (most recent call last):\n    File \"/usr/lib/python3.12/threading.py\", line 1073, in _bootstrap_inner\n      self.run()\n    File \"/usr/lib/python3.12/threading.py\", line 1010, in run\n      self._target(*self._args, **self._kwargs)\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/test_example_i1.py\", line 261, in withdraw_thread\n      account.withdraw(50)\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/example.py\", line 33, in withdraw\n      raise ValueError('account not open')\n  ValueError: account not open\n  \n  Enable tracemalloc to get traceback where the object was allocated.\n  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.\n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\ntest_example_i1.py::test_bank_account_concurrent_access_invalid_state_6\n  /home/diguest/LLM-nirvana/phase1/.venv/lib/python3.12/site-packages/_pytest/threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-27 (deposit_thread)\n  \n  Traceback (most recent call last):\n    File \"/usr/lib/python3.12/threading.py\", line 1073, in _bootstrap_inner\n      self.run()\n    File \"/usr/lib/python3.12/threading.py\", line 1010, in run\n      self._target(*self._args, **self._kwargs)\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/test_example_i1.py\", line 258, in deposit_thread\n      account.deposit(50)\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/example.py\", line 25, in deposit\n      raise ValueError('account not open')\n  ValueError: account not open\n  \n  Enable tracemalloc to get traceback where the object was allocated.\n  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.\n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\ntest_example_i1.py::test_bank_account_concurrent_access_invalid_state_6\n  /home/diguest/LLM-nirvana/phase1/.venv/lib/python3.12/site-packages/_pytest/threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-25 (open_thread)\n  \n  Traceback (most recent call last):\n    File \"/usr/lib/python3.12/threading.py\", line 1073, in _bootstrap_inner\n      self.run()\n    File \"/usr/lib/python3.12/threading.py\", line 1010, in run\n      self._target(*self._args, **self._kwargs)\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/test_example_i1.py\", line 252, in open_thread\n      account.open()\n    File \"/home/diguest/LLM-nirvana/phase1/results/pilot_v1_rescored/cl-7b/cat3_classes/bank-account/example.py\", line 18, in open\n      raise ValueError('account already open')\n  ValueError: account already open\n  \n  Enable tracemalloc to get traceback where the object was allocated.\n  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.\n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED test_example_i1.py::test_bank_account_deposit_withdraw - ValueError: a...\nFAILED test_example_i1.py::test_bank_account_concurrent_access - assert 100 == 0\nFAILED test_example_i1.py::test_bank_account_concurrent_access_invalid_balance\nFAILED test_example_i1.py::test_bank_account_concurrent_access_invalid_state_6\n4 failed, 8 passed, 17 warnings in 0.24s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "coverage",
+      "run",
+      "--rcfile=.coveragerc",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py"
+    ]
+  },
+  "junit": {
+    "test_example_i1::test_bank_account_open_close": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_deposit_withdraw": {
+      "status": "failed",
+      "message": "ValueError: amount must be less than balance"
+    },
+    "test_example_i1::test_bank_account_deposit_withdraw_invalid_amount": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_deposit_withdraw_invalid_balance": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access": {
+      "status": "failed",
+      "message": "assert 100 == 0\n +  where 100 = get_balance()\n +    where get_balance = <example.BankAccount object at 0x7728294564e0>.get_balance"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_balance": {
+      "status": "failed",
+      "message": "Failed: DID NOT RAISE ValueError"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state_2": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state_3": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state_4": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state_5": {
+      "status": "passed"
+    },
+    "test_example_i1::test_bank_account_concurrent_access_invalid_state_6": {
+      "status": "failed",
+      "message": "AttributeError: 'BankAccount' object has no attribute 'get_'"
+    }
+  },
+  "file_errors": {
+    "test_example_i1.py": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    }
+  }
+}

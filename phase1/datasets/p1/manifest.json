@@ -1,0 +1,1632 @@
+{
+  "created": "2026-10-30T12:14:55+00:00",
+  "cutoff": "2024-01-31",
+  "exclude_newer": "2024-01-31",
+  "repos": {
+    "graphdeco-inria__gaussian-splatting": {
+      "url": "https://github.com/graphdeco-inria/gaussian-splatting",
+      "ref": "origin/main",
+      "exports": [
+        "p1/src/graphdeco-inria__gaussian-splatting@2eee0e26d2d5",
+        "p1/src/graphdeco-inria__gaussian-splatting@666a5ee203da"
+      ]
+    },
+    "dropbox__hydra": {
+      "url": "https://github.com/dropbox/hydra",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/dropbox__hydra@101b274e5ac8"
+      ]
+    },
+    "wesm__vbench": {
+      "url": "https://github.com/wesm/vbench",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/wesm__vbench@78bf5ff1972a"
+      ]
+    },
+    "Show-Me-the-Code__python": {
+      "url": "https://github.com/Show-Me-the-Code/python",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/Show-Me-the-Code__python@1a7e3edd1cd3",
+        "p1/src/Show-Me-the-Code__python@26577653be8d"
+      ]
+    },
+    "cosmicpython__code": {
+      "url": "https://github.com/cosmicpython/code",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/cosmicpython__code@af5550869895"
+      ]
+    },
+    "AtsushiSakai__PythonRobotics": {
+      "url": "https://github.com/AtsushiSakai/PythonRobotics",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205",
+        "p1/src/AtsushiSakai__PythonRobotics@76b0d04a3ce6",
+        "p1/src/AtsushiSakai__PythonRobotics@4d7147063127",
+        "p1/src/AtsushiSakai__PythonRobotics@680ecdafb21a"
+      ]
+    },
+    "Lekensteyn__pacemaker": {
+      "url": "https://github.com/Lekensteyn/pacemaker",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/Lekensteyn__pacemaker@1b94b1ae93ca",
+        "p1/src/Lekensteyn__pacemaker@e46f3549ce56"
+      ]
+    },
+    "facefusion__facefusion": {
+      "url": "https://github.com/facefusion/facefusion",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/facefusion__facefusion@0c34dd846c9a",
+        "p1/src/facefusion__facefusion@20138d09574e"
+      ]
+    },
+    "stonerlab__Stoner-PythonCode": {
+      "url": "https://github.com/stonerlab/Stoner-PythonCode",
+      "ref": "HEAD",
+      "exports": [
+        "p1/src/stonerlab__Stoner-PythonCode@ff5d37042a6d"
+      ]
+    },
+    "dabeaz-course__python-mastery": {
+      "url": "https://github.com/dabeaz-course/python-mastery",
+      "ref": "origin/main",
+      "exports": [
+        "p1/src/dabeaz-course__python-mastery@7d4b30154a59",
+        "p1/src/dabeaz-course__python-mastery@0eedffd4292c"
+      ]
+    },
+    "Rapptz__discord.py": {
+      "url": "https://github.com/Rapptz/discord.py",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/Rapptz__discord.py@bd402b486cc1"
+      ]
+    },
+    "hegelai__prompttools": {
+      "url": "https://github.com/hegelai/prompttools",
+      "ref": "origin/main",
+      "exports": [
+        "p1/src/hegelai__prompttools@133e02a1ea3a"
+      ]
+    },
+    "sivy__pystatsd": {
+      "url": "https://github.com/sivy/pystatsd",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/sivy__pystatsd@7de9df74751a"
+      ]
+    },
+    "ziberna__i3-py": {
+      "url": "https://github.com/ziberna/i3-py",
+      "ref": "origin/master",
+      "exports": [
+        "p1/src/ziberna__i3-py@27f88a616e9e"
+      ]
+    }
+  },
+  "programs": {
+    "cat1_s15": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat1/s15/example.py",
+      "category": "cat1_scripts",
+      "structural_category": "cat1_scripts",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat1_s15",
+        "p1/src/graphdeco-inria__gaussian-splatting@2eee0e26d2d5"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "convert.py",
+        "commit": "2eee0e26d2d5fd00ec462df47752223952f6bf4e",
+        "date": "2023-11-01",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "script: parses command-line arguments when imported; as for the 0-100 LOC scripts, Pynguin cannot test it",
+      "overlay": [
+        "train.py"
+      ],
+      "import_check": {
+        "runner": "Colmap converter: error: the following arguments are required: --source_path/-s",
+        "pynguin": "Colmap converter: error: the following arguments are required: --source_path/-s"
+      }
+    },
+    "cat2_s1": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s1/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s1",
+        "p1/src/dropbox__hydra@101b274e5ac8"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "copy_collection.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "overlay": [
+        "copier.py",
+        "copy_state_db.py",
+        "faster_ordered_dict.py",
+        "oplog_applier.py",
+        "utils.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s10": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s10/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s10",
+        "p1/src/wesm__vbench@78bf5ff1972a/vbench",
+        "p1/src/wesm__vbench@78bf5ff1972a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/utils.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "vbench is Python 2 code (exec statement, cPickle)",
+      "overlay": [
+        "db.py",
+        "runner.py"
+      ],
+      "import_check": {
+        "runner": "SyntaxError: Missing parentheses in call to 'exec'. Did you mean exec(...)?",
+        "pynguin": "SyntaxError: Missing parentheses in call to 'exec'. Did you mean exec(...)?"
+      }
+    },
+    "cat2_s11": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s11/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/Show-Me-the-Code__python@1a7e3edd1cd3/A1014280203/25",
+        "p1/src/Show-Me-the-Code__python@1a7e3edd1cd3"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "Show-Me-the-Code",
+        "repo": "python",
+        "branch": "master",
+        "path": "A1014280203/25/25.py",
+        "commit": "1a7e3edd1cd3422cc0eaa55471a0b42e004a9a1a",
+        "date": "2017-09-18",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "Windows only: win32api (pywin32 exists for Windows only; impossible on the authors' macOS too)",
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'win32api'",
+        "pynguin": "ModuleNotFoundError: No module named 'win32api'"
+      }
+    },
+    "cat2_s12": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s12/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/Show-Me-the-Code__python@26577653be8d/AK-wang/0002",
+        "p1/src/Show-Me-the-Code__python@26577653be8d"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "Show-Me-the-Code",
+        "repo": "python",
+        "branch": "master",
+        "path": "AK-wang/0002/save_key.py",
+        "commit": "26577653be8df42b16f2e54c113ab477c3624ab3",
+        "date": "2016-03-30",
+        "ratio": 0.0,
+        "state": "most similar version"
+      },
+      "note": "MySQLdb (mysqlclient) needs the MySQL client C library: sudo apt install libmysqlclient-dev pkg-config",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s13": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s13/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/cosmicpython__code@af5550869895/src/allocation/service_layer",
+        "p1/src/cosmicpython__code@af5550869895",
+        "p1/src/cosmicpython__code@af5550869895/src"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "cosmicpython",
+        "repo": "code",
+        "branch": "master",
+        "path": "src/allocation/service_layer/handlers.py",
+        "commit": "af5550869895fbd255d98c6809f6fed961e2bf6b",
+        "date": "2023-11-17",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s14": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s14/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/AerialNavigation/drone_3d_trajectory_following",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "AerialNavigation/drone_3d_trajectory_following/drone_3d_trajectory_following.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s15": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s15/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/ArmNavigation/arm_obstacle_navigation",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/arm_obstacle_navigation/arm_obstacle_navigation.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s16": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s16/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@76b0d04a3ce6/ArmNavigation/n_joint_arm_to_point_control",
+        "p1/src/AtsushiSakai__PythonRobotics@76b0d04a3ce6"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/n_joint_arm_to_point_control/n_joint_arm_to_point_control.py",
+        "commit": "76b0d04a3ce61f6a1935e496ea43c809fb247097",
+        "date": "2022-09-11",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s17": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s17/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@4d7147063127/ArmNavigation/two_joint_arm_to_point_control",
+        "p1/src/AtsushiSakai__PythonRobotics@4d7147063127"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/two_joint_arm_to_point_control/two_joint_arm_to_point_control.py",
+        "commit": "4d714706312735ce46a118bb6782c2aef0ba333f",
+        "date": "2023-07-01",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s18": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s18/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s18",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Control/inverted_pendulum",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/inverted_pendulum/inverted_pendulum_lqr_control.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "inverted_pendulum_mpc_control.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s19": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s19/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s19",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Control/inverted_pendulum",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/inverted_pendulum/inverted_pendulum_mpc_control.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "inverted_pendulum_lqr_control.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s2": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s2/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s2",
+        "p1/src/Lekensteyn__pacemaker@1b94b1ae93ca"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "Lekensteyn",
+        "repo": "pacemaker",
+        "branch": "master",
+        "path": "ssltest.py",
+        "commit": "1b94b1ae93ca3775634666572d0a1c92b7c25e42",
+        "date": "2014-04-09",
+        "ratio": 0.0,
+        "state": "most similar version"
+      },
+      "note": "Python 2 code at module level (str.decode('hex'))",
+      "overlay": [
+        "heartbleed.py"
+      ],
+      "import_check": {
+        "runner": "AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?",
+        "pynguin": "AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?"
+      }
+    },
+    "cat2_s20": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s20/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Localization/cubature_kalman_filter",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Localization/cubature_kalman_filter/cubature_kalman_filter.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s3": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s3/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s3",
+        "p1/src/facefusion__facefusion@0c34dd846c9a/facefusion",
+        "p1/src/facefusion__facefusion@0c34dd846c9a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "facefusion",
+        "repo": "facefusion",
+        "branch": "master",
+        "path": "facefusion/utilities.py",
+        "commit": "0c34dd846c9a7d1490fcc3df02d578cb5ba2c09d",
+        "date": "2023-08-22",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "overlay": [
+        "core.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s4": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s4/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s4",
+        "p1/src/facefusion__facefusion@20138d09574e/facefusion",
+        "p1/src/facefusion__facefusion@20138d09574e"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "facefusion",
+        "repo": "facefusion",
+        "branch": "master",
+        "path": "facefusion/core.py",
+        "commit": "20138d09574e4a9cfe9ebc8e409ef6783cbcea9c",
+        "date": "2023-08-22",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "overlay": [
+        "utilities.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s5": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s5/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/graphdeco-inria__gaussian-splatting@2eee0e26d2d5/utils",
+        "p1/src/graphdeco-inria__gaussian-splatting@2eee0e26d2d5"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "utils/general_utils.py",
+        "commit": "2eee0e26d2d5fd00ec462df47752223952f6bf4e",
+        "date": "2023-11-01",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "needs torch (CPU build from download.pytorch.org, else the PyPI build)",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s6": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s6/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat2_s6",
+        "p1/src/graphdeco-inria__gaussian-splatting@666a5ee203da"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "graphdeco-inria",
+        "repo": "gaussian-splatting",
+        "branch": "main",
+        "path": "train.py",
+        "commit": "666a5ee203daaed5aad8b5ebe90a7250cb136322",
+        "date": "2023-07-26",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "note": "needs an NVIDIA GPU: gaussian-splatting's CUDA rasterizer (diff_gaussian_rasterization); impossible on CPU, and on the authors' macOS",
+      "overlay": [
+        "convert.py"
+      ],
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'diff_gaussian_rasterization'",
+        "pynguin": "ModuleNotFoundError: No module named 'diff_gaussian_rasterization'"
+      }
+    },
+    "cat2_s7": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s7/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [],
+      "data_files": [],
+      "env": {},
+      "origin": null,
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s8": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s8/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Localization/particle_filter",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Localization/particle_filter/particle_filter.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat2_s9": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat2/s9/example.py",
+      "category": "cat2_functions",
+      "structural_category": "cat2_functions",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/stonerlab__Stoner-PythonCode@ff5d37042a6d/Stoner/plot",
+        "p1/src/stonerlab__Stoner-PythonCode@ff5d37042a6d"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "stonerlab",
+        "repo": "Stoner-PythonCode",
+        "branch": "master",
+        "path": "Stoner/plot/utils.py",
+        "commit": "ff5d37042a6d4c91e79a7d657e3e23f3f7e15cb4",
+        "date": "2021-11-06",
+        "ratio": 0.9212,
+        "state": "most similar version"
+      },
+      "note": "Stoner needs numpy < 1.24, scipy < 1.12 and scikit-image < 0.20 (pinned for p1)",
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s1": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s1/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/dabeaz-course__python-mastery@7d4b30154a59/Solutions/8_1",
+        "p1/src/dabeaz-course__python-mastery@7d4b30154a59"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Solutions/8_1/validate.py",
+        "commit": "7d4b30154a5977e7b574835a3e3e239ccbcdbf9e",
+        "date": "2023-07-16",
+        "ratio": 0.9874,
+        "state": "most similar version"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s10": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s10/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [],
+      "data_files": [],
+      "env": {},
+      "origin": null,
+      "note": "starts a Discord bot (network login) when imported",
+      "import_check": {
+        "runner": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]",
+        "pynguin": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]"
+      }
+    },
+    "cat3_s11": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s11/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/Rapptz__discord.py@bd402b486cc1/examples",
+        "p1/src/Rapptz__discord.py@bd402b486cc1"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "Rapptz",
+        "repo": "discord.py",
+        "branch": "master",
+        "path": "examples/basic_voice.py",
+        "commit": "bd402b486cc12f0c1bf7377fd65f2fe0a8fabd73",
+        "date": "2024-01-27",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "starts a Discord bot (network login) when imported",
+      "import_check": {
+        "runner": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]",
+        "pynguin": "aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Name or service not known]"
+      }
+    },
+    "cat3_s12": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s12/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/hegelai__prompttools@133e02a1ea3a/prompttools/experiment/experiments",
+        "p1/src/hegelai__prompttools@133e02a1ea3a"
+      ],
+      "data_files": [],
+      "env": {
+        "SENTRY_OPT_OUT": "1"
+      },
+      "origin": {
+        "owner": "hegelai",
+        "repo": "prompttools",
+        "branch": "main",
+        "path": "prompttools/experiment/experiments/anthropic_completion_experiment.py",
+        "commit": "133e02a1ea3abd717770cc4d28b395aaaedb1261",
+        "date": "2024-01-29",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "relative import at module level (from .x import ...): it cannot be imported as a top-level module",
+      "import_check": {
+        "runner": "ImportError: attempted relative import with no known parent package",
+        "pynguin": "ImportError: attempted relative import with no known parent package"
+      }
+    },
+    "cat3_s13": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s13/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s13",
+        "p1/src/wesm__vbench@78bf5ff1972a/vbench",
+        "p1/src/wesm__vbench@78bf5ff1972a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/db.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "runner.py",
+        "utils.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s14": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s14/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s14",
+        "p1/src/wesm__vbench@78bf5ff1972a/vbench",
+        "p1/src/wesm__vbench@78bf5ff1972a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "wesm",
+        "repo": "vbench",
+        "branch": "master",
+        "path": "vbench/runner.py",
+        "commit": "78bf5ff1972ae4ef3573222c739fa97a1e289984",
+        "date": "2017-10-12",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "vbench is Python 2 code (exec statement, cPickle)",
+      "overlay": [
+        "db.py",
+        "utils.py"
+      ],
+      "import_check": {
+        "runner": "ModuleNotFoundError: No module named 'cPickle'",
+        "pynguin": "ModuleNotFoundError: No module named 'cPickle'"
+      }
+    },
+    "cat3_s15": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s15/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/ArmNavigation/n_joint_arm_3d",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "ArmNavigation/n_joint_arm_3d/NLinkArm3d.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s16": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s16/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Bipedal/bipedal_planner",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Bipedal/bipedal_planner/bipedal_planner.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s17": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s17/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s17",
+        "p1/src/AtsushiSakai__PythonRobotics@680ecdafb21a/Control/move_to_pose",
+        "p1/src/AtsushiSakai__PythonRobotics@680ecdafb21a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/move_to_pose/move_to_pose.py",
+        "commit": "680ecdafb21a798eb47649175e0eba4e72ef356d",
+        "date": "2021-12-25",
+        "ratio": 1.0,
+        "state": "last commit of the file before the cutoff"
+      },
+      "overlay": [
+        "move_to_pose_robot.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s18": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s18/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s18",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Control/move_to_pose",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Control/move_to_pose/move_to_pose_robot.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "move_to_pose.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s19": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s19/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/Mapping/grid_map_lib",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "Mapping/grid_map_lib/grid_map_lib.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s2": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s2/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/dabeaz-course__python-mastery@0eedffd4292c/Solutions/2_5",
+        "p1/src/dabeaz-course__python-mastery@0eedffd4292c"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Solutions/2_5/readrides.py",
+        "commit": "0eedffd4292cd4adaefe0a33a0d5af96318337dd",
+        "date": "2023-11-19",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s20": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s20/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205/PathTracking/pure_pursuit",
+        "p1/src/AtsushiSakai__PythonRobotics@6326e8c21205"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "AtsushiSakai",
+        "repo": "PythonRobotics",
+        "branch": "master",
+        "path": "PathTracking/pure_pursuit/pure_pursuit.py",
+        "commit": "6326e8c21205ca9c2d8e809c2dc2eaab60940bf0",
+        "date": "2024-01-30",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s3": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s3/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/sivy__pystatsd@7de9df74751a/pystatsd",
+        "p1/src/sivy__pystatsd@7de9df74751a"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "sivy",
+        "repo": "pystatsd",
+        "branch": "master",
+        "path": "pystatsd/daemon.py",
+        "commit": "7de9df74751a245f72fad3f3a70c9d8521270504",
+        "date": "2020-02-18",
+        "ratio": 0.9716,
+        "state": "most similar version"
+      },
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s4": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s4/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s4",
+        "p1/src/ziberna__i3-py@27f88a616e9e/examples",
+        "p1/src/ziberna__i3-py@27f88a616e9e"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "ziberna",
+        "repo": "i3-py",
+        "branch": "master",
+        "path": "examples/wsbar.py",
+        "commit": "27f88a616e9ecc340e7d041d3d00782f8a1964c1",
+        "date": "2012-06-20",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "i3.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s5": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s5/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s5",
+        "p1/src/dropbox__hydra@101b274e5ac8"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "copier.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "overlay": [
+        "copy_collection.py",
+        "copy_state_db.py",
+        "faster_ordered_dict.py",
+        "oplog_applier.py",
+        "utils.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s6": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s6/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s6",
+        "p1/src/dropbox__hydra@101b274e5ac8"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "dropbox",
+        "repo": "hydra",
+        "branch": "master",
+        "path": "oplog_applier.py",
+        "commit": "101b274e5ac89e1fa196ff6aeb4e1cfc66717341",
+        "date": "2013-09-09",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "hydra (2013) needs pymongo 2 (pymongo.errors.TimeoutError), built here for Python 3.10 with setuptools < 58",
+      "overlay": [
+        "copier.py",
+        "copy_collection.py",
+        "copy_state_db.py",
+        "faster_ordered_dict.py",
+        "utils.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s7": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s7/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/overlay/cat3_s7",
+        "p1/src/Lekensteyn__pacemaker@e46f3549ce56"
+      ],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "Lekensteyn",
+        "repo": "pacemaker",
+        "branch": "master",
+        "path": "heartbleed.py",
+        "commit": "e46f3549ce5651deb688c73f67ff348b53c1601b",
+        "date": "2016-01-22",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "overlay": [
+        "ssltest.py"
+      ],
+      "import_check": {
+        "runner": "ok",
+        "pynguin": "ok"
+      }
+    },
+    "cat3_s8": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s8/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [],
+      "data_files": [],
+      "env": {},
+      "origin": {
+        "owner": "qiuyu96",
+        "repo": "CoDeF",
+        "branch": "main",
+        "path": "utils/video_visualizer.py",
+        "commit": null,
+        "ratio": null
+      },
+      "note": "relative import at module level (from .x import ...): it cannot be imported as a top-level module",
+      "import_check": {
+        "runner": "ImportError: attempted relative import with no known parent package",
+        "pynguin": "ImportError: attempted relative import with no known parent package"
+      }
+    },
+    "cat3_s9": {
+      "module": "example",
+      "source": "100_300 LOC p1/cat3/s9/example.py",
+      "category": "cat3_classes",
+      "structural_category": "cat3_classes",
+      "site_dirs": [
+        "p1/deps"
+      ],
+      "path_append": [
+        "p1/src/dabeaz-course__python-mastery@0eedffd4292c/Data",
+        "p1/src/dabeaz-course__python-mastery@0eedffd4292c"
+      ],
+      "data_files": [
+        "p1/data/cat3_s9/dowstocks.csv"
+      ],
+      "env": {},
+      "origin": {
+        "owner": "dabeaz-course",
+        "repo": "python-mastery",
+        "branch": "main",
+        "path": "Data/stocksim.py",
+        "commit": "0eedffd4292cd4adaefe0a33a0d5af96318337dd",
+        "date": "2023-11-19",
+        "ratio": 1.0,
+        "state": "repository at the cutoff date"
+      },
+      "note": "runs a real-time stock-market simulation when imported (1 s per simulated minute, 9:30 to 16:40): about 7 h 10 min per import",
+      "import_check": {
+        "runner": "import did not finish in 120 s (the module runs at import)",
+        "pynguin": "import did not finish in 120 s (the module runs at import)"
+      }
+    }
+  },
+  "missing": {
+    "large_cat1": {
+      "paper": "\u00a72.2: 49 large modules = 20 Cat 2 + 23 Cat 3 + 6 Cat 1; Table 3's Cat 1 row 56.833 % = 341/6",
+      "expected": 6,
+      "in_repository": [
+        "cat1_s15"
+      ],
+      "missing": "5 or 6 (whether cat1_s15 is one of the six is unknown)",
+      "expected_path": "100_300 LOC p1/cat1/s<k>/example.py, k unknown (only s15 uploaded)",
+      "expected_role": "Cat 1 procedural script of 100-300 LOC from a GitHub project, with its source URL on the first line like s15",
+      "results": [
+        "Table 3 Cat 1 row",
+        "Fig. 6 Cat 1 line",
+        "Table 4 Cat 1 row, if Table 4 uses the large set"
+      ],
+      "slots": [
+        "large_cat1/#1",
+        "large_cat1/#2",
+        "large_cat1/#3",
+        "large_cat1/#4",
+        "large_cat1/#5",
+        "large_cat1/#6"
+      ],
+      "audit": "DATASET_FORENSIC_AUDIT.csv",
+      "replacement": "none"
+    }
+  },
+  "deps": {
+    "dir": "p1/deps",
+    "requirements": [
+      "numpy",
+      "matplotlib",
+      "scipy",
+      "cvxpy",
+      "tqdm",
+      "requests",
+      "gevent",
+      "pandas",
+      "sqlalchemy",
+      "discord.py",
+      "youtube_dl",
+      "anthropic",
+      "opencv-python-headless",
+      "scikit-video",
+      "onnxruntime",
+      "pillow",
+      "plyfile",
+      "pytz",
+      "ipython",
+      "tabulate",
+      "gdown",
+      "psutil",
+      "scikit-image",
+      "asteval",
+      "multiprocess",
+      "h5py",
+      "lmfit",
+      "statsmodels",
+      "openai",
+      "tenacity",
+      "sentry-sdk",
+      "jinja2",
+      "ipywidgets",
+      "pylint"
+    ],
+    "constraints": [
+      "numpy<1.24",
+      "scipy<1.12",
+      "scikit-image<0.20",
+      "pymongo<3"
+    ],
+    "optional": {
+      "torch": "installed from PyPI",
+      "tensorflow-cpu": "installed from PyPI",
+      "insightface": "installed from PyPI",
+      "opennsfw2": "installed from PyPI",
+      "mysqlclient": "installed from PyPI",
+      "pyaudio": "installed from PyPI"
+    },
+    "installed": [
+      "Cython-3.0.8.dist-info",
+      "Jinja2-3.1.3.dist-info",
+      "Markdown-3.5.2.dist-info",
+      "MarkupSafe-2.1.4.dist-info",
+      "PySocks-1.7.1.dist-info",
+      "PyYAML-6.0.1.dist-info",
+      "SQLAlchemy-2.0.25.dist-info",
+      "absl_py-2.1.0.dist-info",
+      "aiohttp-3.9.3.dist-info",
+      "aiosignal-1.3.1.dist-info",
+      "albumentations-1.3.1.dist-info",
+      "annotated_types-0.6.0.dist-info",
+      "anthropic-0.14.0.dist-info",
+      "anyio-4.2.0.dist-info",
+      "asteval-0.9.31.dist-info",
+      "astroid-3.0.2.dist-info",
+      "asttokens-2.4.1.dist-info",
+      "astunparse-1.6.3.dist-info",
+      "async_timeout-4.0.3.dist-info",
+      "attrs-23.2.0.dist-info",
+      "beautifulsoup4-4.12.3.dist-info",
+      "cachetools-5.3.2.dist-info",
+      "certifi-2023.11.17.dist-info",
+      "charset_normalizer-3.3.2.dist-info",
+      "clarabel-0.6.0.dist-info",
+      "coloredlogs-15.0.1.dist-info",
+      "comm-0.2.1.dist-info",
+      "contourpy-1.2.0.dist-info",
+      "cvxpy-1.4.2.dist-info",
+      "cycler-0.12.1.dist-info",
+      "decorator-5.1.1.dist-info",
+      "dill-0.3.8.dist-info",
+      "discord.py-2.3.2.dist-info",
+      "distro-1.9.0.dist-info",
+      "easydict-1.11.dist-info",
+      "ecos-2.0.12.dist-info",
+      "exceptiongroup-1.2.0.dist-info",
+      "executing-2.0.1.dist-info",
+      "filelock-3.13.1.dist-info",
+      "flatbuffers-23.5.26.dist-info",
+      "fonttools-4.47.2.dist-info",
+      "frozenlist-1.4.1.dist-info",
+      "fsspec-2023.12.2.dist-info",
+      "future-0.18.3.dist-info",
+      "gast-0.5.4.dist-info",
+      "gdown-5.0.1.dist-info",
+      "gevent-23.9.1.dist-info",
+      "google_auth-2.27.0.dist-info",
+      "google_auth_oauthlib-1.2.0.dist-info",
+      "google_pasta-0.2.0.dist-info",
+      "greenlet-3.0.3.dist-info",
+      "grpcio-1.60.0.dist-info",
+      "h11-0.14.0.dist-info",
+      "h5py-3.10.0.dist-info",
+      "httpcore-1.0.2.dist-info",
+      "httpx-0.26.0.dist-info",
+      "huggingface_hub-0.20.3.dist-info",
+      "humanfriendly-10.0.dist-info",
+      "idna-3.6.dist-info",
+      "imageio-2.33.1.dist-info",
+      "insightface-0.7.3.dist-info",
+      "ipython-8.21.0.dist-info",
+      "ipywidgets-8.1.1.dist-info",
+      "isort-5.13.2.dist-info",
+      "jedi-0.19.1.dist-info",
+      "joblib-1.3.2.dist-info",
+      "jupyterlab_widgets-3.0.9.dist-info",
+      "keras-2.15.0.dist-info",
+      "kiwisolver-1.4.5.dist-info",
+      "libclang-16.0.6.dist-info",
+      "lmfit-1.2.2.dist-info",
+      "matplotlib-3.8.2.dist-info",
+      "matplotlib_inline-0.1.6.dist-info",
+      "mccabe-0.7.0.dist-info",
+      "ml_dtypes-0.2.0.dist-info",
+      "mpmath-1.3.0.dist-info",
+      "multidict-6.0.4.dist-info",
+      "multiprocess-0.70.16.dist-info",
+      "mysqlclient-2.2.1.dist-info",
+      "networkx-3.2.1.dist-info",
+      "numpy-1.23.5.dist-info",
+      "nvidia_cublas_cu12-12.1.3.1.dist-info",
+      "nvidia_cuda_cupti_cu12-12.1.105.dist-info",
+      "nvidia_cuda_nvrtc_cu12-12.1.105.dist-info",
+      "nvidia_cuda_runtime_cu12-12.1.105.dist-info",
+      "nvidia_cudnn_cu12-8.9.2.26.dist-info",
+      "nvidia_cufft_cu12-11.0.2.54.dist-info",
+      "nvidia_curand_cu12-10.3.2.106.dist-info",
+      "nvidia_cusolver_cu12-11.4.5.107.dist-info",
+      "nvidia_cusparse_cu12-12.1.0.106.dist-info",
+      "nvidia_nccl_cu12-2.19.3.dist-info",
+      "nvidia_nvjitlink_cu12-12.3.101.dist-info",
+      "nvidia_nvtx_cu12-12.1.105.dist-info",
+      "oauthlib-3.2.2.dist-info",
+      "onnx-1.15.0.dist-info",
+      "onnxruntime-1.17.0.dist-info",
+      "openai-1.10.0.dist-info",
+      "opencv_python_headless-4.9.0.80.dist-info",
+      "opennsfw2-0.13.7.dist-info",
+      "opt_einsum-3.3.0.dist-info",
+      "osqp-0.6.3.dist-info",
+      "packaging-23.2.dist-info",
+      "pandas-2.2.0.dist-info",
+      "parso-0.8.3.dist-info",
+      "patsy-0.5.6.dist-info",
+      "pexpect-4.9.0.dist-info",
+      "pillow-10.2.0.dist-info",
+      "platformdirs-4.2.0.dist-info",
+      "plyfile-1.0.3.dist-info",
+      "prettytable-3.9.0.dist-info",
+      "prompt_toolkit-3.0.43.dist-info",
+      "protobuf-4.23.4.dist-info",
+      "psutil-5.9.8.dist-info",
+      "ptyprocess-0.7.0.dist-info",
+      "pure_eval-0.2.2.dist-info",
+      "pyasn1-0.5.1.dist-info",
+      "pyasn1_modules-0.3.0.dist-info",
+      "pyaudio-0.2.14.dist-info",
+      "pybind11-2.11.1.dist-info",
+      "pydantic-2.6.0.dist-info",
+      "pydantic_core-2.16.1.dist-info",
+      "pygments-2.17.2.dist-info",
+      "pylint-3.0.3.dist-info",
+      "pymongo-2.9.5.dist-info",
+      "pyparsing-3.1.1.dist-info",
+      "python_dateutil-2.8.2.dist-info",
+      "pytz-2023.4.dist-info",
+      "pywavelets-1.5.0.dist-info",
+      "qdldl-0.1.7.post0.dist-info",
+      "qudida-0.0.4.dist-info",
+      "requests-2.31.0.dist-info",
+      "requests_oauthlib-1.3.1.dist-info",
+      "rsa-4.9.dist-info",
+      "scikit_image-0.19.3.dist-info",
+      "scikit_learn-1.4.0.dist-info",
+      "scikit_video-1.1.11.dist-info",
+      "scipy-1.11.4.dist-info",
+      "scs-3.2.4.post1.dist-info",
+      "sentry_sdk-1.40.0.dist-info",
+      "setuptools-69.0.3.dist-info",
+      "six-1.16.0.dist-info",
+      "sniffio-1.3.0.dist-info",
+      "soupsieve-2.5.dist-info",
+      "stack_data-0.6.3.dist-info",
+      "statsmodels-0.14.1.dist-info",
+      "sympy-1.12.dist-info",
+      "tabulate-0.9.0.dist-info",
+      "tenacity-8.2.3.dist-info",
+      "tensorboard-2.15.1.dist-info",
+      "tensorboard_data_server-0.7.2.dist-info",
+      "tensorflow_cpu-2.15.0.post1.dist-info",
+      "tensorflow_estimator-2.15.0.dist-info",
+      "tensorflow_io_gcs_filesystem-0.35.0.dist-info",
+      "termcolor-2.4.0.dist-info",
+      "threadpoolctl-3.2.0.dist-info",
+      "tifffile-2024.1.30.dist-info",
+      "tokenizers-0.15.1.dist-info",
+      "tomli-2.0.1.dist-info",
+      "tomlkit-0.12.3.dist-info",
+      "torch-2.2.0.dist-info",
+      "tqdm-4.66.1.dist-info",
+      "traitlets-5.14.1.dist-info",
+      "triton-2.2.0.dist-info",
+      "typing_extensions-4.9.0.dist-info",
+      "tzdata-2023.4.dist-info",
+      "uncertainties-3.1.7.dist-info",
+      "urllib3-2.2.0.dist-info",
+      "wcwidth-0.2.13.dist-info",
+      "werkzeug-3.0.1.dist-info",
+      "wheel-0.42.0.dist-info",
+      "widgetsnbextension-4.0.9.dist-info",
+      "wrapt-1.14.1.dist-info",
+      "yarl-1.9.4.dist-info",
+      "youtube_dl-2021.12.17.dist-info",
+      "zope.event-5.0.dist-info",
+      "zope.interface-6.1.dist-info"
+    ]
+  },
+  "hook": "phase1_paths.pth in the site-packages of .venv-run and .venv-pynguin"
+}

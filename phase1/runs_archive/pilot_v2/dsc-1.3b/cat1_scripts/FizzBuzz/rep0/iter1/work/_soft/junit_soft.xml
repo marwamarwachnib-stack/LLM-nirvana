@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.024" timestamp="2026-10-25T21:40:54.279826+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.000"><failure message="NameError: name 'io' is not defined. Did you forget to import 'io'">def test_fizzbuzz():
+&gt;       capturedOutput = io.StringIO()
+                         ^^
+E       NameError: name 'io' is not defined. Did you forget to import 'io'
+
+test_example_i1.py:7: NameError</failure></testcase><testcase classname="test_example_i1" name="test_fizzbuzz_edge_cases" time="0.000"><failure message="NameError: name 'io' is not defined. Did you forget to import 'io'">def test_fizzbuzz_edge_cases():
+&gt;       capturedOutput = io.StringIO()
+                         ^^
+E       NameError: name 'io' is not defined. Did you forget to import 'io'
+
+test_example_i1.py:21: NameError</failure></testcase></testsuite></testsuites>

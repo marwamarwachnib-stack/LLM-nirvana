@@ -1,0 +1,94 @@
+def test_find_fewest_coins_7():
+    coins = [1, 2, 5]
+    target = 8
+    assert find_fewest_coins(coins, target) == [2, 2, 2, 2]
+
+def test_find_fewest_coins_8():
+    coins = [1, 2, 5]
+    target = 9
+    assert find_fewest_coins(coins, target) == [2, 2, 3]
+
+def test_find_fewest_coins_9():
+    coins = [1, 2, 5]
+    target = 10
+    assert find_fewest_coins(coins, target) == [2, 2, 2, 2, 2]
+
+def test_find_fewest_coins_10():
+    coins = [1, 2, 5]
+    target = 11
+    assert find_fewest_coins(coins, target) == [2, 2, 2, 2, 3]
+
+def test_find_fewest_coins_11():
+    coins = [1, 2, 5]
+    target = 12
+    assert find_fewest_coins(coins, target) == [2, 2, 2, 3, 3]
+
+def test_find_fewest_coins_12():
+    coins = [1, 2, 5]
+    target = 13
+    assert find_fewest_coins(coins, target) == [2, 2, 3, 3, 3]
+
+def test_find_fewest_coins_13():
+    coins = [1, 2, 5]
+    target = 14
+    assert find_fewest_coins(coins, target) == [2, 2, 3, 3, 4]
+
+def test_find_fewest_coins_14():
+    coins = [1, 2, 5]
+    target = 15
+    assert find_fewest_coins(coins, target) == [2, 2, 3, 4, 4]
+
+def test_find_fewest_coins_15():
+    coins = [1, 2, 5]
+    target = 16
+    assert find_fewest_coins(coins, target) == [2, 2, 4, 4, 4]
+
+def test_find_fewest_coins_16():
+    coins = [1, 2, 5]
+    target = 17
+    assert find_fewest_coins(coins, target) == [2, 2, 4, 4, 5]
+
+def test_find_fewest_coins_17():
+    coins = [1, 2, 5]
+    target = 18
+    assert find_fewest_coins(coins, target) == [2, 2, 4, 5, 5]
+
+def test_find_fewest_coins_18():
+    coins = [1, 2, 5]
+    target = 19
+    assert find_fewest_coins(coins, target) == [2, 2, 4, 5, 5]
+
+def test_find_fewest_coins_19():
+    coins = [1, 2, 5]
+    target = 20
+    assert find_fewest_coins(coins, target) == [2, 2, 5, 5, 5]
+
+def test_find_fewest_coins_20():
+    coins = [1, 2, 5]
+    target = 21
+    assert find_fewest_coins(coins, target) == [2, 2, 5, 5, 6]
+
+def test_find_fewest_coins_21():
+    coins = [1, 2, 5]
+    target = 22
+    assert find_fewest_coins(coins, target) == [2, 2, 5, 6, 6]
+
+def test_find_fewest_coins_22():
+    coins = [1, 2, 5]
+    target = 23
+    assert find_fewest_coins(coins, target) == [2, 2, 6, 6, 6]
+
+def test_find_fewest_coins_23():
+    coins = [1, 2, 5]
+    target = 24
+    assert find_fewest_coins(coins, target) == [2, 2, 6, 6, 7]
+
+def test_find_fewest_coins_24():
+    coins = [1, 2, 5]
+    target = 25
+    assert find_fewest_coins(coins, target) == [2, 2, 6, 7, 7]
+
+def test_find_fewest_coins_25():
+    coins = [1, 2, 5]
+    target = 26
+    assert find_fewest_coins(coins, target) == [2, 2, 7, 7, 7]

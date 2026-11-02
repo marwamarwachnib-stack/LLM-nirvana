@@ -1,0 +1,18 @@
+{
+  "extraction": {
+    "n_fenced_blocks": 1,
+    "rule": "test-blocks-concatenated",
+    "n_test_blocks": 1,
+    "n_other_blocks": 0
+  },
+  "import_rewrites": [
+    {
+      "line": 6,
+      "old": "    import fizzbuzz  # assuming the script name is fizzbuzz.py",
+      "new": "    import example as fizzbuzz  # assuming the script name is fizzbuzz.py",
+      "rule": "renamed-module"
+    }
+  ],
+  "evaluator_version": 3,
+  "refactored_module_from_response": false
+}

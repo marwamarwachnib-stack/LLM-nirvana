@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="15" time="0.046" timestamp="2026-10-25T21:46:29.388078+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_deposit_into_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_withdraw_from_open_account" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_deposit_negative_amount" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_withdraw_more_than_balance" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_withdraw_negative_amount" time="0.000" /><testcase classname="test_example_i1" name="test_close_account" time="0.000" /><testcase classname="test_example_i1" name="test_cannot_open_already_open_account" time="0.000" /><testcase classname="test_example_i2" name="test_cannot_deposit_non_numeric_amount" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_deposit_non_numeric_amount():
+        account = BankAccount()
+        account.open()
+&gt;       with _soft_assert.raises('test_example_i2:0', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:7: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_non_numeric_amount" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_withdraw_non_numeric_amount():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+&gt;       with _soft_assert.raises('test_example_i2:1', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:14: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_close_already_closed_account" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_close_already_closed_account():
+        account = BankAccount()
+        account.open()
+        account.close()
+&gt;       with _soft_assert.raises('test_example_i2:2', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:21: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_get_balance_on_closed_account" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_get_balance_on_closed_account():
+        account = BankAccount()
+        account.open()
+        account.close()
+&gt;       with _soft_assert.raises('test_example_i2:3', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:28: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_more_than_balance" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_withdraw_more_than_balance():
+        account = BankAccount()
+        account.open()
+        account.deposit(100)
+&gt;       with _soft_assert.raises('test_example_i2:4', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:35: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_withdraw_negative_amount" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_withdraw_negative_amount():
+        account = BankAccount()
+        account.open()
+&gt;       with _soft_assert.raises('test_example_i2:5', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:41: NameError</failure></testcase><testcase classname="test_example_i2" name="test_cannot_deposit_negative_amount" time="0.000"><failure message="NameError: name 'pytest' is not defined">def test_cannot_deposit_negative_amount():
+        account = BankAccount()
+        account.open()
+&gt;       with _soft_assert.raises('test_example_i2:6', pytest.raises(ValueError)):
+                                                      ^^^^^^
+E       NameError: name 'pytest' is not defined
+
+test_example_i2.py:47: NameError</failure></testcase></testsuite></testsuites>

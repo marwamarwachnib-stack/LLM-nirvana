@@ -1,0 +1,32 @@
+def test_find_fewest_coins():
+    # Test with single coin
+    assert find_fewest_coins([1], 10) == [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+    # Test with large coin value
+    assert find_fewest_coins([1000], 10000) == [1000, 1000, 1000, 1000, 1000]
+
+    # Test with multiple coins of same value
+    assert find_fewest_coins([10, 10, 10, 10], 40) == [10, 10, 10, 10]
+
+    # Test with no solution
+    with pytest.raises(ValueError):
+        find_fewest_coins([2, 5, 10], 1)
+
+    # Test with large target and small coins
+    assert find_fewest_coins([1, 2, 5], 10**6) == [10**6]
+
+    # Test with large number of coins
+    coins = list(range(1, 1001))
+    target = 1000
+    assert find_fewest_coins(coins, target) == [1]*1000
+
+    # Test with target of 0
+    assert find_fewest_coins([1, 2, 5], 0) == []
+
+    # Test with impossible target
+    with pytest.raises(ValueError):
+        find_fewest_coins([2, 5, 10], 1)
+
+    # Test with negative target
+    with pytest.raises(ValueError):
+        find_fewest_coins([1, 2, 5], -10)

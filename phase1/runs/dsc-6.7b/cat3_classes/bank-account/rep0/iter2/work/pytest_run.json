@@ -1,0 +1,98 @@
+{
+  "run": {
+    "returncode": 0,
+    "stdout_tail": "..................                                                       [100%]\n18 passed in 0.08s\n",
+    "stderr_tail": "",
+    "timeout": false,
+    "cmd": [
+      "/home/diguest/LLM-nirvana/phase1/.venv/bin/python",
+      "-m",
+      "coverage",
+      "run",
+      "--rcfile=.coveragerc",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--continue-on-collection-errors",
+      "--timeout=10",
+      "--junitxml=junit.xml",
+      "--rootdir=.",
+      "-c",
+      "pytest.ini",
+      "test_example_i1.py",
+      "test_example_i2.py"
+    ]
+  },
+  "junit": {
+    "test_example_i1::test_account_creation": {
+      "status": "passed"
+    },
+    "test_example_i1::test_open_account": {
+      "status": "passed"
+    },
+    "test_example_i1::test_deposit": {
+      "status": "passed"
+    },
+    "test_example_i1::test_withdraw": {
+      "status": "passed"
+    },
+    "test_example_i1::test_close_account": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_deposit_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_withdraw_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_close_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_deposit_zero_or_negative_amount": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_withdraw_zero_or_negative_amount": {
+      "status": "passed"
+    },
+    "test_example_i1::test_error_on_overdraw": {
+      "status": "passed"
+    },
+    "test_example_i2::test_get_balance_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i2::test_deposit_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i2::test_withdraw_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i2::test_close_account_without_account_open": {
+      "status": "passed"
+    },
+    "test_example_i2::test_get_balance_after_deposit": {
+      "status": "passed"
+    },
+    "test_example_i2::test_get_balance_after_withdraw": {
+      "status": "passed"
+    },
+    "test_example_i2::test_get_balance_after_close": {
+      "status": "passed"
+    }
+  },
+  "file_errors": {
+    "test_example_i1.py": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    },
+    "test_example_i2.py": {
+      "syntax_error": false,
+      "collection_error": false,
+      "no_tests": false,
+      "detail": ""
+    }
+  }
+}

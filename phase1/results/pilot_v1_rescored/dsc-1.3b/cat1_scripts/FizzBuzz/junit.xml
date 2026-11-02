@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.106" timestamp="2026-10-25T20:04:06.307037+00:00" hostname="diguest-X542UN"><testcase classname="test_example_i1" name="test_fizzbuzz" time="0.005"><failure message="AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?">def test_fizzbuzz():
+&gt;       capturedOutput = pytest.monkeypatch.stdout
+                         ^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'pytest' has no attribute 'monkeypatch'. Did you mean: 'MonkeyPatch'?
+
+test_example_i1.py:6: AttributeError</failure></testcase></testsuite></testsuites>

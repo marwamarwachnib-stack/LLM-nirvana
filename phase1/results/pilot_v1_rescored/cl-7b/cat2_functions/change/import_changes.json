@@ -1,0 +1,11 @@
+[
+  {
+    "line": 1,
+    "old": "",
+    "new": "from example import *",
+    "rule": "added-missing-import",
+    "names_used": [
+      "find_fewest_coins"
+    ]
+  }
+]

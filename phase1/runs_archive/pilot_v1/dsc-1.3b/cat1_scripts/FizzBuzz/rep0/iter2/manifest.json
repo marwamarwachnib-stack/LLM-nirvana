@@ -1,0 +1,105 @@
+{
+  "tool": "dsc-1.3b",
+  "model_info": {
+    "model": "deepseek-coder:1.3b-instruct",
+    "digest": "3ddd2d3fc8d2b5fe039d18f859271132fd9c7960ef0be1864984442dc2a915d3",
+    "size_bytes": 776080839,
+    "modified_at": "2026-10-25T15:56:28.697099747Z",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "llama",
+      "families": [
+        "llama"
+      ],
+      "parameter_size": "1B",
+      "quantization_level": "Q4_0"
+    },
+    "model_info": {
+      "general.architecture": "llama",
+      "general.file_type": 2,
+      "general.parameter_count": 1346471936,
+      "general.quantization_version": 2,
+      "llama.attention.head_count": 16,
+      "llama.attention.head_count_kv": 16,
+      "llama.attention.layer_norm_rms_epsilon": 1e-06,
+      "llama.block_count": 24,
+      "llama.context_length": 16384,
+      "llama.embedding_length": 2048,
+      "llama.feed_forward_length": 5504,
+      "llama.rope.dimension_count": 128,
+      "llama.rope.freq_base": 100000,
+      "llama.rope.scaling.factor": 4,
+      "llama.rope.scaling.type": "linear",
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.ggml.bos_token_id": 32013,
+      "tokenizer.ggml.eos_token_id": 32021,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 32014
+    },
+    "parameters_default": null,
+    "template": "{{ .System }}\n### Instruction:\n{{ .Prompt }}\n### Response:\n",
+    "ollama_version": "0.40.3"
+  },
+  "options": {
+    "temperature": 0.0,
+    "seed": 42,
+    "top_k": 40,
+    "top_p": 0.9,
+    "num_ctx": 8192,
+    "num_predict": 2048,
+    "num_thread": 4,
+    "num_gpu": 0
+  },
+  "keep_alive": "60m",
+  "prompt_files": {
+    "basic_system.txt": "f2463177c1a9b51f44281cb907fa6a83c741b8bc42b7894a42f61b3f824827d2",
+    "improve_user.txt": "6f3bc06d5063c81e3b1e62ecc2fe268028cd56766065940c7a7abb22f0d23e59"
+  },
+  "prompt_sha256": {
+    "system": "f2463177c1a9b51f44281cb907fa6a83c741b8bc42b7894a42f61b3f824827d2",
+    "user": "8b7b80fec468500719881218a038ead0f17f1d9eec4df93f0d1f1bb72cb3aa35"
+  },
+  "iteration_rules": {
+    "max": 5,
+    "stop_when_no_improvement": true,
+    "suite": "cumulative"
+  },
+  "evaluation": {
+    "per_test_timeout_s": 10,
+    "per_file_timeout_s": 300
+  },
+  "energy_cfg": {
+    "country_iso_code": "PRT",
+    "measure_power_secs": 1,
+    "idle_baseline_s": 300,
+    "cooldown_temp_c": 55,
+    "cooldown_max_s": 60
+  },
+  "session": "20261025-175514",
+  "finished": "2026-10-25T18:24:53+00:00",
+  "git": {
+    "commit": "e330b23581ed26d8b4983bed8766f012f79287ed",
+    "dirty": true
+  },
+  "system_state": {
+    "governor": "powersave",
+    "no_turbo": "0",
+    "ac_online": [
+      "1"
+    ],
+    "pkg_temp_c": 59.0,
+    "load_avg": [
+      3.7490234375,
+      2.201171875,
+      1.3447265625
+    ],
+    "mem_available_gb": 11.27
+  },
+  "env_locks": {
+    "requirements-venv.lock": "564c77151f582e6a7d6454690c5b9ebcdd4aef117e8c08bf2f3f04d569fdbec9",
+    "requirements-venv-pynguin.lock": "80c2a44792ddf4cbcc46f9597586ada2f2f9714842b988676fd856041e57298b"
+  },
+  "dataset_program": "0_100 LOC/cat1_scripts/FizzBuzz"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "done",
+  "tool": "cl-7b",
+  "model": "codellama:7b-instruct",
+  "category": "cat1_scripts",
+  "program": "FizzBuzz",
+  "started": "2026-10-25T22:27:06+00:00",
+  "session": "20261025-204452",
+  "finished": "2026-10-25T22:33:43+00:00",
+  "n_iterations": 2,
+  "stmt_cov_by_iter": [
+    0.0,
+    0.0
+  ]
+}

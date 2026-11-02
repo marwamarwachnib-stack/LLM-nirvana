@@ -1,0 +1,39 @@
+{
+  "phase": "idle_baseline_end",
+  "started": "2026-10-26T14:57:40+00:00",
+  "wall_s": 120.001,
+  "codecarbon": {
+    "cpu_wh": 0.025885489875043105,
+    "ram_wh": 0.3326422348944562,
+    "gpu_wh": 0.0,
+    "total_wh": 0.3585277247694993,
+    "cpu_power_w": 0.7671321824389222,
+    "ram_power_w": 10.0,
+    "emissions_kgco2eq": 5.9355340418764904e-05,
+    "duration_s": 120.00886658599848,
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "tracking_mode": "machine",
+    "codecarbon_version": "3.3.1",
+    "country_iso_code": "PRT"
+  },
+  "rapl_raw_wh": {
+    "mmio:intel-rapl-mmio:0:package-0": 0.02587919611111111,
+    "mmio:intel-rapl-mmio:0:0:dram": 0.009197211388888888,
+    "msr:intel-rapl:0:package-0": 0.025879721666666668,
+    "msr:intel-rapl:0:0:core": 0.0031035619444444444,
+    "msr:intel-rapl:0:1:uncore": 2.255e-06,
+    "msr:intel-rapl:0:2:dram": 0.009197448888888888
+  },
+  "pkg_temp_c": {
+    "mean": 43.6,
+    "max": 56.0
+  },
+  "cpu_mhz": {
+    "mean": 524.4,
+    "max": 1443.1
+  },
+  "cpu_util_pct": {
+    "mean": 0.4,
+    "max": 2.4
+  }
+}
