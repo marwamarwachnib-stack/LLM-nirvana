@@ -12,9 +12,9 @@ import tempfile
 import time
 from pathlib import Path
 
-from common import CONFIG_DIR, REPO, RUNNER_PY, load_config, rapl_delta_wh, rapl_readable, rapl_snapshot
+from common import REPO, RUNNER_PY, load_config, rapl_delta_wh, rapl_readable, rapl_snapshot
 from evaluate import extract_blocks, normalize_imports
-from run import chat
+from run import build_prompt, chat
 
 
 def main():
@@ -25,9 +25,7 @@ def main():
     cfg = load_config()
     model = cfg["llm_tools"][args.tool]["model"]
     module = (REPO / "0_100 LOC" / args.program / "example.py").read_text()
-    prompts = CONFIG_DIR / "prompts"
-    system = (prompts / cfg["prompts"]["system"]).read_text()
-    user = (prompts / cfg["prompts"]["basic_user"]).read_text().format(code=module)
+    system, user, _ = build_prompt(cfg, 1, module, [], None, None)  # the campaign's iteration-1 prompt
 
     work = Path(tempfile.mkdtemp(prefix="phase1_demo_"))
     (work / "example.py").write_text(module)

@@ -24,16 +24,16 @@ What the authors' repository does not hold, which paper results depend on it, an
 
 **Exact filenames: unknown.**
 - In the authors' layout every module is saved as `example.py` in a folder `s<k>`. Cat 2 and Cat 3 run from s1 to s20; Cat 1 has only s15.
-- p1's Cat 2 and Cat 3 folders carry an `a.txt` with each module's source URL. Cat 1 has no `a.txt`; s15 names its source on its first line.
-- So the missing folders are `cat1/s<k>/`, with k unknown, and the original GitHub files are unknown.
+- p1's Cat 2 and Cat 3 folders carry an `a.txt` with source URLs for entries 8–20 (Cat 2) and 13–20 (Cat 3); the other modules name their source on their first lines, except `cat2_s7`, which names none. Cat 1 has no `a.txt`; s15 names its source on its first line.
+- So, if the six were collected like s15, the missing folders are `cat1/s<k>/`, with k unknown. Their origin is uncertain: GitHub scripts like s15, or modules of the Lukasczyk et al. benchmark as §2.2 says for the large modules (`recovery_2026-11-01/DATASET_RECOVERY_REPORT_2026-11-01.md` §2.2).
 
 **Expected role.**
 - Each is a Cat 1 module: a procedural script, statements at module level, no or few functions.
-- 100–300 LOC, from a GitHub project, like s15.
+- 100–300 LOC as stated in the paper (the authors' own files do not consistently meet their stated ranges). Origin uncertain: a GitHub project like s15, or the Lukasczyk et al. benchmark.
 - Each was given to ChatGPT, with up to 5 improvement prompts.
 - They were not given to Pynguin: Cat 1 is excluded from the large-sample coverage comparison (§3.2.1).
 
-**Not a substitute.** The Pynguin SSBSE 2020 benchmark's procedural modules of this size are data files. All 7 we found reach 100 % on import, so they cannot average 56.833 % and are not the six (measured; `INDEPENDENT_REAUDIT.md` §5).
+**Not a substitute.** The Pynguin SSBSE 2020 benchmark's procedural modules of this size are data files. All 7 we found reach 100 % on import (measured; `INDEPENDENT_REAUDIT.md` §5), so they are unlikely to be among the six (inferred, not excluded). The 11 projects behind p2 hold no strict-definition candidate either. The later benchmark's full module list (Zenodo 10.5281/zenodo.6838658) has not been read: it is blocked in this environment.
 
 **Recorded in the dataset manifest.**
 - `datasets/p1/manifest.json` → `"missing"`, written by `scripts/prepare_datasets.py` (`P1_MISSING`), so a rebuild keeps it.
@@ -73,8 +73,8 @@ What the authors' repository does not hold, which paper results depend on it, an
 
 ## 5. What would remove these limits
 
-Only the authors can supply the missing data: see `AUTHOR_DATA_REQUEST.md`. If they answer:
-- add the modules under a new folder and record their origin;
+A public search on 2026-10-31 found none of it: Git history, refs, forks, the authors' other repositories, code and web search, and institutional repositories (`DATASET_RECOVERY_REPORT.md`). Only the authors can supply the missing data: see `AUTHOR_DATA_REQUEST.md`. If they answer:
+- add the modules under a new folder and record their origin (`dataset_manifest.json`, then the complete-dataset protocol in `EXPERIMENTAL_WORKFLOW.md` §5);
 - reopen this file;
 - record a new PLAN decision.
 

@@ -118,6 +118,8 @@ def main():
     pre = f"{args.prefix}_" if args.prefix else ""
     out = lambda name: RESULTS / f"{pre}{name}"  # noqa: E731
     it = pd.read_csv(RESULTS / "iterations.csv")
+    if "job_status" in it:  # iterations of unfinished or failed LLM jobs are not chains (decision 21)
+        it = it[it["job_status"] == "done"]
     jobs = pd.read_csv(RESULTS / "jobs.csv", dtype={"truncated_iterations": str}).copy()  # copy: de-fragmented frame
     tools = tools_in(jobs)
 

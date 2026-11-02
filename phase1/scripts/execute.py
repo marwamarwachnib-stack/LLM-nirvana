@@ -11,14 +11,15 @@ Resumable like run.py: re-run the same command.
     .venv/bin/python scripts/execute.py small --tools cl-7b --programs cat2_functions/change --job rep0 --append 1 --energy none
 """
 import argparse
+import hashlib
 import json
 import shutil
 import sys
 
 from common import (RUNS, atomic_write_json, cooldown, git_commit, is_done, load_config, mark_done, measure, now_iso,
-                    rapl_readable, read_json, reset_dir, system_state, wait_for_ac)
+                    rapl_readable, read_json, reset_dir, sha256_text, system_state, wait_for_ac)
 from evaluate import PYTEST_INI, _junit, _run_pytest
-from run import check_condition, check_same_machine, programs, stage, start_session
+from run import check_condition, check_same_machine, lock_runs_folder, programs, stage, start_session
 
 
 def suites(cfg, set_name, tools, only, job=None):
@@ -54,6 +55,9 @@ def run_once(cfg, tool, p, jdir, suite, i, sid):
     work = edir / "work"
     work.mkdir()
     files = test_files(suite)
+    # suite identity: the exact bytes executed (module under test + test files), and the generation run behind them
+    suite_files = {name: hashlib.sha256((suite / name).read_bytes()).hexdigest() for name in [f"{p.module}.py"] + files}
+    gen_session = (read_json(jdir / "job.json", {}) or read_json(jdir / "manifest.json", {})).get("session")
     for name in [f"{p.module}.py"] + files:
         shutil.copy(suite / name, work / name)
     stage(p, work)
@@ -70,6 +74,9 @@ def run_once(cfg, tool, p, jdir, suite, i, sid):
     m = {"tool": tool, "category": p.cat, "program": p.prog, "job": jdir.name, "run": i, "session": sid,
          "n_files": len(files), "n_tests": len(junit), **{k: statuses.count(k) for k in ("passed", "failed", "error", "xfailed", "skipped")},
          "pytest_returncode": run["returncode"], "pytest_timeout": run["timeout"], "pytest_cmd": run["cmd"],
+         "suite_dir": str(suite.relative_to(RUNS)), "suite_files_sha256": suite_files,
+         "suite_sha256": sha256_text(json.dumps(suite_files, sort_keys=True)), "generation_session": gen_session,
+         "pytest_stdout_tail": run["stdout_tail"], "pytest_stderr_tail": run["stderr_tail"],  # collection errors, tracebacks
          "energy": rec, "cooldown_s": cool, "finished": now_iso(), "git": git_commit(), "system_state": system_state(),
          "evaluation": cfg["evaluation"]}
     atomic_write_json(edir / "metrics.json", m)
@@ -94,6 +101,8 @@ def main():
     ap.add_argument("--allow-no-rapl", action="store_true", help="debug only: run without real RAPL energy")
     ap.add_argument("--allow-battery", action="store_true", help="debug only: do not wait for mains power")
     ap.add_argument("--allow-mixed-machines", action="store_true", help="debug only (see run.py)")
+    ap.add_argument("--bare", action="store_true", help="for an external energy meter wrapping one run (make exec-one): "
+                    "no re-aggregation of all results inside the measured command")
     args = ap.parse_args()
     cfg = load_config()
     cfg["_allow_battery"] = args.allow_battery
@@ -106,7 +115,8 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
-    check_condition()
+    check_condition(cfg, "execution")
+    _lock = lock_runs_folder()  # noqa: F841 (held until the process ends)
     tools = args.tools.split(",") if args.tools else [
         t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     todo = suites(cfg, args.set, tools, args.programs and args.programs.split(","), args.job)
@@ -120,7 +130,8 @@ def main():
     for i in range(n_runs):
         for tool, p, jdir, suite in todo:
             run_once(cfg, tool, p, jdir, suite, next_run(jdir) if args.append else i, sid)
-        aggregate()
+        if not args.bare:
+            aggregate()
     print("all executions finished", flush=True)
 
 

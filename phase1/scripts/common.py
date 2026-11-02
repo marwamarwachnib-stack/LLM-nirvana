@@ -311,13 +311,16 @@ def measure(phase, out_dir, cfg, record):
 
     With ``cfg["_energy"] == "none"`` only the wall time is recorded: an external meter (e.g. the
     energy tool of the supervisors) wraps the whole command and must not see CodeCarbon's sampling.
+    Either way the record holds the phase's start and end as Unix time (``t_start_unix``, ``t_end_unix``,
+    sub-second), so a meter that logs a time series can attribute its samples to the phases afterwards.
     """
     if cfg.get("_energy") == "none":
-        started, t0 = now_iso(), time.perf_counter()
+        started, t0, u0 = now_iso(), time.perf_counter(), time.time()
         try:
             yield record
         finally:
             record.update({"phase": phase, "started": started, "wall_s": round(time.perf_counter() - t0, 3),
+                           "t_start_unix": round(u0, 3), "t_end_unix": round(time.time(), 3),
                            "energy_meter": "external"})
         return
     from codecarbon import OfflineEmissionsTracker
@@ -335,11 +338,13 @@ def measure(phase, out_dir, cfg, record):
     sampler.start()
     r0 = rapl_snapshot()
     t0 = time.perf_counter()
+    u0 = time.time()
     started = now_iso()
     try:
         yield record
     finally:
         wall = time.perf_counter() - t0
+        u1 = time.time()
         r1 = rapl_snapshot()
         sampler.stop_evt.set()
         tracker.stop()
@@ -357,5 +362,6 @@ def measure(phase, out_dir, cfg, record):
             }
         record.update({
             "phase": phase, "started": started, "wall_s": round(wall, 3),
+            "t_start_unix": round(u0, 3), "t_end_unix": round(u1, 3),
             "codecarbon": cc, "rapl_raw_wh": rapl_delta_wh(r0, r1), **sampler.summary(),
         })

@@ -232,8 +232,9 @@ def _insert_at(tree):
 
 
 def numbered_code(src):
-    """Paper Fig. 2: a `#<n>` comment at the end of every line."""
-    return "\n".join((ln + " " if ln.strip() else "") + f"#{i}" for i, ln in enumerate(src.splitlines(), 1))
+    """Paper Fig. 2: ` #<n>` after every line of code, `#<n>` on a blank line, which keeps its own whitespace (Fig. 2,
+    lines 7-8). Used only to build prompts (run.PROMPT_RENDERING 2); the evaluation does not use it."""
+    return "\n".join(ln + (" " if ln.strip() else "") + f"#{i}" for i, ln in enumerate(src.splitlines(), 1))
 
 
 def ranges(nums):
@@ -438,9 +439,15 @@ def file_errors(work, files, cfg, env=None):
         except SyntaxError as e:
             res[f] = {"syntax_error": True, "collection_error": True, "detail": f"SyntaxError: {e}"}
             continue
-        p = run_code([str(RUNNER_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
-                      "--rootdir=.", "-c", "pytest.ini", f], env, cwd=work, capture_output=True, text=True,
-                     stdin=subprocess.DEVNULL, timeout=cfg["evaluation"]["per_file_timeout_s"])
+        limit = cfg["evaluation"]["per_file_timeout_s"]
+        try:
+            p = run_code([str(RUNNER_PY), "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider",
+                          "--rootdir=.", "-c", "pytest.ini", f], env, cwd=work, capture_output=True, text=True,
+                         stdin=subprocess.DEVNULL, timeout=limit)
+        except subprocess.TimeoutExpired:  # collection never ends, e.g. an import that runs for hours (p1 cat3_s9)
+            res[f] = {"syntax_error": False, "collection_error": True, "collection_timeout": True,
+                      "detail": f"collection did not finish within {limit} s"}
+            continue
         err = p.returncode not in (0, 5)  # 5 = no tests collected (not an error per se)
         detail = ""
         if err:

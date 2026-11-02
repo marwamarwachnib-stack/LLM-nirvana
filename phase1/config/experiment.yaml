@@ -16,6 +16,8 @@ ollama:
   host: "http://127.0.0.1:11434"
   keep_alive: "60m"
   request_timeout_s: 3600
+  max_attempts: 3                      # a call that fails (HTTP error, timeout) is recorded in job.json and retried on
+                                       # the next run; after 3 counted attempts the job is "failed" (job_status.csv)
   cold_cache_per_call: true            # unload + empty reload before every generation: makes T=0 answers reproducible
                                        # (a warm prompt cache changes the answer; PLAN.md §13.10). Load energy kept separate.
 
@@ -45,10 +47,18 @@ repetitions:
   llm: 5                               # independent runs of each LLM job (rep0..rep4); rep0 = quality results
   test_execution: 5                    # timed runs of every generated suite (scripts/execute.py)
 
-prompts:
-  system: basic_system.txt
-  basic_user: basic_user.txt           # Fig. 1 verbatim (alternative: basic_user_alt_s2.4.txt)
-  improve_user: improve_user.txt       # Fig. 2 verbatim
+prompts:                               # decision 21 (METHODOLOGY_COMPARISON.md §3); Figs 1-2 verbatim (2026-11-01, PIPELINE.md §4)
+  system: null                         # no system message: each figure shows one input (Fig. 1: the code, then both
+                                       # sentences). No shared or model-specific instruction is added. A model's own
+                                       # chat template or packaged default system prompt still applies (a limitation,
+                                       # recorded per session: model_info template / system_default)
+  basic_user: fig1_user.txt            # Fig. 1 verbatim: code, then its two sentences (Tables 1, 2, 4)
+  iteration1_by_set:
+    p1: fig2_iter1_user.txt            # Fig. 2, "INPUT Iteration 1": numbered code (Table 3 / Fig. 6, iterative study)
+  improve_user: fig2_iter2_user.txt    # Fig. 2, "INPUT Iteration 2": numbered code, the tests so far, the 3 improvement lines
+  # pilot (until 2026-10-31): system basic_system.txt + user basic_user.txt + improve_user.txt (kept unchanged,
+  # referenced by its manifests; improve_user.txt has a line Fig. 2's iteration 2 does not show);
+  # the wording of §2.4 is kept as basic_user_alt_s2.4.txt
 
 iterations:
   max: 5                               # paper: at most 5

@@ -8,9 +8,10 @@ CPU figure equals the RAPL package counter, its RAM figure is a fixed 10 W estim
 *_net subtracts the session's idle power of the same domain.
 """
 import csv
+import os
 import sys
 
-from common import RESULTS, RUNS, read_json
+from common import RESULTS, RUNS, is_done, read_json
 
 _idle_cache = {}
 
@@ -113,7 +114,7 @@ def write_csv(path, rows):
     keys = []
     for r in rows:
         keys += [k for k in r if k not in keys]
-    tmp = path.with_suffix(".csv.tmp")
+    tmp = path.with_suffix(f".csv.{os.getpid()}.tmp")  # per process: `make results` may run beside a campaign
     with open(tmp, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=keys)
         w.writeheader()
@@ -129,6 +130,25 @@ def flatten_exec(m):
     return row
 
 
+def job_status():
+    """One row per job folder, finished or not (nothing is dropped silently): LLM jobs from job.json (done, running,
+    error, failed: decision 21), Pynguin seeds from their DONE marker."""
+    rows = []
+    for jf in sorted(RUNS.glob("*/*/*/rep*/job.json")):
+        j = read_json(jf, {})
+        attempts = j.get("attempts", [])
+        rows.append({"tool": jf.parts[-5], "category": jf.parts[-4], "program": jf.parts[-3], "round": int(jf.parts[-2][3:]),
+                     "job": jf.parts[-2], "status": j.get("status"), "n_iterations": j.get("n_iterations"),
+                     "n_failed_attempts": sum(a.get("counted", True) for a in attempts), "n_errors": len(attempts),
+                     "last_error": attempts[-1]["error"] if attempts else None, "session": j.get("session")})
+    for d in sorted(RUNS.glob("pynguin/*/*/seed*")):
+        m, done = read_json(d / "metrics.json", {}), is_done(d)
+        rows.append({"tool": "pynguin", "category": d.parts[-3], "program": d.parts[-2], "round": int(d.name[4:]),
+                     "job": d.name, "status": "done" if done else "incomplete", "n_iterations": 1 if done else None,
+                     "pynguin_returncode": m.get("pynguin_returncode"), "pynguin_produced_tests": m.get("pynguin_produced_tests")})
+    return rows
+
+
 def aggregate():
     RESULTS.mkdir(exist_ok=True)
     iters, jobs, execs = [], [], []
@@ -140,7 +160,10 @@ def aggregate():
             execs.append(flatten_exec(read_json(metrics)))
             continue
         rep = int(d.parent.name[3:]) if d.parent.name.startswith("rep") else None  # LLM: <job>/rep<r>/iter<k>
-        iters.append(flatten(read_json(metrics), read_json(d / "manifest.json"), rep))
+        row = flatten(read_json(metrics), read_json(d / "manifest.json"), rep)
+        # an LLM iteration counts only once its whole chain is finished (Table 3 / Fig. 6 use whole chains)
+        row["job_status"] = "done" if rep is None else read_json(d.parent / "job.json", {}).get("status")
+        iters.append(row)
     for r in iters:
         if r["tool"] == "pynguin":
             jobs.append({**{k: v for k, v in r.items()}, "n_iterations": 1,
@@ -191,6 +214,7 @@ def aggregate():
     write_csv(RESULTS / "iterations.csv", iters)
     write_csv(RESULTS / "jobs.csv", jobs)
     write_csv(RESULTS / "executions.csv", execs)
+    write_csv(RESULTS / "job_status.csv", job_status())
     return len(iters), len(jobs), len(execs)
 
 

@@ -56,6 +56,7 @@ The repo contains **no ChatGPT outputs or prompts for `0_100 LOC`**. Only `p2` h
   - system: `You give unit test cases in pytest for given code.`
   - user: `<full content of example.py>` followed by `Write unittests using pytest for the given python code that cover all the edge cases.`
   - Note: the paper's §2.4 text gives a slightly different wording ("Write Unit tests using Pytest for given Python code that covers all the edge cases."). **Fig. 1** is used verbatim, and the §2.4 variant as a stored alternative.
+  - *(Superseded by decision 21 for the campaign: Fig. 1 shows both sentences after the code in one input, so they are now sent together as one user message, with no system message (`fig1_user.txt`). p1 iteration 1 uses Fig. 2's first input (`fig2_iter1_user.txt`). The split above is what the pilot used.)*
 - **Iterations 2..5, improvement prompt (RQ2):** each prompt is self-contained (stateless, no chat history) and contains:
   - the code with a `#<n>` line-number comment on each line,
   - `The comments on each line indicate line number`,
@@ -400,6 +401,24 @@ Added after the pilot (confirmed 2026-10-25):
       - `jobs.csv` gains per-job load and evaluation energy sums and a `harness` column;
       - `make generate ROUND=r`.
       - Launch needs approval on the server; this container has neither RAPL nor Ollama.
+21. **Audit for fidelity and reliability (2026-10-31; uncommitted until approved; the user left the options to the recommended defaults).** Decisions 1–20 stand, except where noted.
+    - **Prompts follow the paper's figures.**
+      - Fig. 1 is now one user message: the code, then both of its sentences, with no system message. This replaces the system-message split of §3.1; the pilot used the split.
+      - p1 iteration 1 is Fig. 2's "INPUT Iteration 1": numbered code and its two lines.
+      - Old templates are kept for the pilot's records.
+    - **Reproduction vs extension.** The paper ran each tool once per module, so the reproduction is round 0 (`compare_paper.py --round 0`, also run by `make results`). Rounds 1–4, timed executions, energy and the harness condition are extensions (`METHODOLOGY_COMPARISON.md`).
+    - **Pipeline fixes** (`PIPELINE_AUDIT.md`, each validated with a stub server and real Pynguin runs):
+      - a collection timeout no longer stops a run;
+      - failed model calls are recorded, retried, and given up after 3 counted attempts;
+      - `job_status.csv` and a Completeness section list every unfinished job;
+      - Table 3 uses finished chains only;
+      - program and harness sha256 in every manifest;
+      - a runs folder refuses other settings, tool versions or energy meter;
+      - one process per runs folder; unique session IDs;
+      - phase start/end times for an external meter, and `--bare` one-job runs.
+    - **Failed jobs** (after 3 counted attempts) are excluded from means and listed with n, never scored as 0 %.
+    - **Datasets.** `datasets/dataset_manifest.json` and `scripts/validate_datasets.py` record and check all 144 programs (sha256, provenance, the authors' artifacts) and the missing data.
+    - **Missing data.** A public search for the missing large Cat 1 modules and ChatGPT outputs found nothing (`DATASET_RECOVERY_REPORT.md`). The incomplete-dataset protocol applies (`EXPERIMENTAL_WORKFLOW.md` §6); the author request lists the exact items.
 
 ## 12. Resumability and Phase-2 readiness
 

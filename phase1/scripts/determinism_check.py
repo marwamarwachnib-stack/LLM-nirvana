@@ -50,7 +50,8 @@ def main():
             man = read_json(d / "manifest.json")
             stored = (d / "response_raw.txt").read_text()
             cold_load(cfg, model, Path(tempfile.mkdtemp(prefix="phase1_det_")))
-            resp = chat(cfg, model, (d / "prompt_system.txt").read_text(), (d / "prompt_user.txt").read_text(), man["options"])
+            system = (d / "prompt_system.txt").read_text() if (d / "prompt_system.txt").exists() else None
+            resp = chat(cfg, model, system, (d / "prompt_user.txt").read_text(), man["options"])
             new = resp["message"]["content"]
             h = lambda s: hashlib.sha256(s.encode()).hexdigest()[:12]  # noqa: E731
             job = str(d.parent.parent.relative_to(RUNS / tool))

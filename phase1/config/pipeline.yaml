@@ -1,0 +1,39 @@
+# Full-dataset pipeline (scripts/pipeline.py, PIPELINE.md): orchestration only.
+# What to run, where to write it, and how each job is labelled. Every setting that changes a generated test or its
+# score (prompts, decoding, iterations, Pynguin arguments, evaluation) stays in experiment.yaml and is guarded per runs
+# folder by run.py (_condition.json). Energy is not measured by this pipeline: every stage runs with --energy none and
+# records only wall time and Unix start/end timestamps per phase.
+
+out_root: "."                    # relative to phase1/ or absolute; overridden by --out-root or PIPELINE_OUT_ROOT
+campaign_prefix: "pipeline"      # raw outputs:  <out_root>/runs_<prefix>_<set>[_harness]/
+                                 # results:      <out_root>/results_<prefix>_<set>[_harness]/<snapshot id>/ (never reused)
+
+sets: [small, p2, p1]            # the dataset groups the repository holds (datasets/dataset_manifest.json)
+
+# Every job belongs to exactly one experiment (round 0 = Pynguin seed 0 / LLM repetition 0; round r = seed r / rep r).
+experiments:
+  paper_reproduction:
+    description: >-
+      Pynguin as in the paper: one run per program (round 0, seed 0), the authors' command and default settings
+      (METHODOLOGY_COMPARISON.md 3b-3c). The paper ran Pynguin on 0-100 LOC (Table 1) and p2 (Table 2), not on p1.
+    tools: [pynguin]
+    rounds: [0]
+    sets: [small, p2]
+  local_llm_adaptation:
+    description: >-
+      The paper's ChatGPT protocol (Fig. 1 prompt, Fig. 2 for p1, up to 5 iterations, stop when statement coverage
+      does not rise) with local models in place of ChatGPT. Not ChatGPT results.
+    tools: [dsc-6.7b, cl-7b, qwen-7b]
+    rounds: [0]
+    sets: [small, p2, p1]
+  repeated_runs:
+    description: >-
+      Extension: Pynguin seeds 1-4 (independent search runs) and LLM repetitions 1-4 (T = 0 and a fixed decoding
+      seed, so near-identical answers, not independent random draws). Reported separately from round 0.
+    tools: [pynguin, dsc-6.7b, cl-7b, qwen-7b]
+    rounds: [1, 2, 3, 4]
+    sets: [small, p2, p1]        # Pynguin is never scheduled on p1 (experiment.yaml llm_only_sets; paper Table 3)
+
+# Checked in the quality stage against each model's recorded details (Ollama /api/show); a mismatch is reported,
+# never corrected: the models are used as pulled (config/experiment.yaml llm_tools).
+expected_quantization: "Q4_0"

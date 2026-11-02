@@ -1,6 +1,14 @@
-# Experimental campaign: readiness (2026-10-30, nothing launched)
+# Experimental campaign: readiness (2026-10-30, updated 2026-10-31; nothing launched)
 
 Status of the pipeline before the full campaign: three LLMs and Pynguin on the small set, p2 and p1. Every item below was checked by reading the code or running it with a stub model server; **no model inference, no installation and no campaign run** took place.
+
+**Status on 2026-10-31: not ready to launch.** The 31 October audit fixed 12 pipeline problems (`PIPELINE_AUDIT.md`) and aligned the prompts with Figs 1–2 (`METHODOLOGY_COMPARISON.md`). These still stand before a launch:
+- your approval of those uncommitted changes;
+- the server steps in §5;
+- smoke runs with the corrected prompts;
+- the Pynguin version decision, or an explicit choice to keep 0.34.0.
+
+The procedure is `EXPERIMENTAL_WORKFLOW.md`. Sections 1–4 below describe the state of 30 October; where 31 October changed something, `PIPELINE_AUDIT.md` takes precedence.
 
 ## 1. Same samples and equivalent conditions
 
@@ -9,7 +17,7 @@ Status of the pipeline before the full campaign: three LLMs and Pynguin on the s
 | Same programs for every tool | **yes**: small 60 (21 / 19 / 20), p2 43, p1 41; one list per set, from `run.programs()` | listed for every tool and set (2026-10-30) |
 | Order | each tool shuffles the same list with its own fixed seed (`shuffle_seed` 2024 + tool), so drift does not always hit the same programs; round r = Pynguin seed r + LLM repetition r of every program, so round 0 is a complete comparison | `run.ordered()`, `main()` |
 | Pynguin on p1 | not run by default (paper: p1 is ChatGPT only, decision 18); `--tools pynguin` runs it | `llm_only_sets: [p1]` |
-| Prompts | identical for all LLMs: system prompt, Fig. 1 and Fig. 2 verbatim; SHA-256 of each prompt in every manifest | `config/prompts/`, `build_prompt()` |
+| Prompts | the user-message content is identical for all LLMs: Fig. 1 as one user message (no system message, since 2026-10-31), p1 iteration 1 as Fig. 2, iterations 2–5 as Fig. 2's iteration 2 (since 2026-11-01). The models' internal inputs may still differ: each model's own chat template and packaged default system prompt apply (recorded per session in `model_info`; `PIPELINE.md` §4.2). SHA-256 of each prompt in every manifest | `config/prompts/`, `build_prompt()` |
 | Decoding | identical: T = 0, seed 42, top_k 40, top_p 0.9, `num_ctx` 8192, `num_predict` 2048, CPU only, threads = physical cores | `config/experiment.yaml` → `decoding`, recorded per call |
 | Model builds | all Q4_0 (`quantization` recorded per call); the digest is recorded per call, and **new:** `run.py` refuses to continue a runs folder with another digest of the same model (`check_same_model`, tested) | `model_info()`, `check_same_model()` |
 | Cache state | cold prompt cache before every call (unload + empty reload), so T = 0 answers depend on the prompt only | `cold_cache_per_call: true`; `prompt_cached_tokens` per call |
@@ -69,15 +77,19 @@ Each phase is measured on its own: RAPL package and DRAM, CodeCarbon as a cross-
 
 | Step | Command | Needs |
 |---|---|---|
+| 0 | approve and commit the 2026-10-31 changes (`PIPELINE_AUDIT.md`, decision 21) | **approval** |
 | 1 | `git pull` (branch `claude/claude-rc-q45e6v`), `make setup` | approval (installs venvs from the existing locks) |
+| 1b | `make validate-datasets` (144 programs, missing slots unchanged) | — |
 | 2 | `make check` (RAPL readable, Ollama, `systemd-run --user`) | — |
 | 3 | `sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj` (once per boot) | server admin |
 | 4 | `make models`, then record `ollama list` (digests) | approval (downloads ~12 GB) |
 | 5 | `make datasets` (p2, p1 projects and their dependencies) | approval (network, installs into `datasets/`) |
 | 6 | `make verify-env` (expect 77/77 small, 223/237 overall) | — |
 | 7 | Version decision (`VERSION_COMPARISON_PLAN.md`): steps 0–4, or keep 0.34.0 and record that choice | approval (installs; ~3–8 h per version per seed) |
-| 8 | `make smoke` for each set (a few minutes each) | approval (model inference) |
-| 9 | **campaign:** `make all` (small), then `make all SET=p2`, then `make all SET=p1`; optionally `make all SET=p1 HARNESS=1` | **approval** |
+| 8 | `make smoke` for each set (a few minutes each), **required**: the prompts changed after the pilot | approval (model inference) |
+| 9 | **campaign:** `make generate ROUND=0` + `make results` (reproduction, check `paper_comparison_round0.md`), then rounds 1–4, `make execute`, `make results`; then `SET=p2`, then `SET=p1`; optionally `SET=p1 HARNESS=1` | **approval** |
+| 10 | S. Cunha's meter: its own campaign (`EXPERIMENTAL_WORKFLOW.md` §7), after confirming the tool's interface | **approval** |
+| 11 | send `AUTHOR_DATA_REQUEST.md` (updated) | **approval** (you send it) |
 
 **Cost.** Only a laptop estimate exists (i7-8550U pilot, `results/pilot_report.md` §9): per round on the small set, Pynguin about 5 h, dsc-6.7b about 6 h, cl-7b about 10 h; qwen-7b is not measured.
 - The 5 rounds of the small set are on the order of 100–150 h on that laptop. p2 is larger: longer modules, and Pynguin up to 3600 s per job.

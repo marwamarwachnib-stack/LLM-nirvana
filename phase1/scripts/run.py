@@ -12,9 +12,11 @@ gives a complete first comparison before the repetitions start (decision 13).
     .venv/bin/python scripts/run.py small --tools cl-7b --programs cat2_functions/change --rep 0 --energy none
 """
 import argparse
+import hashlib
 import json
 import os
 import random
+import re
 import shutil
 import subprocess
 import sys
@@ -25,7 +27,8 @@ from typing import NamedTuple
 
 from common import (CONFIG_DIR, PHASE1, PYNGUIN_BIN, REPO, RUNS, atomic_write_json, atomic_write_text,
                     cooldown, environment_info, git_commit, is_done, load_config, machine_id, mark_done, measure,
-                    now_iso, rapl_readable, read_json, reset_dir, run_code, sha256_text, system_state, wait_for_ac)
+                    now_iso, rapl_readable, read_json, reset_dir, run_code, sha256_text, system_state, tool_versions,
+                    wait_for_ac)
 from evaluate import EVALUATOR_VERSION, evaluate, extract_blocks, file_errors, mccabe_max, normalize_imports, numbered_code, ranges
 
 PYTEST_INI = "[pytest]\n"
@@ -55,18 +58,58 @@ def harness(set_name, name):
     return (h,) if os.environ.get("PHASE1_HARNESS") == "1" and h.exists() else ()
 
 
-def check_condition():
-    """One runs folder = one condition: runs with harnesses are not mixed with plain runs (a finished plain job
-    would otherwise be skipped instead of redone with its harness)."""
-    want = {"harness": os.environ.get("PHASE1_HARNESS") == "1"}
+def sha256_file(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def prompt_hashes(cfg):
+    p = cfg["prompts"]
+    names = [p.get("system"), p["basic_user"], p["improve_user"], *(p.get("iteration1_by_set") or {}).values()]
+    return {n: sha256_text(template(n)) for n in names if n}
+
+
+def condition(cfg, scope):
+    """What a runs folder's results depend on, besides the machine (check_same_machine): the harness mode, the
+    settings that change generated tests or their scores, the tool versions and the energy meter. `scope` is
+    "generation" (run.py) or "execution" (execute.py: only what changes a timed run)."""
+    tv = tool_versions()
+    c = {"harness": os.environ.get("PHASE1_HARNESS") == "1", "evaluation": cfg["evaluation"],
+         "runner": {k: tv["runner"].get(k) for k in ("python", "pytest", "pluggy", "coverage")}}
+    if scope == "execution":
+        return {**c, "execution_meter": cfg["_energy"]}
+    return {**c, "generation_meter": cfg["_energy"], "decoding": cfg["decoding"],
+            "cold_cache_per_call": cfg["ollama"].get("cold_cache_per_call"), "iterations": cfg["iterations"],
+            "prompts": prompt_hashes(cfg), "prompt_rendering": PROMPT_RENDERING,
+            "models": {t: v["model"] for t, v in cfg["llm_tools"].items()},
+            "pynguin": {k: cfg["pynguin"][k] for k in ("args", "timeout_s", "memory_max", "memory_swap_max")},
+            "pynguin_version": tv["pynguin"].get("pynguin")}
+
+
+def check_condition(cfg, scope):
+    """One runs folder = one condition. A folder whose runs were made with another harness mode, other settings,
+    other tool versions or another energy meter is refused: a finished job would otherwise be skipped instead of
+    redone, and the folder would mix conditions. Keys the folder has not recorded yet are added (folders made
+    before a key existed); models are compared per tool, so adding a tool is allowed."""
+    want = condition(cfg, scope)
     f = RUNS / "_condition.json"
-    have = read_json(f, None)
-    if have is None:
+    have = read_json(f, None) or {}
+    diff = []
+    for k, v in want.items():
+        if k not in have:
+            continue
+        if k == "models":
+            diff += [f"models.{t}: {have[k][t]} -> {m}" for t, m in v.items() if t in have[k] and have[k][t] != m]
+        elif have[k] != v:
+            diff.append(f"{k}: {json.dumps(have[k])} -> {json.dumps(v)}")
+    if diff:
+        sys.exit(f"{RUNS} holds runs made under another condition:\n  " + "\n  ".join(diff) +
+                 "\nUse another runs folder (make CAMPAIGN=<name>; make ... HARNESS=1 uses runs_<set>_harness).")
+    new = {**want, **have}  # what the folder recorded stays; new keys are added
+    if "models" in want:
+        new["models"] = {**want["models"], **have.get("models", {})}
+    if new != have:
         RUNS.mkdir(parents=True, exist_ok=True)
-        atomic_write_json(f, want)
-    elif have != want:
-        sys.exit(f"{RUNS} holds runs made with {have}, this run is {want}. Use another runs folder "
-                 "(make ... HARNESS=1 uses runs_<set>_harness).")
+        atomic_write_json(f, new)
 
 
 def programs(cfg, set_name, only=None):
@@ -119,15 +162,23 @@ def model_info(cfg, model):
         "modified_at": tag and tag.get("modified_at"), "details": show.get("details"),
         "model_info": {k: v for k, v in (show.get("model_info") or {}).items() if not isinstance(v, list)},
         "parameters_default": show.get("parameters"), "template": show.get("template"),
+        "system_default": show.get("system"),  # the model's packaged default system prompt, if any: with system: null
+                                               # (no system message is sent) it may still apply (PIPELINE.md §4.2)
         "ollama_version": ollama(cfg, "/api/version")["version"],
     }
 
 
 def chat(cfg, model, system, user, options=None):
+    """One stateless chat call. `system` None: the user message alone, as in the ChatGPT web UI (Fig. 1); the
+    model then keeps its own default system prompt (recorded in model_info's template)."""
+    messages = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": user}]
     payload = {"model": model, "stream": False, "keep_alive": cfg["ollama"]["keep_alive"],
-               "options": options or cfg["decoding"],
-               "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+               "options": options or cfg["decoding"], "messages": messages}
     return ollama(cfg, "/api/chat", payload, timeout=cfg["ollama"]["request_timeout_s"])
+
+
+class GenerationError(Exception):
+    """The model server failed to answer one call (HTTP error, timeout, malformed answer)."""
 
 
 def cold_load(cfg, model, out_dir):
@@ -159,8 +210,14 @@ def ensure_ollama(cfg):
 
 def start_session(cfg, args):
     sid = time.strftime("%Y%m%d-%H%M%S")
+    (RUNS / "_sessions").mkdir(parents=True, exist_ok=True)
+    for n in range(1, 1000):  # two sessions started within one second (one-job runs in a loop) get distinct ids
+        try:
+            (RUNS / "_sessions" / sid).mkdir()
+            break
+        except FileExistsError:
+            sid = f"{time.strftime('%Y%m%d-%H%M%S')}-{n}"
     sdir = RUNS / "_sessions" / sid
-    sdir.mkdir(parents=True)
     atomic_write_json(sdir / "environment.json", environment_info())
     atomic_write_json(sdir / "command.json", {"argv": sys.argv, "args": vars(args), "started": now_iso()})
     if args.idle_s > 0:
@@ -187,19 +244,37 @@ def template(name):
     return (CONFIG_DIR / "prompts" / name).read_text()
 
 
-def build_prompt(cfg, k, module_src, suite_texts, cov, missed):
+# How a template becomes a prompt (recorded in _condition.json and every iteration manifest, so a runs folder never
+# mixes two renderings). 1: placeholders replaced one after the other, inserted text kept with its trailing newlines.
+# 2 (2026-11-01, PIPELINE.md §4): one pass over the template, so code or tests that contain a placeholder name are
+# never rewritten; inserted code and tests end without trailing newlines, so the template alone sets the separators
+# (one blank line between blocks for every program); blank lines of the numbered code keep their whitespace.
+PROMPT_RENDERING = 2
+
+
+def fill(tmpl, values):
+    """Replace each {placeholder} of the template once, in a single pass over the template text."""
+    return re.sub(r"\{(code|numbered_code|tests|coverage|missed)\}", lambda m: values[m.group(1)], tmpl)
+
+
+def build_prompt(cfg, k, module_src, suite_texts, cov, missed, set_name=None):
+    """System prompt (None: no system message) and user prompt of iteration k. Iteration 1 uses the paper's
+    basic prompt (Fig. 1), or a set's own first prompt (p1: Fig. 2, iteration 1, which numbers the lines).
+    The program's text is inserted unchanged apart from its trailing newlines (PROMPT_RENDERING)."""
     p = cfg["prompts"]
-    system = template(p["system"])
+    system = template(p["system"]) if p.get("system") else None
     if k == 1:
-        return system, template(p["basic_user"]).replace("{code}", module_src), {"template": p["basic_user"], "dropped_suite_files": 0}
+        name = (p.get("iteration1_by_set") or {}).get(set_name, p["basic_user"])
+        user = fill(template(name), {"code": module_src.rstrip("\n"), "numbered_code": numbered_code(module_src)})
+        return system, user, {"template": name, "dropped_suite_files": 0}
     tmpl = template(p["improve_user"])
     budget_chars = int((cfg["decoding"]["num_ctx"] - cfg["decoding"]["num_predict"]) * 3.0)
     dropped = 0
     while True:  # keep the code and the newest tests if the prompt would overflow the context
-        user = (tmpl.replace("{numbered_code}", numbered_code(module_src))
-                .replace("{tests}", "\n\n".join(suite_texts[dropped:]))
-                .replace("{coverage}", str(round(cov))).replace("{missed}", missed))
-        if len(system) + len(user) <= budget_chars or dropped >= len(suite_texts) - 1:
+        user = fill(tmpl, {"numbered_code": numbered_code(module_src),
+                           "tests": "\n\n".join(t.rstrip("\n") for t in suite_texts[dropped:]),
+                           "coverage": str(round(cov)), "missed": missed})
+        if len(system or "") + len(user) <= budget_chars or dropped >= len(suite_texts) - 1:
             break
         dropped += 1
     return system, user, {"template": p["improve_user"], "dropped_suite_files": dropped}
@@ -207,17 +282,17 @@ def build_prompt(cfg, k, module_src, suite_texts, cov, missed):
 
 # ----------------------------------------------------------------------------- LLM job
 
-def run_llm_job(cfg, tool, p, sid, minfo, rep=0):
+def run_llm_job(cfg, tool, p, sid, minfo, rep=0, set_name=None):
     cat, prog, mod = p.cat, p.prog, p.module
     model = cfg["llm_tools"][tool]["model"]
     jdir = RUNS / tool / cat / prog / f"rep{rep}"
     job = read_json(jdir / "job.json", {})
-    if job.get("status") == "done":
+    if job.get("status") in ("done", "failed"):
         return "skip"
     jdir.mkdir(parents=True, exist_ok=True)
     atomic_write_json(jdir / "job.json", {"status": "running", "tool": tool, "model": model, "category": cat,
                                           "program": prog, "rep": rep, "started": job.get("started", now_iso()),
-                                          "session": sid})
+                                          "session": sid, "attempts": job.get("attempts", [])})
     module_src = p.src.read_text()
     refactored = False
     suite = []           # [(file name, normalized text)]
@@ -242,16 +317,21 @@ def run_llm_job(cfg, tool, p, sid, minfo, rep=0):
                 (work / name).write_text(text)
             prev = history[-1]["coverage"] if history else None
             system, user, pinfo = build_prompt(cfg, k, module_src, [t for _, t in suite],
-                                               prev and (prev["stmt_cov"] or 0), prev and ranges(prev["missing_lines"]))
-            atomic_write_text(idir / "prompt_system.txt", system)
+                                               prev and (prev["stmt_cov"] or 0), prev and ranges(prev["missing_lines"]),
+                                               set_name)
+            if system:
+                atomic_write_text(idir / "prompt_system.txt", system)
             atomic_write_text(idir / "prompt_user.txt", user)
             wait_for_ac(cfg.get("_allow_battery"))
-            load = cold_load(cfg, model, idir / "energy_load") if cfg["ollama"].get("cold_cache_per_call") else None
-            cool = cooldown(cfg)
-            gen = {}
-            with measure("generation", idir / "energy_generation", cfg, gen):
-                resp = chat(cfg, model, system, user)
-            content = resp["message"]["content"]
+            try:
+                load = cold_load(cfg, model, idir / "energy_load") if cfg["ollama"].get("cold_cache_per_call") else None
+                cool = cooldown(cfg)
+                gen = {}
+                with measure("generation", idir / "energy_generation", cfg, gen):
+                    resp = chat(cfg, model, system, user)
+                content = resp["message"]["content"]
+            except (OSError, ValueError, KeyError, TypeError) as e:  # URLError, HTTPError, timeouts, bad JSON
+                raise GenerationError(f"iteration {k}: {type(e).__name__}: {e}") from e
             atomic_write_text(idir / "response_raw.txt", content)
             meta = {kk: v for kk, v in resp.items() if kk != "message"}
             atomic_write_json(idir / "ollama_response.json", meta)
@@ -309,13 +389,16 @@ def run_llm_job(cfg, tool, p, sid, minfo, rep=0):
             atomic_write_json(idir / "manifest.json", {
                 "tool": tool, "model_info": minfo, "options": cfg["decoding"], "keep_alive": cfg["ollama"]["keep_alive"],
                 "ollama_cfg": cfg["ollama"], "evaluator_version": metrics["evaluator_version"],
-                "prompt_files": {n: sha256_text(template(n)) for n in (cfg["prompts"]["system"], pinfo["template"])},
-                "prompt_sha256": {"system": sha256_text(system), "user": sha256_text(user)},
+                "prompt_files": {n: sha256_text(template(n)) for n in (cfg["prompts"].get("system"), pinfo["template"]) if n},
+                "prompt_sha256": {"system": system and sha256_text(system), "user": sha256_text(user)},
+                "prompt_rendering": PROMPT_RENDERING,
                 "iteration_rules": cfg["iterations"], "evaluation": cfg["evaluation"], "energy_cfg": cfg["energy"],
                 "session": sid, "finished": now_iso(), "git": git_commit(), "system_state": system_state(),
                 "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
-                "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
+                "dataset_program": str(p.src.relative_to(REPO)), "dataset_program_sha256": sha256_file(p.src),
+                "module": mod, "import_env": p.env, "set": set_name,
                 "harness": next((str(f.relative_to(PHASE1)) for f in p.data if f.name == "conftest.py"), None),
+                "harness_sha256": next((sha256_file(f) for f in p.data if f.name == "conftest.py"), None),
             })
             mark_done(idir)
             history.append(m)
@@ -407,8 +490,10 @@ def run_pynguin_job(cfg, p, seed, sid):
         "tool": "pynguin", "pynguin_version": ver, "command": cmd, "seed": seed, "session": sid, "finished": now_iso(),
         "git": git_commit(), "system_state": system_state(), "evaluation": cfg["evaluation"], "energy_cfg": cfg["energy"],
         "env_locks": {p.name: sha256_text(p.read_text()) for p in (PHASE1 / "env").glob("*.lock")},
-        "dataset_program": str(p.src.relative_to(REPO)), "module": mod, "import_env": p.env,
+        "dataset_program": str(p.src.relative_to(REPO)), "dataset_program_sha256": sha256_file(p.src),
+        "module": mod, "import_env": p.env,
         "harness": next((str(f.relative_to(PHASE1)) for f in p.data if f.name == "conftest.py"), None),
+        "harness_sha256": next((sha256_file(f) for f in p.data if f.name == "conftest.py"), None),
     })
     mark_done(jdir)
     print(f"  [pynguin] {cat}/{prog} seed{seed}: rc={rc} tests={has_tests} stmt={m['coverage']['stmt_cov']} "
@@ -429,6 +514,23 @@ def check_same_machine(allow):
                      "Use a separate runs folder for this machine (make CAMPAIGN=<name>, or PHASE1_RUNS=<dir>).")
 
 
+def lock_runs_folder():
+    """One process per runs folder (run.py or execute.py): two would start the same job twice, measure each other's
+    load as their own time and energy, and race on the result files. The lock ends with the process."""
+    import fcntl
+    RUNS.mkdir(parents=True, exist_ok=True)
+    f = open(RUNS / "_lock", "a+")
+    try:
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        sys.exit(f"{RUNS} is in use by another scripts/run.py or scripts/execute.py. Wait for it to finish, or use "
+                 "another runs folder.")
+    f.truncate(0)
+    f.write(f"pid {os.getpid()} since {now_iso()}: {' '.join(sys.argv)}\n")
+    f.flush()
+    return f
+
+
 def check_same_model(tool, minfo):
     """One runs folder = one build of each model: a model pulled again with another digest is another model, and
     its repetitions would not be repetitions of the same condition."""
@@ -437,6 +539,24 @@ def check_same_model(tool, minfo):
         if there and there != minfo["digest"]:
             sys.exit(f"[{tool}] {minfo['model']} is now digest {(minfo['digest'] or '?')[:12]}, but session {f.parent.name} "
                      f"of {RUNS} used {there[:12]}. Restore that build, or use another runs folder.")
+
+
+def record_failure(cfg, tool, p, rep, sid, error):
+    """A failed model call: kept in the job's job.json (never silent). It counts towards the job's attempts only
+    if the model server still answers, so an outage of the server itself costs no attempt. Returns (attempts
+    counted, server answering)."""
+    jfile = RUNS / tool / p.cat / p.prog / f"rep{rep}" / "job.json"
+    job = read_json(jfile, {})
+    try:
+        ollama(cfg, "/api/version")
+        alive = True
+    except OSError:
+        alive = False
+    attempts = job.get("attempts", []) + [{"at": now_iso(), "session": sid, "error": str(error)[:2000], "counted": alive}]
+    n = sum(a["counted"] for a in attempts)
+    status = "failed" if n >= cfg["ollama"].get("max_attempts", 3) else "error"
+    atomic_write_json(jfile, {**job, "status": status, "attempts": attempts})
+    return n, alive
 
 
 def main():
@@ -455,6 +575,8 @@ def main():
     ap.add_argument("--allow-battery", action="store_true", help="debug only: do not wait for mains power")
     ap.add_argument("--allow-mixed-machines", action="store_true", help="debug only: add runs of this machine to a "
                     "runs folder that already holds another machine's runs")
+    ap.add_argument("--bare", action="store_true", help="for an external energy meter wrapping one job (make gen-one): "
+                    "no model warm-up and no re-aggregation of all results inside the measured command")
     args = ap.parse_args()
     cfg = load_config()
     if args.pynguin_time is not None:
@@ -470,7 +592,8 @@ def main():
             sys.exit("RAPL energy counters are not readable. Run once per boot:\n"
                      "  sudo chmod a+r /sys/class/powercap/intel-rapl*:*/energy_uj\n" + json.dumps(info, indent=1))
     check_same_machine(args.allow_mixed_machines)
-    check_condition()
+    check_condition(cfg, "generation")
+    _lock = lock_runs_folder()  # noqa: F841 (held until the process ends)
     tools = args.tools.split(",") if args.tools else [
         t for t in cfg["main_tools"] if not (t == "pynguin" and args.set in cfg.get("llm_only_sets", []))]
     unknown = [t for t in tools if t != "pynguin" and t not in cfg["llm_tools"]]
@@ -485,7 +608,9 @@ def main():
     rounds = [args.rep] if args.rep is not None else range(n_rounds)
     wait_for_ac(args.allow_battery)  # before the idle baseline too
     sid, sdir = start_session(cfg, args)
-    from aggregate import aggregate
+    from aggregate import aggregate as _aggregate
+    aggregate = (lambda: None) if args.bare else _aggregate  # noqa: E731
+    failed_in_row = 0
     for r in rounds:
         for tool in tools:
             if tool == "pynguin":
@@ -497,19 +622,34 @@ def main():
             if r >= reps:
                 continue
             model = cfg["llm_tools"][tool]["model"]
-            todo = [p for p in ordered(progs, cfg, tool)
-                    if read_json(RUNS / tool / p.cat / p.prog / f"rep{r}" / "job.json", {}).get("status") != "done"]
+            status = [(p, read_json(RUNS / tool / p.cat / p.prog / f"rep{r}" / "job.json", {}).get("status"))
+                      for p in ordered(progs, cfg, tool)]
+            todo = [p for p, st in status if st not in ("done", "failed")]
+            n_failed = sum(st == "failed" for _, st in status)
             if not todo:
-                print(f"[{tool}] rep{r}: all {len(progs)} programs done", flush=True)
+                failed = f" ({n_failed} failed after {cfg['ollama'].get('max_attempts', 3)} attempts: job_status.csv)"
+                print(f"[{tool}] rep{r}: all {len(progs)} programs done{failed if n_failed else ''}", flush=True)
                 continue
             ensure_ollama(cfg)
             minfo = model_info(cfg, model)
             check_same_model(tool, minfo)
             atomic_write_json(sdir / f"model_info_{tool}.json", minfo)
-            warmup(cfg, model, sdir, tool)
+            if not args.bare:
+                warmup(cfg, model, sdir, tool)
             print(f"[{tool}] {model} digest={minfo['digest'][:12]} rep{r} — {len(todo)} programs to run", flush=True)
             for p in todo:
-                run_llm_job(cfg, tool, p, sid, minfo, rep=r)
+                try:
+                    run_llm_job(cfg, tool, p, sid, minfo, rep=r, set_name=args.set)
+                    failed_in_row = 0
+                except GenerationError as e:
+                    n, alive = record_failure(cfg, tool, p, r, sid, e)
+                    print(f"  [{tool}] {p.cat}/{p.prog} rep{r}: GENERATION FAILED ({e}); attempt {n} recorded in job.json",
+                          flush=True)
+                    failed_in_row += 1
+                    if not alive or failed_in_row >= 3:
+                        aggregate()
+                        sys.exit(f"stopped: {'the model server does not answer' if not alive else '3 calls failed in a row'}."
+                                 " Fix the cause, then re-run the same command (failed jobs are retried).")
                 aggregate()
     if args.idle_s > 0:
         rec = {}
