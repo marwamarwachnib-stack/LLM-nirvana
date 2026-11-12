@@ -1,0 +1,6 @@
+# Steps 2-4 (exploration + dataset construction)
+pandas>=2.2
+tabulate>=0.9
+scikit-learn>=1.5
+pytest>=8.0
+# Steps 5-8 (added when those steps are implemented): torch, transformers, matplotlib

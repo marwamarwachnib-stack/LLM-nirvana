@@ -1,0 +1,158 @@
+{
+  "n_projects_in_benchmark": 17,
+  "n_bugs_in_benchmark": 501,
+  "bug_status": {
+    "ok": 469,
+    "no_valid_pair": 31,
+    "no_python_source_change": 1
+  },
+  "buggy_is_parent_of_fixed": {
+    "true": 499,
+    "false": 2
+  },
+  "buggy_is_ancestor_of_fixed": {
+    "true": 501
+  },
+  "commits_between_buggy_and_fixed": {
+    "count": 501.0,
+    "mean": 1.13,
+    "std": 1.25,
+    "min": 0.0,
+    "25%": 1.0,
+    "50%": 1.0,
+    "75%": 1.0,
+    "max": 26.0
+  },
+  "patch_line_consistency_mean": 0.9967098,
+  "bugs_with_patch_fully_consistent": 495,
+  "function_status": {
+    "paired": 754,
+    "added_in_fix": 75,
+    "deleted_in_fix": 24,
+    "cosmetic_change_only": 17,
+    "patch_inconsistent_file": 5,
+    "function_parse_error": 4
+  },
+  "dedup": {
+    "samples_before": 1508,
+    "label_conflict_hashes": 37,
+    "pairs_dropped_label_conflict": 37,
+    "label_conflict_examples": [
+      "ansible-13::lib/ansible/galaxy/collection.py::_get_collection_info",
+      "black-13::blib2to3/pgen2/tokenize.py::generate_tokens",
+      "black-15::black.py::EmptyLineTracker.maybe_empty_lines",
+      "black-18::black.py::lib2to3_parse",
+      "black-23::black.py::lib2to3_parse",
+      "black-8::black.py::bracket_split_build_line",
+      "fastapi-3::fastapi/routing.py::serialize_response",
+      "keras-30::keras/engine/training.py::Model.evaluate_generator",
+      "keras-30::keras/engine/training.py::Model.fit_generator",
+      "keras-40::keras/layers/recurrent.py::RNN.compute_output_shape",
+      "luigi-19::luigi/scheduler.py::SimpleTaskState.set_status",
+      "luigi-23::luigi/interface.py::WorkerSchedulerFactory.create_local_scheduler",
+      "luigi-6::luigi/parameter.py::TupleParameter.parse",
+      "matplotlib-12::lib/matplotlib/axes/_axes.py::Axes.hlines",
+      "matplotlib-12::lib/matplotlib/axes/_axes.py::Axes.vlines",
+      "pandas-109::pandas/core/arrays/categorical.py::Categorical.max",
+      "pandas-109::pandas/core/arrays/categorical.py::Categorical.min",
+      "pandas-127::pandas/core/generic.py::NDFrame.pct_change",
+      "pandas-143::pandas/core/indexes/range.py::RangeIndex.get_indexer",
+      "pandas-150::pandas/core/dtypes/missing.py::array_equivalent",
+      "pandas-22::pandas/core/window/common.py::validate_baseindexer_support",
+      "pandas-36::pandas/core/dtypes/missing.py::_isna_new",
+      "pandas-36::pandas/core/dtypes/missing.py::_isna_old",
+      "pandas-69::pandas/core/indexing.py::_AtIndexer._convert_key",
+      "pandas-89::pandas/core/reshape/reshape.py::_unstack_multiple",
+      "scrapy-25::scrapy/http/request/form.py::_get_form_url",
+      "scrapy-34::scrapy/item.py::ItemMeta.__new__",
+      "thefuck-11::thefuck/rules/git_push.py::get_new_command",
+      "thefuck-17::thefuck/shells/bash.py::Bash.app_alias",
+      "youtube-dl-21::youtube_dl/utils.py::urljoin",
+      "youtube-dl-22::youtube_dl/utils.py::_match_one",
+      "youtube-dl-24::youtube_dl/utils.py::_match_one",
+      "youtube-dl-25::youtube_dl/utils.py::js_to_json",
+      "youtube-dl-26::youtube_dl/utils.py::js_to_json",
+      "youtube-dl-6::youtube_dl/utils.py::parse_dfxp_time_expr",
+      "youtube-dl-8::youtube_dl/YoutubeDL.py::YoutubeDL.build_format_selector",
+      "youtube-dl-9::youtube_dl/YoutubeDL.py::YoutubeDL.build_format_selector"
+    ],
+    "duplicate_pairs_dropped": [
+      "PySnooper-2::pysnooper/tracer.py::FileWriter.write",
+      "PySnooper-2::pysnooper/tracer.py::get_source_from_frame",
+      "ansible-2::lib/ansible/utils/version.py::_Numeric.__ge__",
+      "ansible-2::lib/ansible/utils/version.py::_Numeric.__gt__",
+      "luigi-23::luigi/scheduler.py::Worker.__init__",
+      "luigi-6::luigi/parameter.py::ListParameter.serialize",
+      "matplotlib-17::lib/matplotlib/transforms.py::nonsingular",
+      "matplotlib-26::lib/matplotlib/axis.py::_make_getset_interval",
+      "spacy-7::spacy/util.py::filter_spans",
+      "thefuck-17::thefuck/shells/zsh.py::Zsh.get_aliases"
+    ],
+    "pairs_dropped_duplicate": 10,
+    "samples_after": 1414
+  },
+  "final": {
+    "n_projects": 17,
+    "n_bugs": 445,
+    "n_pairs": 707,
+    "n_buggy_samples": 707,
+    "n_clean_samples": 707,
+    "class_distribution": {
+      "1": 0.5,
+      "0": 0.5
+    },
+    "pairs_per_bug": {
+      "count": 445.0,
+      "mean": 1.59,
+      "std": 1.84,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 29.0
+    },
+    "bugs_single_pair": 326,
+    "samples_per_project": {
+      "pandas": 434,
+      "keras": 198,
+      "scrapy": 110,
+      "black": 96,
+      "youtube-dl": 94,
+      "fastapi": 86,
+      "luigi": 82,
+      "thefuck": 76,
+      "matplotlib": 66,
+      "ansible": 52,
+      "tornado": 38,
+      "PySnooper": 18,
+      "cookiecutter": 16,
+      "tqdm": 16,
+      "spacy": 14,
+      "httpie": 12,
+      "sanic": 6
+    },
+    "code_lines": {
+      "count": 1414.0,
+      "mean": 49.01,
+      "std": 62.73,
+      "min": 2.0,
+      "25%": 13.0,
+      "50%": 28.0,
+      "75%": 57.0,
+      "max": 756.0
+    },
+    "code_chars": {
+      "count": 1414.0,
+      "mean": 1849.18,
+      "std": 2612.64,
+      "min": 49.0,
+      "25%": 478.25,
+      "50%": 1012.0,
+      "75%": 2097.75,
+      "max": 34556.0
+    },
+    "missing_code": 0,
+    "exact_duplicate_code_rows": 0,
+    "canonical_duplicate_rows": 0
+  }
+}

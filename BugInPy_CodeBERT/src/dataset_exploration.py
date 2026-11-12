@@ -268,9 +268,10 @@ def write_report(summary: dict, bugs: pd.DataFrame, out: Path) -> None:
         "- Buggy version = `git reset --hard <buggy_commit_id>`; the bug-revealing `test_file`(s) "
         "of the fixed version are then copied into the buggy checkout.",
         "- `bug_patch.txt` is the source-code diff buggy -> fixed and identifies the code touched by the fix.",
-        "- Large whole-file patches (see outliers below) suggest the buggy commit is not always the direct "
-        "parent of the fix, so a patch may contain changes unrelated to the bug. To be verified against "
-        "upstream history before building labels.", "",
+        "- Verified in Step 3 against upstream history (`dataset_builder.py`): the buggy commit is the "
+        "direct parent of the fixed commit for 499/501 bugs (PySnooper-2: 26 commits apart; keras-12: "
+        "identical commits, empty patch). The very large patches (pandas-15/17/93, scrapy-33) do not "
+        "match the committed files line-by-line and are excluded at file level in Step 4.", "",
         "Largest source patches (changed lines):", "",
         bugs.nlargest(5, "patch_src_changed_lines")[["uid", "patch_py_src_files", "patch_src_hunks",
                                                       "patch_src_changed_lines"]].to_markdown(index=False), "",

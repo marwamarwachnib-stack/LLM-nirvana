@@ -1,0 +1,17 @@
+https://github.com/cool-RR/PySnooper
+https://github.com/ansible/ansible
+https://github.com/psf/black
+https://github.com/cookiecutter/cookiecutter
+https://github.com/tiangolo/fastapi
+https://github.com/jakubroztocil/httpie
+https://github.com/keras-team/keras
+https://github.com/spotify/luigi
+https://github.com/matplotlib/matplotlib
+https://github.com/pandas-dev/pandas
+https://github.com/huge-success/sanic
+https://github.com/scrapy/scrapy
+https://github.com/explosion/spaCy
+https://github.com/nvbn/thefuck
+https://github.com/tornadoweb/tornado
+https://github.com/tqdm/tqdm
+https://github.com/ytdl-org/youtube-dl

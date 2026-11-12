@@ -1,0 +1,64 @@
+{
+  "n_projects": 17,
+  "n_bugs": 445,
+  "n_pairs": 707,
+  "n_buggy_samples": 707,
+  "n_clean_samples": 707,
+  "class_distribution": {
+    "1": 0.5,
+    "0": 0.5
+  },
+  "pairs_per_bug": {
+    "count": 445.0,
+    "mean": 1.59,
+    "std": 1.84,
+    "min": 1.0,
+    "25%": 1.0,
+    "50%": 1.0,
+    "75%": 2.0,
+    "max": 29.0
+  },
+  "bugs_single_pair": 326,
+  "samples_per_project": {
+    "pandas": 434,
+    "keras": 198,
+    "scrapy": 110,
+    "black": 96,
+    "youtube-dl": 94,
+    "fastapi": 86,
+    "luigi": 82,
+    "thefuck": 76,
+    "matplotlib": 66,
+    "ansible": 52,
+    "tornado": 38,
+    "PySnooper": 18,
+    "cookiecutter": 16,
+    "tqdm": 16,
+    "spacy": 14,
+    "httpie": 12,
+    "sanic": 6
+  },
+  "code_lines": {
+    "count": 1414.0,
+    "mean": 49.01,
+    "std": 62.73,
+    "min": 2.0,
+    "25%": 13.0,
+    "50%": 28.0,
+    "75%": 57.0,
+    "max": 756.0
+  },
+  "code_chars": {
+    "count": 1414.0,
+    "mean": 1849.18,
+    "std": 2612.64,
+    "min": 49.0,
+    "25%": 478.25,
+    "50%": 1012.0,
+    "75%": 2097.75,
+    "max": 34556.0
+  },
+  "missing_code": 0,
+  "exact_duplicate_code_rows": 0,
+  "canonical_duplicate_rows": 0
+}
