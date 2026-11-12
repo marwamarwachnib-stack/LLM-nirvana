@@ -1,0 +1,386 @@
+{
+  "dataset": "BugsInPy",
+  "dataset_revision": "11c5f1eea954a42132cfd06bf257766a7963e0fd 2025-10-09 21:31:55 +0800",
+  "root": "data/raw/BugsInPy",
+  "n_projects": 17,
+  "n_bugs": 501,
+  "bugs_per_project": {
+    "PySnooper": 3,
+    "ansible": 18,
+    "black": 23,
+    "cookiecutter": 4,
+    "fastapi": 16,
+    "httpie": 5,
+    "keras": 45,
+    "luigi": 33,
+    "matplotlib": 30,
+    "pandas": 169,
+    "sanic": 5,
+    "scrapy": 40,
+    "spacy": 10,
+    "thefuck": 32,
+    "tornado": 16,
+    "tqdm": 9,
+    "youtube-dl": 43
+  },
+  "bug_info_key_variants": {
+    "buggy_commit_id;fixed_commit_id;python_version;test_file": 452,
+    "buggy_commit_id;fixed_commit_id;python_version;pythonpath;test_file": 49
+  },
+  "missing_python_version": 0,
+  "python_versions": {
+    "3.8.1": 33,
+    "3.6.9": 31,
+    "3.8.3": 287,
+    "3.7.3": 50,
+    "3.7.7": 9,
+    "3.7.0": 58,
+    "3.7.4": 33
+  },
+  "test_runners": {
+    "pytest": 365,
+    "unittest": 122,
+    "other": 14
+  },
+  "requirements_encodings": {
+    "utf-8": 383,
+    "utf-16": 117,
+    "MISSING": 1
+  },
+  "patch_files_total": 647,
+  "patch": {
+    "bugs_touching_only_1_src_file": 433,
+    "bugs_touching_multiple_src_files": 67,
+    "bugs_with_no_python_src_change": 1,
+    "bugs_whose_patch_also_edits_tests": 36,
+    "bugs_whose_patch_edits_non_py_files": 0,
+    "src_changed_lines": {
+      "count": 501.0,
+      "mean": 27.26,
+      "std": 177.7,
+      "min": 0.0,
+      "25%": 3.0,
+      "50%": 6.0,
+      "75%": 14.0,
+      "max": 2334.0
+    },
+    "src_hunks": {
+      "count": 501.0,
+      "mean": 2.28,
+      "std": 3.55,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 58.0
+    }
+  },
+  "per_project": [
+    {
+      "project": "PySnooper",
+      "bugs": 3,
+      "src_py_files_changed_mean": 1.3333333333333333,
+      "src_changed_lines_median": 8.0,
+      "bugs_single_src_hunk": 1,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/cool-RR/PySnooper"
+    },
+    {
+      "project": "ansible",
+      "bugs": 18,
+      "src_py_files_changed_mean": 1.0555555555555556,
+      "src_changed_lines_median": 8.5,
+      "bugs_single_src_hunk": 6,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/ansible/ansible"
+    },
+    {
+      "project": "black",
+      "bugs": 23,
+      "src_py_files_changed_mean": 1.1304347826086956,
+      "src_changed_lines_median": 14.0,
+      "bugs_single_src_hunk": 11,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/psf/black"
+    },
+    {
+      "project": "cookiecutter",
+      "bugs": 4,
+      "src_py_files_changed_mean": 1.5,
+      "src_changed_lines_median": 8.0,
+      "bugs_single_src_hunk": 2,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/cookiecutter/cookiecutter"
+    },
+    {
+      "project": "fastapi",
+      "bugs": 16,
+      "src_py_files_changed_mean": 1.1875,
+      "src_changed_lines_median": 6.5,
+      "bugs_single_src_hunk": 9,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/tiangolo/fastapi"
+    },
+    {
+      "project": "httpie",
+      "bugs": 5,
+      "src_py_files_changed_mean": 1.2,
+      "src_changed_lines_median": 4.0,
+      "bugs_single_src_hunk": 3,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/jakubroztocil/httpie/"
+    },
+    {
+      "project": "keras",
+      "bugs": 45,
+      "src_py_files_changed_mean": 1.2444444444444445,
+      "src_changed_lines_median": 12.0,
+      "bugs_single_src_hunk": 22,
+      "bugs_no_src_change": 1,
+      "github_url": "https://github.com/keras-team/keras"
+    },
+    {
+      "project": "luigi",
+      "bugs": 33,
+      "src_py_files_changed_mean": 1.0303030303030303,
+      "src_changed_lines_median": 3.0,
+      "bugs_single_src_hunk": 26,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/spotify/luigi"
+    },
+    {
+      "project": "matplotlib",
+      "bugs": 30,
+      "src_py_files_changed_mean": 1.2333333333333334,
+      "src_changed_lines_median": 6.0,
+      "bugs_single_src_hunk": 17,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/matplotlib/matplotlib"
+    },
+    {
+      "project": "pandas",
+      "bugs": 169,
+      "src_py_files_changed_mean": 1.2366863905325445,
+      "src_changed_lines_median": 7.0,
+      "bugs_single_src_hunk": 83,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/pandas-dev/pandas"
+    },
+    {
+      "project": "sanic",
+      "bugs": 5,
+      "src_py_files_changed_mean": 1.0,
+      "src_changed_lines_median": 7.0,
+      "bugs_single_src_hunk": 4,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/huge-success/sanic"
+    },
+    {
+      "project": "scrapy",
+      "bugs": 40,
+      "src_py_files_changed_mean": 1.2,
+      "src_changed_lines_median": 5.0,
+      "bugs_single_src_hunk": 25,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/scrapy/scrapy"
+    },
+    {
+      "project": "spacy",
+      "bugs": 10,
+      "src_py_files_changed_mean": 1.1,
+      "src_changed_lines_median": 2.5,
+      "bugs_single_src_hunk": 8,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/explosion/spaCy"
+    },
+    {
+      "project": "thefuck",
+      "bugs": 32,
+      "src_py_files_changed_mean": 1.125,
+      "src_changed_lines_median": 5.5,
+      "bugs_single_src_hunk": 24,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/nvbn/thefuck"
+    },
+    {
+      "project": "tornado",
+      "bugs": 16,
+      "src_py_files_changed_mean": 1.1875,
+      "src_changed_lines_median": 9.5,
+      "bugs_single_src_hunk": 9,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/tornadoweb/tornado"
+    },
+    {
+      "project": "tqdm",
+      "bugs": 9,
+      "src_py_files_changed_mean": 1.1111111111111112,
+      "src_changed_lines_median": 3.0,
+      "bugs_single_src_hunk": 6,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/tqdm/tqdm"
+    },
+    {
+      "project": "youtube-dl",
+      "bugs": 43,
+      "src_py_files_changed_mean": 1.255813953488372,
+      "src_changed_lines_median": 5.0,
+      "bugs_single_src_hunk": 24,
+      "bugs_no_src_change": 0,
+      "github_url": "https://github.com/ytdl-org/youtube-dl"
+    }
+  ],
+  "projects_info": {
+    "PySnooper": {
+      "github_url": "https://github.com/cool-RR/PySnooper",
+      "status": "OK",
+      "extra_files": [
+        "PySnooper-fail.txt",
+        "PySnooper-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "ansible": {
+      "github_url": "https://github.com/ansible/ansible",
+      "status": "OK",
+      "extra_files": [
+        "ansible-fail.txt",
+        "ansible-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "black": {
+      "github_url": "https://github.com/psf/black",
+      "status": "OK",
+      "extra_files": [
+        "black-fail.txt",
+        "black-pass.txt"
+      ]
+    },
+    "cookiecutter": {
+      "github_url": "https://github.com/cookiecutter/cookiecutter",
+      "status": "OK",
+      "extra_files": [
+        "cookiecutter-fail.txt",
+        "cookiecutter-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "fastapi": {
+      "github_url": "https://github.com/tiangolo/fastapi",
+      "status": "OK",
+      "extra_files": [
+        "fastapi-fail.txt",
+        "fastapi-pass.txt"
+      ]
+    },
+    "httpie": {
+      "github_url": "https://github.com/jakubroztocil/httpie/",
+      "status": "OK",
+      "extra_files": [
+        "httpie-fail.txt",
+        "httpie-pass.txt"
+      ]
+    },
+    "keras": {
+      "github_url": "https://github.com/keras-team/keras",
+      "status": "OK",
+      "extra_files": [
+        "keras-fail.txt",
+        "keras-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "luigi": {
+      "github_url": "https://github.com/spotify/luigi",
+      "status": "OK",
+      "extra_files": [
+        "luigi-fail.txt",
+        "luigi-pass.txt"
+      ]
+    },
+    "matplotlib": {
+      "github_url": "https://github.com/matplotlib/matplotlib",
+      "status": "OK",
+      "extra_files": [
+        "matplotlib-fail.txt",
+        "matplotlib-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "pandas": {
+      "github_url": "https://github.com/pandas-dev/pandas",
+      "status": "OK",
+      "extra_files": [
+        "pandas-fail.txt",
+        "pandas-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "sanic": {
+      "github_url": "https://github.com/huge-success/sanic",
+      "status": "OK",
+      "extra_files": [
+        "sanic-fail.txt",
+        "sanic-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "scrapy": {
+      "github_url": "https://github.com/scrapy/scrapy",
+      "status": "OK",
+      "extra_files": [
+        "scrapy-fail.txt",
+        "scrapy-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "spacy": {
+      "github_url": "https://github.com/explosion/spaCy",
+      "status": "OK",
+      "extra_files": [
+        "spaCy-fail.txt",
+        "spaCy-pass.txt"
+      ]
+    },
+    "thefuck": {
+      "github_url": "https://github.com/nvbn/thefuck",
+      "status": "OK",
+      "extra_files": [
+        "thefuck-fail.txt",
+        "thefuck-pass.txt"
+      ]
+    },
+    "tornado": {
+      "github_url": "https://github.com/tornadoweb/tornado",
+      "status": "OK",
+      "extra_files": [
+        "tornado-fail.txt",
+        "tornado-pass.txt"
+      ]
+    },
+    "tqdm": {
+      "github_url": "https://github.com/tqdm/tqdm",
+      "status": "OK",
+      "extra_files": [
+        "tqdm-fail.txt",
+        "tqdm-pass.txt",
+        "verify.sh"
+      ]
+    },
+    "youtube-dl": {
+      "github_url": "https://github.com/ytdl-org/youtube-dl",
+      "status": "OK",
+      "extra_files": [
+        "verify.sh",
+        "youtube-dl-fail.txt",
+        "youtube-dl-pass.txt"
+      ]
+    }
+  },
+  "anomalies": [
+    "keras-12: bug_patch.txt contains no file diffs",
+    "pandas: non-directory entry in bugs/: '~$Bugs info.xlsx'",
+    "168 bugs use an abbreviated buggy_commit_id (resolvable in upstream repo): projects=['pandas']"
+  ]
+}

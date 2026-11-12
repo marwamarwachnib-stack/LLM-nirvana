@@ -1,0 +1,648 @@
+uid,project,bug_id,path,is_python,is_test,hunks,added,removed,new_file,deleted_file,hunk_contexts
+PySnooper-1,PySnooper,1,pysnooper/pycompat.py,True,False,1,1,0,False,False,import inspect
+PySnooper-1,PySnooper,1,pysnooper/tracer.py,True,False,3,5,2,False,False,import traceback | def get_source_from_frame(frame): | class FileWriter(object):
+PySnooper-1,PySnooper,1,tests/utils.py,True,True,2,2,2,False,False,"def assert_output(output, expected_entries, prefix=None): | def assert_sample_output(module):"
+PySnooper-2,PySnooper,2,pysnooper/tracer.py,True,False,11,29,9,False,False,import traceback | def get_source_from_frame(frame): | class FileWriter(object): | class Tracer: | class Tracer: | class Tracer: | class Tracer: | class Tracer: | class Tracer: | class Tracer:
+PySnooper-3,PySnooper,3,pysnooper/pysnooper.py,True,False,1,1,1,False,False,def get_write_function(output):
+ansible-1,ansible,1,lib/ansible/galaxy/collection.py,True,False,1,5,0,False,False,"def verify_collections(collections, search_paths, apis, validate_certs, ignore_e"
+ansible-2,ansible,2,lib/ansible/utils/version.py,True,False,2,8,8,False,False,class _Alpha: | class _Numeric:
+ansible-3,ansible,3,lib/ansible/module_utils/facts/system/distribution.py,True,False,1,2,1,False,False,class DistributionFiles:
+ansible-4,ansible,4,lib/ansible/playbook/collectionsearch.py,True,False,3,15,1,False,False,__metaclass__ = type | def _ensure_default_collection(collection_list=None): | class CollectionSearch:
+ansible-5,ansible,5,lib/ansible/module_utils/common/validation.py,True,False,1,1,1,False,False,"def check_required_arguments(argument_spec, module_parameters):"
+ansible-5,ansible,5,test/units/module_utils/common/validation/test_check_mutually_exclusive.py,True,True,2,4,3,False,False,def test_check_mutually_exclusive_found(mutually_exclusive_terms): | def test_check_mutually_exclusive_none():
+ansible-6,ansible,6,lib/ansible/galaxy/collection.py,True,False,3,17,8,False,False,"class CollectionRequirement: | class CollectionRequirement: | def _get_collection_info(dep_map, existing_collections, collection, requirement,"
+ansible-7,ansible,7,lib/ansible/module_utils/network/eos/config/vlans/vlans.py,True,False,1,5,4,False,False,"def generate_commands(vlan_id, to_set, to_remove):"
+ansible-8,ansible,8,lib/ansible/plugins/shell/powershell.py,True,False,2,8,8,False,False,import re | class ShellModule(ShellBase):
+ansible-9,ansible,9,lib/ansible/modules/packaging/os/redhat_subscription.py,True,False,2,5,3,False,False,class Rhsm(RegistrationBase): | def main():
+ansible-10,ansible,10,lib/ansible/modules/system/pamd.py,True,False,2,4,1,False,False,class PamdRule(PamdLine): | class PamdService(object):
+ansible-11,ansible,11,lib/ansible/modules/network/ios/ios_banner.py,True,False,4,16,16,False,False,"commands: | def map_obj_to_commands(updates, module): | def map_obj_to_commands(updates, module): | def map_config_to_obj(module):"
+ansible-12,ansible,12,lib/ansible/plugins/lookup/env.py,True,False,2,2,3,False,False,"RETURN = """""" | class LookupModule(LookupBase):"
+ansible-13,ansible,13,lib/ansible/cli/galaxy.py,True,False,2,9,1,False,False,from ansible.galaxy.role import GalaxyRole | class GalaxyCLI(CLI):
+ansible-13,ansible,13,lib/ansible/galaxy/collection.py,True,False,1,6,2,False,False,"def _get_collection_info(dep_map, existing_collections, collection, requirement,"
+ansible-14,ansible,14,lib/ansible/galaxy/api.py,True,False,2,15,3,False,False,from ansible.module_utils.urls import open_url | class GalaxyAPI:
+ansible-15,ansible,15,lib/ansible/modules/network/eos/eos_eapi.py,True,False,1,1,1,False,False,"def map_obj_to_commands(updates, module, warnings):"
+ansible-16,ansible,16,lib/ansible/module_utils/facts/hardware/linux.py,True,False,1,3,2,False,False,class LinuxHardware(Hardware):
+ansible-16,ansible,16,test/units/module_utils/facts/hardware/linux_data.py,True,True,2,4,4,False,False,CPU_INFO_TEST_SCENARIOS = [ | CPU_INFO_TEST_SCENARIOS = [
+ansible-17,ansible,17,lib/ansible/module_utils/facts/hardware/linux.py,True,False,3,13,0,False,False,class LinuxHardware(Hardware): | class LinuxHardware(Hardware): | class LinuxHardware(Hardware):
+ansible-18,ansible,18,lib/ansible/cli/galaxy.py,True,False,3,3,3,False,False,class GalaxyCLI(CLI): | class GalaxyCLI(CLI): | class GalaxyCLI(CLI):
+black-1,black,1,black.py,True,False,3,11,3,False,False,def reformat_many( | def reformat_many( | async def schedule_formatting(
+black-2,black,2,black.py,True,False,1,40,9,False,False,def generate_ignored_nodes(leaf: Leaf) -> Iterator[LN]:
+black-3,black,3,black.py,True,False,1,1,1,False,False,def target_version_option_callback(
+black-4,black,4,black.py,True,False,1,7,1,False,False,class EmptyLineTracker:
+black-5,black,5,black.py,True,False,2,11,4,False,False,class Line: | def bracket_split_build_line(
+black-6,black,6,black.py,True,False,6,70,12,False,False,"from blib2to3 import pygram, pytree | class Feature(Enum): | VERSION_TO_FEATURES: Dict[TargetVersion, Set[Feature]] = { | VERSION_TO_FEATURES: Dict[TargetVersion, Set[Feature]] = { | def decode_bytes(src: bytes) -> Tuple[FileContent, Encoding, NewLine]: | def lib2to3_parse(src_txt: str, target_versions: Iterable[TargetVersion] = ()) -"
+black-6,black,6,blib2to3/pgen2/driver.py,True,False,3,13,3,False,False,"from . import grammar, parse, token, tokenize, pgen | class Driver(object): | class Driver(object):"
+black-6,black,6,blib2to3/pgen2/tokenize.py,True,False,5,10,2,False,False,__credits__ = \ | single_quoted = ( | def untokenize(iterable): | def generate_tokens(readline): | def generate_tokens(readline):
+black-6,black,6,tests/data/python37.py,True,True,2,16,0,False,False,async def func(): | async def func():
+black-7,black,7,black.py,True,False,2,13,1,False,False,"def normalize_invisible_parens(node: Node, parens_after: Set[str]) -> None: | def normalize_invisible_parens(node: Node, parens_after: Set[str]) -> None:"
+black-8,black,8,black.py,True,False,1,10,3,False,False,def bracket_split_build_line(
+black-9,black,9,black.py,True,False,1,2,2,False,False,def get_grammars(target_versions: Set[TargetVersion]) -> List[Grammar]:
+black-10,black,10,blib2to3/pgen2/driver.py,True,False,1,1,3,False,False,class Driver(object):
+black-11,black,11,black.py,True,False,3,24,2,False,False,def split_line( | def is_import(leaf: Leaf) -> bool: | def ensure_visible(leaf: Leaf) -> None:
+black-12,black,12,black.py,True,False,3,17,8,False,False,class BracketTracker: | class BracketTracker: | class BracketTracker:
+black-13,black,13,blib2to3/pgen2/tokenize.py,True,False,1,4,3,False,False,def generate_tokens(readline):
+black-14,black,14,black.py,True,False,3,19,10,False,False,"from typing import ( | def generate_trailers_to_omit(line: Line, line_length: int) -> Iterator[Set[Leaf | def get_future_imports(node: Node) -> Set[str]:"
+black-14,black,14,tests/data/python2_unicode_literals.py,True,True,2,6,2,False,False,"Ur""hello"""
+black-15,black,15,black.py,True,False,14,60,178,False,False,"from typing import ( | class CannotSplit(Exception): | class DebugVisitor(Visitor[T]): | class Line: | class EmptyLineTracker: | class LineGenerator(Visitor[Line]): | class LineGenerator(Visitor[Line]): | class LineGenerator(Visitor[Line]): | def container_of(leaf: Leaf) -> LN: | def generate_comments(leaf: LN) -> Iterator[Leaf]: | def split_line( | def normalize_invisible_parens(node: Node, parens_after: Set[str]) -> None: | def hide_fmt_off(node: Node) -> bool: | def hide_fmt_off(node: Node) -> bool:"
+black-16,black,16,black.py,True,False,1,14,1,False,False,def gen_python_files_in_dir(
+black-17,black,17,black.py,True,False,2,4,1,False,False,"def decode_bytes(src: bytes) -> Tuple[FileContent, Encoding, NewLine]: | GRAMMARS = ["
+black-18,black,18,black.py,True,False,8,44,9,False,False,from asyncio.base_events import BaseEventLoop | def format_file_in_place( | def format_file_in_place( | def format_file_in_place( | def format_stdin_to_stdout( | def format_stdin_to_stdout( | def format_str( | def lib2to3_parse(src_txt: str) -> Node:
+black-19,black,19,black.py,True,False,1,4,0,False,False,class EmptyLineTracker:
+black-20,black,20,black.py,True,False,1,2,2,False,False,def format_file_in_place(
+black-21,black,21,black.py,True,False,1,1,1,False,False,def dump_to_file(*output: str) -> str:
+black-22,black,22,black.py,True,False,18,152,63,False,False,"Depth = int | class Line: | class Line: | class Line: | class Line: | class Line: | class Line: | class Line: | class UnformattedLines(Line): | def split_line( | def split_line( | def left_hand_split(line: Line, py36: bool = False) -> Iterator[Line]: | def right_hand_split(line: Line, py36: bool = False) -> Iterator[Line]: | def bracket_split_succeeded_or_raise(head: Line, body: Line, tail: Line) -> None | def delimiter_split(line: Line, py36: bool = False) -> Iterator[Line]: | def delimiter_split(line: Line, py36: bool = False) -> Iterator[Line]: | def delimiter_split(line: Line, py36: bool = False) -> Iterator[Line]:"
+black-23,black,23,black.py,True,False,3,40,11,False,False,"def format_str(src_contents: str, line_length: int) -> FileContent: | def whitespace(leaf: Leaf) -> str:  # noqa C901 | def assert_equivalent(src: str, dst: str) -> None:"
+black-23,black,23,blib2to3/pygram.py,True,False,1,7,0,False,False,python_symbols = Symbols(python_grammar)
+black-23,black,23,tests/function.py,True,True,2,4,2,False,False,def func_no_args(): | def func_no_args():
+cookiecutter-1,cookiecutter,1,cookiecutter/generate.py,True,False,1,1,1,False,False,def generate_context(
+cookiecutter-2,cookiecutter,2,cookiecutter/hooks.py,True,False,2,9,5,False,False,"def find_hook(hook_name, hooks_dir='hooks'): | def run_hook(hook_name, project_dir, context):"
+cookiecutter-3,cookiecutter,3,cookiecutter/prompt.py,True,False,1,1,1,False,False,"def read_user_choice(var_name, options):"
+cookiecutter-4,cookiecutter,4,cookiecutter/exceptions.py,True,False,1,6,0,False,False,class InvalidModeException(CookiecutterException):
+cookiecutter-4,cookiecutter,4,cookiecutter/generate.py,True,False,2,6,2,False,False,"from binaryornot.check import is_binary | def generate_files(repo_dir, context=None, output_dir='.',"
+cookiecutter-4,cookiecutter,4,cookiecutter/hooks.py,True,False,4,8,4,False,False,"import tempfile | def run_script(script_path, cwd='.'): | def run_script_with_context(script_path, cwd, context): | def run_hook(hook_name, project_dir, context):"
+fastapi-1,fastapi,1,fastapi/applications.py,True,False,20,40,0,False,False,class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette): | class FastAPI(Starlette):
+fastapi-1,fastapi,1,fastapi/encoders.py,True,False,7,15,7,False,False,def jsonable_encoder( | def jsonable_encoder( | def jsonable_encoder( | def jsonable_encoder( | def jsonable_encoder( | def jsonable_encoder( | def jsonable_encoder(
+fastapi-1,fastapi,1,fastapi/openapi/utils.py,True,False,2,2,2,False,False,"def get_openapi_security_definitions(flat_dependant: Dependant) -> Tuple[Dict, L | def get_openapi("
+fastapi-1,fastapi,1,fastapi/routing.py,True,False,29,87,6,False,False,except ImportError:  # pragma: nocover | async def serialize_response( | async def serialize_response( | def get_request_handler( | def get_request_handler( | class APIRoute(routing.Route): | class APIRoute(routing.Route): | class APIRoute(routing.Route): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router): | class APIRouter(routing.Router):
+fastapi-1,fastapi,1,tests/test_skip_defaults.py,True,True,2,63,1,False,False,class Model(BaseModel): | client = TestClient(app)
+fastapi-2,fastapi,2,fastapi/routing.py,True,False,1,6,1,False,False,class APIRouter(routing.Router):
+fastapi-3,fastapi,3,fastapi/routing.py,True,False,2,25,7,False,False,except ImportError:  # pragma: nocover | async def serialize_response(
+fastapi-4,fastapi,4,fastapi/openapi/utils.py,True,False,1,3,1,False,False,def get_openapi_path(
+fastapi-5,fastapi,5,fastapi/utils.py,True,False,1,1,1,False,False,def create_cloned_field(field: ModelField) -> ModelField:
+fastapi-6,fastapi,6,fastapi/dependencies/utils.py,True,False,1,3,3,False,False,async def request_body_to_args(
+fastapi-7,fastapi,7,fastapi/exception_handlers.py,True,False,2,3,1,False,False,async def request_validation_exception_handler(
+fastapi-8,fastapi,8,fastapi/routing.py,True,False,2,4,1,False,False,class APIRouter(routing.Router): | class APIRouter(routing.Router):
+fastapi-9,fastapi,9,fastapi/dependencies/utils.py,True,False,3,11,1,False,False,"def get_body_field(*, dependant: Dependant, name: str) -> Optional[Field]: | def get_body_field(*, dependant: Dependant, name: str) -> Optional[Field]: | def get_body_field(*, dependant: Dependant, name: str) -> Optional[Field]:"
+fastapi-10,fastapi,10,fastapi/routing.py,True,False,1,2,0,False,False,def serialize_response(
+fastapi-11,fastapi,11,fastapi/dependencies/utils.py,True,False,1,7,2,False,False,def get_flat_dependant(dependant: Dependant) -> Dependant:
+fastapi-12,fastapi,12,fastapi/security/http.py,True,False,1,7,4,False,False,class HTTPBearer(HTTPBase):
+fastapi-13,fastapi,13,fastapi/routing.py,True,False,2,4,4,False,False,class APIRouter(routing.Router): | class APIRouter(routing.Router):
+fastapi-14,fastapi,14,fastapi/openapi/models.py,True,False,3,3,3,False,False,class SchemaBase(BaseModel): | class Schema(SchemaBase): | class Operation(BaseModel):
+fastapi-15,fastapi,15,fastapi/routing.py,True,False,1,4,0,False,False,class APIRouter(routing.Router):
+fastapi-16,fastapi,16,fastapi/encoders.py,True,False,1,6,11,False,False,def jsonable_encoder(
+httpie-1,httpie,1,httpie/downloads.py,True,False,2,34,2,False,False,"from __future__ import division | def filename_from_url(url, content_type):"
+httpie-2,httpie,2,httpie/client.py,True,False,1,1,0,False,False,"def get_response(args, config_dir):"
+httpie-2,httpie,2,httpie/core.py,True,False,1,0,1,False,False,"def main(args=sys.argv[1:], env=Environment(), error=None):"
+httpie-3,httpie,3,httpie/sessions.py,True,False,1,4,0,False,False,class Session(BaseConfigDict):
+httpie-4,httpie,4,httpie/models.py,True,False,1,1,2,False,False,class HTTPRequest(HTTPMessage):
+httpie-5,httpie,5,httpie/cli.py,True,False,1,14,4,False,False,class KeyValueType(object):
+keras-1,keras,1,keras/backend/tensorflow_backend.py,True,False,6,14,5,False,False,"from tensorflow.python.ops import functional_ops | def update(x, new_x): | def update_add(x, increment): | def update_sub(x, decrement): | def get_variable_shape(x): | def print_tensor(x, message=''):"
+keras-1,keras,1,keras/backend/theano_backend.py,True,False,1,1,2,False,False,def get_variable_shape(x):
+keras-1,keras,1,keras/initializers.py,True,False,5,23,10,False,False,class RandomNormal(Initializer): | class RandomUniform(Initializer): | class TruncatedNormal(Initializer): | class VarianceScaling(Initializer): | class Orthogonal(Initializer):
+keras-1,keras,1,tests/keras/backend/backend_test.py,True,True,5,46,54,False,False,class TestBackend(object): | class TestBackend(object): | class TestBackend(object): | class TestBackend(object): | class TestBackend(object):
+keras-2,keras,2,keras/backend/numpy_backend.py,True,False,1,6,0,False,False,"def l2_normalize(x, axis=-1):"
+keras-3,keras,3,keras/models.py,True,False,2,12,6,False,False,"def _clone_functional_model(model, input_tensors=None): | def _clone_functional_model(model, input_tensors=None):"
+keras-4,keras,4,keras/optimizers.py,True,False,1,1,1,False,False,class TFOptimizer(Optimizer):
+keras-5,keras,5,keras/utils/data_utils.py,True,False,1,4,1,False,False,"def get_file(fname,"
+keras-6,keras,6,keras/engine/training_utils.py,True,False,1,1,1,False,False,def weighted_masked_objective(fn):
+keras-7,keras,7,keras/wrappers/scikit_learn.py,True,False,1,1,1,False,False,class KerasRegressor(BaseWrapper):
+keras-8,keras,8,keras/engine/network.py,True,False,4,46,4,False,False,class Network(Layer): | class Network(Layer): | class Network(Layer): | class Network(Layer):
+keras-9,keras,9,docs/autogen.py,True,False,1,2,2,False,False,def count_leading_spaces(s):
+keras-10,keras,10,keras/engine/training_utils.py,True,False,4,25,19,False,False,"def standardize_weights(y, | def standardize_weights(y, | def standardize_weights(y, | def standardize_weights(y,"
+keras-11,keras,11,keras/engine/training_generator.py,True,False,13,21,19,False,False,"from __future__ import print_function | def fit_generator(model, | def fit_generator(model, | def fit_generator(model, | def fit_generator(model, | def fit_generator(model, | def fit_generator(model, | def evaluate_generator(model, generator, | def evaluate_generator(model, generator, | def evaluate_generator(model, generator, | def predict_generator(model, generator, | def predict_generator(model, generator, | def predict_generator(model, generator,"
+keras-11,keras,11,keras/engine/training_utils.py,True,False,2,15,0,False,False,import warnings | def iter_sequence_infinite(seq):
+keras-11,keras,11,keras/utils/data_utils.py,True,False,1,2,0,False,False,class Sequence(object):
+keras-11,keras,11,tests/keras/utils/data_utils_test.py,True,True,1,1,1,False,False,from keras.utils.data_utils import validate_file
+keras-11,keras,11,tests/test_multiprocessing.py,True,True,1,1,1,False,False,from keras.utils import Sequence
+keras-13,keras,13,keras/engine/training_generator.py,True,False,1,2,1,False,False,"def fit_generator(model,"
+keras-14,keras,14,keras/metrics.py,True,False,1,2,1,False,False,"def top_k_categorical_accuracy(y_true, y_pred, k=5):"
+keras-15,keras,15,keras/callbacks.py,True,False,4,18,5,False,False,import numpy as np | class CSVLogger(Callback): | class CSVLogger(Callback): | class CSVLogger(Callback):
+keras-16,keras,16,keras/engine/sequential.py,True,False,3,19,7,False,False,class Sequential(Model): | class Sequential(Model): | class Sequential(Model):
+keras-17,keras,17,keras/metrics.py,True,False,1,2,1,False,False,"def categorical_accuracy(y_true, y_pred):"
+keras-18,keras,18,keras/backend/tensorflow_backend.py,True,False,4,21,2,False,False,class Function(object): | class Function(object): | class Function(object): | class Function(object):
+keras-19,keras,19,keras/backend/cntk_backend.py,True,False,1,1,1,False,False,"def rnn(step_function, inputs, initial_states,"
+keras-19,keras,19,keras/layers/recurrent.py,True,False,8,52,18,False,False,class StackedRNNCells(Layer): | class StackedRNNCells(Layer): | class StackedRNNCells(Layer): | class RNN(Layer): | class RNN(Layer): | class SimpleRNNCell(Layer): | class GRUCell(Layer): | class LSTMCell(Layer):
+keras-20,keras,20,keras/backend/cntk_backend.py,True,False,2,3,2,False,False,"def in_top_k(predictions, targets, k): | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1),"
+keras-20,keras,20,keras/backend/tensorflow_backend.py,True,False,6,22,7,False,False,"def _preprocess_conv1d_input(x, data_format): | def _preprocess_conv2d_input(x, data_format): | def conv2d(x, kernel, strides=(1, 1), padding='valid', | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1), | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1), | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1),"
+keras-20,keras,20,keras/backend/theano_backend.py,True,False,3,5,3,False,False,"def conv2d(x, kernel, strides=(1, 1), padding='valid', | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1), | def conv2d_transpose(x, kernel, output_shape, strides=(1, 1),"
+keras-20,keras,20,keras/layers/convolutional.py,True,False,5,12,6,False,False,class Conv2DTranspose(Conv2D): | class Conv2DTranspose(Conv2D): | class Conv2DTranspose(Conv2D): | class Conv2DTranspose(Conv2D): | class Conv2DTranspose(Conv2D):
+keras-20,keras,20,keras/utils/conv_utils.py,True,False,3,6,1,False,False,"def conv_input_length(output_length, filter_size, padding, stride): | def deconv_length(dim_size, stride_size, kernel_size, padding, output_padding): | def deconv_length(dim_size, stride_size, kernel_size, padding, output_padding):"
+keras-21,keras,21,keras/callbacks.py,True,False,4,14,1,False,False,class EarlyStopping(Callback): | class EarlyStopping(Callback): | class EarlyStopping(Callback): | class EarlyStopping(Callback):
+keras-22,keras,22,keras/engine/input_layer.py,True,False,1,1,0,False,False,class InputLayer(Layer):
+keras-23,keras,23,keras/engine/sequential.py,True,False,1,0,2,False,False,class Sequential(Model):
+keras-24,keras,24,keras/callbacks.py,True,False,1,6,2,False,False,class TensorBoard(Callback):
+keras-25,keras,25,keras/applications/imagenet_utils.py,True,False,1,2,0,False,False,"def _preprocess_numpy_input(x, data_format, mode):"
+keras-26,keras,26,keras/backend/tensorflow_backend.py,True,False,1,4,1,False,False,"def rnn(step_function, inputs, initial_states,"
+keras-27,keras,27,keras/layers/wrappers.py,True,False,1,12,0,False,False,class Bidirectional(Wrapper):
+keras-28,keras,28,keras/preprocessing/sequence.py,True,False,2,9,3,False,False,class TimeseriesGenerator(Sequence): | class TimeseriesGenerator(Sequence):
+keras-29,keras,29,keras/engine/training.py,True,False,6,10,12,False,False,class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container):
+keras-30,keras,30,keras/engine/training.py,True,False,2,10,2,False,False,class Model(Container): | class Model(Container):
+keras-31,keras,31,keras/backend/tensorflow_backend.py,True,False,1,2,2,False,False,"def ctc_batch_cost(y_true, y_pred, input_length, label_length):"
+keras-32,keras,32,keras/callbacks.py,True,False,5,11,6,False,False,class ReduceLROnPlateau(Callback): | class ReduceLROnPlateau(Callback): | class ReduceLROnPlateau(Callback): | class ReduceLROnPlateau(Callback): | class ReduceLROnPlateau(Callback):
+keras-33,keras,33,keras/preprocessing/text.py,True,False,1,13,4,False,False,"def text_to_word_sequence(text,"
+keras-34,keras,34,keras/engine/training.py,True,False,4,16,4,False,False,class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container):
+keras-34,keras,34,keras/utils/data_utils.py,True,False,1,6,0,False,False,class Sequence(object):
+keras-35,keras,35,keras/preprocessing/image.py,True,False,3,16,3,False,False,class ImageDataGenerator(object): | class NumpyArrayIterator(Iterator): | class DirectoryIterator(Iterator):
+keras-36,keras,36,keras/backend/tensorflow_backend.py,True,False,1,2,2,False,False,"def separable_conv1d(x, depthwise_kernel, pointwise_kernel, strides=1,"
+keras-37,keras,37,keras/layers/recurrent.py,True,False,1,5,3,False,False,class RNN(Layer):
+keras-37,keras,37,keras/layers/wrappers.py,True,False,3,55,5,False,False,class Bidirectional(Wrapper): | class Bidirectional(Wrapper): | class Bidirectional(Wrapper):
+keras-38,keras,38,keras/layers/recurrent.py,True,False,1,1,1,False,False,class StackedRNNCells(Layer):
+keras-39,keras,39,keras/utils/generic_utils.py,True,False,1,1,1,False,False,class Progbar(object):
+keras-40,keras,40,keras/layers/recurrent.py,True,False,2,4,3,False,False,class RNN(Layer): | class RNN(Layer):
+keras-41,keras,41,keras/utils/data_utils.py,True,False,6,31,11,False,False,import sys | class OrderedEnqueuer(SequenceEnqueuer): | class GeneratorEnqueuer(SequenceEnqueuer): | class GeneratorEnqueuer(SequenceEnqueuer): | class GeneratorEnqueuer(SequenceEnqueuer): | class GeneratorEnqueuer(SequenceEnqueuer):
+keras-41,keras,41,tests/test_multiprocessing.py,True,True,4,11,10,False,False,def test_multiprocessing_fit_error(): | def test_multiprocessing_fit_error(): | def test_multiprocessing_fit_error(): | def test_multiprocessing_predict_error():
+keras-42,keras,42,keras/engine/training.py,True,False,11,50,23,False,False,class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container): | class Model(Container):
+keras-42,keras,42,keras/models.py,True,False,7,11,3,False,False,class Sequential(Model): | class Sequential(Model): | class Sequential(Model): | class Sequential(Model): | class Sequential(Model): | class Sequential(Model): | class Sequential(Model):
+keras-43,keras,43,keras/utils/np_utils.py,True,False,1,2,0,False,False,"def to_categorical(y, num_classes=None):"
+keras-44,keras,44,keras/layers/recurrent.py,True,False,2,4,0,False,False,class RNN(Layer): | class RNN(Layer):
+keras-45,keras,45,keras/layers/recurrent.py,True,False,1,9,4,False,False,class LSTMCell(Layer):
+luigi-1,luigi,1,luigi/server.py,True,False,1,3,2,False,False,class MetricsHandler(tornado.web.RequestHandler):
+luigi-2,luigi,2,luigi/contrib/beam_dataflow.py,True,False,2,7,2,False,False,"class BeamDataflowJobTask(MixinNaiveBulkComplete, luigi.Task): | class BeamDataflowJobTask(MixinNaiveBulkComplete, luigi.Task):"
+luigi-3,luigi,3,luigi/parameter.py,True,False,1,2,2,False,False,class TupleParameter(ListParameter):
+luigi-4,luigi,4,luigi/contrib/redshift.py,True,False,1,1,1,False,False,"class S3CopyToTable(rdbms.CopyToTable, _CredentialsMixin):"
+luigi-5,luigi,5,luigi/util.py,True,False,2,13,14,False,False,class inherits(object): | class requires(object):
+luigi-6,luigi,6,luigi/parameter.py,True,False,8,18,28,False,False,def _recursively_freeze(value): | class DictParameter(Parameter): | class DictParameter(Parameter): | class ListParameter(Parameter): | class ListParameter(Parameter): | class ListParameter(Parameter): | class TupleParameter(Parameter): | class TupleParameter(Parameter):
+luigi-7,luigi,7,luigi/scheduler.py,True,False,1,2,2,False,False,class Scheduler(object):
+luigi-8,luigi,8,luigi/contrib/redshift.py,True,False,1,2,2,False,False,class S3CopyToTable(rdbms.CopyToTable):
+luigi-9,luigi,9,luigi/execution_summary.py,True,False,4,15,9,False,False,"def _partition_tasks(worker): | def _depth_first_search(set_tasks, current_task, visited): | def _get_comments(group_tasks): | def _summary_format(set_tasks, worker):"
+luigi-9,luigi,9,test/retcodes_test.py,True,True,1,19,0,False,False,class RetcodesTest(LuigiTestCase):
+luigi-10,luigi,10,luigi/scheduler.py,True,False,1,1,1,False,False,class Worker(object):
+luigi-11,luigi,11,luigi/scheduler.py,True,False,1,2,1,False,False,class Scheduler(object):
+luigi-12,luigi,12,luigi/contrib/hdfs/clients.py,True,False,1,23,14,False,False,
+luigi-13,luigi,13,luigi/file.py,True,False,1,1,1,False,False,class LocalFileSystem(FileSystem):
+luigi-14,luigi,14,luigi/scheduler.py,True,False,4,4,9,False,False,class scheduler(Config): | class Task(object): | class Task(object): | class SimpleTaskState(object):
+luigi-15,luigi,15,luigi/scheduler.py,True,False,1,2,2,False,False,class SimpleTaskState(object):
+luigi-16,luigi,16,luigi/scheduler.py,True,False,1,2,1,False,False,class CentralPlannerScheduler(Scheduler):
+luigi-17,luigi,17,luigi/interface.py,True,False,1,1,1,False,False,class core(task.Config):
+luigi-18,luigi,18,luigi/scheduler.py,True,False,1,1,1,False,False,class SimpleTaskState(object):
+luigi-19,luigi,19,luigi/scheduler.py,True,False,1,1,1,False,False,class SimpleTaskState(object):
+luigi-20,luigi,20,luigi/task.py,True,False,1,1,2,False,False,class Task(object):
+luigi-21,luigi,21,luigi/interface.py,True,False,1,3,0,False,False,"def run(cmdline_args=None, main_task_cls=None,"
+luigi-22,luigi,22,luigi/scheduler.py,True,False,1,1,1,False,False,class Worker(object):
+luigi-23,luigi,23,luigi/interface.py,True,False,1,1,1,False,False,class core(task.Config):
+luigi-23,luigi,23,luigi/scheduler.py,True,False,3,6,1,False,False,class scheduler(Config): | class Worker(object): | class CentralPlannerScheduler(Scheduler):
+luigi-24,luigi,24,luigi/contrib/spark.py,True,False,1,1,1,False,False,class SparkSubmitTask(luigi.Task):
+luigi-25,luigi,25,luigi/contrib/redshift.py,True,False,1,1,1,False,False,class S3CopyToTable(rdbms.CopyToTable):
+luigi-26,luigi,26,luigi/contrib/hadoop_jar.py,True,False,1,3,1,False,False,class HadoopJarJobRunner(luigi.contrib.hadoop.JobRunner):
+luigi-27,luigi,27,luigi/parameter.py,True,False,5,8,7,False,False,class Parameter(object): | class Parameter(object): | class Parameter(object): | class Parameter(object): | class Parameter(object):
+luigi-28,luigi,28,luigi/contrib/hive.py,True,False,1,1,1,False,False,class HiveCommandClient(HiveClient):
+luigi-29,luigi,29,luigi/task_register.py,True,False,1,0,2,False,False,class Register(abc.ABCMeta):
+luigi-29,luigi,29,test/cmdline_test.py,True,True,2,0,16,False,False,class AmbiguousClass(luigi.Task): | class CmdlineTest(unittest.TestCase):
+luigi-30,luigi,30,luigi/worker.py,True,False,1,17,19,False,False,class TaskProcess(AbstractTaskProcess):
+luigi-31,luigi,31,luigi/scheduler.py,True,False,1,1,1,False,False,class CentralPlannerScheduler(Scheduler):
+luigi-32,luigi,32,luigi/task_register.py,True,False,1,2,0,False,False,except ImportError:
+luigi-33,luigi,33,luigi/task.py,True,False,1,1,1,False,False,class Task(object):
+matplotlib-1,matplotlib,1,lib/matplotlib/backend_bases.py,True,False,4,17,14,False,False,"from matplotlib._pylab_helpers import Gcf | class KeyEvent(LocationEvent): | def _get_renderer(figure, print_method=None, *, draw_disabled=False): | class FigureCanvasBase:"
+matplotlib-1,matplotlib,1,lib/matplotlib/figure.py,True,False,2,13,3,False,False,default: 'top' | default: 'top'
+matplotlib-1,matplotlib,1,lib/matplotlib/tight_layout.py,True,False,1,1,1,False,False,def get_renderer(fig):
+matplotlib-2,matplotlib,2,lib/matplotlib/axes/_axes.py,True,False,3,5,5,False,False,default: :rc:`scatter.edgecolors` | default: :rc:`scatter.edgecolors` | default: :rc:`scatter.edgecolors`
+matplotlib-3,matplotlib,3,lib/matplotlib/markers.py,True,False,1,4,1,False,False,class MarkerStyle:
+matplotlib-4,matplotlib,4,lib/matplotlib/axes/_axes.py,True,False,4,4,4,False,False,class Axes(_AxesBase): | class Axes(_AxesBase): | class Axes(_AxesBase): | class Axes(_AxesBase):
+matplotlib-4,matplotlib,4,lib/matplotlib/pyplot.py,True,False,2,2,2,False,False,def hist2d( | def violinplot(
+matplotlib-5,matplotlib,5,lib/matplotlib/axes/_axes.py,True,False,1,6,1,False,False,default: :rc:`scatter.edgecolors`
+matplotlib-6,matplotlib,6,lib/matplotlib/axes/_axes.py,True,False,1,7,1,False,False,class Axes(_AxesBase):
+matplotlib-7,matplotlib,7,lib/matplotlib/colors.py,True,False,1,1,1,False,False,class LightSource:
+matplotlib-8,matplotlib,8,lib/matplotlib/axes/_base.py,True,False,2,6,0,False,False,class _AxesBase(martist.Artist): | class _AxesBase(martist.Artist):
+matplotlib-9,matplotlib,9,lib/matplotlib/projections/polar.py,True,False,1,1,0,False,False,class PolarAxes(Axes):
+matplotlib-10,matplotlib,10,lib/matplotlib/axis.py,True,False,1,5,1,False,False,class Axis(martist.Artist):
+matplotlib-11,matplotlib,11,lib/matplotlib/text.py,True,False,2,11,12,False,False,class Text(Artist): | class Text(Artist):
+matplotlib-12,matplotlib,12,lib/matplotlib/axes/_axes.py,True,False,2,22,14,False,False,class Axes(_AxesBase): | class Axes(_AxesBase):
+matplotlib-13,matplotlib,13,lib/matplotlib/path.py,True,False,2,11,0,False,False,class Path: | class Path:
+matplotlib-14,matplotlib,14,lib/matplotlib/text.py,True,False,1,5,1,False,False,class Text(Artist):
+matplotlib-15,matplotlib,15,examples/userdemo/colormap_normalizations.py,True,False,1,1,1,False,False,"fig, ax = plt.subplots(2, 1)"
+matplotlib-15,matplotlib,15,examples/userdemo/colormap_normalizations_symlognorm.py,True,False,1,1,1,False,False,"fig, ax = plt.subplots(2, 1)"
+matplotlib-15,matplotlib,15,lib/matplotlib/colors.py,True,False,4,26,9,False,False,class SymLogNorm(Normalize): | class SymLogNorm(Normalize): | class SymLogNorm(Normalize): | class SymLogNorm(Normalize):
+matplotlib-15,matplotlib,15,tutorials/colors/colormapnorms.py,True,False,1,1,1,False,False,"fig, ax = plt.subplots(2, 1)"
+matplotlib-16,matplotlib,16,lib/matplotlib/transforms.py,True,False,1,4,0,False,False,"def nonsingular(vmin, vmax, expander=0.001, tiny=1e-15, increasing=True):"
+matplotlib-17,matplotlib,17,lib/matplotlib/transforms.py,True,False,1,4,0,False,False,"def nonsingular(vmin, vmax, expander=0.001, tiny=1e-15, increasing=True):"
+matplotlib-18,matplotlib,18,lib/matplotlib/projections/polar.py,True,False,2,6,0,False,False,class RadialLocator(mticker.Locator): | class RadialLocator(mticker.Locator):
+matplotlib-19,matplotlib,19,lib/matplotlib/projections/polar.py,True,False,2,6,0,False,False,class RadialLocator(mticker.Locator): | class RadialLocator(mticker.Locator):
+matplotlib-20,matplotlib,20,lib/matplotlib/_constrained_layout.py,True,False,1,1,4,False,False,"def _make_ghost_gridspec_slots(fig, gs):"
+matplotlib-20,matplotlib,20,lib/matplotlib/backend_bases.py,True,False,2,4,5,False,False,class FigureCanvasBase: | class FigureCanvasBase:
+matplotlib-21,matplotlib,21,lib/matplotlib/axes/_axes.py,True,False,2,9,5,False,False,class Axes(_AxesBase): | class Axes(_AxesBase):
+matplotlib-22,matplotlib,22,lib/matplotlib/axes/_axes.py,True,False,1,3,0,False,False,optional.
+matplotlib-23,matplotlib,23,lib/matplotlib/axes/_base.py,True,False,1,2,2,False,False,class _AxesBase(martist.Artist):
+matplotlib-24,matplotlib,24,lib/matplotlib/axis.py,True,False,1,1,1,False,False,"def _make_getset_interval(method_name, lim_name, attr_name):"
+matplotlib-25,matplotlib,25,lib/matplotlib/collections.py,True,False,1,6,3,False,False,class EventCollection(LineCollection):
+matplotlib-26,matplotlib,26,lib/matplotlib/axis.py,True,False,1,1,1,False,False,"def _make_getset_interval(method_name, lim_name, attr_name):"
+matplotlib-27,matplotlib,27,lib/matplotlib/colorbar.py,True,False,1,1,1,False,False,class ColorbarBase(_ColorbarMappableDummy):
+matplotlib-28,matplotlib,28,lib/matplotlib/axes/_base.py,True,False,1,4,1,False,False,class _AxesBase(martist.Artist):
+matplotlib-29,matplotlib,29,lib/matplotlib/axis.py,True,False,3,14,5,False,False,class Axis(martist.Artist): | class XAxis(Axis): | class YAxis(Axis):
+matplotlib-30,matplotlib,30,lib/matplotlib/colors.py,True,False,1,14,10,False,False,"def makeMappingArray(N, data, gamma=1.0):"
+pandas-1,pandas,1,pandas/core/dtypes/common.py,True,False,1,1,1,False,False,def is_string_dtype(arr_or_dtype) -> bool:
+pandas-2,pandas,2,pandas/core/indexing.py,True,False,2,7,1,False,False,class _ScalarAccessIndexer(_NDFrameIndexerBase): | class _AtIndexer(_ScalarAccessIndexer):
+pandas-3,pandas,3,pandas/core/series.py,True,False,2,4,2,False,False,"Name: Max Speed, dtype: float64 | Name: Max Speed, dtype: float64"
+pandas-4,pandas,4,pandas/core/indexes/base.py,True,False,1,4,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-5,pandas,5,pandas/core/indexes/base.py,True,False,1,4,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-5,pandas,5,pandas/tests/indexes/multi/test_join.py,True,True,1,11,1,False,False,def test_join_multi_wrong_order():
+pandas-6,pandas,6,pandas/core/groupby/grouper.py,True,False,1,3,1,False,False,def get_grouper(
+pandas-7,pandas,7,pandas/core/indexes/base.py,True,False,1,2,3,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-8,pandas,8,pandas/core/internals/blocks.py,True,False,1,0,5,False,False,class Block(PandasObject):
+pandas-9,pandas,9,pandas/core/arrays/categorical.py,True,False,2,2,2,False,False,"from pandas.core.dtypes.common import ( | class Categorical(NDArrayBackedExtensionArray, PandasObject):"
+pandas-9,pandas,9,pandas/core/indexes/category.py,True,False,2,2,3,False,False,"from pandas.core.dtypes.common import ( | class CategoricalIndex(ExtensionIndex, accessor.PandasDelegate):"
+pandas-10,pandas,10,pandas/core/internals/blocks.py,True,False,1,1,1,False,False,class ExtensionBlock(Block):
+pandas-11,pandas,11,pandas/core/reshape/concat.py,True,False,1,4,4,False,False,"def _make_concat_multiindex(indexes, keys, levels=None, names=None) -> MultiInde"
+pandas-12,pandas,12,pandas/core/frame.py,True,False,3,11,12,False,False,from pandas.core.dtypes.cast import ( | Wild         185.0 | Wild         185.0
+pandas-13,pandas,13,pandas/core/dtypes/missing.py,True,False,3,31,31,False,False,def _isna_new(obj): | def _isna_old(obj): | def _use_inf_as_na(key):
+pandas-14,pandas,14,pandas/core/ops/dispatch.py,True,False,1,4,2,False,False,"def should_series_dispatch(left, right, op):"
+pandas-14,pandas,14,pandas/tests/arithmetic/conftest.py,True,True,1,12,0,False,False,def id_func(x):
+pandas-15,pandas,15,pandas/core/arrays/datetimelike.py,True,False,2,754,1535,False,False,class DatetimeLikeArrayMixin(
+pandas-15,pandas,15,pandas/tests/indexes/timedeltas/test_timedelta.py,True,True,1,7,0,False,False,class TestTimedeltaIndex(DatetimeLike):
+pandas-16,pandas,16,pandas/core/indexes/datetimelike.py,True,False,2,6,4,False,False,def _make_wrapped_arith_op_with_freq(opname: str): | class DatetimeIndexOpsMixin(ExtensionIndex):
+pandas-17,pandas,17,pandas/core/arrays/datetimelike.py,True,False,2,760,1574,False,False,class DatetimeLikeArrayMixin(
+pandas-17,pandas,17,pandas/tests/indexing/test_coercion.py,True,True,2,3,3,False,False,class TestInsertIndexCoercion(CoercionBase): | class TestInsertIndexCoercion(CoercionBase):
+pandas-17,pandas,17,pandas/tests/indexing/test_partial.py,True,True,1,1,1,False,False,class TestPartialSetting:
+pandas-18,pandas,18,pandas/core/window/common.py,True,False,1,1,0,False,False,def validate_baseindexer_support(func_name: Optional[str]) -> None:
+pandas-18,pandas,18,pandas/core/window/rolling.py,True,False,1,2,2,False,False,"class _Window(PandasObject, ShallowMixin, SelectionMixin):"
+pandas-19,pandas,19,pandas/core/indexing.py,True,False,1,0,31,False,False,class _LocIndexer(_LocationIndexer):
+pandas-20,pandas,20,pandas/tseries/offsets.py,True,False,3,3,13,False,False,class MonthOffset(SingleConstructorOffset): | class QuarterOffset(DateOffset): | class YearOffset(DateOffset):
+pandas-21,pandas,21,pandas/core/series.py,True,False,1,2,5,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-22,pandas,22,pandas/core/window/common.py,True,False,1,1,0,False,False,def get_weighted_roll_func(cfunc: Callable) -> Callable:
+pandas-22,pandas,22,pandas/core/window/rolling.py,True,False,2,6,3,False,False,class _Rolling_and_Expanding(_Rolling): | class Rolling(_Rolling_and_Expanding):
+pandas-23,pandas,23,pandas/core/indexes/datetimelike.py,True,False,1,2,2,False,False,"class DatetimeTimedeltaMixin(DatetimeIndexOpsMixin, Int64Index):"
+pandas-23,pandas,23,pandas/tests/indexes/datetimes/test_indexing.py,True,True,2,4,2,False,False,class TestGetItem: | class TestGetItem:
+pandas-24,pandas,24,pandas/core/arrays/datetimes.py,True,False,3,12,3,False,False,default 'raise' | default 'raise' | default 'raise'
+pandas-24,pandas,24,pandas/tests/series/test_arithmetic.py,True,True,1,1,0,False,False,class TestSeriesComparison:
+pandas-25,pandas,25,pandas/core/arrays/datetimes.py,True,False,1,5,1,False,False,default 'raise'
+pandas-26,pandas,26,pandas/core/arrays/categorical.py,True,False,2,2,2,False,False,"class Categorical(ExtensionArray, PandasObject): | class Categorical(ExtensionArray, PandasObject):"
+pandas-27,pandas,27,pandas/core/arrays/datetimes.py,True,False,2,9,1,False,False,from pandas._libs.tslibs import ( | default 'raise'
+pandas-28,pandas,28,pandas/core/strings.py,True,False,1,1,1,False,False,class StringMethods(NoNewAttributesMixin):
+pandas-29,pandas,29,pandas/core/arrays/interval.py,True,False,1,6,6,False,False,"class IntervalArray(IntervalMixin, ExtensionArray):"
+pandas-30,pandas,30,pandas/io/json/_json.py,True,False,1,1,1,False,False,class Parser:
+pandas-31,pandas,31,pandas/core/groupby/groupby.py,True,False,2,8,2,False,False,"from pandas.util._decorators import Appender, Substitution, cache_readonly, doc | class GroupBy(_GroupBy[FrameOrSeries]):"
+pandas-32,pandas,32,pandas/io/sas/sas_xport.py,True,False,2,3,8,False,False,https://support.sas.com/techsup/technote/ts140.pdf | class XportReader(abc.Iterator):
+pandas-33,pandas,33,pandas/core/arrays/integer.py,True,False,1,2,1,False,False,class IntegerArray(BaseMaskedArray):
+pandas-34,pandas,34,pandas/core/resample.py,True,False,1,3,1,False,False,class TimeGrouper(Grouper):
+pandas-35,pandas,35,pandas/core/indexes/period.py,True,False,1,2,2,False,False,"class PeriodIndex(DatetimeIndexOpsMixin, Int64Index):"
+pandas-36,pandas,36,pandas/core/dtypes/missing.py,True,False,8,27,61,False,False,"from pandas.core.dtypes.common import ( | def _isna_new(obj): | def _isna_new(obj): | def _isna_old(obj): | def _use_inf_as_na(key): | def _isna_ndarraylike_old(obj): | def _isna_ndarraylike_old(obj): | def na_value_for_dtype(dtype, compat: bool = True):"
+pandas-37,pandas,37,pandas/core/arrays/string_.py,True,False,2,9,1,False,False,from pandas.core.dtypes.inference import is_array_like | class StringArray(PandasArray):
+pandas-38,pandas,38,pandas/core/reshape/reshape.py,True,False,2,2,2,False,False,"def _unstack_multiple(data, clocs, fill_value=None): | def _unstack_multiple(data, clocs, fill_value=None):"
+pandas-39,pandas,39,pandas/core/ops/methods.py,True,False,1,2,1,False,False,def add_special_arithmetic_methods(cls):
+pandas-40,pandas,40,pandas/core/reshape/merge.py,True,False,7,64,6,False,False,"import copy | from pandas.core.dtypes.common import ( | def _get_join_indexers( | def _get_join_indexers( | def _right_outer_join(x, y, max_groups): | def _factorize_keys(lk, rk, sort=True): | def _factorize_keys(lk, rk, sort=True):"
+pandas-41,pandas,41,pandas/core/internals/blocks.py,True,False,15,27,25,False,False,"from pandas._libs import NaT, Timestamp, algos as libalgos, lib, tslib, writers | class Block(PandasObject): | class Block(PandasObject): | class ExtensionBlock(Block): | class ExtensionBlock(Block): | class FloatBlock(FloatOrComplexBlock): | class ComplexBlock(FloatOrComplexBlock): | class IntBlock(NumericBlock): | class DatetimeLikeBlockMixin: | class DatetimeBlock(DatetimeLikeBlockMixin, Block): | class DatetimeTZBlock(ExtensionBlock, DatetimeBlock): | class TimeDeltaBlock(DatetimeLikeBlockMixin, IntBlock): | class BoolBlock(NumericBlock): | class ObjectBlock(Block): | class CategoricalBlock(ExtensionBlock):"
+pandas-42,pandas,42,pandas/_testing.py,True,False,2,2,2,False,False,def assert_series_equal( | def assert_series_equal(
+pandas-43,pandas,43,pandas/core/ops/__init__.py,True,False,2,8,2,False,False,"def _align_method_FRAME( | def _arith_method_FRAME(cls, op, special):"
+pandas-44,pandas,44,pandas/core/indexes/base.py,True,False,3,4,4,False,False,"from pandas.core.dtypes.common import ( | class Index(IndexOpsMixin, PandasObject): | class Index(IndexOpsMixin, PandasObject):"
+pandas-44,pandas,44,pandas/core/indexes/datetimelike.py,True,False,4,24,2,False,False,"import numpy as np | from pandas.core.arrays import DatetimeArray, PeriodArray, TimedeltaArray | class DatetimeIndexOpsMixin(ExtensionIndex): | class DatetimeIndexOpsMixin(ExtensionIndex):"
+pandas-44,pandas,44,pandas/core/indexes/datetimes.py,True,False,2,22,2,False,False,import numpy as np | class DatetimeIndex(DatetimeTimedeltaMixin):
+pandas-44,pandas,44,pandas/core/indexes/period.py,True,False,4,14,6,False,False,"from pandas._libs.lib import no_default | from pandas.core.dtypes.common import ( | class PeriodIndex(DatetimeIndexOpsMixin, Int64Index): | class PeriodIndex(DatetimeIndexOpsMixin, Int64Index):"
+pandas-44,pandas,44,pandas/core/indexes/timedeltas.py,True,False,2,7,1,False,False,"class TimedeltaIndex(DatetimeTimedeltaMixin, dtl.TimelikeOps):"
+pandas-45,pandas,45,pandas/core/construction.py,True,False,2,3,0,False,False,and Index.__new__. | def sanitize_array(
+pandas-46,pandas,46,pandas/core/indexes/multi.py,True,False,1,1,0,False,False,class MultiIndex(Index):
+pandas-46,pandas,46,pandas/core/reshape/util.py,True,False,2,17,8,False,False,import numpy as np | def cartesian_product(X):
+pandas-46,pandas,46,pandas/tests/reshape/test_util.py,True,True,1,16,0,False,False,class TestCartesianProduct:
+pandas-47,pandas,47,pandas/core/frame.py,True,False,1,1,0,False,False,class DataFrame(NDFrame):
+pandas-47,pandas,47,pandas/core/indexing.py,True,False,3,40,0,False,False,from pandas.errors import AbstractMethodError | class _LocationIndexer(_NDFrameIndexerBase): | class _LocationIndexer(_NDFrameIndexerBase):
+pandas-48,pandas,48,pandas/core/groupby/generic.py,True,False,1,1,1,False,False,class DataFrameGroupBy(GroupBy):
+pandas-49,pandas,49,pandas/core/strings.py,True,False,1,2,0,False,False,"def str_repeat(arr, repeats):"
+pandas-50,pandas,50,pandas/core/arrays/categorical.py,True,False,1,4,1,False,False,def _cat_compare_op(op):
+pandas-51,pandas,51,pandas/core/indexes/category.py,True,False,2,7,0,False,False,"import pandas.core.indexes.base as ibase | class CategoricalIndex(ExtensionIndex, accessor.PandasDelegate):"
+pandas-52,pandas,52,pandas/core/groupby/generic.py,True,False,1,6,18,False,False,class SeriesGroupBy(GroupBy):
+pandas-53,pandas,53,pandas/core/indexes/base.py,True,False,1,1,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-53,pandas,53,pandas/core/series.py,True,False,1,3,1,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-53,pandas,53,pandas/tests/indexing/test_scalar.py,True,True,2,5,13,False,False,class TestScalar2: | class TestScalar2:
+pandas-54,pandas,54,pandas/core/dtypes/dtypes.py,True,False,1,2,0,False,False,"class CategoricalDtype(PandasExtensionDtype, ExtensionDtype):"
+pandas-54,pandas,54,pandas/tests/indexes/common.py,True,True,1,2,1,False,False,class Base:
+pandas-55,pandas,55,pandas/core/generic.py,True,False,1,2,2,False,False,"class NDFrame(PandasObject, SelectionMixin, indexing.IndexingMixin):"
+pandas-55,pandas,55,pandas/core/indexing.py,True,False,1,0,4,False,False,class _iLocIndexer(_LocationIndexer):
+pandas-56,pandas,56,pandas/core/frame.py,True,False,1,2,2,False,False,class DataFrame(NDFrame):
+pandas-57,pandas,57,pandas/_testing.py,True,False,3,11,1,False,False,def assert_series_equal( | def assert_series_equal( | def assert_series_equal(
+pandas-57,pandas,57,pandas/core/arrays/categorical.py,True,False,1,21,9,False,False,"class Categorical(ExtensionArray, PandasObject):"
+pandas-58,pandas,58,pandas/core/arrays/categorical.py,True,False,1,7,1,False,False,"class Categorical(ExtensionArray, PandasObject):"
+pandas-59,pandas,59,pandas/core/window/rolling.py,True,False,1,1,1,False,False,class _Rolling_and_Expanding(_Rolling):
+pandas-60,pandas,60,pandas/core/window/rolling.py,True,False,1,2,1,False,False,class _Rolling_and_Expanding(_Rolling):
+pandas-61,pandas,61,pandas/core/series.py,True,False,1,1,1,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-62,pandas,62,pandas/core/internals/blocks.py,True,False,1,3,0,False,False,class Block(PandasObject):
+pandas-62,pandas,62,pandas/io/stata.py,True,False,1,4,0,False,False,"the string values returned are correct."""""""
+pandas-63,pandas,63,pandas/core/indexing.py,True,False,1,5,15,False,False,class _AtIndexer(_ScalarAccessIndexer):
+pandas-64,pandas,64,pandas/io/formats/excel.py,True,False,1,1,1,False,False,class ExcelFormatter:
+pandas-65,pandas,65,pandas/io/common.py,True,False,3,4,4,False,False,def get_handle( | def get_handle(
+pandas-65,pandas,65,pandas/io/parsers.py,True,False,2,2,2,False,False,Module contains tools for processing files into DataFrames or other objects | class CParserWrapper(ParserBase):
+pandas-66,pandas,66,pandas/core/generic.py,True,False,1,7,8,False,False,"class NDFrame(PandasObject, SelectionMixin, indexing.IndexingMixin):"
+pandas-66,pandas,66,pandas/core/internals/managers.py,True,False,1,1,1,False,False,class SingleBlockManager(BlockManager):
+pandas-67,pandas,67,pandas/core/internals/blocks.py,True,False,2,11,1,False,False,import warnings | class DatetimeLikeBlockMixin:
+pandas-68,pandas,68,pandas/core/arrays/interval.py,True,False,2,28,0,False,False,"from pandas.core.dtypes.common import ( | class IntervalArray(IntervalMixin, ExtensionArray):"
+pandas-68,pandas,68,pandas/tests/extension/base/methods.py,True,True,1,7,0,False,False,class BaseMethodsTests(BaseExtensionTests):
+pandas-69,pandas,69,pandas/core/indexing.py,True,False,1,1,1,False,False,class _AtIndexer(_ScalarAccessIndexer):
+pandas-70,pandas,70,pandas/core/groupby/groupby.py,True,False,1,4,3,False,False,"b  2"""""","
+pandas-70,pandas,70,pandas/core/groupby/ops.py,True,False,1,11,0,False,False,class BaseGrouper:
+pandas-70,pandas,70,pandas/tests/groupby/aggregate/test_aggregate.py,True,True,1,21,0,False,False,def test_aggregate_mixed_types():
+pandas-70,pandas,70,pandas/tests/resample/test_datetime_index.py,True,True,1,3,1,False,False,def test_resample_integerarray():
+pandas-70,pandas,70,pandas/tests/resample/test_timedelta.py,True,True,1,1,1,False,False,def test_resample_categorical_data_with_timedeltaindex():
+pandas-71,pandas,71,pandas/core/reshape/tile.py,True,False,2,8,0,False,False,from pandas.core.dtypes.common import ( | def cut(
+pandas-72,pandas,72,pandas/core/internals/blocks.py,True,False,2,17,6,False,False,class Block(PandasObject): | class Block(PandasObject):
+pandas-73,pandas,73,pandas/core/frame.py,True,False,3,5,3,False,False,class DataFrame(NDFrame): | class DataFrame(NDFrame): | class DataFrame(NDFrame):
+pandas-73,pandas,73,pandas/core/ops/missing.py,True,False,1,7,10,False,False,"def mask_zero_div_zero(x, y, result):"
+pandas-74,pandas,74,pandas/core/indexes/timedeltas.py,True,False,1,1,1,False,False,class TimedeltaIndex(
+pandas-75,pandas,75,pandas/core/indexes/period.py,True,False,2,20,4,False,False,"class PeriodIndex(DatetimeIndexOpsMixin, Int64Index, PeriodDelegateMixin): | class PeriodIndex(DatetimeIndexOpsMixin, Int64Index, PeriodDelegateMixin):"
+pandas-76,pandas,76,pandas/io/json/_json.py,True,False,1,1,1,False,False,class Parser:
+pandas-77,pandas,77,pandas/core/ops/array_ops.py,True,False,2,2,2,False,False,"def na_logical_op(x: np.ndarray, y, op): | def na_logical_op(x: np.ndarray, y, op):"
+pandas-78,pandas,78,pandas/core/frame.py,True,False,1,1,1,False,False,Wild         185.0
+pandas-79,pandas,79,pandas/core/groupby/grouper.py,True,False,2,2,1,False,False,from pandas.core.frame import DataFrame | def get_grouper(
+pandas-79,pandas,79,pandas/core/indexes/datetimes.py,True,False,3,6,1,False,False,"from pandas.core.arrays.datetimes import ( | class DatetimeIndex(DatetimeTimedeltaMixin, DatetimeDelegateMixin): | class DatetimeIndex(DatetimeTimedeltaMixin, DatetimeDelegateMixin):"
+pandas-79,pandas,79,pandas/core/indexes/multi.py,True,False,1,1,1,False,False,class MultiIndex(Index):
+pandas-79,pandas,79,pandas/core/series.py,True,False,1,3,0,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-80,pandas,80,pandas/core/arrays/masked.py,True,False,1,3,0,False,False,"class BaseMaskedArray(ExtensionArray, ExtensionOpsMixin):"
+pandas-80,pandas,80,pandas/core/generic.py,True,False,1,3,2,False,False,"class NDFrame(PandasObject, SelectionMixin, indexing.IndexingMixin):"
+pandas-80,pandas,80,pandas/core/indexing.py,True,False,1,1,1,False,False,"def check_bool_indexer(index: Index, key) -> np.ndarray:"
+pandas-80,pandas,80,pandas/tests/arrays/test_boolean.py,True,True,3,290,852,False,False,def make_data(): | def data(dtype):
+pandas-80,pandas,80,pandas/tests/extension/base/__init__.py,True,True,1,6,1,False,False,from .interface import BaseInterfaceTests  # noqa
+pandas-80,pandas,80,pandas/tests/extension/base/ops.py,True,True,1,8,0,False,False,class BaseComparisonOpsTests(BaseOpsUtil):
+pandas-80,pandas,80,pandas/tests/frame/test_operators.py,True,True,1,21,0,False,False,class TestDataFrameUnaryOperators:
+pandas-81,pandas,81,pandas/core/arrays/integer.py,True,False,2,7,0,False,False,from pandas.core.dtypes.common import ( | class IntegerArray(BaseMaskedArray):
+pandas-82,pandas,82,pandas/core/internals/concat.py,True,False,1,1,1,False,False,def _get_empty_dtype_and_na(join_units):
+pandas-83,pandas,83,pandas/core/indexes/api.py,True,False,5,15,3,False,False,__all__ = [ | def get_objs_combined_axis( | def _get_distinct_objs(objs: List[Index]) -> List[Index]: | def _get_combined_index( | def _get_combined_index(
+pandas-83,pandas,83,pandas/core/reshape/concat.py,True,False,1,5,1,False,False,class _Concatenator:
+pandas-84,pandas,84,pandas/core/reshape/reshape.py,True,False,1,4,0,False,False,"def _unstack_multiple(data, clocs, fill_value=None):"
+pandas-84,pandas,84,pandas/tests/series/test_analytics.py,True,True,2,1,60,False,False,import pytest | class TestSeriesAnalytics:
+pandas-85,pandas,85,pandas/core/indexes/multi.py,True,False,1,4,0,False,False,class MultiIndex(Index):
+pandas-86,pandas,86,pandas/core/reshape/pivot.py,True,False,1,3,0,False,False,def _convert_by(by):
+pandas-87,pandas,87,pandas/core/reshape/pivot.py,True,False,3,9,1,False,False,def crosstab( | def crosstab( | def crosstab(
+pandas-88,pandas,88,pandas/core/reshape/pivot.py,True,False,1,3,1,False,False,def pivot_table(
+pandas-89,pandas,89,pandas/core/reshape/reshape.py,True,False,1,1,1,False,False,"def _unstack_multiple(data, clocs, fill_value=None):"
+pandas-90,pandas,90,pandas/_testing.py,True,False,4,13,10,False,False,"import os | from pandas._config.localization import (  # noqa:F401 | def reset_display_options(): | def round_trip_pickle(obj: FrameOrSeries, path: Optional[str] = None) -> FrameOr"
+pandas-90,pandas,90,pandas/io/pickle.py,True,False,7,54,17,False,False,"def to_pickle(obj, path, compression=""infer"", protocol=pickle.HIGHEST_PROTOCOL): | def to_pickle(obj, path, compression=""infer"", protocol=pickle.HIGHEST_PROTOCOL): | def to_pickle(obj, path, compression=""infer"", protocol=pickle.HIGHEST_PROTOCOL): | def read_pickle(path, compression=""infer""): | def read_pickle(path, compression=""infer""): | def read_pickle(path, compression=""infer""):"
+pandas-91,pandas,91,pandas/core/indexes/timedeltas.py,True,False,1,18,4,False,False,class TimedeltaIndex(
+pandas-92,pandas,92,pandas/core/generic.py,True,False,1,1,2,False,False,"class NDFrame(PandasObject, SelectionMixin, indexing.IndexingMixin):"
+pandas-92,pandas,92,pandas/core/indexes/period.py,True,False,2,9,8,False,False,"class PeriodIndex(DatetimeIndexOpsMixin, Int64Index, PeriodDelegateMixin): | class PeriodIndex(DatetimeIndexOpsMixin, Int64Index, PeriodDelegateMixin):"
+pandas-92,pandas,92,pandas/core/resample.py,True,False,1,4,1,False,False,class TimeGrouper(Grouper):
+pandas-92,pandas,92,pandas/tests/indexes/period/test_period.py,True,True,2,2,2,False,False,class TestPeriodIndex(DatetimeLike): | class TestPeriodIndex(DatetimeLike):
+pandas-92,pandas,92,pandas/tests/indexes/period/test_tools.py,True,True,1,31,2,False,False,class TestPeriodIndex:
+pandas-93,pandas,93,pandas/core/arrays/datetimelike.py,True,False,1,746,1509,False,False,
+pandas-94,pandas,94,pandas/core/indexes/datetimelike.py,True,False,4,25,9,False,False,"from pandas.core.dtypes.generic import ABCIndex, ABCIndexClass, ABCSeries | class DatetimeIndexOpsMixin(ExtensionIndex, ExtensionOpsMixin): | class DatetimeIndexOpsMixin(ExtensionIndex, ExtensionOpsMixin): | class DatetimeTimedeltaMixin(DatetimeIndexOpsMixin, Int64Index):"
+pandas-95,pandas,95,pandas/core/arrays/period.py,True,False,2,0,6,False,False,"def _period_array_cmp(cls, op): | def _period_array_cmp(cls, op):"
+pandas-96,pandas,96,pandas/tseries/offsets.py,True,False,1,9,1,False,False,class BusinessHourMixin(BusinessMixin):
+pandas-97,pandas,97,pandas/core/indexes/timedeltas.py,True,False,3,11,2,False,False,class TimedeltaIndex( | class TimedeltaIndex( | class TimedeltaIndex(
+pandas-98,pandas,98,pandas/core/indexes/base.py,True,False,2,13,7,False,False,"class Index(IndexOpsMixin, PandasObject): | class Index(IndexOpsMixin, PandasObject):"
+pandas-99,pandas,99,pandas/core/tools/datetimes.py,True,False,2,16,2,False,False,from pandas.core.dtypes.generic import ( | def _convert_listlike_datetimes(
+pandas-100,pandas,100,pandas/core/generic.py,True,False,1,5,5,False,False,"class NDFrame(PandasObject, SelectionMixin):"
+pandas-101,pandas,101,pandas/core/dtypes/cast.py,True,False,2,4,0,False,False,"def astype_nansafe(arr, dtype, copy: bool = True, skipna: bool = False): | def astype_nansafe(arr, dtype, copy: bool = True, skipna: bool = False):"
+pandas-102,pandas,102,pandas/core/internals/construction.py,True,False,1,10,2,False,False,"def init_ndarray(values, index, columns, dtype=None, copy=False):"
+pandas-103,pandas,103,pandas/core/groupby/generic.py,True,False,1,3,0,False,False,class SeriesGroupBy(GroupBy):
+pandas-103,pandas,103,pandas/core/groupby/groupby.py,True,False,1,3,0,False,False,class GroupBy(_GroupBy):
+pandas-104,pandas,104,pandas/core/groupby/groupby.py,True,False,1,13,12,False,False,class GroupBy(_GroupBy):
+pandas-105,pandas,105,pandas/core/frame.py,True,False,3,32,5,False,False,class DataFrame(NDFrame): | class DataFrame(NDFrame): | class DataFrame(NDFrame):
+pandas-105,pandas,105,pandas/core/generic.py,True,False,1,0,44,False,False,"class NDFrame(PandasObject, SelectionMixin):"
+pandas-105,pandas,105,pandas/tests/arithmetic/conftest.py,True,True,1,0,19,False,False,def box_df_fail(request):
+pandas-105,pandas,105,pandas/tests/extension/base/reshaping.py,True,True,1,16,0,False,False,class BaseReshapingTests(BaseExtensionTests):
+pandas-105,pandas,105,pandas/tests/extension/json/test_json.py,True,True,1,4,0,False,False,"class TestReshaping(BaseJSON, base.BaseReshapingTests):"
+pandas-105,pandas,105,pandas/tests/extension/test_numpy.py,True,True,1,4,0,False,False,"class TestReshaping(BaseNumPyTests, base.BaseReshapingTests):"
+pandas-106,pandas,106,pandas/core/indexes/base.py,True,False,1,1,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-107,pandas,107,pandas/core/frame.py,True,False,1,6,13,False,False,class DataFrame(NDFrame):
+pandas-108,pandas,108,pandas/core/dtypes/cast.py,True,False,2,4,1,False,False,"from .common import ( | def infer_dtype_from_scalar(val, pandas_dtype: bool = False):"
+pandas-109,pandas,109,pandas/core/arrays/categorical.py,True,False,4,16,0,False,False,"class Categorical(ExtensionArray, PandasObject): | class Categorical(ExtensionArray, PandasObject): | class Categorical(ExtensionArray, PandasObject): | class Categorical(ExtensionArray, PandasObject):"
+pandas-110,pandas,110,pandas/core/indexes/base.py,True,False,1,3,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-110,pandas,110,pandas/core/indexes/category.py,True,False,1,7,0,False,False,"class CategoricalIndex(Index, accessor.PandasDelegate):"
+pandas-111,pandas,111,pandas/core/indexes/base.py,True,False,1,2,2,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-111,pandas,111,pandas/core/indexes/category.py,True,False,1,5,3,False,False,"class CategoricalIndex(Index, accessor.PandasDelegate):"
+pandas-112,pandas,112,pandas/core/indexes/interval.py,True,False,3,6,0,False,False,"from pandas.core.dtypes.cast import ( | from pandas.core.dtypes.generic import ABCSeries | class IntervalIndex(IntervalMixin, Index):"
+pandas-112,pandas,112,pandas/tests/indexes/interval/test_indexing.py,True,True,2,27,1,False,False,import re | class TestGetIndexer:
+pandas-113,pandas,113,pandas/conftest.py,True,True,1,18,0,False,False,def any_int_dtype(request):
+pandas-113,pandas,113,pandas/core/arrays/integer.py,True,False,2,6,1,False,False,"from pandas.core.dtypes.missing import isna, notna | class IntegerArray(ExtensionArray, ExtensionOpsMixin):"
+pandas-114,pandas,114,pandas/core/indexes/base.py,True,False,2,21,16,False,False,"import pandas.core.algorithms as algos | class Index(IndexOpsMixin, PandasObject):"
+pandas-115,pandas,115,pandas/core/missing.py,True,False,1,5,1,False,False,def interpolate_1d(
+pandas-116,pandas,116,pandas/core/reshape/merge.py,True,False,1,1,1,False,False,class _MergeOperation:
+pandas-117,pandas,117,pandas/core/dtypes/missing.py,True,False,1,1,1,False,False,def _isna_old(obj):
+pandas-118,pandas,118,pandas/core/reshape/melt.py,True,False,3,3,2,False,False,from pandas.core.dtypes.generic import ABCMultiIndex | def melt( | def melt(
+pandas-119,pandas,119,pandas/core/reshape/pivot.py,True,False,1,4,1,False,False,def _add_margins(
+pandas-120,pandas,120,pandas/core/groupby/generic.py,True,False,2,4,2,False,False,class SeriesGroupBy(GroupBy): | class SeriesGroupBy(GroupBy):
+pandas-120,pandas,120,pandas/core/groupby/groupby.py,True,False,7,17,5,False,False,from pandas.core.dtypes.common import ( | class GroupBy(_GroupBy): | class GroupBy(_GroupBy): | class GroupBy(_GroupBy): | class GroupBy(_GroupBy): | class GroupBy(_GroupBy): | class GroupBy(_GroupBy):
+pandas-121,pandas,121,pandas/core/internals/blocks.py,True,False,1,2,0,False,False,class ObjectBlock(Block):
+pandas-121,pandas,121,pandas/core/internals/managers.py,True,False,1,1,1,False,False,class BlockManager(PandasObject):
+pandas-122,pandas,122,pandas/core/internals/managers.py,True,False,1,3,3,False,False,class BlockManager(PandasObject):
+pandas-123,pandas,123,pandas/core/indexes/base.py,True,False,1,1,1,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-123,pandas,123,pandas/core/indexes/numeric.py,True,False,4,20,1,False,False,from pandas.core.dtypes.common import ( | from pandas.core.dtypes.generic import ( | class NumericIndex(Index): | class NumericIndex(Index):
+pandas-123,pandas,123,pandas/core/indexes/range.py,True,False,2,0,7,False,False,"from pandas.util._decorators import Appender, cache_readonly | class RangeIndex(Int64Index):"
+pandas-124,pandas,124,pandas/core/strings.py,True,False,1,10,0,False,False,class StringMethods(NoNewAttributesMixin):
+pandas-125,pandas,125,pandas/core/arrays/categorical.py,True,False,1,45,0,False,False,"class Categorical(ExtensionArray, PandasObject):"
+pandas-125,pandas,125,pandas/core/internals/blocks.py,True,False,1,24,0,False,False,class CategoricalBlock(ExtensionBlock):
+pandas-126,pandas,126,pandas/core/frame.py,True,False,1,7,4,False,False,class DataFrame(NDFrame):
+pandas-127,pandas,127,pandas/core/generic.py,True,False,1,1,0,False,False,"class NDFrame(PandasObject, SelectionMixin):"
+pandas-128,pandas,128,pandas/io/json/_json.py,True,False,1,2,0,False,False,def read_json(
+pandas-129,pandas,129,pandas/core/arrays/datetimelike.py,True,False,1,3,0,False,False,"class DatetimeLikeArrayMixin(ExtensionOpsMixin, AttributesMixin, ExtensionArray)"
+pandas-130,pandas,130,pandas/core/groupby/ops.py,True,False,1,5,0,False,False,class BinGrouper(BaseGrouper):
+pandas-131,pandas,131,pandas/core/indexes/accessors.py,True,False,3,6,4,False,False,"from pandas.core.dtypes.common import ( | class Properties(PandasDelegate, PandasObject, NoNewAttributesMixin): | class CombinedDatetimelikeProperties("
+pandas-132,pandas,132,pandas/core/nanops.py,True,False,1,5,2,False,False,"def nanstd(values, axis=None, skipna=True, ddof=1, mask=None):"
+pandas-132,pandas,132,pandas/core/series.py,True,False,1,1,0,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-133,pandas,133,pandas/core/generic.py,True,False,1,3,2,False,False,"class NDFrame(PandasObject, SelectionMixin):"
+pandas-134,pandas,134,pandas/tests/groupby/test_categorical.py,True,True,1,2,1,False,False,def test_categorical_no_compress():
+pandas-134,pandas,134,pandas/tseries/holiday.py,True,False,1,1,1,False,False,class AbstractHolidayCalendar(metaclass=HolidayCalendarMetaClass):
+pandas-135,pandas,135,pandas/core/groupby/ops.py,True,False,1,7,1,False,False,class BaseGrouper:
+pandas-136,pandas,136,pandas/core/reshape/merge.py,True,False,2,1,2,False,False,from pandas.core.dtypes.common import ( | class _AsOfMerge(_OrderedMerge):
+pandas-137,pandas,137,pandas/core/arrays/categorical.py,True,False,2,3,1,False,False,"from pandas.core.algorithms import ( | class Categorical(ExtensionArray, PandasObject):"
+pandas-138,pandas,138,pandas/core/reshape/tile.py,True,False,3,6,2,False,False,from pandas._libs.lib import infer_dtype | def _bins_to_cuts( | def _coerce_to_type(x):
+pandas-138,pandas,138,pandas/tests/reshape/test_cut.py,True,True,1,18,0,False,False,def test_timedelta_cut_roundtrip():
+pandas-139,pandas,139,pandas/core/groupby/grouper.py,True,False,1,2,1,False,False,class Grouping:
+pandas-140,pandas,140,pandas/core/groupby/generic.py,True,False,1,3,1,False,False,def _recast_datetimelike_result(result: DataFrame) -> DataFrame:
+pandas-141,pandas,141,pandas/core/indexes/range.py,True,False,1,3,2,False,False,class RangeIndex(Int64Index):
+pandas-142,pandas,142,pandas/core/algorithms.py,True,False,3,4,0,False,False,"def diff(arr, n: int, axis: int = 0): | def diff(arr, n: int, axis: int = 0): | def diff(arr, n: int, axis: int = 0):"
+pandas-142,pandas,142,pandas/tests/series/test_timeseries.py,True,True,1,0,42,False,False,class TestTimeSeries(TestData):
+pandas-143,pandas,143,pandas/core/indexes/range.py,True,False,1,4,2,False,False,class RangeIndex(Int64Index):
+pandas-144,pandas,144,pandas/plotting/_matplotlib/core.py,True,False,1,7,2,False,False,class BarPlot(MPLPlot):
+pandas-145,pandas,145,pandas/core/ops/__init__.py,True,False,1,13,2,False,False,"def dispatch_to_series(left, right, func, str_rep=None, axis=None):"
+pandas-146,pandas,146,pandas/core/dtypes/missing.py,True,False,1,8,2,False,False,"def array_equivalent(left, right, strict_nan=False):"
+pandas-146,pandas,146,pandas/core/indexes/base.py,True,False,1,3,6,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-147,pandas,147,pandas/core/dtypes/dtypes.py,True,False,2,11,8,False,False,class DatetimeTZDtype(PandasExtensionDtype): | class DatetimeTZDtype(PandasExtensionDtype):
+pandas-148,pandas,148,pandas/core/apply.py,True,False,1,7,4,False,False,class FrameApply:
+pandas-149,pandas,149,pandas/io/parquet.py,True,False,2,4,4,False,False,from pandas.errors import AbstractMethodError | class FastParquetImpl(BaseImpl):
+pandas-150,pandas,150,pandas/core/dtypes/missing.py,True,False,1,1,1,False,False,"def array_equivalent(left, right, strict_nan=False):"
+pandas-151,pandas,151,pandas/core/arrays/numpy_.py,True,False,1,2,9,False,False,"class PandasArray(ExtensionArray, ExtensionOpsMixin, NDArrayOperatorsMixin):"
+pandas-152,pandas,152,pandas/core/series.py,True,False,1,2,1,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-153,pandas,153,pandas/core/internals/blocks.py,True,False,2,3,2,False,False,import warnings | class Block(PandasObject):
+pandas-154,pandas,154,pandas/core/groupby/groupby.py,True,False,2,7,5,False,False,class GroupBy(_GroupBy): | class GroupBy(_GroupBy):
+pandas-155,pandas,155,pandas/core/window/rolling.py,True,False,1,4,1,False,False,class Rolling(_Rolling_and_Expanding):
+pandas-156,pandas,156,pandas/core/sparse/frame.py,True,False,2,3,3,False,False,class SparseDataFrame(DataFrame): | class SparseDataFrame(DataFrame):
+pandas-157,pandas,157,pandas/core/reshape/merge.py,True,False,2,1,2,False,False,from pandas.core.dtypes.common import ( | class _AsOfMerge(_OrderedMerge):
+pandas-158,pandas,158,pandas/core/series.py,True,False,1,3,5,False,False,"class Series(base.IndexOpsMixin, generic.NDFrame):"
+pandas-159,pandas,159,pandas/core/frame.py,True,False,2,4,1,False,False,from pandas.core.internals.construction import ( | class DataFrame(NDFrame):
+pandas-160,pandas,160,pandas/core/computation/expressions.py,True,False,1,4,3,False,False,"def _can_use_numexpr(op, op_str, a, b, dtype_check):"
+pandas-161,pandas,161,pandas/core/arrays/categorical.py,True,False,1,2,2,False,False,"class Categorical(ExtensionArray, PandasObject):"
+pandas-162,pandas,162,pandas/core/reshape/pivot.py,True,False,3,19,10,False,False,"def _normalize(table, normalize, margins, margins_name=""All""): | def _normalize(table, normalize, margins, margins_name=""All""): | def _normalize(table, normalize, margins, margins_name=""All""):"
+pandas-163,pandas,163,pandas/core/window.py,True,False,1,4,2,False,False,"class _Window(PandasObject, SelectionMixin):"
+pandas-164,pandas,164,pandas/core/tools/datetimes.py,True,False,1,3,0,False,False,def _convert_listlike_datetimes(
+pandas-165,pandas,165,pandas/core/arrays/datetimelike.py,True,False,3,3,3,False,False,"class DatetimeLikeArrayMixin(ExtensionOpsMixin, AttributesMixin, ExtensionArray) | class DatetimeLikeArrayMixin(ExtensionOpsMixin, AttributesMixin, ExtensionArray) | class DatetimeLikeArrayMixin(ExtensionOpsMixin, AttributesMixin, ExtensionArray)"
+pandas-165,pandas,165,pandas/tests/arithmetic/test_period.py,True,True,1,12,0,False,False,class TestPeriodIndexArithmetic:
+pandas-165,pandas,165,pandas/tests/arithmetic/test_timedelta64.py,True,True,1,19,0,False,False,class TestTimedelta64ArithmeticUnsorted:
+pandas-166,pandas,166,pandas/core/frame.py,True,False,1,6,2,False,False,class DataFrame(NDFrame):
+pandas-167,pandas,167,pandas/core/indexes/base.py,True,False,1,3,0,False,False,"class Index(IndexOpsMixin, PandasObject):"
+pandas-167,pandas,167,pandas/core/indexes/datetimes.py,True,False,1,1,0,False,False,"class DatetimeIndex(DatetimeIndexOpsMixin, Int64Index, DatetimeDelegateMixin):"
+pandas-167,pandas,167,pandas/core/indexes/period.py,True,False,1,1,0,False,False,"class PeriodIndex(DatetimeIndexOpsMixin, Int64Index, PeriodDelegateMixin):"
+pandas-167,pandas,167,pandas/core/indexing.py,True,False,4,14,3,False,False,"class _LocIndexer(_LocationIndexer): | class _LocIndexer(_LocationIndexer): | class _LocIndexer(_LocationIndexer): | def convert_to_index_sliceable(obj, key):"
+pandas-168,pandas,168,pandas/core/groupby/grouper.py,True,False,1,2,2,False,False,def _get_grouper(
+pandas-169,pandas,169,pandas/core/frame.py,True,False,1,7,0,False,False,class DataFrame(NDFrame):
+sanic-1,sanic,1,sanic/app.py,True,False,1,1,1,False,False,class Sanic:
+sanic-2,sanic,2,sanic/server.py,True,False,1,20,0,False,False,class AsyncioServer:
+sanic-3,sanic,3,sanic/app.py,True,False,2,9,1,False,False,class Sanic: | class Sanic:
+sanic-4,sanic,4,sanic/request.py,True,False,1,5,2,False,False,class Request:
+sanic-5,sanic,5,sanic/log.py,True,False,1,1,1,False,False,LOGGING_CONFIG_DEFAULTS = dict(
+scrapy-1,scrapy,1,scrapy/spidermiddlewares/offsite.py,True,False,1,6,2,False,False,class OffsiteMiddleware(object):
+scrapy-2,scrapy,2,scrapy/utils/datatypes.py,True,False,1,3,2,False,False,class LocalCache(collections.OrderedDict):
+scrapy-3,scrapy,3,scrapy/downloadermiddlewares/redirect.py,True,False,2,5,2,False,False,class RedirectMiddleware(BaseRedirectMiddleware):
+scrapy-4,scrapy,4,scrapy/contracts/__init__.py,True,False,1,1,1,False,False,class ContractsManager(object):
+scrapy-5,scrapy,5,scrapy/http/response/__init__.py,True,False,1,2,0,False,False,class Response(object_ref):
+scrapy-6,scrapy,6,scrapy/pipelines/images.py,True,False,1,5,0,False,False,class ImagesPipeline(FilesPipeline):
+scrapy-7,scrapy,7,scrapy/http/request/form.py,True,False,2,8,2,False,False,This module implements the FormRequest class which is a more convenient class | class FormRequest(Request):
+scrapy-8,scrapy,8,scrapy/item.py,True,False,2,3,0,False,False,class Field(dict): | class ItemMeta(ABCMeta):
+scrapy-9,scrapy,9,scrapy/mail.py,True,False,2,6,0,False,False,else: | class MailSender(object):
+scrapy-10,scrapy,10,scrapy/downloadermiddlewares/redirect.py,True,False,2,3,3,False,False,class RedirectMiddleware(BaseRedirectMiddleware):
+scrapy-11,scrapy,11,scrapy/utils/gz.py,True,False,1,1,1,False,False,def gunzip(data):
+scrapy-12,scrapy,12,scrapy/selector/unified.py,True,False,1,4,0,False,False,"class Selector(_ParselSelector, object_ref):"
+scrapy-13,scrapy,13,scrapy/pipelines/images.py,True,False,1,1,1,False,False,class ImagesPipeline(FilesPipeline):
+scrapy-14,scrapy,14,scrapy/utils/gz.py,True,False,2,3,2,False,False,except ImportError: | def gunzip(data):
+scrapy-15,scrapy,15,scrapy/utils/url.py,True,False,1,8,1,False,False,"def url_has_any_extension(url, extensions):"
+scrapy-16,scrapy,16,scrapy/utils/url.py,True,False,3,144,16,False,False,"to the w3lib.url module. Always import those from there instead. | def url_has_any_extension(url, extensions): | def parse_url(url, encoding=None):"
+scrapy-17,scrapy,17,scrapy/utils/response.py,True,False,1,1,7,False,False,def get_meta_refresh(response):
+scrapy-18,scrapy,18,scrapy/responsetypes.py,True,False,1,2,1,False,False,class ResponseTypes(object):
+scrapy-19,scrapy,19,scrapy/http/cookies.py,True,False,1,19,3,False,False,class WrappedRequest(object):
+scrapy-20,scrapy,20,scrapy/spiders/sitemap.py,True,False,1,1,1,False,False,class SitemapSpider(Spider):
+scrapy-21,scrapy,21,scrapy/downloadermiddlewares/robotstxt.py,True,False,1,3,1,False,False,class RobotsTxtMiddleware(object):
+scrapy-22,scrapy,22,scrapy/exporters.py,True,False,1,3,1,False,False,class XmlItemExporter(BaseItemExporter):
+scrapy-23,scrapy,23,scrapy/downloadermiddlewares/httpproxy.py,True,False,3,3,3,False,False,from six.moves.urllib.parse import urlunparse | class HttpProxyMiddleware(object): | class HttpProxyMiddleware(object):
+scrapy-23,scrapy,23,tests/test_downloadermiddleware_retry.py,True,True,2,4,4,False,False,class RetryTest(unittest.TestCase): | class RetryTest(unittest.TestCase):
+scrapy-24,scrapy,24,scrapy/core/downloader/handlers/http11.py,True,False,2,9,5,False,False,class TunnelingTCP4ClientEndpoint(TCP4ClientEndpoint): | class TunnelingTCP4ClientEndpoint(TCP4ClientEndpoint):
+scrapy-25,scrapy,25,scrapy/http/request/form.py,True,False,3,3,2,False,False,"from parsel.selector import create_root_node | class FormRequest(Request): | def _urlencode(seq, enc):"
+scrapy-26,scrapy,26,scrapy/settings/__init__.py,True,False,2,12,6,False,False,class BaseSettings(MutableMapping): | class BaseSettings(MutableMapping):
+scrapy-27,scrapy,27,scrapy/downloadermiddlewares/redirect.py,True,False,1,3,1,False,False,class RedirectMiddleware(BaseRedirectMiddleware):
+scrapy-28,scrapy,28,scrapy/dupefilters.py,True,False,1,1,0,False,False,class RFPDupeFilter(BaseDupeFilter):
+scrapy-29,scrapy,29,scrapy/utils/request.py,True,False,1,1,1,False,False,def request_httprepr(request):
+scrapy-30,scrapy,30,scrapy/cmdline.py,True,False,1,3,3,False,False,def _iter_command_classes(module_name):
+scrapy-30,scrapy,30,scrapy/utils/testproc.py,True,False,1,2,2,False,False,class TestProcessProtocol(protocol.ProcessProtocol):
+scrapy-30,scrapy,30,tests/test_cmdline/__init__.py,True,True,1,3,2,False,False,class CmdlineTest(unittest.TestCase):
+scrapy-31,scrapy,31,scrapy/http/cookies.py,True,False,2,6,3,False,False,class WrappedRequest(object): | class WrappedResponse(object):
+scrapy-32,scrapy,32,scrapy/crawler.py,True,False,1,2,2,False,False,class CrawlerProcess(CrawlerRunner):
+scrapy-33,scrapy,33,scrapy/core/engine.py,True,False,4,14,6,False,False,from scrapy.exceptions import DontCloseSpider | class ExecutionEngine(object): | class ExecutionEngine(object): | class ExecutionEngine(object):
+scrapy-33,scrapy,33,scrapy/core/scraper.py,True,False,5,9,5,False,False,from twisted.internet import defer | class Scraper(object): | class Scraper(object): | class Scraper(object): | class Scraper(object):
+scrapy-33,scrapy,33,scrapy/downloadermiddlewares/robotstxt.py,True,False,2,3,1,False,False,from six.moves.urllib import robotparser | class RobotsTxtMiddleware(object):
+scrapy-33,scrapy,33,scrapy/extensions/feedexport.py,True,False,2,3,1,False,False,from scrapy.utils.ftp import ftp_makedirs_cwd | class FeedExporter(object):
+scrapy-33,scrapy,33,scrapy/log.py,True,False,1,147,32,False,False,
+scrapy-33,scrapy,33,scrapy/pipelines/files.py,True,False,2,3,1,False,False,from scrapy.pipelines.media import MediaPipeline | class FilesPipeline(MediaPipeline):
+scrapy-33,scrapy,33,scrapy/pipelines/media.py,True,False,3,4,2,False,False,from twisted.python.failure import Failure | class MediaPipeline(object): | class MediaPipeline(object):
+scrapy-33,scrapy,33,scrapy/utils/signal.py,True,False,2,3,1,False,False,"from twisted.python.failure import Failure | def send_catch_log_deferred(signal=Any, sender=Anonymous, *arguments, **named):"
+scrapy-34,scrapy,34,scrapy/item.py,True,False,2,2,1,False,False,See documentation in docs/topics/item.rst | class ItemMeta(ABCMeta):
+scrapy-35,scrapy,35,scrapy/crawler.py,True,False,1,2,2,False,False,def _get_spider_loader(settings):
+scrapy-36,scrapy,36,scrapy/utils/misc.py,True,False,1,12,3,False,False,"def create_instance(objcls, settings, crawler, *args, **kwargs):"
+scrapy-37,scrapy,37,scrapy/http/request/__init__.py,True,False,1,1,1,False,False,class Request(object_ref):
+scrapy-38,scrapy,38,scrapy/http/request/form.py,True,False,1,2,3,False,False,"def _get_clickable(clickdata, form):"
+scrapy-39,scrapy,39,scrapy/spiders/__init__.py,True,False,1,7,4,False,False,class Spider(object_ref):
+scrapy-40,scrapy,40,scrapy/exporters.py,True,False,1,4,4,False,False,class PythonItemExporter(BaseItemExporter):
+spacy-1,spacy,1,spacy/errors.py,True,False,1,5,2,False,False,def add_codes(err_cls):
+spacy-2,spacy,2,spacy/util.py,True,False,1,1,0,False,False,"def load_model_from_path(model_path, meta=False, **overrides):"
+spacy-3,spacy,3,bin/wiki_entity_linking/wikipedia_processor.py,True,False,2,4,2,False,False,"logger = logging.getLogger(__name__) | def _process_wp_text(article_title, article_text, wp_to_id):"
+spacy-4,spacy,4,spacy/cli/converters/conllu2json.py,True,False,1,1,1,False,False,"def read_conllx(input_data, use_morphology=False, n=0):"
+spacy-5,spacy,5,spacy/language.py,True,False,1,1,1,False,False,class Language(object):
+spacy-6,spacy,6,spacy/language.py,True,False,1,2,1,False,False,class Language(object):
+spacy-7,spacy,7,examples/information_extraction/entity_relations.py,True,False,2,6,3,False,False,"dependency tree to find the noun phrase they are referring to – for example: | def main(model=""en_core_web_sm""):"
+spacy-7,spacy,7,spacy/util.py,True,False,1,1,1,False,False,def filter_spans(spans):
+spacy-8,spacy,8,spacy/errors.py,True,False,1,1,0,False,False,class Errors(object):
+spacy-9,spacy,9,spacy/errors.py,True,False,1,7,0,False,False,class Warnings(object):
+spacy-10,spacy,10,spacy/errors.py,True,False,1,2,0,False,False,class Errors(object):
+thefuck-1,thefuck,1,thefuck/rules/pip_unknown_command.py,True,False,1,2,2,False,False,def match(command):
+thefuck-2,thefuck,2,thefuck/utils.py,True,False,1,1,1,False,False,def get_all_executables():
+thefuck-3,thefuck,3,thefuck/shells/fish.py,True,False,1,2,2,False,False,class Fish(Generic):
+thefuck-4,thefuck,4,thefuck/shells/fish.py,True,False,1,11,3,False,False,def _get_functions(overridden):
+thefuck-5,thefuck,5,thefuck/rules/git_push.py,True,False,1,1,1,False,False,from thefuck.specific.git import git_support
+thefuck-6,thefuck,6,thefuck/rules/git_branch_exists.py,True,False,1,3,2,False,False,from thefuck.utils import eager
+thefuck-7,thefuck,7,thefuck/rules/php_s.py,True,False,1,1,4,False,False,"from thefuck.utils import replace_argument, for_app"
+thefuck-8,thefuck,8,thefuck/rules/dnf_no_such_command.py,True,False,2,2,5,False,False,def match(command): | def _get_operations():
+thefuck-9,thefuck,9,thefuck/rules/git_push.py,True,False,1,5,1,False,False,def get_new_command(command):
+thefuck-10,thefuck,10,thefuck/rules/man.py,True,False,1,9,3,False,False,def get_new_command(command):
+thefuck-11,thefuck,11,thefuck/rules/git_push.py,True,False,1,17,1,False,False,def match(command):
+thefuck-12,thefuck,12,thefuck/rules/no_command.py,True,False,1,2,2,False,False,
+thefuck-13,thefuck,13,thefuck/rules/git_branch_exists.py,True,False,2,3,2,False,False,from thefuck.utils import eager | def get_new_command(command):
+thefuck-14,thefuck,14,thefuck/shells/fish.py,True,False,1,4,5,False,False,from .generic import Generic
+thefuck-15,thefuck,15,thefuck/rules/git_add.py,True,False,1,3,4,False,False,from thefuck.specific.git import git_support
+thefuck-16,thefuck,16,thefuck/shells/bash.py,True,False,1,5,3,False,False,from .generic import Generic
+thefuck-16,thefuck,16,thefuck/shells/fish.py,True,False,1,1,0,False,False,class Fish(Generic):
+thefuck-16,thefuck,16,thefuck/shells/zsh.py,True,False,1,4,3,False,False,from .generic import Generic
+thefuck-16,thefuck,16,thefuck/types.py,True,False,1,1,1,False,False,class CorrectedCommand(object):
+thefuck-17,thefuck,17,thefuck/shells/bash.py,True,False,3,5,9,False,False,class Bash(Generic): | class Bash(Generic):
+thefuck-17,thefuck,17,thefuck/shells/zsh.py,True,False,1,1,1,False,False,class Zsh(Generic):
+thefuck-18,thefuck,18,thefuck/rules/sudo.py,True,False,1,3,0,False,False,"patterns = ['permission denied',"
+thefuck-19,thefuck,19,thefuck/rules/git_push_force.py,True,False,1,1,1,False,False,def match(command):
+thefuck-20,thefuck,20,thefuck/rules/dirty_unzip.py,True,False,3,3,2,False,False,def _zip_file(command): | def match(command):
+thefuck-21,thefuck,21,thefuck/rules/git_fix_stash.py,True,False,1,6,2,False,False,from thefuck.specific.git import git_support
+thefuck-22,thefuck,22,thefuck/types.py,True,False,1,4,3,False,False,class SortedCorrectedCommandsSequence(object):
+thefuck-23,thefuck,23,thefuck/utils.py,True,False,2,4,1,False,False,from difflib import get_close_matches | def cache(*depends_on):
+thefuck-24,thefuck,24,thefuck/types.py,True,False,2,25,8,False,False,from .logs import debug | class SortedCorrectedCommandsSequence(object):
+thefuck-25,thefuck,25,thefuck/rules/mkdir_p.py,True,False,1,1,1,False,False,"def match(command, settings):"
+thefuck-26,thefuck,26,thefuck/rules/vagrant_up.py,True,False,1,7,2,False,False,"def match(command, settings):"
+thefuck-27,thefuck,27,thefuck/rules/open.py,True,False,1,1,1,False,False,"def match(command, settings):"
+thefuck-28,thefuck,28,thefuck/rules/fix_file.py,True,False,3,18,8,False,False,"patterns = ( | def match(command, settings):"
+thefuck-29,thefuck,29,thefuck/types.py,True,False,1,5,3,False,False,class Settings(dict):
+thefuck-30,thefuck,30,thefuck/rules/fix_file.py,True,False,1,6,1,False,False,def _search(stderr):
+thefuck-31,thefuck,31,thefuck/rules/git_diff_staged.py,True,False,1,1,1,False,False,"def match(command, settings):"
+thefuck-32,thefuck,32,thefuck/rules/ls_lah.py,True,False,1,3,1,False,False,
+tornado-1,tornado,1,tornado/websocket.py,True,False,3,9,2,False,False,class WebSocketHandler(tornado.web.RequestHandler): | class WebSocketProtocol(abc.ABC): | class WebSocketProtocol13(WebSocketProtocol):
+tornado-2,tornado,2,tornado/http1connection.py,True,False,1,4,1,False,False,class HTTP1Connection(httputil.HTTPConnection):
+tornado-3,tornado,3,tornado/httpclient.py,True,False,1,7,2,False,False,class AsyncHTTPClient(Configurable):
+tornado-4,tornado,4,tornado/web.py,True,False,1,12,4,False,False,class StaticFileHandler(RequestHandler):
+tornado-5,tornado,5,tornado/ioloop.py,True,False,1,21,1,False,False,class PeriodicCallback(object):
+tornado-6,tornado,6,tornado/ioloop.py,True,False,2,1,2,False,False,import threading | class IOLoop(Configurable):
+tornado-6,tornado,6,tornado/platform/asyncio.py,True,False,2,15,0,False,False,class BaseAsyncIOLoop(IOLoop): | class BaseAsyncIOLoop(IOLoop):
+tornado-7,tornado,7,tornado/ioloop.py,True,False,2,7,3,False,False,import time | class IOLoop(Configurable):
+tornado-8,tornado,8,tornado/websocket.py,True,False,1,8,0,False,False,class WebSocketProtocol13(WebSocketProtocol):
+tornado-9,tornado,9,tornado/httputil.py,True,False,1,2,0,False,False,"def url_concat(url, args):"
+tornado-10,tornado,10,tornado/web.py,True,False,1,3,0,False,False,class RequestHandler(object):
+tornado-10,tornado,10,tornado/websocket.py,True,False,1,10,0,False,False,class WebSocketHandler(tornado.web.RequestHandler):
+tornado-11,tornado,11,tornado/http1connection.py,True,False,1,1,1,False,False,class HTTP1Connection(httputil.HTTPConnection):
+tornado-12,tornado,12,tornado/auth.py,True,False,3,9,4,False,False,import hmac | class FacebookGraphMixin(OAuth2Mixin): | class FacebookGraphMixin(OAuth2Mixin):
+tornado-13,tornado,13,tornado/http1connection.py,True,False,1,3,1,False,False,class HTTP1Connection(httputil.HTTPConnection):
+tornado-13,tornado,13,tornado/test/runtests.py,True,True,1,1,0,False,False,TEST_MODULES = [
+tornado-14,tornado,14,tornado/ioloop.py,True,False,1,1,1,False,False,class IOLoop(Configurable):
+tornado-15,tornado,15,setup.py,True,False,1,1,0,False,False,setup(
+tornado-15,tornado,15,tornado/web.py,True,False,1,7,3,False,False,class StaticFileHandler(RequestHandler):
+tornado-16,tornado,16,tornado/gen.py,True,False,2,8,0,False,False,class WaitIterator(object): | class WaitIterator(object):
+tqdm-1,tqdm,1,tqdm/contrib/__init__.py,True,False,1,1,1,False,False,"def tenumerate(iterable, start=0, total=None, tqdm_class=tqdm_auto,"
+tqdm-2,tqdm,2,tqdm/std.py,True,False,2,2,4,False,False,class tqdm(Comparable): | class tqdm(Comparable):
+tqdm-2,tqdm,2,tqdm/utils.py,True,False,1,4,2,False,False,"def disp_trim(data, length):"
+tqdm-3,tqdm,3,tqdm/_tqdm.py,True,False,1,11,0,False,False,class tqdm(Comparable):
+tqdm-4,tqdm,4,tqdm/_tqdm.py,True,False,1,2,1,False,False,class tqdm(Comparable):
+tqdm-5,tqdm,5,tqdm/_tqdm.py,True,False,2,7,6,False,False,class tqdm(Comparable): | class tqdm(Comparable):
+tqdm-6,tqdm,6,tqdm/_tqdm.py,True,False,1,1,1,False,False,class tqdm(object):
+tqdm-7,tqdm,7,tqdm/_main.py,True,False,1,1,1,False,False,"def posix_pipe(fin, fout, delim='\n', buf_size=256,"
+tqdm-8,tqdm,8,tqdm/_tqdm.py,True,False,1,1,1,False,False,class tqdm(object):
+tqdm-9,tqdm,9,tqdm/_tqdm.py,True,False,6,8,8,False,False,"def format_sizeof(num, suffix=''): | class tqdm(object): | class tqdm(object): | class tqdm(object): | class tqdm(object): | class tqdm(object):"
+youtube-dl-1,youtube-dl,1,youtube_dl/utils.py,True,False,1,2,2,False,False,"def _match_one(filter_part, dct):"
+youtube-dl-2,youtube-dl,2,youtube_dl/extractor/common.py,True,False,1,8,10,False,False,class InfoExtractor(object):
+youtube-dl-3,youtube-dl,3,youtube_dl/utils.py,True,False,1,1,1,False,False,def unescapeHTML(s):
+youtube-dl-4,youtube-dl,4,youtube_dl/jsinterp.py,True,False,1,2,2,False,False,class JSInterpreter(object):
+youtube-dl-5,youtube-dl,5,youtube_dl/utils.py,True,False,2,3,3,False,False,"def unified_timestamp(date_str, day_first=True): | def unified_timestamp(date_str, day_first=True):"
+youtube-dl-6,youtube-dl,6,youtube_dl/utils.py,True,False,2,8,3,False,False,def match_filter_func(filter_str): | def dfxp2srt(dfxp_data):
+youtube-dl-7,youtube-dl,7,youtube_dl/utils.py,True,False,1,2,2,False,False,def js_to_json(code):
+youtube-dl-8,youtube-dl,8,youtube_dl/YoutubeDL.py,True,False,1,1,2,False,False,class YoutubeDL(object):
+youtube-dl-9,youtube-dl,9,youtube_dl/YoutubeDL.py,True,False,3,15,10,False,False,class YoutubeDL(object): | class YoutubeDL(object): | class YoutubeDL(object):
+youtube-dl-10,youtube-dl,10,youtube_dl/utils.py,True,False,1,2,2,False,False,def js_to_json(code):
+youtube-dl-11,youtube-dl,11,youtube_dl/utils.py,True,False,1,2,2,False,False,"def str_or_none(v, default=None):"
+youtube-dl-12,youtube-dl,12,youtube_dl/YoutubeDL.py,True,False,1,1,1,False,False,class YoutubeDL(object):
+youtube-dl-13,youtube-dl,13,youtube_dl/utils.py,True,False,1,1,1,False,False,"def urljoin(base, path):"
+youtube-dl-14,youtube-dl,14,youtube_dl/extractor/youtube.py,True,False,3,61,2,False,False,class YoutubeIE(YoutubeBaseInfoExtractor): | class YoutubeIE(YoutubeBaseInfoExtractor): | class YoutubeIE(YoutubeBaseInfoExtractor):
+youtube-dl-15,youtube-dl,15,youtube_dl/utils.py,True,False,1,1,1,False,False,def js_to_json(code):
+youtube-dl-16,youtube-dl,16,youtube_dl/postprocessor/ffmpeg.py,True,False,1,1,1,False,False,class FFmpegSubtitlesConvertorPP(FFmpegPostProcessor):
+youtube-dl-16,youtube-dl,16,youtube_dl/utils.py,True,False,2,11,7,False,False,def srt_subtitles_timecode(seconds): | def dfxp2srt(dfxp_data):
+youtube-dl-17,youtube-dl,17,youtube_dl/utils.py,True,False,1,2,0,False,False,"def cli_option(params, command_option, param):"
+youtube-dl-18,youtube-dl,18,youtube_dl/YoutubeDL.py,True,False,1,1,1,False,False,class YoutubeDL(object):
+youtube-dl-19,youtube-dl,19,youtube_dl/YoutubeDL.py,True,False,2,14,1,False,False,import re | class YoutubeDL(object):
+youtube-dl-20,youtube-dl,20,youtube_dl/utils.py,True,False,1,2,2,False,False,"def get_elements_by_attribute(attribute, value, html, escape_value=True):"
+youtube-dl-21,youtube-dl,21,youtube_dl/utils.py,True,False,1,6,1,False,False,def base_url(url):
+youtube-dl-22,youtube-dl,22,youtube_dl/utils.py,True,False,3,7,2,False,False,"def _match_one(filter_part, dct): | def _match_one(filter_part, dct): | def _match_one(filter_part, dct):"
+youtube-dl-23,youtube-dl,23,youtube_dl/utils.py,True,False,2,2,2,False,False,def js_to_json(code): | def js_to_json(code):
+youtube-dl-24,youtube-dl,24,youtube_dl/utils.py,True,False,2,9,3,False,False,"def _match_one(filter_part, dct): | def _match_one(filter_part, dct):"
+youtube-dl-25,youtube-dl,25,youtube_dl/utils.py,True,False,1,3,3,False,False,def js_to_json(code):
+youtube-dl-26,youtube-dl,26,youtube_dl/utils.py,True,False,1,1,1,False,False,def js_to_json(code):
+youtube-dl-27,youtube-dl,27,youtube_dl/utils.py,True,False,1,2,2,False,False,def parse_dfxp_time_expr(time_expr):
+youtube-dl-28,youtube-dl,28,youtube_dl/utils.py,True,False,1,5,1,False,False,def _htmlentity_transform(entity):
+youtube-dl-29,youtube-dl,29,youtube_dl/utils.py,True,False,1,2,1,False,False,"def unified_strdate(date_str, day_first=True):"
+youtube-dl-30,youtube-dl,30,youtube_dl/YoutubeDL.py,True,False,1,3,0,False,False,class YoutubeDL(object):
+youtube-dl-31,youtube-dl,31,youtube_dl/extractor/minhateca.py,True,False,2,3,2,False,False,from ..compat import ( | class MinhatecaIE(InfoExtractor):
+youtube-dl-31,youtube-dl,31,youtube_dl/utils.py,True,False,1,15,4,False,False,def parse_duration(s):
+youtube-dl-32,youtube-dl,32,youtube_dl/extractor/npo.py,True,False,2,2,1,False,False,from ..utils import ( | class NPOIE(InfoExtractor):
+youtube-dl-32,youtube-dl,32,youtube_dl/utils.py,True,False,1,2,1,False,False,def parse_age_limit(s):
+youtube-dl-33,youtube-dl,33,youtube_dl/extractor/drtv.py,True,False,3,2,5,False,False,class DRTVIE(SubtitlesInfoExtractor): | class DRTVIE(SubtitlesInfoExtractor):
+youtube-dl-33,youtube-dl,33,youtube_dl/utils.py,True,False,2,2,2,False,False,"def parse_iso8601(date_str, delimiter='T'): | def parse_iso8601(date_str, delimiter='T'):"
+youtube-dl-34,youtube-dl,34,youtube_dl/utils.py,True,False,2,5,1,False,False,class ExtractorError(Exception): | def js_to_json(code):
+youtube-dl-35,youtube-dl,35,youtube_dl/extractor/arte.py,True,False,1,5,1,False,False,class ArteTVPlus7IE(InfoExtractor):
+youtube-dl-35,youtube-dl,35,youtube_dl/utils.py,True,False,1,1,0,False,False,def unified_strdate(date_str):
+youtube-dl-36,youtube-dl,36,youtube_dl/extractor/facebook.py,True,False,1,1,1,False,False,from ..utils import (
+youtube-dl-37,youtube-dl,37,youtube_dl/utils.py,True,False,2,4,1,False,False,class PagedList(object):
+youtube-dl-38,youtube-dl,38,youtube_dl/extractor/facebook.py,True,False,3,11,8,False,False,from ..utils import ( | class FacebookIE(InfoExtractor): | class FacebookIE(InfoExtractor):
+youtube-dl-38,youtube-dl,38,youtube_dl/utils.py,True,False,1,4,0,False,False,def read_batch_urls(batch_fd):
+youtube-dl-39,youtube-dl,39,youtube_dl/extractor/facebook.py,True,False,3,10,3,False,False,from ..utils import ( | class FacebookIE(InfoExtractor): | class FacebookIE(InfoExtractor):
+youtube-dl-39,youtube-dl,39,youtube_dl/utils.py,True,False,1,10,0,False,False,except AttributeError:
+youtube-dl-40,youtube-dl,40,youtube_dl/downloader/f4m.py,True,False,3,6,5,False,False,"import base64 | class FlvReader(io.BytesIO): | def write_flv_header(stream, metadata):"
+youtube-dl-40,youtube-dl,40,youtube_dl/utils.py,True,False,2,18,0,False,False,import platform | def uppercase_escape(s):
+youtube-dl-41,youtube-dl,41,youtube_dl/utils.py,True,False,1,2,2,False,False,def unified_strdate(date_str):
+youtube-dl-42,youtube-dl,42,youtube_dl/extractor/clipsyndicate.py,True,False,2,2,2,False,False,import re | class ClipsyndicateIE(InfoExtractor):
+youtube-dl-42,youtube-dl,42,youtube_dl/extractor/metacritic.py,True,False,2,2,2,False,False,import re | class MetacriticIE(InfoExtractor):
+youtube-dl-42,youtube-dl,42,youtube_dl/extractor/mtv.py,True,False,2,2,4,False,False,from .common import InfoExtractor | class MTVServicesInfoExtractor(InfoExtractor):
+youtube-dl-42,youtube-dl,42,youtube_dl/utils.py,True,False,1,5,2,False,False,def month_by_name(name):
+youtube-dl-43,youtube-dl,43,youtube_dl/utils.py,True,False,1,1,1,False,False,"def remove_start(s, start):"

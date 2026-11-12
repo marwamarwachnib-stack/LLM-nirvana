@@ -1,0 +1,5 @@
+# Raw third-party data (re-created by scripts; see README)
+data/raw/
+checkpoints/
+__pycache__/
+*.pyc
